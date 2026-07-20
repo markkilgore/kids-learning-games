@@ -1,0 +1,10 @@
+.DS_Store
+DerivedData/
+.build/
+build/
+SharkExplorer.xcodeproj/
+tools/node_modules/
+.env
+*.xcuserstate
+xcuserdata/
+

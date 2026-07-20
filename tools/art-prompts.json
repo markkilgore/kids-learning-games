@@ -1,0 +1,16 @@
+{
+  "style": "Warm scientific storybook illustration for ages 5-7, clean readable silhouette, layered paper-cut watercolor texture, friendly but anatomically accurate, soft ocean palette, no text, no watermark, no gore.",
+  "backgrounds": [
+    {"id":"tropical-open-water","prompt":"Sunlit tropical open ocean with plankton sparkles and distant reef shelf, wide iPad landscape composition."},
+    {"id":"sandy-reef","prompt":"Warm sandy tropical seafloor beside a coral reef, broad open area for a swimming hammerhead."},
+    {"id":"coral-reef","prompt":"Quiet coral reef cave and sandy floor at dusk, safe and welcoming."},
+    {"id":"temperate-ocean","prompt":"Cool blue temperate open ocean with shafts of surface light, no animals."},
+    {"id":"rocky-seafloor","prompt":"Patterned rocky Australian seafloor reef with kelp and ledges, camouflage-friendly."},
+    {"id":"open-ocean-school","prompt":"Deep blue open ocean with a distant school of small fish, wide negative space."},
+    {"id":"murky-coast","prompt":"Warm murky coastal sea with gentle light, reef edge, and suspended particles."},
+    {"id":"reef-flat","prompt":"Shallow Great Barrier Reef flat with connected tide pools at low tide."},
+    {"id":"deep-slope","prompt":"Dark deep-ocean slope with soft bioluminescent specks, mysterious but not frightening."},
+    {"id":"arctic-deep","prompt":"Cold Arctic deep water beneath pale ice, blue-green darkness and drifting snow-like particles."}
+  ],
+  "cutoutTemplate": "Create an anatomically accurate side-profile {species} on a perfectly flat solid #00ff00 chroma-key background for background removal. The background must be uniform with no shadow, gradient, texture, reflection, floor, or lighting variation. Keep the full shark separated from the border with crisp edges and generous padding. Do not use green on the shark. No text or watermark."
+}

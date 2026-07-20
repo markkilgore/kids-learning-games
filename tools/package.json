@@ -1,0 +1,10 @@
+{
+  "name": "shark-explorer-content-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node validate-content.mjs",
+    "art": "node fetch-shark-art.mjs",
+    "audio": "node generate-audio.mjs"
+  }
+}

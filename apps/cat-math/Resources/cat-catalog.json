@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "kate-cat-math",
+  "locations": ["house", "garden"],
+  "catCount": 10,
+  "skills": ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10"]
+}
