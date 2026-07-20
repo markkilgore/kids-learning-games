@@ -92,7 +92,7 @@ Application Support/com.mkilgore.CatMathAdventure.kate/progress.json
 
 Resetting one namespace cannot remove the other. The shared persistence test writes different values to both stores, resets Shark, and confirms Cat remains unchanged.
 
-The prototype Shark target used a SwiftData `PlayerProgressRecord`. There was no deployed install or progress to migrate, so the monorepo starts clean in the explicit Shark namespace instead of retaining a legacy persistence stack. This is an intentional one-time development reset.
+The prototype Shark target used a SwiftData `PlayerProgressRecord`. When the namespaced JSON store does not yet exist, Shark Explorer checks that legacy store and copies any existing completion, vocabulary, topic, encounter, and reading-mode state into the explicit Shark namespace. Existing namespaced progress always takes precedence, and the legacy store is retained rather than becoming an ongoing persistence dependency.
 
 ## 6. Build and run commands
 

@@ -13,7 +13,7 @@ const images = [
   ['shark-greenland.jpg', 'Somniosus microcephalus okeanos.jpg']
 ];
 
-const outputDirectory = new URL('../SharkExplorer/Resources/Art/', import.meta.url);
+const outputDirectory = new URL('../apps/shark-explorer/Resources/Art/', import.meta.url);
 await mkdir(outputDirectory, { recursive: true });
 
 for (const [filename, commonsTitle] of images) {

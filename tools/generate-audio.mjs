@@ -9,7 +9,7 @@ if (!apiKey || !voiceID) {
   process.exit(1);
 }
 
-const resourceURL = new URL('../SharkExplorer/Resources/', import.meta.url);
+const resourceURL = new URL('../apps/shark-explorer/Resources/', import.meta.url);
 const audioURL = new URL('Audio/', resourceURL);
 const catalog = JSON.parse(await readFile(new URL('catalog.json', resourceURL), 'utf8'));
 await mkdir(audioURL, { recursive: true });

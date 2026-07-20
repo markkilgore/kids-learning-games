@@ -1,6 +1,6 @@
 import { readFile, stat } from 'node:fs/promises';
 
-const resourceURL = new URL('../SharkExplorer/Resources/', import.meta.url);
+const resourceURL = new URL('../apps/shark-explorer/Resources/', import.meta.url);
 const path = new URL('catalog.json', resourceURL);
 const catalog = JSON.parse(await readFile(path, 'utf8'));
 const audioManifest = JSON.parse(await readFile(new URL('audio-manifest.json', resourceURL), 'utf8'));
