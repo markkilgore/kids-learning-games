@@ -9,12 +9,16 @@ final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
         XCTAssertEqual(catalog.sharks.count, 10)
-        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 50)
-        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 30)
+        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 70)
+        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 50)
         XCTAssertEqual(catalog.vocabulary.count, 25)
-        XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 5 })
+        XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 7 })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.allSatisfy { $0.id != "babies" } })
-        XCTAssertTrue(catalog.sharks.allSatisfy { $0.questions.count == 3 })
+        XCTAssertTrue(catalog.sharks.allSatisfy { $0.questions.count == 5 })
+        XCTAssertTrue(catalog.sharks.allSatisfy { $0.traits.count >= 2 })
+        XCTAssertTrue(catalog.sharks.allSatisfy { shark in
+            shark.traits.allSatisfy { shark.topics.map(\.id).contains($0.unlockTopicID) }
+        })
     }
 
     func testBothReadingModesHaveContent() throws {
