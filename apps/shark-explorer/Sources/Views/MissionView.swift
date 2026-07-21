@@ -50,7 +50,7 @@ struct MissionView: View {
                     SpriteView(scene: scene)
                         .clipShape(RoundedRectangle(cornerRadius: 28))
                         .overlay(alignment: .top) {
-                            Text("Tap the \(sceneTargetName)")
+                            Text(missionPrompt)
                                 .font(.title2.weight(.black))
                                 .padding(.horizontal, 24).padding(.vertical, 12)
                                 .background(.black.opacity(0.42), in: Capsule())
@@ -62,7 +62,7 @@ struct MissionView: View {
                         Text(shark.mission.completion)
                             .font(.system(size: 38, weight: .black, design: .rounded))
                             .multilineTextAlignment(.center)
-                        Button("Answer three picture questions") { onComplete() }
+                        Button("Answer \(shark.questions.count) picture questions") { onComplete() }
                             .font(.title2.bold())
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -91,5 +91,11 @@ struct MissionView: View {
         case "energyTrail": "snowy scent clue"
         default: "clue"
         }
+    }
+
+    private var missionPrompt: String {
+        shark.mission.kind == "ambushApproach"
+            ? "Spot the dark fish silhouette near the bright surface"
+            : "Tap the \(sceneTargetName)"
     }
 }

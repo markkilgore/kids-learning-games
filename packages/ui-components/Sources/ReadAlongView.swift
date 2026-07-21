@@ -5,11 +5,20 @@ import Narration
 public struct ReadAlongView: View {
     public let sentences: [String]
     public var vocabulary: Set<String> = []
+    /// Changes when a parent swaps to a different passage while keeping this view on screen.
+    /// This restarts the passage without triggering the old view's `onDisappear` stop handler.
+    public var playbackID: String? = nil
     public var onFinished: () -> Void = {}
 
-    public init(sentences: [String], vocabulary: Set<String> = [], onFinished: @escaping () -> Void = {}) {
+    public init(
+        sentences: [String],
+        vocabulary: Set<String> = [],
+        playbackID: String? = nil,
+        onFinished: @escaping () -> Void = {}
+    ) {
         self.sentences = sentences
         self.vocabulary = vocabulary
+        self.playbackID = playbackID
         self.onFinished = onFinished
     }
 
@@ -46,14 +55,17 @@ public struct ReadAlongView: View {
                         .accessibilityLabel("Hear the word \(token.text)")
                     }
                 }
-                .frame(maxWidth: 900)
+                .frame(maxWidth: 900, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(minHeight: 150, alignment: .top)
 
                 HStack(spacing: 18) {
                     control("speaker.wave.2.fill", "Replay") { playCurrent() }
+                        .frame(maxWidth: .infinity)
                     control(playPauseIcon, playPauseTitle) {
                         if narration.state == .idle { playCurrent() } else { narration.togglePause() }
                     }
+                    .frame(maxWidth: .infinity)
                     Button {
                         narration.setSlow(!narration.isSlow)
                     } label: {
@@ -64,22 +76,29 @@ public struct ReadAlongView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(narration.isSlow ? .orange : .teal)
+                    .frame(maxWidth: .infinity)
 
-                    if narration.state == .idle {
-                        Button(sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done") {
-                            advance()
-                        }
-                        .font(.title3.bold())
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        .frame(minHeight: 58)
+                    Button(sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done") {
+                        advance()
                     }
+                    .font(.title3.bold())
+                    .buttonStyle(.borderedProminent)
+                    .tint(.green)
+                    .frame(maxWidth: .infinity, minHeight: 58)
+                    .opacity(narration.state == .idle ? 1 : 0)
+                    .allowsHitTesting(narration.state == .idle)
                 }
             }
         }
         .padding(32)
         .onAppear { playCurrent() }
         .onDisappear { narration.stop() }
+        .onChange(of: playbackID) { _, _ in
+            let needsSentenceReset = sentenceIndex != 0
+            sentenceIndex = 0
+            didFinish = false
+            if !needsSentenceReset { playCurrent() }
+        }
         .onChange(of: sentenceIndex) { _, _ in playCurrent() }
     }
 

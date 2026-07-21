@@ -4,7 +4,7 @@ final class MissionScene: SKScene {
     let mission: MissionDefinition
     var onProgress: ((Int) -> Void)?
     private var hits = 0
-    private var target: SKLabelNode?
+    private var target: SKNode?
 
     init(mission: MissionDefinition, size: CGSize) {
         self.mission = mission
@@ -16,6 +16,14 @@ final class MissionScene: SKScene {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func didMove(to view: SKView) {
+        if mission.kind == "ambushApproach" {
+            let surface = SKShapeNode(rectOf: CGSize(width: size.width, height: size.height * 0.24))
+            surface.fillColor = UIColor(red: 0.78, green: 0.95, blue: 1, alpha: 0.85)
+            surface.strokeColor = .clear
+            surface.position = CGPoint(x: size.width / 2, y: size.height * 0.88)
+            surface.name = "surface"
+            addChild(surface)
+        }
         for index in 0..<24 {
             let mote = SKShapeNode(circleOfRadius: CGFloat(2 + index % 4))
             mote.fillColor = UIColor.white.withAlphaComponent(0.18)
@@ -38,6 +46,10 @@ final class MissionScene: SKScene {
     }
 
     private func spawnTarget() {
+        if mission.kind == "ambushApproach" {
+            spawnSilhouette()
+            return
+        }
         let node = SKLabelNode(text: targetSymbol)
         node.name = "target"
         node.fontSize = 86
@@ -54,12 +66,36 @@ final class MissionScene: SKScene {
         target = node
     }
 
+    private func spawnSilhouette() {
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: -82, y: 0))
+        path.addLine(to: CGPoint(x: -42, y: 30))
+        path.addCurve(to: CGPoint(x: 56, y: 0), control1: CGPoint(x: -14, y: 58), control2: CGPoint(x: 38, y: 42))
+        path.addCurve(to: CGPoint(x: -42, y: -30), control1: CGPoint(x: 38, y: -42), control2: CGPoint(x: -14, y: -58))
+        path.closeSubpath()
+
+        let node = SKShapeNode(path: path)
+        node.name = "target"
+        node.fillColor = UIColor.black.withAlphaComponent(0.8)
+        node.strokeColor = UIColor.white.withAlphaComponent(0.4)
+        node.lineWidth = 2
+        node.position = CGPoint(
+            x: CGFloat.random(in: 130...max(131, size.width - 130)),
+            y: CGFloat.random(in: size.height * 0.68...max(size.height * 0.69, size.height * 0.82))
+        )
+        node.zPosition = 2
+        node.setScale(0.2)
+        addChild(node)
+        node.run(.scale(to: 1, duration: 0.2))
+        node.run(.repeatForever(.sequence([.moveBy(x: 0, y: 8, duration: 0.7), .moveBy(x: 0, y: -8, duration: 0.7)])))
+        target = node
+    }
+
     private var targetSymbol: String {
         switch mission.kind {
         case "filterFeed": "✨"
         case "electrosense": "⚡️"
         case "suctionForage": "🦀"
-        case "ambushApproach": "◉"
         case "camouflageFind": "🐚"
         case "tailStrike": "🐟"
         case "scentTrack": "〰️"
@@ -70,4 +106,3 @@ final class MissionScene: SKScene {
         }
     }
 }
-
