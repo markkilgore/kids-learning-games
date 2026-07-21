@@ -4,6 +4,7 @@ import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 const apiKey = process.env.ELEVENLABS_API_KEY;
 const voiceID = process.env.ELEVENLABS_VOICE_ID;
 const modelID = process.env.ELEVENLABS_MODEL_ID || 'eleven_multilingual_v2';
+const onlyMissing = process.env.AUDIO_ONLY_MISSING === '1';
 if (!apiKey || !voiceID) {
   process.stderr.write('Set ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID before generating audio.\n');
   process.exit(1);
@@ -33,6 +34,8 @@ try {
   manifest = JSON.parse(await readFile(new URL('audio-manifest.json', resourceURL), 'utf8'));
 } catch {}
 let completed = 0;
+let generated = 0;
+let retained = 0;
 const orderedLines = [...lines].sort();
 const concurrency = Math.max(1, Number(process.env.AUDIO_CONCURRENCY || 3));
 for (let index = 0; index < orderedLines.length; index += concurrency) {
@@ -51,6 +54,20 @@ async function prepareClip(text) {
       return;
     }
   } catch {}
+  if (onlyMissing) {
+    const existingFile = manifest[text]?.file;
+    if (existingFile) {
+      try {
+        const existing = await stat(new URL(existingFile, audioURL));
+        if (existing.size > 1_000) {
+          retained += 1;
+          completed += 1;
+          process.stdout.write(`\rReady ${completed}/${lines.size}`);
+          return;
+        }
+      } catch {}
+    }
+  }
   const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceID}/with-timestamps`, {
     method: 'POST',
     headers: { 'xi-api-key': apiKey, 'content-type': 'application/json' },
@@ -65,12 +82,13 @@ async function prepareClip(text) {
   const payload = await response.json();
   await writeFile(new URL(filename, audioURL), Buffer.from(payload.audio_base64, 'base64'));
   manifest[text] = { file: filename, words: collapseWords(payload.alignment) };
+  generated += 1;
   completed += 1;
   process.stdout.write(`\rReady ${completed}/${lines.size}`);
 }
 
 await writeFile(new URL('audio-manifest.json', resourceURL), `${JSON.stringify(manifest, null, 2)}\n`);
-process.stdout.write(`\nAudio manifest written with ${completed} clips.\n`);
+process.stdout.write(`\nAudio manifest written with ${generated} generated clips and ${retained} retained clips.\n`);
 
 function collapseWords(alignment) {
   if (!alignment?.characters?.length) return [];
