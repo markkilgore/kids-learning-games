@@ -60,31 +60,26 @@ public struct ReadAlongView: View {
                 .frame(minHeight: 150, alignment: .top)
 
                 HStack(spacing: 18) {
-                    control("speaker.wave.2.fill", "Replay") { playCurrent() }
-                        .frame(maxWidth: .infinity)
-                    control(playPauseIcon, playPauseTitle) {
+                    control("Replay", systemImage: "speaker.wave.2.fill", tint: .blue) {
+                        playCurrent()
+                    }
+                    control(playPauseTitle, systemImage: playPauseIcon, tint: .blue) {
                         if narration.state == .idle { playCurrent() } else { narration.togglePause() }
                     }
-                    .frame(maxWidth: .infinity)
-                    Button {
+                    control(
+                        narration.isSlow ? "Normal speed" : "Slow speed",
+                        systemImage: "tortoise.fill",
+                        tint: narration.isSlow ? .orange : .teal
+                    ) {
                         narration.setSlow(!narration.isSlow)
-                    } label: {
-                        Label(narration.isSlow ? "Normal speed" : "Slow speed", systemImage: "tortoise.fill")
-                            .font(.title3.bold())
-                            .padding(.horizontal, 20)
-                            .frame(minHeight: 58)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(narration.isSlow ? .orange : .teal)
-                    .frame(maxWidth: .infinity)
-
-                    Button(sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done") {
+                    control(
+                        sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done",
+                        systemImage: sentenceIndex + 1 < sentences.count ? "arrow.right" : "checkmark",
+                        tint: .green
+                    ) {
                         advance()
                     }
-                    .font(.title3.bold())
-                    .buttonStyle(.borderedProminent)
-                    .tint(.green)
-                    .frame(maxWidth: .infinity, minHeight: 58)
                     .opacity(narration.state == .idle ? 1 : 0)
                     .allowsHitTesting(narration.state == .idle)
                 }
@@ -125,15 +120,23 @@ public struct ReadAlongView: View {
         sentenceIndex += 1
     }
 
-    private func control(_ icon: String, _ title: String, action: @escaping () -> Void) -> some View {
+    private func control(
+        _ title: String,
+        systemImage: String,
+        tint: Color,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
-            Label(title, systemImage: icon)
+            Label(title, systemImage: systemImage)
                 .font(.title3.bold())
+                .lineLimit(1)
+                .minimumScaleFactor(0.72)
                 .padding(.horizontal, 20)
-                .frame(minHeight: 58)
+                .frame(maxWidth: .infinity, minHeight: 58)
         }
         .buttonStyle(.borderedProminent)
-        .tint(.blue)
+        .tint(tint)
+        .frame(maxWidth: .infinity)
     }
 
     private func index(of token: WordToken) -> Int { token.id }
