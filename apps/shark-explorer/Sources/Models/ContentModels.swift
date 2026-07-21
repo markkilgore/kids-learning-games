@@ -119,6 +119,45 @@ struct AnswerChoice: Codable, Identifiable, Hashable {
     let symbol: String
 }
 
+enum QuizChoiceOrderer {
+    static func order(for questions: [QuestionDefinition]) -> [[AnswerChoice]] {
+        var generator = SystemRandomNumberGenerator()
+        return order(for: questions, using: &generator)
+    }
+
+    static func order<Generator: RandomNumberGenerator>(
+        for questions: [QuestionDefinition],
+        using generator: inout Generator
+    ) -> [[AnswerChoice]] {
+        var correctPositions: [Int: Int] = [:]
+
+        for (choiceCount, questionIndices) in Dictionary(grouping: questions.indices, by: { questions[$0].choices.count }) {
+            guard choiceCount > 0 else { continue }
+            let startingPosition = Int.random(in: 0..<choiceCount, using: &generator)
+            var positions = questionIndices.indices.map { (startingPosition + $0) % choiceCount }
+            positions.shuffle(using: &generator)
+
+            for (offset, questionIndex) in questionIndices.enumerated() {
+                correctPositions[questionIndex] = positions[offset]
+            }
+        }
+
+        return questions.enumerated().map { questionIndex, question in
+            guard
+                let correctChoice = question.choices.first(where: { $0.id == question.correctID }),
+                let correctPosition = correctPositions[questionIndex]
+            else {
+                return question.choices.shuffled(using: &generator)
+            }
+
+            var orderedChoices = question.choices.filter { $0.id != question.correctID }
+            orderedChoices.shuffle(using: &generator)
+            orderedChoices.insert(correctChoice, at: correctPosition)
+            return orderedChoices
+        }
+    }
+}
+
 struct VocabularyDefinition: Codable, Identifiable, Hashable {
     let id: String
     let word: String

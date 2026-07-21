@@ -10,11 +10,11 @@ final class ContentStoreTests: XCTestCase {
         let catalog = ContentStore.shared.catalog
         XCTAssertEqual(catalog.sharks.count, 10)
         XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 70)
-        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 50)
+        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 30)
         XCTAssertEqual(catalog.vocabulary.count, 25)
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 7 })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.allSatisfy { $0.id != "babies" } })
-        XCTAssertTrue(catalog.sharks.allSatisfy { $0.questions.count == 5 })
+        XCTAssertTrue(catalog.sharks.allSatisfy { $0.questions.count == 3 })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.traits.count >= 2 })
         XCTAssertTrue(catalog.sharks.allSatisfy { shark in
             shark.traits.allSatisfy { shark.topics.map(\.id).contains($0.unlockTopicID) }
@@ -37,6 +37,25 @@ final class ContentStoreTests: XCTestCase {
         for question in ContentStore.shared.catalog.sharks.flatMap(\.questions) {
             XCTAssertEqual(question.choices.count, 3)
             XCTAssertEqual(question.choices.filter { $0.id == question.correctID }.count, 1)
+        }
+    }
+
+    func testQuizChoiceOrderingPreservesChoicesAndBalancesCorrectPositions() {
+        for (sharkIndex, shark) in ContentStore.shared.catalog.sharks.enumerated() {
+            var generator = SeededRandomNumberGenerator(seed: UInt64(sharkIndex + 1))
+            let orderedChoices = QuizChoiceOrderer.order(for: shark.questions, using: &generator)
+
+            XCTAssertEqual(orderedChoices.count, shark.questions.count)
+
+            let correctPositions = zip(shark.questions, orderedChoices).compactMap { question, choices in
+                XCTAssertEqual(Set(choices), Set(question.choices), question.id)
+                return choices.firstIndex { $0.id == question.correctID }
+            }
+            let positionCounts = Dictionary(grouping: correctPositions, by: { $0 }).values.map(\.count)
+
+            XCTAssertEqual(correctPositions.count, shark.questions.count)
+            XCTAssertEqual(Set(correctPositions), Set(shark.questions[0].choices.indices), shark.id)
+            XCTAssertLessThanOrEqual((positionCounts.max() ?? 0) - (positionCounts.min() ?? 0), 1, shark.id)
         }
     }
 
@@ -115,4 +134,17 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertEqual(progress?.readingMode, .story)
     }
 
+}
+
+private struct SeededRandomNumberGenerator: RandomNumberGenerator {
+    private var state: UInt64
+
+    init(seed: UInt64) {
+        state = seed
+    }
+
+    mutating func next() -> UInt64 {
+        state = state &* 6_364_136_223_846_793_005 &+ 1
+        return state
+    }
 }

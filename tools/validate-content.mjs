@@ -23,7 +23,7 @@ const expandedSharks = catalog.sharks.map((shark) => {
 
 for (const shark of expandedSharks) {
   if (shark.topics.length !== 7) errors.push(`${shark.id}: expected 7 topics`);
-  if (shark.questions.length !== 5) errors.push(`${shark.id}: expected 5 questions`);
+  if (shark.questions.length !== 3) errors.push(`${shark.id}: expected 3 questions`);
   if (shark.traits?.length !== 2) errors.push(`${shark.id}: expected 2 Passport traits`);
   if (new Set(shark.topics.map((topic) => topic.id)).size !== shark.topics.length) errors.push(`${shark.id}: topic IDs must be unique`);
   if (shark.vocabularyIDs.length < 2 || shark.vocabularyIDs.length > 3) errors.push(`${shark.id}: expected 2-3 vocabulary IDs`);
