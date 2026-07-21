@@ -51,7 +51,7 @@ final class ContentStore {
 
         for shark in catalog.sharks {
             guard shark.topics.count >= 7 else { throw ContentError.invalidCatalog("\(shark.id) must have at least seven topics") }
-            guard shark.questions.count >= 5 else { throw ContentError.invalidCatalog("\(shark.id) must have at least five questions") }
+            guard shark.questions.count == 3 else { throw ContentError.invalidCatalog("\(shark.id) must have exactly three questions") }
             guard shark.traits.count >= 2 else { throw ContentError.invalidCatalog("\(shark.id) needs at least two Passport traits") }
             guard Set(shark.topics.map(\.id)).count == shark.topics.count else { throw ContentError.invalidCatalog("duplicate topic IDs for \(shark.id)") }
             guard shark.traits.allSatisfy({ shark.topics.map(\.id).contains($0.unlockTopicID) }) else {

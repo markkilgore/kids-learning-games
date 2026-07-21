@@ -10,6 +10,13 @@ struct QuestionRoundView: View {
     @State private var index = 0
     @State private var feedback: String?
     @State private var answeredCorrectly = false
+    @State private var orderedChoices: [[AnswerChoice]]
+
+    init(shark: SharkDefinition, onComplete: @escaping () -> Void) {
+        self.shark = shark
+        self.onComplete = onComplete
+        _orderedChoices = State(initialValue: QuizChoiceOrderer.order(for: shark.questions))
+    }
 
     private var question: QuestionDefinition { shark.questions[index] }
     private var displayedSentences: [String] {
@@ -34,7 +41,7 @@ struct QuestionRoundView: View {
                     .frame(maxHeight: 270)
 
                 HStack(spacing: 22) {
-                    ForEach(question.choices) { choice in
+                    ForEach(orderedChoices[index]) { choice in
                         Button { choose(choice) } label: {
                             VStack(spacing: 12) {
                                 Text(choice.symbol).font(.system(size: 76))
