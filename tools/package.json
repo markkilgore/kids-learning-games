@@ -5,6 +5,7 @@
   "scripts": {
     "validate": "node validate-content.mjs",
     "art": "node fetch-shark-art.mjs",
-    "audio": "node generate-audio.mjs"
+    "audio": "node generate-audio.mjs",
+    "cat-audio": "node generate-cat-audio.mjs"
   }
 }

@@ -37,4 +37,14 @@ xcodebuild -project SharkExplorer.xcodeproj -scheme CatMathAdventure \
   -destination 'platform=iOS Simulator,id=<UDID>' test
 ```
 
+## Cat Math narration
+
+Cat Math uses bundled ElevenLabs clips when a line exists in `cat-audio-manifest.json`, with the on-device Apple voice as an offline fallback for any line not yet generated. Generate or refresh the complete Cat script from the repository root:
+
+```sh
+ELEVENLABS_API_KEY=<key> npm --prefix tools run cat-audio
+```
+
+The generator defaults to the bright, warm **Bella** educational voice and `eleven_multilingual_v2`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override either one. API credentials are generation-time secrets and are never included in the iPad app.
+
 See [docs/architecture.md](docs/architecture.md) for the assessment, migration stages, configuration contract, persistence strategy, and target structure. Run `tools/verify-monorepo.sh` for release-build and product-isolation checks.
