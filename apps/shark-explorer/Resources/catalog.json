@@ -85,7 +85,7 @@
       ],
       "traits":[
         {"id":"triangle-teeth","title":"Triangle Teeth","symbol":"🦷","description":"Rows of triangle-shaped teeth help it hold slippery prey.","imageAsset":null,"unlockTopicID":"food"},
-        {"id":"surface-silhouette","title":"Surface Silhouette","symbol":"🌤️","description":"From below, it can spot dark shapes against bright water.","imageAsset":null,"unlockTopicID":"power"}
+        {"id":"surface-silhouette","title":"Surface Silhouette","symbol":"🌤️","description":"From below, it can spot dark shapes against bright water.","imageAsset":"trait-great-white-surface-silhouette.png","unlockTopicID":"power"}
       ],
       "mission":{"kind":"ambushApproach","title":"Silhouette Search","symbol":"arrow.up.circle.fill","instructions":{"earlyReader":["Start deep below.","Spot each shadow above.","Tap the clues to build speed."],"story":["Watch the bright surface for prey-shaped silhouettes.","Follow each clue upward and tag the final silhouette without showing a bite."]},"targetCount":5,"completion":"Great spotting! The shark used light and shadow to search above."},
       "questions":[
@@ -130,7 +130,7 @@
         {"id":"power","title":"Special Power","symbol":"💥","narration":{"earlyReader":["The tail sweeps forward.","It strikes with a strong snap.","Stunned fish are easier to catch."],"story":["A thresher accelerates its tail over its head like a whip.","The strike can stun several closely packed fish at once."]}}
       ],
       "traits":[
-        {"id":"long-tail","title":"Super-Long Tail","symbol":"〰️","description":"Its upper tail fin can be as long as its body.","imageAsset":null,"unlockTopicID":"size"},
+        {"id":"long-tail","title":"Super-Long Tail","symbol":"〰️","description":"Its upper tail fin can be as long as its body.","imageAsset":"trait-thresher-long-tail.png","unlockTopicID":"size"},
         {"id":"tail-slap","title":"Tail Slap","symbol":"💥","description":"A quick tail slap can bunch small fish together.","imageAsset":null,"unlockTopicID":"power"}
       ],
       "mission":{"kind":"tailStrike","title":"Tail-Strike Timing","symbol":"waveform.path.ecg","instructions":{"earlyReader":["Wait for fish to school together.","Tap each fish clue.","Build one strong tail strike."],"story":["Gather the fish into a tight school and watch their movement.","Time the thresher's long tail strike when the school is together."]},"targetCount":6,"completion":"Splash! The thresher used its long tail to stun schooling fish."},

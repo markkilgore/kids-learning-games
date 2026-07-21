@@ -70,6 +70,23 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertTrue(restored.completedTopics.contains("\(shark.id):\(shark.topics[0].id)"))
     }
 
+    func testPassportTraitsUnlockFromExploreProgressOrMissionCompletion() throws {
+        let base = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.passport", baseDirectory: base)
+        let game = GameStore(progressStore: storage)
+        let shark = ContentStore.shared.catalog.sharks.first { $0.id == "whale" }!
+        let filterTrait = shark.traits.first { $0.id == "filter-mouth" }!
+
+        XCTAssertFalse(game.hasUnlocked(filterTrait, for: shark))
+        game.completeTopic(sharkID: shark.id, topicID: filterTrait.unlockTopicID)
+        XCTAssertTrue(game.hasUnlocked(filterTrait, for: shark))
+
+        let otherTrait = shark.traits.first { $0.id != filterTrait.id }!
+        XCTAssertFalse(game.hasUnlocked(otherTrait, for: shark))
+        game.completeMission(for: shark)
+        XCTAssertTrue(game.hasUnlocked(otherTrait, for: shark))
+    }
+
     func testConfigurationMatchesSharkReleaseIdentity() {
         let config = SharkAppConfiguration.value
         XCTAssertEqual(config.identity.applicationIdentifier, "com.mkilgore.SharkExplorer")

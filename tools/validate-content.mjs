@@ -24,6 +24,7 @@ const expandedSharks = catalog.sharks.map((shark) => {
 for (const shark of expandedSharks) {
   if (shark.topics.length !== 7) errors.push(`${shark.id}: expected 7 topics`);
   if (shark.questions.length !== 5) errors.push(`${shark.id}: expected 5 questions`);
+  if (shark.traits?.length !== 2) errors.push(`${shark.id}: expected 2 Passport traits`);
   if (new Set(shark.topics.map((topic) => topic.id)).size !== shark.topics.length) errors.push(`${shark.id}: topic IDs must be unique`);
   if (shark.vocabularyIDs.length < 2 || shark.vocabularyIDs.length > 3) errors.push(`${shark.id}: expected 2-3 vocabulary IDs`);
   if (!shark.vocabularyIDs.every((id) => vocabulary.has(id))) errors.push(`${shark.id}: unknown vocabulary ID`);
@@ -37,6 +38,18 @@ for (const shark of expandedSharks) {
   }
   for (const topic of shark.topics) {
     if (!topic.narration.earlyReader.length || !topic.narration.story.length) errors.push(`${shark.id}/${topic.id}: missing narration mode`);
+  }
+  for (const trait of shark.traits ?? []) {
+    if (!trait.id || !trait.title || !trait.description || !trait.unlockTopicID) errors.push(`${shark.id}: incomplete Passport trait`);
+    if (!shark.topics.some((topic) => topic.id === trait.unlockTopicID)) errors.push(`${shark.id}/${trait.id}: unknown Passport unlock topic`);
+    if (trait.imageAsset) {
+      try {
+        const image = await stat(new URL(`Art/Traits/${trait.imageAsset}`, resourceURL));
+        if (image.size < 8_000) errors.push(`${shark.id}/${trait.id}: trait image is unexpectedly small`);
+      } catch {
+        errors.push(`${shark.id}/${trait.id}: missing trait image file`);
+      }
+    }
   }
   for (const question of shark.questions) {
     if (question.choices.length !== 3) errors.push(`${question.id}: expected 3 choices`);
@@ -79,4 +92,6 @@ if (errors.length) {
 
 const topicCount = expandedSharks.reduce((sum, shark) => sum + shark.topics.length, 0);
 const questionCount = expandedSharks.reduce((sum, shark) => sum + shark.questions.length, 0);
-process.stdout.write(`Validated ${catalog.sharks.length} sharks, ${topicCount} topics, ${questionCount} questions, ${catalog.vocabulary.length} Ocean Words, ${requiredAudio.size} timed audio clips, and ${catalog.sharks.length} species images.\n`);
+const traitCount = expandedSharks.reduce((sum, shark) => sum + shark.traits.length, 0);
+const traitImageCount = expandedSharks.reduce((sum, shark) => sum + shark.traits.filter((trait) => trait.imageAsset).length, 0);
+process.stdout.write(`Validated ${catalog.sharks.length} sharks, ${topicCount} topics, ${questionCount} questions, ${traitCount} Passport traits (${traitImageCount} illustrated), ${catalog.vocabulary.length} Ocean Words, ${requiredAudio.size} timed audio clips, and ${catalog.sharks.length} species images.\n`);
