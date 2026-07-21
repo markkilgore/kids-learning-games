@@ -5,11 +5,20 @@ import Narration
 public struct ReadAlongView: View {
     public let sentences: [String]
     public var vocabulary: Set<String> = []
+    /// Changes when a parent swaps to a different passage while keeping this view on screen.
+    /// This restarts the passage without triggering the old view's `onDisappear` stop handler.
+    public var playbackID: String? = nil
     public var onFinished: () -> Void = {}
 
-    public init(sentences: [String], vocabulary: Set<String> = [], onFinished: @escaping () -> Void = {}) {
+    public init(
+        sentences: [String],
+        vocabulary: Set<String> = [],
+        playbackID: String? = nil,
+        onFinished: @escaping () -> Void = {}
+    ) {
         self.sentences = sentences
         self.vocabulary = vocabulary
+        self.playbackID = playbackID
         self.onFinished = onFinished
     }
 
@@ -46,40 +55,45 @@ public struct ReadAlongView: View {
                         .accessibilityLabel("Hear the word \(token.text)")
                     }
                 }
-                .frame(maxWidth: 900)
+                .frame(maxWidth: 900, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(minHeight: 150, alignment: .top)
 
                 HStack(spacing: 18) {
-                    control("speaker.wave.2.fill", "Replay") { playCurrent() }
-                    control(playPauseIcon, playPauseTitle) {
+                    control("Replay", systemImage: "speaker.wave.2.fill", tint: .blue) {
+                        playCurrent()
+                    }
+                    control(playPauseTitle, systemImage: playPauseIcon, tint: .blue) {
                         if narration.state == .idle { playCurrent() } else { narration.togglePause() }
                     }
-                    Button {
+                    control(
+                        narration.isSlow ? "Normal speed" : "Slow speed",
+                        systemImage: "tortoise.fill",
+                        tint: narration.isSlow ? .orange : .teal
+                    ) {
                         narration.setSlow(!narration.isSlow)
-                    } label: {
-                        Label(narration.isSlow ? "Normal speed" : "Slow speed", systemImage: "tortoise.fill")
-                            .font(.title3.bold())
-                            .padding(.horizontal, 20)
-                            .frame(minHeight: 58)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(narration.isSlow ? .orange : .teal)
-
-                    if narration.state == .idle {
-                        Button(sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done") {
-                            advance()
-                        }
-                        .font(.title3.bold())
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        .frame(minHeight: 58)
+                    control(
+                        sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done",
+                        systemImage: sentenceIndex + 1 < sentences.count ? "arrow.right" : "checkmark",
+                        tint: .green
+                    ) {
+                        advance()
                     }
+                    .opacity(narration.state == .idle ? 1 : 0)
+                    .allowsHitTesting(narration.state == .idle)
                 }
             }
         }
         .padding(32)
         .onAppear { playCurrent() }
         .onDisappear { narration.stop() }
+        .onChange(of: playbackID) { _, _ in
+            let needsSentenceReset = sentenceIndex != 0
+            sentenceIndex = 0
+            didFinish = false
+            if !needsSentenceReset { playCurrent() }
+        }
         .onChange(of: sentenceIndex) { _, _ in playCurrent() }
     }
 
@@ -106,15 +120,23 @@ public struct ReadAlongView: View {
         sentenceIndex += 1
     }
 
-    private func control(_ icon: String, _ title: String, action: @escaping () -> Void) -> some View {
+    private func control(
+        _ title: String,
+        systemImage: String,
+        tint: Color,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
-            Label(title, systemImage: icon)
+            Label(title, systemImage: systemImage)
                 .font(.title3.bold())
+                .lineLimit(1)
+                .minimumScaleFactor(0.72)
                 .padding(.horizontal, 20)
-                .frame(minHeight: 58)
+                .frame(maxWidth: .infinity, minHeight: 58)
         }
         .buttonStyle(.borderedProminent)
-        .tint(.blue)
+        .tint(tint)
+        .frame(maxWidth: .infinity)
     }
 
     private func index(of token: WordToken) -> Int { token.id }

@@ -34,6 +34,19 @@ final class CatMathTests: XCTestCase {
         }
     }
 
+    func testChallengeVisualsMatchTheirMathProblem() {
+        let mittens = CatContent.cats.first { $0.id == "mittens" }!
+        let challenges = (0..<12).map { MathChallengeFactory.challenge(for: mittens, friendship: $0) }
+
+        XCTAssertTrue(challenges.contains { $0.skill.id == "addition" && $0.visualHint.contains("🍪") })
+        XCTAssertTrue(challenges.contains { $0.skill.id == "subtraction" && $0.visualHint.contains("🐭") })
+        XCTAssertTrue(challenges.contains { $0.skill.id == "odd-even" && $0.visualHint.contains("🐾") })
+        XCTAssertTrue(challenges.contains { $0.skill.id == "skip-5" && $0.visualHint.contains("🐾") })
+        XCTAssertTrue(challenges.contains { $0.skill.id == "skip-10" && $0.visualHint.contains("🦴") })
+        XCTAssertTrue(challenges.contains { $0.skill.id == "counting" && $0.visualHint.contains("🐟") })
+        XCTAssertFalse(challenges.contains { $0.visualHint.contains("🧶") })
+    }
+
     func testReleaseIdentityIsIndependent() {
         let config = CatAppConfiguration.value
         XCTAssertEqual(config.identity.applicationIdentifier, "com.mkilgore.CatMathAdventure")

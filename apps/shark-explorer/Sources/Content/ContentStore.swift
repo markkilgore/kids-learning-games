@@ -30,7 +30,14 @@ final class ContentStore {
             throw ContentError.missingCatalog
         }
         let data = try Data(contentsOf: url)
-        let catalog = try JSONDecoder().decode(GameCatalog.self, from: data)
+        let decodedCatalog = try JSONDecoder().decode(GameCatalog.self, from: data)
+        let expansions = Dictionary(uniqueKeysWithValues: (decodedCatalog.expansions ?? []).map { ($0.sharkID, $0) })
+        let catalog = GameCatalog(
+            schemaVersion: decodedCatalog.schemaVersion,
+            sharks: decodedCatalog.sharks.map { $0.expanded(with: expansions[$0.id]) },
+            vocabulary: decodedCatalog.vocabulary,
+            expansions: decodedCatalog.expansions
+        )
         try validate(catalog)
         return catalog
     }
@@ -43,9 +50,13 @@ final class ContentStore {
         let wordIDs = Set(catalog.vocabulary.map(\.id))
 
         for shark in catalog.sharks {
-            guard shark.topics.count == 5 else { throw ContentError.invalidCatalog("\(shark.id) must have five topics") }
-            guard shark.questions.count == 3 else { throw ContentError.invalidCatalog("\(shark.id) must have three questions") }
-            guard Set(shark.topics.map(\.id)).count == 5 else { throw ContentError.invalidCatalog("duplicate topic IDs for \(shark.id)") }
+            guard shark.topics.count >= 7 else { throw ContentError.invalidCatalog("\(shark.id) must have at least seven topics") }
+            guard shark.questions.count >= 5 else { throw ContentError.invalidCatalog("\(shark.id) must have at least five questions") }
+            guard shark.traits.count >= 2 else { throw ContentError.invalidCatalog("\(shark.id) needs at least two Passport traits") }
+            guard Set(shark.topics.map(\.id)).count == shark.topics.count else { throw ContentError.invalidCatalog("duplicate topic IDs for \(shark.id)") }
+            guard shark.traits.allSatisfy({ shark.topics.map(\.id).contains($0.unlockTopicID) }) else {
+                throw ContentError.invalidCatalog("Passport trait unlock topic missing for \(shark.id)")
+            }
             guard !shark.imageAsset.isEmpty, !shark.imageSourceURL.isEmpty else { throw ContentError.invalidCatalog("missing species image for \(shark.id)") }
             guard shark.vocabularyIDs.count >= 2, shark.vocabularyIDs.count <= 3 else { throw ContentError.invalidCatalog("\(shark.id) must introduce two or three words") }
             guard Set(shark.vocabularyIDs).isSubset(of: wordIDs) else { throw ContentError.invalidCatalog("unknown vocabulary for \(shark.id)") }

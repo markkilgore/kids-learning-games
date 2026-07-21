@@ -12,13 +12,17 @@ struct QuestionRoundView: View {
     @State private var answeredCorrectly = false
 
     private var question: QuestionDefinition { shark.questions[index] }
+    private var displayedSentences: [String] {
+        feedback.map { [$0] } ?? question.prompt.sentences(for: game.readingMode)
+    }
+    private var displayedSentenceID: String { "\(question.id)-\(feedback ?? "prompt")" }
 
     var body: some View {
         ZStack {
             OceanBackdrop()
             VStack(spacing: 20) {
                 HStack {
-                    Text("Picture Question \(index + 1) of 3")
+                    Text("Picture Question \(index + 1) of \(shark.questions.count)")
                         .font(.title.bold())
                     Spacer()
                     Button("Hear it again", systemImage: "speaker.wave.2.fill") { playPrompt() }
@@ -26,7 +30,7 @@ struct QuestionRoundView: View {
                         .frame(minHeight: 58)
                 }
 
-                ReadAlongView(sentences: question.prompt.sentences(for: game.readingMode))
+                ReadAlongView(sentences: displayedSentences, playbackID: displayedSentenceID)
                     .frame(maxHeight: 270)
 
                 HStack(spacing: 22) {
@@ -67,19 +71,16 @@ struct QuestionRoundView: View {
             .padding(32)
             .foregroundStyle(.white)
         }
-        .onAppear { playPrompt() }
-        .onChange(of: index) { _, _ in playPrompt() }
     }
 
     private func playPrompt() {
-        guard let sentence = question.prompt.sentences(for: game.readingMode).first else { return }
+        guard let sentence = displayedSentences.first else { return }
         narration.play(sentence)
     }
 
     private func choose(_ choice: AnswerChoice) {
         answeredCorrectly = choice.id == question.correctID
         feedback = answeredCorrectly ? question.success : question.retry
-        narration.play(feedback ?? "")
     }
 
     private func advance() {

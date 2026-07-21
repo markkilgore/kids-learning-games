@@ -10,89 +10,69 @@ struct EncounterView: View {
     @State private var showQuestions = false
 
     var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Button { game.showMap() } label: {
-                    Label("Ocean Map", systemImage: "map.fill")
-                        .font(.headline)
-                        .frame(minHeight: 54)
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                EncounterHeader(shark: shark, readingModeTitle: game.readingMode.title) {
+                    game.showMap()
+                } onReplay: {
+                    sheet = .discover
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.white.opacity(0.2))
 
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(shark.name)
-                        .font(.system(size: 36, weight: .black, design: .rounded))
-                    Text(shark.scientificName)
-                        .font(.subheadline.italic())
-                        .foregroundStyle(.white.opacity(0.7))
-                }
-                Spacer()
-                Label(game.readingMode.title, systemImage: "text.book.closed.fill")
-                    .font(.headline)
-                Button { sheet = .discover } label: {
-                    Label("Replay", systemImage: "speaker.wave.2.fill")
-                        .font(.headline)
-                        .frame(minHeight: 54)
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(shark.tint)
-            }
-
-            HStack(spacing: 20) {
-                SpriteView(scene: HabitatScene(shark: shark, size: CGSize(width: 700, height: 350)), options: [.allowsTransparency])
-                    .clipShape(RoundedRectangle(cornerRadius: 28))
-                    .overlay(alignment: .bottomLeading) {
-                        VStack(alignment: .leading) {
-                            Text(shark.region.uppercased())
-                                .font(.caption.bold())
-                                .tracking(2)
-                            Text(shark.bookFact)
-                                .font(.title3.bold())
-                                .lineLimit(2)
-                        }
-                        .padding(18)
-                        .background(.black.opacity(0.4), in: RoundedRectangle(cornerRadius: 20))
-                        .padding(16)
-                    }
-
-                VStack(spacing: 14) {
-                    Button { sheet = .discover } label: {
-                        BigFeatureLabel(symbol: "sparkles", title: "Discover", subtitle: "Meet this shark", color: shark.tint)
-                    }
-                    .buttonStyle(.plain)
-
-                    Button { showMission = true } label: {
-                        BigFeatureLabel(symbol: shark.mission.symbol, title: "Play", subtitle: shark.mission.title, color: .orange)
-                    }
-                    .buttonStyle(.plain)
-                }
-                .frame(width: 320)
-            }
-            .frame(maxHeight: 370)
-
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Explore")
-                    .font(.title2.weight(.black))
-                HStack(spacing: 12) {
-                    ForEach(shark.topics) { topic in
-                        Button { sheet = .topic(topic) } label: {
-                            VStack(spacing: 8) {
-                                Text(topic.symbol).font(.system(size: 36))
-                                Text(topic.title).font(.headline)
-                                if game.completedTopics.contains("\(shark.id):\(topic.id)") {
-                                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
-                                }
+                HStack(spacing: 20) {
+                    SpriteView(scene: HabitatScene(shark: shark, size: CGSize(width: 700, height: 350)), options: [.allowsTransparency])
+                        .clipShape(RoundedRectangle(cornerRadius: 28))
+                        .overlay(alignment: .bottomLeading) {
+                            VStack(alignment: .leading) {
+                                Text(shark.region.uppercased())
+                                    .font(.caption.bold())
+                                    .tracking(2)
+                                Text(shark.bookFact)
+                                    .font(.title3.bold())
+                                    .lineLimit(2)
                             }
-                            .frame(maxWidth: .infinity, minHeight: 112)
-                            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 20))
+                            .padding(18)
+                            .background(.black.opacity(0.4), in: RoundedRectangle(cornerRadius: 20))
+                            .padding(16)
+                        }
+
+                    VStack(spacing: 14) {
+                        Button { sheet = .discover } label: {
+                            BigFeatureLabel(symbol: "sparkles", title: "Discover", subtitle: "Meet this shark", color: shark.tint)
+                        }
+                        .buttonStyle(.plain)
+
+                        Button { showMission = true } label: {
+                            BigFeatureLabel(symbol: shark.mission.symbol, title: "Play", subtitle: shark.mission.title, color: .orange)
                         }
                         .buttonStyle(.plain)
                     }
+                    .frame(width: 320)
+                }
+                .frame(maxHeight: 370)
+
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Explore")
+                        .font(.title2.weight(.black))
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 5), spacing: 12) {
+                        ForEach(shark.topics) { topic in
+                            Button { sheet = .topic(topic) } label: {
+                                VStack(spacing: 8) {
+                                    Text(topic.symbol).font(.system(size: 36))
+                                    Text(topic.title).font(.headline)
+                                    if game.completedTopics.contains("\(shark.id):\(topic.id)") {
+                                        Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, minHeight: 104)
+                                .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 20))
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
                 }
             }
+            .padding(24)
         }
-        .padding(24)
         .foregroundStyle(.white)
         .sheet(item: $sheet) { active in
             NarrationSheet(shark: shark, active: active) {
@@ -114,6 +94,91 @@ struct EncounterView: View {
             }
             .environment(game)
         }
+    }
+}
+
+private struct EncounterHeader: View {
+    let shark: SharkDefinition
+    let readingModeTitle: String
+    let onMap: () -> Void
+    let onReplay: () -> Void
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            expandedHeader.frame(minWidth: 1_120)
+            compactHeader
+        }
+    }
+
+    private var expandedHeader: some View {
+        HStack {
+            mapButton
+            sharkTitle
+            Spacer()
+            readingMode
+            replayButton(showsLabel: true)
+        }
+    }
+
+    private var compactHeader: some View {
+        VStack(spacing: 8) {
+            HStack(spacing: 12) {
+                mapButton
+                sharkTitle
+                Spacer(minLength: 0)
+                replayButton(showsLabel: false)
+            }
+            HStack {
+                readingMode
+                Spacer()
+            }
+        }
+    }
+
+    private var sharkTitle: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(shark.name)
+                .font(.system(size: 36, weight: .black, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(shark.scientificName)
+                .font(.subheadline.italic())
+                .foregroundStyle(.white.opacity(0.7))
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+        }
+    }
+
+    private var readingMode: some View {
+        Label(readingModeTitle, systemImage: "text.book.closed.fill")
+            .font(.headline)
+    }
+
+    private var mapButton: some View {
+        Button(action: onMap) {
+            Label("Ocean Map", systemImage: "map.fill")
+                .font(.headline)
+                .frame(minHeight: 54)
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(.white.opacity(0.2))
+    }
+
+    private func replayButton(showsLabel: Bool) -> some View {
+        Button(action: onReplay) {
+            if showsLabel {
+                Label("Replay", systemImage: "speaker.wave.2.fill")
+                    .font(.headline)
+                    .frame(minHeight: 54)
+            } else {
+                Image(systemName: "speaker.wave.2.fill")
+                    .font(.headline)
+                    .frame(width: 54, height: 54)
+            }
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(shark.tint)
+        .accessibilityLabel("Replay")
     }
 }
 

@@ -7,6 +7,14 @@ struct GameCatalog: Codable {
     let schemaVersion: Int
     let sharks: [SharkDefinition]
     let vocabulary: [VocabularyDefinition]
+    let expansions: [SharkExpansion]?
+}
+
+struct SharkExpansion: Codable, Hashable {
+    let sharkID: String
+    let topics: [ExploreTopic]
+    let questions: [QuestionDefinition]
+    let sourceURLs: [String]
 }
 
 struct SharkDefinition: Codable, Identifiable, Hashable {
@@ -25,6 +33,7 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
     let unlockAt: Int
     let discover: NarrativePair
     let topics: [ExploreTopic]
+    let traits: [TraitDefinition]
     let mission: MissionDefinition
     let questions: [QuestionDefinition]
     let vocabularyIDs: [String]
@@ -32,6 +41,33 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
     let sourceURLs: [String]
 
     var tint: Color { Color(hex: color) }
+
+    func expanded(with expansion: SharkExpansion?) -> SharkDefinition {
+        guard let expansion else { return self }
+        return SharkDefinition(
+            id: id,
+            name: name,
+            scientificName: scientificName,
+            symbol: symbol,
+            imageAsset: imageAsset,
+            imageAuthor: imageAuthor,
+            imageLicense: imageLicense,
+            imageSourceURL: imageSourceURL,
+            color: color,
+            region: region,
+            mapX: mapX,
+            mapY: mapY,
+            unlockAt: unlockAt,
+            discover: discover,
+            topics: topics + expansion.topics,
+            traits: traits,
+            mission: mission,
+            questions: questions + expansion.questions,
+            vocabularyIDs: vocabularyIDs,
+            bookFact: bookFact,
+            sourceURLs: sourceURLs + expansion.sourceURLs
+        )
+    }
 }
 
 struct NarrativePair: Codable, Hashable {
@@ -48,6 +84,15 @@ struct ExploreTopic: Codable, Identifiable, Hashable {
     let title: String
     let symbol: String
     let narration: NarrativePair
+}
+
+struct TraitDefinition: Codable, Identifiable, Hashable {
+    let id: String
+    let title: String
+    let symbol: String
+    let description: String
+    let imageAsset: String?
+    let unlockTopicID: String
 }
 
 struct MissionDefinition: Codable, Hashable {

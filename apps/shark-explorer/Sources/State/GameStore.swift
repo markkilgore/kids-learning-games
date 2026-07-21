@@ -74,6 +74,10 @@ final class GameStore {
         save()
     }
 
+    func hasUnlocked(_ trait: TraitDefinition, for shark: SharkDefinition) -> Bool {
+        completedSharks.contains(shark.id) || completedTopics.contains("\(shark.id):\(trait.unlockTopicID)")
+    }
+
     func completeMission(for shark: SharkDefinition) {
         completedSharks.insert(shark.id)
         collectedWords.formUnion(shark.vocabularyIDs)

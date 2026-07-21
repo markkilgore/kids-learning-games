@@ -18,19 +18,19 @@ enum MathChallengeFactory {
         switch skill.id {
         case "addition":
             let other = (seed % 4) + 1
-            return make(skill, "\(cat.name) has \(seed) treats and finds \(other) more. How many treats now?", seed + other, "\(icons(seed))  +  \(icons(other))")
+            return make(skill, "\(cat.name) has \(seed) treats and finds \(other) more. How many treats now?", seed + other, "\(repeated("🍪", count: seed))  +  \(repeated("🍪", count: other))")
         case "subtraction":
             let total = seed + 4, taken = min(3, seed)
-            return make(skill, "\(cat.name) has \(total) toy mice. \(taken) roll away. How many stay?", total - taken, "\(icons(total))\nTake away \(icons(taken))")
+            return make(skill, "\(cat.name) has \(total) toy mice. \(taken) roll away. How many stay?", total - taken, "\(repeated("🐭", count: total))\nTake away \(repeated("🐭", count: taken))")
         case "odd-even":
             let number = seed + 3, answer = number.isMultiple(of: 2) ? 2 : 1
-            return MathChallenge(skill: skill, prompt: "Is \(number) odd or even? Choose 1 for odd or 2 for even.", choices: [1, 2], answer: answer, visualHint: icons(number))
+            return MathChallenge(skill: skill, prompt: "Is \(number) odd or even? Choose 1 for odd or 2 for even.", choices: [1, 2], answer: answer, visualHint: pairedPaws(number))
         case "skip-5":
             return make(skill, "Count by fives: 5, 10, 15, what comes next?", 20, "🐾 5   🐾 10   🐾 15   🐾 ?")
         case "skip-10":
-            return make(skill, "Count by tens: 10, 20, 30, what comes next?", 40, "🧶 10   🧶 20   🧶 30   🧶 ?")
+            return make(skill, "Count by tens: 10, 20, 30, what comes next?", 40, "🦴 10   🦴 20   🦴 30   🦴 ?")
         default:
-            return make(skill, "How many yarn balls did \(cat.name) find?", seed, icons(seed))
+            return make(skill, "How many fish did \(cat.name) find?", seed, repeated("🐟", count: seed))
         }
     }
 
@@ -39,5 +39,12 @@ enum MathChallengeFactory {
         return MathChallenge(skill: skill, prompt: prompt, choices: alternatives, answer: answer, visualHint: hint)
     }
 
-    private static func icons(_ count: Int) -> String { Array(repeating: "🧶", count: min(count, 14)).joined(separator: " ") }
+    private static func repeated(_ symbol: String, count: Int) -> String {
+        Array(repeating: symbol, count: min(count, 14)).joined(separator: " ")
+    }
+
+    private static func pairedPaws(_ count: Int) -> String {
+        let pairs = Array(repeating: "🐾🐾", count: count / 2)
+        return (pairs + (count.isMultiple(of: 2) ? [] : ["🐾"])).joined(separator: "  ")
+    }
 }

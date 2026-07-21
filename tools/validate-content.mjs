@@ -10,10 +10,21 @@ if (catalog.schemaVersion !== 1) errors.push('schemaVersion must be 1');
 if (catalog.sharks?.length !== 10) errors.push('catalog must contain exactly 10 sharks');
 if (new Set(catalog.sharks.map((s) => s.id)).size !== catalog.sharks.length) errors.push('shark IDs must be unique');
 const vocabulary = new Set(catalog.vocabulary.map((word) => word.id));
+const expansions = new Map((catalog.expansions ?? []).map((expansion) => [expansion.sharkID, expansion]));
+if (expansions.size !== catalog.sharks.length) errors.push('every shark must have an expansion');
+const expandedSharks = catalog.sharks.map((shark) => {
+  const expansion = expansions.get(shark.id);
+  return {
+    ...shark,
+    topics: [...shark.topics, ...(expansion?.topics ?? [])],
+    questions: [...shark.questions, ...(expansion?.questions ?? [])]
+  };
+});
 
-for (const shark of catalog.sharks) {
-  if (shark.topics.length !== 5) errors.push(`${shark.id}: expected 5 topics`);
-  if (shark.questions.length !== 3) errors.push(`${shark.id}: expected 3 questions`);
+for (const shark of expandedSharks) {
+  if (shark.topics.length !== 7) errors.push(`${shark.id}: expected 7 topics`);
+  if (shark.questions.length !== 5) errors.push(`${shark.id}: expected 5 questions`);
+  if (new Set(shark.topics.map((topic) => topic.id)).size !== shark.topics.length) errors.push(`${shark.id}: topic IDs must be unique`);
   if (shark.vocabularyIDs.length < 2 || shark.vocabularyIDs.length > 3) errors.push(`${shark.id}: expected 2-3 vocabulary IDs`);
   if (!shark.vocabularyIDs.every((id) => vocabulary.has(id))) errors.push(`${shark.id}: unknown vocabulary ID`);
   if (!shark.sourceURLs?.length) errors.push(`${shark.id}: missing science source`);
@@ -66,6 +77,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-const topicCount = catalog.sharks.reduce((sum, shark) => sum + shark.topics.length, 0);
-const questionCount = catalog.sharks.reduce((sum, shark) => sum + shark.questions.length, 0);
+const topicCount = expandedSharks.reduce((sum, shark) => sum + shark.topics.length, 0);
+const questionCount = expandedSharks.reduce((sum, shark) => sum + shark.questions.length, 0);
 process.stdout.write(`Validated ${catalog.sharks.length} sharks, ${topicCount} topics, ${questionCount} questions, ${catalog.vocabulary.length} Ocean Words, ${requiredAudio.size} timed audio clips, and ${catalog.sharks.length} species images.\n`);

@@ -1,3 +1,4 @@
+import LearningEngine
 import LearningUI
 import Narration
 import SwiftUI
@@ -54,22 +55,7 @@ private struct CatHomeView: View {
     var body: some View {
         @Bindable var game = game
         VStack(spacing: 16) {
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(CatAppConfiguration.value.identity.childFacingName)
-                        .font(.system(size: 38, weight: .black, design: .rounded))
-                        .foregroundStyle(Color(hex: "#5B376E"))
-                    Text("Make friends by solving playful math puzzles")
-                        .font(.title3.weight(.semibold)).foregroundStyle(.secondary)
-                }
-                Spacer()
-                Label("\(game.totalFriendship) hearts", systemImage: "heart.fill")
-                    .font(.title3.bold()).foregroundStyle(.pink)
-                    .padding(16).background(.white.opacity(0.82), in: Capsule())
-                Button("Cat Journal", systemImage: "book.closed.fill") { game.showJournal() }
-                    .buttonStyle(.borderedProminent).tint(Color(hex: "#A855F7")).controlSize(.large)
-                ParentGateButton { game.showSettings() }
-            }
+            CatHomeHeader()
 
             Picker("Place", selection: $game.selectedLocationID) {
                 ForEach(CatContent.locations) { location in Label(location.name, systemImage: location.symbol).tag(location.id) }
@@ -87,6 +73,91 @@ private struct CatHomeView: View {
                 .font(.headline).foregroundStyle(Color(hex: "#5B376E")).padding(.bottom, 8)
         }
         .padding(26)
+    }
+}
+
+private struct CatHomeHeader: View {
+    @Environment(CatGameStore.self) private var game
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            expandedHeader.frame(minWidth: 1_120)
+            compactHeader
+        }
+    }
+
+    private var expandedHeader: some View {
+        HStack {
+            title
+            Spacer()
+            friendshipBadge(showsLabel: true)
+            journalButton(showsLabel: true)
+            ParentGateButton { game.showSettings() }
+        }
+    }
+
+    private var compactHeader: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                Text(CatAppConfiguration.value.identity.childFacingName)
+                    .font(.system(size: 32, weight: .black, design: .rounded))
+                    .foregroundStyle(Color(hex: "#5B376E"))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.62)
+                Spacer(minLength: 8)
+                friendshipBadge(showsLabel: false)
+                journalButton(showsLabel: false)
+                ParentGateButton { game.showSettings() }
+            }
+            Text("Make friends by solving playful math puzzles")
+                .font(.headline.weight(.semibold))
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+    }
+
+    private var title: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(CatAppConfiguration.value.identity.childFacingName)
+                .font(.system(size: 38, weight: .black, design: .rounded))
+                .foregroundStyle(Color(hex: "#5B376E"))
+            Text("Make friends by solving playful math puzzles")
+                .font(.title3.weight(.semibold))
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    private func friendshipBadge(showsLabel: Bool) -> some View {
+        Group {
+            if showsLabel {
+                Label("\(game.totalFriendship) hearts", systemImage: "heart.fill")
+            } else {
+                Label("\(game.totalFriendship)", systemImage: "heart.fill")
+                    .accessibilityLabel("\(game.totalFriendship) friendship hearts")
+            }
+        }
+        .font(.title3.bold())
+        .foregroundStyle(.pink)
+        .padding(showsLabel ? 16 : 12)
+        .background(.white.opacity(0.82), in: Capsule())
+    }
+
+    private func journalButton(showsLabel: Bool) -> some View {
+        Button {
+            game.showJournal()
+        } label: {
+            if showsLabel {
+                Label("Cat Journal", systemImage: "book.closed.fill")
+            } else {
+                Image(systemName: "book.closed.fill")
+                    .frame(width: 52, height: 52)
+            }
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(Color(hex: "#A855F7"))
+        .controlSize(.large)
+        .accessibilityLabel("Cat Journal")
     }
 }
 
@@ -132,12 +203,9 @@ private struct CatActivityView: View {
 
     var body: some View {
         VStack(spacing: 22) {
-            HStack {
-                Button("Back", systemImage: "chevron.left") { narration.stop(); game.showHome() }
-                    .buttonStyle(.borderedProminent).tint(Color(hex: "#A855F7")).controlSize(.large)
-                Text("\(cat.symbol) Math time with \(cat.name)").font(.largeTitle.weight(.black)).foregroundStyle(Color(hex: "#5B376E"))
-                Spacer()
-                Label(challenge.skill.displayName, systemImage: "sparkles").font(.title3.bold())
+            CatActivityHeader(cat: cat, skill: challenge.skill) {
+                narration.stop()
+                game.showHome()
             }
 
             VStack(spacing: 18) {
@@ -186,6 +254,54 @@ private struct CatActivityView: View {
         feedback = correct ? "You did it! \(cat.name)’s friendship grew." : "Good try. Use the picture hint and count once more."
         narration.play(feedback ?? "")
         if correct { game.completeActivity(for: cat) }
+    }
+}
+
+private struct CatActivityHeader: View {
+    let cat: CatDefinition
+    let skill: EducationalSkill
+    let onBack: () -> Void
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            expandedHeader.frame(minWidth: 1_020)
+            compactHeader
+        }
+    }
+
+    private var expandedHeader: some View {
+        HStack {
+            backButton
+            Text("\(cat.symbol) Math time with \(cat.name)")
+                .font(.largeTitle.weight(.black))
+                .foregroundStyle(Color(hex: "#5B376E"))
+            Spacer()
+            Label(skill.displayName, systemImage: "sparkles")
+                .font(.title3.bold())
+        }
+    }
+
+    private var compactHeader: some View {
+        HStack(spacing: 12) {
+            backButton
+            VStack(alignment: .leading, spacing: 2) {
+                Text("\(cat.symbol) Math time with \(cat.name)")
+                    .font(.title2.weight(.black))
+                    .foregroundStyle(Color(hex: "#5B376E"))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                Label(skill.displayName, systemImage: "sparkles")
+                    .font(.subheadline.bold())
+            }
+            Spacer(minLength: 0)
+        }
+    }
+
+    private var backButton: some View {
+        Button("Back", systemImage: "chevron.left", action: onBack)
+            .buttonStyle(.borderedProminent)
+            .tint(Color(hex: "#A855F7"))
+            .controlSize(.large)
     }
 }
 
