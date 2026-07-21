@@ -175,6 +175,9 @@ private struct CatCard: View {
                 if unlocked {
                     Text(cat.favoriteThing).font(.subheadline).multilineTextAlignment(.center).foregroundStyle(.secondary)
                     Label("\(friendship) friendship", systemImage: "heart.fill").foregroundStyle(.pink).font(.headline)
+                    Text("\(cat.revealedStory(for: friendship).count) of \(cat.backstory.count) story pages")
+                        .font(.caption.bold())
+                        .foregroundStyle(Color(hex: "#5B376E"))
                 } else {
                     Text("Earn \(cat.unlockAt) total hearts").font(.subheadline).foregroundStyle(.secondary)
                 }
@@ -195,6 +198,9 @@ private struct CatActivityView: View {
     @State private var challenge: MathChallenge
     @State private var feedback: String?
     @State private var correct = false
+    @State private var revealedBeat: CatStoryBeat?
+    @State private var selectedReward: CatRewardAction?
+    @State private var rewardMotion = false
 
     init(cat: CatDefinition) {
         self.cat = cat
@@ -207,6 +213,24 @@ private struct CatActivityView: View {
                 narration.stop()
                 game.showHome()
             }
+
+            let currentStory = cat.storyBeat(for: game.friendship(for: cat))
+            HStack(spacing: 14) {
+                Image(systemName: "book.pages.fill")
+                    .font(.title)
+                    .foregroundStyle(Color(hex: cat.color))
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(currentStory.title).font(.headline.bold())
+                    Text(currentStory.story).font(.subheadline).foregroundStyle(.secondary)
+                }
+                Spacer()
+                Button("Hear \(cat.name)’s story", systemImage: "speaker.wave.2.fill") {
+                    narration.play(currentStory.story)
+                }
+                .buttonStyle(.bordered).controlSize(.large)
+            }
+            .padding(16)
+            .background(.white.opacity(0.75), in: RoundedRectangle(cornerRadius: 20))
 
             VStack(spacing: 18) {
                 Text(challenge.prompt).font(.system(size: 32, weight: .bold, design: .rounded)).multilineTextAlignment(.center)
@@ -229,15 +253,27 @@ private struct CatActivityView: View {
             }
 
             if let feedback {
-                HStack(spacing: 14) {
-                    Text(correct ? "💖" : "🐾").font(.largeTitle)
-                    Text(feedback).font(.title2.bold())
-                    Spacer()
-                    if correct {
-                        Button("Back to the cats") { game.showHome() }.buttonStyle(.borderedProminent).tint(.green).controlSize(.large)
+                if correct {
+                    CatRewardMoment(
+                        cat: cat,
+                        feedback: feedback,
+                        story: revealedBeat,
+                        selectedReward: selectedReward,
+                        rewardMotion: rewardMotion,
+                        onReward: chooseReward,
+                        onContinue: {
+                            narration.stop()
+                            game.showHome()
+                        }
+                    )
+                } else {
+                    HStack(spacing: 14) {
+                        Text("🐾").font(.largeTitle)
+                        Text(feedback).font(.title2.bold())
+                        Spacer()
                     }
+                    .padding(20).background(.white.opacity(0.85), in: RoundedRectangle(cornerRadius: 22))
                 }
-                .padding(20).background(.white.opacity(0.85), in: RoundedRectangle(cornerRadius: 22))
             }
             Spacer()
         }
@@ -253,7 +289,83 @@ private struct CatActivityView: View {
         correct = choice == challenge.answer
         feedback = correct ? "You did it! \(cat.name)’s friendship grew." : "Good try. Use the picture hint and count once more."
         narration.play(feedback ?? "")
-        if correct { game.completeActivity(for: cat) }
+        if correct {
+            game.completeActivity(for: cat)
+            revealedBeat = cat.storyBeat(for: game.friendship(for: cat))
+        }
+    }
+
+    private func chooseReward(_ reward: CatRewardAction) {
+        guard selectedReward == nil else { return }
+        selectedReward = reward
+        game.record(reward, for: cat)
+        withAnimation(.spring(response: 0.42, dampingFraction: 0.5)) { rewardMotion = true }
+        narration.play(reward.celebration(for: cat)) {
+            if let revealedBeat { narration.play(revealedBeat.story) }
+        }
+    }
+}
+
+private struct CatRewardMoment: View {
+    let cat: CatDefinition
+    let feedback: String
+    let story: CatStoryBeat?
+    let selectedReward: CatRewardAction?
+    let rewardMotion: Bool
+    let onReward: (CatRewardAction) -> Void
+    let onContinue: () -> Void
+
+    var body: some View {
+        VStack(spacing: 14) {
+            HStack(spacing: 18) {
+                ZStack {
+                    Text(selectedReward == .meal ? "🥣" : selectedReward == .treat ? "🐟" : cat.trickSymbol)
+                        .font(.system(size: 44))
+                        .opacity(selectedReward == nil ? 0 : 1)
+                        .offset(x: selectedReward == .treat && rewardMotion ? 44 : 0)
+                    Text(cat.symbol)
+                        .font(.system(size: 72))
+                        .scaleEffect(selectedReward == .meal && rewardMotion ? 1.14 : 1)
+                        .rotationEffect(.degrees(selectedReward == .trick && rewardMotion ? 16 : 0))
+                        .offset(y: selectedReward == .trick && rewardMotion ? -24 : 0)
+                }
+                .frame(width: 126, height: 96)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(feedback).font(.title2.bold())
+                    Text(selectedReward.map { $0.celebration(for: cat) } ?? "Choose a way to celebrate with \(cat.name).")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+            }
+
+            if selectedReward == nil {
+                HStack(spacing: 14) {
+                    ForEach(CatRewardAction.allCases) { reward in
+                        Button(reward.title, systemImage: reward.symbol) { onReward(reward) }
+                            .buttonStyle(.borderedProminent)
+                            .tint(Color(hex: cat.color))
+                            .controlSize(.large)
+                    }
+                }
+            } else if let story {
+                HStack(alignment: .top, spacing: 14) {
+                    Image(systemName: "book.pages.fill").font(.title).foregroundStyle(Color(hex: cat.color))
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("New story page: \(story.title)").font(.headline.bold())
+                        Text(story.story).font(.headline)
+                    }
+                    Spacer()
+                    Button("Back to the cats", systemImage: "pawprint.fill", action: onContinue)
+                        .buttonStyle(.borderedProminent).tint(.green).controlSize(.large)
+                }
+                .padding(14)
+                .background(Color(hex: cat.color).opacity(0.12), in: RoundedRectangle(cornerRadius: 18))
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .padding(18)
+        .background(.white.opacity(0.9), in: RoundedRectangle(cornerRadius: 24))
     }
 }
 
@@ -317,21 +429,70 @@ private struct CatJournalView: View {
                 Text("\(game.progress.journaledCatIDs.count) of \(CatContent.cats.count) friends").font(.title3.bold())
             }
             ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 18), count: 5), spacing: 18) {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 18), count: 2), spacing: 18) {
                     ForEach(CatContent.cats) { cat in
                         let met = game.progress.journaledCatIDs.contains(cat.id)
-                        VStack(spacing: 10) {
-                            Text(met ? cat.symbol : "❔").font(.system(size: 62))
-                            Text(met ? cat.name : "New friend").font(.title3.bold())
-                            Text(met ? "Loves \(cat.favoriteThing). You have \(game.friendship(for: cat)) friendship hearts." : "Solve math together to add this page.")
-                                .font(.caption).multilineTextAlignment(.center).foregroundStyle(.secondary)
-                        }
-                        .padding(16).frame(maxWidth: .infinity, minHeight: 205)
-                        .background(.white.opacity(0.86), in: RoundedRectangle(cornerRadius: 22))
+                        CatJournalCard(cat: cat, met: met)
                     }
                 }
             }
         }.padding(28)
+    }
+}
+
+private struct CatJournalCard: View {
+    let cat: CatDefinition
+    let met: Bool
+    @Environment(CatGameStore.self) private var game
+
+    var body: some View {
+        let friendship = game.friendship(for: cat)
+        let stories = cat.revealedStory(for: friendship)
+        HStack(alignment: .top, spacing: 16) {
+            Text(met ? cat.symbol : "❔").font(.system(size: 62))
+            VStack(alignment: .leading, spacing: 9) {
+                HStack {
+                    Text(met ? cat.name : "New friend").font(.title3.bold())
+                    Spacer()
+                    if met {
+                        Label("\(friendship)", systemImage: "heart.fill").foregroundStyle(.pink).font(.headline)
+                    }
+                }
+                if met {
+                    Text("Loves \(cat.favoriteThing).")
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.secondary)
+                    ForEach(stories) { story in
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(story.title).font(.caption.bold()).foregroundStyle(Color(hex: cat.color))
+                            Text(story.story).font(.caption).foregroundStyle(.secondary)
+                        }
+                    }
+                    if stories.count < cat.backstory.count {
+                        Label("Solve again to discover the next page", systemImage: "lock.fill")
+                            .font(.caption.bold()).foregroundStyle(.secondary)
+                    }
+                    HStack(spacing: 12) {
+                        rewardCount(.treat, label: "treats", symbol: "fish.fill")
+                        rewardCount(.meal, label: "meals", symbol: "takeoutbag.and.cup.and.straw.fill")
+                        rewardCount(.trick, label: "tricks", symbol: "sparkles")
+                    }
+                } else {
+                    Text("Solve math together to begin this cat’s story.")
+                        .font(.subheadline).foregroundStyle(.secondary)
+                }
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, minHeight: 220, alignment: .topLeading)
+        .background(.white.opacity(0.86), in: RoundedRectangle(cornerRadius: 22))
+        .overlay(RoundedRectangle(cornerRadius: 22).stroke(Color(hex: cat.color).opacity(met ? 0.45 : 0.12), lineWidth: 2))
+    }
+
+    private func rewardCount(_ reward: CatRewardAction, label: String, symbol: String) -> some View {
+        Label("\(game.rewardCount(reward, for: cat)) \(label)", systemImage: symbol)
+            .font(.caption.bold())
+            .foregroundStyle(Color(hex: "#5B376E"))
     }
 }
 
@@ -348,8 +509,8 @@ private struct CatSettingsView: View {
             GroupBox("Learning in this app") {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(CatAppConfiguration.value.enabledSkills.map(\.displayName).joined(separator: " • "))
-                    Text("Prompts are narrated. Every puzzle includes a visual counting or pattern hint.")
-                    Text("Friendship grows locally on this iPad and unlocks more cats.")
+                    Text("Stories and prompts use bundled narration when available. Every puzzle includes a visual counting or pattern hint.")
+                    Text("Friendship reveals each cat’s story. Treats, meals, tricks, and progress stay on this iPad.")
                 }.font(.title3).frame(maxWidth: .infinity, alignment: .leading).padding()
             }
             GroupBox("Saved progress") {
