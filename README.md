@@ -45,6 +45,6 @@ Cat Math uses bundled ElevenLabs clips when a line exists in `cat-audio-manifest
 ELEVENLABS_API_KEY=<key> npm --prefix tools run cat-audio
 ```
 
-The generator defaults to the bright, uplifting **Hope** voice and `eleven_multilingual_v2`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override either one. API credentials are generation-time secrets and are never included in the iPad app.
+The generator defaults to the bright, warm **Bella** educational voice and `eleven_multilingual_v2`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override either one. API credentials are generation-time secrets and are never included in the iPad app.
 
 See [docs/architecture.md](docs/architecture.md) for the assessment, migration stages, configuration contract, persistence strategy, and target structure. Run `tools/verify-monorepo.sh` for release-build and product-isolation checks.

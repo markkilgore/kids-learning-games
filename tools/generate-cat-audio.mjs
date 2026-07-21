@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 
 const apiKey = process.env.ELEVENLABS_API_KEY;
-const voiceID = process.env.ELEVENLABS_VOICE_ID || 'OYTbf65OHHFELVut7v2H';
+const voiceID = process.env.ELEVENLABS_VOICE_ID || 'hpp4J3VqNfWAUOO0d1Us';
 const modelID = process.env.ELEVENLABS_MODEL_ID || process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
 
 const resourceURL = new URL('../apps/cat-math/Resources/', import.meta.url);
@@ -25,7 +25,8 @@ for (const [catIndex, cat] of cats.entries()) {
 }
 
 if (process.argv.includes('--dry-run')) {
-  process.stdout.write(`Cat audio script contains ${lines.size} clips for ${cats.length} cats.\n`);
+  const characterCount = [...lines].reduce((sum, line) => sum + line.length, 0);
+  process.stdout.write(`Cat audio script contains ${lines.size} clips and ${characterCount} characters for ${cats.length} cats.\n`);
   process.exit(0);
 }
 if (!apiKey) {
