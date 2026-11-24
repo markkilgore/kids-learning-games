@@ -7,6 +7,7 @@
     "art": "node fetch-shark-art.mjs",
     "audio": "node generate-audio.mjs",
     "cat-audio": "node generate-cat-audio.mjs",
-    "sfx": "node generate-sfx.mjs"
+    "sfx": "node generate-sfx.mjs",
+    "sfx:recorded": "node generate-recorded-sfx.mjs"
   }
 }

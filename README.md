@@ -49,7 +49,7 @@ npm --prefix tools run validate     # fails if any spoken line lacks a clip
 
 Each generator collects every line its app can speak — catalog text, Cat Math prompts, weekly lessons, and the interface lines in each app’s `Resources/ui-lines.json` — and only generates what is missing. Add `-- --dry-run` to see the clip and character count first, and `-- --prune` to delete clips that are no longer spoken. Both apps use the **Bella** voice and `eleven_v3`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override, which regenerates every clip. Run `xcodegen generate --spec project.yml` afterwards so new clips join the app.
 
-Interface sounds (tap, correct, try again, pop, unlock, celebrate) are synthesized locally with `npm --prefix tools run sfx`; no key is needed. Parents can switch narration and sound effects off in each app’s Parent Settings.
+Interface sounds (tap, correct, try again, pop, unlock, celebrate, page) are recorded with the ElevenLabs sound-effects API by `npm --prefix tools run sfx:recorded` (the key needs the `sound_generation` permission; macOS only). `npm --prefix tools run sfx` writes synthesized stand-ins instead and needs no key. Parents can switch narration and sound effects off in each app’s Parent Settings.
 
 ## Checking every screen
 
