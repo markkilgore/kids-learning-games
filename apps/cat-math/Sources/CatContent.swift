@@ -3,6 +3,8 @@ import LearningEngine
 struct CatStoryBeat: Identifiable, Hashable {
     let id: String
     let title: String
+    /// The school reading unit this page practises; see `ReadingFocus` and cat-reading.json.
+    let focusID: String
     /// One story page, a few sentences long. Each sentence is recorded and read aloud on its own.
     let sentences: [String]
     let puzzleLead: String
@@ -54,263 +56,263 @@ enum CatContent {
 
     static let cats = [
         cat("mittens", "Mittens", "🐈", "#E07A5F", "house", "a red yarn ball", 0, "button", "buttons", "🔴", "the mitten flip", "🧤", [
-            ("The tiny tailor", [
+            ("The tiny tailor", "sh", [
                 "Mittens was found asleep in a basket of warm, hand-knit mittens.",
-                "The mittens were soft and smelled like wool.",
-                "She curled up so small that only her white paws showed.",
-                "Now she naps beside the sewing basket every afternoon."
+                "The mittens were soft, and some had shiny shell buttons.",
+                "She curled up by a shelf, and only her white paws showed.",
+                "You would know her by her soft, sleepy purr, if you could hear it."
             ], "Beside the sewing basket,"),
-            ("A helpful paw", [
+            ("A helpful paw", "th-wh", [
                 "She gathers every loose button so nobody steps on one.",
-                "Buttons roll under chairs and hide in the rug.",
-                "Mittens pats each one back to the button tin.",
-                "She lines them up in neat little rows."
+                "Buttons jump off the table and roll under their chairs.",
+                "Mittens knows where each one hides, and that is why she finds them.",
+                "With three soft pats, she can walk them right back to the tin."
             ], "While tidying the button tin,"),
-            ("Her red treasure", [
+            ("Her red treasure", "ch", [
                 "Her favorite yarn ball came from the very first mitten she helped mend.",
-                "The yarn rolled away and left a long red trail.",
-                "Mittens followed it around the table and under the bed.",
-                "At the end she found her ball, safe and round."
+                "Today it rolled off a chair and started a long red trail.",
+                "Mittens chased it past the kitchen and under a bench.",
+                "Here it is, safe by the couch, and now she can play."
             ], "Following the red yarn trail,"),
-            ("A cozy dream", [
+            ("A cozy dream", "s-blends", [
                 "Mittens dreams of sewing a little patchwork blanket for every cat in the house.",
-                "Each square will be a different color.",
-                "She has saved bright buttons to sew on the corners.",
-                "One day every cat will have a warm place to nap."
+                "She does not stop before each small square is snug.",
+                "After the last stitch, she smooths the blankets into a soft stack.",
+                "No cat will sleep cold, and the stack will grow."
             ], "To finish the patchwork blanket,")
         ]),
         cat("pepper", "Pepper", "🐈‍⬛", "#5C677D", "house", "sunny windows", 0, "sunbeam", "sunbeams", "☀️", "the shadow pounce", "🌑", [
-            ("The window watcher", [
+            ("The window watcher", "th-wh", [
                 "Pepper arrived one rainy morning and chose the sunniest window as home.",
-                "The glass was warm and the rain tapped outside.",
-                "Pepper stretched out long in a patch of light.",
-                "He has watched the world from that window ever since."
+                "He likes the way the warm sun feels on his whiskers.",
+                "From there he can see where the birds walk and jump.",
+                "That is why he thinks this is the right spot for a nap."
             ], "At Pepper’s sunny window,"),
-            ("A weather expert", [
+            ("A weather expert", "ch", [
                 "He can tell when rain is coming by the silvery smell in the air.",
-                "He sniffs the breeze and looks up at the clouds.",
-                "Gray clouds mean it is time to stay inside.",
-                "Bright clouds mean the sunbeams are coming back."
+                "Today he sat on his chair to check the sky.",
+                "A chilly wind started to push the clouds along.",
+                "Pepper knew it would be very wet, so the cats chose to play in here."
             ], "While checking the weather,"),
-            ("Secret kindness", [
+            ("Secret kindness", "s-blends", [
                 "Pepper leaves his warm window spot whenever another cat feels chilly.",
-                "He scoots over without making a sound.",
-                "Then he pretends he wanted the cool floor all along.",
-                "A shared sunbeam feels twice as warm."
+                "He does not say a word before he slips away.",
+                "A small cat can step into the sunbeam and stretch.",
+                "After a while, no one is cold, and Pepper smiles."
             ], "Sharing a warm sunbeam,"),
-            ("His big plan", [
+            ("His big plan", "l-blends", [
                 "Pepper wants to map every patch of sunlight that travels across the house.",
-                "In the morning the light lands on the kitchen floor.",
-                "By lunch it has climbed onto the big blue chair.",
-                "Pepper marks each sunny spot so no cat misses one."
+                "He found a bright glow on the floor by the plants.",
+                "By lunch it had come around to the big blue chair.",
+                "Two other cats came to help, and they worked on the plan all day."
             ], "Drawing the sunbeam map,")
         ]),
         cat("biscuit", "Biscuit", "🐱", "#F2CC8F", "house", "soft blankets", 0, "pillow", "pillows", "🟨", "the biscuit roll", "🌀", [
-            ("The blanket burrower", [
+            ("The blanket burrower", "ch", [
                 "Biscuit was discovered beneath a blanket with only two fuzzy ears showing.",
-                "The blanket wiggled, then it purred.",
-                "Out popped a sleepy cream-colored face.",
-                "Biscuit has loved blanket forts ever since."
+                "The blanket on the big chair started to wiggle.",
+                "Out popped a cheerful face with a furry chin.",
+                "Today that chair is her very best place to play."
             ], "Inside the blanket fort,"),
-            ("A gentle helper", [
+            ("A gentle helper", "s-blends", [
                 "She kneads lumpy pillows until they are perfectly soft for her friends.",
-                "Push, push, push go her little paws.",
-                "She tests each pillow with a slow, careful flop.",
-                "When it is just right, she saves it for a friend."
+                "Before nap time, she steps onto each pillow.",
+                "She does a slow spin and a small stomp.",
+                "After that, no lumps are left, and she can wash her paws."
             ], "Fluffing the pillows,"),
-            ("Braver than she looks", [
+            ("Braver than she looks", "l-blends", [
                 "Biscuit once crossed the noisy hallway to return a kitten’s lost toy.",
-                "The hallway was long, and the vacuum was loud.",
-                "Biscuit took a deep breath and tiptoed past.",
-                "The kitten was so happy to see the toy again."
+                "She found the toy clown under a blue blanket.",
+                "The other cats were too scared to come past the loud clock.",
+                "Biscuit came around the corner with a glad little flick of her tail."
             ], "On a brave hallway trip,"),
-            ("The coziest goal", [
+            ("The coziest goal", "sh", [
                 "She hopes to build the biggest, softest reading fort in the whole house.",
-                "It needs tall pillow walls and a blanket roof.",
-                "Inside there will be room for books and for friends.",
-                "Biscuit is saving every soft pillow she can find."
+                "There would be a sheet for the roof and cushions by the door.",
+                "Some shelves could hold books for her friends to share.",
+                "She does not know when it will be finished, but she will not rush."
             ], "Building the reading fort,")
         ]),
         cat("poppy", "Poppy", "😺", "#C77DFF", "house", "cardboard castles", 4, "cardboard tower", "cardboard towers", "🏰", "the royal wave", "👑", [
-            ("Queen of boxes", [
+            ("Queen of boxes", "s-blends", [
                 "Poppy moved into an empty delivery box and declared it her royal castle.",
-                "She cut a window with her teeth and a door with her claws.",
-                "A paper flag waves from the very top.",
-                "Every visitor must bow before coming in."
+                "Before lunch, she made a small window and a strong door.",
+                "A flag on a stick stands at the very top.",
+                "Don’t step inside until she does a royal spin."
             ], "Inside Poppy’s cardboard castle,"),
-            ("A fair ruler", [
+            ("A fair ruler", "l-blends", [
                 "She gives every visiting cat an important job and a shiny paper crown.",
-                "One cat guards the gate, and one cat rings the bell.",
-                "Poppy folds each crown from shiny gold paper.",
-                "No one is ever left without a crown."
+                "Two cats came to clean the flag and guard the gate.",
+                "The other cats worked to glue blue gems on each crown.",
+                "When people come around, Poppy claps for her helpers."
             ], "Preparing paper crowns,"),
-            ("The hidden passage", [
+            ("The hidden passage", "sh", [
                 "A tunnel behind her throne leads all the way to the kitchen.",
-                "It is dark inside, but Poppy is not afraid.",
-                "She counts her steps so she never gets lost.",
-                "At the end there is always a snack waiting."
+                "There were shadows inside, but she could see a shine at the end.",
+                "She would push by some old boxes and shuffle along.",
+                "You know what she found there? A dish of fish."
             ], "Exploring the secret tunnel,"),
-            ("A grand design", [
+            ("A grand design", "th-wh", [
                 "Poppy plans a cardboard village where every cat gets a castle.",
-                "She draws the plan on the side of a big box.",
-                "There will be towers, bridges, and a tall front gate.",
-                "The more boxes that arrive, the bigger the village grows."
+                "She thinks about where their paths and bridges should go.",
+                "Then she draws a white wheel to show which way to walk.",
+                "Why stop at three castles when there are boxes for thirty?"
             ], "Planning the cardboard village,")
         ]),
         cat("waffles", "Waffles", "😸", "#F4A261", "house", "breakfast time", 9, "berry", "berries", "🫐", "the breakfast boogie", "🥞", [
-            ("The breakfast bell", [
+            ("The breakfast bell", "l-blends", [
                 "Waffles appears each morning exactly when the toaster pops.",
-                "Pop goes the toaster, and in trots Waffles.",
-                "He sits up tall on his chair at the table.",
-                "He has never been late for breakfast, not even once."
+                "He came to his place and found a clean blue plate.",
+                "Two other cats come in slowly, still blinking.",
+                "When the people sit down, Waffles is glad he worked so hard to be first."
             ], "At the breakfast table,"),
-            ("A careful collector", [
+            ("A careful collector", "sh", [
                 "He saves fallen berries in a tiny bowl instead of letting them roll away.",
-                "Blueberries are round, so they roll very fast.",
-                "Waffles traps each one gently under his paw.",
-                "Then he drops it into the bowl with a soft plop."
+                "Some berries were by the dish, and some were under a shoe.",
+                "He could push each one with a gentle swish.",
+                "You would not know there had been a spill when he was finished."
             ], "Filling the berry bowl,"),
-            ("His early adventure", [
+            ("His early adventure", "th-wh", [
                 "Before everyone wakes, Waffles patrols the quiet house for misplaced slippers.",
-                "The house is dark and still before the sun comes up.",
-                "One slipper hides under the sofa, and one sits by the door.",
-                "Waffles carries each slipper back to its bed."
+                "He knows where to walk and which way to look.",
+                "One slipper is beneath the bath mat, and another is with the white socks.",
+                "Why do they hide? Waffles cannot say, but he puts them right back."
             ], "On the morning slipper patrol,"),
-            ("A delicious dream", [
+            ("A delicious dream", "ch", [
                 "Waffles wants to host a pancake picnic for every friend he has made.",
-                "He will need a big blanket and a tall stack of pancakes.",
-                "Every friend will get berries on top.",
-                "Waffles is already counting how many plates to set out."
+                "Today he started to choose the best spot for lunch.",
+                "He will use a big chair for the cheese and cherries.",
+                "‘Come here and play with me,’ he will say, and it will be a very happy day."
             ], "Preparing the pancake picnic,")
         ]),
         cat("clover", "Clover", "🐈", "#76C893", "garden", "butterflies", 0, "butterfly", "butterflies", "🦋", "the butterfly bow", "🍀", [
-            ("The garden greeter", [
+            ("The garden greeter", "s-blends", [
                 "Clover first appeared beneath a lucky patch of four-leaf clovers.",
-                "The leaves were green and cool with morning dew.",
-                "She says hello to every bee, bird, and beetle.",
-                "The garden feels friendlier with Clover in it."
+                "Before the sun is up, she steps into the soft, sweet grass.",
+                "She stops to greet a snail, a spider, and a small bee.",
+                "No friend is left out, and after that the smiles grow."
             ], "Among the clover leaves,"),
-            ("A patient friend", [
+            ("A patient friend", "th-wh", [
                 "She sits very still so tired butterflies can rest beside her.",
-                "One lands on a flower, and one lands on her ear.",
-                "Clover does not even twitch her tail.",
-                "When they are rested, they flutter away again."
+                "They know the way to her and where it is safe to land.",
+                "One sits on her white whiskers, and another on her thick fur.",
+                "That is why she does not jump or walk, and their wings can rest."
             ], "Welcoming the butterflies,"),
-            ("The garden guide", [
+            ("The garden guide", "ch", [
                 "Clover knows a quiet path that winds past every flower bed.",
-                "It curves around the roses and under the apple tree.",
-                "She walks slowly so that small friends can keep up.",
-                "Nobody gets lost when Clover leads the way."
+                "Today she started at the bench by the cherry tree.",
+                "‘Come with me, each step is safe here,’ she chirps.",
+                "It is very much fun to play on a path she chose."
             ], "Along the secret garden path,"),
-            ("Her hopeful project", [
+            ("Her hopeful project", "sh", [
                 "She is growing a butterfly garden filled with safe places to land.",
-                "She picks flowers that butterflies love best.",
-                "Purple ones go in the front, and yellow ones go in the back.",
-                "Each new flower brings a new butterfly."
+                "There would be fresh flowers by a shady bush.",
+                "Some butterflies were shy, so she made a place to shelter.",
+                "She could call them in with a soft shush, and they know they are safe."
             ], "Growing the butterfly garden,")
         ]),
         cat("moon", "Moon", "🐈‍⬛", "#7986CB", "garden", "evening breezes", 0, "star", "stars", "⭐", "the moonwalk", "🌙", [
-            ("The evening explorer", [
+            ("The evening explorer", "l-blends", [
                 "Moon visits the garden when the first evening star begins to glow.",
-                "The sky turns purple, and the air grows cool.",
-                "Moon pads softly along the top of the garden wall.",
-                "She likes to watch the stars come out, one by one."
+                "She came around the wall on her black, silent paws.",
+                "She found a flat place to sit, close to the plum tree.",
+                "Two stars blink, then other stars come out to play."
             ], "Under the evening sky,"),
-            ("A quiet listener", [
+            ("A quiet listener", "ch", [
                 "She recognizes each friend by the sound of their footsteps after dark.",
-                "Quick little steps mean Sprout is coming.",
-                "Big bouncy steps mean Ginger is on his way.",
-                "Moon always knows who is there before they say hello."
+                "A quick scratch on the porch tells her Sprout is here.",
+                "A crunch on the branch means Ginger started to play.",
+                "Today the garden is very quiet, so Moon can be still and watch."
             ], "Listening in the moonlit garden,"),
-            ("The lantern keeper", [
+            ("The lantern keeper", "s-blends", [
                 "Moon guides sleepy fireflies back to their favorite leaves.",
-                "Their tiny lights blink slower when they are tired.",
-                "Moon walks ahead and shows them the way.",
-                "Soon each firefly is tucked in for the night."
+                "Before they stop for the night, their small lights grow slow.",
+                "Moon steps into the grass and shows them the way.",
+                "After that, no firefly is lost, and the stars spark above."
             ], "Guiding the fireflies home,"),
-            ("Her night-sky wish", [
+            ("Her night-sky wish", "th-wh", [
                 "She hopes to name every star that can be seen from the garden wall.",
-                "Some stars are bright, and some are very small.",
-                "She gives each one a name she can remember.",
-                "There are so many stars that it may take all summer."
+                "She knows where the white ones are and which are thin and far.",
+                "Three sit right above the path, and their light shows the way to walk.",
+                "Why are there so many? She cannot say, but she thanks them all the same."
             ], "Making Moon’s star map,")
         ]),
         cat("ginger", "Ginger", "😻", "#E76F51", "garden", "warm stepping stones", 6, "stepping stone", "stepping stones", "🟠", "the ginger leap", "✨", [
-            ("The sunny-stone cat", [
+            ("The sunny-stone cat", "ch", [
                 "Ginger followed a trail of warm stepping stones into the garden.",
-                "Each stone was warmer than the one before.",
-                "He hopped from one to the next without touching the grass.",
-                "The last stone was the warmest, so that is where he stayed."
+                "Today he started with a stone by the bench.",
+                "Each one was a touch warmer, so he chose the next, and the next.",
+                "The last stone was the very best, so here he will be, chin on his paws."
             ], "On the sunny stepping stones,"),
-            ("A bold jumper", [
+            ("A bold jumper", "s-blends", [
                 "He can cross the little stream without getting one paw wet.",
-                "He wiggles, he crouches, and then he springs.",
-                "For a moment he looks like he is flying.",
-                "He lands on the far side with a proud little flick of his tail."
+                "Before he springs, he stops and stands very still.",
+                "He does a small wiggle and sails into the air.",
+                "After he lands, no splash can be seen, only a smile."
             ], "Leaping across the stream,"),
-            ("A hidden soft side", [
+            ("A hidden soft side", "l-blends", [
                 "Ginger warms cold stones for smaller cats before they arrive.",
-                "He lies on each cold stone until it is toasty.",
-                "Then he moves along to warm the next one.",
-                "He never tells anyone, but his friends always know."
+                "He found two flat stones that were too cold to sit on.",
+                "He plopped down and stayed until they were close to glowing.",
+                "Then the other cats came around, glad for a warm place to sleep."
             ], "Warming stones for friends,"),
-            ("His greatest course", [
+            ("His greatest course", "sh", [
                 "He dreams of building a garden obstacle course for every skill level.",
-                "There will be low hops for kittens and long leaps for big cats.",
-                "A tunnel, a bridge, and a wobbly log come next.",
-                "Everyone gets a cheer at the finish line."
+                "There would be a short hop for kittens and a dash by the shed.",
+                "Some cats could shoot ahead, and some could shuffle along.",
+                "They would all know they had done well when they heard a shout at the finish."
             ], "Designing the obstacle course,")
         ]),
         cat("sprout", "Sprout", "😽", "#52B788", "garden", "tiny seedlings", 12, "seedling", "seedlings", "🌱", "the sprout stretch", "🌿", [
-            ("The seedling guardian", [
+            ("The seedling guardian", "s-blends", [
                 "Sprout was curled around a tiny seedling during a windy spring day.",
-                "The wind blew hard, but the little plant stayed safe.",
-                "Sprout kept it warm until the sun came out.",
-                "Now she checks on every seedling each morning."
+                "Before the storm, the small stem had started to slip.",
+                "Sprout stayed close, so no wind could snap it.",
+                "After the sun came out, it began to grow straight and strong."
             ], "Beside the seedling pots,"),
-            ("A muddy secret", [
+            ("A muddy secret", "l-blends", [
                 "She does not mind muddy paws when a thirsty plant needs help.",
-                "She tips the watering can with her nose.",
-                "Splash goes the water, and squish goes the mud.",
-                "The plants stand up tall after a good long drink."
+                "She found two clay pots with floppy leaves.",
+                "She came around with a splash and a plop, glad to help.",
+                "The other plants stood up tall, and the flowers looked clean and bright."
             ], "Watering the seedlings,"),
-            ("Her growing gift", [
+            ("Her growing gift", "sh", [
                 "Sprout remembers exactly which song helps each flower grow.",
-                "The daisies like a soft and sleepy hum.",
-                "The sunflowers like a loud and happy tune.",
-                "Sprout sings to each one until its leaves reach up."
+                "She would hum a hush song to the shy little shoots.",
+                "There were some that could not wait and shot up fast.",
+                "You know a flower likes its song when its petals shine."
             ], "Singing the growing song,"),
-            ("A garden promise", [
+            ("A garden promise", "th-wh", [
                 "She plans to grow a shady green tunnel for cats to explore.",
-                "First she must plant two long rows of climbing vines.",
-                "They will grow up and over until they meet at the top.",
-                "Inside it will be cool, green, and full of whispers."
+                "The vines will go this way and that way, then meet at the top.",
+                "Cats can walk through it where the path is cool and the light is thin.",
+                "Why does she whisper to the seeds? It is their secret, she will say."
             ], "Planning the green tunnel,")
         ]),
         cat("starlight", "Starlight", "😺", "#9D4EDD", "garden", "fireflies", 18, "firefly", "fireflies", "🌟", "the starlight spin", "💫", [
-            ("The firefly friend", [
+            ("The firefly friend", "l-blends", [
                 "Starlight arrived on a summer night surrounded by twinkling fireflies.",
-                "Their lights danced all around her silver fur.",
-                "She sat very still and watched them glow.",
-                "Ever since, the fireflies have followed wherever she goes."
+                "Two came close and then flew around her silver fur.",
+                "She found that their glow would blink, and blink again.",
+                "Other fireflies come to her each night, glad to have a place to play."
             ], "In the firefly meadow,"),
-            ("A maker of patterns", [
+            ("A maker of patterns", "sh", [
                 "She watches the flashes and finds secret repeating patterns in their light.",
-                "Blink, blink, pause. Blink, blink, pause.",
-                "She taps her paw along with each flash.",
-                "Once she knows the pattern, she can guess what comes next."
+                "There were two short flashes and then a hush.",
+                "She would tap her paw by each shine.",
+                "Now she could know what some of the lights should do next."
             ], "Following the flashing pattern,"),
-            ("A guiding glow", [
+            ("A guiding glow", "th-wh", [
                 "Starlight helps late garden visitors find the path back home.",
-                "The fireflies gather close around her tail.",
-                "Together they shine like a small walking lantern.",
-                "No one has to walk home in the dark."
+                "They do not know which way to walk when the moon is thin.",
+                "The fireflies gather on her white tail and light their way.",
+                "That is why no one has to say where the path is."
             ], "Lighting the garden path,"),
-            ("Her sparkling celebration", [
-                "She wants to choreograph a firefly dance for all ten cat friends.",
-                "The fireflies will spin in circles and swoop in lines.",
-                "Each cat will have a special spot to stand in.",
-                "It will be the brightest night the garden has ever seen."
+            ("Her sparkling celebration", "ch", [
+                "She wants to plan a firefly dance for all ten cat friends.",
+                "Today each cat started to choose a spot on the porch.",
+                "The fireflies will march in a chain and reach up high.",
+                "‘Come here and play with me,’ she will cheer, and it will be very bright."
             ], "Planning the firefly dance,")
         ])
     ]
@@ -337,7 +339,7 @@ enum CatContent {
         _ storyIcon: String,
         _ trickName: String,
         _ trickSymbol: String,
-        _ beats: [(String, [String], String)]
+        _ beats: [(String, String, [String], String)]
     ) -> CatDefinition {
         CatDefinition(
             id: id,
@@ -353,7 +355,7 @@ enum CatContent {
             trickName: trickName,
             trickSymbol: trickSymbol,
             backstory: beats.enumerated().map { index, beat in
-                CatStoryBeat(id: "\(id)-\(index)", title: beat.0, sentences: beat.1, puzzleLead: beat.2)
+                CatStoryBeat(id: "\(id)-\(index)", title: beat.0, focusID: beat.1, sentences: beat.2, puzzleLead: beat.3)
             }
         )
     }

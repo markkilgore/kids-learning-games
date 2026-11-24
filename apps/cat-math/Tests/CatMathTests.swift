@@ -60,6 +60,34 @@ final class CatMathTests: XCTestCase {
         XCTAssertFalse(challenges.contains { $0.visualHint.contains("🧶") })
     }
 
+    /// Story pages are written for the reading units from school: each must really practise its unit.
+    func testEveryStoryPagePractisesItsSchoolReadingUnit() throws {
+        XCTAssertEqual(ReadingFocus.all.count, 5)
+        var sightWordsUsed: [String: Set<String>] = [:]
+        for cat in CatContent.cats {
+            for page in cat.backstory {
+                let focus = try XCTUnwrap(page.focus, "\(page.id) names an unknown unit \(page.focusID)")
+                XCTAssertEqual(page.sentences.count, 4, page.id)
+                let words = page.sentences.flatMap(\.wordTokens).map(\.text)
+                let pattern = Set(words.filter { focus.kind(of: $0) == .pattern }.map(ReadingFocus.normalized))
+                let sight = Set(words.filter { focus.kind(of: $0) == .sight }.map(ReadingFocus.normalized))
+                XCTAssertGreaterThanOrEqual(pattern.count, 3, "\(page.id) needs more \(focus.title): \(pattern)")
+                XCTAssertGreaterThanOrEqual(sight.count, 2, "\(page.id) needs more sight words: \(sight)")
+                sightWordsUsed[focus.id, default: []].formUnion(sight)
+            }
+        }
+        for focus in ReadingFocus.all {
+            XCTAssertEqual(sightWordsUsed[focus.id], Set(focus.sightWords), "every sight word of \(focus.title) should appear in a story")
+        }
+        XCTAssertEqual(ReadingFocus.newest?.id, "l-blends")
+        let ch = try XCTUnwrap(ReadingFocus.unit("ch"))
+        XCTAssertEqual(ch.kind(of: "Chair"), .pattern)
+        XCTAssertEqual(ch.kind(of: "today"), .sight)
+        XCTAssertNil(ch.kind(of: "cat"))
+        XCTAssertEqual(ReadingFocus.unit("s-blends")?.kind(of: "Don’t"), .sight)
+        XCTAssertNil(ReadingFocus.unit("th-wh")?.kind(of: "the"))
+    }
+
     func testEachCatHasAProgressivelyRevealedFourPartBackstory() {
         for cat in CatContent.cats {
             XCTAssertEqual(cat.backstory.count, 4, cat.id)

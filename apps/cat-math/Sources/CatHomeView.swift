@@ -108,6 +108,16 @@ private struct CatCard: View {
                         .font(.kidHeadline)
                         .foregroundStyle(.pink)
                     StoryDots(revealed: cat.revealedStory(for: friendship).count, total: cat.backstory.count, tint: cat.tint)
+                    // This cat's next page practises what school taught most recently.
+                    if let focus = cat.storyBeat(for: friendship).focus, focus == ReadingFocus.newest {
+                        Label("This week: \(focus.title)", systemImage: "star.fill")
+                            .font(.caption.weight(.heavy))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(theme.secondary.opacity(0.2), in: Capsule())
+                    }
                 } else {
                     Label("\(heartsNeeded) more", systemImage: "heart")
                         .font(.kidHeadline)

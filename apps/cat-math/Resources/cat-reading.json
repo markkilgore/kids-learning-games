@@ -1,0 +1,155 @@
+{
+  "units": [
+    {
+      "id": "sh",
+      "title": "sh words",
+      "week": "2026-10-19",
+      "contains": [
+        "sh"
+      ],
+      "prefixes": [],
+      "words": [],
+      "ignore": [],
+      "sightWords": [
+        "could",
+        "would",
+        "some",
+        "there",
+        "know",
+        "call",
+        "by",
+        "were"
+      ]
+    },
+    {
+      "id": "th-wh",
+      "title": "th and wh words",
+      "week": "2026-10-12",
+      "contains": [
+        "th",
+        "wh"
+      ],
+      "prefixes": [],
+      "words": [],
+      "ignore": [
+        "the"
+      ],
+      "sightWords": [
+        "jump",
+        "walk",
+        "right",
+        "way",
+        "say",
+        "their",
+        "where",
+        "why"
+      ]
+    },
+    {
+      "id": "ch",
+      "title": "ch words",
+      "week": "2026-10-26",
+      "contains": [
+        "ch"
+      ],
+      "prefixes": [],
+      "words": [],
+      "ignore": [],
+      "sightWords": [
+        "me",
+        "be",
+        "here",
+        "play",
+        "started",
+        "today",
+        "use",
+        "very"
+      ]
+    },
+    {
+      "id": "s-blends",
+      "title": "s blends and plurals",
+      "week": "2026-11-09",
+      "contains": [],
+      "prefixes": [
+        "sc",
+        "sk",
+        "sl",
+        "sm",
+        "sn",
+        "sp",
+        "st",
+        "sw"
+      ],
+      "words": [
+        "blankets",
+        "pillows",
+        "lumps",
+        "friends",
+        "seeds",
+        "spots",
+        "places",
+        "stems",
+        "butterflies",
+        "fireflies",
+        "lights",
+        "stars",
+        "leaves",
+        "paws"
+      ],
+      "ignore": [
+        "so",
+        "she",
+        "some"
+      ],
+      "sightWords": [
+        "after",
+        "before",
+        "does",
+        "don't",
+        "grow",
+        "into",
+        "no",
+        "wash"
+      ]
+    },
+    {
+      "id": "l-blends",
+      "title": "l blends and plurals",
+      "week": "2026-11-16",
+      "contains": [],
+      "prefixes": [
+        "bl",
+        "cl",
+        "fl",
+        "gl",
+        "pl",
+        "sl"
+      ],
+      "words": [
+        "plants",
+        "cats",
+        "gems",
+        "helpers",
+        "stones",
+        "pots",
+        "flowers",
+        "fireflies",
+        "stars",
+        "clouds",
+        "leaves"
+      ],
+      "ignore": [],
+      "sightWords": [
+        "around",
+        "came",
+        "come",
+        "found",
+        "other",
+        "people",
+        "two",
+        "worked"
+      ]
+    }
+  ]
+}

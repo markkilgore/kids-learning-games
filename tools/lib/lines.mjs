@@ -71,7 +71,7 @@ function parseCats(swift) {
     item: match[3],
     items: match[4],
     trickName: match[5],
-    beats: [...match[6].matchAll(/\("[^"]+", \[([^\]]+)\], "([^"]+)"\)/g)].map((beat) => ({
+    beats: [...match[6].matchAll(/\("[^"]+", "[^"]+", \[([^\]]+)\], "([^"]+)"\)/g)].map((beat) => ({
       sentences: [...beat[1].matchAll(/"([^"]+)"/g)].map((sentence) => sentence[1]),
       lead: beat[2]
     }))

@@ -97,27 +97,18 @@ struct CatActivityView: View {
     private var storyPage: some View {
         let story = cat.storyBeat(for: friendship)
         let left = roundLength - cat.solvedInRound(for: friendship)
-        return HStack(spacing: 32) {
+        return HStack(spacing: 24) {
             VStack(spacing: 14) {
-                KidArt(cat.artName, fallback: cat.symbol, size: 210)
+                KidArt(cat.artName, fallback: cat.symbol, size: 190)
                 StoryDots(revealed: cat.revealedStory(for: friendship).count, total: cat.backstory.count, tint: cat.tint)
             }
-            VStack(alignment: .leading, spacing: 14) {
-                Text(story.title).font(.kidDisplay).foregroundStyle(cat.tint)
-                // The sentence being read aloud is marked, so a child can follow along.
+            VStack(alignment: .leading, spacing: 10) {
+                Text(story.title).font(.kidTitle).foregroundStyle(cat.tint)
+                if let focus = story.focus { FocusLegend(focus: focus, tint: cat.tint) }
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 6) {
                         ForEach(story.sentences, id: \.self) { sentence in
-                            let reading = narration.state == .playing && narration.text == sentence
-                            Text(sentence)
-                                .font(.system(size: 25, weight: .semibold, design: .rounded))
-                                .lineSpacing(3)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 6)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(cat.tint.opacity(reading ? 0.22 : 0), in: RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
-                                .animation(.easeInOut(duration: 0.2), value: reading)
+                            StorySentence(sentence: sentence, focus: story.focus, tint: cat.tint)
                         }
                     }
                 }
@@ -141,7 +132,7 @@ struct CatActivityView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(32)
+        .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .kidCard(radius: KidTheme.Radius.large)
     }
@@ -354,6 +345,78 @@ struct CatActivityView: View {
     private func goHome() {
         narration.stop()
         game.showHome()
+    }
+}
+
+/// One story sentence as tappable words. The week's pattern words are underlined, its sight words are
+/// shaded, and the word being read aloud lights up so a child can follow along.
+private struct StorySentence: View {
+    let sentence: String
+    let focus: ReadingFocus?
+    let tint: Color
+    @Environment(NarrationCoordinator.self) private var narration
+    @Environment(\.kidTheme) private var theme
+
+    var body: some View {
+        let reading = narration.state == .playing && narration.text == sentence
+        WordFlowLayout(spacing: 2) {
+            ForEach(sentence.wordTokens) { token in
+                let kind = focus?.kind(of: token.text)
+                let spoken = reading && narration.currentWordIndex == token.id
+                Button { narration.speakWord(token.text, at: token.id, in: sentence) } label: {
+                    Text(leading(of: token) + token.text + sentence.punctuation(after: token.range))
+                        .font(.system(size: 23, weight: kind == nil ? .semibold : .heavy, design: .rounded))
+                        .foregroundStyle(kind == .pattern ? tint : theme.ink)
+                        .underline(kind == .pattern, color: tint)
+                        .padding(.horizontal, 4)
+                        .padding(.vertical, 3)
+                        .background(
+                            spoken ? Color.yellow.opacity(0.75) : kind == .sight ? theme.secondary.opacity(0.22) : .clear,
+                            in: RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        )
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(token.text)
+            }
+        }
+        .padding(.horizontal, 6)
+        .padding(.vertical, 2)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(tint.opacity(reading ? 0.12 : 0), in: RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
+        .animation(.easeInOut(duration: 0.15), value: narration.currentWordIndex)
+    }
+
+    /// An opening quotation mark belongs with the word after it.
+    private func leading(of token: WordToken) -> String {
+        guard token.range.location > 0 else { return "" }
+        let before = (sentence as NSString).substring(with: NSRange(location: token.range.location - 1, length: 1))
+        return before == "‘" ? before : ""
+    }
+}
+
+/// Says what the marks on a story page mean.
+private struct FocusLegend: View {
+    let focus: ReadingFocus
+    let tint: Color
+    @Environment(\.kidTheme) private var theme
+
+    var body: some View {
+        HStack(spacing: 14) {
+            Text(focus.title)
+                .font(.kidLabel.weight(.heavy))
+                .foregroundStyle(tint)
+                .underline(color: tint)
+            Text("sight words")
+                .font(.kidLabel.weight(.heavy))
+                .padding(.horizontal, 8)
+                .padding(.vertical, 3)
+                .background(theme.secondary.opacity(0.22), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+            Label("Tap a word to hear it", systemImage: "hand.tap.fill")
+                .font(.kidLabel)
+                .foregroundStyle(theme.mutedInk)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("reading-focus")
     }
 }
 
