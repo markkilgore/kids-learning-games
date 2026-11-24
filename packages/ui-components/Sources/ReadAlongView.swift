@@ -60,7 +60,7 @@ public struct ReadAlongView: View {
                         Button {
                             narration.speakWord(token.text, at: token.id, in: sentence)
                         } label: {
-                            Text(token.text)
+                            Text(token.text + sentence.punctuation(after: token.range))
                                 .font(.system(size: 38, weight: .bold, design: .rounded))
                                 .foregroundStyle(wordColor(token))
                                 .padding(.horizontal, 8)
@@ -182,4 +182,19 @@ public struct ReadAlongView: View {
 
 private extension Color {
     static let navy = Color(red: 0.02, green: 0.12, blue: 0.25)
+}
+
+private extension String {
+    /// Sentence punctuation that directly follows a word, so the tappable words still read as a sentence or question.
+    func punctuation(after range: NSRange) -> String {
+        let text = self as NSString
+        var index = NSMaxRange(range), result = ""
+        while index < text.length {
+            let character = text.substring(with: NSRange(location: index, length: 1))
+            guard ".,!?;:".contains(character) else { break }
+            result += character
+            index += 1
+        }
+        return result
+    }
 }
