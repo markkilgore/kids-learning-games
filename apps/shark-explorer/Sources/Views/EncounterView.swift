@@ -101,7 +101,8 @@ struct EncounterView: View {
         .overlay(alignment: .top) {
             if let toast { KidToast(symbol: toast.symbol, text: toast.text).padding(.top, 20) }
         }
-        .sheet(item: $sheet) { active in
+        // Full screen: the standard iPad sheet is too narrow for the read-along controls.
+        .fullScreenCover(item: $sheet) { active in
             NarrationSheet(shark: shark, active: active) {
                 if case .topic(let topic) = active { finished(topic) }
                 sheet = nil
@@ -164,7 +165,6 @@ private struct NarrationSheet: View {
             }
         }
         .foregroundStyle(.white)
-        .presentationDetents([.large])
     }
 
     private var title: String {

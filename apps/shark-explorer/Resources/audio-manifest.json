@@ -679,6 +679,111 @@
       }
     ]
   },
+  "A hum! It can get the hum.": {
+    "file": "3f84ff1b96872072d46e5f16.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "hum!",
+        "start": 0.2,
+        "end": 0.64
+      },
+      {
+        "text": "It",
+        "start": 0.8,
+        "end": 1.12
+      },
+      {
+        "text": "can",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "get",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "the",
+        "start": 1.46,
+        "end": 1.52
+      },
+      {
+        "text": "hum.",
+        "start": 1.64,
+        "end": 2.16
+      }
+    ]
+  },
+  "A hum, a tap, a bit of mud. It can get it.": {
+    "file": "b3df1443bb110352106130c6.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "hum,",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "a",
+        "start": 0.64,
+        "end": 0.8
+      },
+      {
+        "text": "tap,",
+        "start": 0.92,
+        "end": 1.36
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "bit",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "of",
+        "start": 1.733,
+        "end": 1.84
+      },
+      {
+        "text": "mud.",
+        "start": 1.94,
+        "end": 2.32
+      },
+      {
+        "text": "It",
+        "start": 2.48,
+        "end": 2.8
+      },
+      {
+        "text": "can",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "get",
+        "start": 3.02,
+        "end": 3.2
+      },
+      {
+        "text": "it.",
+        "start": 3.253,
+        "end": 3.52
+      }
+    ]
+  },
   "A new shark is waiting on your ocean map!": {
     "file": "818dbeda9ecfb584659849fa.mp3",
     "words": [
@@ -1441,6 +1546,51 @@
         "text": "fish.",
         "start": 2.8,
         "end": 3.28
+      }
+    ]
+  },
+  "A tap? A hum? It can get it.": {
+    "file": "559139266f3d9ac41dbe651b.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "tap?",
+        "start": 0.18,
+        "end": 0.56
+      },
+      {
+        "text": "A",
+        "start": 0.72,
+        "end": 0.88
+      },
+      {
+        "text": "hum?",
+        "start": 0.98,
+        "end": 1.36
+      },
+      {
+        "text": "It",
+        "start": 1.573,
+        "end": 2
+      },
+      {
+        "text": "can",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "get",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "text": "it.",
+        "start": 2.48,
+        "end": 2.72
       }
     ]
   },
@@ -2421,6 +2571,51 @@
         "text": "fish.",
         "start": 4.96,
         "end": 5.44
+      }
+    ]
+  },
+  "Bits bob up. It can get to it.": {
+    "file": "7babe01505b0f597bd087a0c.mp3",
+    "words": [
+      {
+        "text": "Bits",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "bob",
+        "start": 0.3,
+        "end": 0.48
+      },
+      {
+        "text": "up.",
+        "start": 0.56,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "text": "can",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "get",
+        "start": 1.5,
+        "end": 1.68
+      },
+      {
+        "text": "to",
+        "start": 1.733,
+        "end": 1.84
+      },
+      {
+        "text": "it.",
+        "start": 1.92,
+        "end": 2.16
       }
     ]
   },
@@ -3451,6 +3646,41 @@
         "text": "material.",
         "start": 4.48,
         "end": 5.2
+      }
+    ]
+  },
+  "Dip, nab! It got a cod.": {
+    "file": "163be5042faeabdce6fac1e4.mp3",
+    "words": [
+      {
+        "text": "Dip,",
+        "start": 0,
+        "end": 0.64
+      },
+      {
+        "text": "nab!",
+        "start": 0.78,
+        "end": 1.28
+      },
+      {
+        "text": "It",
+        "start": 1.413,
+        "end": 1.68
+      },
+      {
+        "text": "got",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "a",
+        "start": 1.88,
+        "end": 1.92
+      },
+      {
+        "text": "cod.",
+        "start": 2.04,
+        "end": 2.56
       }
     ]
   },
@@ -6624,6 +6854,56 @@
       }
     ]
   },
+  "Is it a rug? Is it mud? It hid!": {
+    "file": "91a2f197037b46b4e2dfdaa0.mp3",
+    "words": [
+      {
+        "text": "Is",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "it",
+        "start": 0.107,
+        "end": 0.16
+      },
+      {
+        "text": "a",
+        "start": 0.2,
+        "end": 0.24
+      },
+      {
+        "text": "rug?",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "Is",
+        "start": 0.827,
+        "end": 1.04
+      },
+      {
+        "text": "it",
+        "start": 1.067,
+        "end": 1.12
+      },
+      {
+        "text": "mud?",
+        "start": 1.22,
+        "end": 1.6
+      },
+      {
+        "text": "It",
+        "start": 1.733,
+        "end": 2
+      },
+      {
+        "text": "hid!",
+        "start": 2.12,
+        "end": 2.64
+      }
+    ]
+  },
   "It also finds animals already dead.": {
     "file": "b6b93bc643daf7e3cdb74a51.mp3",
     "words": [
@@ -6846,6 +7126,96 @@
         "text": "tide.",
         "start": 3.216,
         "end": 3.68
+      }
+    ]
+  },
+  "It can get a mob of cod.": {
+    "file": "d4f0d7f783b815da4776552b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "can",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "get",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "a",
+        "start": 0.44,
+        "end": 0.48
+      },
+      {
+        "text": "mob",
+        "start": 0.58,
+        "end": 0.88
+      },
+      {
+        "text": "of",
+        "start": 0.933,
+        "end": 1.04
+      },
+      {
+        "text": "cod.",
+        "start": 1.16,
+        "end": 1.68
+      }
+    ]
+  },
+  "It can hop! Hop, hop, hop to the tub.": {
+    "file": "671259c2106068e8049a2f8f.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "can",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "hop!",
+        "start": 0.36,
+        "end": 0.8
+      },
+      {
+        "text": "Hop,",
+        "start": 1,
+        "end": 1.68
+      },
+      {
+        "text": "hop,",
+        "start": 1.76,
+        "end": 2.08
+      },
+      {
+        "text": "hop",
+        "start": 2.14,
+        "end": 2.32
+      },
+      {
+        "text": "to",
+        "start": 2.373,
+        "end": 2.48
+      },
+      {
+        "text": "the",
+        "start": 2.5,
+        "end": 2.56
+      },
+      {
+        "text": "tub.",
+        "start": 2.66,
+        "end": 3.12
       }
     ]
   },
@@ -7219,6 +7589,116 @@
       }
     ]
   },
+  "It did not run. It can sit and sit and sit.": {
+    "file": "02ff908be16550694c727eef.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "did",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "not",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "run.",
+        "start": 0.5,
+        "end": 0.88
+      },
+      {
+        "text": "It",
+        "start": 1.013,
+        "end": 1.28
+      },
+      {
+        "text": "can",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "sit",
+        "start": 1.62,
+        "end": 1.92
+      },
+      {
+        "text": "and",
+        "start": 2,
+        "end": 2.24
+      },
+      {
+        "text": "sit",
+        "start": 2.38,
+        "end": 2.8
+      },
+      {
+        "text": "and",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "sit.",
+        "start": 3.08,
+        "end": 3.52
+      }
+    ]
+  },
+  "It digs in the mud. It gets a bug.": {
+    "file": "090ad9d94bd3ae915a9535e9.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "digs",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "in",
+        "start": 0.427,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "mud.",
+        "start": 0.66,
+        "end": 1.04
+      },
+      {
+        "text": "It",
+        "start": 1.147,
+        "end": 1.36
+      },
+      {
+        "text": "gets",
+        "start": 1.424,
+        "end": 1.68
+      },
+      {
+        "text": "a",
+        "start": 1.72,
+        "end": 1.76
+      },
+      {
+        "text": "bug.",
+        "start": 1.86,
+        "end": 2.24
+      }
+    ]
+  },
   "It eats crabs, squid, and fish.": {
     "file": "61eb3e9763d74062dfd1973d.mp3",
     "words": [
@@ -7319,6 +7799,106 @@
       }
     ]
   },
+  "It gets cod. It gets a bit in the mud.": {
+    "file": "1e2f73d0ff806269a646ff82.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "gets",
+        "start": 0.128,
+        "end": 0.32
+      },
+      {
+        "text": "cod.",
+        "start": 0.46,
+        "end": 0.96
+      },
+      {
+        "text": "It",
+        "start": 1.147,
+        "end": 1.52
+      },
+      {
+        "text": "gets",
+        "start": 1.552,
+        "end": 1.68
+      },
+      {
+        "text": "a",
+        "start": 1.72,
+        "end": 1.76
+      },
+      {
+        "text": "bit",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "in",
+        "start": 1.947,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "mud.",
+        "start": 2.2,
+        "end": 2.64
+      }
+    ]
+  },
+  "It gets cod. It gets a tin can!": {
+    "file": "49eb5a512b42f5ffccdf1743.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "gets",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "cod.",
+        "start": 0.54,
+        "end": 1.04
+      },
+      {
+        "text": "It",
+        "start": 1.147,
+        "end": 1.36
+      },
+      {
+        "text": "gets",
+        "start": 1.408,
+        "end": 1.6
+      },
+      {
+        "text": "a",
+        "start": 1.64,
+        "end": 1.68
+      },
+      {
+        "text": "tin",
+        "start": 1.76,
+        "end": 2
+      },
+      {
+        "text": "can!",
+        "start": 2.16,
+        "end": 2.8
+      }
+    ]
+  },
   "It grows and moves slowly.": {
     "file": "bff940515f72e1d995877d51.mp3",
     "words": [
@@ -7346,6 +7926,176 @@
         "text": "slowly.",
         "start": 1.44,
         "end": 2
+      }
+    ]
+  },
+  "It has a big rod on top.": {
+    "file": "fa7e5fa59b2efe89e6151813.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "a",
+        "start": 0.28,
+        "end": 0.32
+      },
+      {
+        "text": "big",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "rod",
+        "start": 0.58,
+        "end": 0.88
+      },
+      {
+        "text": "on",
+        "start": 0.933,
+        "end": 1.04
+      },
+      {
+        "text": "top.",
+        "start": 1.14,
+        "end": 1.52
+      }
+    ]
+  },
+  "It has a big tip. It can hit.": {
+    "file": "cc22a1232fe4aac0a692f38e.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "a",
+        "start": 0.28,
+        "end": 0.32
+      },
+      {
+        "text": "big",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "tip.",
+        "start": 0.66,
+        "end": 1.04
+      },
+      {
+        "text": "It",
+        "start": 1.2,
+        "end": 1.52
+      },
+      {
+        "text": "can",
+        "start": 1.58,
+        "end": 1.76
+      },
+      {
+        "text": "hit.",
+        "start": 1.84,
+        "end": 2.24
+      }
+    ]
+  },
+  "It has a big, big top.": {
+    "file": "d26dcaea64a393bde56ee080.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "a",
+        "start": 0.24,
+        "end": 0.32
+      },
+      {
+        "text": "big,",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "big",
+        "start": 0.86,
+        "end": 1.04
+      },
+      {
+        "text": "top.",
+        "start": 1.16,
+        "end": 1.6
+      }
+    ]
+  },
+  "It has a tan top and a big fin.": {
+    "file": "45c7a544b14588429ade9a01.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "a",
+        "start": 0.24,
+        "end": 0.32
+      },
+      {
+        "text": "tan",
+        "start": 0.4,
+        "end": 0.64
+      },
+      {
+        "text": "top",
+        "start": 0.74,
+        "end": 1.04
+      },
+      {
+        "text": "and",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "a",
+        "start": 1.24,
+        "end": 1.28
+      },
+      {
+        "text": "big",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "fin.",
+        "start": 1.56,
+        "end": 2.08
       }
     ]
   },
@@ -7379,6 +8129,101 @@
       }
     ]
   },
+  "It hid in mud. It did not get to run.": {
+    "file": "d5f47a990a28b27ff7f11fbf.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "hid",
+        "start": 0.16,
+        "end": 0.4
+      },
+      {
+        "text": "in",
+        "start": 0.48,
+        "end": 0.64
+      },
+      {
+        "text": "mud.",
+        "start": 0.76,
+        "end": 1.2
+      },
+      {
+        "text": "It",
+        "start": 1.36,
+        "end": 1.68
+      },
+      {
+        "text": "did",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "not",
+        "start": 1.9,
+        "end": 2.08
+      },
+      {
+        "text": "get",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "to",
+        "start": 2.293,
+        "end": 2.4
+      },
+      {
+        "text": "run.",
+        "start": 2.5,
+        "end": 2.96
+      }
+    ]
+  },
+  "It is a rug in the mud.": {
+    "file": "261a3817db1e86fef0c3032d.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.107,
+        "end": 0.16
+      },
+      {
+        "text": "a",
+        "start": 0.2,
+        "end": 0.24
+      },
+      {
+        "text": "rug",
+        "start": 0.34,
+        "end": 0.64
+      },
+      {
+        "text": "in",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "the",
+        "start": 0.82,
+        "end": 0.88
+      },
+      {
+        "text": "mud.",
+        "start": 0.98,
+        "end": 1.44
+      }
+    ]
+  },
   "It is a strong swimmer.": {
     "file": "c23d2d724324d17a9e9db357.mp3",
     "words": [
@@ -7406,6 +8251,1226 @@
         "text": "swimmer.",
         "start": 0.864,
         "end": 1.44
+      }
+    ]
+  },
+  "It is as big as a bus.": {
+    "file": "4c65538a668bb7e026ab9586.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "as",
+        "start": 0.4,
+        "end": 0.56
+      },
+      {
+        "text": "big",
+        "start": 0.68,
+        "end": 1.04
+      },
+      {
+        "text": "as",
+        "start": 1.093,
+        "end": 1.2
+      },
+      {
+        "text": "a",
+        "start": 1.24,
+        "end": 1.28
+      },
+      {
+        "text": "bus.",
+        "start": 1.4,
+        "end": 1.84
+      }
+    ]
+  },
+  "It is as big as a cab. It can run.": {
+    "file": "b0e55297c6e4343dd51151c5.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "as",
+        "start": 0.293,
+        "end": 0.4
+      },
+      {
+        "text": "big",
+        "start": 0.54,
+        "end": 0.96
+      },
+      {
+        "text": "as",
+        "start": 1.04,
+        "end": 1.2
+      },
+      {
+        "text": "a",
+        "start": 1.24,
+        "end": 1.28
+      },
+      {
+        "text": "cab.",
+        "start": 1.42,
+        "end": 1.92
+      },
+      {
+        "text": "It",
+        "start": 2.107,
+        "end": 2.48
+      },
+      {
+        "text": "can",
+        "start": 2.54,
+        "end": 2.72
+      },
+      {
+        "text": "run.",
+        "start": 2.82,
+        "end": 3.28
+      }
+    ]
+  },
+  "It is as big as a kid.": {
+    "file": "4ab28338bc29ff5ff0b2bf4b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "as",
+        "start": 0.293,
+        "end": 0.4
+      },
+      {
+        "text": "big",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "as",
+        "start": 0.667,
+        "end": 0.72
+      },
+      {
+        "text": "a",
+        "start": 0.76,
+        "end": 0.8
+      },
+      {
+        "text": "kid.",
+        "start": 0.9,
+        "end": 1.28
+      }
+    ]
+  },
+  "It is big and fat. It has a bit of a fin.": {
+    "file": "967193c1bd3ac40908f0d1ba.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "big",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "and",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "fat.",
+        "start": 0.84,
+        "end": 1.28
+      },
+      {
+        "text": "It",
+        "start": 1.467,
+        "end": 1.84
+      },
+      {
+        "text": "has",
+        "start": 1.86,
+        "end": 1.92
+      },
+      {
+        "text": "a",
+        "start": 2,
+        "end": 2.08
+      },
+      {
+        "text": "bit",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "of",
+        "start": 2.187,
+        "end": 2.24
+      },
+      {
+        "text": "a",
+        "start": 2.32,
+        "end": 2.4
+      },
+      {
+        "text": "fin.",
+        "start": 2.5,
+        "end": 2.96
+      }
+    ]
+  },
+  "It is big and fat. It is not a pup.": {
+    "file": "3eb51f7a7eda3cf6a1ff4063.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "big",
+        "start": 0.42,
+        "end": 0.72
+      },
+      {
+        "text": "and",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "text": "fat.",
+        "start": 1,
+        "end": 1.44
+      },
+      {
+        "text": "It",
+        "start": 1.68,
+        "end": 2.16
+      },
+      {
+        "text": "is",
+        "start": 2.213,
+        "end": 2.32
+      },
+      {
+        "text": "not",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "a",
+        "start": 2.52,
+        "end": 2.56
+      },
+      {
+        "text": "pup.",
+        "start": 2.66,
+        "end": 3.12
+      }
+    ]
+  },
+  "It is big. His top is as fat as a pan.": {
+    "file": "dbc3764b471fb4efacf59b26.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "big.",
+        "start": 0.44,
+        "end": 0.88
+      },
+      {
+        "text": "His",
+        "start": 1.02,
+        "end": 1.44
+      },
+      {
+        "text": "top",
+        "start": 1.54,
+        "end": 1.84
+      },
+      {
+        "text": "is",
+        "start": 1.893,
+        "end": 2
+      },
+      {
+        "text": "as",
+        "start": 2.053,
+        "end": 2.16
+      },
+      {
+        "text": "fat",
+        "start": 2.24,
+        "end": 2.48
+      },
+      {
+        "text": "as",
+        "start": 2.533,
+        "end": 2.64
+      },
+      {
+        "text": "a",
+        "start": 2.68,
+        "end": 2.72
+      },
+      {
+        "text": "pan.",
+        "start": 2.84,
+        "end": 3.36
+      }
+    ]
+  },
+  "It is big. It can run and hit.": {
+    "file": "d792bc4a94bcef96808c5044.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "big.",
+        "start": 0.42,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "text": "can",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "run",
+        "start": 1.62,
+        "end": 1.92
+      },
+      {
+        "text": "and",
+        "start": 1.96,
+        "end": 2.08
+      },
+      {
+        "text": "hit.",
+        "start": 2.18,
+        "end": 2.64
+      }
+    ]
+  },
+  "It is big. It has a big fin on top.": {
+    "file": "eced315dd008560883a28c3b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "big.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "It",
+        "start": 0.933,
+        "end": 1.36
+      },
+      {
+        "text": "has",
+        "start": 1.4,
+        "end": 1.52
+      },
+      {
+        "text": "a",
+        "start": 1.56,
+        "end": 1.6
+      },
+      {
+        "text": "big",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "fin",
+        "start": 1.86,
+        "end": 2.16
+      },
+      {
+        "text": "on",
+        "start": 2.213,
+        "end": 2.32
+      },
+      {
+        "text": "top.",
+        "start": 2.42,
+        "end": 2.88
+      }
+    ]
+  },
+  "It is big. It has a tip as big as a rod.": {
+    "file": "f429dd9ecada25027bd5be09.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "big.",
+        "start": 0.42,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "text": "has",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.54,
+        "end": 1.64
+      },
+      {
+        "text": "tip",
+        "start": 1.69,
+        "end": 1.84
+      },
+      {
+        "text": "as",
+        "start": 1.893,
+        "end": 2
+      },
+      {
+        "text": "big",
+        "start": 2.08,
+        "end": 2.32
+      },
+      {
+        "text": "as",
+        "start": 2.347,
+        "end": 2.4
+      },
+      {
+        "text": "a",
+        "start": 2.44,
+        "end": 2.48
+      },
+      {
+        "text": "rod.",
+        "start": 2.62,
+        "end": 3.2
+      }
+    ]
+  },
+  "It is big. It has dots.": {
+    "file": "f2b7b93c0457412ccd1c747f.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "big.",
+        "start": 0.42,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.907,
+        "end": 1.12
+      },
+      {
+        "text": "has",
+        "start": 1.18,
+        "end": 1.36
+      },
+      {
+        "text": "dots.",
+        "start": 1.456,
+        "end": 2
+      }
+    ]
+  },
+  "It is big. It is not hot.": {
+    "file": "0ded9a9b0b8394aeb022337b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "big.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "It",
+        "start": 0.907,
+        "end": 1.28
+      },
+      {
+        "text": "is",
+        "start": 1.333,
+        "end": 1.44
+      },
+      {
+        "text": "not",
+        "start": 1.5,
+        "end": 1.68
+      },
+      {
+        "text": "hot.",
+        "start": 1.78,
+        "end": 2.24
+      }
+    ]
+  },
+  "It is dim in the mud. It can get to the cod.": {
+    "file": "18cd75b1c3aea4e2caba7b26.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "dim",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "in",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.66,
+        "end": 0.72
+      },
+      {
+        "text": "mud.",
+        "start": 0.82,
+        "end": 1.2
+      },
+      {
+        "text": "It",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "can",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "get",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "to",
+        "start": 1.973,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "cod.",
+        "start": 2.28,
+        "end": 2.8
+      }
+    ]
+  },
+  "It is dim, but it can get a hum.": {
+    "file": "0a5cb5e930edf8cc1e1b28c9.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "dim,",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "but",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "text": "it",
+        "start": 0.907,
+        "end": 0.96
+      },
+      {
+        "text": "can",
+        "start": 1.02,
+        "end": 1.2
+      },
+      {
+        "text": "get",
+        "start": 1.22,
+        "end": 1.28
+      },
+      {
+        "text": "a",
+        "start": 1.32,
+        "end": 1.36
+      },
+      {
+        "text": "hum.",
+        "start": 1.46,
+        "end": 1.92
+      }
+    ]
+  },
+  "It is dim. It can get a bug in the mud.": {
+    "file": "db633b47ff9dad414ec439d0.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "dim.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "It",
+        "start": 0.96,
+        "end": 1.44
+      },
+      {
+        "text": "can",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "get",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "a",
+        "start": 1.8,
+        "end": 1.84
+      },
+      {
+        "text": "bug",
+        "start": 1.9,
+        "end": 2.08
+      },
+      {
+        "text": "in",
+        "start": 2.107,
+        "end": 2.16
+      },
+      {
+        "text": "the",
+        "start": 2.18,
+        "end": 2.24
+      },
+      {
+        "text": "mud.",
+        "start": 2.34,
+        "end": 2.72
+      }
+    ]
+  },
+  "It is dim. It can get a cod in the dim.": {
+    "file": "cd3f87757a366cad1a0bbfc9.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "dim.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "It",
+        "start": 0.933,
+        "end": 1.36
+      },
+      {
+        "text": "can",
+        "start": 1.4,
+        "end": 1.52
+      },
+      {
+        "text": "get",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "a",
+        "start": 1.72,
+        "end": 1.76
+      },
+      {
+        "text": "cod",
+        "start": 1.86,
+        "end": 2.16
+      },
+      {
+        "text": "in",
+        "start": 2.187,
+        "end": 2.24
+      },
+      {
+        "text": "the",
+        "start": 2.26,
+        "end": 2.32
+      },
+      {
+        "text": "dim.",
+        "start": 2.42,
+        "end": 2.88
+      }
+    ]
+  },
+  "It is dim. It can get to the bit.": {
+    "file": "aeca0b97b8587c2fa99327be.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "dim.",
+        "start": 0.36,
+        "end": 1.12
+      },
+      {
+        "text": "It",
+        "start": 1.253,
+        "end": 1.52
+      },
+      {
+        "text": "can",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "get",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "to",
+        "start": 1.787,
+        "end": 1.84
+      },
+      {
+        "text": "the",
+        "start": 1.86,
+        "end": 1.92
+      },
+      {
+        "text": "bit.",
+        "start": 2.02,
+        "end": 2.48
+      }
+    ]
+  },
+  "It is dim. The sun is not in it.": {
+    "file": "0a944761e725cedb2f9a71db.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "dim.",
+        "start": 0.32,
+        "end": 0.64
+      },
+      {
+        "text": "The",
+        "start": 0.82,
+        "end": 1.36
+      },
+      {
+        "text": "sun",
+        "start": 1.42,
+        "end": 1.6
+      },
+      {
+        "text": "is",
+        "start": 1.653,
+        "end": 1.76
+      },
+      {
+        "text": "not",
+        "start": 1.82,
+        "end": 2
+      },
+      {
+        "text": "in",
+        "start": 2.027,
+        "end": 2.08
+      },
+      {
+        "text": "it.",
+        "start": 2.16,
+        "end": 2.4
+      }
+    ]
+  },
+  "It is fat, not big. It is a mat.": {
+    "file": "39b60ff34938fca805e2b20f.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "fat,",
+        "start": 0.34,
+        "end": 0.88
+      },
+      {
+        "text": "not",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "big.",
+        "start": 1.16,
+        "end": 1.6
+      },
+      {
+        "text": "It",
+        "start": 1.787,
+        "end": 2.16
+      },
+      {
+        "text": "is",
+        "start": 2.187,
+        "end": 2.24
+      },
+      {
+        "text": "a",
+        "start": 2.32,
+        "end": 2.4
+      },
+      {
+        "text": "mat.",
+        "start": 2.5,
+        "end": 2.88
+      }
+    ]
+  },
+  "It is hot. It dips and runs.": {
+    "file": "17a1d6b67b59c2337fa5d96d.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "hot.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "It",
+        "start": 0.933,
+        "end": 1.36
+      },
+      {
+        "text": "dips",
+        "start": 1.44,
+        "end": 1.76
+      },
+      {
+        "text": "and",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "runs.",
+        "start": 2.032,
+        "end": 2.64
+      }
+    ]
+  },
+  "It is hot. It runs in the sun.": {
+    "file": "b98db8e50bd785ebc0ed4cbe.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "hot.",
+        "start": 0.36,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.933,
+        "end": 1.2
+      },
+      {
+        "text": "runs",
+        "start": 1.28,
+        "end": 1.6
+      },
+      {
+        "text": "in",
+        "start": 1.627,
+        "end": 1.68
+      },
+      {
+        "text": "the",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "sun.",
+        "start": 1.94,
+        "end": 2.4
+      }
+    ]
+  },
+  "It is hot. The sun is up.": {
+    "file": "52e38bea26926ec66190b44b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "hot.",
+        "start": 0.34,
+        "end": 0.72
+      },
+      {
+        "text": "The",
+        "start": 0.84,
+        "end": 1.2
+      },
+      {
+        "text": "sun",
+        "start": 1.28,
+        "end": 1.52
+      },
+      {
+        "text": "is",
+        "start": 1.573,
+        "end": 1.68
+      },
+      {
+        "text": "up.",
+        "start": 1.787,
+        "end": 2.08
+      }
+    ]
+  },
+  "It is not big. It has a big dot.": {
+    "file": "d63db856b98f7c75600fc82b.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "not",
+        "start": 0.3,
+        "end": 0.48
+      },
+      {
+        "text": "big.",
+        "start": 0.58,
+        "end": 1.16
+      },
+      {
+        "text": "It",
+        "start": 1.253,
+        "end": 1.44
+      },
+      {
+        "text": "has",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "a",
+        "start": 1.64,
+        "end": 1.68
+      },
+      {
+        "text": "big",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "dot.",
+        "start": 1.96,
+        "end": 2.4
+      }
+    ]
+  },
+  "It is not hot. It dips in and runs.": {
+    "file": "7350893ebc0fdf31430a6752.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "not",
+        "start": 0.3,
+        "end": 0.48
+      },
+      {
+        "text": "hot.",
+        "start": 0.58,
+        "end": 0.96
+      },
+      {
+        "text": "It",
+        "start": 1.147,
+        "end": 1.52
+      },
+      {
+        "text": "dips",
+        "start": 1.584,
+        "end": 1.84
+      },
+      {
+        "text": "in",
+        "start": 1.92,
+        "end": 2.08
+      },
+      {
+        "text": "and",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "runs.",
+        "start": 2.368,
+        "end": 3.04
+      }
+    ]
+  },
+  "It is not hot. It is dim in a pit.": {
+    "file": "690c69de46d43c448f90da4d.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "not",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "hot.",
+        "start": 0.52,
+        "end": 0.96
+      },
+      {
+        "text": "It",
+        "start": 1.12,
+        "end": 1.44
+      },
+      {
+        "text": "is",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "dim",
+        "start": 1.72,
+        "end": 2.08
+      },
+      {
+        "text": "in",
+        "start": 2.107,
+        "end": 2.16
+      },
+      {
+        "text": "a",
+        "start": 2.24,
+        "end": 2.32
+      },
+      {
+        "text": "pit.",
+        "start": 2.4,
+        "end": 2.8
       }
     ]
   },
@@ -7724,6 +9789,161 @@
       }
     ]
   },
+  "It naps a bit. It is not mad.": {
+    "file": "28bae989e49b66c0162f68be.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "naps",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "a",
+        "start": 0.52,
+        "end": 0.56
+      },
+      {
+        "text": "bit.",
+        "start": 0.64,
+        "end": 1.2
+      },
+      {
+        "text": "It",
+        "start": 1.307,
+        "end": 1.52
+      },
+      {
+        "text": "is",
+        "start": 1.573,
+        "end": 1.68
+      },
+      {
+        "text": "not",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "mad.",
+        "start": 1.98,
+        "end": 2.48
+      }
+    ]
+  },
+  "It naps in a den. It hid in a gap.": {
+    "file": "26fab4f2d5545fc3142669dc.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "naps",
+        "start": 0.16,
+        "end": 0.56
+      },
+      {
+        "text": "in",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "a",
+        "start": 0.68,
+        "end": 0.72
+      },
+      {
+        "text": "den.",
+        "start": 0.84,
+        "end": 1.44
+      },
+      {
+        "text": "It",
+        "start": 1.52,
+        "end": 1.68
+      },
+      {
+        "text": "hid",
+        "start": 1.76,
+        "end": 2
+      },
+      {
+        "text": "in",
+        "start": 2.027,
+        "end": 2.08
+      },
+      {
+        "text": "a",
+        "start": 2.12,
+        "end": 2.16
+      },
+      {
+        "text": "gap.",
+        "start": 2.26,
+        "end": 2.64
+      }
+    ]
+  },
+  "It naps in a gap. It hid in a pit.": {
+    "file": "232ec903808793497c425583.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "naps",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "in",
+        "start": 0.507,
+        "end": 0.56
+      },
+      {
+        "text": "a",
+        "start": 0.6,
+        "end": 0.64
+      },
+      {
+        "text": "gap.",
+        "start": 0.74,
+        "end": 1.12
+      },
+      {
+        "text": "It",
+        "start": 1.253,
+        "end": 1.52
+      },
+      {
+        "text": "hid",
+        "start": 1.58,
+        "end": 1.76
+      },
+      {
+        "text": "in",
+        "start": 1.787,
+        "end": 1.84
+      },
+      {
+        "text": "a",
+        "start": 1.88,
+        "end": 1.92
+      },
+      {
+        "text": "pit.",
+        "start": 2.04,
+        "end": 2.48
+      }
+    ]
+  },
   "It rests on the ocean floor.": {
     "file": "77fa8251c6fb5288c25d7656.mp3",
     "words": [
@@ -7756,6 +9976,246 @@
         "text": "floor.",
         "start": 1.2,
         "end": 1.68
+      }
+    ]
+  },
+  "It runs in the sun. It dips in the dim.": {
+    "file": "48ff02a72302094a44faa7e9.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "runs",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "in",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.58,
+        "end": 0.64
+      },
+      {
+        "text": "sun.",
+        "start": 0.76,
+        "end": 1.2
+      },
+      {
+        "text": "It",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "dips",
+        "start": 1.712,
+        "end": 2.16
+      },
+      {
+        "text": "in",
+        "start": 2.24,
+        "end": 2.4
+      },
+      {
+        "text": "the",
+        "start": 2.42,
+        "end": 2.48
+      },
+      {
+        "text": "dim.",
+        "start": 2.58,
+        "end": 3.04
+      }
+    ]
+  },
+  "It sat. It can tap and get a cod.": {
+    "file": "f2195810f0fe07f45da5c09a.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "sat.",
+        "start": 0.26,
+        "end": 0.64
+      },
+      {
+        "text": "It",
+        "start": 0.8,
+        "end": 1.12
+      },
+      {
+        "text": "can",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "tap",
+        "start": 1.36,
+        "end": 1.6
+      },
+      {
+        "text": "and",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "get",
+        "start": 1.78,
+        "end": 1.84
+      },
+      {
+        "text": "a",
+        "start": 1.88,
+        "end": 1.92
+      },
+      {
+        "text": "cod.",
+        "start": 2.04,
+        "end": 2.56
+      }
+    ]
+  },
+  "It sips and it tugs. Pop! It gets it.": {
+    "file": "4697be72e25e21c2521f9fb6.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sips",
+        "start": 0.2,
+        "end": 0.72
+      },
+      {
+        "text": "and",
+        "start": 0.78,
+        "end": 0.96
+      },
+      {
+        "text": "it",
+        "start": 0.987,
+        "end": 1.04
+      },
+      {
+        "text": "tugs.",
+        "start": 1.12,
+        "end": 2.16
+      },
+      {
+        "text": "Pop!",
+        "start": 2.28,
+        "end": 2.92
+      },
+      {
+        "text": "It",
+        "start": 3.013,
+        "end": 3.2
+      },
+      {
+        "text": "gets",
+        "start": 3.248,
+        "end": 3.44
+      },
+      {
+        "text": "it.",
+        "start": 3.52,
+        "end": 3.84
+      }
+    ]
+  },
+  "It sips. It gets bits.": {
+    "file": "df2c1eb027c87c6fcf8d6a73.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "sips.",
+        "start": 0.24,
+        "end": 0.8
+      },
+      {
+        "text": "It",
+        "start": 0.987,
+        "end": 1.36
+      },
+      {
+        "text": "gets",
+        "start": 1.424,
+        "end": 1.68
+      },
+      {
+        "text": "bits.",
+        "start": 1.776,
+        "end": 2.24
+      }
+    ]
+  },
+  "It sits and sits. A cod runs in. Got it!": {
+    "file": "4f3d7ecba0c3d57a4ff0ecb2.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "sits",
+        "start": 0.256,
+        "end": 0.64
+      },
+      {
+        "text": "and",
+        "start": 0.7,
+        "end": 0.88
+      },
+      {
+        "text": "sits.",
+        "start": 0.992,
+        "end": 1.72
+      },
+      {
+        "text": "A",
+        "start": 1.86,
+        "end": 2
+      },
+      {
+        "text": "cod",
+        "start": 2.1,
+        "end": 2.4
+      },
+      {
+        "text": "runs",
+        "start": 2.464,
+        "end": 2.72
+      },
+      {
+        "text": "in.",
+        "start": 2.827,
+        "end": 3.32
+      },
+      {
+        "text": "Got",
+        "start": 3.39,
+        "end": 3.6
+      },
+      {
+        "text": "it!",
+        "start": 3.68,
+        "end": 4
       }
     ]
   },
@@ -8301,6 +10761,91 @@
         "text": "whip.",
         "start": 1.344,
         "end": 2.08
+      }
+    ]
+  },
+  "It tips and tips. It gets him.": {
+    "file": "49a809a4885d02b0d83c783d.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "tips",
+        "start": 0.192,
+        "end": 0.64
+      },
+      {
+        "text": "and",
+        "start": 0.68,
+        "end": 0.8
+      },
+      {
+        "text": "tips.",
+        "start": 0.912,
+        "end": 1.44
+      },
+      {
+        "text": "It",
+        "start": 1.6,
+        "end": 1.92
+      },
+      {
+        "text": "gets",
+        "start": 2,
+        "end": 2.32
+      },
+      {
+        "text": "him.",
+        "start": 2.38,
+        "end": 2.64
+      }
+    ]
+  },
+  "It tips up. Rap! It hit the cod.": {
+    "file": "7bd4aac9e3f28ed8060b8d70.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "tips",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "up.",
+        "start": 0.48,
+        "end": 0.72
+      },
+      {
+        "text": "Rap!",
+        "start": 0.94,
+        "end": 1.68
+      },
+      {
+        "text": "It",
+        "start": 1.84,
+        "end": 2.16
+      },
+      {
+        "text": "hit",
+        "start": 2.2,
+        "end": 2.32
+      },
+      {
+        "text": "the",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "cod.",
+        "start": 2.58,
+        "end": 3.04
       }
     ]
   },
@@ -11879,6 +14424,51 @@
       }
     ]
   },
+  "Pop! It can pop to nab a cod.": {
+    "file": "13bd547df160bf1c96a2f2f5.mp3",
+    "words": [
+      {
+        "text": "Pop!",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "It",
+        "start": 0.533,
+        "end": 0.8
+      },
+      {
+        "text": "can",
+        "start": 0.82,
+        "end": 0.88
+      },
+      {
+        "text": "pop",
+        "start": 0.96,
+        "end": 1.2
+      },
+      {
+        "text": "to",
+        "start": 1.227,
+        "end": 1.28
+      },
+      {
+        "text": "nab",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "a",
+        "start": 1.6,
+        "end": 1.68
+      },
+      {
+        "text": "cod.",
+        "start": 1.8,
+        "end": 2.24
+      }
+    ]
+  },
   "Powerful suction pulls food from narrow reef crevices.": {
     "file": "c814126735617e5cc13d5fef.mp3",
     "words": [
@@ -13466,6 +16056,46 @@
         "text": "again.",
         "start": 2.787,
         "end": 3.2
+      }
+    ]
+  },
+  "Sip, sip, sip. The bits sit in.": {
+    "file": "c83f882725a7fc5f7ece30a9.mp3",
+    "words": [
+      {
+        "text": "Sip,",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "sip,",
+        "start": 0.64,
+        "end": 1.88
+      },
+      {
+        "text": "sip.",
+        "start": 2.01,
+        "end": 2.48
+      },
+      {
+        "text": "The",
+        "start": 2.64,
+        "end": 3.12
+      },
+      {
+        "text": "bits",
+        "start": 3.216,
+        "end": 3.6
+      },
+      {
+        "text": "sit",
+        "start": 3.66,
+        "end": 3.84
+      },
+      {
+        "text": "in.",
+        "start": 3.947,
+        "end": 4.24
       }
     ]
   },
@@ -15769,6 +18399,51 @@
       }
     ]
   },
+  "Tap, tap in the mud. It has it!": {
+    "file": "4a2ac1d4c489a176a6aab05c.mp3",
+    "words": [
+      {
+        "text": "Tap,",
+        "start": 0,
+        "end": 0.36
+      },
+      {
+        "text": "tap",
+        "start": 0.39,
+        "end": 0.48
+      },
+      {
+        "text": "in",
+        "start": 0.507,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.58,
+        "end": 0.64
+      },
+      {
+        "text": "mud.",
+        "start": 0.74,
+        "end": 1.12
+      },
+      {
+        "text": "It",
+        "start": 1.307,
+        "end": 1.68
+      },
+      {
+        "text": "has",
+        "start": 1.76,
+        "end": 2
+      },
+      {
+        "text": "it!",
+        "start": 2.053,
+        "end": 2.32
+      }
+    ]
+  },
   "Ten!": {
     "file": "34dcc210c64ea56db879c9c9.mp3",
     "words": [
@@ -17349,6 +20024,66 @@
       }
     ]
   },
+  "The pup got a bit. His mom got a big bit.": {
+    "file": "ffbe4c3938ab75f62044f5fa.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "pup",
+        "start": 0.14,
+        "end": 0.32
+      },
+      {
+        "text": "got",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "a",
+        "start": 0.52,
+        "end": 0.56
+      },
+      {
+        "text": "bit.",
+        "start": 0.66,
+        "end": 1.04
+      },
+      {
+        "text": "His",
+        "start": 1.14,
+        "end": 1.44
+      },
+      {
+        "text": "mom",
+        "start": 1.52,
+        "end": 1.76
+      },
+      {
+        "text": "got",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "a",
+        "start": 1.96,
+        "end": 2
+      },
+      {
+        "text": "big",
+        "start": 2.08,
+        "end": 2.32
+      },
+      {
+        "text": "bit.",
+        "start": 2.42,
+        "end": 2.88
+      }
+    ]
+  },
   "The seafloor is a busy home.": {
     "file": "404efbee655195f0cc38cf3c.mp3",
     "words": [
@@ -18204,6 +20939,106 @@
       }
     ]
   },
+  "The sun is hot. It sits in a tub.": {
+    "file": "80c5cfb9e7c2881c731e4c36.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sun",
+        "start": 0.16,
+        "end": 0.4
+      },
+      {
+        "text": "is",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "hot.",
+        "start": 0.68,
+        "end": 1.12
+      },
+      {
+        "text": "It",
+        "start": 1.307,
+        "end": 1.68
+      },
+      {
+        "text": "sits",
+        "start": 1.728,
+        "end": 1.92
+      },
+      {
+        "text": "in",
+        "start": 1.947,
+        "end": 2
+      },
+      {
+        "text": "a",
+        "start": 2.08,
+        "end": 2.16
+      },
+      {
+        "text": "tub.",
+        "start": 2.24,
+        "end": 2.64
+      }
+    ]
+  },
+  "The sun set. It gets up to get fed.": {
+    "file": "884d0c20ab55dfc6c717eaac.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sun",
+        "start": 0.16,
+        "end": 0.4
+      },
+      {
+        "text": "set.",
+        "start": 0.5,
+        "end": 0.88
+      },
+      {
+        "text": "It",
+        "start": 1.067,
+        "end": 1.44
+      },
+      {
+        "text": "gets",
+        "start": 1.472,
+        "end": 1.6
+      },
+      {
+        "text": "up",
+        "start": 1.653,
+        "end": 1.76
+      },
+      {
+        "text": "to",
+        "start": 1.813,
+        "end": 1.92
+      },
+      {
+        "text": "get",
+        "start": 1.96,
+        "end": 2.08
+      },
+      {
+        "text": "fed.",
+        "start": 2.18,
+        "end": 2.64
+      }
+    ]
+  },
   "The tail sweeps forward.": {
     "file": "5d2a5b35f454c47b50f86f35.mp3",
     "words": [
@@ -18461,6 +21296,46 @@
         "text": "water.",
         "start": 3.827,
         "end": 4.24
+      }
+    ]
+  },
+  "The tip is as big as him.": {
+    "file": "f872c3616fc9e8952ddde443.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "tip",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "is",
+        "start": 0.48,
+        "end": 0.64
+      },
+      {
+        "text": "as",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "big",
+        "start": 0.84,
+        "end": 0.96
+      },
+      {
+        "text": "as",
+        "start": 1.013,
+        "end": 1.12
+      },
+      {
+        "text": "him.",
+        "start": 1.22,
+        "end": 1.6
       }
     ]
   },
@@ -22561,6 +25436,56 @@
         "text": "Two!",
         "start": 0,
         "end": 0.72
+      }
+    ]
+  },
+  "Up, up, up it runs. It hits the top!": {
+    "file": "b09a9b2d44050fc97e134d68.mp3",
+    "words": [
+      {
+        "text": "Up,",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "up,",
+        "start": 0.293,
+        "end": 0.48
+      },
+      {
+        "text": "up",
+        "start": 0.56,
+        "end": 0.72
+      },
+      {
+        "text": "it",
+        "start": 0.747,
+        "end": 0.8
+      },
+      {
+        "text": "runs.",
+        "start": 0.88,
+        "end": 1.28
+      },
+      {
+        "text": "It",
+        "start": 1.413,
+        "end": 1.68
+      },
+      {
+        "text": "hits",
+        "start": 1.728,
+        "end": 1.92
+      },
+      {
+        "text": "the",
+        "start": 1.94,
+        "end": 2
+      },
+      {
+        "text": "top!",
+        "start": 2.12,
+        "end": 2.56
       }
     ]
   },

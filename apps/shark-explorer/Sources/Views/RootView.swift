@@ -27,6 +27,12 @@ struct RootView: View {
         _feedback = State(initialValue: FeedbackPlayer(settings: sound))
     }
 
+    private var wordMarker: (@Sendable (String) -> WordMark?)? {
+        guard game.readingMode == .earlyReader else { return nil }
+        let reading = SharkReading.shared
+        return { reading.mark($0) }
+    }
+
     var body: some View {
         ZStack {
             OceanBackdrop()
@@ -45,6 +51,8 @@ struct RootView: View {
         .environment(feedback)
         .environment(sound)
         .environment(\.kidTheme, .shark)
+        // Early Reader mode marks the words Henry can sound out and his heart words.
+        .environment(\.wordMarker, wordMarker)
         .task { game.load() }
     }
 

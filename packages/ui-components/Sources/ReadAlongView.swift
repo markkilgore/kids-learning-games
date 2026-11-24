@@ -30,6 +30,7 @@ public struct ReadAlongView: View {
         self.onFinished = onFinished
     }
 
+    @Environment(\.wordMarker) private var wordMarker
     @Environment(NarrationCoordinator.self) private var narration
     @State private var sentenceIndex = 0
     @State private var didFinish = false
@@ -60,13 +61,23 @@ public struct ReadAlongView: View {
                         Button {
                             narration.speakWord(token.text, at: token.id, in: sentence)
                         } label: {
+                            let mark = wordMarker?(token.text)
                             Text(token.text + sentence.punctuation(after: token.range))
                                 .font(.system(size: 38, weight: .bold, design: .rounded))
                                 .foregroundStyle(wordColor(token))
+                                .underline(mark == .decodable || mark == .featured, color: mark == .featured ? .yellow : .white.opacity(0.75))
                                 .padding(.horizontal, 8)
                                 .padding(.vertical, 6)
                                 .frame(minWidth: 48, minHeight: 60)
                                 .background(wordBackground(token), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                .overlay(alignment: .topTrailing) {
+                                    if mark == .heart {
+                                        Image(systemName: "heart.fill")
+                                            .font(.system(size: 13, weight: .bold))
+                                            .foregroundStyle(.pink)
+                                            .offset(x: 2, y: -2)
+                                    }
+                                }
                                 .scaleEffect(isSpeakingThisSentence && narration.currentWordIndex == token.id ? 1.08 : 1)
                                 .animation(.spring(response: 0.22, dampingFraction: 0.7), value: narration.currentWordIndex)
                         }
@@ -77,6 +88,19 @@ public struct ReadAlongView: View {
                 .frame(maxWidth: 900, alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(minHeight: compact ? 70 : 150, alignment: .top)
+
+                if wordMarker != nil, !compact {
+                    HStack(spacing: 18) {
+                        Text("sound it out").underline(color: .white.opacity(0.75))
+                        Text("new letters").underline(color: .yellow)
+                        Label("heart word", systemImage: "heart.fill").labelStyle(.titleAndIcon)
+                    }
+                    .font(.system(size: 17, weight: .semibold, design: .rounded))
+                    .foregroundStyle(.white.opacity(0.8))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityElement(children: .combine)
+                    .accessibilityIdentifier("reading-legend")
+                }
 
                 HStack(spacing: 18) {
                     control("Replay", systemImage: "speaker.wave.2.fill", tint: .blue) {

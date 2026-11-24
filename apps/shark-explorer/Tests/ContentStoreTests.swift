@@ -213,6 +213,35 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertNil(SharkProgressSection.note(for: sharks[0], firstTry: 2, retried: 1))
     }
 
+    /// The sound-it-out sentences must use only letters Henry has been taught, plus heart words.
+    func testDecodableSentencesUseOnlyTaughtLettersAndHeartWords() throws {
+        let reading = SharkReading.shared
+        XCTAssertEqual(reading.letters.count, 18)
+        XCTAssertEqual(reading.mark("fins"), .decodable)
+        XCTAssertEqual(reading.mark("Hid"), .featured)
+        XCTAssertEqual(reading.mark("the"), .heart)
+        XCTAssertNil(reading.mark("shark"))
+        XCTAssertNil(reading.mark("her"))
+        XCTAssertNil(reading.mark("he"))
+        XCTAssertNil(reading.mark("jaw"))
+
+        var featured = 0
+        for shark in ContentStore.shared.catalog.sharks {
+            let narratives = [shark.discover] + shark.topics.map(\.narration)
+            XCTAssertNotNil(shark.discover.decodable, shark.id)
+            for sentence in narratives.flatMap({ $0.decodable ?? [] }) {
+                XCTAssertEqual(shark.discover.sentences(for: .story).contains(sentence), false)
+                for token in sentence.wordTokens {
+                    let mark = reading.mark(token.text)
+                    XCTAssertNotNil(mark, "\(shark.id): Henry cannot read \"\(token.text)\" yet in \"\(sentence)\"")
+                    if mark == .featured { featured += 1 }
+                }
+            }
+            XCTAssertEqual(shark.discover.sentences(for: .earlyReader).first, shark.discover.decodable?.first)
+        }
+        XCTAssertGreaterThan(featured, 30, "the newest letters should get plenty of practice")
+    }
+
     /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
     func testEverySpokenLineHasARecording() throws {
         let manifest = AudioManifest(bundle: .main, resourceName: SharkAppConfiguration.value.narration.bundledManifestName)
@@ -220,7 +249,7 @@ final class ContentStoreTests: XCTestCase {
         var lines = WeeklySpokenLines.all + SharkLine.allCases.map(\.text) + catalog.vocabulary.map(\.word)
         for shark in catalog.sharks {
             let narratives = [shark.discover, shark.mission.instructions] + shark.topics.map(\.narration) + shark.questions.map(\.prompt)
-            lines += narratives.flatMap { $0.earlyReader + $0.story }
+            lines += narratives.flatMap { ($0.decodable ?? []) + $0.earlyReader + $0.story }
             lines.append(shark.mission.completion)
             lines += shark.questions.flatMap { [$0.success, $0.retry] }
         }

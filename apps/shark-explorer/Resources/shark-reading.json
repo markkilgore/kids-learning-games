@@ -1,0 +1,55 @@
+{
+  "letters": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "i",
+    "k",
+    "m",
+    "n",
+    "o",
+    "p",
+    "s",
+    "t",
+    "u",
+    "h",
+    "r"
+  ],
+  "newestLetters": [
+    "h",
+    "r"
+  ],
+  "heartWords": [
+    "the",
+    "a",
+    "i",
+    "to",
+    "and",
+    "is",
+    "was",
+    "his",
+    "has",
+    "of",
+    "as"
+  ],
+  "irregular": [
+    "put",
+    "son",
+    "ton",
+    "do",
+    "he",
+    "me",
+    "be",
+    "we",
+    "no",
+    "so",
+    "go",
+    "her",
+    "for"
+  ],
+  "source": "UFLI Foundations sequence; letters from the class newsletter of 2026-11-15. Heart words are an estimate until confirmed against Henry's passages."
+}

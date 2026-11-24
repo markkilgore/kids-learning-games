@@ -32,7 +32,7 @@ export async function sharkLines() {
   const lines = [];
   const visit = (value, key = '') => {
     if (Array.isArray(value)) {
-      if (key === 'earlyReader' || key === 'story') lines.push(...value);
+      if (key === 'decodable' || key === 'earlyReader' || key === 'story') lines.push(...value);
       else value.forEach((item) => visit(item));
     } else if (value && typeof value === 'object') {
       for (const [childKey, child] of Object.entries(value)) visit(child, childKey);

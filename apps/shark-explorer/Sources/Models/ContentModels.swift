@@ -71,11 +71,13 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
 }
 
 struct NarrativePair: Codable, Hashable {
+    /// Sentences a beginning reader can sound out alone, shown before the early-reader text.
+    var decodable: [String]?
     let earlyReader: [String]
     let story: [String]
 
     func sentences(for mode: ReadingMode) -> [String] {
-        mode == .earlyReader ? earlyReader : story
+        mode == .earlyReader ? (decodable ?? []) + earlyReader : story
     }
 }
 
