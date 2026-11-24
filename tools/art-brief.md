@@ -9,6 +9,14 @@ Everything to generate is listed in `tools/art-prompts.json`:
   so keep the cat centred with a plain background.
 - `scenes`: the House and Garden backdrops for Cat Math and the ocean map for Shark Explorer. Each names
   the style key to use.
+- `icons`: quiz answer pictures (`choice-*`), Explore topic icons (`topic-*`), mission targets (`mission-*`),
+  counting objects (`count-*`), reward icons (`reward-*`) and weekly-lesson icons (`lesson-<activity id>`),
+  stored at 256 px. Combine `iconStyle` with the entry's `composition` and `prompt`. `tileComposition`
+  pictures keep their plain cream background and are shown as rounded tiles; `cutoutComposition` pictures
+  are painted on flat green, which is keyed out to transparency afterwards. Quiz choices that show the same
+  thing share one picture (see `sharedArt` in `QuestionRoundView.swift`).
+- `catHappyPoses`: celebrating poses for the reward card, made by editing each cat's portrait so the cat
+  stays the same. A cat without one shows its usual portrait.
 
 For every entry, combine the named style with the entry's `prompt`, generate one PNG at the given `size`,
 and save it at `file` (paths are relative to the repository root). Do not change any other file.
