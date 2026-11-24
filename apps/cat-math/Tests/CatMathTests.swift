@@ -284,7 +284,7 @@ final class CatMathTests: XCTestCase {
         let manifest = AudioManifest(bundle: .main, resourceName: CatAppConfiguration.value.narration.bundledManifestName)
         var lines = WeeklySpokenLines.all + CatLine.allCases.map(\.text)
         for cat in CatContent.cats {
-            lines += cat.backstory.map(\.story) + CatRewardAction.allCases.map { $0.celebration(for: cat) }
+            lines += cat.backstory.flatMap(\.sentences) + CatRewardAction.allCases.map { $0.celebration(for: cat) }
             lines.append("You did it! \(cat.name)’s friendship grew.")
             for difficulty in SkillPracticeStats.difficultyRange {
                 lines += (0..<80).map { MathChallengeFactory.challenge(for: cat, friendship: $0, difficulty: difficulty).prompt }

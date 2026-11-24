@@ -51,7 +51,7 @@ export async function catLines() {
   if (cats.length !== 10) throw new Error(`Expected 10 cats in CatContent.swift, found ${cats.length}`);
   const lines = [];
   for (const [catIndex, cat] of cats.entries()) {
-    cat.beats.forEach((beat) => lines.push(beat.story));
+    cat.beats.forEach((beat) => lines.push(...beat.sentences));
     lines.push(
       `You did it! ${cat.name}’s friendship grew.`,
       `Crunch! ${cat.name} loved that tasty treat.`,
@@ -71,7 +71,10 @@ function parseCats(swift) {
     item: match[3],
     items: match[4],
     trickName: match[5],
-    beats: [...match[6].matchAll(/\("[^"]+", "([^"]+)", "([^"]+)"\)/g)].map((beat) => ({ story: beat[1], lead: beat[2] }))
+    beats: [...match[6].matchAll(/\("[^"]+", \[([^\]]+)\], "([^"]+)"\)/g)].map((beat) => ({
+      sentences: [...beat[1].matchAll(/"([^"]+)"/g)].map((sentence) => sentence[1]),
+      lead: beat[2]
+    }))
   }));
 }
 

@@ -69,6 +69,51 @@
       }
     ]
   },
+  "A paper flag waves from the very top.": {
+    "file": "2173eec02cbe88a0d8313031.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "paper",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "flag",
+        "start": 0.48,
+        "end": 0.8
+      },
+      {
+        "text": "waves",
+        "start": 0.893,
+        "end": 1.36
+      },
+      {
+        "text": "from",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "very",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "top.",
+        "start": 1.98,
+        "end": 2.48
+      }
+    ]
+  },
   "A poult is a baby turkey.": {
     "file": "f7a1fde733afcf453a649114.mp3",
     "words": [
@@ -101,6 +146,46 @@
         "text": "turkey.",
         "start": 1.12,
         "end": 1.68
+      }
+    ]
+  },
+  "A shared sunbeam feels twice as warm.": {
+    "file": "5dc1f9758a5f9f1a4542c838.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "shared",
+        "start": 0.126,
+        "end": 0.4
+      },
+      {
+        "text": "sunbeam",
+        "start": 0.5,
+        "end": 1.04
+      },
+      {
+        "text": "feels",
+        "start": 1.12,
+        "end": 1.52
+      },
+      {
+        "text": "twice",
+        "start": 1.587,
+        "end": 1.92
+      },
+      {
+        "text": "as",
+        "start": 1.947,
+        "end": 2
+      },
+      {
+        "text": "warm.",
+        "start": 2.096,
+        "end": 2.56
       }
     ]
   },
@@ -206,6 +291,61 @@
         "text": "kitchen.",
         "start": 2.55,
         "end": 3.12
+      }
+    ]
+  },
+  "A tunnel, a bridge, and a wobbly log come next.": {
+    "file": "9a298d310fa04deb6e7d6fc1.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "tunnel,",
+        "start": 0.149,
+        "end": 0.8
+      },
+      {
+        "text": "a",
+        "start": 0.84,
+        "end": 0.88
+      },
+      {
+        "text": "bridge,",
+        "start": 0.96,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "a",
+        "start": 1.64,
+        "end": 1.68
+      },
+      {
+        "text": "wobbly",
+        "start": 1.76,
+        "end": 2.24
+      },
+      {
+        "text": "log",
+        "start": 2.36,
+        "end": 2.72
+      },
+      {
+        "text": "come",
+        "start": 2.784,
+        "end": 3.04
+      },
+      {
+        "text": "next.",
+        "start": 3.136,
+        "end": 3.6
       }
     ]
   },
@@ -1119,6 +1259,111 @@
       }
     ]
   },
+  "At the end she found her ball, safe and round.": {
+    "file": "65ec6786da0df0c5a9a1ed4b.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "end",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "she",
+        "start": 0.62,
+        "end": 0.8
+      },
+      {
+        "text": "found",
+        "start": 0.84,
+        "end": 1.04
+      },
+      {
+        "text": "her",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "ball,",
+        "start": 1.264,
+        "end": 1.6
+      },
+      {
+        "text": "safe",
+        "start": 1.76,
+        "end": 2.4
+      },
+      {
+        "text": "and",
+        "start": 2.46,
+        "end": 2.64
+      },
+      {
+        "text": "round.",
+        "start": 2.72,
+        "end": 3.28
+      }
+    ]
+  },
+  "At the end there is always a snack waiting.": {
+    "file": "68f7012578208767ca91dc57.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "end",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "there",
+        "start": 0.587,
+        "end": 0.72
+      },
+      {
+        "text": "is",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "always",
+        "start": 0.937,
+        "end": 1.28
+      },
+      {
+        "text": "a",
+        "start": 1.32,
+        "end": 1.36
+      },
+      {
+        "text": "snack",
+        "start": 1.44,
+        "end": 1.84
+      },
+      {
+        "text": "waiting.",
+        "start": 1.9,
+        "end": 2.4
+      }
+    ]
+  },
   "Before everyone wakes, Waffles patrols the quiet house for misplaced slippers.": {
     "file": "28c5cba36515863caafd8296.mp3",
     "words": [
@@ -1629,6 +1874,146 @@
       }
     ]
   },
+  "Big bouncy steps mean Ginger is on his way.": {
+    "file": "e7779d93f4816786bb766824.mp3",
+    "words": [
+      {
+        "text": "Big",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "bouncy",
+        "start": 0.32,
+        "end": 0.8
+      },
+      {
+        "text": "steps",
+        "start": 0.88,
+        "end": 1.28
+      },
+      {
+        "text": "mean",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "Ginger",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "is",
+        "start": 1.973,
+        "end": 2.08
+      },
+      {
+        "text": "on",
+        "start": 2.133,
+        "end": 2.24
+      },
+      {
+        "text": "his",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "text": "way.",
+        "start": 2.48,
+        "end": 2.8
+      }
+    ]
+  },
+  "Biscuit has loved blanket forts ever since.": {
+    "file": "2517e26482e38dfd33dd4a23.mp3",
+    "words": [
+      {
+        "text": "Biscuit",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "has",
+        "start": 0.44,
+        "end": 0.56
+      },
+      {
+        "text": "loved",
+        "start": 0.613,
+        "end": 0.88
+      },
+      {
+        "text": "blanket",
+        "start": 0.94,
+        "end": 1.36
+      },
+      {
+        "text": "forts",
+        "start": 1.427,
+        "end": 1.76
+      },
+      {
+        "text": "ever",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "since.",
+        "start": 2.093,
+        "end": 2.64
+      }
+    ]
+  },
+  "Biscuit is saving every soft pillow she can find.": {
+    "file": "1714691d5db9e9c8e1cce873.mp3",
+    "words": [
+      {
+        "text": "Biscuit",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "is",
+        "start": 0.4,
+        "end": 0.56
+      },
+      {
+        "text": "saving",
+        "start": 0.606,
+        "end": 0.88
+      },
+      {
+        "text": "every",
+        "start": 0.96,
+        "end": 1.36
+      },
+      {
+        "text": "soft",
+        "start": 1.44,
+        "end": 1.76
+      },
+      {
+        "text": "pillow",
+        "start": 1.817,
+        "end": 2.16
+      },
+      {
+        "text": "she",
+        "start": 2.2,
+        "end": 2.32
+      },
+      {
+        "text": "can",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "find.",
+        "start": 2.576,
+        "end": 3.12
+      }
+    ]
+  },
   "Biscuit once crossed the noisy hallway to return a kitten’s lost toy.": {
     "file": "56fef2f7995c07e84c4583d8.mp3",
     "words": [
@@ -1694,6 +2079,51 @@
       }
     ]
   },
+  "Biscuit took a deep breath and tiptoed past.": {
+    "file": "d9fe6f747b515902d43ee38e.mp3",
+    "words": [
+      {
+        "text": "Biscuit",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "took",
+        "start": 0.352,
+        "end": 0.48
+      },
+      {
+        "text": "a",
+        "start": 0.52,
+        "end": 0.56
+      },
+      {
+        "text": "deep",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "breath",
+        "start": 0.857,
+        "end": 1.2
+      },
+      {
+        "text": "and",
+        "start": 1.24,
+        "end": 1.36
+      },
+      {
+        "text": "tiptoed",
+        "start": 1.44,
+        "end": 2
+      },
+      {
+        "text": "past.",
+        "start": 2.096,
+        "end": 2.64
+      }
+    ]
+  },
   "Biscuit was discovered beneath a blanket with only two fuzzy ears showing.": {
     "file": "5a8145133d712f1f86738c8a.mp3",
     "words": [
@@ -1756,6 +2186,131 @@
         "text": "showing.",
         "start": 3.5,
         "end": 4
+      }
+    ]
+  },
+  "Blink, blink, pause. Blink, blink, pause.": {
+    "file": "3dae10be29da5b8610d9e265.mp3",
+    "words": [
+      {
+        "text": "Blink,",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "blink,",
+        "start": 0.28,
+        "end": 0.56
+      },
+      {
+        "text": "pause.",
+        "start": 0.64,
+        "end": 1.12
+      },
+      {
+        "text": "Blink,",
+        "start": 1.253,
+        "end": 2.08
+      },
+      {
+        "text": "blink,",
+        "start": 2.107,
+        "end": 2.32
+      },
+      {
+        "text": "pause.",
+        "start": 2.4,
+        "end": 2.96
+      }
+    ]
+  },
+  "Blueberries are round, so they roll very fast.": {
+    "file": "275da0298cb6fecf93fa4597.mp3",
+    "words": [
+      {
+        "text": "Blueberries",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "are",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "round,",
+        "start": 0.64,
+        "end": 1.28
+      },
+      {
+        "text": "so",
+        "start": 1.333,
+        "end": 1.44
+      },
+      {
+        "text": "they",
+        "start": 1.456,
+        "end": 1.52
+      },
+      {
+        "text": "roll",
+        "start": 1.584,
+        "end": 1.84
+      },
+      {
+        "text": "very",
+        "start": 1.92,
+        "end": 2.24
+      },
+      {
+        "text": "fast.",
+        "start": 2.336,
+        "end": 2.88
+      }
+    ]
+  },
+  "Bright clouds mean the sunbeams are coming back.": {
+    "file": "81282f430ac100507dc6d6c0.mp3",
+    "words": [
+      {
+        "text": "Bright",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "clouds",
+        "start": 0.309,
+        "end": 0.72
+      },
+      {
+        "text": "mean",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "the",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "sunbeams",
+        "start": 1.2,
+        "end": 1.68
+      },
+      {
+        "text": "are",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "coming",
+        "start": 1.886,
+        "end": 2.16
+      },
+      {
+        "text": "back.",
+        "start": 2.224,
+        "end": 2.64
       }
     ]
   },
@@ -2674,6 +3229,111 @@
       }
     ]
   },
+  "Buttons roll under chairs and hide in the rug.": {
+    "file": "21eb0f12a4d4be185ab49a87.mp3",
+    "words": [
+      {
+        "text": "Buttons",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "roll",
+        "start": 0.448,
+        "end": 0.64
+      },
+      {
+        "text": "under",
+        "start": 0.68,
+        "end": 0.88
+      },
+      {
+        "text": "chairs",
+        "start": 0.96,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.52
+      },
+      {
+        "text": "hide",
+        "start": 1.6,
+        "end": 1.92
+      },
+      {
+        "text": "in",
+        "start": 1.947,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "rug.",
+        "start": 2.2,
+        "end": 2.64
+      }
+    ]
+  },
+  "By lunch it has climbed onto the big blue chair.": {
+    "file": "e7317f9a8b708599746b8db1.mp3",
+    "words": [
+      {
+        "text": "By",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "lunch",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "it",
+        "start": 0.533,
+        "end": 0.64
+      },
+      {
+        "text": "has",
+        "start": 0.68,
+        "end": 0.8
+      },
+      {
+        "text": "climbed",
+        "start": 0.85,
+        "end": 1.2
+      },
+      {
+        "text": "onto",
+        "start": 1.248,
+        "end": 1.44
+      },
+      {
+        "text": "the",
+        "start": 1.46,
+        "end": 1.52
+      },
+      {
+        "text": "big",
+        "start": 1.6,
+        "end": 1.84
+      },
+      {
+        "text": "blue",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "chair.",
+        "start": 2.16,
+        "end": 2.64
+      }
+    ]
+  },
   "Cheese starts like chin.": {
     "file": "d7a1fda09803a7e11951fc64.mp3",
     "words": [
@@ -2721,6 +3381,46 @@
         "text": "chin.",
         "start": 1.216,
         "end": 1.68
+      }
+    ]
+  },
+  "Clover does not even twitch her tail.": {
+    "file": "96d7cceb567e707d911768b5.mp3",
+    "words": [
+      {
+        "text": "Clover",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "does",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "not",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "even",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "twitch",
+        "start": 1.006,
+        "end": 1.28
+      },
+      {
+        "text": "her",
+        "start": 1.3,
+        "end": 1.36
+      },
+      {
+        "text": "tail.",
+        "start": 1.44,
+        "end": 1.92
       }
     ]
   },
@@ -5119,6 +5819,186 @@
       }
     ]
   },
+  "Each cat will have a special spot to stand in.": {
+    "file": "62016957d1d50e73a3174aab.mp3",
+    "words": [
+      {
+        "text": "Each",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "cat",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "will",
+        "start": 0.592,
+        "end": 0.72
+      },
+      {
+        "text": "have",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "a",
+        "start": 0.92,
+        "end": 0.96
+      },
+      {
+        "text": "special",
+        "start": 1.01,
+        "end": 1.36
+      },
+      {
+        "text": "spot",
+        "start": 1.424,
+        "end": 1.68
+      },
+      {
+        "text": "to",
+        "start": 1.733,
+        "end": 1.84
+      },
+      {
+        "text": "stand",
+        "start": 1.893,
+        "end": 2.16
+      },
+      {
+        "text": "in.",
+        "start": 2.24,
+        "end": 2.56
+      }
+    ]
+  },
+  "Each new flower brings a new butterfly.": {
+    "file": "3d355e8f84f22f7886c1200d.mp3",
+    "words": [
+      {
+        "text": "Each",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "new",
+        "start": 0.32,
+        "end": 0.56
+      },
+      {
+        "text": "flower",
+        "start": 0.629,
+        "end": 1.04
+      },
+      {
+        "text": "brings",
+        "start": 1.097,
+        "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.52
+      },
+      {
+        "text": "new",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "butterfly.",
+        "start": 1.752,
+        "end": 2.56
+      }
+    ]
+  },
+  "Each square will be a different color.": {
+    "file": "658c9bbbf87a5054d18dfa4c.mp3",
+    "words": [
+      {
+        "text": "Each",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "square",
+        "start": 0.309,
+        "end": 0.72
+      },
+      {
+        "text": "will",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "be",
+        "start": 0.907,
+        "end": 0.96
+      },
+      {
+        "text": "a",
+        "start": 1,
+        "end": 1.04
+      },
+      {
+        "text": "different",
+        "start": 1.072,
+        "end": 1.36
+      },
+      {
+        "text": "color.",
+        "start": 1.427,
+        "end": 1.92
+      }
+    ]
+  },
+  "Each stone was warmer than the one before.": {
+    "file": "c9db44cfa683b35bcf81dd9f.mp3",
+    "words": [
+      {
+        "text": "Each",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "stone",
+        "start": 0.307,
+        "end": 0.64
+      },
+      {
+        "text": "was",
+        "start": 0.7,
+        "end": 0.88
+      },
+      {
+        "text": "warmer",
+        "start": 0.949,
+        "end": 1.36
+      },
+      {
+        "text": "than",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "one",
+        "start": 1.66,
+        "end": 1.84
+      },
+      {
+        "text": "before.",
+        "start": 1.92,
+        "end": 2.48
+      }
+    ]
+  },
   "Eight!": {
     "file": "38b79950a8fb981435e14505.mp3",
     "words": [
@@ -5136,6 +6016,181 @@
         "text": "Eleven!",
         "start": 0,
         "end": 0.72
+      }
+    ]
+  },
+  "Ever since, the fireflies have followed wherever she goes.": {
+    "file": "154d5cc292dc875caebfccab.mp3",
+    "words": [
+      {
+        "text": "Ever",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "since,",
+        "start": 0.227,
+        "end": 0.96
+      },
+      {
+        "text": "the",
+        "start": 0.98,
+        "end": 1.04
+      },
+      {
+        "text": "fireflies",
+        "start": 1.12,
+        "end": 1.76
+      },
+      {
+        "text": "have",
+        "start": 1.792,
+        "end": 1.92
+      },
+      {
+        "text": "followed",
+        "start": 1.973,
+        "end": 2.4
+      },
+      {
+        "text": "wherever",
+        "start": 2.444,
+        "end": 2.8
+      },
+      {
+        "text": "she",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "goes.",
+        "start": 3.056,
+        "end": 3.52
+      }
+    ]
+  },
+  "Every friend will get berries on top.": {
+    "file": "0645d0c0638bc2ce45403ea3.mp3",
+    "words": [
+      {
+        "text": "Every",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "friend",
+        "start": 0.377,
+        "end": 0.72
+      },
+      {
+        "text": "will",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "get",
+        "start": 0.9,
+        "end": 0.96
+      },
+      {
+        "text": "berries",
+        "start": 1.02,
+        "end": 1.44
+      },
+      {
+        "text": "on",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "top.",
+        "start": 1.7,
+        "end": 2.08
+      }
+    ]
+  },
+  "Every visitor must bow before coming in.": {
+    "file": "ab3dbb2b7c0269aa1e6b56cd.mp3",
+    "words": [
+      {
+        "text": "Every",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "visitor",
+        "start": 0.3,
+        "end": 0.72
+      },
+      {
+        "text": "must",
+        "start": 0.784,
+        "end": 1.04
+      },
+      {
+        "text": "bow",
+        "start": 1.12,
+        "end": 1.36
+      },
+      {
+        "text": "before",
+        "start": 1.406,
+        "end": 1.68
+      },
+      {
+        "text": "coming",
+        "start": 1.726,
+        "end": 2
+      },
+      {
+        "text": "in.",
+        "start": 2.107,
+        "end": 2.48
+      }
+    ]
+  },
+  "Everyone gets a cheer at the finish line.": {
+    "file": "ade47160e4a05087e41e6122.mp3",
+    "words": [
+      {
+        "text": "Everyone",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "gets",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "a",
+        "start": 0.6,
+        "end": 0.64
+      },
+      {
+        "text": "cheer",
+        "start": 0.693,
+        "end": 0.96
+      },
+      {
+        "text": "at",
+        "start": 0.987,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "finish",
+        "start": 1.177,
+        "end": 1.52
+      },
+      {
+        "text": "line.",
+        "start": 1.584,
+        "end": 2
       }
     ]
   },
@@ -5824,6 +6879,61 @@
       }
     ]
   },
+  "First she must plant two long rows of climbing vines.": {
+    "file": "2af9838170e16523889798bf.mp3",
+    "words": [
+      {
+        "text": "First",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "she",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "must",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "plant",
+        "start": 0.947,
+        "end": 1.28
+      },
+      {
+        "text": "two",
+        "start": 1.36,
+        "end": 1.6
+      },
+      {
+        "text": "long",
+        "start": 1.664,
+        "end": 1.92
+      },
+      {
+        "text": "rows",
+        "start": 2,
+        "end": 2.32
+      },
+      {
+        "text": "of",
+        "start": 2.373,
+        "end": 2.48
+      },
+      {
+        "text": "climbing",
+        "start": 2.524,
+        "end": 2.88
+      },
+      {
+        "text": "vines.",
+        "start": 2.973,
+        "end": 3.52
+      }
+    ]
+  },
   "Five!": {
     "file": "2593326cabecd5237e258630.mp3",
     "words": [
@@ -6484,6 +7594,56 @@
       }
     ]
   },
+  "For a moment he looks like he is flying.": {
+    "file": "b08301f63f7a6d395493cd84.mp3",
+    "words": [
+      {
+        "text": "For",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "a",
+        "start": 0.16,
+        "end": 0.24
+      },
+      {
+        "text": "moment",
+        "start": 0.297,
+        "end": 0.64
+      },
+      {
+        "text": "he",
+        "start": 0.72,
+        "end": 0.88
+      },
+      {
+        "text": "looks",
+        "start": 0.907,
+        "end": 1.04
+      },
+      {
+        "text": "like",
+        "start": 1.088,
+        "end": 1.28
+      },
+      {
+        "text": "he",
+        "start": 1.307,
+        "end": 1.36
+      },
+      {
+        "text": "is",
+        "start": 1.413,
+        "end": 1.52
+      },
+      {
+        "text": "flying.",
+        "start": 1.611,
+        "end": 2.24
+      }
+    ]
+  },
   "Four!": {
     "file": "c47d1845c2a3f93badb7131e.mp3",
     "words": [
@@ -6781,6 +7941,56 @@
         "text": "more.",
         "start": 2.544,
         "end": 2.96
+      }
+    ]
+  },
+  "Gray clouds mean it is time to stay inside.": {
+    "file": "d92b1dbe2f8e3ad27ec770c8.mp3",
+    "words": [
+      {
+        "text": "Gray",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "clouds",
+        "start": 0.24,
+        "end": 0.72
+      },
+      {
+        "text": "mean",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "it",
+        "start": 0.987,
+        "end": 1.04
+      },
+      {
+        "text": "is",
+        "start": 1.093,
+        "end": 1.2
+      },
+      {
+        "text": "time",
+        "start": 1.248,
+        "end": 1.44
+      },
+      {
+        "text": "to",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "stay",
+        "start": 1.632,
+        "end": 1.76
+      },
+      {
+        "text": "inside.",
+        "start": 1.851,
+        "end": 2.48
       }
     ]
   },
@@ -8129,6 +9339,356 @@
       }
     ]
   },
+  "He has never been late for breakfast, not even once.": {
+    "file": "19239ca75644e87cb20d6c85.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "never",
+        "start": 0.28,
+        "end": 0.48
+      },
+      {
+        "text": "been",
+        "start": 0.512,
+        "end": 0.64
+      },
+      {
+        "text": "late",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "for",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "breakfast,",
+        "start": 1.096,
+        "end": 1.92
+      },
+      {
+        "text": "not",
+        "start": 1.96,
+        "end": 2.08
+      },
+      {
+        "text": "even",
+        "start": 2.128,
+        "end": 2.32
+      },
+      {
+        "text": "once.",
+        "start": 2.432,
+        "end": 3.04
+      }
+    ]
+  },
+  "He has watched the world from that window ever since.": {
+    "file": "b5632ff787055420c989cda3.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "has",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "watched",
+        "start": 0.29,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.66,
+        "end": 0.72
+      },
+      {
+        "text": "world",
+        "start": 0.787,
+        "end": 1.12
+      },
+      {
+        "text": "from",
+        "start": 1.152,
+        "end": 1.28
+      },
+      {
+        "text": "that",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "window",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "ever",
+        "start": 1.968,
+        "end": 2.16
+      },
+      {
+        "text": "since.",
+        "start": 2.253,
+        "end": 2.88
+      }
+    ]
+  },
+  "He hopped from one to the next without touching the grass.": {
+    "file": "daa012f5d8c63bb4d7f22020.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "hopped",
+        "start": 0.2,
+        "end": 0.48
+      },
+      {
+        "text": "from",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "one",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "text": "to",
+        "start": 0.933,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "next",
+        "start": 1.2,
+        "end": 1.52
+      },
+      {
+        "text": "without",
+        "start": 1.56,
+        "end": 1.84
+      },
+      {
+        "text": "touching",
+        "start": 1.876,
+        "end": 2.16
+      },
+      {
+        "text": "the",
+        "start": 2.18,
+        "end": 2.24
+      },
+      {
+        "text": "grass.",
+        "start": 2.333,
+        "end": 2.88
+      }
+    ]
+  },
+  "He lands on the far side with a proud little flick of his tail.": {
+    "file": "27e60e2c66d056b59e39ddfd.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "lands",
+        "start": 0.147,
+        "end": 0.48
+      },
+      {
+        "text": "on",
+        "start": 0.533,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.66,
+        "end": 0.72
+      },
+      {
+        "text": "far",
+        "start": 0.8,
+        "end": 1.04
+      },
+      {
+        "text": "side",
+        "start": 1.12,
+        "end": 1.44
+      },
+      {
+        "text": "with",
+        "start": 1.472,
+        "end": 1.6
+      },
+      {
+        "text": "a",
+        "start": 1.74,
+        "end": 1.88
+      },
+      {
+        "text": "proud",
+        "start": 1.927,
+        "end": 2.16
+      },
+      {
+        "text": "little",
+        "start": 2.194,
+        "end": 2.4
+      },
+      {
+        "text": "flick",
+        "start": 2.453,
+        "end": 2.72
+      },
+      {
+        "text": "of",
+        "start": 2.747,
+        "end": 2.8
+      },
+      {
+        "text": "his",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "tail.",
+        "start": 3.04,
+        "end": 3.44
+      }
+    ]
+  },
+  "He lies on each cold stone until it is toasty.": {
+    "file": "05b683b85424779f4d5f2bec.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "lies",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "on",
+        "start": 0.507,
+        "end": 0.56
+      },
+      {
+        "text": "each",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "cold",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "text": "stone",
+        "start": 1.347,
+        "end": 1.68
+      },
+      {
+        "text": "until",
+        "start": 1.733,
+        "end": 2
+      },
+      {
+        "text": "it",
+        "start": 2.027,
+        "end": 2.08
+      },
+      {
+        "text": "is",
+        "start": 2.133,
+        "end": 2.24
+      },
+      {
+        "text": "toasty.",
+        "start": 2.293,
+        "end": 2.88
+      }
+    ]
+  },
+  "He never tells anyone, but his friends always know.": {
+    "file": "a9160a363b6350d0604e7a02.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "never",
+        "start": 0.12,
+        "end": 0.32
+      },
+      {
+        "text": "tells",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "anyone,",
+        "start": 0.709,
+        "end": 1.44
+      },
+      {
+        "text": "but",
+        "start": 1.46,
+        "end": 1.52
+      },
+      {
+        "text": "his",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "friends",
+        "start": 1.74,
+        "end": 2.16
+      },
+      {
+        "text": "always",
+        "start": 2.229,
+        "end": 2.64
+      },
+      {
+        "text": "know.",
+        "start": 2.72,
+        "end": 3.2
+      }
+    ]
+  },
   "He saves fallen berries in a tiny bowl instead of letting them roll away.": {
     "file": "f403f7e59d7e4054766ae560.mp3",
     "words": [
@@ -8201,6 +9761,266 @@
         "text": "away.",
         "start": 3.472,
         "end": 4
+      }
+    ]
+  },
+  "He scoots over without making a sound.": {
+    "file": "0c06012a5eec95f968fa48a7.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "scoots",
+        "start": 0.2,
+        "end": 0.56
+      },
+      {
+        "text": "over",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "without",
+        "start": 0.84,
+        "end": 1.12
+      },
+      {
+        "text": "making",
+        "start": 1.166,
+        "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.52
+      },
+      {
+        "text": "sound.",
+        "start": 1.6,
+        "end": 2.08
+      }
+    ]
+  },
+  "He sits up tall on his chair at the table.": {
+    "file": "eaa26f816e8bb7721205c394.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sits",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "up",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "tall",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "on",
+        "start": 0.933,
+        "end": 1.04
+      },
+      {
+        "text": "his",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "chair",
+        "start": 1.253,
+        "end": 1.52
+      },
+      {
+        "text": "at",
+        "start": 1.547,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "table.",
+        "start": 1.747,
+        "end": 2.24
+      }
+    ]
+  },
+  "He sniffs the breeze and looks up at the clouds.": {
+    "file": "b37b7d5776eae3fc0bf98e98.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "sniffs",
+        "start": 0.213,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.58,
+        "end": 0.64
+      },
+      {
+        "text": "breeze",
+        "start": 0.709,
+        "end": 1.12
+      },
+      {
+        "text": "and",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "looks",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "up",
+        "start": 1.627,
+        "end": 1.68
+      },
+      {
+        "text": "at",
+        "start": 1.707,
+        "end": 1.76
+      },
+      {
+        "text": "the",
+        "start": 1.78,
+        "end": 1.84
+      },
+      {
+        "text": "clouds.",
+        "start": 1.931,
+        "end": 2.64
+      }
+    ]
+  },
+  "He wiggles, he crouches, and then he springs.": {
+    "file": "01d9d56e3adfcd50cfe345cf.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "wiggles,",
+        "start": 0.2,
+        "end": 0.72
+      },
+      {
+        "text": "he",
+        "start": 0.827,
+        "end": 1.04
+      },
+      {
+        "text": "crouches,",
+        "start": 1.12,
+        "end": 1.84
+      },
+      {
+        "text": "and",
+        "start": 1.92,
+        "end": 2.16
+      },
+      {
+        "text": "then",
+        "start": 2.192,
+        "end": 2.32
+      },
+      {
+        "text": "he",
+        "start": 2.347,
+        "end": 2.4
+      },
+      {
+        "text": "springs.",
+        "start": 2.5,
+        "end": 3.36
+      }
+    ]
+  },
+  "He will need a big blanket and a tall stack of pancakes.": {
+    "file": "bc0c7e344dedb89deeaf5b77.mp3",
+    "words": [
+      {
+        "text": "He",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "will",
+        "start": 0.112,
+        "end": 0.24
+      },
+      {
+        "text": "need",
+        "start": 0.288,
+        "end": 0.48
+      },
+      {
+        "text": "a",
+        "start": 0.56,
+        "end": 0.64
+      },
+      {
+        "text": "big",
+        "start": 0.7,
+        "end": 0.88
+      },
+      {
+        "text": "blanket",
+        "start": 0.95,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.52,
+        "end": 1.76
+      },
+      {
+        "text": "a",
+        "start": 1.8,
+        "end": 1.84
+      },
+      {
+        "text": "tall",
+        "start": 1.92,
+        "end": 2.24
+      },
+      {
+        "text": "stack",
+        "start": 2.293,
+        "end": 2.56
+      },
+      {
+        "text": "of",
+        "start": 2.587,
+        "end": 2.64
+      },
+      {
+        "text": "pancakes.",
+        "start": 2.729,
+        "end": 3.52
       }
     ]
   },
@@ -8514,6 +10334,61 @@
       }
     ]
   },
+  "In the morning the light lands on the kitchen floor.": {
+    "file": "1d79a5a31921aa7ec96c0082.mp3",
+    "words": [
+      {
+        "text": "In",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "morning",
+        "start": 0.21,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "light",
+        "start": 0.773,
+        "end": 1.04
+      },
+      {
+        "text": "lands",
+        "start": 1.107,
+        "end": 1.44
+      },
+      {
+        "text": "on",
+        "start": 1.467,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "kitchen",
+        "start": 1.65,
+        "end": 2
+      },
+      {
+        "text": "floor.",
+        "start": 2.08,
+        "end": 2.56
+      }
+    ]
+  },
   "Inside Poppy’s cardboard castle, Poppy finds 9 cardboard towers. Is that odd or even?": {
     "file": "cb03e0ba8916ef6254f47921.mp3",
     "words": [
@@ -8769,6 +10644,61 @@
       }
     ]
   },
+  "Inside it will be cool, green, and full of whispers.": {
+    "file": "5ee6cd7e00fa9c9988216f8d.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "it",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "will",
+        "start": 0.576,
+        "end": 0.64
+      },
+      {
+        "text": "be",
+        "start": 0.72,
+        "end": 0.88
+      },
+      {
+        "text": "cool,",
+        "start": 0.96,
+        "end": 1.68
+      },
+      {
+        "text": "green,",
+        "start": 1.773,
+        "end": 2.48
+      },
+      {
+        "text": "and",
+        "start": 2.54,
+        "end": 2.72
+      },
+      {
+        "text": "full",
+        "start": 2.768,
+        "end": 2.96
+      },
+      {
+        "text": "of",
+        "start": 3.013,
+        "end": 3.12
+      },
+      {
+        "text": "whispers.",
+        "start": 3.191,
+        "end": 3.84
+      }
+    ]
+  },
   "Inside the blanket fort, Biscuit counts 12 pillows. 3 are put away. How many stay?": {
     "file": "0fc09936c8e51a68ce1cca6b.mp3",
     "words": [
@@ -9001,6 +10931,276 @@
         "text": "next?",
         "start": 7.36,
         "end": 7.84
+      }
+    ]
+  },
+  "Inside there will be room for books and for friends.": {
+    "file": "15872d2cf9fffe64cf686373.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.64
+      },
+      {
+        "text": "there",
+        "start": 0.693,
+        "end": 0.96
+      },
+      {
+        "text": "will",
+        "start": 0.992,
+        "end": 1.12
+      },
+      {
+        "text": "be",
+        "start": 1.147,
+        "end": 1.2
+      },
+      {
+        "text": "room",
+        "start": 1.264,
+        "end": 1.52
+      },
+      {
+        "text": "for",
+        "start": 1.58,
+        "end": 1.76
+      },
+      {
+        "text": "books",
+        "start": 1.867,
+        "end": 2.4
+      },
+      {
+        "text": "and",
+        "start": 2.5,
+        "end": 2.8
+      },
+      {
+        "text": "for",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "friends.",
+        "start": 3.04,
+        "end": 3.68
+      }
+    ]
+  },
+  "It curves around the roses and under the apple tree.": {
+    "file": "3d1731f3e4b8e84090f1f381.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "curves",
+        "start": 0.217,
+        "end": 0.56
+      },
+      {
+        "text": "around",
+        "start": 0.606,
+        "end": 0.88
+      },
+      {
+        "text": "the",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "roses",
+        "start": 1.12,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "under",
+        "start": 1.733,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.04,
+        "end": 2.16
+      },
+      {
+        "text": "apple",
+        "start": 2.2,
+        "end": 2.4
+      },
+      {
+        "text": "tree.",
+        "start": 2.48,
+        "end": 2.88
+      }
+    ]
+  },
+  "It is dark inside, but Poppy is not afraid.": {
+    "file": "6e21985dd09412f7b5f76b83.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "dark",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "inside,",
+        "start": 0.629,
+        "end": 1.12
+      },
+      {
+        "text": "but",
+        "start": 1.14,
+        "end": 1.2
+      },
+      {
+        "text": "Poppy",
+        "start": 1.28,
+        "end": 1.6
+      },
+      {
+        "text": "is",
+        "start": 1.653,
+        "end": 1.76
+      },
+      {
+        "text": "not",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "afraid.",
+        "start": 1.989,
+        "end": 2.56
+      }
+    ]
+  },
+  "It needs tall pillow walls and a blanket roof.": {
+    "file": "d384d7c3c0bb577db24386ad.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "needs",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "tall",
+        "start": 0.48,
+        "end": 0.8
+      },
+      {
+        "text": "pillow",
+        "start": 0.857,
+        "end": 1.2
+      },
+      {
+        "text": "walls",
+        "start": 1.293,
+        "end": 1.76
+      },
+      {
+        "text": "and",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "a",
+        "start": 2,
+        "end": 2.08
+      },
+      {
+        "text": "blanket",
+        "start": 2.13,
+        "end": 2.48
+      },
+      {
+        "text": "roof.",
+        "start": 2.56,
+        "end": 2.96
+      }
+    ]
+  },
+  "It will be the brightest night the garden has ever seen.": {
+    "file": "a80edd4a0615e03fd31f5201.mp3",
+    "words": [
+      {
+        "text": "It",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "will",
+        "start": 0.096,
+        "end": 0.16
+      },
+      {
+        "text": "be",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "brightest",
+        "start": 0.528,
+        "end": 0.96
+      },
+      {
+        "text": "night",
+        "start": 1.013,
+        "end": 1.28
+      },
+      {
+        "text": "the",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "garden",
+        "start": 1.497,
+        "end": 1.84
+      },
+      {
+        "text": "has",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "ever",
+        "start": 2.08,
+        "end": 2.4
+      },
+      {
+        "text": "seen.",
+        "start": 2.512,
+        "end": 3.12
       }
     ]
   },
@@ -11099,6 +13299,111 @@
       }
     ]
   },
+  "Mittens followed it around the table and under the bed.": {
+    "file": "29a57f858de20856d3b50703.mp3",
+    "words": [
+      {
+        "text": "Mittens",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "followed",
+        "start": 0.436,
+        "end": 0.72
+      },
+      {
+        "text": "it",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "around",
+        "start": 0.914,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.14,
+        "end": 1.2
+      },
+      {
+        "text": "table",
+        "start": 1.28,
+        "end": 1.68
+      },
+      {
+        "text": "and",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "under",
+        "start": 1.88,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "bed.",
+        "start": 2.26,
+        "end": 2.64
+      }
+    ]
+  },
+  "Mittens pats each one back to the button tin.": {
+    "file": "13d90e5a14503587963ec33b.mp3",
+    "words": [
+      {
+        "text": "Mittens",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "pats",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "each",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "one",
+        "start": 1.02,
+        "end": 1.2
+      },
+      {
+        "text": "back",
+        "start": 1.248,
+        "end": 1.44
+      },
+      {
+        "text": "to",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "button",
+        "start": 1.726,
+        "end": 2
+      },
+      {
+        "text": "tin.",
+        "start": 2.08,
+        "end": 2.48
+      }
+    ]
+  },
   "Mittens was found asleep in a basket of warm, hand-knit mittens.": {
     "file": "927b07930e820cf63e256308.mp3",
     "words": [
@@ -11159,6 +13464,61 @@
       }
     ]
   },
+  "Moon always knows who is there before they say hello.": {
+    "file": "c3741655a7386a7f7514dc1c.mp3",
+    "words": [
+      {
+        "text": "Moon",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "always",
+        "start": 0.297,
+        "end": 0.64
+      },
+      {
+        "text": "knows",
+        "start": 0.707,
+        "end": 1.04
+      },
+      {
+        "text": "who",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "is",
+        "start": 1.173,
+        "end": 1.28
+      },
+      {
+        "text": "there",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "before",
+        "start": 1.646,
+        "end": 1.92
+      },
+      {
+        "text": "they",
+        "start": 1.952,
+        "end": 2.08
+      },
+      {
+        "text": "say",
+        "start": 2.14,
+        "end": 2.32
+      },
+      {
+        "text": "hello.",
+        "start": 2.4,
+        "end": 2.96
+      }
+    ]
+  },
   "Moon guides sleepy fireflies back to their favorite leaves.": {
     "file": "f65dac4b41931532c8dddc9f.mp3",
     "words": [
@@ -11206,6 +13566,61 @@
         "text": "leaves.",
         "start": 3.04,
         "end": 3.6
+      }
+    ]
+  },
+  "Moon pads softly along the top of the garden wall.": {
+    "file": "99f10e45b686257058c4b591.mp3",
+    "words": [
+      {
+        "text": "Moon",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "pads",
+        "start": 0.256,
+        "end": 0.64
+      },
+      {
+        "text": "softly",
+        "start": 0.709,
+        "end": 1.12
+      },
+      {
+        "text": "along",
+        "start": 1.173,
+        "end": 1.44
+      },
+      {
+        "text": "the",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "top",
+        "start": 1.66,
+        "end": 1.84
+      },
+      {
+        "text": "of",
+        "start": 1.893,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "garden",
+        "start": 2.126,
+        "end": 2.4
+      },
+      {
+        "text": "wall.",
+        "start": 2.48,
+        "end": 2.96
       }
     ]
   },
@@ -11274,6 +13689,51 @@
       }
     ]
   },
+  "Moon walks ahead and shows them the way.": {
+    "file": "530ee94b9a5c772e49ae5ef5.mp3",
+    "words": [
+      {
+        "text": "Moon",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "walks",
+        "start": 0.293,
+        "end": 0.56
+      },
+      {
+        "text": "ahead",
+        "start": 0.613,
+        "end": 0.88
+      },
+      {
+        "text": "and",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "shows",
+        "start": 1.093,
+        "end": 1.36
+      },
+      {
+        "text": "them",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "way.",
+        "start": 1.7,
+        "end": 2.08
+      }
+    ]
+  },
   "Nice thinking!": {
     "file": "3cc5a29cbcf0c361d4d581d6.mp3",
     "words": [
@@ -11296,6 +13756,241 @@
         "text": "Nine!",
         "start": 0,
         "end": 0.88
+      }
+    ]
+  },
+  "No one has to walk home in the dark.": {
+    "file": "23acd040b3a0ef556f5a59a5.mp3",
+    "words": [
+      {
+        "text": "No",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "one",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "has",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "to",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "walk",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "home",
+        "start": 1.008,
+        "end": 1.2
+      },
+      {
+        "text": "in",
+        "start": 1.227,
+        "end": 1.28
+      },
+      {
+        "text": "the",
+        "start": 1.3,
+        "end": 1.36
+      },
+      {
+        "text": "dark.",
+        "start": 1.456,
+        "end": 1.92
+      }
+    ]
+  },
+  "No one is ever left without a crown.": {
+    "file": "198c35433631e9ec5443f9f8.mp3",
+    "words": [
+      {
+        "text": "No",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "one",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "is",
+        "start": 0.4,
+        "end": 0.56
+      },
+      {
+        "text": "ever",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "left",
+        "start": 0.864,
+        "end": 1.12
+      },
+      {
+        "text": "without",
+        "start": 1.15,
+        "end": 1.36
+      },
+      {
+        "text": "a",
+        "start": 1.4,
+        "end": 1.44
+      },
+      {
+        "text": "crown.",
+        "start": 1.52,
+        "end": 2.08
+      }
+    ]
+  },
+  "Nobody gets lost when Clover leads the way.": {
+    "file": "1de07a08278a46cd0518dfbf.mp3",
+    "words": [
+      {
+        "text": "Nobody",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "gets",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "lost",
+        "start": 0.64,
+        "end": 0.96
+      },
+      {
+        "text": "when",
+        "start": 0.992,
+        "end": 1.12
+      },
+      {
+        "text": "Clover",
+        "start": 1.189,
+        "end": 1.6
+      },
+      {
+        "text": "leads",
+        "start": 1.653,
+        "end": 1.92
+      },
+      {
+        "text": "the",
+        "start": 1.94,
+        "end": 2
+      },
+      {
+        "text": "way.",
+        "start": 2.1,
+        "end": 2.48
+      }
+    ]
+  },
+  "Now she checks on every seedling each morning.": {
+    "file": "35d130588f032623587b8692.mp3",
+    "words": [
+      {
+        "text": "Now",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "she",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "checks",
+        "start": 0.446,
+        "end": 0.72
+      },
+      {
+        "text": "on",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "every",
+        "start": 0.947,
+        "end": 1.28
+      },
+      {
+        "text": "seedling",
+        "start": 1.344,
+        "end": 1.84
+      },
+      {
+        "text": "each",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "morning.",
+        "start": 2.13,
+        "end": 2.64
+      }
+    ]
+  },
+  "Now she naps beside the sewing basket every afternoon.": {
+    "file": "d0cd48ab98c5d4517ca36c7a.mp3",
+    "words": [
+      {
+        "text": "Now",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "she",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "naps",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "beside",
+        "start": 0.777,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "sewing",
+        "start": 1.314,
+        "end": 1.52
+      },
+      {
+        "text": "basket",
+        "start": 1.589,
+        "end": 2
+      },
+      {
+        "text": "every",
+        "start": 2.04,
+        "end": 2.24
+      },
+      {
+        "text": "afternoon.",
+        "start": 2.304,
+        "end": 3.04
       }
     ]
   },
@@ -12049,6 +14744,311 @@
       }
     ]
   },
+  "Once she knows the pattern, she can guess what comes next.": {
+    "file": "439b8f4c15f88809fe68692b.mp3",
+    "words": [
+      {
+        "text": "Once",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "she",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "knows",
+        "start": 0.44,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.68,
+        "end": 0.8
+      },
+      {
+        "text": "pattern,",
+        "start": 0.85,
+        "end": 1.6
+      },
+      {
+        "text": "she",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "can",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "guess",
+        "start": 1.973,
+        "end": 2.24
+      },
+      {
+        "text": "what",
+        "start": 2.256,
+        "end": 2.32
+      },
+      {
+        "text": "comes",
+        "start": 2.387,
+        "end": 2.72
+      },
+      {
+        "text": "next.",
+        "start": 2.816,
+        "end": 3.28
+      }
+    ]
+  },
+  "One cat guards the gate, and one cat rings the bell.": {
+    "file": "1732358def37638e84a3c44a.mp3",
+    "words": [
+      {
+        "text": "One",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "cat",
+        "start": 0.24,
+        "end": 0.48
+      },
+      {
+        "text": "guards",
+        "start": 0.526,
+        "end": 0.8
+      },
+      {
+        "text": "the",
+        "start": 0.82,
+        "end": 0.88
+      },
+      {
+        "text": "gate,",
+        "start": 0.96,
+        "end": 1.6
+      },
+      {
+        "text": "and",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "one",
+        "start": 1.82,
+        "end": 2
+      },
+      {
+        "text": "cat",
+        "start": 2.08,
+        "end": 2.32
+      },
+      {
+        "text": "rings",
+        "start": 2.373,
+        "end": 2.64
+      },
+      {
+        "text": "the",
+        "start": 2.66,
+        "end": 2.72
+      },
+      {
+        "text": "bell.",
+        "start": 2.8,
+        "end": 3.2
+      }
+    ]
+  },
+  "One day every cat will have a warm place to nap.": {
+    "file": "d77a1c6ac6bf21d201e4cb3e.mp3",
+    "words": [
+      {
+        "text": "One",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "day",
+        "start": 0.24,
+        "end": 0.48
+      },
+      {
+        "text": "every",
+        "start": 0.547,
+        "end": 0.88
+      },
+      {
+        "text": "cat",
+        "start": 0.96,
+        "end": 1.2
+      },
+      {
+        "text": "will",
+        "start": 1.232,
+        "end": 1.36
+      },
+      {
+        "text": "have",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "a",
+        "start": 1.6,
+        "end": 1.68
+      },
+      {
+        "text": "warm",
+        "start": 1.744,
+        "end": 2
+      },
+      {
+        "text": "place",
+        "start": 2.067,
+        "end": 2.4
+      },
+      {
+        "text": "to",
+        "start": 2.427,
+        "end": 2.48
+      },
+      {
+        "text": "nap.",
+        "start": 2.6,
+        "end": 3.04
+      }
+    ]
+  },
+  "One lands on a flower, and one lands on her ear.": {
+    "file": "7c943b6db0c1bb73959727d1.mp3",
+    "words": [
+      {
+        "text": "One",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "lands",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "on",
+        "start": 0.533,
+        "end": 0.64
+      },
+      {
+        "text": "a",
+        "start": 0.68,
+        "end": 0.72
+      },
+      {
+        "text": "flower,",
+        "start": 0.777,
+        "end": 1.2
+      },
+      {
+        "text": "and",
+        "start": 1.32,
+        "end": 1.68
+      },
+      {
+        "text": "one",
+        "start": 1.74,
+        "end": 1.92
+      },
+      {
+        "text": "lands",
+        "start": 1.987,
+        "end": 2.32
+      },
+      {
+        "text": "on",
+        "start": 2.373,
+        "end": 2.48
+      },
+      {
+        "text": "her",
+        "start": 2.52,
+        "end": 2.64
+      },
+      {
+        "text": "ear.",
+        "start": 2.74,
+        "end": 3.12
+      }
+    ]
+  },
+  "One slipper hides under the sofa, and one sits by the door.": {
+    "file": "900c5481d91fbee2a5fda3c5.mp3",
+    "words": [
+      {
+        "text": "One",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "slipper",
+        "start": 0.224,
+        "end": 0.56
+      },
+      {
+        "text": "hides",
+        "start": 0.627,
+        "end": 0.96
+      },
+      {
+        "text": "under",
+        "start": 1,
+        "end": 1.2
+      },
+      {
+        "text": "the",
+        "start": 1.22,
+        "end": 1.28
+      },
+      {
+        "text": "sofa,",
+        "start": 1.376,
+        "end": 1.84
+      },
+      {
+        "text": "and",
+        "start": 1.94,
+        "end": 2.24
+      },
+      {
+        "text": "one",
+        "start": 2.3,
+        "end": 2.48
+      },
+      {
+        "text": "sits",
+        "start": 2.544,
+        "end": 2.8
+      },
+      {
+        "text": "by",
+        "start": 2.853,
+        "end": 2.96
+      },
+      {
+        "text": "the",
+        "start": 2.98,
+        "end": 3.04
+      },
+      {
+        "text": "door.",
+        "start": 3.12,
+        "end": 3.52
+      }
+    ]
+  },
   "One!": {
     "file": "81c9672391377f4c8767e1e4.mp3",
     "words": [
@@ -12056,6 +15056,41 @@
         "text": "One!",
         "start": 0,
         "end": 0.48
+      }
+    ]
+  },
+  "Out popped a sleepy cream-colored face.": {
+    "file": "bbbc25adafbf51936a188119.mp3",
+    "words": [
+      {
+        "text": "Out",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "popped",
+        "start": 0.217,
+        "end": 0.56
+      },
+      {
+        "text": "a",
+        "start": 0.64,
+        "end": 0.72
+      },
+      {
+        "text": "sleepy",
+        "start": 0.789,
+        "end": 1.2
+      },
+      {
+        "text": "cream-colored",
+        "start": 1.293,
+        "end": 2.08
+      },
+      {
+        "text": "face.",
+        "start": 2.176,
+        "end": 2.72
       }
     ]
   },
@@ -12181,6 +15216,111 @@
         "text": "chilly.",
         "start": 3.349,
         "end": 3.84
+      }
+    ]
+  },
+  "Pepper marks each sunny spot so no cat misses one.": {
+    "file": "d5d0a68a00e26f8910892814.mp3",
+    "words": [
+      {
+        "text": "Pepper",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "marks",
+        "start": 0.293,
+        "end": 0.56
+      },
+      {
+        "text": "each",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "sunny",
+        "start": 0.933,
+        "end": 1.2
+      },
+      {
+        "text": "spot",
+        "start": 1.296,
+        "end": 1.68
+      },
+      {
+        "text": "so",
+        "start": 1.76,
+        "end": 1.92
+      },
+      {
+        "text": "no",
+        "start": 2,
+        "end": 2.16
+      },
+      {
+        "text": "cat",
+        "start": 2.24,
+        "end": 2.48
+      },
+      {
+        "text": "misses",
+        "start": 2.537,
+        "end": 2.88
+      },
+      {
+        "text": "one.",
+        "start": 2.96,
+        "end": 3.28
+      }
+    ]
+  },
+  "Pepper stretched out long in a patch of light.": {
+    "file": "b6b09fe388ffe62c6a4d97b8.mp3",
+    "words": [
+      {
+        "text": "Pepper",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "stretched",
+        "start": 0.36,
+        "end": 0.72
+      },
+      {
+        "text": "out",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "text": "long",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "text": "in",
+        "start": 1.307,
+        "end": 1.36
+      },
+      {
+        "text": "a",
+        "start": 1.4,
+        "end": 1.44
+      },
+      {
+        "text": "patch",
+        "start": 1.48,
+        "end": 1.68
+      },
+      {
+        "text": "of",
+        "start": 1.733,
+        "end": 1.84
+      },
+      {
+        "text": "light.",
+        "start": 1.907,
+        "end": 2.32
       }
     ]
   },
@@ -15114,6 +18254,96 @@
       }
     ]
   },
+  "Pop goes the toaster, and in trots Waffles.": {
+    "file": "ba4e5d7ab11ba63c7d9d7943.mp3",
+    "words": [
+      {
+        "text": "Pop",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "goes",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "toaster,",
+        "start": 0.79,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.48,
+        "end": 1.84
+      },
+      {
+        "text": "in",
+        "start": 1.92,
+        "end": 2.08
+      },
+      {
+        "text": "trots",
+        "start": 2.14,
+        "end": 2.56
+      },
+      {
+        "text": "Waffles.",
+        "start": 2.6,
+        "end": 3.36
+      }
+    ]
+  },
+  "Poppy folds each crown from shiny gold paper.": {
+    "file": "97225e637b8f194ca52c5083.mp3",
+    "words": [
+      {
+        "text": "Poppy",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "folds",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "each",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "crown",
+        "start": 0.947,
+        "end": 1.28
+      },
+      {
+        "text": "from",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "shiny",
+        "start": 1.6,
+        "end": 2
+      },
+      {
+        "text": "gold",
+        "start": 2.064,
+        "end": 2.32
+      },
+      {
+        "text": "paper.",
+        "start": 2.4,
+        "end": 2.88
+      }
+    ]
+  },
   "Poppy moved into an empty delivery box and declared it her royal castle.": {
     "file": "78567a823cbb02c80445594f.mp3",
     "words": [
@@ -16429,6 +19659,156 @@
       }
     ]
   },
+  "Purple ones go in the front, and yellow ones go in the back.": {
+    "file": "ca02977aff5d2aafe7c37d31.mp3",
+    "words": [
+      {
+        "text": "Purple",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "ones",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "go",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "in",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "the",
+        "start": 0.9,
+        "end": 0.96
+      },
+      {
+        "text": "front,",
+        "start": 1.027,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.84
+      },
+      {
+        "text": "yellow",
+        "start": 1.886,
+        "end": 2.16
+      },
+      {
+        "text": "ones",
+        "start": 2.224,
+        "end": 2.48
+      },
+      {
+        "text": "go",
+        "start": 2.533,
+        "end": 2.64
+      },
+      {
+        "text": "in",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "text": "the",
+        "start": 2.82,
+        "end": 2.88
+      },
+      {
+        "text": "back.",
+        "start": 2.96,
+        "end": 3.36
+      }
+    ]
+  },
+  "Push, push, push go her little paws.": {
+    "file": "ca62d4343cf03f56160c0bb8.mp3",
+    "words": [
+      {
+        "text": "Push,",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "push,",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "push",
+        "start": 0.784,
+        "end": 1.04
+      },
+      {
+        "text": "go",
+        "start": 1.093,
+        "end": 1.2
+      },
+      {
+        "text": "her",
+        "start": 1.24,
+        "end": 1.36
+      },
+      {
+        "text": "little",
+        "start": 1.383,
+        "end": 1.52
+      },
+      {
+        "text": "paws.",
+        "start": 1.6,
+        "end": 2.32
+      }
+    ]
+  },
+  "Quick little steps mean Sprout is coming.": {
+    "file": "a0ad57312685ab8dee640719.mp3",
+    "words": [
+      {
+        "text": "Quick",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "little",
+        "start": 0.183,
+        "end": 0.32
+      },
+      {
+        "text": "steps",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "mean",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "Sprout",
+        "start": 1.02,
+        "end": 1.36
+      },
+      {
+        "text": "is",
+        "start": 1.413,
+        "end": 1.52
+      },
+      {
+        "text": "coming.",
+        "start": 1.577,
+        "end": 2
+      }
+    ]
+  },
   "Say chair, door, bed. Chair starts like chin.": {
     "file": "4ef042590b7f2594197d854d.mp3",
     "words": [
@@ -16769,6 +20149,186 @@
       }
     ]
   },
+  "She counts her steps so she never gets lost.": {
+    "file": "66297e66c3a8f07d27ff15da.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "counts",
+        "start": 0.206,
+        "end": 0.48
+      },
+      {
+        "text": "her",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "text": "steps",
+        "start": 0.707,
+        "end": 1.04
+      },
+      {
+        "text": "so",
+        "start": 1.12,
+        "end": 1.28
+      },
+      {
+        "text": "she",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "never",
+        "start": 1.56,
+        "end": 1.76
+      },
+      {
+        "text": "gets",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "lost.",
+        "start": 2.176,
+        "end": 2.72
+      }
+    ]
+  },
+  "She curled up so small that only her white paws showed.": {
+    "file": "905f5c2b4d2cfc69790df99d.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "curled",
+        "start": 0.194,
+        "end": 0.4
+      },
+      {
+        "text": "up",
+        "start": 0.48,
+        "end": 0.64
+      },
+      {
+        "text": "so",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "small",
+        "start": 0.893,
+        "end": 1.36
+      },
+      {
+        "text": "that",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "only",
+        "start": 1.584,
+        "end": 1.84
+      },
+      {
+        "text": "her",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "white",
+        "start": 2.053,
+        "end": 2.32
+      },
+      {
+        "text": "paws",
+        "start": 2.44,
+        "end": 2.96
+      },
+      {
+        "text": "showed.",
+        "start": 3.017,
+        "end": 3.44
+      }
+    ]
+  },
+  "She cut a window with her teeth and a door with her claws.": {
+    "file": "c89a5e7f5c93fb94344e48fe.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "cut",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "a",
+        "start": 0.36,
+        "end": 0.4
+      },
+      {
+        "text": "window",
+        "start": 0.446,
+        "end": 0.72
+      },
+      {
+        "text": "with",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "her",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "teeth",
+        "start": 1.12,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "a",
+        "start": 1.72,
+        "end": 1.76
+      },
+      {
+        "text": "door",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "with",
+        "start": 2.112,
+        "end": 2.24
+      },
+      {
+        "text": "her",
+        "start": 2.26,
+        "end": 2.32
+      },
+      {
+        "text": "claws.",
+        "start": 2.427,
+        "end": 3.04
+      }
+    ]
+  },
   "She does not mind muddy paws when a thirsty plant needs help.": {
     "file": "c0a35c1f2b9657c80cff612e.mp3",
     "words": [
@@ -16834,6 +20394,66 @@
       }
     ]
   },
+  "She draws the plan on the side of a big box.": {
+    "file": "80c2cefcb95a29546de0150a.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "draws",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "plan",
+        "start": 0.64,
+        "end": 0.96
+      },
+      {
+        "text": "on",
+        "start": 0.987,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "side",
+        "start": 1.184,
+        "end": 1.44
+      },
+      {
+        "text": "of",
+        "start": 1.467,
+        "end": 1.52
+      },
+      {
+        "text": "a",
+        "start": 1.56,
+        "end": 1.6
+      },
+      {
+        "text": "big",
+        "start": 1.66,
+        "end": 1.84
+      },
+      {
+        "text": "box.",
+        "start": 1.98,
+        "end": 2.48
+      }
+    ]
+  },
   "She gathers every loose button so nobody steps on one.": {
     "file": "4afc7674d651687c9804e606.mp3",
     "words": [
@@ -16886,6 +20506,56 @@
         "text": "one.",
         "start": 2.86,
         "end": 3.2
+      }
+    ]
+  },
+  "She gives each one a name she can remember.": {
+    "file": "876dcbe1b88b353d7d7496b2.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "gives",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "each",
+        "start": 0.448,
+        "end": 0.64
+      },
+      {
+        "text": "one",
+        "start": 0.7,
+        "end": 0.88
+      },
+      {
+        "text": "a",
+        "start": 0.92,
+        "end": 0.96
+      },
+      {
+        "text": "name",
+        "start": 1.024,
+        "end": 1.28
+      },
+      {
+        "text": "she",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "can",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "remember.",
+        "start": 1.662,
+        "end": 2.24
       }
     ]
   },
@@ -16956,6 +20626,61 @@
         "text": "crown.",
         "start": 3.6,
         "end": 4.16
+      }
+    ]
+  },
+  "She has saved bright buttons to sew on the corners.": {
+    "file": "f707c9d9e9e09016cff8c6ed.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "has",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "saved",
+        "start": 0.453,
+        "end": 0.72
+      },
+      {
+        "text": "bright",
+        "start": 0.766,
+        "end": 1.04
+      },
+      {
+        "text": "buttons",
+        "start": 1.09,
+        "end": 1.44
+      },
+      {
+        "text": "to",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "sew",
+        "start": 1.66,
+        "end": 1.84
+      },
+      {
+        "text": "on",
+        "start": 1.867,
+        "end": 1.92
+      },
+      {
+        "text": "the",
+        "start": 1.94,
+        "end": 2
+      },
+      {
+        "text": "corners.",
+        "start": 2.08,
+        "end": 2.72
       }
     ]
   },
@@ -17234,6 +20959,151 @@
       }
     ]
   },
+  "She likes to watch the stars come out, one by one.": {
+    "file": "bee450cfc3d0d70ab0b4b4f7.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "likes",
+        "start": 0.2,
+        "end": 0.4
+      },
+      {
+        "text": "to",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "watch",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "the",
+        "start": 0.84,
+        "end": 0.96
+      },
+      {
+        "text": "stars",
+        "start": 1.027,
+        "end": 1.36
+      },
+      {
+        "text": "come",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "out,",
+        "start": 1.62,
+        "end": 2.08
+      },
+      {
+        "text": "one",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "by",
+        "start": 2.32,
+        "end": 2.48
+      },
+      {
+        "text": "one.",
+        "start": 2.58,
+        "end": 2.96
+      }
+    ]
+  },
+  "She lines them up in neat little rows.": {
+    "file": "9ec79b76f68d8b41713ebee4.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "lines",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "them",
+        "start": 0.448,
+        "end": 0.64
+      },
+      {
+        "text": "up",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "in",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "neat",
+        "start": 1.024,
+        "end": 1.28
+      },
+      {
+        "text": "little",
+        "start": 1.314,
+        "end": 1.52
+      },
+      {
+        "text": "rows.",
+        "start": 1.632,
+        "end": 2.24
+      }
+    ]
+  },
+  "She picks flowers that butterflies love best.": {
+    "file": "50de220ad593bc4cbd614b46.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "picks",
+        "start": 0.2,
+        "end": 0.4
+      },
+      {
+        "text": "flowers",
+        "start": 0.47,
+        "end": 0.96
+      },
+      {
+        "text": "that",
+        "start": 0.992,
+        "end": 1.12
+      },
+      {
+        "text": "butterflies",
+        "start": 1.173,
+        "end": 1.76
+      },
+      {
+        "text": "love",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "best.",
+        "start": 2.096,
+        "end": 2.56
+      }
+    ]
+  },
   "She plans to grow a shady green tunnel for cats to explore.": {
     "file": "3f08c7e1242f6153c76369af.mp3",
     "words": [
@@ -17364,6 +21234,101 @@
       }
     ]
   },
+  "She sat very still and watched them glow.": {
+    "file": "f5f1c87da178c23d64ef1b5a.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "sat",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "very",
+        "start": 0.464,
+        "end": 0.72
+      },
+      {
+        "text": "still",
+        "start": 0.8,
+        "end": 1.2
+      },
+      {
+        "text": "and",
+        "start": 1.26,
+        "end": 1.44
+      },
+      {
+        "text": "watched",
+        "start": 1.5,
+        "end": 1.92
+      },
+      {
+        "text": "them",
+        "start": 1.968,
+        "end": 2.16
+      },
+      {
+        "text": "glow.",
+        "start": 2.256,
+        "end": 2.72
+      }
+    ]
+  },
+  "She says hello to every bee, bird, and beetle.": {
+    "file": "f83d2235098980ef337daf56.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "says",
+        "start": 0.128,
+        "end": 0.32
+      },
+      {
+        "text": "hello",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "to",
+        "start": 0.72,
+        "end": 0.88
+      },
+      {
+        "text": "every",
+        "start": 0.933,
+        "end": 1.2
+      },
+      {
+        "text": "bee,",
+        "start": 1.32,
+        "end": 1.76
+      },
+      {
+        "text": "bird,",
+        "start": 1.888,
+        "end": 2.48
+      },
+      {
+        "text": "and",
+        "start": 2.52,
+        "end": 2.64
+      },
+      {
+        "text": "beetle.",
+        "start": 2.697,
+        "end": 3.2
+      }
+    ]
+  },
   "She sits very still so tired butterflies can rest beside her.": {
     "file": "be75caacb482d31148eec44c.mp3",
     "words": [
@@ -17421,6 +21386,201 @@
         "text": "her.",
         "start": 3.74,
         "end": 4
+      }
+    ]
+  },
+  "She taps her paw along with each flash.": {
+    "file": "6233a4406ff25af768a20ce2.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "taps",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "her",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "text": "paw",
+        "start": 0.72,
+        "end": 0.96
+      },
+      {
+        "text": "along",
+        "start": 1.013,
+        "end": 1.28
+      },
+      {
+        "text": "with",
+        "start": 1.312,
+        "end": 1.44
+      },
+      {
+        "text": "each",
+        "start": 1.504,
+        "end": 1.76
+      },
+      {
+        "text": "flash.",
+        "start": 1.853,
+        "end": 2.48
+      }
+    ]
+  },
+  "She tests each pillow with a slow, careful flop.": {
+    "file": "c44de3115194b71e033037cb.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "tests",
+        "start": 0.16,
+        "end": 0.56
+      },
+      {
+        "text": "each",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "pillow",
+        "start": 0.857,
+        "end": 1.2
+      },
+      {
+        "text": "with",
+        "start": 1.232,
+        "end": 1.36
+      },
+      {
+        "text": "a",
+        "start": 1.44,
+        "end": 1.52
+      },
+      {
+        "text": "slow,",
+        "start": 1.6,
+        "end": 2.08
+      },
+      {
+        "text": "careful",
+        "start": 2.15,
+        "end": 2.64
+      },
+      {
+        "text": "flop.",
+        "start": 2.752,
+        "end": 3.28
+      }
+    ]
+  },
+  "She tips the watering can with her nose.": {
+    "file": "ed770c1d3b5c6b05b6bfef2c.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "tips",
+        "start": 0.224,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "watering",
+        "start": 0.604,
+        "end": 0.96
+      },
+      {
+        "text": "can",
+        "start": 1.04,
+        "end": 1.28
+      },
+      {
+        "text": "with",
+        "start": 1.296,
+        "end": 1.36
+      },
+      {
+        "text": "her",
+        "start": 1.4,
+        "end": 1.52
+      },
+      {
+        "text": "nose.",
+        "start": 1.616,
+        "end": 2.16
+      }
+    ]
+  },
+  "She walks slowly so that small friends can keep up.": {
+    "file": "fe87eb14615a6a4b7c087cdd.mp3",
+    "words": [
+      {
+        "text": "She",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "walks",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "slowly",
+        "start": 0.469,
+        "end": 0.88
+      },
+      {
+        "text": "so",
+        "start": 0.96,
+        "end": 1.12
+      },
+      {
+        "text": "that",
+        "start": 1.152,
+        "end": 1.28
+      },
+      {
+        "text": "small",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "friends",
+        "start": 1.65,
+        "end": 2
+      },
+      {
+        "text": "can",
+        "start": 2.04,
+        "end": 2.16
+      },
+      {
+        "text": "keep",
+        "start": 2.224,
+        "end": 2.48
+      },
+      {
+        "text": "up.",
+        "start": 2.56,
+        "end": 2.8
       }
     ]
   },
@@ -17929,6 +22089,206 @@
       }
     ]
   },
+  "Some stars are bright, and some are very small.": {
+    "file": "eb1d22e5afc764b2c954383c.mp3",
+    "words": [
+      {
+        "text": "Some",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "stars",
+        "start": 0.227,
+        "end": 0.56
+      },
+      {
+        "text": "are",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "bright,",
+        "start": 0.789,
+        "end": 1.6
+      },
+      {
+        "text": "and",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "some",
+        "start": 1.84,
+        "end": 2.16
+      },
+      {
+        "text": "are",
+        "start": 2.2,
+        "end": 2.32
+      },
+      {
+        "text": "very",
+        "start": 2.384,
+        "end": 2.64
+      },
+      {
+        "text": "small.",
+        "start": 2.733,
+        "end": 3.28
+      }
+    ]
+  },
+  "Soon each firefly is tucked in for the night.": {
+    "file": "964acc1c08ae4e990926f9d5.mp3",
+    "words": [
+      {
+        "text": "Soon",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "firefly",
+        "start": 0.72,
+        "end": 1.28
+      },
+      {
+        "text": "is",
+        "start": 1.36,
+        "end": 1.52
+      },
+      {
+        "text": "tucked",
+        "start": 1.554,
+        "end": 1.76
+      },
+      {
+        "text": "in",
+        "start": 1.813,
+        "end": 1.92
+      },
+      {
+        "text": "for",
+        "start": 1.96,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "night.",
+        "start": 2.227,
+        "end": 2.72
+      }
+    ]
+  },
+  "Splash goes the water, and squish goes the mud.": {
+    "file": "49d902ae312f63b095b6c104.mp3",
+    "words": [
+      {
+        "text": "Splash",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "goes",
+        "start": 0.544,
+        "end": 0.8
+      },
+      {
+        "text": "the",
+        "start": 0.82,
+        "end": 0.88
+      },
+      {
+        "text": "water,",
+        "start": 0.947,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "squish",
+        "start": 1.82,
+        "end": 2.56
+      },
+      {
+        "text": "goes",
+        "start": 2.656,
+        "end": 3.04
+      },
+      {
+        "text": "the",
+        "start": 3.06,
+        "end": 3.12
+      },
+      {
+        "text": "mud.",
+        "start": 3.24,
+        "end": 3.68
+      }
+    ]
+  },
+  "Sprout kept it warm until the sun came out.": {
+    "file": "8b8d7f62410ffd5fdd1a8eac.mp3",
+    "words": [
+      {
+        "text": "Sprout",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "kept",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "it",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "warm",
+        "start": 0.784,
+        "end": 1.04
+      },
+      {
+        "text": "until",
+        "start": 1.08,
+        "end": 1.28
+      },
+      {
+        "text": "the",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "sun",
+        "start": 1.52,
+        "end": 1.76
+      },
+      {
+        "text": "came",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "out.",
+        "start": 2.08,
+        "end": 2.4
+      }
+    ]
+  },
   "Sprout remembers exactly which song helps each flower grow.": {
     "file": "2b7448f18fda928060e5aea7.mp3",
     "words": [
@@ -17976,6 +22336,61 @@
         "text": "grow.",
         "start": 2.976,
         "end": 3.44
+      }
+    ]
+  },
+  "Sprout sings to each one until its leaves reach up.": {
+    "file": "468f1961cde4530a713ffed7.mp3",
+    "words": [
+      {
+        "text": "Sprout",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "sings",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "each",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "one",
+        "start": 1.18,
+        "end": 1.36
+      },
+      {
+        "text": "until",
+        "start": 1.413,
+        "end": 1.68
+      },
+      {
+        "text": "its",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "leaves",
+        "start": 1.909,
+        "end": 2.32
+      },
+      {
+        "text": "reach",
+        "start": 2.36,
+        "end": 2.56
+      },
+      {
+        "text": "up.",
+        "start": 2.667,
+        "end": 2.96
       }
     ]
   },
@@ -18509,6 +22924,386 @@
       }
     ]
   },
+  "The blanket wiggled, then it purred.": {
+    "file": "3437dca1147bee0b8d9f3adb.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "blanket",
+        "start": 0.13,
+        "end": 0.48
+      },
+      {
+        "text": "wiggled,",
+        "start": 0.52,
+        "end": 1.28
+      },
+      {
+        "text": "then",
+        "start": 1.312,
+        "end": 1.44
+      },
+      {
+        "text": "it",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "purred.",
+        "start": 1.64,
+        "end": 2.24
+      }
+    ]
+  },
+  "The daisies like a soft and sleepy hum.": {
+    "file": "f4c5f3901fc416bf36d72f8b.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "daisies",
+        "start": 0.16,
+        "end": 0.72
+      },
+      {
+        "text": "like",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "a",
+        "start": 0.92,
+        "end": 0.96
+      },
+      {
+        "text": "soft",
+        "start": 1.072,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "sleepy",
+        "start": 1.749,
+        "end": 2.16
+      },
+      {
+        "text": "hum.",
+        "start": 2.26,
+        "end": 2.72
+      }
+    ]
+  },
+  "The fireflies gather close around her tail.": {
+    "file": "a716912da0eef4ecff6e3859.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "fireflies",
+        "start": 0.16,
+        "end": 0.88
+      },
+      {
+        "text": "gather",
+        "start": 0.926,
+        "end": 1.2
+      },
+      {
+        "text": "close",
+        "start": 1.253,
+        "end": 1.52
+      },
+      {
+        "text": "around",
+        "start": 1.554,
+        "end": 1.76
+      },
+      {
+        "text": "her",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "tail.",
+        "start": 2.016,
+        "end": 2.48
+      }
+    ]
+  },
+  "The fireflies will spin in circles and swoop in lines.": {
+    "file": "bdc9d48a8d90f55e2e05a01d.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "fireflies",
+        "start": 0.144,
+        "end": 0.8
+      },
+      {
+        "text": "will",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "spin",
+        "start": 1.024,
+        "end": 1.28
+      },
+      {
+        "text": "in",
+        "start": 1.307,
+        "end": 1.36
+      },
+      {
+        "text": "circles",
+        "start": 1.44,
+        "end": 2
+      },
+      {
+        "text": "and",
+        "start": 2.04,
+        "end": 2.16
+      },
+      {
+        "text": "swoop",
+        "start": 2.24,
+        "end": 2.64
+      },
+      {
+        "text": "in",
+        "start": 2.667,
+        "end": 2.72
+      },
+      {
+        "text": "lines.",
+        "start": 2.827,
+        "end": 3.52
+      }
+    ]
+  },
+  "The garden feels friendlier with Clover in it.": {
+    "file": "1a5f4cec05fe6516c78182f2.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "garden",
+        "start": 0.137,
+        "end": 0.48
+      },
+      {
+        "text": "feels",
+        "start": 0.533,
+        "end": 0.8
+      },
+      {
+        "text": "friendlier",
+        "start": 0.846,
+        "end": 1.36
+      },
+      {
+        "text": "with",
+        "start": 1.392,
+        "end": 1.52
+      },
+      {
+        "text": "Clover",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "in",
+        "start": 1.973,
+        "end": 2.08
+      },
+      {
+        "text": "it.",
+        "start": 2.16,
+        "end": 2.48
+      }
+    ]
+  },
+  "The glass was warm and the rain tapped outside.": {
+    "file": "86b466fae622faa5de3ea385.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "glass",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "was",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "warm",
+        "start": 0.72,
+        "end": 1.04
+      },
+      {
+        "text": "and",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "the",
+        "start": 1.22,
+        "end": 1.28
+      },
+      {
+        "text": "rain",
+        "start": 1.36,
+        "end": 1.68
+      },
+      {
+        "text": "tapped",
+        "start": 1.737,
+        "end": 2.08
+      },
+      {
+        "text": "outside.",
+        "start": 2.16,
+        "end": 2.8
+      }
+    ]
+  },
+  "The hallway was long, and the vacuum was loud.": {
+    "file": "7116b077e835d9aef6690179.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "hallway",
+        "start": 0.13,
+        "end": 0.48
+      },
+      {
+        "text": "was",
+        "start": 0.54,
+        "end": 0.72
+      },
+      {
+        "text": "long,",
+        "start": 0.816,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "vacuum",
+        "start": 1.749,
+        "end": 2.16
+      },
+      {
+        "text": "was",
+        "start": 2.22,
+        "end": 2.4
+      },
+      {
+        "text": "loud.",
+        "start": 2.496,
+        "end": 3.04
+      }
+    ]
+  },
+  "The house is dark and still before the sun comes up.": {
+    "file": "b8155c6d09dbb10968a27ad4.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "house",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "is",
+        "start": 0.453,
+        "end": 0.56
+      },
+      {
+        "text": "dark",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "and",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "still",
+        "start": 1.12,
+        "end": 1.52
+      },
+      {
+        "text": "before",
+        "start": 1.554,
+        "end": 1.76
+      },
+      {
+        "text": "the",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "sun",
+        "start": 2,
+        "end": 2.24
+      },
+      {
+        "text": "comes",
+        "start": 2.28,
+        "end": 2.48
+      },
+      {
+        "text": "up.",
+        "start": 2.56,
+        "end": 2.8
+      }
+    ]
+  },
   "The ice melts into a puddle.": {
     "file": "7007a919a968f60b49bff21b.mp3",
     "words": [
@@ -18544,6 +23339,176 @@
       }
     ]
   },
+  "The kitten was so happy to see the toy again.": {
+    "file": "f146ef349c1c613fd4dc1b3f.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "kitten",
+        "start": 0.126,
+        "end": 0.4
+      },
+      {
+        "text": "was",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "so",
+        "start": 0.72,
+        "end": 0.88
+      },
+      {
+        "text": "happy",
+        "start": 0.947,
+        "end": 1.28
+      },
+      {
+        "text": "to",
+        "start": 1.333,
+        "end": 1.44
+      },
+      {
+        "text": "see",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "toy",
+        "start": 1.76,
+        "end": 2
+      },
+      {
+        "text": "again.",
+        "start": 2.067,
+        "end": 2.56
+      }
+    ]
+  },
+  "The last stone was the warmest, so that is where he stayed.": {
+    "file": "ecfe6a993b16444e50cf885d.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "last",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "stone",
+        "start": 0.547,
+        "end": 0.88
+      },
+      {
+        "text": "was",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "warmest,",
+        "start": 1.264,
+        "end": 2.08
+      },
+      {
+        "text": "so",
+        "start": 2.133,
+        "end": 2.24
+      },
+      {
+        "text": "that",
+        "start": 2.288,
+        "end": 2.48
+      },
+      {
+        "text": "is",
+        "start": 2.533,
+        "end": 2.64
+      },
+      {
+        "text": "where",
+        "start": 2.667,
+        "end": 2.8
+      },
+      {
+        "text": "he",
+        "start": 2.853,
+        "end": 2.96
+      },
+      {
+        "text": "stayed.",
+        "start": 3.029,
+        "end": 3.52
+      }
+    ]
+  },
+  "The leaves were green and cool with morning dew.": {
+    "file": "4dc3bf901b6c370d71b8f438.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "leaves",
+        "start": 0.137,
+        "end": 0.48
+      },
+      {
+        "text": "were",
+        "start": 0.512,
+        "end": 0.64
+      },
+      {
+        "text": "green",
+        "start": 0.72,
+        "end": 1.12
+      },
+      {
+        "text": "and",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "cool",
+        "start": 1.376,
+        "end": 1.76
+      },
+      {
+        "text": "with",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "morning",
+        "start": 2.05,
+        "end": 2.4
+      },
+      {
+        "text": "dew.",
+        "start": 2.5,
+        "end": 2.88
+      }
+    ]
+  },
   "The little bird grows up.": {
     "file": "512c89760723550c3bea8d6f.mp3",
     "words": [
@@ -18571,6 +23536,876 @@
         "text": "up.",
         "start": 0.987,
         "end": 1.28
+      }
+    ]
+  },
+  "The mittens were soft and smelled like wool.": {
+    "file": "0ff81e8fe2a14602ab244dcd.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "mittens",
+        "start": 0.112,
+        "end": 0.4
+      },
+      {
+        "text": "were",
+        "start": 0.432,
+        "end": 0.56
+      },
+      {
+        "text": "soft",
+        "start": 0.656,
+        "end": 1.04
+      },
+      {
+        "text": "and",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "smelled",
+        "start": 1.25,
+        "end": 1.6
+      },
+      {
+        "text": "like",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "wool.",
+        "start": 1.92,
+        "end": 2.32
+      }
+    ]
+  },
+  "The more boxes that arrive, the bigger the village grows.": {
+    "file": "3869d5b4348c2b7dba40f053.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "more",
+        "start": 0.128,
+        "end": 0.32
+      },
+      {
+        "text": "boxes",
+        "start": 0.413,
+        "end": 0.88
+      },
+      {
+        "text": "that",
+        "start": 0.912,
+        "end": 1.04
+      },
+      {
+        "text": "arrive,",
+        "start": 1.109,
+        "end": 1.76
+      },
+      {
+        "text": "the",
+        "start": 1.78,
+        "end": 1.84
+      },
+      {
+        "text": "bigger",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "the",
+        "start": 2.26,
+        "end": 2.32
+      },
+      {
+        "text": "village",
+        "start": 2.38,
+        "end": 2.8
+      },
+      {
+        "text": "grows.",
+        "start": 2.893,
+        "end": 3.52
+      }
+    ]
+  },
+  "The plants stand up tall after a good long drink.": {
+    "file": "7d25f06de30368cb90465429.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "plants",
+        "start": 0.137,
+        "end": 0.48
+      },
+      {
+        "text": "stand",
+        "start": 0.533,
+        "end": 0.8
+      },
+      {
+        "text": "up",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "tall",
+        "start": 1.056,
+        "end": 1.44
+      },
+      {
+        "text": "after",
+        "start": 1.493,
+        "end": 1.76
+      },
+      {
+        "text": "a",
+        "start": 1.8,
+        "end": 1.84
+      },
+      {
+        "text": "good",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "long",
+        "start": 2.128,
+        "end": 2.32
+      },
+      {
+        "text": "drink.",
+        "start": 2.4,
+        "end": 2.88
+      }
+    ]
+  },
+  "The sky turns purple, and the air grows cool.": {
+    "file": "3b2227792a5c05fa528921b5.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sky",
+        "start": 0.16,
+        "end": 0.4
+      },
+      {
+        "text": "turns",
+        "start": 0.453,
+        "end": 0.72
+      },
+      {
+        "text": "purple,",
+        "start": 0.8,
+        "end": 1.6
+      },
+      {
+        "text": "and",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "the",
+        "start": 1.7,
+        "end": 1.76
+      },
+      {
+        "text": "air",
+        "start": 1.86,
+        "end": 2.16
+      },
+      {
+        "text": "grows",
+        "start": 2.213,
+        "end": 2.48
+      },
+      {
+        "text": "cool.",
+        "start": 2.576,
+        "end": 3.12
+      }
+    ]
+  },
+  "The sunflowers like a loud and happy tune.": {
+    "file": "8fed25af8c8399367b6a3ca8.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "sunflowers",
+        "start": 0.16,
+        "end": 0.88
+      },
+      {
+        "text": "like",
+        "start": 0.912,
+        "end": 1.04
+      },
+      {
+        "text": "a",
+        "start": 1.08,
+        "end": 1.12
+      },
+      {
+        "text": "loud",
+        "start": 1.2,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "happy",
+        "start": 1.733,
+        "end": 2
+      },
+      {
+        "text": "tune.",
+        "start": 2.112,
+        "end": 2.64
+      }
+    ]
+  },
+  "The wind blew hard, but the little plant stayed safe.": {
+    "file": "37c885beb6f7d62d2cd6a699.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "wind",
+        "start": 0.144,
+        "end": 0.4
+      },
+      {
+        "text": "blew",
+        "start": 0.464,
+        "end": 0.72
+      },
+      {
+        "text": "hard,",
+        "start": 0.8,
+        "end": 1.52
+      },
+      {
+        "text": "but",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "little",
+        "start": 1.726,
+        "end": 2
+      },
+      {
+        "text": "plant",
+        "start": 2.053,
+        "end": 2.32
+      },
+      {
+        "text": "stayed",
+        "start": 2.377,
+        "end": 2.72
+      },
+      {
+        "text": "safe.",
+        "start": 2.8,
+        "end": 3.28
+      }
+    ]
+  },
+  "The yarn rolled away and left a long red trail.": {
+    "file": "2cb478cde1bffd155bb11514.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "yarn",
+        "start": 0.16,
+        "end": 0.48
+      },
+      {
+        "text": "rolled",
+        "start": 0.514,
+        "end": 0.72
+      },
+      {
+        "text": "away",
+        "start": 0.8,
+        "end": 1.12
+      },
+      {
+        "text": "and",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "left",
+        "start": 1.312,
+        "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.52
+      },
+      {
+        "text": "long",
+        "start": 1.616,
+        "end": 2
+      },
+      {
+        "text": "red",
+        "start": 2.08,
+        "end": 2.32
+      },
+      {
+        "text": "trail.",
+        "start": 2.427,
+        "end": 3.04
+      }
+    ]
+  },
+  "Their lights danced all around her silver fur.": {
+    "file": "4f6c7dadaa8b1d1d3f6c37d4.mp3",
+    "words": [
+      {
+        "text": "Their",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "lights",
+        "start": 0.149,
+        "end": 0.56
+      },
+      {
+        "text": "danced",
+        "start": 0.629,
+        "end": 1.04
+      },
+      {
+        "text": "all",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "around",
+        "start": 1.257,
+        "end": 1.6
+      },
+      {
+        "text": "her",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "silver",
+        "start": 1.817,
+        "end": 2.16
+      },
+      {
+        "text": "fur.",
+        "start": 2.28,
+        "end": 2.8
+      }
+    ]
+  },
+  "Their tiny lights blink slower when they are tired.": {
+    "file": "93f590eb783c5c026ed017f2.mp3",
+    "words": [
+      {
+        "text": "Their",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "tiny",
+        "start": 0.24,
+        "end": 0.56
+      },
+      {
+        "text": "lights",
+        "start": 0.629,
+        "end": 1.04
+      },
+      {
+        "text": "blink",
+        "start": 1.107,
+        "end": 1.44
+      },
+      {
+        "text": "slower",
+        "start": 1.509,
+        "end": 1.92
+      },
+      {
+        "text": "when",
+        "start": 1.952,
+        "end": 2.08
+      },
+      {
+        "text": "they",
+        "start": 2.112,
+        "end": 2.24
+      },
+      {
+        "text": "are",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "text": "tired.",
+        "start": 2.48,
+        "end": 2.96
+      }
+    ]
+  },
+  "Then he drops it into the bowl with a soft plop.": {
+    "file": "e4c1010ae2745fc5e65e2e43.mp3",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "he",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "drops",
+        "start": 0.293,
+        "end": 0.56
+      },
+      {
+        "text": "it",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "into",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "the",
+        "start": 0.9,
+        "end": 0.96
+      },
+      {
+        "text": "bowl",
+        "start": 1.024,
+        "end": 1.28
+      },
+      {
+        "text": "with",
+        "start": 1.312,
+        "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.52
+      },
+      {
+        "text": "soft",
+        "start": 1.616,
+        "end": 2
+      },
+      {
+        "text": "plop.",
+        "start": 2.08,
+        "end": 2.64
+      }
+    ]
+  },
+  "Then he moves along to warm the next one.": {
+    "file": "74fc21d31edcccc430204099.mp3",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "he",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "moves",
+        "start": 0.293,
+        "end": 0.56
+      },
+      {
+        "text": "along",
+        "start": 0.627,
+        "end": 0.96
+      },
+      {
+        "text": "to",
+        "start": 1.013,
+        "end": 1.12
+      },
+      {
+        "text": "warm",
+        "start": 1.168,
+        "end": 1.36
+      },
+      {
+        "text": "the",
+        "start": 1.4,
+        "end": 1.52
+      },
+      {
+        "text": "next",
+        "start": 1.584,
+        "end": 1.84
+      },
+      {
+        "text": "one.",
+        "start": 1.9,
+        "end": 2.24
+      }
+    ]
+  },
+  "Then he pretends he wanted the cool floor all along.": {
+    "file": "1473a552202c3712bfc4a3d6.mp3",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "he",
+        "start": 0.187,
+        "end": 0.24
+      },
+      {
+        "text": "pretends",
+        "start": 0.288,
+        "end": 0.72
+      },
+      {
+        "text": "he",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "wanted",
+        "start": 0.914,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "cool",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "floor",
+        "start": 1.613,
+        "end": 2.08
+      },
+      {
+        "text": "all",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "along.",
+        "start": 2.333,
+        "end": 2.96
+      }
+    ]
+  },
+  "There are so many stars that it may take all summer.": {
+    "file": "ca9a3a3cedab669423411fc1.mp3",
+    "words": [
+      {
+        "text": "There",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "are",
+        "start": 0.14,
+        "end": 0.32
+      },
+      {
+        "text": "so",
+        "start": 0.4,
+        "end": 0.56
+      },
+      {
+        "text": "many",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "stars",
+        "start": 0.907,
+        "end": 1.44
+      },
+      {
+        "text": "that",
+        "start": 1.456,
+        "end": 1.52
+      },
+      {
+        "text": "it",
+        "start": 1.547,
+        "end": 1.6
+      },
+      {
+        "text": "may",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "take",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "all",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "summer.",
+        "start": 2.309,
+        "end": 2.8
+      }
+    ]
+  },
+  "There will be low hops for kittens and long leaps for big cats.": {
+    "file": "f7ff30928e746c3bd558dcca.mp3",
+    "words": [
+      {
+        "text": "There",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "will",
+        "start": 0.112,
+        "end": 0.24
+      },
+      {
+        "text": "be",
+        "start": 0.267,
+        "end": 0.32
+      },
+      {
+        "text": "low",
+        "start": 0.42,
+        "end": 0.72
+      },
+      {
+        "text": "hops",
+        "start": 0.8,
+        "end": 1.12
+      },
+      {
+        "text": "for",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "kittens",
+        "start": 1.35,
+        "end": 1.84
+      },
+      {
+        "text": "and",
+        "start": 1.94,
+        "end": 2.24
+      },
+      {
+        "text": "long",
+        "start": 2.336,
+        "end": 2.72
+      },
+      {
+        "text": "leaps",
+        "start": 2.787,
+        "end": 3.12
+      },
+      {
+        "text": "for",
+        "start": 3.16,
+        "end": 3.28
+      },
+      {
+        "text": "big",
+        "start": 3.36,
+        "end": 3.6
+      },
+      {
+        "text": "cats.",
+        "start": 3.712,
+        "end": 4.24
+      }
+    ]
+  },
+  "There will be towers, bridges, and a tall front gate.": {
+    "file": "9c9ea3d862749d7ae8e8d01a.mp3",
+    "words": [
+      {
+        "text": "There",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "will",
+        "start": 0.176,
+        "end": 0.24
+      },
+      {
+        "text": "be",
+        "start": 0.293,
+        "end": 0.4
+      },
+      {
+        "text": "towers,",
+        "start": 0.503,
+        "end": 1.2
+      },
+      {
+        "text": "bridges,",
+        "start": 1.27,
+        "end": 2
+      },
+      {
+        "text": "and",
+        "start": 2.04,
+        "end": 2.16
+      },
+      {
+        "text": "a",
+        "start": 2.2,
+        "end": 2.24
+      },
+      {
+        "text": "tall",
+        "start": 2.32,
+        "end": 2.64
+      },
+      {
+        "text": "front",
+        "start": 2.707,
+        "end": 3.04
+      },
+      {
+        "text": "gate.",
+        "start": 3.104,
+        "end": 3.52
+      }
+    ]
+  },
+  "They will grow up and over until they meet at the top.": {
+    "file": "5670026f0d78a5e9a6139c98.mp3",
+    "words": [
+      {
+        "text": "They",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "will",
+        "start": 0.112,
+        "end": 0.24
+      },
+      {
+        "text": "grow",
+        "start": 0.288,
+        "end": 0.48
+      },
+      {
+        "text": "up",
+        "start": 0.587,
+        "end": 0.8
+      },
+      {
+        "text": "and",
+        "start": 0.84,
+        "end": 0.96
+      },
+      {
+        "text": "over",
+        "start": 1.056,
+        "end": 1.44
+      },
+      {
+        "text": "until",
+        "start": 1.493,
+        "end": 1.76
+      },
+      {
+        "text": "they",
+        "start": 1.792,
+        "end": 1.92
+      },
+      {
+        "text": "meet",
+        "start": 1.968,
+        "end": 2.16
+      },
+      {
+        "text": "at",
+        "start": 2.213,
+        "end": 2.32
+      },
+      {
+        "text": "the",
+        "start": 2.34,
+        "end": 2.4
+      },
+      {
+        "text": "top.",
+        "start": 2.5,
+        "end": 2.88
       }
     ]
   },
@@ -19739,6 +25574,51 @@
       }
     ]
   },
+  "Together they shine like a small walking lantern.": {
+    "file": "1a39a44051c5fd05a1386894.mp3",
+    "words": [
+      {
+        "text": "Together",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "they",
+        "start": 0.432,
+        "end": 0.56
+      },
+      {
+        "text": "shine",
+        "start": 0.64,
+        "end": 1.04
+      },
+      {
+        "text": "like",
+        "start": 1.072,
+        "end": 1.2
+      },
+      {
+        "text": "a",
+        "start": 1.24,
+        "end": 1.28
+      },
+      {
+        "text": "small",
+        "start": 1.373,
+        "end": 1.84
+      },
+      {
+        "text": "walking",
+        "start": 1.9,
+        "end": 2.32
+      },
+      {
+        "text": "lantern.",
+        "start": 2.39,
+        "end": 3.04
+      }
+    ]
+  },
   "Twelve!": {
     "file": "40ca292a20fb6ba9431c9a5a.mp3",
     "words": [
@@ -20021,6 +25901,151 @@
         "text": "pops.",
         "start": 3.312,
         "end": 3.84
+      }
+    ]
+  },
+  "Waffles carries each slipper back to its bed.": {
+    "file": "23055a4a688043a8e934f5ea.mp3",
+    "words": [
+      {
+        "text": "Waffles",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "carries",
+        "start": 0.54,
+        "end": 0.96
+      },
+      {
+        "text": "each",
+        "start": 1.008,
+        "end": 1.2
+      },
+      {
+        "text": "slipper",
+        "start": 1.264,
+        "end": 1.6
+      },
+      {
+        "text": "back",
+        "start": 1.664,
+        "end": 1.92
+      },
+      {
+        "text": "to",
+        "start": 1.947,
+        "end": 2
+      },
+      {
+        "text": "its",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "bed.",
+        "start": 2.32,
+        "end": 2.72
+      }
+    ]
+  },
+  "Waffles is already counting how many plates to set out.": {
+    "file": "90d5e015766b3e0a0cf1237b.mp3",
+    "words": [
+      {
+        "text": "Waffles",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "is",
+        "start": 0.373,
+        "end": 0.48
+      },
+      {
+        "text": "already",
+        "start": 0.53,
+        "end": 0.88
+      },
+      {
+        "text": "counting",
+        "start": 0.924,
+        "end": 1.28
+      },
+      {
+        "text": "how",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "many",
+        "start": 1.472,
+        "end": 1.6
+      },
+      {
+        "text": "plates",
+        "start": 1.669,
+        "end": 2.08
+      },
+      {
+        "text": "to",
+        "start": 2.133,
+        "end": 2.24
+      },
+      {
+        "text": "set",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "text": "out.",
+        "start": 2.46,
+        "end": 2.8
+      }
+    ]
+  },
+  "Waffles traps each one gently under his paw.": {
+    "file": "fc80130d7797b22ca270995f.mp3",
+    "words": [
+      {
+        "text": "Waffles",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "traps",
+        "start": 0.467,
+        "end": 0.8
+      },
+      {
+        "text": "each",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "one",
+        "start": 1.12,
+        "end": 1.36
+      },
+      {
+        "text": "gently",
+        "start": 1.417,
+        "end": 1.76
+      },
+      {
+        "text": "under",
+        "start": 1.8,
+        "end": 2
+      },
+      {
+        "text": "his",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "paw.",
+        "start": 2.34,
+        "end": 2.8
       }
     ]
   },
@@ -21016,6 +27041,111 @@
         "text": "into?",
         "start": 1.36,
         "end": 1.84
+      }
+    ]
+  },
+  "When it is just right, she saves it for a friend.": {
+    "file": "8a7fd1a0ae8d5087986b9fca.mp3",
+    "words": [
+      {
+        "text": "When",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "it",
+        "start": 0.107,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "text": "just",
+        "start": 0.416,
+        "end": 0.8
+      },
+      {
+        "text": "right,",
+        "start": 0.853,
+        "end": 1.6
+      },
+      {
+        "text": "she",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "saves",
+        "start": 1.827,
+        "end": 2.16
+      },
+      {
+        "text": "it",
+        "start": 2.187,
+        "end": 2.24
+      },
+      {
+        "text": "for",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "text": "a",
+        "start": 2.44,
+        "end": 2.48
+      },
+      {
+        "text": "friend.",
+        "start": 2.549,
+        "end": 3.12
+      }
+    ]
+  },
+  "When they are rested, they flutter away again.": {
+    "file": "16fd0524bd8cb8c5553ae9f3.mp3",
+    "words": [
+      {
+        "text": "When",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "they",
+        "start": 0.192,
+        "end": 0.32
+      },
+      {
+        "text": "are",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "rested,",
+        "start": 0.469,
+        "end": 0.96
+      },
+      {
+        "text": "they",
+        "start": 0.992,
+        "end": 1.12
+      },
+      {
+        "text": "flutter",
+        "start": 1.17,
+        "end": 1.52
+      },
+      {
+        "text": "away",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "again.",
+        "start": 1.827,
+        "end": 2.32
       }
     ]
   },

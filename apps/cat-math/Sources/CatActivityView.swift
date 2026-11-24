@@ -99,15 +99,29 @@ struct CatActivityView: View {
         let left = roundLength - cat.solvedInRound(for: friendship)
         return HStack(spacing: 32) {
             VStack(spacing: 14) {
-                KidArt(cat.artName, fallback: cat.symbol, size: 240)
+                KidArt(cat.artName, fallback: cat.symbol, size: 210)
                 StoryDots(revealed: cat.revealedStory(for: friendship).count, total: cat.backstory.count, tint: cat.tint)
             }
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 14) {
                 Text(story.title).font(.kidDisplay).foregroundStyle(cat.tint)
-                Text(story.story)
-                    .font(.system(size: 30, weight: .semibold, design: .rounded))
-                    .lineSpacing(6)
-                    .minimumScaleFactor(0.7)
+                // The sentence being read aloud is marked, so a child can follow along.
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(story.sentences, id: \.self) { sentence in
+                            let reading = narration.state == .playing && narration.text == sentence
+                            Text(sentence)
+                                .font(.system(size: 25, weight: .semibold, design: .rounded))
+                                .lineSpacing(3)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 6)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(cat.tint.opacity(reading ? 0.22 : 0), in: RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
+                                .animation(.easeInOut(duration: 0.2), value: reading)
+                        }
+                    }
+                }
+                .scrollBounceBehavior(.basedOnSize)
                 Label(
                     friendship >= cat.lastPageFriendship
                         ? "Solve \(left) \(left == 1 ? "puzzle" : "puzzles") to earn a treat"
@@ -134,14 +148,15 @@ struct CatActivityView: View {
 
     /// Reads the page aloud, then says what to do next when a round is just beginning.
     private func tellStory() {
-        var lines = [cat.storyBeat(for: friendship).story]
+        var lines = cat.storyBeat(for: friendship).sentences
         if cat.solvedInRound(for: friendship) == 0 {
             lines.append((friendship >= cat.lastPageFriendship ? CatLine.roundBonus : CatLine.roundIntro).text)
         }
-        narration.playSequence(lines, gap: 0.5)
+        narration.playSequence(lines, gap: 0.45)
     }
 
     private func startPuzzles() {
+        narration.stop()
         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) { phase = .puzzle }
         narration.play(challenge.prompt, after: 0.4)
     }
