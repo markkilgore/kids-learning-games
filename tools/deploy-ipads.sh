@@ -7,8 +7,21 @@ usage() {
     echo "Usage: tools/deploy-ipads.sh [setup|both|kate|henry]" >&2
 }
 
+select_xcode() {
+    if xcrun --find devicectl >/dev/null 2>&1; then return; fi
+    if [ -z "${DEVELOPER_DIR:-}" ] && [ -x /Applications/Xcode.app/Contents/Developer/usr/bin/devicectl ]; then
+        export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+        if xcrun --find devicectl >/dev/null 2>&1; then return; fi
+    fi
+    echo 'Deployment requires full Xcode with Swift 6 support (Xcode 16 or later).' >&2
+    echo 'Install or update Xcode and open it once to finish setup.' >&2
+    echo 'For a custom Xcode location, export DEVELOPER_DIR=/path/to/Xcode.app/Contents/Developer and retry.' >&2
+    exit 1
+}
+
 case "${1:-both}" in
     setup)
+        select_xcode
         xcrun devicectl list devices
         echo 'Enter the hardware UDID of each iPad (from the list or Finder).'
         printf 'Kate’s iPad UDID: '; read -r kate
@@ -40,6 +53,7 @@ if [ ! -f "$config_dir/devices" ]; then
     exit 1
 fi
 { read -r team; read -r kate; read -r henry; } < "$config_dir/devices"
+select_xcode
 xcodegen generate --spec project.yml
 
 deploy() {
