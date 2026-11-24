@@ -68,13 +68,18 @@ recent available recap and lists earlier ones under Previous Weeks.
 
 ## Update the family iPads
 
-Once on the Mac, sign in to your Apple Account in Xcode and pair each unlocked
-iPad with the Mac. Accept Trust and enable Developer Mode when prompted.
-Run `tools/deploy-ipads.sh setup` and enter the hardware UDID for each child
-and the development team ID. The mapping lives in the ignored `.build` directory.
+Sign in to your Apple Account in Xcode and connect an unlocked iPad. Accept
+Trust and enable Developer Mode when prompted. Copy the iPad's hardware UDID
+from the Identifier field in Xcode's **Window → Devices and Simulators**.
+Run `tools/deploy-ipads.sh setup`, enter the UDID for the child whose iPad is
+connected, and press Enter at the other child's prompt. Enter your
+10-character Apple development team ID. You can run setup again to add the
+second iPad, leaving any saved values blank at the prompts to keep them.
+The mapping lives in the ignored `.build` directory.
 
-With the iPads reachable from Xcode, run `tools/deploy-ipads.sh`. It generates
-the project, signs each app with your team, and installs it over the previous
-copy on the assigned device. Use `tools/deploy-ipads.sh kate` or
+Install XcodeGen with `brew install xcodegen` if needed. With the iPads
+reachable from Xcode, run `tools/deploy-ipads.sh` to update every configured
+iPad. It generates the project, signs each app with your team, and installs it
+over the previous copy on the assigned device. Use `tools/deploy-ipads.sh kate` or
 `tools/deploy-ipads.sh henry` to update one device. A failed device can be
 retried individually. Free Personal Team profiles expire seven days from issue.

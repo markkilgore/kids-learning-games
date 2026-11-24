@@ -3,6 +3,7 @@ set -eu
 
 cd "$(dirname "$0")/.."
 config_dir=.build/ipad-deploy
+config_file=$config_dir/devices
 usage() {
     echo "Usage: tools/deploy-ipads.sh [setup|both|kate|henry]" >&2
 }
@@ -19,28 +20,49 @@ select_xcode() {
     exit 1
 }
 
-case "${1:-both}" in
+team=
+kate=
+henry=
+if [ -f "$config_file" ]; then
+    { read -r team; read -r kate; read -r henry; } < "$config_file"
+fi
+
+target=${1:-both}
+case "$target" in
     setup)
-        select_xcode
-        xcrun devicectl list devices
-        echo 'Enter the hardware UDID of each iPad (from the list or Finder).'
-        printf 'Kate’s iPad UDID: '; read -r kate
-        printf 'Henry’s iPad UDID: '; read -r henry
-        printf 'Apple development team ID (10 characters): '; read -r team
+        echo 'Copy the hardware UDID from Finder or Xcode’s Devices and Simulators window.'
+        echo 'Press Enter to keep a saved value or skip an iPad you don’t have.'
+        printf 'Kate’s iPad UDID: '; read -r entered_kate
+        printf 'Henry’s iPad UDID: '; read -r entered_henry
+        printf 'Apple development team ID (10 characters): '; read -r entered_team
+        kate=${entered_kate:-$kate}
+        henry=${entered_henry:-$henry}
+        team=${entered_team:-$team}
+        if [ -z "$kate$henry" ]; then
+            echo 'Enter at least one iPad hardware UDID.' >&2
+            exit 1
+        fi
         for udid in "$kate" "$henry"; do
+            [ -n "$udid" ] || continue
             if ! printf '%s\n' "$udid" | grep -Eq '^([[:xdigit:]]{8}-[[:xdigit:]]{16}|[[:xdigit:]]{40})$'; then
                 echo 'Expected an iPad hardware UDID.' >&2
                 exit 1
             fi
         done
-        if [ "$kate" = "$henry" ] || ! printf '%s\n' "$team" | grep -Eq '^[A-Z0-9]{10}$'; then
-            echo 'Use two distinct iPad UDIDs and a 10-character team ID.' >&2
+        if [ -n "$kate" ] && printf '%s\n' "$kate" | grep -Fxiq "$henry"; then
+            echo 'Use distinct UDIDs when setting up two iPads.' >&2
+            exit 1
+        fi
+        if ! printf '%s\n' "$team" | grep -Eq '^[A-Z0-9]{10}$'; then
+            echo 'Enter a 10-character Apple development team ID.' >&2
             exit 1
         fi
         mkdir -p "$config_dir"
-        printf '%s\n' "$team" "$kate" "$henry" > "$config_dir/devices.tmp"
-        mv "$config_dir/devices.tmp" "$config_dir/devices"
-        echo 'Saved locally. Run tools/deploy-ipads.sh to update both iPads.'
+        config_tmp=$(mktemp "$config_dir/devices.XXXXXX")
+        trap 'rm -f "$config_tmp"' EXIT
+        printf '%s\n' "$team" "$kate" "$henry" > "$config_tmp"
+        mv "$config_tmp" "$config_file"
+        echo 'Saved locally. Run tools/deploy-ipads.sh to update the configured iPads.'
         exit 0
         ;;
     both|kate|henry) ;;
@@ -48,12 +70,24 @@ case "${1:-both}" in
     *) usage; exit 2 ;;
 esac
 
-if [ ! -f "$config_dir/devices" ]; then
+if [ ! -f "$config_file" ]; then
     echo 'First run tools/deploy-ipads.sh setup.' >&2
     exit 1
 fi
-{ read -r team; read -r kate; read -r henry; } < "$config_dir/devices"
+case "$target" in
+    kate) selected_udids=$kate ;;
+    henry) selected_udids=$henry ;;
+    both) selected_udids=$kate$henry ;;
+esac
+if [ -z "$selected_udids" ]; then
+    echo "No iPad configured for $target. Run tools/deploy-ipads.sh setup." >&2
+    exit 1
+fi
 select_xcode
+if ! command -v xcodegen >/dev/null 2>&1; then
+    echo 'XcodeGen is required. Install it with brew install xcodegen.' >&2
+    exit 1
+fi
 xcodegen generate --spec project.yml
 
 deploy() {
@@ -72,6 +106,6 @@ deploy() {
 }
 
 status=0
-if [ "${1:-both}" != henry ]; then deploy kate CatMathAdventure "$kate" || status=1; fi
-if [ "${1:-both}" != kate ]; then deploy henry SharkExplorer "$henry" || status=1; fi
+if [ "$target" != henry ] && [ -n "$kate" ]; then deploy kate CatMathAdventure "$kate" || status=1; fi
+if [ "$target" != kate ] && [ -n "$henry" ]; then deploy henry SharkExplorer "$henry" || status=1; fi
 exit "$status"
