@@ -3,22 +3,29 @@ import LearningUI
 import Narration
 import SwiftUI
 
-/// One puzzle with a cat: the cat and its story on the left, the puzzle on the right, then a reward.
+/// A round with a cat: its story page first, then three puzzles set in that scene, then a celebration.
 struct CatActivityView: View {
+    private enum Phase { case story, puzzle, celebrate }
+
     let cat: CatDefinition
     @Environment(CatGameStore.self) private var game
     @Environment(NarrationCoordinator.self) private var narration
     @Environment(FeedbackPlayer.self) private var feedback
     @Environment(\.kidTheme) private var theme
+    @State private var phase = Phase.story
     @State private var challenge: MathChallenge
+    /// Changes with every new puzzle, so a late "next puzzle" timer cannot skip one.
+    @State private var puzzleNumber = 0
     @State private var wrongChoices: Set<Int> = []
     @State private var correct = false
     @State private var counted = 0
-    @State private var revealedBeat: CatStoryBeat?
+    @State private var praise: String?
+    /// Cats that came out of hiding during this round, shown at the celebration.
     @State private var newFriends: [CatDefinition] = []
+    /// The story page this round opened, if it opened one.
+    @State private var newPage: CatStoryBeat?
     @State private var selectedReward: CatRewardAction?
     @State private var rewardMotion = false
-    @State private var showReward = false
     @State private var celebration = 0
 
     init(cat: CatDefinition, challenge: MathChallenge) {
@@ -26,38 +33,54 @@ struct CatActivityView: View {
         _challenge = State(initialValue: challenge)
     }
 
+    private var friendship: Int { game.friendship(for: cat) }
+    private var roundLength: Int { CatDefinition.puzzlesPerRound }
+    /// Puzzles solved in the round on screen; a finished round shows all of them.
+    private var solvedInRound: Int { phase == .celebrate ? roundLength : cat.solvedInRound(for: friendship) }
+
     var body: some View {
-        let friendship = game.friendship(for: cat)
         VStack(spacing: 16) {
-            KidTopBar("Math time with \(cat.name)", subtitle: challenge.skill.displayName, back: KidBackButton { goHome() }) {
-                Label("\(friendship)", systemImage: "heart.fill")
-                    .font(.kidTitle)
-                    .foregroundStyle(.pink)
-                    .contentTransition(.numericText())
-                    .accessibilityLabel("\(friendship) hearts with \(cat.name)")
+            KidTopBar(
+                phase == .story ? "\(cat.name)’s story" : "Math time with \(cat.name)",
+                subtitle: phase == .story ? "Page \(cat.storyPage(for: friendship) + 1) of \(cat.backstory.count)" : challenge.skill.displayName,
+                back: KidBackButton { goHome() }
+            ) {
+                HStack(spacing: 18) {
+                    RoundSteps(solved: solvedInRound, total: roundLength, tint: cat.tint)
+                    Label("\(friendship)", systemImage: "heart.fill")
+                        .font(.kidTitle)
+                        .foregroundStyle(.pink)
+                        .contentTransition(.numericText())
+                        .accessibilityLabel("\(friendship) hearts with \(cat.name)")
+                }
             }
 
-            HStack(alignment: .top, spacing: 18) {
-                storyColumn(friendship: friendship)
-                    .frame(width: 290)
-                puzzleColumn
+            if phase == .story {
+                storyPage
+                    .transition(.move(edge: .leading).combined(with: .opacity))
+            } else {
+                HStack(alignment: .top, spacing: 18) {
+                    sceneColumn.frame(width: 260)
+                    puzzleColumn
+                }
+                .frame(maxHeight: .infinity)
+                .transition(.move(edge: .trailing).combined(with: .opacity))
             }
-            .frame(maxHeight: .infinity)
         }
         .padding(24)
         .foregroundStyle(theme.ink)
         .overlay {
-            if showReward {
+            if phase == .celebrate {
                 ZStack {
                     Color.black.opacity(0.35).ignoresSafeArea()
                     CatRewardCard(
                         cat: cat,
-                        story: revealedBeat,
+                        newPage: newPage,
                         newFriends: newFriends,
                         selectedReward: selectedReward,
                         rewardMotion: rewardMotion,
                         onReward: chooseReward,
-                        onNext: nextPuzzle,
+                        onNext: nextRound,
                         onHome: goHome
                     )
                     .padding(40)
@@ -66,32 +89,88 @@ struct CatActivityView: View {
             }
         }
         .overlay { CelebrationView(trigger: celebration) }
-        .onAppear { narration.play(challenge.prompt) }
-        .onDisappear { narration.stop() }
+        .onAppear { tellStory() }
     }
 
-    private func storyColumn(friendship: Int) -> some View {
+    // MARK: Story page
+
+    private var storyPage: some View {
+        let story = cat.storyBeat(for: friendship)
+        let left = roundLength - cat.solvedInRound(for: friendship)
+        return HStack(spacing: 32) {
+            VStack(spacing: 14) {
+                KidArt(cat.artName, fallback: cat.symbol, size: 240)
+                StoryDots(revealed: cat.revealedStory(for: friendship).count, total: cat.backstory.count, tint: cat.tint)
+            }
+            VStack(alignment: .leading, spacing: 16) {
+                Text(story.title).font(.kidDisplay).foregroundStyle(cat.tint)
+                Text(story.story)
+                    .font(.system(size: 30, weight: .semibold, design: .rounded))
+                    .lineSpacing(6)
+                    .minimumScaleFactor(0.7)
+                Label(
+                    friendship >= cat.lastPageFriendship
+                        ? "Solve \(left) \(left == 1 ? "puzzle" : "puzzles") to earn a treat"
+                        : "Solve \(left) \(left == 1 ? "puzzle" : "puzzles") to turn the page",
+                    systemImage: "pawprint.fill"
+                )
+                .font(.kidHeadline)
+                .foregroundStyle(theme.mutedInk)
+                Spacer(minLength: 0)
+                HStack(spacing: 16) {
+                    Button { tellStory() } label: { Label("Hear it again", systemImage: "speaker.wave.2.fill") }
+                        .buttonStyle(KidButtonStyle(.soft, tint: cat.tint))
+                    Button { startPuzzles() } label: { Label("Help \(cat.name)", systemImage: "arrow.right") }
+                        .buttonStyle(KidButtonStyle(tint: theme.success))
+                        .accessibilityIdentifier("start-round")
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(32)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .kidCard(radius: KidTheme.Radius.large)
+    }
+
+    /// Reads the page aloud, then says what to do next when a round is just beginning.
+    private func tellStory() {
+        var lines = [cat.storyBeat(for: friendship).story]
+        if cat.solvedInRound(for: friendship) == 0 {
+            lines.append((friendship >= cat.lastPageFriendship ? CatLine.roundBonus : CatLine.roundIntro).text)
+        }
+        narration.playSequence(lines, gap: 0.5)
+    }
+
+    private func startPuzzles() {
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) { phase = .puzzle }
+        narration.play(challenge.prompt, after: 0.4)
+    }
+
+    // MARK: Puzzles
+
+    /// Keeps the story in view while solving: who we are helping, where, and how far through the round.
+    private var sceneColumn: some View {
         let story = cat.storyBeat(for: correct ? friendship - 1 : friendship)
         return VStack(spacing: 12) {
-            ZStack {
-                Circle().fill(cat.tint.opacity(0.22)).frame(width: 150, height: 150)
-                KidArt(cat.artName, fallback: cat.symbol, size: 100)
-                    .scaleEffect(correct ? 1.12 : 1)
-                    .animation(.spring(response: 0.4, dampingFraction: 0.45), value: correct)
-            }
-            StoryDots(revealed: cat.revealedStory(for: friendship).count, total: cat.backstory.count, tint: cat.tint)
+            KidArt(cat.artName, fallback: cat.symbol, size: 150)
+                .scaleEffect(correct ? 1.1 : 1)
+                .animation(.spring(response: 0.4, dampingFraction: 0.45), value: correct)
             Text(story.title).font(.kidHeadline).multilineTextAlignment(.center)
-            Text(story.story)
+            Text(story.puzzleLead.trimmingCharacters(in: CharacterSet(charactersIn: ", ")))
                 .font(.kidBody)
-                .foregroundStyle(theme.ink.opacity(0.88))
+                .foregroundStyle(theme.mutedInk)
                 .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.8)
             Spacer(minLength: 0)
-            Button { narration.play(story.story) } label: { Label("Hear the story", systemImage: "book.fill") }
-                .buttonStyle(KidButtonStyle(.soft, tint: cat.tint, compact: true))
+            Text("Puzzle \(cat.solvedInRound(for: correct ? friendship - 1 : friendship) + 1) of \(roundLength)")
+                .font(.kidHeadline)
+                .contentTransition(.numericText())
+            Text("Finish all \(roundLength) to celebrate with \(cat.name)")
+                .font(.kidLabel)
+                .foregroundStyle(theme.mutedInk)
+                .multilineTextAlignment(.center)
         }
         .padding(18)
-        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .kidCard(radius: KidTheme.Radius.large)
     }
 
@@ -107,12 +186,16 @@ struct CatActivityView: View {
                 }
                 .buttonStyle(KidButtonStyle(tint: theme.secondary, compact: true))
                 .accessibilityLabel("Hear the question")
+                .disabled(correct)
             }
 
             MathVisualView(challenge: challenge, objectArt: cat.countingArtName, counted: $counted) { number in
                 feedback.play(.pop)
                 narration.play(CatLine.count(number))
             }
+            .id(puzzleNumber)
+            // Counting aloud after the answer would cut off the praise that moves the round on.
+            .allowsHitTesting(!correct)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(12)
             .background(theme.surface, in: RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous))
@@ -128,7 +211,12 @@ struct CatActivityView: View {
                 }
             }
 
-            if !wrongChoices.isEmpty, !correct {
+            if let praise {
+                Label(praise, systemImage: "star.fill")
+                    .font(.kidHeadline)
+                    .foregroundStyle(theme.success)
+                    .transition(.scale.combined(with: .opacity))
+            } else if !wrongChoices.isEmpty {
                 Label(CatLine.retry.text, systemImage: "pawprint.fill")
                     .font(.kidHeadline)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -150,18 +238,67 @@ struct CatActivityView: View {
         guard choice == challenge.answer else {
             feedback.play(.wrong)
             withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { _ = wrongChoices.insert(choice) }
-            narration.play(CatLine.retry.text)
+            // Wait for the "try again" sound before speaking over it.
+            narration.play(CatLine.retry.text, after: 0.45)
             return
         }
         correct = true
+        let pageBefore = cat.storyPage(for: friendship)
+        withAnimation { newFriends += game.completeActivity(for: cat) }
+        if cat.solvedInRound(for: friendship) == 0 {
+            finishRound(openedPage: cat.storyPage(for: friendship) > pageBefore)
+        } else {
+            praiseThenContinue()
+        }
+    }
+
+    /// A quick "well done", then straight on to the next puzzle in the round.
+    private func praiseThenContinue() {
+        let line = WeeklySpokenLines.praise[friendship % WeeklySpokenLines.praise.count]
+        let solved = puzzleNumber
         feedback.play(.correct)
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) { praise = line }
+        narration.play(line, after: 0.5) {
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(500))
+                nextPuzzle(after: solved)
+            }
+        }
+        // If the praise is cut short (a phone call, sound switched off mid-line), still move on.
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(5))
+            nextPuzzle(after: solved)
+        }
+    }
+
+    private func nextPuzzle(after solved: Int) {
+        guard solved == puzzleNumber, phase == .puzzle, correct else { return }
+        showNextPuzzle()
+        narration.play(challenge.prompt, after: 0.4)
+    }
+
+    private func showNextPuzzle() {
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+            challenge = game.nextChallenge(for: cat)
+            puzzleNumber += 1
+            wrongChoices = []
+            correct = false
+            counted = 0
+            praise = nil
+        }
+    }
+
+    // MARK: Celebration
+
+    private func finishRound(openedPage: Bool) {
+        newPage = openedPage ? cat.storyBeat(for: friendship) : nil
+        feedback.play(.celebrate)
         celebration += 1
-        withAnimation { newFriends = game.completeActivity(for: cat) }
-        revealedBeat = cat.storyBeat(for: game.friendship(for: cat))
-        narration.play("You did it! \(cat.name)’s friendship grew.")
+        // Let the fanfare ring before the voice comes in.
+        narration.play("You did it! \(cat.name)’s friendship grew.", after: 1.4)
         Task { @MainActor in
             try? await Task.sleep(for: .milliseconds(900))
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) { showReward = true }
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) { phase = .celebrate }
         }
     }
 
@@ -173,34 +310,57 @@ struct CatActivityView: View {
             selectedReward = reward
             rewardMotion = true
         }
-        narration.play(reward.celebration(for: cat)) {
-            if !newFriends.isEmpty {
-                narration.play(CatLine.newFriend.text)
-            } else if let revealedBeat {
-                narration.play(revealedBeat.story)
-            }
+        var lines = [reward.celebration(for: cat)]
+        if !newFriends.isEmpty { lines.append(CatLine.newFriend.text) }
+        if newPage != nil { lines.append(CatLine.newPage.text) }
+        narration.stop()
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(350))
+            guard phase == .celebrate else { return }
+            narration.playSequence(lines, gap: 0.5)
         }
     }
 
-    private func nextPuzzle() {
+    /// After a celebration: read the page the round opened, or go straight to more puzzles.
+    private func nextRound() {
         narration.stop()
+        let opensStory = newPage != nil
+        showNextPuzzle()
         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-            challenge = game.nextChallenge(for: cat)
-            wrongChoices = []
-            correct = false
-            counted = 0
-            revealedBeat = nil
             newFriends = []
+            newPage = nil
             selectedReward = nil
             rewardMotion = false
-            showReward = false
+            phase = opensStory ? .story : .puzzle
         }
-        narration.play(challenge.prompt)
+        if opensStory { tellStory() } else { narration.play(challenge.prompt, after: 0.4) }
     }
 
     private func goHome() {
         narration.stop()
         game.showHome()
+    }
+}
+
+/// Paw prints that fill in as the puzzles in a round are solved.
+private struct RoundSteps: View {
+    let solved: Int
+    let total: Int
+    let tint: Color
+    @Environment(\.kidTheme) private var theme
+
+    var body: some View {
+        HStack(spacing: 8) {
+            ForEach(0..<total, id: \.self) { step in
+                Image(systemName: "pawprint.fill")
+                    .font(.title2)
+                    .foregroundStyle(step < solved ? tint : theme.ink.opacity(0.18))
+                    .scaleEffect(step < solved ? 1.1 : 1)
+            }
+        }
+        .animation(.spring(response: 0.35, dampingFraction: 0.5), value: solved)
+        .accessibilityElement()
+        .accessibilityLabel("\(solved) of \(total) puzzles solved")
     }
 }
 
@@ -310,10 +470,11 @@ private struct MathVisualView: View {
     }
 }
 
-/// Shown after a correct answer: celebrate with the cat, read the new story page, then keep playing or go home.
+/// Shown when a round is finished: celebrate with the cat, then read the new story page, keep playing or go home.
 private struct CatRewardCard: View {
     let cat: CatDefinition
-    let story: CatStoryBeat?
+    /// The story page this round opened, if any; it is read on the next screen.
+    let newPage: CatStoryBeat?
     let newFriends: [CatDefinition]
     let selectedReward: CatRewardAction?
     let rewardMotion: Bool
@@ -337,7 +498,7 @@ private struct CatRewardCard: View {
                 }
                 .frame(width: 190, height: 140)
                 VStack(alignment: .leading, spacing: 6) {
-                    Label("\(cat.name)’s friendship grew!", systemImage: "heart.fill")
+                    Label("You helped \(cat.name)!", systemImage: "heart.fill")
                         .font(.kidDisplay)
                         .foregroundStyle(.pink)
                         .minimumScaleFactor(0.7)
@@ -368,12 +529,12 @@ private struct CatRewardCard: View {
                     .padding(14)
                     .kidCard(.quiet, tint: theme.success.opacity(0.3))
                 }
-                if let story {
-                    HStack(alignment: .top, spacing: 14) {
+                if let newPage {
+                    HStack(spacing: 14) {
                         Image(systemName: "book.pages.fill").font(.largeTitle).foregroundStyle(cat.tint)
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(story.title).font(.kidHeadline)
-                            Text(story.story).font(.kidBody)
+                            Text("New story page").font(.kidLabel).foregroundStyle(theme.mutedInk)
+                            Text(newPage.title).font(.kidHeadline)
                         }
                         Spacer(minLength: 0)
                     }
@@ -381,7 +542,7 @@ private struct CatRewardCard: View {
                     .kidCard(.quiet, tint: cat.tint.opacity(0.18))
                 }
                 HStack(spacing: 16) {
-                    Button(action: onNext) { Label("Next puzzle", systemImage: "arrow.right") }
+                    Button(action: onNext) { Label(newPage == nil ? "More puzzles" : "Read the story", systemImage: newPage == nil ? "arrow.right" : "book.fill") }
                         .buttonStyle(KidButtonStyle(tint: theme.success))
                         .accessibilityIdentifier("next-puzzle")
                     Button(action: onHome) { Label("Home", systemImage: "house.fill") }

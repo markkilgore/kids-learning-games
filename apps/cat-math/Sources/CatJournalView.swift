@@ -9,20 +9,31 @@ struct CatJournalView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            KidTopBar("Kate’s Cat Journal", subtitle: "\(game.progress.journaledCatIDs.count) of \(CatContent.cats.count) friends", back: KidBackButton { game.showHome() })
+            KidTopBar("Kate’s Cat Journal", subtitle: "\(game.progress.journaledCatIDs.count) of \(CatContent.cats.count) friends", back: KidBackButton {
+                narration.stop()
+                game.showHome()
+            })
+            .padding(.horizontal, 24)
+            // Two plain columns: cards differ a lot in height, and a lazy grid re-measures them while scrolling.
             ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 16, alignment: .top), count: 2), spacing: 16) {
-                    ForEach(CatContent.cats) { cat in
-                        CatJournalCard(cat: cat, met: game.progress.journaledCatIDs.contains(cat.id))
+                HStack(alignment: .top, spacing: 16) {
+                    ForEach(0..<2, id: \.self) { column in
+                        VStack(spacing: 16) {
+                            ForEach(Array(CatContent.cats.enumerated()).filter { $0.offset % 2 == column }, id: \.element.id) { _, cat in
+                                CatJournalCard(cat: cat, met: game.progress.journaledCatIDs.contains(cat.id))
+                            }
+                        }
                     }
                 }
-                .padding(.bottom, 8)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
+                .padding(.bottom, 32)
             }
-            .scrollIndicators(.hidden)
+            .scrollIndicators(.visible)
+            .ignoresSafeArea(edges: .bottom)
         }
-        .padding(24)
+        .padding(.top, 24)
         .foregroundStyle(theme.ink)
-        .onDisappear { narration.stop() }
     }
 }
 
@@ -76,7 +87,8 @@ private struct CatJournalCard: View {
                     .accessibilityLabel("Hear \(story.title)")
                 }
                 if stories.count < cat.backstory.count {
-                    Label("Solve one more puzzle for the next page", systemImage: "lock.fill")
+                    let left = CatDefinition.puzzlesPerRound - cat.solvedInRound(for: friendship)
+                    Label("Solve \(left) more \(left == 1 ? "puzzle" : "puzzles") for the next page", systemImage: "lock.fill")
                         .font(.kidLabel)
                         .foregroundStyle(theme.mutedInk)
                 }

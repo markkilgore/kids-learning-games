@@ -53,7 +53,7 @@ enum MathChallengeFactory {
     /// normally give. Before the last story page there is only one recorded prompt, so it is used as is.
     static func variantFriendship(for cat: CatDefinition, friendship: Int, difficulty: Int) -> Int {
         let step = min(max(difficulty, SkillPracticeStats.difficultyRange.lowerBound), SkillPracticeStats.difficultyRange.upperBound)
-        guard step != 0, friendship >= cat.backstory.count - 1 else { return friendship }
+        guard step != 0, friendship >= cat.lastPageFriendship else { return friendship }
         let skillCount = CatAppConfiguration.value.enabledSkills.count
         let ranked = (0..<3).map { friendship + $0 * skillCount }.sorted { lhs, rhs in
             let left = size(of: spec(for: cat, friendship: lhs)), right = size(of: spec(for: cat, friendship: rhs))

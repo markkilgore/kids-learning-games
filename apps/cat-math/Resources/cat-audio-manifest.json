@@ -34,6 +34,41 @@
       }
     ]
   },
+  "A new story page is ready!": {
+    "file": "120d79c2347d5816b74f0e48.mp3",
+    "words": [
+      {
+        "text": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "new",
+        "start": 0.14,
+        "end": 0.32
+      },
+      {
+        "text": "story",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "page",
+        "start": 0.704,
+        "end": 0.96
+      },
+      {
+        "text": "is",
+        "start": 1.013,
+        "end": 1.12
+      },
+      {
+        "text": "ready!",
+        "start": 1.187,
+        "end": 1.6
+      }
+    ]
+  },
   "A poult is a baby turkey.": {
     "file": "f7a1fde733afcf453a649114.mp3",
     "words": [
@@ -174,8 +209,183 @@
       }
     ]
   },
-  "Along the secret garden path, Clover has 9 butterflies and finds 2 more. How many now?": {
-    "file": "9aff3ecf30c50f578a45eb03.mp3",
+  "Along the secret garden path, Clover has 6 butterflies and finds 3 more. How many now?": {
+    "file": "dfd8dc442ebae58e80785436.mp3",
+    "words": [
+      {
+        "text": "Along",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "secret",
+        "start": 0.457,
+        "end": 0.8
+      },
+      {
+        "text": "garden",
+        "start": 0.857,
+        "end": 1.2
+      },
+      {
+        "text": "path,",
+        "start": 1.28,
+        "end": 1.84
+      },
+      {
+        "text": "Clover",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "has",
+        "start": 2.32,
+        "end": 2.56
+      },
+      {
+        "text": "6",
+        "start": 2.64,
+        "end": 2.88
+      },
+      {
+        "text": "butterflies",
+        "start": 2.94,
+        "end": 3.6
+      },
+      {
+        "text": "and",
+        "start": 3.64,
+        "end": 3.76
+      },
+      {
+        "text": "finds",
+        "start": 3.84,
+        "end": 4.24
+      },
+      {
+        "text": "3",
+        "start": 4.32,
+        "end": 4.56
+      },
+      {
+        "text": "more.",
+        "start": 4.64,
+        "end": 5.04
+      },
+      {
+        "text": "How",
+        "start": 5.22,
+        "end": 5.76
+      },
+      {
+        "text": "many",
+        "start": 5.792,
+        "end": 5.92
+      },
+      {
+        "text": "now?",
+        "start": 6.02,
+        "end": 8.4
+      }
+    ]
+  },
+  "Along the secret garden path, help Clover count butterflies by tens: 20, 30, 40. What comes next?": {
+    "file": "e19477985536d4f422908c01.mp3",
+    "words": [
+      {
+        "text": "Along",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "secret",
+        "start": 0.389,
+        "end": 0.8
+      },
+      {
+        "text": "garden",
+        "start": 0.834,
+        "end": 1.04
+      },
+      {
+        "text": "path,",
+        "start": 1.136,
+        "end": 1.76
+      },
+      {
+        "text": "help",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "Clover",
+        "start": 2.057,
+        "end": 2.4
+      },
+      {
+        "text": "count",
+        "start": 2.453,
+        "end": 2.72
+      },
+      {
+        "text": "butterflies",
+        "start": 2.767,
+        "end": 3.28
+      },
+      {
+        "text": "by",
+        "start": 3.333,
+        "end": 3.44
+      },
+      {
+        "text": "tens:",
+        "start": 3.552,
+        "end": 4.4
+      },
+      {
+        "text": "20,",
+        "start": 4.48,
+        "end": 5.04
+      },
+      {
+        "text": "30,",
+        "start": 5.12,
+        "end": 5.68
+      },
+      {
+        "text": "40.",
+        "start": 5.76,
+        "end": 6.32
+      },
+      {
+        "text": "What",
+        "start": 6.464,
+        "end": 7.04
+      },
+      {
+        "text": "comes",
+        "start": 7.093,
+        "end": 7.36
+      },
+      {
+        "text": "next?",
+        "start": 7.44,
+        "end": 7.92
+      }
+    ]
+  },
+  "Along the secret garden path, how many butterflies did Clover find?": {
+    "file": "69871955dec6a1d808a754d2.mp3",
     "words": [
       {
         "text": "Along",
@@ -199,63 +409,118 @@
       },
       {
         "text": "path,",
-        "start": 1.216,
-        "end": 1.84
+        "start": 1.2,
+        "end": 1.92
       },
       {
-        "text": "Clover",
-        "start": 1.897,
-        "end": 2.24
-      },
-      {
-        "text": "has",
-        "start": 2.3,
-        "end": 2.48
-      },
-      {
-        "text": "9",
-        "start": 2.56,
-        "end": 2.88
-      },
-      {
-        "text": "butterflies",
-        "start": 2.933,
-        "end": 3.52
-      },
-      {
-        "text": "and",
-        "start": 3.56,
-        "end": 3.68
-      },
-      {
-        "text": "finds",
-        "start": 3.747,
-        "end": 4.08
-      },
-      {
-        "text": "2",
-        "start": 4.16,
-        "end": 4.32
-      },
-      {
-        "text": "more.",
-        "start": 4.4,
-        "end": 4.8
-      },
-      {
-        "text": "How",
-        "start": 4.96,
-        "end": 5.44
+        "text": "how",
+        "start": 1.94,
+        "end": 2
       },
       {
         "text": "many",
-        "start": 5.472,
-        "end": 5.6
+        "start": 2.048,
+        "end": 2.24
+      },
+      {
+        "text": "butterflies",
+        "start": 2.293,
+        "end": 2.88
+      },
+      {
+        "text": "did",
+        "start": 2.92,
+        "end": 3.04
+      },
+      {
+        "text": "Clover",
+        "start": 3.097,
+        "end": 3.44
+      },
+      {
+        "text": "find?",
+        "start": 3.536,
+        "end": 4
+      }
+    ]
+  },
+  "Among the clover leaves, Clover has 9 butterflies and finds 2 more. How many now?": {
+    "file": "04ec6517c7b8d7f996ae082c.mp3",
+    "words": [
+      {
+        "text": "Among",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "clover",
+        "start": 0.46,
+        "end": 0.72
+      },
+      {
+        "text": "leaves,",
+        "start": 0.789,
+        "end": 1.44
+      },
+      {
+        "text": "Clover",
+        "start": 1.486,
+        "end": 1.76
+      },
+      {
+        "text": "has",
+        "start": 1.82,
+        "end": 2
+      },
+      {
+        "text": "9",
+        "start": 2.08,
+        "end": 2.4
+      },
+      {
+        "text": "butterflies",
+        "start": 2.46,
+        "end": 3.12
+      },
+      {
+        "text": "and",
+        "start": 3.16,
+        "end": 3.28
+      },
+      {
+        "text": "finds",
+        "start": 3.347,
+        "end": 3.68
+      },
+      {
+        "text": "2",
+        "start": 3.84,
+        "end": 3.92
+      },
+      {
+        "text": "more.",
+        "start": 4,
+        "end": 4.4
+      },
+      {
+        "text": "How",
+        "start": 4.56,
+        "end": 5.04
+      },
+      {
+        "text": "many",
+        "start": 5.088,
+        "end": 5.28
       },
       {
         "text": "now?",
-        "start": 5.7,
-        "end": 8.08
+        "start": 5.36,
+        "end": 8
       }
     ]
   },
@@ -341,6 +606,211 @@
         "text": "next?",
         "start": 7.616,
         "end": 8.16
+      }
+    ]
+  },
+  "Among the clover leaves, how many butterflies did Clover find?": {
+    "file": "54485aecb2fd42fd444e9da4.mp3",
+    "words": [
+      {
+        "text": "Among",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "clover",
+        "start": 0.46,
+        "end": 0.8
+      },
+      {
+        "text": "leaves,",
+        "start": 0.857,
+        "end": 1.52
+      },
+      {
+        "text": "how",
+        "start": 1.56,
+        "end": 1.68
+      },
+      {
+        "text": "many",
+        "start": 1.712,
+        "end": 1.84
+      },
+      {
+        "text": "butterflies",
+        "start": 1.893,
+        "end": 2.48
+      },
+      {
+        "text": "did",
+        "start": 2.52,
+        "end": 2.64
+      },
+      {
+        "text": "Clover",
+        "start": 2.697,
+        "end": 3.04
+      },
+      {
+        "text": "find?",
+        "start": 3.12,
+        "end": 3.6
+      }
+    ]
+  },
+  "At Pepper’s sunny window, Pepper counts 12 sunbeams. 3 are put away. How many stay?": {
+    "file": "851bb80d81f0618f170c55b2.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "Pepper’s",
+        "start": 0.137,
+        "end": 0.56
+      },
+      {
+        "text": "sunny",
+        "start": 0.613,
+        "end": 0.88
+      },
+      {
+        "text": "window,",
+        "start": 0.949,
+        "end": 1.68
+      },
+      {
+        "text": "Pepper",
+        "start": 1.714,
+        "end": 1.92
+      },
+      {
+        "text": "counts",
+        "start": 1.989,
+        "end": 2.4
+      },
+      {
+        "text": "12",
+        "start": 2.48,
+        "end": 2.8
+      },
+      {
+        "text": "sunbeams.",
+        "start": 2.88,
+        "end": 3.6
+      },
+      {
+        "text": "3",
+        "start": 4.08,
+        "end": 4.32
+      },
+      {
+        "text": "are",
+        "start": 4.38,
+        "end": 4.56
+      },
+      {
+        "text": "put",
+        "start": 4.6,
+        "end": 4.72
+      },
+      {
+        "text": "away.",
+        "start": 4.8,
+        "end": 5.44
+      },
+      {
+        "text": "How",
+        "start": 5.52,
+        "end": 5.76
+      },
+      {
+        "text": "many",
+        "start": 5.792,
+        "end": 5.92
+      },
+      {
+        "text": "stay?",
+        "start": 6.016,
+        "end": 6.48
+      }
+    ]
+  },
+  "At Pepper’s sunny window, Pepper finds 12 sunbeams. Is that odd or even?": {
+    "file": "4e6e5774d04e7ddfaf112184.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "Pepper’s",
+        "start": 0.126,
+        "end": 0.56
+      },
+      {
+        "text": "sunny",
+        "start": 0.613,
+        "end": 0.88
+      },
+      {
+        "text": "window,",
+        "start": 0.937,
+        "end": 1.68
+      },
+      {
+        "text": "Pepper",
+        "start": 1.714,
+        "end": 1.92
+      },
+      {
+        "text": "finds",
+        "start": 2,
+        "end": 2.4
+      },
+      {
+        "text": "12",
+        "start": 2.6,
+        "end": 2.8
+      },
+      {
+        "text": "sunbeams.",
+        "start": 2.88,
+        "end": 3.68
+      },
+      {
+        "text": "Is",
+        "start": 3.893,
+        "end": 4.32
+      },
+      {
+        "text": "that",
+        "start": 4.352,
+        "end": 4.48
+      },
+      {
+        "text": "odd",
+        "start": 4.6,
+        "end": 4.96
+      },
+      {
+        "text": "or",
+        "start": 5.093,
+        "end": 5.36
+      },
+      {
+        "text": "even?",
+        "start": 5.456,
+        "end": 6.32
       }
     ]
   },
@@ -509,6 +979,146 @@
       }
     ]
   },
+  "At the breakfast table, help Waffles count berries by tens: 10, 20, 30. What comes next?": {
+    "file": "858773c9d1e8c8b035813255.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "breakfast",
+        "start": 0.28,
+        "end": 0.64
+      },
+      {
+        "text": "table,",
+        "start": 0.693,
+        "end": 1.28
+      },
+      {
+        "text": "help",
+        "start": 1.344,
+        "end": 1.6
+      },
+      {
+        "text": "Waffles",
+        "start": 1.64,
+        "end": 2.08
+      },
+      {
+        "text": "count",
+        "start": 2.12,
+        "end": 2.32
+      },
+      {
+        "text": "berries",
+        "start": 2.38,
+        "end": 2.8
+      },
+      {
+        "text": "by",
+        "start": 2.853,
+        "end": 2.96
+      },
+      {
+        "text": "tens:",
+        "start": 3.072,
+        "end": 3.68
+      },
+      {
+        "text": "10,",
+        "start": 4.08,
+        "end": 4.68
+      },
+      {
+        "text": "20,",
+        "start": 4.88,
+        "end": 5.68
+      },
+      {
+        "text": "30.",
+        "start": 5.84,
+        "end": 6.52
+      },
+      {
+        "text": "What",
+        "start": 6.592,
+        "end": 6.88
+      },
+      {
+        "text": "comes",
+        "start": 6.92,
+        "end": 7.12
+      },
+      {
+        "text": "next?",
+        "start": 7.216,
+        "end": 7.68
+      }
+    ]
+  },
+  "At the breakfast table, how many berry did Waffles find?": {
+    "file": "27f8037ccb0af3603a3e68ae.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "breakfast",
+        "start": 0.2,
+        "end": 0.56
+      },
+      {
+        "text": "table,",
+        "start": 0.627,
+        "end": 1.28
+      },
+      {
+        "text": "how",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "many",
+        "start": 1.472,
+        "end": 1.6
+      },
+      {
+        "text": "berry",
+        "start": 1.667,
+        "end": 2
+      },
+      {
+        "text": "did",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "Waffles",
+        "start": 2.28,
+        "end": 2.72
+      },
+      {
+        "text": "find?",
+        "start": 2.8,
+        "end": 3.2
+      }
+    ]
+  },
   "Before everyone wakes, Waffles patrols the quiet house for misplaced slippers.": {
     "file": "28c5cba36515863caafd8296.mp3",
     "words": [
@@ -645,6 +1255,321 @@
       {
         "text": "stay?",
         "start": 6.176,
+        "end": 6.64
+      }
+    ]
+  },
+  "Beside the seedling pots, Sprout finds 11 seedlings. Is that odd or even?": {
+    "file": "71e16ad999550879530dfd67.mp3",
+    "words": [
+      {
+        "text": "Beside",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "seedling",
+        "start": 0.528,
+        "end": 0.88
+      },
+      {
+        "text": "pots,",
+        "start": 0.976,
+        "end": 1.6
+      },
+      {
+        "text": "Sprout",
+        "start": 1.66,
+        "end": 2
+      },
+      {
+        "text": "finds",
+        "start": 2.067,
+        "end": 2.4
+      },
+      {
+        "text": "11",
+        "start": 2.56,
+        "end": 2.96
+      },
+      {
+        "text": "seedlings.",
+        "start": 3.024,
+        "end": 3.84
+      },
+      {
+        "text": "Is",
+        "start": 4.053,
+        "end": 4.48
+      },
+      {
+        "text": "that",
+        "start": 4.512,
+        "end": 4.64
+      },
+      {
+        "text": "odd",
+        "start": 4.76,
+        "end": 5.12
+      },
+      {
+        "text": "or",
+        "start": 5.173,
+        "end": 5.28
+      },
+      {
+        "text": "even?",
+        "start": 5.376,
+        "end": 6.32
+      }
+    ]
+  },
+  "Beside the seedling pots, help Sprout count seedlings by fives: 5, 10, 15. What comes next?": {
+    "file": "80daf5d413831a6be26ec3d6.mp3",
+    "words": [
+      {
+        "text": "Beside",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "seedling",
+        "start": 0.464,
+        "end": 0.88
+      },
+      {
+        "text": "pots,",
+        "start": 0.96,
+        "end": 1.6
+      },
+      {
+        "text": "help",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "Sprout",
+        "start": 1.9,
+        "end": 2.16
+      },
+      {
+        "text": "count",
+        "start": 2.227,
+        "end": 2.56
+      },
+      {
+        "text": "seedlings",
+        "start": 2.624,
+        "end": 3.12
+      },
+      {
+        "text": "by",
+        "start": 3.173,
+        "end": 3.28
+      },
+      {
+        "text": "fives:",
+        "start": 3.4,
+        "end": 4.48
+      },
+      {
+        "text": "5,",
+        "start": 4.56,
+        "end": 5.2
+      },
+      {
+        "text": "10,",
+        "start": 5.28,
+        "end": 5.68
+      },
+      {
+        "text": "15.",
+        "start": 5.92,
+        "end": 6.64
+      },
+      {
+        "text": "What",
+        "start": 6.768,
+        "end": 7.28
+      },
+      {
+        "text": "comes",
+        "start": 7.333,
+        "end": 7.6
+      },
+      {
+        "text": "next?",
+        "start": 7.696,
+        "end": 8.16
+      }
+    ]
+  },
+  "Beside the sewing basket, Mittens counts 5 buttons. 1 is put away. How many stay?": {
+    "file": "9f7cb2dc91ea8de9b3bd4969.mp3",
+    "words": [
+      {
+        "text": "Beside",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "sewing",
+        "start": 0.526,
+        "end": 0.8
+      },
+      {
+        "text": "basket,",
+        "start": 0.869,
+        "end": 1.52
+      },
+      {
+        "text": "Mittens",
+        "start": 1.552,
+        "end": 1.84
+      },
+      {
+        "text": "counts",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "5",
+        "start": 2.32,
+        "end": 2.64
+      },
+      {
+        "text": "buttons.",
+        "start": 2.7,
+        "end": 3.28
+      },
+      {
+        "text": "1",
+        "start": 3.6,
+        "end": 3.76
+      },
+      {
+        "text": "is",
+        "start": 3.813,
+        "end": 3.92
+      },
+      {
+        "text": "put",
+        "start": 3.96,
+        "end": 4.08
+      },
+      {
+        "text": "away.",
+        "start": 4.16,
+        "end": 4.76
+      },
+      {
+        "text": "How",
+        "start": 4.83,
+        "end": 5.04
+      },
+      {
+        "text": "many",
+        "start": 5.088,
+        "end": 5.28
+      },
+      {
+        "text": "stay?",
+        "start": 5.376,
+        "end": 5.84
+      }
+    ]
+  },
+  "Beside the sewing basket, Mittens has 9 buttons and finds 2 more. How many now?": {
+    "file": "b8ba2601eb0c1529c4d99ca4.mp3",
+    "words": [
+      {
+        "text": "Beside",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "sewing",
+        "start": 0.457,
+        "end": 0.8
+      },
+      {
+        "text": "basket,",
+        "start": 0.869,
+        "end": 1.6
+      },
+      {
+        "text": "Mittens",
+        "start": 1.648,
+        "end": 2
+      },
+      {
+        "text": "has",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "9",
+        "start": 2.4,
+        "end": 2.64
+      },
+      {
+        "text": "buttons",
+        "start": 2.71,
+        "end": 3.2
+      },
+      {
+        "text": "and",
+        "start": 3.24,
+        "end": 3.36
+      },
+      {
+        "text": "finds",
+        "start": 3.44,
+        "end": 3.84
+      },
+      {
+        "text": "2",
+        "start": 3.92,
+        "end": 4
+      },
+      {
+        "text": "more.",
+        "start": 4.096,
+        "end": 4.56
+      },
+      {
+        "text": "How",
+        "start": 4.76,
+        "end": 5.36
+      },
+      {
+        "text": "many",
+        "start": 5.408,
+        "end": 5.6
+      },
+      {
+        "text": "now?",
+        "start": 5.68,
         "end": 6.64
       }
     ]
@@ -4214,6 +5139,171 @@
       }
     ]
   },
+  "Exploring the secret tunnel, Poppy finds 6 cardboard towers. Is that odd or even?": {
+    "file": "8e3724d867e36e344f986f50.mp3",
+    "words": [
+      {
+        "text": "Exploring",
+        "start": 0,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.58,
+        "end": 0.64
+      },
+      {
+        "text": "secret",
+        "start": 0.697,
+        "end": 1.04
+      },
+      {
+        "text": "tunnel,",
+        "start": 1.086,
+        "end": 1.68
+      },
+      {
+        "text": "Poppy",
+        "start": 1.74,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.147,
+        "end": 2.48
+      },
+      {
+        "text": "6",
+        "start": 2.64,
+        "end": 2.96
+      },
+      {
+        "text": "cardboard",
+        "start": 3.008,
+        "end": 3.44
+      },
+      {
+        "text": "towers.",
+        "start": 3.543,
+        "end": 4.24
+      },
+      {
+        "text": "Is",
+        "start": 4.453,
+        "end": 4.88
+      },
+      {
+        "text": "that",
+        "start": 4.928,
+        "end": 5.12
+      },
+      {
+        "text": "odd",
+        "start": 5.22,
+        "end": 5.52
+      },
+      {
+        "text": "or",
+        "start": 5.6,
+        "end": 5.76
+      },
+      {
+        "text": "even?",
+        "start": 5.856,
+        "end": 6.4
+      }
+    ]
+  },
+  "Exploring the secret tunnel, help Poppy count cardboard towers by fives: 10, 15, 20. What comes next?": {
+    "file": "46ba9da9c5e1a22c6077c28c.mp3",
+    "words": [
+      {
+        "text": "Exploring",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "secret",
+        "start": 0.606,
+        "end": 0.88
+      },
+      {
+        "text": "tunnel,",
+        "start": 0.937,
+        "end": 1.6
+      },
+      {
+        "text": "help",
+        "start": 1.632,
+        "end": 1.76
+      },
+      {
+        "text": "Poppy",
+        "start": 1.82,
+        "end": 2.08
+      },
+      {
+        "text": "count",
+        "start": 2.133,
+        "end": 2.4
+      },
+      {
+        "text": "cardboard",
+        "start": 2.448,
+        "end": 2.88
+      },
+      {
+        "text": "towers",
+        "start": 2.949,
+        "end": 3.36
+      },
+      {
+        "text": "by",
+        "start": 3.413,
+        "end": 3.52
+      },
+      {
+        "text": "fives:",
+        "start": 3.6,
+        "end": 4.64
+      },
+      {
+        "text": "10,",
+        "start": 4.84,
+        "end": 5.28
+      },
+      {
+        "text": "15,",
+        "start": 5.36,
+        "end": 6.16
+      },
+      {
+        "text": "20.",
+        "start": 6.24,
+        "end": 6.72
+      },
+      {
+        "text": "What",
+        "start": 6.8,
+        "end": 7.12
+      },
+      {
+        "text": "comes",
+        "start": 7.16,
+        "end": 7.36
+      },
+      {
+        "text": "next?",
+        "start": 7.44,
+        "end": 7.92
+      }
+    ]
+  },
   "Exploring the secret tunnel, help Poppy count cardboard towers by tens: 30, 40, 50. What comes next?": {
     "file": "5003057efb567de2dd42c00e.mp3",
     "words": [
@@ -4304,8 +5394,8 @@
       }
     ]
   },
-  "Filling the berry bowl, help Waffles count berries by tens: 10, 20, 30. What comes next?": {
-    "file": "f4260a75004e2c6305b8a249.mp3",
+  "Filling the berry bowl, Waffles counts 7 berries. 3 are put away. How many stay?": {
+    "file": "889887b810006868b60de80a.mp3",
     "words": [
       {
         "text": "Filling",
@@ -4328,64 +5418,209 @@
         "end": 1.28
       },
       {
-        "text": "help",
-        "start": 1.328,
-        "end": 1.52
-      },
-      {
         "text": "Waffles",
-        "start": 1.56,
-        "end": 2
+        "start": 1.32,
+        "end": 1.76
       },
       {
-        "text": "count",
-        "start": 2.04,
-        "end": 2.24
+        "text": "counts",
+        "start": 1.817,
+        "end": 2.16
       },
       {
-        "text": "berries",
-        "start": 2.29,
-        "end": 2.64
+        "text": "7",
+        "start": 2.32,
+        "end": 2.56
       },
       {
-        "text": "by",
-        "start": 2.693,
-        "end": 2.8
+        "text": "berries.",
+        "start": 2.63,
+        "end": 3.28
       },
       {
-        "text": "tens:",
-        "start": 2.912,
+        "text": "3",
+        "start": 3.68,
         "end": 3.92
       },
       {
-        "text": "10,",
-        "start": 4.08,
-        "end": 4.56
+        "text": "are",
+        "start": 3.98,
+        "end": 4.16
       },
       {
-        "text": "20,",
-        "start": 4.64,
-        "end": 5.36
+        "text": "put",
+        "start": 4.2,
+        "end": 4.32
       },
       {
-        "text": "30.",
-        "start": 5.44,
-        "end": 6.2
+        "text": "away.",
+        "start": 4.4,
+        "end": 4.8
       },
       {
-        "text": "What",
-        "start": 6.272,
-        "end": 6.56
+        "text": "How",
+        "start": 4.9,
+        "end": 5.2
       },
       {
-        "text": "comes",
-        "start": 6.6,
-        "end": 6.8
+        "text": "many",
+        "start": 5.248,
+        "end": 5.44
       },
       {
-        "text": "next?",
-        "start": 6.896,
-        "end": 7.44
+        "text": "stay?",
+        "start": 5.52,
+        "end": 6
+      }
+    ]
+  },
+  "Filling the berry bowl, Waffles finds 7 berries. Is that odd or even?": {
+    "file": "891fb958364b2998cb2a217f.mp3",
+    "words": [
+      {
+        "text": "Filling",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "berry",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "bowl,",
+        "start": 0.704,
+        "end": 1.28
+      },
+      {
+        "text": "Waffles",
+        "start": 1.32,
+        "end": 1.76
+      },
+      {
+        "text": "finds",
+        "start": 1.84,
+        "end": 2.24
+      },
+      {
+        "text": "7",
+        "start": 2.48,
+        "end": 2.8
+      },
+      {
+        "text": "berries.",
+        "start": 2.88,
+        "end": 3.52
+      },
+      {
+        "text": "Is",
+        "start": 3.707,
+        "end": 4.08
+      },
+      {
+        "text": "that",
+        "start": 4.128,
+        "end": 4.32
+      },
+      {
+        "text": "odd",
+        "start": 4.42,
+        "end": 4.72
+      },
+      {
+        "text": "or",
+        "start": 4.773,
+        "end": 4.88
+      },
+      {
+        "text": "even?",
+        "start": 4.96,
+        "end": 5.92
+      }
+    ]
+  },
+  "Filling the berry bowl, Waffles has 2 berries and finds 3 more. How many now?": {
+    "file": "deb04a772b9bc1ba05c0a3e3.mp3",
+    "words": [
+      {
+        "text": "Filling",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "berry",
+        "start": 0.44,
+        "end": 0.64
+      },
+      {
+        "text": "bowl,",
+        "start": 0.72,
+        "end": 1.36
+      },
+      {
+        "text": "Waffles",
+        "start": 1.4,
+        "end": 1.76
+      },
+      {
+        "text": "has",
+        "start": 1.84,
+        "end": 2.08
+      },
+      {
+        "text": "2",
+        "start": 2.16,
+        "end": 2.32
+      },
+      {
+        "text": "berries",
+        "start": 2.38,
+        "end": 2.8
+      },
+      {
+        "text": "and",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "finds",
+        "start": 3.04,
+        "end": 3.44
+      },
+      {
+        "text": "3",
+        "start": 3.52,
+        "end": 3.68
+      },
+      {
+        "text": "more.",
+        "start": 3.76,
+        "end": 4.16
+      },
+      {
+        "text": "How",
+        "start": 4.3,
+        "end": 4.72
+      },
+      {
+        "text": "many",
+        "start": 4.752,
+        "end": 4.88
+      },
+      {
+        "text": "now?",
+        "start": 4.98,
+        "end": 5.68
       }
     ]
   },
@@ -4599,8 +5834,8 @@
       }
     ]
   },
-  "Fluffing the pillows, Biscuit finds 12 pillows. Is that odd or even?": {
-    "file": "649b7bb97b61edf193e8aeff.mp3",
+  "Fluffing the pillows, Biscuit has 4 pillows and finds 1 more. How many now?": {
+    "file": "040acbf07dc8646ef73583f2.mp3",
     "words": [
       {
         "text": "Fluffing",
@@ -4623,49 +5858,349 @@
         "end": 1.6
       },
       {
+        "text": "has",
+        "start": 1.66,
+        "end": 1.84
+      },
+      {
+        "text": "4",
+        "start": 2,
+        "end": 2.16
+      },
+      {
+        "text": "pillows",
+        "start": 2.22,
+        "end": 2.64
+      },
+      {
+        "text": "and",
+        "start": 2.66,
+        "end": 2.72
+      },
+      {
         "text": "finds",
-        "start": 1.68,
-        "end": 2.08
+        "start": 2.787,
+        "end": 3.12
       },
       {
-        "text": "12",
-        "start": 2.24,
-        "end": 2.56
+        "text": "1",
+        "start": 3.2,
+        "end": 3.36
       },
       {
-        "text": "pillows.",
-        "start": 2.63,
-        "end": 3.2
-      },
-      {
-        "text": "Is",
-        "start": 3.413,
+        "text": "more.",
+        "start": 3.44,
         "end": 3.84
       },
       {
-        "text": "that",
-        "start": 3.888,
-        "end": 4.08
+        "text": "How",
+        "start": 4.04,
+        "end": 4.64
       },
       {
-        "text": "odd",
-        "start": 4.18,
-        "end": 4.48
+        "text": "many",
+        "start": 4.672,
+        "end": 4.8
       },
       {
-        "text": "or",
-        "start": 4.56,
-        "end": 4.72
-      },
-      {
-        "text": "even?",
-        "start": 4.8,
-        "end": 5.84
+        "text": "now?",
+        "start": 4.9,
+        "end": 5.44
       }
     ]
   },
-  "Following the flashing pattern, help Starlight count fireflies by fives: 15, 20, 25. What comes next?": {
-    "file": "19e557c1e1e8e78a31b17ab3.mp3",
+  "Fluffing the pillows, help Biscuit count pillows by tens: 30, 40, 50. What comes next?": {
+    "file": "4c11d470b92c2aa51c1699d8.mp3",
+    "words": [
+      {
+        "text": "Fluffing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "pillows,",
+        "start": 0.47,
+        "end": 1.2
+      },
+      {
+        "text": "help",
+        "start": 1.248,
+        "end": 1.44
+      },
+      {
+        "text": "Biscuit",
+        "start": 1.48,
+        "end": 1.76
+      },
+      {
+        "text": "count",
+        "start": 1.813,
+        "end": 2.08
+      },
+      {
+        "text": "pillows",
+        "start": 2.12,
+        "end": 2.4
+      },
+      {
+        "text": "by",
+        "start": 2.453,
+        "end": 2.56
+      },
+      {
+        "text": "tens:",
+        "start": 2.688,
+        "end": 3.84
+      },
+      {
+        "text": "30,",
+        "start": 3.92,
+        "end": 4.56
+      },
+      {
+        "text": "40,",
+        "start": 4.64,
+        "end": 5.36
+      },
+      {
+        "text": "50.",
+        "start": 5.52,
+        "end": 6
+      },
+      {
+        "text": "What",
+        "start": 6.128,
+        "end": 6.64
+      },
+      {
+        "text": "comes",
+        "start": 6.68,
+        "end": 6.88
+      },
+      {
+        "text": "next?",
+        "start": 6.96,
+        "end": 7.44
+      }
+    ]
+  },
+  "Fluffing the pillows, how many pillows did Biscuit find?": {
+    "file": "0c6155cdbabcab888695f4f3.mp3",
+    "words": [
+      {
+        "text": "Fluffing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "pillows,",
+        "start": 0.47,
+        "end": 1.04
+      },
+      {
+        "text": "how",
+        "start": 1.16,
+        "end": 1.52
+      },
+      {
+        "text": "many",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "pillows",
+        "start": 1.8,
+        "end": 2.08
+      },
+      {
+        "text": "did",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "Biscuit",
+        "start": 2.32,
+        "end": 2.64
+      },
+      {
+        "text": "find?",
+        "start": 2.72,
+        "end": 3.28
+      }
+    ]
+  },
+  "Following the flashing pattern, Starlight counts 10 fireflies. 3 are put away. How many stay?": {
+    "file": "4de486c1426b7db6325c0023.mp3",
+    "words": [
+      {
+        "text": "Following",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "flashing",
+        "start": 0.533,
+        "end": 0.96
+      },
+      {
+        "text": "pattern,",
+        "start": 1.03,
+        "end": 1.84
+      },
+      {
+        "text": "Starlight",
+        "start": 1.904,
+        "end": 2.4
+      },
+      {
+        "text": "counts",
+        "start": 2.457,
+        "end": 2.8
+      },
+      {
+        "text": "10",
+        "start": 2.88,
+        "end": 3.12
+      },
+      {
+        "text": "fireflies.",
+        "start": 3.216,
+        "end": 4.16
+      },
+      {
+        "text": "3",
+        "start": 4.72,
+        "end": 4.96
+      },
+      {
+        "text": "are",
+        "start": 5,
+        "end": 5.12
+      },
+      {
+        "text": "put",
+        "start": 5.16,
+        "end": 5.28
+      },
+      {
+        "text": "away.",
+        "start": 5.36,
+        "end": 5.76
+      },
+      {
+        "text": "How",
+        "start": 5.94,
+        "end": 6.48
+      },
+      {
+        "text": "many",
+        "start": 6.528,
+        "end": 6.72
+      },
+      {
+        "text": "stay?",
+        "start": 6.8,
+        "end": 7.28
+      }
+    ]
+  },
+  "Following the flashing pattern, Starlight has 5 fireflies and finds 2 more. How many now?": {
+    "file": "b3c791bc3dd06191af1f8c9a.mp3",
+    "words": [
+      {
+        "text": "Following",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "flashing",
+        "start": 0.533,
+        "end": 0.96
+      },
+      {
+        "text": "pattern,",
+        "start": 1.01,
+        "end": 1.68
+      },
+      {
+        "text": "Starlight",
+        "start": 1.744,
+        "end": 2.24
+      },
+      {
+        "text": "has",
+        "start": 2.3,
+        "end": 2.48
+      },
+      {
+        "text": "5",
+        "start": 2.56,
+        "end": 2.8
+      },
+      {
+        "text": "fireflies",
+        "start": 2.896,
+        "end": 3.6
+      },
+      {
+        "text": "and",
+        "start": 3.64,
+        "end": 3.76
+      },
+      {
+        "text": "finds",
+        "start": 3.853,
+        "end": 4.32
+      },
+      {
+        "text": "2",
+        "start": 4.4,
+        "end": 4.48
+      },
+      {
+        "text": "more.",
+        "start": 4.56,
+        "end": 4.96
+      },
+      {
+        "text": "How",
+        "start": 5.14,
+        "end": 5.68
+      },
+      {
+        "text": "many",
+        "start": 5.712,
+        "end": 5.84
+      },
+      {
+        "text": "now?",
+        "start": 5.94,
+        "end": 8.48
+      }
+    ]
+  },
+  "Following the flashing pattern, how many fireflies did Starlight find?": {
+    "file": "fb4e01d9a20442a0c2cc5fc4.mp3",
     "words": [
       {
         "text": "Following",
@@ -4685,72 +6220,127 @@
       {
         "text": "pattern,",
         "start": 0.94,
-        "end": 1.68
+        "end": 1.76
       },
       {
-        "text": "help",
-        "start": 1.728,
-        "end": 1.92
+        "text": "how",
+        "start": 1.78,
+        "end": 1.84
       },
       {
-        "text": "Starlight",
-        "start": 1.984,
-        "end": 2.4
-      },
-      {
-        "text": "count",
-        "start": 2.453,
-        "end": 2.72
+        "text": "many",
+        "start": 1.888,
+        "end": 2.08
       },
       {
         "text": "fireflies",
-        "start": 2.8,
+        "start": 2.16,
+        "end": 2.8
+      },
+      {
+        "text": "did",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "Starlight",
+        "start": 3.024,
         "end": 3.44
       },
       {
-        "text": "by",
-        "start": 3.493,
-        "end": 3.6
-      },
-      {
-        "text": "fives:",
-        "start": 3.72,
-        "end": 4.8
-      },
-      {
-        "text": "15,",
-        "start": 5.08,
-        "end": 5.6
-      },
-      {
-        "text": "20,",
-        "start": 5.68,
-        "end": 6.32
-      },
-      {
-        "text": "25.",
-        "start": 6.4,
-        "end": 7.12
-      },
-      {
-        "text": "What",
-        "start": 7.296,
-        "end": 8
-      },
-      {
-        "text": "comes",
-        "start": 8.053,
-        "end": 8.32
-      },
-      {
-        "text": "next?",
-        "start": 8.416,
-        "end": 8.88
+        "text": "find?",
+        "start": 3.536,
+        "end": 4.08
       }
     ]
   },
-  "Following the red yarn trail, Mittens counts 5 buttons. 1 is put away. How many stay?": {
-    "file": "f74fd486c722f1df8abc4d93.mp3",
+  "Following the red yarn trail, Mittens counts 11 buttons. 3 are put away. How many stay?": {
+    "file": "f1ebdc310fda4c122edb8317.mp3",
+    "words": [
+      {
+        "text": "Following",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "red",
+        "start": 0.56,
+        "end": 0.8
+      },
+      {
+        "text": "yarn",
+        "start": 0.864,
+        "end": 1.12
+      },
+      {
+        "text": "trail,",
+        "start": 1.187,
+        "end": 1.84
+      },
+      {
+        "text": "Mittens",
+        "start": 1.888,
+        "end": 2.24
+      },
+      {
+        "text": "counts",
+        "start": 2.297,
+        "end": 2.64
+      },
+      {
+        "text": "11",
+        "start": 2.72,
+        "end": 3.2
+      },
+      {
+        "text": "buttons.",
+        "start": 3.27,
+        "end": 3.84
+      },
+      {
+        "text": "3",
+        "start": 4.4,
+        "end": 4.72
+      },
+      {
+        "text": "are",
+        "start": 4.78,
+        "end": 4.96
+      },
+      {
+        "text": "put",
+        "start": 5,
+        "end": 5.12
+      },
+      {
+        "text": "away.",
+        "start": 5.2,
+        "end": 5.6
+      },
+      {
+        "text": "How",
+        "start": 5.72,
+        "end": 6.08
+      },
+      {
+        "text": "many",
+        "start": 6.128,
+        "end": 6.32
+      },
+      {
+        "text": "stay?",
+        "start": 6.4,
+        "end": 6.8
+      }
+    ]
+  },
+  "Following the red yarn trail, Mittens has 6 buttons and finds 3 more. How many now?": {
+    "file": "564a4ef359d12198aa753e0e.mp3",
     "words": [
       {
         "text": "Following",
@@ -4769,68 +6359,128 @@
       },
       {
         "text": "yarn",
-        "start": 0.784,
-        "end": 1.04
+        "start": 0.768,
+        "end": 0.96
       },
       {
         "text": "trail,",
-        "start": 1.107,
-        "end": 1.76
+        "start": 1.04,
+        "end": 1.68
       },
       {
         "text": "Mittens",
-        "start": 1.792,
-        "end": 2.16
+        "start": 1.728,
+        "end": 2.08
       },
       {
-        "text": "counts",
-        "start": 2.217,
-        "end": 2.56
+        "text": "has",
+        "start": 2.14,
+        "end": 2.32
       },
       {
-        "text": "5",
-        "start": 2.72,
-        "end": 3.04
+        "text": "6",
+        "start": 2.48,
+        "end": 2.72
       },
       {
-        "text": "buttons.",
-        "start": 3.11,
-        "end": 3.76
+        "text": "buttons",
+        "start": 2.78,
+        "end": 3.2
       },
       {
-        "text": "1",
-        "start": 4.32,
-        "end": 4.48
+        "text": "and",
+        "start": 3.28,
+        "end": 3.52
       },
       {
-        "text": "is",
-        "start": 4.533,
+        "text": "finds",
+        "start": 3.587,
+        "end": 3.92
+      },
+      {
+        "text": "3",
+        "start": 4,
+        "end": 4.16
+      },
+      {
+        "text": "more.",
+        "start": 4.24,
         "end": 4.64
       },
       {
-        "text": "put",
-        "start": 4.68,
-        "end": 4.8
-      },
-      {
-        "text": "away.",
-        "start": 4.88,
+        "text": "How",
+        "start": 4.8,
         "end": 5.28
       },
       {
-        "text": "How",
-        "start": 5.38,
-        "end": 5.68
+        "text": "many",
+        "start": 5.328,
+        "end": 5.52
+      },
+      {
+        "text": "now?",
+        "start": 5.62,
+        "end": 6.08
+      }
+    ]
+  },
+  "Following the red yarn trail, how many buttons did Mittens find?": {
+    "file": "385c7eccc95a1877c86eedbf.mp3",
+    "words": [
+      {
+        "text": "Following",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.44,
+        "end": 0.56
+      },
+      {
+        "text": "red",
+        "start": 0.62,
+        "end": 0.8
+      },
+      {
+        "text": "yarn",
+        "start": 0.864,
+        "end": 1.12
+      },
+      {
+        "text": "trail,",
+        "start": 1.187,
+        "end": 1.6
+      },
+      {
+        "text": "how",
+        "start": 1.72,
+        "end": 2.08
       },
       {
         "text": "many",
-        "start": 5.712,
-        "end": 5.84
+        "start": 2.112,
+        "end": 2.24
       },
       {
-        "text": "stay?",
-        "start": 5.936,
-        "end": 6.4
+        "text": "buttons",
+        "start": 2.31,
+        "end": 2.8
+      },
+      {
+        "text": "did",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "Mittens",
+        "start": 3.008,
+        "end": 3.36
+      },
+      {
+        "text": "find?",
+        "start": 3.456,
+        "end": 4
       }
     ]
   },
@@ -6064,8 +7714,8 @@
       }
     ]
   },
-  "Guiding the fireflies home, Moon counts 11 stars. 3 are put away. How many stay?": {
-    "file": "05dec2b6c5d08117eb4ffe01.mp3",
+  "Guiding the fireflies home, Moon counts 8 stars. 3 are put away. How many stay?": {
+    "file": "31e5aeb01269f51578214774.mp3",
     "words": [
       {
         "text": "Guiding",
@@ -6094,53 +7744,188 @@
       },
       {
         "text": "counts",
-        "start": 2.24,
-        "end": 2.72
+        "start": 2.217,
+        "end": 2.56
       },
       {
-        "text": "11",
-        "start": 2.8,
-        "end": 3.2
+        "text": "8",
+        "start": 2.72,
+        "end": 2.88
       },
       {
         "text": "stars.",
-        "start": 3.307,
-        "end": 3.92
+        "start": 2.987,
+        "end": 3.76
       },
       {
         "text": "3",
-        "start": 4.64,
-        "end": 4.96
+        "start": 4.32,
+        "end": 4.4
       },
       {
         "text": "are",
-        "start": 5,
-        "end": 5.12
+        "start": 4.44,
+        "end": 4.56
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 4.6,
+        "end": 4.72
       },
       {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 4.8,
+        "end": 5.2
       },
       {
         "text": "How",
-        "start": 5.94,
-        "end": 6.48
+        "start": 5.34,
+        "end": 5.76
       },
       {
         "text": "many",
-        "start": 6.528,
-        "end": 6.72
+        "start": 5.792,
+        "end": 5.92
       },
       {
         "text": "stay?",
-        "start": 6.8,
-        "end": 7.2
+        "start": 6.032,
+        "end": 6.56
+      }
+    ]
+  },
+  "Guiding the fireflies home, Moon has 3 stars and finds 4 more. How many now?": {
+    "file": "88332f4ae0d41eda32e480e0.mp3",
+    "words": [
+      {
+        "text": "Guiding",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "fireflies",
+        "start": 0.4,
+        "end": 0.96
+      },
+      {
+        "text": "home,",
+        "start": 1.04,
+        "end": 1.68
+      },
+      {
+        "text": "Moon",
+        "start": 1.728,
+        "end": 1.92
+      },
+      {
+        "text": "has",
+        "start": 2,
+        "end": 2.24
+      },
+      {
+        "text": "3",
+        "start": 2.32,
+        "end": 2.4
+      },
+      {
+        "text": "stars",
+        "start": 2.493,
+        "end": 2.96
+      },
+      {
+        "text": "and",
+        "start": 2.98,
+        "end": 3.04
+      },
+      {
+        "text": "finds",
+        "start": 3.107,
+        "end": 3.44
+      },
+      {
+        "text": "4",
+        "start": 3.6,
+        "end": 3.68
+      },
+      {
+        "text": "more.",
+        "start": 3.76,
+        "end": 4.16
+      },
+      {
+        "text": "How",
+        "start": 4.34,
+        "end": 4.88
+      },
+      {
+        "text": "many",
+        "start": 4.928,
+        "end": 5.12
+      },
+      {
+        "text": "now?",
+        "start": 5.22,
+        "end": 6.16
+      }
+    ]
+  },
+  "Guiding the fireflies home, how many stars did Moon find?": {
+    "file": "49d720f43bc6e84e6ec23d29.mp3",
+    "words": [
+      {
+        "text": "Guiding",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "fireflies",
+        "start": 0.416,
+        "end": 1.04
+      },
+      {
+        "text": "home,",
+        "start": 1.12,
+        "end": 1.84
+      },
+      {
+        "text": "how",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "many",
+        "start": 2.032,
+        "end": 2.16
+      },
+      {
+        "text": "stars",
+        "start": 2.267,
+        "end": 2.8
+      },
+      {
+        "text": "did",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "Moon",
+        "start": 3.024,
+        "end": 3.28
+      },
+      {
+        "text": "find?",
+        "start": 3.392,
+        "end": 3.92
       }
     ]
   },
@@ -6559,6 +8344,176 @@
       }
     ]
   },
+  "In the firefly meadow, help Starlight count fireflies by fives: 15, 20, 25. What comes next?": {
+    "file": "0541fb1c0df4479098d61786.mp3",
+    "words": [
+      {
+        "text": "In",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "firefly",
+        "start": 0.24,
+        "end": 0.8
+      },
+      {
+        "text": "meadow,",
+        "start": 0.853,
+        "end": 1.28
+      },
+      {
+        "text": "help",
+        "start": 1.376,
+        "end": 1.76
+      },
+      {
+        "text": "Starlight",
+        "start": 1.824,
+        "end": 2.32
+      },
+      {
+        "text": "count",
+        "start": 2.373,
+        "end": 2.64
+      },
+      {
+        "text": "fireflies",
+        "start": 2.72,
+        "end": 3.36
+      },
+      {
+        "text": "by",
+        "start": 3.413,
+        "end": 3.52
+      },
+      {
+        "text": "fives:",
+        "start": 3.6,
+        "end": 4.64
+      },
+      {
+        "text": "15,",
+        "start": 4.96,
+        "end": 5.52
+      },
+      {
+        "text": "20,",
+        "start": 5.6,
+        "end": 6.24
+      },
+      {
+        "text": "25.",
+        "start": 6.32,
+        "end": 7.04
+      },
+      {
+        "text": "What",
+        "start": 7.152,
+        "end": 7.6
+      },
+      {
+        "text": "comes",
+        "start": 7.64,
+        "end": 7.84
+      },
+      {
+        "text": "next?",
+        "start": 7.936,
+        "end": 8.48
+      }
+    ]
+  },
+  "In the firefly meadow, help Starlight count fireflies by tens: 10, 20, 30. What comes next?": {
+    "file": "9c883de307f46a69d6303f45.mp3",
+    "words": [
+      {
+        "text": "In",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "firefly",
+        "start": 0.24,
+        "end": 0.72
+      },
+      {
+        "text": "meadow,",
+        "start": 0.773,
+        "end": 1.52
+      },
+      {
+        "text": "help",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "Starlight",
+        "start": 1.84,
+        "end": 2.32
+      },
+      {
+        "text": "count",
+        "start": 2.373,
+        "end": 2.64
+      },
+      {
+        "text": "fireflies",
+        "start": 2.72,
+        "end": 3.36
+      },
+      {
+        "text": "by",
+        "start": 3.413,
+        "end": 3.52
+      },
+      {
+        "text": "tens:",
+        "start": 3.648,
+        "end": 4.8
+      },
+      {
+        "text": "10,",
+        "start": 4.88,
+        "end": 5.52
+      },
+      {
+        "text": "20,",
+        "start": 5.6,
+        "end": 6.24
+      },
+      {
+        "text": "30.",
+        "start": 6.4,
+        "end": 6.8
+      },
+      {
+        "text": "What",
+        "start": 6.896,
+        "end": 7.28
+      },
+      {
+        "text": "comes",
+        "start": 7.333,
+        "end": 7.6
+      },
+      {
+        "text": "next?",
+        "start": 7.68,
+        "end": 8.56
+      }
+    ]
+  },
   "Inside Poppy’s cardboard castle, Poppy finds 9 cardboard towers. Is that odd or even?": {
     "file": "cb03e0ba8916ef6254f47921.mp3",
     "words": [
@@ -6631,6 +8586,186 @@
         "text": "even?",
         "start": 6.816,
         "end": 7.36
+      }
+    ]
+  },
+  "Inside Poppy’s cardboard castle, help Poppy count cardboard towers by fives: 10, 15, 20. What comes next?": {
+    "file": "32f3574cdaa1b2970595ce01.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "Poppy’s",
+        "start": 0.48,
+        "end": 0.96
+      },
+      {
+        "text": "cardboard",
+        "start": 1.008,
+        "end": 1.44
+      },
+      {
+        "text": "castle,",
+        "start": 1.509,
+        "end": 2.32
+      },
+      {
+        "text": "help",
+        "start": 2.368,
+        "end": 2.56
+      },
+      {
+        "text": "Poppy",
+        "start": 2.62,
+        "end": 2.88
+      },
+      {
+        "text": "count",
+        "start": 2.933,
+        "end": 3.2
+      },
+      {
+        "text": "cardboard",
+        "start": 3.248,
+        "end": 3.68
+      },
+      {
+        "text": "towers",
+        "start": 3.749,
+        "end": 4.16
+      },
+      {
+        "text": "by",
+        "start": 4.24,
+        "end": 4.4
+      },
+      {
+        "text": "fives:",
+        "start": 4.44,
+        "end": 5.52
+      },
+      {
+        "text": "10,",
+        "start": 5.68,
+        "end": 6.08
+      },
+      {
+        "text": "15,",
+        "start": 6.16,
+        "end": 6.96
+      },
+      {
+        "text": "20.",
+        "start": 7.04,
+        "end": 7.68
+      },
+      {
+        "text": "What",
+        "start": 7.728,
+        "end": 7.92
+      },
+      {
+        "text": "comes",
+        "start": 7.96,
+        "end": 8.16
+      },
+      {
+        "text": "next?",
+        "start": 8.256,
+        "end": 8.72
+      }
+    ]
+  },
+  "Inside Poppy’s cardboard castle, help Poppy count cardboard towers by tens: 30, 40, 50. What comes next?": {
+    "file": "9fc2a91f249f70df1e9c034e.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "Poppy’s",
+        "start": 0.54,
+        "end": 0.96
+      },
+      {
+        "text": "cardboard",
+        "start": 1.008,
+        "end": 1.44
+      },
+      {
+        "text": "castle,",
+        "start": 1.52,
+        "end": 2.08
+      },
+      {
+        "text": "help",
+        "start": 2.208,
+        "end": 2.72
+      },
+      {
+        "text": "Poppy",
+        "start": 2.76,
+        "end": 3.04
+      },
+      {
+        "text": "count",
+        "start": 3.093,
+        "end": 3.36
+      },
+      {
+        "text": "cardboard",
+        "start": 3.416,
+        "end": 3.92
+      },
+      {
+        "text": "towers",
+        "start": 3.989,
+        "end": 4.4
+      },
+      {
+        "text": "by",
+        "start": 4.453,
+        "end": 4.56
+      },
+      {
+        "text": "tens:",
+        "start": 4.672,
+        "end": 5.28
+      },
+      {
+        "text": "30,",
+        "start": 5.68,
+        "end": 6.28
+      },
+      {
+        "text": "40,",
+        "start": 6.56,
+        "end": 6.801
+      },
+      {
+        "text": "50.",
+        "start": 7.2,
+        "end": 7.88
+      },
+      {
+        "text": "What",
+        "start": 7.936,
+        "end": 8.16
+      },
+      {
+        "text": "comes",
+        "start": 8.2,
+        "end": 8.4
+      },
+      {
+        "text": "next?",
+        "start": 8.48,
+        "end": 8.96
       }
     ]
   },
@@ -6714,8 +8849,343 @@
       }
     ]
   },
-  "Leaping across the stream, Ginger counts 12 stepping stones. 3 are put away. How many stay?": {
-    "file": "5ab5f5e256c464fb84f0116f.mp3",
+  "Inside the blanket fort, Biscuit finds 12 pillows. Is that odd or even?": {
+    "file": "5526b1a3f4cf053d91f0593f.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.44,
+        "end": 0.56
+      },
+      {
+        "text": "blanket",
+        "start": 0.61,
+        "end": 0.96
+      },
+      {
+        "text": "fort,",
+        "start": 1.024,
+        "end": 1.6
+      },
+      {
+        "text": "Biscuit",
+        "start": 1.64,
+        "end": 1.92
+      },
+      {
+        "text": "finds",
+        "start": 1.987,
+        "end": 2.32
+      },
+      {
+        "text": "12",
+        "start": 2.4,
+        "end": 2.72
+      },
+      {
+        "text": "pillows.",
+        "start": 2.79,
+        "end": 3.44
+      },
+      {
+        "text": "Is",
+        "start": 3.627,
+        "end": 4
+      },
+      {
+        "text": "that",
+        "start": 4.048,
+        "end": 4.24
+      },
+      {
+        "text": "odd",
+        "start": 4.34,
+        "end": 4.64
+      },
+      {
+        "text": "or",
+        "start": 4.747,
+        "end": 4.96
+      },
+      {
+        "text": "even?",
+        "start": 5.04,
+        "end": 6.16
+      }
+    ]
+  },
+  "Inside the blanket fort, help Biscuit count pillows by fives: 10, 15, 20. What comes next?": {
+    "file": "97b33ba3ac061045b56840e0.mp3",
+    "words": [
+      {
+        "text": "Inside",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "blanket",
+        "start": 0.53,
+        "end": 0.88
+      },
+      {
+        "text": "fort,",
+        "start": 0.944,
+        "end": 1.52
+      },
+      {
+        "text": "help",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "Biscuit",
+        "start": 1.8,
+        "end": 2.08
+      },
+      {
+        "text": "count",
+        "start": 2.133,
+        "end": 2.4
+      },
+      {
+        "text": "pillows",
+        "start": 2.45,
+        "end": 2.8
+      },
+      {
+        "text": "by",
+        "start": 2.853,
+        "end": 2.96
+      },
+      {
+        "text": "fives:",
+        "start": 3.04,
+        "end": 4.24
+      },
+      {
+        "text": "10,",
+        "start": 4.32,
+        "end": 4.96
+      },
+      {
+        "text": "15,",
+        "start": 5.04,
+        "end": 5.84
+      },
+      {
+        "text": "20.",
+        "start": 5.92,
+        "end": 6.32
+      },
+      {
+        "text": "What",
+        "start": 6.448,
+        "end": 6.96
+      },
+      {
+        "text": "comes",
+        "start": 7.013,
+        "end": 7.28
+      },
+      {
+        "text": "next?",
+        "start": 7.36,
+        "end": 7.84
+      }
+    ]
+  },
+  "Leaping across the stream, help Ginger count stepping stones by fives: 10, 15, 20. What comes next?": {
+    "file": "a284baac5d13faddd0b99120.mp3",
+    "words": [
+      {
+        "text": "Leaping",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "across",
+        "start": 0.297,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.68,
+        "end": 0.8
+      },
+      {
+        "text": "stream,",
+        "start": 0.857,
+        "end": 1.52
+      },
+      {
+        "text": "help",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "Ginger",
+        "start": 1.817,
+        "end": 2.16
+      },
+      {
+        "text": "count",
+        "start": 2.213,
+        "end": 2.48
+      },
+      {
+        "text": "stepping",
+        "start": 2.524,
+        "end": 2.88
+      },
+      {
+        "text": "stones",
+        "start": 2.937,
+        "end": 3.28
+      },
+      {
+        "text": "by",
+        "start": 3.333,
+        "end": 3.44
+      },
+      {
+        "text": "fives:",
+        "start": 3.52,
+        "end": 4.56
+      },
+      {
+        "text": "10,",
+        "start": 4.76,
+        "end": 5.2
+      },
+      {
+        "text": "15,",
+        "start": 5.28,
+        "end": 5.92
+      },
+      {
+        "text": "20.",
+        "start": 6.24,
+        "end": 6.72
+      },
+      {
+        "text": "What",
+        "start": 6.832,
+        "end": 7.28
+      },
+      {
+        "text": "comes",
+        "start": 7.333,
+        "end": 7.6
+      },
+      {
+        "text": "next?",
+        "start": 7.696,
+        "end": 8.24
+      }
+    ]
+  },
+  "Leaping across the stream, help Ginger count stepping stones by tens: 30, 40, 50. What comes next?": {
+    "file": "7c10caec9b53d519f9a7e203.mp3",
+    "words": [
+      {
+        "text": "Leaping",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "across",
+        "start": 0.377,
+        "end": 0.72
+      },
+      {
+        "text": "the",
+        "start": 0.74,
+        "end": 0.8
+      },
+      {
+        "text": "stream,",
+        "start": 0.857,
+        "end": 1.52
+      },
+      {
+        "text": "help",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "Ginger",
+        "start": 1.806,
+        "end": 2.08
+      },
+      {
+        "text": "count",
+        "start": 2.133,
+        "end": 2.4
+      },
+      {
+        "text": "stepping",
+        "start": 2.444,
+        "end": 2.8
+      },
+      {
+        "text": "stones",
+        "start": 2.857,
+        "end": 3.2
+      },
+      {
+        "text": "by",
+        "start": 3.253,
+        "end": 3.36
+      },
+      {
+        "text": "tens:",
+        "start": 3.472,
+        "end": 4.08
+      },
+      {
+        "text": "30,",
+        "start": 4.4,
+        "end": 4.92
+      },
+      {
+        "text": "40,",
+        "start": 5.04,
+        "end": 5.44
+      },
+      {
+        "text": "50.",
+        "start": 5.6,
+        "end": 6.08
+      },
+      {
+        "text": "What",
+        "start": 6.24,
+        "end": 6.88
+      },
+      {
+        "text": "comes",
+        "start": 6.92,
+        "end": 7.12
+      },
+      {
+        "text": "next?",
+        "start": 7.216,
+        "end": 7.76
+      }
+    ]
+  },
+  "Leaping across the stream, how many stepping stones did Ginger find?": {
+    "file": "d849e22ec455a5571cb4a022.mp3",
     "words": [
       {
         "text": "Leaping",
@@ -6735,67 +9205,197 @@
       {
         "text": "stream,",
         "start": 0.869,
-        "end": 1.6
+        "end": 1.52
       },
       {
-        "text": "Ginger",
-        "start": 1.646,
-        "end": 1.92
-      },
-      {
-        "text": "counts",
-        "start": 1.989,
-        "end": 2.4
-      },
-      {
-        "text": "12",
-        "start": 2.48,
-        "end": 2.88
-      },
-      {
-        "text": "stepping",
-        "start": 2.924,
-        "end": 3.28
-      },
-      {
-        "text": "stones.",
-        "start": 3.371,
-        "end": 4
-      },
-      {
-        "text": "3",
-        "start": 4.56,
-        "end": 4.88
-      },
-      {
-        "text": "are",
-        "start": 4.92,
-        "end": 5.04
-      },
-      {
-        "text": "put",
-        "start": 5.1,
-        "end": 5.28
-      },
-      {
-        "text": "away.",
-        "start": 5.36,
-        "end": 5.76
-      },
-      {
-        "text": "How",
-        "start": 5.92,
-        "end": 6.4
+        "text": "how",
+        "start": 1.56,
+        "end": 1.68
       },
       {
         "text": "many",
-        "start": 6.448,
-        "end": 6.64
+        "start": 1.728,
+        "end": 1.92
       },
       {
-        "text": "stay?",
-        "start": 6.72,
-        "end": 7.12
+        "text": "stepping",
+        "start": 1.964,
+        "end": 2.32
+      },
+      {
+        "text": "stones",
+        "start": 2.389,
+        "end": 2.8
+      },
+      {
+        "text": "did",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "Ginger",
+        "start": 3.017,
+        "end": 3.36
+      },
+      {
+        "text": "find?",
+        "start": 3.456,
+        "end": 4
+      }
+    ]
+  },
+  "Lighting the garden path, Starlight finds 10 fireflies. Is that odd or even?": {
+    "file": "6cb35043aa50f4cc9d089e5b.mp3",
+    "words": [
+      {
+        "text": "Lighting",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "garden",
+        "start": 0.446,
+        "end": 0.72
+      },
+      {
+        "text": "path,",
+        "start": 0.8,
+        "end": 1.44
+      },
+      {
+        "text": "Starlight",
+        "start": 1.504,
+        "end": 2
+      },
+      {
+        "text": "finds",
+        "start": 2.067,
+        "end": 2.4
+      },
+      {
+        "text": "10",
+        "start": 2.48,
+        "end": 2.72
+      },
+      {
+        "text": "fireflies.",
+        "start": 2.8,
+        "end": 3.68
+      },
+      {
+        "text": "Is",
+        "start": 3.92,
+        "end": 4.4
+      },
+      {
+        "text": "that",
+        "start": 4.432,
+        "end": 4.56
+      },
+      {
+        "text": "odd",
+        "start": 4.68,
+        "end": 5.04
+      },
+      {
+        "text": "or",
+        "start": 5.093,
+        "end": 5.2
+      },
+      {
+        "text": "even?",
+        "start": 5.296,
+        "end": 6.24
+      }
+    ]
+  },
+  "Lighting the garden path, help Starlight count fireflies by fives: 15, 20, 25. What comes next?": {
+    "file": "8ee4499a16446fe3bfe75a3c.mp3",
+    "words": [
+      {
+        "text": "Lighting",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "garden",
+        "start": 0.537,
+        "end": 0.88
+      },
+      {
+        "text": "path,",
+        "start": 0.96,
+        "end": 1.6
+      },
+      {
+        "text": "help",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "Starlight",
+        "start": 1.904,
+        "end": 2.32
+      },
+      {
+        "text": "count",
+        "start": 2.373,
+        "end": 2.64
+      },
+      {
+        "text": "fireflies",
+        "start": 2.72,
+        "end": 3.36
+      },
+      {
+        "text": "by",
+        "start": 3.413,
+        "end": 3.52
+      },
+      {
+        "text": "fives:",
+        "start": 3.64,
+        "end": 4.64
+      },
+      {
+        "text": "15,",
+        "start": 4.72,
+        "end": 5.36
+      },
+      {
+        "text": "20,",
+        "start": 5.44,
+        "end": 6
+      },
+      {
+        "text": "25.",
+        "start": 6.08,
+        "end": 6.8
+      },
+      {
+        "text": "What",
+        "start": 6.88,
+        "end": 7.2
+      },
+      {
+        "text": "comes",
+        "start": 7.24,
+        "end": 7.44
+      },
+      {
+        "text": "next?",
+        "start": 7.52,
+        "end": 8
       }
     ]
   },
@@ -7204,8 +9804,83 @@
       }
     ]
   },
-  "Listening in the moonlit garden, Moon has 6 stars and finds 3 more. How many now?": {
-    "file": "0824e052e9e72151c8841975.mp3",
+  "Listening in the moonlit garden, Moon finds 11 stars. Is that odd or even?": {
+    "file": "0a4054e6f47e3239cdf11bcd.mp3",
+    "words": [
+      {
+        "text": "Listening",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "in",
+        "start": 0.347,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "moonlit",
+        "start": 0.544,
+        "end": 0.96
+      },
+      {
+        "text": "garden,",
+        "start": 1.029,
+        "end": 1.76
+      },
+      {
+        "text": "Moon",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.173,
+        "end": 2.64
+      },
+      {
+        "text": "11",
+        "start": 2.641,
+        "end": 3.12
+      },
+      {
+        "text": "stars.",
+        "start": 3.24,
+        "end": 4
+      },
+      {
+        "text": "Is",
+        "start": 4.187,
+        "end": 4.56
+      },
+      {
+        "text": "that",
+        "start": 4.624,
+        "end": 4.88
+      },
+      {
+        "text": "odd",
+        "start": 5,
+        "end": 5.36
+      },
+      {
+        "text": "or",
+        "start": 5.44,
+        "end": 5.6
+      },
+      {
+        "text": "even?",
+        "start": 5.728,
+        "end": 6.32
+      }
+    ]
+  },
+  "Listening in the moonlit garden, help Moon count stars by fives: 5, 10, 15. What comes next?": {
+    "file": "f3f3a17ce06f676cf67cde56.mp3",
     "words": [
       {
         "text": "Listening",
@@ -7229,63 +9904,158 @@
       },
       {
         "text": "garden,",
-        "start": 1.097,
-        "end": 1.76
+        "start": 1.109,
+        "end": 1.84
       },
       {
-        "text": "Moon",
-        "start": 1.824,
+        "text": "help",
+        "start": 1.888,
         "end": 2.08
       },
       {
-        "text": "has",
-        "start": 2.16,
-        "end": 2.4
+        "text": "Moon",
+        "start": 2.128,
+        "end": 2.32
       },
       {
-        "text": "6",
-        "start": 2.48,
+        "text": "count",
+        "start": 2.373,
         "end": 2.64
       },
       {
         "text": "stars",
-        "start": 2.72,
+        "start": 2.707,
+        "end": 3.04
+      },
+      {
+        "text": "by",
+        "start": 3.093,
+        "end": 3.2
+      },
+      {
+        "text": "fives:",
+        "start": 3.28,
+        "end": 4.32
+      },
+      {
+        "text": "5,",
+        "start": 4.4,
+        "end": 4.96
+      },
+      {
+        "text": "10,",
+        "start": 5.04,
+        "end": 5.6
+      },
+      {
+        "text": "15.",
+        "start": 5.68,
+        "end": 6.24
+      },
+      {
+        "text": "What",
+        "start": 6.32,
+        "end": 6.64
+      },
+      {
+        "text": "comes",
+        "start": 6.68,
+        "end": 6.88
+      },
+      {
+        "text": "next?",
+        "start": 6.976,
+        "end": 7.44
+      }
+    ]
+  },
+  "Listening in the moonlit garden, help Moon count stars by tens: 20, 30, 40. What comes next?": {
+    "file": "5dce4efd8f34fb9743116ade.mp3",
+    "words": [
+      {
+        "text": "Listening",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "in",
+        "start": 0.347,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "moonlit",
+        "start": 0.544,
+        "end": 0.88
+      },
+      {
+        "text": "garden,",
+        "start": 0.949,
+        "end": 1.68
+      },
+      {
+        "text": "help",
+        "start": 1.728,
+        "end": 1.92
+      },
+      {
+        "text": "Moon",
+        "start": 1.984,
+        "end": 2.24
+      },
+      {
+        "text": "count",
+        "start": 2.293,
+        "end": 2.56
+      },
+      {
+        "text": "stars",
+        "start": 2.653,
         "end": 3.12
       },
       {
-        "text": "and",
-        "start": 3.16,
+        "text": "by",
+        "start": 3.173,
         "end": 3.28
       },
       {
-        "text": "finds",
-        "start": 3.36,
-        "end": 3.76
+        "text": "tens:",
+        "start": 3.408,
+        "end": 4.4
       },
       {
-        "text": "3",
-        "start": 3.84,
-        "end": 4
+        "text": "20,",
+        "start": 4.48,
+        "end": 5.2
       },
       {
-        "text": "more.",
-        "start": 4.08,
-        "end": 4.48
+        "text": "30,",
+        "start": 5.28,
+        "end": 5.84
       },
       {
-        "text": "How",
-        "start": 4.68,
-        "end": 5.28
+        "text": "40.",
+        "start": 5.92,
+        "end": 6.48
       },
       {
-        "text": "many",
-        "start": 5.328,
-        "end": 5.52
+        "text": "What",
+        "start": 6.592,
+        "end": 7.04
       },
       {
-        "text": "now?",
-        "start": 5.6,
-        "end": 6.08
+        "text": "comes",
+        "start": 7.08,
+        "end": 7.28
+      },
+      {
+        "text": "next?",
+        "start": 7.36,
+        "end": 7.84
       }
     ]
   },
@@ -8529,6 +11299,166 @@
       }
     ]
   },
+  "On a brave hallway trip, Biscuit counts 9 pillows. 3 are put away. How many stay?": {
+    "file": "c3bb08dc741a7b61209bfccb.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "a",
+        "start": 0.12,
+        "end": 0.16
+      },
+      {
+        "text": "brave",
+        "start": 0.227,
+        "end": 0.56
+      },
+      {
+        "text": "hallway",
+        "start": 0.61,
+        "end": 0.96
+      },
+      {
+        "text": "trip,",
+        "start": 1.04,
+        "end": 1.68
+      },
+      {
+        "text": "Biscuit",
+        "start": 1.72,
+        "end": 2.08
+      },
+      {
+        "text": "counts",
+        "start": 2.137,
+        "end": 2.48
+      },
+      {
+        "text": "9",
+        "start": 2.56,
+        "end": 2.88
+      },
+      {
+        "text": "pillows.",
+        "start": 2.96,
+        "end": 3.6
+      },
+      {
+        "text": "3",
+        "start": 4,
+        "end": 4.32
+      },
+      {
+        "text": "are",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "put",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
+        "text": "away.",
+        "start": 4.72,
+        "end": 5.12
+      },
+      {
+        "text": "How",
+        "start": 5.26,
+        "end": 5.68
+      },
+      {
+        "text": "many",
+        "start": 5.712,
+        "end": 5.84
+      },
+      {
+        "text": "stay?",
+        "start": 5.936,
+        "end": 6.4
+      }
+    ]
+  },
+  "On a brave hallway trip, Biscuit finds 9 pillows. Is that odd or even?": {
+    "file": "a44f9c4851e805e5ab372bbd.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "a",
+        "start": 0.16,
+        "end": 0.24
+      },
+      {
+        "text": "brave",
+        "start": 0.293,
+        "end": 0.56
+      },
+      {
+        "text": "hallway",
+        "start": 0.62,
+        "end": 1.04
+      },
+      {
+        "text": "trip,",
+        "start": 1.104,
+        "end": 1.68
+      },
+      {
+        "text": "Biscuit",
+        "start": 1.72,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.173,
+        "end": 2.64
+      },
+      {
+        "text": "9",
+        "start": 2.8,
+        "end": 3.2
+      },
+      {
+        "text": "pillows.",
+        "start": 3.27,
+        "end": 3.92
+      },
+      {
+        "text": "Is",
+        "start": 4.133,
+        "end": 4.56
+      },
+      {
+        "text": "that",
+        "start": 4.624,
+        "end": 4.88
+      },
+      {
+        "text": "odd",
+        "start": 4.98,
+        "end": 5.28
+      },
+      {
+        "text": "or",
+        "start": 5.44,
+        "end": 5.76
+      },
+      {
+        "text": "even?",
+        "start": 5.84,
+        "end": 6.32
+      }
+    ]
+  },
   "On a brave hallway trip, help Biscuit count pillows by fives: 10, 15, 20. What comes next?": {
     "file": "bc26edce0ad500ca4bf846df.mp3",
     "words": [
@@ -8619,8 +11549,8 @@
       }
     ]
   },
-  "On the morning slipper patrol, how many berry did Waffles find?": {
-    "file": "9bd7c8b8c70148887f2e41a9.mp3",
+  "On the morning slipper patrol, help Waffles count berries by fives: 15, 20, 25. What comes next?": {
+    "file": "1b95ffea1496e8305cfd2dc0.mp3",
     "words": [
       {
         "text": "On",
@@ -8644,38 +11574,388 @@
       },
       {
         "text": "patrol,",
-        "start": 1.04,
+        "start": 1.029,
         "end": 1.84
       },
       {
-        "text": "how",
-        "start": 1.88,
-        "end": 2
-      },
-      {
-        "text": "many",
-        "start": 2.048,
-        "end": 2.24
-      },
-      {
-        "text": "berry",
-        "start": 2.307,
-        "end": 2.64
-      },
-      {
-        "text": "did",
-        "start": 2.68,
-        "end": 2.8
+        "text": "help",
+        "start": 1.888,
+        "end": 2.08
       },
       {
         "text": "Waffles",
-        "start": 2.84,
+        "start": 2.12,
+        "end": 2.56
+      },
+      {
+        "text": "count",
+        "start": 2.6,
+        "end": 2.8
+      },
+      {
+        "text": "berries",
+        "start": 2.86,
         "end": 3.28
       },
       {
+        "text": "by",
+        "start": 3.333,
+        "end": 3.44
+      },
+      {
+        "text": "fives:",
+        "start": 3.52,
+        "end": 4.48
+      },
+      {
+        "text": "15,",
+        "start": 4.56,
+        "end": 5.12
+      },
+      {
+        "text": "20,",
+        "start": 5.2,
+        "end": 5.68
+      },
+      {
+        "text": "25.",
+        "start": 5.76,
+        "end": 6.48
+      },
+      {
+        "text": "What",
+        "start": 6.56,
+        "end": 6.88
+      },
+      {
+        "text": "comes",
+        "start": 6.92,
+        "end": 7.12
+      },
+      {
+        "text": "next?",
+        "start": 7.216,
+        "end": 7.76
+      }
+    ]
+  },
+  "On the morning slipper patrol, help Waffles count berries by tens: 10, 20, 30. What comes next?": {
+    "file": "e54cf472dde252f292ad5cc7.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "morning",
+        "start": 0.2,
+        "end": 0.48
+      },
+      {
+        "text": "slipper",
+        "start": 0.528,
+        "end": 0.8
+      },
+      {
+        "text": "patrol,",
+        "start": 0.88,
+        "end": 1.68
+      },
+      {
+        "text": "help",
+        "start": 1.744,
+        "end": 2
+      },
+      {
+        "text": "Waffles",
+        "start": 2.04,
+        "end": 2.48
+      },
+      {
+        "text": "count",
+        "start": 2.533,
+        "end": 2.8
+      },
+      {
+        "text": "berries",
+        "start": 2.85,
+        "end": 3.2
+      },
+      {
+        "text": "by",
+        "start": 3.253,
+        "end": 3.36
+      },
+      {
+        "text": "tens:",
+        "start": 3.488,
+        "end": 4.08
+      },
+      {
+        "text": "10,",
+        "start": 4.64,
+        "end": 5.12
+      },
+      {
+        "text": "20,",
+        "start": 5.28,
+        "end": 5.76
+      },
+      {
+        "text": "30.",
+        "start": 5.92,
+        "end": 6.24
+      },
+      {
+        "text": "What",
+        "start": 6.336,
+        "end": 6.72
+      },
+      {
+        "text": "comes",
+        "start": 6.76,
+        "end": 6.96
+      },
+      {
+        "text": "next?",
+        "start": 7.056,
+        "end": 7.6
+      }
+    ]
+  },
+  "On the morning slipper patrol, how many berries did Waffles find?": {
+    "file": "ecdfec6faa1a4a3c0d70ea2a.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "morning",
+        "start": 0.2,
+        "end": 0.48
+      },
+      {
+        "text": "slipper",
+        "start": 0.528,
+        "end": 0.8
+      },
+      {
+        "text": "patrol,",
+        "start": 0.88,
+        "end": 1.76
+      },
+      {
+        "text": "how",
+        "start": 1.78,
+        "end": 1.84
+      },
+      {
+        "text": "many",
+        "start": 1.872,
+        "end": 2
+      },
+      {
+        "text": "berries",
+        "start": 2.06,
+        "end": 2.48
+      },
+      {
+        "text": "did",
+        "start": 2.52,
+        "end": 2.64
+      },
+      {
+        "text": "Waffles",
+        "start": 2.68,
+        "end": 3.04
+      },
+      {
         "text": "find?",
-        "start": 3.376,
-        "end": 3.84
+        "start": 3.136,
+        "end": 3.6
+      }
+    ]
+  },
+  "On the sunny stepping stones, Ginger counts 12 stepping stones. 3 are put away. How many stay?": {
+    "file": "072acecc515bacac340ca3ff.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "sunny",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "stepping",
+        "start": 0.524,
+        "end": 0.88
+      },
+      {
+        "text": "stones,",
+        "start": 0.96,
+        "end": 1.68
+      },
+      {
+        "text": "Ginger",
+        "start": 1.737,
+        "end": 2.08
+      },
+      {
+        "text": "counts",
+        "start": 2.149,
+        "end": 2.56
+      },
+      {
+        "text": "12",
+        "start": 2.64,
+        "end": 3.2
+      },
+      {
+        "text": "stepping",
+        "start": 3.244,
+        "end": 3.6
+      },
+      {
+        "text": "stones.",
+        "start": 3.669,
+        "end": 4.24
+      },
+      {
+        "text": "3",
+        "start": 4.72,
+        "end": 5.12
+      },
+      {
+        "text": "are",
+        "start": 5.16,
+        "end": 5.28
+      },
+      {
+        "text": "put",
+        "start": 5.32,
+        "end": 5.44
+      },
+      {
+        "text": "away.",
+        "start": 5.52,
+        "end": 5.92
+      },
+      {
+        "text": "How",
+        "start": 6.06,
+        "end": 6.48
+      },
+      {
+        "text": "many",
+        "start": 6.528,
+        "end": 6.72
+      },
+      {
+        "text": "stay?",
+        "start": 6.8,
+        "end": 7.28
+      }
+    ]
+  },
+  "On the sunny stepping stones, Ginger finds 12 stepping stones. Is that odd or even?": {
+    "file": "206e20b4442c7044445e03b1.mp3",
+    "words": [
+      {
+        "text": "On",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "sunny",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "stepping",
+        "start": 0.524,
+        "end": 0.88
+      },
+      {
+        "text": "stones,",
+        "start": 0.949,
+        "end": 1.76
+      },
+      {
+        "text": "Ginger",
+        "start": 1.806,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.16,
+        "end": 2.56
+      },
+      {
+        "text": "12",
+        "start": 2.64,
+        "end": 3.04
+      },
+      {
+        "text": "stepping",
+        "start": 3.093,
+        "end": 3.52
+      },
+      {
+        "text": "stones.",
+        "start": 3.6,
+        "end": 4.16
+      },
+      {
+        "text": "Is",
+        "start": 4.347,
+        "end": 4.72
+      },
+      {
+        "text": "that",
+        "start": 4.768,
+        "end": 4.96
+      },
+      {
+        "text": "odd",
+        "start": 5.06,
+        "end": 5.36
+      },
+      {
+        "text": "or",
+        "start": 5.52,
+        "end": 5.84
+      },
+      {
+        "text": "even?",
+        "start": 5.92,
+        "end": 8.4
       }
     ]
   },
@@ -11964,8 +15244,8 @@
       }
     ]
   },
-  "Preparing paper crowns, help Poppy count cardboard towers by fives: 10, 15, 20. What comes next?": {
-    "file": "87e7420ab4bd315c17a36803.mp3",
+  "Preparing paper crowns, Poppy counts 6 cardboard towers. 2 are put away. How many stay?": {
+    "file": "902f5124a32d4ea297ca21bf.mp3",
     "words": [
       {
         "text": "Preparing",
@@ -11980,72 +15260,202 @@
       {
         "text": "crowns,",
         "start": 0.784,
-        "end": 1.52
-      },
-      {
-        "text": "help",
-        "start": 1.568,
-        "end": 1.76
+        "end": 1.6
       },
       {
         "text": "Poppy",
-        "start": 1.82,
-        "end": 2.08
+        "start": 1.64,
+        "end": 1.92
       },
       {
-        "text": "count",
-        "start": 2.133,
-        "end": 2.4
+        "text": "counts",
+        "start": 1.966,
+        "end": 2.24
+      },
+      {
+        "text": "6",
+        "start": 2.4,
+        "end": 2.64
       },
       {
         "text": "cardboard",
-        "start": 2.456,
-        "end": 2.96
+        "start": 2.688,
+        "end": 3.12
       },
       {
-        "text": "towers",
-        "start": 3.029,
-        "end": 3.44
+        "text": "towers.",
+        "start": 3.211,
+        "end": 3.92
       },
       {
-        "text": "by",
-        "start": 3.493,
-        "end": 3.6
+        "text": "2",
+        "start": 4.32,
+        "end": 4.48
       },
       {
-        "text": "fives:",
-        "start": 3.72,
-        "end": 4.4
+        "text": "are",
+        "start": 4.52,
+        "end": 4.64
       },
       {
-        "text": "10,",
-        "start": 4.88,
-        "end": 5.32
+        "text": "put",
+        "start": 4.66,
+        "end": 4.72
       },
       {
-        "text": "15,",
-        "start": 5.44,
+        "text": "away.",
+        "start": 4.8,
+        "end": 5.2
+      },
+      {
+        "text": "How",
+        "start": 5.34,
+        "end": 5.76
+      },
+      {
+        "text": "many",
+        "start": 5.808,
         "end": 6
       },
       {
-        "text": "20.",
+        "text": "stay?",
         "start": 6.08,
-        "end": 6.68
+        "end": 6.56
+      }
+    ]
+  },
+  "Preparing paper crowns, Poppy has 1 cardboard tower and finds 2 more. How many now?": {
+    "file": "1a16616f2853d75007d39e4e.mp3",
+    "words": [
+      {
+        "text": "Preparing",
+        "start": 0,
+        "end": 0.4
       },
       {
-        "text": "What",
-        "start": 6.72,
-        "end": 6.88
+        "text": "paper",
+        "start": 0.453,
+        "end": 0.72
       },
       {
-        "text": "comes",
-        "start": 6.92,
-        "end": 7.12
+        "text": "crowns,",
+        "start": 0.784,
+        "end": 1.6
       },
       {
-        "text": "next?",
-        "start": 7.216,
-        "end": 7.76
+        "text": "Poppy",
+        "start": 1.64,
+        "end": 1.92
+      },
+      {
+        "text": "has",
+        "start": 2,
+        "end": 2.24
+      },
+      {
+        "text": "1",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "cardboard",
+        "start": 2.536,
+        "end": 3.04
+      },
+      {
+        "text": "tower",
+        "start": 3.12,
+        "end": 3.52
+      },
+      {
+        "text": "and",
+        "start": 3.56,
+        "end": 3.68
+      },
+      {
+        "text": "finds",
+        "start": 3.773,
+        "end": 4.24
+      },
+      {
+        "text": "2",
+        "start": 4.32,
+        "end": 4.4
+      },
+      {
+        "text": "more.",
+        "start": 4.496,
+        "end": 4.96
+      },
+      {
+        "text": "How",
+        "start": 5.08,
+        "end": 5.44
+      },
+      {
+        "text": "many",
+        "start": 5.472,
+        "end": 5.6
+      },
+      {
+        "text": "now?",
+        "start": 5.72,
+        "end": 6.24
+      }
+    ]
+  },
+  "Preparing paper crowns, how many cardboard towers did Poppy find?": {
+    "file": "94c7b95437901866d181467a.mp3",
+    "words": [
+      {
+        "text": "Preparing",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "paper",
+        "start": 0.453,
+        "end": 0.72
+      },
+      {
+        "text": "crowns,",
+        "start": 0.784,
+        "end": 1.36
+      },
+      {
+        "text": "how",
+        "start": 1.48,
+        "end": 1.84
+      },
+      {
+        "text": "many",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "cardboard",
+        "start": 2.128,
+        "end": 2.56
+      },
+      {
+        "text": "towers",
+        "start": 2.651,
+        "end": 3.2
+      },
+      {
+        "text": "did",
+        "start": 3.24,
+        "end": 3.36
+      },
+      {
+        "text": "Poppy",
+        "start": 3.42,
+        "end": 3.68
+      },
+      {
+        "text": "find?",
+        "start": 3.776,
+        "end": 4.32
       }
     ]
   },
@@ -13129,8 +16539,158 @@
       }
     ]
   },
-  "Sharing a warm sunbeam, Pepper finds 12 sunbeams. Is that odd or even?": {
-    "file": "ec1d4f38010c1898c02cefc8.mp3",
+  "Sharing a warm sunbeam, Pepper counts 9 sunbeams. 3 are put away. How many stay?": {
+    "file": "5aed6f610d174e5b1258843a.mp3",
+    "words": [
+      {
+        "text": "Sharing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "a",
+        "start": 0.36,
+        "end": 0.4
+      },
+      {
+        "text": "warm",
+        "start": 0.464,
+        "end": 0.72
+      },
+      {
+        "text": "sunbeam,",
+        "start": 0.8,
+        "end": 1.68
+      },
+      {
+        "text": "Pepper",
+        "start": 1.726,
+        "end": 2
+      },
+      {
+        "text": "counts",
+        "start": 2.057,
+        "end": 2.4
+      },
+      {
+        "text": "9",
+        "start": 2.56,
+        "end": 2.96
+      },
+      {
+        "text": "sunbeams.",
+        "start": 3.06,
+        "end": 3.92
+      },
+      {
+        "text": "3",
+        "start": 4.32,
+        "end": 4.64
+      },
+      {
+        "text": "are",
+        "start": 4.7,
+        "end": 4.88
+      },
+      {
+        "text": "put",
+        "start": 4.92,
+        "end": 5.04
+      },
+      {
+        "text": "away.",
+        "start": 5.12,
+        "end": 5.52
+      },
+      {
+        "text": "How",
+        "start": 5.66,
+        "end": 6.08
+      },
+      {
+        "text": "many",
+        "start": 6.112,
+        "end": 6.24
+      },
+      {
+        "text": "stay?",
+        "start": 6.336,
+        "end": 6.88
+      }
+    ]
+  },
+  "Sharing a warm sunbeam, Pepper finds 9 sunbeams. Is that odd or even?": {
+    "file": "1f91f5c2325444b2100d4a39.mp3",
+    "words": [
+      {
+        "text": "Sharing",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "a",
+        "start": 0.32,
+        "end": 0.4
+      },
+      {
+        "text": "warm",
+        "start": 0.48,
+        "end": 0.8
+      },
+      {
+        "text": "sunbeam,",
+        "start": 0.88,
+        "end": 1.76
+      },
+      {
+        "text": "Pepper",
+        "start": 1.806,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.173,
+        "end": 2.64
+      },
+      {
+        "text": "9",
+        "start": 2.8,
+        "end": 3.2
+      },
+      {
+        "text": "sunbeams.",
+        "start": 3.3,
+        "end": 4.08
+      },
+      {
+        "text": "Is",
+        "start": 4.347,
+        "end": 4.88
+      },
+      {
+        "text": "that",
+        "start": 4.912,
+        "end": 5.04
+      },
+      {
+        "text": "odd",
+        "start": 5.14,
+        "end": 5.44
+      },
+      {
+        "text": "or",
+        "start": 5.6,
+        "end": 5.92
+      },
+      {
+        "text": "even?",
+        "start": 6.016,
+        "end": 6.56
+      }
+    ]
+  },
+  "Sharing a warm sunbeam, Pepper has 4 sunbeams and finds 1 more. How many now?": {
+    "file": "d13fabdc2a23442a33864373.mp3",
     "words": [
       {
         "text": "Sharing",
@@ -13150,52 +16710,62 @@
       {
         "text": "sunbeam,",
         "start": 0.82,
-        "end": 1.68
+        "end": 1.76
       },
       {
         "text": "Pepper",
-        "start": 1.714,
-        "end": 1.92
+        "start": 1.794,
+        "end": 2
+      },
+      {
+        "text": "has",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "4",
+        "start": 2.4,
+        "end": 2.56
+      },
+      {
+        "text": "sunbeams",
+        "start": 2.66,
+        "end": 3.28
+      },
+      {
+        "text": "and",
+        "start": 3.32,
+        "end": 3.44
       },
       {
         "text": "finds",
-        "start": 2,
-        "end": 2.4
+        "start": 3.507,
+        "end": 3.84
       },
       {
-        "text": "12",
-        "start": 2.48,
-        "end": 2.88
+        "text": "1",
+        "start": 3.92,
+        "end": 4.08
       },
       {
-        "text": "sunbeams.",
-        "start": 2.96,
-        "end": 3.96
+        "text": "more.",
+        "start": 4.16,
+        "end": 4.56
       },
       {
-        "text": "Is",
-        "start": 4.053,
-        "end": 4.24
+        "text": "How",
+        "start": 4.72,
+        "end": 5.2
       },
       {
-        "text": "that",
-        "start": 4.288,
-        "end": 4.48
+        "text": "many",
+        "start": 5.232,
+        "end": 5.36
       },
       {
-        "text": "odd",
-        "start": 4.56,
-        "end": 4.8
-      },
-      {
-        "text": "or",
-        "start": 4.853,
-        "end": 4.96
-      },
-      {
-        "text": "even?",
-        "start": 5.04,
-        "end": 5.52
+        "text": "now?",
+        "start": 5.46,
+        "end": 6.8
       }
     ]
   },
@@ -14034,6 +17604,156 @@
       }
     ]
   },
+  "Singing the growing song, Sprout counts 8 seedlings. 3 are put away. How many stay?": {
+    "file": "c9bf091bee513eed13713282.mp3",
+    "words": [
+      {
+        "text": "Singing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "growing",
+        "start": 0.53,
+        "end": 0.88
+      },
+      {
+        "text": "song,",
+        "start": 0.96,
+        "end": 1.6
+      },
+      {
+        "text": "Sprout",
+        "start": 1.66,
+        "end": 2
+      },
+      {
+        "text": "counts",
+        "start": 2.057,
+        "end": 2.4
+      },
+      {
+        "text": "8",
+        "start": 2.56,
+        "end": 2.8
+      },
+      {
+        "text": "seedlings.",
+        "start": 2.864,
+        "end": 3.68
+      },
+      {
+        "text": "3",
+        "start": 4.08,
+        "end": 4.4
+      },
+      {
+        "text": "are",
+        "start": 4.44,
+        "end": 4.56
+      },
+      {
+        "text": "put",
+        "start": 4.6,
+        "end": 4.72
+      },
+      {
+        "text": "away.",
+        "start": 4.8,
+        "end": 5.2
+      },
+      {
+        "text": "How",
+        "start": 5.38,
+        "end": 5.92
+      },
+      {
+        "text": "many",
+        "start": 5.952,
+        "end": 6.08
+      },
+      {
+        "text": "stay?",
+        "start": 6.176,
+        "end": 6.64
+      }
+    ]
+  },
+  "Singing the growing song, Sprout finds 8 seedlings. Is that odd or even?": {
+    "file": "4b46813182f3c2aa590e02b3.mp3",
+    "words": [
+      {
+        "text": "Singing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "growing",
+        "start": 0.45,
+        "end": 0.8
+      },
+      {
+        "text": "song,",
+        "start": 0.88,
+        "end": 1.52
+      },
+      {
+        "text": "Sprout",
+        "start": 1.58,
+        "end": 1.92
+      },
+      {
+        "text": "finds",
+        "start": 1.987,
+        "end": 2.32
+      },
+      {
+        "text": "8",
+        "start": 2.4,
+        "end": 2.56
+      },
+      {
+        "text": "seedlings.",
+        "start": 2.64,
+        "end": 3.44
+      },
+      {
+        "text": "Is",
+        "start": 3.573,
+        "end": 3.84
+      },
+      {
+        "text": "that",
+        "start": 3.888,
+        "end": 4.08
+      },
+      {
+        "text": "odd",
+        "start": 4.18,
+        "end": 4.48
+      },
+      {
+        "text": "or",
+        "start": 4.533,
+        "end": 4.64
+      },
+      {
+        "text": "even?",
+        "start": 4.736,
+        "end": 5.76
+      }
+    ]
+  },
   "Singing the growing song, help Sprout count seedlings by fives: 5, 10, 15. What comes next?": {
     "file": "a1b7c7abf6254c945124c6a8.mp3",
     "words": [
@@ -14126,6 +17846,86 @@
         "text": "Six!",
         "start": 0,
         "end": 0.8
+      }
+    ]
+  },
+  "Solve three puzzles to earn a treat.": {
+    "file": "ade86c1b95b4c9f1ea8faa8d.mp3",
+    "words": [
+      {
+        "text": "Solve",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "three",
+        "start": 0.28,
+        "end": 0.48
+      },
+      {
+        "text": "puzzles",
+        "start": 0.55,
+        "end": 1.04
+      },
+      {
+        "text": "to",
+        "start": 1.093,
+        "end": 1.2
+      },
+      {
+        "text": "earn",
+        "start": 1.232,
+        "end": 1.36
+      },
+      {
+        "text": "a",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "treat.",
+        "start": 1.64,
+        "end": 1.92
+      }
+    ]
+  },
+  "Solve three puzzles to turn the page.": {
+    "file": "8515ae39bd0ac14881f09399.mp3",
+    "words": [
+      {
+        "text": "Solve",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "three",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "puzzles",
+        "start": 0.63,
+        "end": 1.12
+      },
+      {
+        "text": "to",
+        "start": 1.173,
+        "end": 1.28
+      },
+      {
+        "text": "turn",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "page.",
+        "start": 1.696,
+        "end": 2.24
       }
     ]
   },
@@ -15959,6 +19759,166 @@
       }
     ]
   },
+  "Under the evening sky, Moon counts 11 stars. 3 are put away. How many stay?": {
+    "file": "16a5fb43e5df35c9fa1ae606.mp3",
+    "words": [
+      {
+        "text": "Under",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "evening",
+        "start": 0.37,
+        "end": 0.72
+      },
+      {
+        "text": "sky,",
+        "start": 0.84,
+        "end": 1.6
+      },
+      {
+        "text": "Moon",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "counts",
+        "start": 1.909,
+        "end": 2.32
+      },
+      {
+        "text": "11",
+        "start": 2.4,
+        "end": 2.8
+      },
+      {
+        "text": "stars.",
+        "start": 2.907,
+        "end": 3.6
+      },
+      {
+        "text": "3",
+        "start": 4.16,
+        "end": 4.48
+      },
+      {
+        "text": "are",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
+        "text": "put",
+        "start": 4.68,
+        "end": 4.8
+      },
+      {
+        "text": "away.",
+        "start": 4.896,
+        "end": 5.36
+      },
+      {
+        "text": "How",
+        "start": 5.54,
+        "end": 6.08
+      },
+      {
+        "text": "many",
+        "start": 6.128,
+        "end": 6.32
+      },
+      {
+        "text": "stay?",
+        "start": 6.416,
+        "end": 6.88
+      }
+    ]
+  },
+  "Under the evening sky, Moon has 6 stars and finds 3 more. How many now?": {
+    "file": "9129d443b6d02f56b5a29623.mp3",
+    "words": [
+      {
+        "text": "Under",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "evening",
+        "start": 0.37,
+        "end": 0.72
+      },
+      {
+        "text": "sky,",
+        "start": 0.86,
+        "end": 1.56
+      },
+      {
+        "text": "Moon",
+        "start": 1.616,
+        "end": 1.84
+      },
+      {
+        "text": "has",
+        "start": 1.9,
+        "end": 2.08
+      },
+      {
+        "text": "6",
+        "start": 2.32,
+        "end": 2.4
+      },
+      {
+        "text": "stars",
+        "start": 2.467,
+        "end": 2.8
+      },
+      {
+        "text": "and",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "finds",
+        "start": 3.027,
+        "end": 3.36
+      },
+      {
+        "text": "3",
+        "start": 3.6,
+        "end": 3.8
+      },
+      {
+        "text": "more.",
+        "start": 3.84,
+        "end": 4.08
+      },
+      {
+        "text": "How",
+        "start": 4.28,
+        "end": 4.88
+      },
+      {
+        "text": "many",
+        "start": 4.928,
+        "end": 5.12
+      },
+      {
+        "text": "now?",
+        "start": 5.2,
+        "end": 6.24
+      }
+    ]
+  },
   "Under the evening sky, how many stars did Moon find?": {
     "file": "f4b1fffab9cad17ccbd7b5d3.mp3",
     "words": [
@@ -16134,8 +20094,93 @@
       }
     ]
   },
-  "Warming stones for friends, Ginger finds 12 stepping stones. Is that odd or even?": {
-    "file": "4cefc136666390648801a97d.mp3",
+  "Warming stones for friends, Ginger counts 9 stepping stones. 3 are put away. How many stay?": {
+    "file": "489253ee11891977ea9c6761.mp3",
+    "words": [
+      {
+        "text": "Warming",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "stones",
+        "start": 0.469,
+        "end": 0.88
+      },
+      {
+        "text": "for",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "friends,",
+        "start": 1.11,
+        "end": 2
+      },
+      {
+        "text": "Ginger",
+        "start": 2.046,
+        "end": 2.32
+      },
+      {
+        "text": "counts",
+        "start": 2.377,
+        "end": 2.72
+      },
+      {
+        "text": "9",
+        "start": 2.88,
+        "end": 3.2
+      },
+      {
+        "text": "stepping",
+        "start": 3.253,
+        "end": 3.68
+      },
+      {
+        "text": "stones.",
+        "start": 3.76,
+        "end": 4.4
+      },
+      {
+        "text": "3",
+        "start": 4.72,
+        "end": 5.04
+      },
+      {
+        "text": "are",
+        "start": 5.1,
+        "end": 5.28
+      },
+      {
+        "text": "put",
+        "start": 5.32,
+        "end": 5.44
+      },
+      {
+        "text": "away.",
+        "start": 5.52,
+        "end": 5.92
+      },
+      {
+        "text": "How",
+        "start": 6.04,
+        "end": 6.4
+      },
+      {
+        "text": "many",
+        "start": 6.432,
+        "end": 6.56
+      },
+      {
+        "text": "stay?",
+        "start": 6.656,
+        "end": 7.2
+      }
+    ]
+  },
+  "Warming stones for friends, Ginger finds 9 stepping stones. Is that odd or even?": {
+    "file": "577f37dc79626f33b84a32e2.mp3",
     "words": [
       {
         "text": "Warming",
@@ -16154,7 +20199,7 @@
       },
       {
         "text": "friends,",
-        "start": 1.02,
+        "start": 1.03,
         "end": 1.76
       },
       {
@@ -16168,49 +20213,134 @@
         "end": 2.56
       },
       {
-        "text": "12",
-        "start": 2.561,
-        "end": 2.88
+        "text": "9",
+        "start": 2.64,
+        "end": 3.04
       },
       {
         "text": "stepping",
-        "start": 2.924,
-        "end": 3.28
+        "start": 3.093,
+        "end": 3.52
       },
       {
         "text": "stones.",
-        "start": 3.36,
-        "end": 3.92
+        "start": 3.6,
+        "end": 4.16
       },
       {
         "text": "Is",
-        "start": 4.107,
-        "end": 4.48
-      },
-      {
-        "text": "that",
-        "start": 4.528,
+        "start": 4.347,
         "end": 4.72
       },
       {
+        "text": "that",
+        "start": 4.752,
+        "end": 4.88
+      },
+      {
         "text": "odd",
-        "start": 4.82,
-        "end": 5.12
+        "start": 4.98,
+        "end": 5.28
       },
       {
         "text": "or",
-        "start": 5.227,
-        "end": 5.44
+        "start": 5.36,
+        "end": 5.52
       },
       {
         "text": "even?",
-        "start": 5.536,
-        "end": 6.08
+        "start": 5.616,
+        "end": 8.16
       }
     ]
   },
-  "Watering the seedlings, Sprout finds 11 seedlings. Is that odd or even?": {
-    "file": "3e8fa8efab2ce7c89f4cccc0.mp3",
+  "Warming stones for friends, Ginger has 4 stepping stones and finds 1 more. How many now?": {
+    "file": "8f233d3625f880a4e331b7b3.mp3",
+    "words": [
+      {
+        "text": "Warming",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "stones",
+        "start": 0.389,
+        "end": 0.8
+      },
+      {
+        "text": "for",
+        "start": 0.84,
+        "end": 0.96
+      },
+      {
+        "text": "friends,",
+        "start": 1.03,
+        "end": 1.84
+      },
+      {
+        "text": "Ginger",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "has",
+        "start": 2.3,
+        "end": 2.48
+      },
+      {
+        "text": "4",
+        "start": 2.56,
+        "end": 2.8
+      },
+      {
+        "text": "stepping",
+        "start": 2.844,
+        "end": 3.2
+      },
+      {
+        "text": "stones",
+        "start": 3.28,
+        "end": 3.76
+      },
+      {
+        "text": "and",
+        "start": 3.78,
+        "end": 3.84
+      },
+      {
+        "text": "finds",
+        "start": 3.907,
+        "end": 4.24
+      },
+      {
+        "text": "1",
+        "start": 4.32,
+        "end": 4.4
+      },
+      {
+        "text": "more.",
+        "start": 4.48,
+        "end": 4.88
+      },
+      {
+        "text": "How",
+        "start": 5.04,
+        "end": 5.52
+      },
+      {
+        "text": "many",
+        "start": 5.552,
+        "end": 5.68
+      },
+      {
+        "text": "now?",
+        "start": 5.78,
+        "end": 6.16
+      }
+    ]
+  },
+  "Watering the seedlings, Sprout has 3 seedlings and finds 4 more. How many now?": {
+    "file": "07eff7ab8e6db91c7f9bde23.mp3",
     "words": [
       {
         "text": "Watering",
@@ -16224,58 +20354,198 @@
       },
       {
         "text": "seedlings,",
-        "start": 0.528,
+        "start": 0.544,
         "end": 1.36
       },
       {
         "text": "Sprout",
-        "start": 1.4,
-        "end": 1.68
+        "start": 1.42,
+        "end": 1.76
+      },
+      {
+        "text": "has",
+        "start": 1.82,
+        "end": 2
+      },
+      {
+        "text": "3",
+        "start": 2.08,
+        "end": 2.24
+      },
+      {
+        "text": "seedlings",
+        "start": 2.304,
+        "end": 2.88
+      },
+      {
+        "text": "and",
+        "start": 2.92,
+        "end": 3.04
       },
       {
         "text": "finds",
-        "start": 1.747,
-        "end": 2.08
+        "start": 3.107,
+        "end": 3.44
       },
       {
-        "text": "11",
-        "start": 2.16,
-        "end": 2.48
+        "text": "4",
+        "start": 3.52,
+        "end": 3.76
       },
       {
-        "text": "seedlings.",
-        "start": 2.544,
-        "end": 3.28
+        "text": "more.",
+        "start": 3.84,
+        "end": 4.24
       },
       {
-        "text": "Is",
-        "start": 3.467,
-        "end": 3.84
+        "text": "How",
+        "start": 4.4,
+        "end": 4.88
       },
       {
-        "text": "that",
-        "start": 3.888,
-        "end": 4.08
+        "text": "many",
+        "start": 4.928,
+        "end": 5.12
       },
       {
-        "text": "odd",
-        "start": 4.18,
-        "end": 4.48
-      },
-      {
-        "text": "or",
-        "start": 4.533,
-        "end": 4.64
-      },
-      {
-        "text": "even?",
-        "start": 4.736,
+        "text": "now?",
+        "start": 5.2,
         "end": 7.44
       }
     ]
   },
-  "Welcoming the butterflies, how many butterflies did Clover find?": {
-    "file": "a1122e37c631b72b2f454081.mp3",
+  "Watering the seedlings, help Sprout count seedlings by tens: 20, 30, 40. What comes next?": {
+    "file": "340d891d687af78935dd37aa.mp3",
+    "words": [
+      {
+        "text": "Watering",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "seedlings,",
+        "start": 0.544,
+        "end": 1.52
+      },
+      {
+        "text": "help",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "Sprout",
+        "start": 1.8,
+        "end": 2.08
+      },
+      {
+        "text": "count",
+        "start": 2.133,
+        "end": 2.4
+      },
+      {
+        "text": "seedlings",
+        "start": 2.464,
+        "end": 2.96
+      },
+      {
+        "text": "by",
+        "start": 3.013,
+        "end": 3.12
+      },
+      {
+        "text": "tens:",
+        "start": 3.232,
+        "end": 4.16
+      },
+      {
+        "text": "20,",
+        "start": 4.36,
+        "end": 4.88
+      },
+      {
+        "text": "30,",
+        "start": 4.96,
+        "end": 5.52
+      },
+      {
+        "text": "40.",
+        "start": 5.68,
+        "end": 6.08
+      },
+      {
+        "text": "What",
+        "start": 6.144,
+        "end": 6.4
+      },
+      {
+        "text": "comes",
+        "start": 6.453,
+        "end": 6.72
+      },
+      {
+        "text": "next?",
+        "start": 6.8,
+        "end": 7.28
+      }
+    ]
+  },
+  "Watering the seedlings, how many seedlings did Sprout find?": {
+    "file": "0c6190f2d3297c03d90c7534.mp3",
+    "words": [
+      {
+        "text": "Watering",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "seedlings,",
+        "start": 0.544,
+        "end": 1.44
+      },
+      {
+        "text": "how",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "many",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "seedlings",
+        "start": 1.904,
+        "end": 2.4
+      },
+      {
+        "text": "did",
+        "start": 2.44,
+        "end": 2.56
+      },
+      {
+        "text": "Sprout",
+        "start": 2.62,
+        "end": 2.88
+      },
+      {
+        "text": "find?",
+        "start": 2.992,
+        "end": 3.52
+      }
+    ]
+  },
+  "Welcoming the butterflies, Clover counts 5 butterflies. 1 is put away. How many stay?": {
+    "file": "14f180a60c9dc22ec721d2ed.mp3",
     "words": [
       {
         "text": "Welcoming",
@@ -16284,43 +20554,213 @@
       },
       {
         "text": "the",
-        "start": 0.44,
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "butterflies,",
+        "start": 0.547,
+        "end": 1.52
+      },
+      {
+        "text": "Clover",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "counts",
+        "start": 1.977,
+        "end": 2.32
+      },
+      {
+        "text": "5",
+        "start": 2.48,
+        "end": 2.72
+      },
+      {
+        "text": "butterflies.",
+        "start": 2.787,
+        "end": 3.6
+      },
+      {
+        "text": "1",
+        "start": 4.24,
+        "end": 4.48
+      },
+      {
+        "text": "is",
+        "start": 4.533,
+        "end": 4.64
+      },
+      {
+        "text": "put",
+        "start": 4.7,
+        "end": 4.88
+      },
+      {
+        "text": "away.",
+        "start": 4.96,
+        "end": 5.36
+      },
+      {
+        "text": "How",
+        "start": 5.5,
+        "end": 5.92
+      },
+      {
+        "text": "many",
+        "start": 5.952,
+        "end": 6.08
+      },
+      {
+        "text": "stay?",
+        "start": 6.176,
+        "end": 6.72
+      }
+    ]
+  },
+  "Welcoming the butterflies, Clover finds 5 butterflies. Is that odd or even?": {
+    "file": "3c1c390369339d94e5f4e6dc.mp3",
+    "words": [
+      {
+        "text": "Welcoming",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
+        "text": "butterflies,",
+        "start": 0.54,
+        "end": 1.52
+      },
+      {
+        "text": "Clover",
+        "start": 1.566,
+        "end": 1.84
+      },
+      {
+        "text": "finds",
+        "start": 1.92,
+        "end": 2.32
+      },
+      {
+        "text": "5",
+        "start": 2.4,
+        "end": 2.8
+      },
+      {
+        "text": "butterflies.",
+        "start": 2.867,
+        "end": 3.68
+      },
+      {
+        "text": "Is",
+        "start": 3.92,
+        "end": 4.4
+      },
+      {
+        "text": "that",
+        "start": 4.448,
+        "end": 4.64
+      },
+      {
+        "text": "odd",
+        "start": 4.74,
+        "end": 5.04
+      },
+      {
+        "text": "or",
+        "start": 5.2,
+        "end": 5.52
+      },
+      {
+        "text": "even?",
+        "start": 5.6,
+        "end": 6.08
+      }
+    ]
+  },
+  "Welcoming the butterflies, help Clover count butterflies by fives: 5, 10, 15. What comes next?": {
+    "file": "3d1068cfd2da2b40b92a173b.mp3",
+    "words": [
+      {
+        "text": "Welcoming",
+        "start": 0,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
         "end": 0.56
       },
       {
         "text": "butterflies,",
-        "start": 0.62,
-        "end": 1.68
+        "start": 0.627,
+        "end": 1.6
       },
       {
-        "text": "how",
-        "start": 1.7,
-        "end": 1.76
-      },
-      {
-        "text": "many",
-        "start": 1.808,
-        "end": 2
-      },
-      {
-        "text": "butterflies",
-        "start": 2.047,
-        "end": 2.56
-      },
-      {
-        "text": "did",
-        "start": 2.6,
-        "end": 2.72
+        "text": "help",
+        "start": 1.648,
+        "end": 1.84
       },
       {
         "text": "Clover",
-        "start": 2.777,
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "count",
+        "start": 2.293,
+        "end": 2.56
+      },
+      {
+        "text": "butterflies",
+        "start": 2.607,
         "end": 3.12
       },
       {
-        "text": "find?",
-        "start": 3.216,
-        "end": 3.68
+        "text": "by",
+        "start": 3.173,
+        "end": 3.28
+      },
+      {
+        "text": "fives:",
+        "start": 3.4,
+        "end": 4.48
+      },
+      {
+        "text": "5,",
+        "start": 4.56,
+        "end": 5.2
+      },
+      {
+        "text": "10,",
+        "start": 5.28,
+        "end": 5.92
+      },
+      {
+        "text": "15.",
+        "start": 6,
+        "end": 6.64
+      },
+      {
+        "text": "What",
+        "start": 6.816,
+        "end": 7.52
+      },
+      {
+        "text": "comes",
+        "start": 7.573,
+        "end": 7.84
+      },
+      {
+        "text": "next?",
+        "start": 7.936,
+        "end": 8.48
       }
     ]
   },
@@ -16724,8 +21164,93 @@
       }
     ]
   },
-  "While checking the weather, Pepper counts 12 sunbeams. 3 are put away. How many stay?": {
-    "file": "5a2cdedd505d1dd86d672ad2.mp3",
+  "While checking the weather, help Pepper count sunbeams by fives: 10, 15, 20. What comes next?": {
+    "file": "6c61d253647e08f62dd50cda.mp3",
+    "words": [
+      {
+        "text": "While",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "checking",
+        "start": 0.276,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.58,
+        "end": 0.64
+      },
+      {
+        "text": "weather,",
+        "start": 0.69,
+        "end": 1.36
+      },
+      {
+        "text": "help",
+        "start": 1.408,
+        "end": 1.6
+      },
+      {
+        "text": "Pepper",
+        "start": 1.646,
+        "end": 1.92
+      },
+      {
+        "text": "count",
+        "start": 1.973,
+        "end": 2.24
+      },
+      {
+        "text": "sunbeams",
+        "start": 2.32,
+        "end": 2.88
+      },
+      {
+        "text": "by",
+        "start": 2.96,
+        "end": 3.12
+      },
+      {
+        "text": "fives:",
+        "start": 3.2,
+        "end": 3.84
+      },
+      {
+        "text": "10,",
+        "start": 4.4,
+        "end": 4.96
+      },
+      {
+        "text": "15,",
+        "start": 5.12,
+        "end": 5.8
+      },
+      {
+        "text": "20.",
+        "start": 5.92,
+        "end": 6.4
+      },
+      {
+        "text": "What",
+        "start": 6.512,
+        "end": 6.96
+      },
+      {
+        "text": "comes",
+        "start": 7,
+        "end": 7.2
+      },
+      {
+        "text": "next?",
+        "start": 7.296,
+        "end": 7.84
+      }
+    ]
+  },
+  "While checking the weather, help Pepper count sunbeams by tens: 30, 40, 50. What comes next?": {
+    "file": "89c0ac4dce71d973b67ee542.mp3",
     "words": [
       {
         "text": "While",
@@ -16739,82 +21264,217 @@
       },
       {
         "text": "the",
-        "start": 0.5,
-        "end": 0.56
+        "start": 0.52,
+        "end": 0.64
       },
       {
         "text": "weather,",
-        "start": 0.61,
-        "end": 1.28
+        "start": 0.68,
+        "end": 1.36
+      },
+      {
+        "text": "help",
+        "start": 1.408,
+        "end": 1.6
       },
       {
         "text": "Pepper",
-        "start": 1.314,
-        "end": 1.52
-      },
-      {
-        "text": "counts",
-        "start": 1.577,
+        "start": 1.646,
         "end": 1.92
       },
       {
-        "text": "12",
-        "start": 2,
-        "end": 2.4
+        "text": "count",
+        "start": 1.973,
+        "end": 2.24
       },
       {
-        "text": "sunbeams.",
-        "start": 2.48,
-        "end": 3.28
+        "text": "sunbeams",
+        "start": 2.34,
+        "end": 2.96
       },
       {
-        "text": "3",
-        "start": 3.76,
-        "end": 4.08
+        "text": "by",
+        "start": 3.013,
+        "end": 3.12
       },
       {
-        "text": "are",
-        "start": 4.12,
-        "end": 4.24
+        "text": "tens:",
+        "start": 3.248,
+        "end": 4.4
       },
       {
-        "text": "put",
-        "start": 4.3,
-        "end": 4.48
+        "text": "30,",
+        "start": 4.48,
+        "end": 5.04
       },
       {
-        "text": "away.",
-        "start": 4.56,
-        "end": 5.24
+        "text": "40,",
+        "start": 5.12,
+        "end": 5.68
       },
       {
-        "text": "How",
-        "start": 5.33,
-        "end": 5.6
+        "text": "50.",
+        "start": 5.84,
+        "end": 6.32
       },
       {
-        "text": "many",
-        "start": 5.648,
-        "end": 5.84
+        "text": "What",
+        "start": 6.432,
+        "end": 6.88
       },
       {
-        "text": "stay?",
-        "start": 5.936,
-        "end": 6.48
+        "text": "comes",
+        "start": 6.92,
+        "end": 7.12
+      },
+      {
+        "text": "next?",
+        "start": 7.2,
+        "end": 7.68
       }
     ]
   },
-  "While tidying the button tin, Mittens has 9 buttons and finds 2 more. How many now?": {
-    "file": "13f7e3fbac2173523ae098c8.mp3",
+  "While checking the weather, how many sunbeams did Pepper find?": {
+    "file": "fb69a769c7fb0e4edbb635e6.mp3",
     "words": [
       {
         "text": "While",
         "start": 0,
-        "end": 0.24
+        "end": 0.16
+      },
+      {
+        "text": "checking",
+        "start": 0.196,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "text": "weather,",
+        "start": 0.69,
+        "end": 1.28
+      },
+      {
+        "text": "how",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "many",
+        "start": 1.488,
+        "end": 1.68
+      },
+      {
+        "text": "sunbeams",
+        "start": 1.76,
+        "end": 2.32
+      },
+      {
+        "text": "did",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "Pepper",
+        "start": 2.526,
+        "end": 2.8
+      },
+      {
+        "text": "find?",
+        "start": 2.896,
+        "end": 3.36
+      }
+    ]
+  },
+  "While tidying the button tin, Mittens finds 5 buttons. Is that odd or even?": {
+    "file": "c1cff76367c76ff5657f20bf.mp3",
+    "words": [
+      {
+        "text": "While",
+        "start": 0,
+        "end": 0.16
       },
       {
         "text": "tidying",
-        "start": 0.3,
+        "start": 0.24,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.68,
+        "end": 0.8
+      },
+      {
+        "text": "button",
+        "start": 0.834,
+        "end": 1.04
+      },
+      {
+        "text": "tin,",
+        "start": 1.14,
+        "end": 1.76
+      },
+      {
+        "text": "Mittens",
+        "start": 1.792,
+        "end": 2.08
+      },
+      {
+        "text": "finds",
+        "start": 2.16,
+        "end": 2.56
+      },
+      {
+        "text": "5",
+        "start": 2.88,
+        "end": 2.96
+      },
+      {
+        "text": "buttons.",
+        "start": 3.03,
+        "end": 3.6
+      },
+      {
+        "text": "Is",
+        "start": 3.84,
+        "end": 4.32
+      },
+      {
+        "text": "that",
+        "start": 4.384,
+        "end": 4.64
+      },
+      {
+        "text": "odd",
+        "start": 4.74,
+        "end": 5.04
+      },
+      {
+        "text": "or",
+        "start": 5.147,
+        "end": 5.36
+      },
+      {
+        "text": "even?",
+        "start": 5.44,
+        "end": 5.92
+      }
+    ]
+  },
+  "While tidying the button tin, help Mittens count buttons by fives: 5, 10, 15. What comes next?": {
+    "file": "389bf6b5ecfca90b7e0e4122.mp3",
+    "words": [
+      {
+        "text": "While",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "tidying",
+        "start": 0.24,
         "end": 0.72
       },
       {
@@ -16830,62 +21490,157 @@
       {
         "text": "tin,",
         "start": 1.2,
-        "end": 1.76
+        "end": 1.84
+      },
+      {
+        "text": "help",
+        "start": 1.904,
+        "end": 2.16
       },
       {
         "text": "Mittens",
-        "start": 1.808,
-        "end": 2.24
+        "start": 2.208,
+        "end": 2.64
       },
       {
-        "text": "has",
-        "start": 2.3,
-        "end": 2.48
-      },
-      {
-        "text": "9",
-        "start": 2.64,
+        "text": "count",
+        "start": 2.693,
         "end": 2.96
       },
       {
         "text": "buttons",
-        "start": 3.02,
-        "end": 3.44
+        "start": 3.01,
+        "end": 3.36
       },
       {
-        "text": "and",
-        "start": 3.48,
-        "end": 3.6
+        "text": "by",
+        "start": 3.413,
+        "end": 3.52
       },
       {
-        "text": "finds",
-        "start": 3.68,
-        "end": 4.08
+        "text": "fives:",
+        "start": 3.64,
+        "end": 4.4
       },
       {
-        "text": "2",
-        "start": 4.16,
-        "end": 4.32
+        "text": "5,",
+        "start": 4.88,
+        "end": 5.44
       },
       {
-        "text": "more.",
-        "start": 4.4,
+        "text": "10,",
+        "start": 5.6,
+        "end": 6.2
+      },
+      {
+        "text": "15.",
+        "start": 6.4,
+        "end": 7.44
+      },
+      {
+        "text": "What",
+        "start": 7.504,
+        "end": 7.76
+      },
+      {
+        "text": "comes",
+        "start": 7.8,
+        "end": 8
+      },
+      {
+        "text": "next?",
+        "start": 8.096,
+        "end": 8.56
+      }
+    ]
+  },
+  "While tidying the button tin, help Mittens count buttons by tens: 20, 30, 40. What comes next?": {
+    "file": "aa2c9fa774e9c2fe5264afa2.mp3",
+    "words": [
+      {
+        "text": "While",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "tidying",
+        "start": 0.22,
+        "end": 0.64
+      },
+      {
+        "text": "the",
+        "start": 0.66,
+        "end": 0.72
+      },
+      {
+        "text": "button",
+        "start": 0.766,
+        "end": 1.04
+      },
+      {
+        "text": "tin,",
+        "start": 1.12,
+        "end": 1.76
+      },
+      {
+        "text": "help",
+        "start": 1.792,
+        "end": 1.92
+      },
+      {
+        "text": "Mittens",
+        "start": 1.968,
+        "end": 2.32
+      },
+      {
+        "text": "count",
+        "start": 2.373,
+        "end": 2.64
+      },
+      {
+        "text": "buttons",
+        "start": 2.68,
+        "end": 2.96
+      },
+      {
+        "text": "by",
+        "start": 3.013,
+        "end": 3.12
+      },
+      {
+        "text": "tens:",
+        "start": 3.232,
+        "end": 4.16
+      },
+      {
+        "text": "20,",
+        "start": 4.36,
         "end": 4.8
       },
       {
-        "text": "How",
-        "start": 5,
-        "end": 5.6
+        "text": "30,",
+        "start": 4.88,
+        "end": 5.44
       },
       {
-        "text": "many",
-        "start": 5.632,
-        "end": 5.76
+        "text": "40.",
+        "start": 5.52,
+        "end": 5.92
       },
       {
-        "text": "now?",
-        "start": 5.86,
-        "end": 6.24
+        "text": "What",
+        "start": 6.032,
+        "end": 6.48
+      },
+      {
+        "text": "comes",
+        "start": 6.52,
+        "end": 6.72
+      },
+      {
+        "text": "next?",
+        "start": 6.8,
+        "end": 7.28
       }
     ]
   },

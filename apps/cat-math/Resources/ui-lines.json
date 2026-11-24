@@ -5,5 +5,8 @@
   "count11": "Eleven!",
   "count12": "Twelve!",
   "count13": "Thirteen!",
-  "count14": "Fourteen!"
+  "count14": "Fourteen!",
+  "roundIntro": "Solve three puzzles to turn the page.",
+  "roundBonus": "Solve three puzzles to earn a treat.",
+  "newPage": "A new story page is ready!"
 }

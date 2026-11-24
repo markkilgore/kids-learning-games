@@ -17,6 +17,8 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
     private var activeSource: ObjectIdentifier?
     private var isolatedWordIndex: Int?
     private var sliceEnd: TimeInterval?
+    /// A line waiting for its pause to pass before it starts.
+    private var pending: Task<Void, Never>?
     private let configuration: NarrationSettings
     private let manifest: AudioManifest
     private let settings: SoundSettings
@@ -58,6 +60,39 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
         let utterance = AVSpeechUtterance(string: sentence)
         utterance.postUtteranceDelay = 0.05
         speak(utterance)
+    }
+
+    /// Speaks `sentence` after a short pause, so it does not talk over a sound effect that has just started.
+    public func play(_ sentence: String, after delay: TimeInterval, completion: (() -> Void)? = nil) {
+        stop()
+        schedule(after: delay) { [weak self] in self?.play(sentence, completion: completion) }
+    }
+
+    /// Speaks several lines in order with a breath between them. Starting anything else cancels the rest.
+    public func playSequence(_ lines: [String], gap: TimeInterval = 0.4, completion: (() -> Void)? = nil) {
+        let lines = lines.filter { !$0.isEmpty }
+        guard let first = lines.first else {
+            completion?()
+            return
+        }
+        let rest = Array(lines.dropFirst())
+        play(first) { [weak self] in
+            guard !rest.isEmpty else {
+                completion?()
+                return
+            }
+            self?.schedule(after: gap) { self?.playSequence(rest, gap: gap, completion: completion) }
+        }
+    }
+
+    private func schedule(after delay: TimeInterval, _ work: @escaping @MainActor () -> Void) {
+        pending?.cancel()
+        pending = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(delay))
+            guard !Task.isCancelled else { return }
+            self?.pending = nil
+            work()
+        }
     }
 
     /// Speaks one word of `sentence`, cut from the sentence's own recording so the voice stays the same.
@@ -106,6 +141,8 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
     }
 
     public func stop() {
+        pending?.cancel()
+        pending = nil
         activeSource = nil
         if synthesizer.isSpeaking || synthesizer.isPaused { synthesizer.stopSpeaking(at: .immediate) }
         player?.stop()
@@ -138,7 +175,6 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
         audioPlayer.enableRate = true
         audioPlayer.rate = isSlow ? 0.8 : 1
         audioPlayer.delegate = self
-        audioPlayer.prepareToPlay()
         audioPlayer.play()
         timingTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.updateRecordingProgress() }
@@ -203,14 +239,22 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
         callback?()
     }
 
+    /// Switching the audio session on can block for a moment, so it happens off the main thread, once,
+    /// before any clip plays. Players then start without having to activate it themselves.
+    private nonisolated static func activateSession() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            try? AVAudioSession.sharedInstance().setActive(true)
+        }
+    }
+
     private func configureAudioSession() {
         let session = AVAudioSession.sharedInstance()
         try? session.setCategory(.playback, mode: .spokenAudio, options: [.duckOthers])
-        try? session.setActive(true)
+        Self.activateSession()
         NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: session, queue: .main) { [weak self] note in
             let began = (note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt) == AVAudioSession.InterruptionType.began.rawValue
             Task { @MainActor in
-                if began { self?.stop() } else { try? AVAudioSession.sharedInstance().setActive(true) }
+                if began { self?.stop() } else { Self.activateSession() }
             }
         }
     }

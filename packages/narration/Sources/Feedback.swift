@@ -38,7 +38,6 @@ public final class FeedbackPlayer {
             guard let url = bundle.url(forResource: "sfx-\(effect.rawValue)", withExtension: "wav"),
                   let player = try? AVAudioPlayer(contentsOf: url) else { continue }
             player.volume = effect == .tap ? 0.35 : 0.55
-            player.prepareToPlay()
             players[effect] = player
         }
     }

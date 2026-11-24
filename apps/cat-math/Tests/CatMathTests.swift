@@ -63,9 +63,20 @@ final class CatMathTests: XCTestCase {
     func testEachCatHasAProgressivelyRevealedFourPartBackstory() {
         for cat in CatContent.cats {
             XCTAssertEqual(cat.backstory.count, 4, cat.id)
+            // A page opens each time a round of three puzzles is finished.
             XCTAssertEqual(cat.revealedStory(for: 0).count, 1, cat.id)
-            XCTAssertEqual(cat.revealedStory(for: 2).count, 3, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: 2).count, 1, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: 3).count, 2, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: 8).count, 3, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: 9).count, 4, cat.id)
             XCTAssertEqual(cat.revealedStory(for: 20).count, 4, cat.id)
+            XCTAssertEqual(cat.solvedInRound(for: 7), 1, cat.id)
+            // Every puzzle in a round is set in that round's story scene.
+            for friendship in 0..<12 {
+                let lead = cat.storyBeat(for: friendship).puzzleLead
+                XCTAssertTrue(MathChallengeFactory.challenge(for: cat, friendship: friendship).prompt.hasPrefix(lead), cat.id)
+                XCTAssertEqual(lead, cat.backstory[friendship / 3].puzzleLead, cat.id)
+            }
             XCTAssertEqual(Set(cat.backstory.map(\.id)).count, 4, cat.id)
         }
     }
@@ -242,7 +253,7 @@ final class CatMathTests: XCTestCase {
                 XCTAssertEqual(easier.skill, usual.skill)
                 XCTAssertEqual(harder.skill, usual.skill)
                 XCTAssertEqual(MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: -5).prompt, easier.prompt)
-                if friendship < cat.backstory.count - 1 {
+                if friendship < cat.lastPageFriendship {
                     // Before the last story page each lead line has only one recorded prompt.
                     XCTAssertEqual(easier.prompt, usual.prompt)
                     XCTAssertEqual(harder.prompt, usual.prompt)

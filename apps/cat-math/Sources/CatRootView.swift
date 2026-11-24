@@ -6,7 +6,7 @@ import UIKit
 
 /// Interface lines Cat Math speaks; the text lives in `ui-lines.json` so the audio generator sees it too.
 enum CatLine: String, CaseIterable {
-    case retry, locked, newFriend, count11, count12, count13, count14
+    case retry, locked, newFriend, roundIntro, roundBonus, newPage, count11, count12, count13, count14
 
     private static let lines = SpokenLines()
     var text: String { Self.lines[rawValue] }

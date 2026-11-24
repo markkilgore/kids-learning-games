@@ -22,13 +22,25 @@ struct CatDefinition: Identifiable, Hashable {
     let trickSymbol: String
     let backstory: [CatStoryBeat]
 
-    func storyBeat(for friendship: Int) -> CatStoryBeat {
-        backstory[min(max(friendship, 0), backstory.count - 1)]
+    /// Puzzles in one round. A round is set in one story page and ends with a celebration.
+    static let puzzlesPerRound = 3
+
+    /// The story page a cat is on: a new page opens each time a round of puzzles is finished.
+    func storyPage(for friendship: Int) -> Int {
+        min(max(friendship, 0) / Self.puzzlesPerRound, backstory.count - 1)
     }
 
+    func storyBeat(for friendship: Int) -> CatStoryBeat { backstory[storyPage(for: friendship)] }
+
     func revealedStory(for friendship: Int) -> [CatStoryBeat] {
-        Array(backstory.prefix(min(max(friendship, 0) + 1, backstory.count)))
+        Array(backstory.prefix(storyPage(for: friendship) + 1))
     }
+
+    /// Puzzles already solved in the round this friendship level is part of.
+    func solvedInRound(for friendship: Int) -> Int { max(friendship, 0) % Self.puzzlesPerRound }
+
+    /// The friendship level at which the last story page opens.
+    var lastPageFriendship: Int { (backstory.count - 1) * Self.puzzlesPerRound }
 }
 
 enum CatContent {

@@ -85,7 +85,8 @@ const skills = ['counting', 'addition', 'subtraction', 'odd-even', 'skip-5', 'sk
 function challengePrompt(cat, catIndex, friendship) {
   const skill = skills[(friendship + catIndex) % skills.length];
   const seed = Math.max(1, (friendship + [...cat.name].length) % 9 + 1);
-  const lead = cat.beats[Math.min(friendship, cat.beats.length - 1)].lead;
+  // A story page lasts one round of three puzzles (`CatDefinition.puzzlesPerRound`).
+  const lead = cat.beats[Math.min(Math.floor(friendship / 3), cat.beats.length - 1)].lead;
   const noun = (count) => (count === 1 ? cat.item : cat.items);
   switch (skill) {
     case 'addition': {

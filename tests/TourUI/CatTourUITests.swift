@@ -22,42 +22,58 @@ final class CatTourUITests: XCTestCase {
         app.buttons["House"].tap()
 
         tap("cat-mittens")
-        snap("04-puzzle")
+        snap("04-story-page")
+        tap("start-round")
+        snap("05-puzzle")
 
-        // Six puzzles in a row covers all six skills, each with its own picture.
-        for round in 1...6 {
+        // Two rounds of three puzzles cover all six skills, each with its own picture.
+        for puzzle in 1...6 {
             let other = app.buttons["answer-other"].firstMatch
             XCTAssertTrue(other.waitForExistence(timeout: 8))
-            if round > 1 { snap("05-puzzle-skill-\(round)") }
-            if round == 1 {
+            if puzzle > 1 { snap("06-puzzle-skill-\(puzzle)") }
+            if puzzle == 1 {
                 other.tap()
-                snap("06-puzzle-wrong")
+                snap("07-puzzle-wrong")
             }
-            app.buttons["answer-correct"].tap()
-            let reward = app.buttons[["reward-treat", "reward-meal", "reward-trick"][round % 3]]
+            // The right answer of the next puzzle only becomes tappable once this one has moved on.
+            let answer = app.buttons["answer-correct"].firstMatch
+            XCTAssertTrue(answer.waitForExistence(timeout: 8))
+            answer.tap()
+            guard puzzle % 3 == 0 else {
+                if puzzle == 1 { snap("08-puzzle-praise") }
+                sleep(4)
+                continue
+            }
+            let reward = app.buttons[["reward-treat", "reward-meal", "reward-trick"][puzzle / 3 % 3]]
             XCTAssertTrue(reward.waitForExistence(timeout: 8))
-            if round == 1 { snap("07-reward-choose") }
+            if puzzle == 3 { snap("09-round-celebration") }
             reward.tap()
-            if round == 1 { snap("08-reward-story") }
+            if puzzle == 3 { snap("10-round-reward") }
             tap("next-puzzle")
+            // A round that opens a new story page shows it next; once the story is finished, puzzles continue.
+            let start = app.buttons["start-round"].firstMatch
+            if start.waitForExistence(timeout: 3) {
+                if puzzle == 3 { snap("11-next-story-page") }
+                start.tap()
+            }
         }
         tap("kid-back")
-        snap("09-home-after-puzzles")
+        snap("12-home-after-puzzles")
 
         tap("cat-journal")
-        snap("10-journal")
+        snap("13-journal")
         tap("kid-back")
 
         tap("weekly-home")
-        snap("11-weekly-shelf")
+        snap("14-weekly-shelf")
         app.buttons.matching(NSPredicate(format: "value == %@ OR value == %@", "Ready", "Completed")).firstMatch.tap()
-        snap("12-weekly-round")
+        snap("15-weekly-round")
         tap("kid-back")
         tap("kid-back")
 
         app.images["parent-gate"].firstMatch.press(forDuration: 2.6)
         XCTAssertTrue(app.staticTexts["Parent Settings"].waitForExistence(timeout: 5))
-        snap("13-settings")
+        snap("16-settings")
 
         let progress = app.descendants(matching: .any)["parent-progress"]
         XCTAssertTrue(progress.waitForExistence(timeout: 5))
@@ -65,7 +81,7 @@ final class CatTourUITests: XCTestCase {
         XCUIDevice.shared.orientation = .landscapeLeft
         app.scrollViews.firstMatch.swipeUp(velocity: .slow)
         XCTAssertTrue(app.staticTexts["Right first try"].exists)
-        snap("14-settings-progress")
+        snap("17-settings-progress")
     }
 
     private func tap(_ identifier: String) {

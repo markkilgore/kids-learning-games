@@ -56,7 +56,6 @@ struct CatHomeView: View {
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        .onDisappear { narration.stop() }
     }
 
     private func showLockedHint(for cat: CatDefinition) {
