@@ -1,16 +1,119 @@
 {
   "style": "Warm scientific storybook illustration for ages 5-7, clean readable silhouette, layered paper-cut watercolor texture, friendly but anatomically accurate, soft ocean palette, no text, no watermark, no gore.",
   "backgrounds": [
-    {"id":"tropical-open-water","prompt":"Sunlit tropical open ocean with plankton sparkles and distant reef shelf, wide iPad landscape composition."},
-    {"id":"sandy-reef","prompt":"Warm sandy tropical seafloor beside a coral reef, broad open area for a swimming hammerhead."},
-    {"id":"coral-reef","prompt":"Quiet coral reef cave and sandy floor at dusk, safe and welcoming."},
-    {"id":"temperate-ocean","prompt":"Cool blue temperate open ocean with shafts of surface light, no animals."},
-    {"id":"rocky-seafloor","prompt":"Patterned rocky Australian seafloor reef with kelp and ledges, camouflage-friendly."},
-    {"id":"open-ocean-school","prompt":"Deep blue open ocean with a distant school of small fish, wide negative space."},
-    {"id":"murky-coast","prompt":"Warm murky coastal sea with gentle light, reef edge, and suspended particles."},
-    {"id":"reef-flat","prompt":"Shallow Great Barrier Reef flat with connected tide pools at low tide."},
-    {"id":"deep-slope","prompt":"Dark deep-ocean slope with soft bioluminescent specks, mysterious but not frightening."},
-    {"id":"arctic-deep","prompt":"Cold Arctic deep water beneath pale ice, blue-green darkness and drifting snow-like particles."}
+    {
+      "id": "tropical-open-water",
+      "prompt": "Sunlit tropical open ocean with plankton sparkles and distant reef shelf, wide iPad landscape composition."
+    },
+    {
+      "id": "sandy-reef",
+      "prompt": "Warm sandy tropical seafloor beside a coral reef, broad open area for a swimming hammerhead."
+    },
+    {
+      "id": "coral-reef",
+      "prompt": "Quiet coral reef cave and sandy floor at dusk, safe and welcoming."
+    },
+    {
+      "id": "temperate-ocean",
+      "prompt": "Cool blue temperate open ocean with shafts of surface light, no animals."
+    },
+    {
+      "id": "rocky-seafloor",
+      "prompt": "Patterned rocky Australian seafloor reef with kelp and ledges, camouflage-friendly."
+    },
+    {
+      "id": "open-ocean-school",
+      "prompt": "Deep blue open ocean with a distant school of small fish, wide negative space."
+    },
+    {
+      "id": "murky-coast",
+      "prompt": "Warm murky coastal sea with gentle light, reef edge, and suspended particles."
+    },
+    {
+      "id": "reef-flat",
+      "prompt": "Shallow Great Barrier Reef flat with connected tide pools at low tide."
+    },
+    {
+      "id": "deep-slope",
+      "prompt": "Dark deep-ocean slope with soft bioluminescent specks, mysterious but not frightening."
+    },
+    {
+      "id": "arctic-deep",
+      "prompt": "Cold Arctic deep water beneath pale ice, blue-green darkness and drifting snow-like particles."
+    }
   ],
-  "cutoutTemplate": "Create an anatomically accurate side-profile {species} on a perfectly flat solid #00ff00 chroma-key background for background removal. The background must be uniform with no shadow, gradient, texture, reflection, floor, or lighting variation. Keep the full shark separated from the border with crisp edges and generous padding. Do not use green on the shark. No text or watermark."
+  "cutoutTemplate": "Create an anatomically accurate side-profile {species} on a perfectly flat solid #00ff00 chroma-key background for background removal. The background must be uniform with no shadow, gradient, texture, reflection, floor, or lighting variation. Keep the full shark separated from the border with crisp edges and generous padding. Do not use green on the shark. No text or watermark.",
+  "catStyle": "Warm hand-painted storybook illustration for ages 5-7, soft gouache texture, rounded friendly shapes, gentle pastel palette, no text, no watermark, no borders.",
+  "cats": [
+    {
+      "file": "apps/cat-math/Resources/Art/cat-mittens.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a orange-and-white tabby kitten with white mitten paws, holding a red yarn ball, centred, whole head and body visible with generous margin, on a plain soft background tinted #E07A5F at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-pepper.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a sleek dark grey cat with bright yellow eyes sitting in a sunbeam, centred, whole head and body visible with generous margin, on a plain soft background tinted #5C677D at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-biscuit.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a fluffy cream-coloured cat peeking out of a soft blanket, centred, whole head and body visible with generous margin, on a plain soft background tinted #F2CC8F at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-poppy.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a lilac-grey cat wearing a small paper crown, beside a cardboard box castle, centred, whole head and body visible with generous margin, on a plain soft background tinted #C77DFF at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-waffles.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a chubby golden-brown cat with a tiny bowl of blueberries, centred, whole head and body visible with generous margin, on a plain soft background tinted #F4A261 at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-clover.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a white cat with green eyes and a butterfly resting on its nose, centred, whole head and body visible with generous margin, on a plain soft background tinted #76C893 at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-moon.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a black cat with a white crescent mark on its chest under a starry sky, centred, whole head and body visible with generous margin, on a plain soft background tinted #7986CB at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-ginger.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a bright ginger cat mid-leap over a stepping stone, centred, whole head and body visible with generous margin, on a plain soft background tinted #E76F51 at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-sprout.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a brown tabby cat with muddy paws curled around a small seedling pot, centred, whole head and body visible with generous margin, on a plain soft background tinted #52B788 at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-starlight.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a silver-white cat surrounded by glowing fireflies, centred, whole head and body visible with generous margin, on a plain soft background tinted #9D4EDD at low saturation."
+    }
+  ],
+  "scenes": [
+    {
+      "file": "apps/cat-math/Resources/Art/backdrop-house.png",
+      "size": "2048x1536",
+      "style": "catStyle",
+      "prompt": "Cozy living room interior seen straight on: window with sunlight, sofa, yarn basket, potted plant, rug. Very pale and low-contrast so dark text placed on top stays readable. No animals, no people."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/backdrop-garden.png",
+      "size": "2048x1536",
+      "style": "catStyle",
+      "prompt": "Sunny cottage garden seen straight on: flower beds, stepping stones, small stream, garden wall, butterflies. Very pale and low-contrast so dark text placed on top stays readable. No animals other than butterflies, no people."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/ocean-map.png",
+      "size": "2048x1280",
+      "style": "style",
+      "prompt": "Stylised flat world map for a children's ocean explorer game: deep teal-blue oceans filling most of the frame, continents as simple soft green-teal shapes in their real positions, gentle wave lines, a compass rose in one corner. Dark overall so white labels placed on top stay readable. No text, no labels, no animals."
+    }
+  ]
 }

@@ -168,10 +168,12 @@ public struct KidArt: View {
 
     public var body: some View {
         if let image = UIImage(named: asset) {
+            // Portraits are painted on a plain background, so they are shown as round medallions.
             Image(uiImage: image)
                 .resizable()
-                .scaledToFit()
-                .frame(width: size * 1.25, height: size * 1.25)
+                .scaledToFill()
+                .frame(width: size * 1.45, height: size * 1.45)
+                .clipShape(Circle())
         } else {
             Text(fallback).font(.system(size: size))
         }
