@@ -178,7 +178,7 @@ private struct WeeklyShelf: View {
                                 withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) { self.activity = activity }
                             } label: {
                                 VStack(spacing: 12) {
-                                    Text(activity.icon).font(.system(size: 72))
+                                    KidArt("lesson-\(activity.id)", fallback: activity.icon, size: 72, style: .tile)
                                     Text(activity.title)
                                         .font(.kidHeadline)
                                         .multilineTextAlignment(.center)

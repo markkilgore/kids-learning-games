@@ -115,5 +115,754 @@
       "style": "style",
       "prompt": "Stylised flat world map for a children's ocean explorer game: deep teal-blue oceans filling most of the frame, continents as simple soft green-teal shapes in their real positions, gentle wave lines, a compass rose in one corner. Dark overall so white labels placed on top stay readable. No text, no labels, no animals."
     }
+  ],
+  "iconStyle": "Warm hand-painted storybook illustration for ages 5-7, soft gouache texture, rounded friendly shapes, gentle pastel palette, one simple clear subject that reads instantly when shown small, bold readable silhouette, no text, no watermark, no borders.",
+  "iconStyleReference": "Match apps/cat-math/Resources/Art/cat-mittens.png and cat-sprout.png. Generate each as a new image, not an edit.",
+  "tileComposition": "Square image. One subject centred, filling about 70 percent of the frame with an even margin, on a plain soft warm cream background (#FBF3E4) with no other scenery. When the subject is a place or a scene (an ocean, a reef, a desert, a farm), paint it as a small rounded vignette centred on the same plain cream background.",
+  "cutoutComposition": "Square image. One single object centred, filling about 75 percent of the frame, with crisp clean edges and generous padding, on a perfectly flat solid pure green (#00FF00) chroma-key background: uniform, no shadow, no gradient, no texture, no floor. Do not use any bright green on the object itself; if the object must be green, use a dark green or yellow-green clearly different from #00FF00. After generating, key out the green to transparency, crop to the object and resize to 256 px.",
+  "icons": [
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-antlers.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A pair of brown deer antlers on their own, no animal."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-apple.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A shiny red apple with one green leaf."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-barbels.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole nurse shark in side view resting on sand: tan-brown body, rounded blunt snout, and two small fleshy whisker-like barbels hanging down from under the front of its snout, clearly visible. Natural, no smile. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-bath.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A white bathtub full of warm water and soap bubbles, no one in it."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-bee.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly fuzzy honeybee with striped body and clear wings."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-bell.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A shiny brass hand bell with a wooden handle."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-bird.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small round songbird (a robin) standing, side view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cake.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A birthday cake with pink icing and three lit candles, no writing."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-camo.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A wobbegong carpet shark lying flat on a rocky reef floor, its blotchy brown-and-tan pattern and leafy fringe of skin flaps around its mouth blending into the rocks so it is hard to see. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-carrion.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole fish lying still on its side on the sandy deep-sea floor, eyes closed, peaceful, not injured, with a few tiny drifting particles in dark blue water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cat.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A sitting grey tabby cat, whole body, side-front view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cave.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a dry rocky cave entrance on land, sandy floor, no water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-clapping.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Two simple cartoon hands clapping, with small motion marks."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-clock.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A round red alarm clock with two bells on top; the clock face has only simple tick marks and two hands, no numbers."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cloud.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single fluffy white cloud in a small round patch of pale blue sky."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cold.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of the cold Arctic sea: dark icy blue-green water with floating white ice and a pale sky."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-colors.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A bundle of five colourful crayons with no labels."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-cool.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a cool, grey-blue rocky coast: dark rocks, white surf and a cloudy pale sky, temperate not tropical."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-crab.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly red-orange crab seen from the front with two claws raised."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-deep.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of the deep dark ocean: deep navy blue fading to near black, with a few tiny soft glowing specks."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-desert.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a dry sandy desert with dunes, one cactus and a hot sun."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-dig.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small garden trowel digging into a mound of brown soil."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-ear.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "One simple cartoon ear, friendly and soft."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-electric.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole grey shark in side view swimming low over pale sand; under the sand a hidden flat fish gives off soft glowing yellow ripple rings that reach the shark's snout, showing the shark's electric sense. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-farm.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a farm: a red barn and a small green tractor in a field."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-feathers.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Two soft feathers, one blue and one orange, crossed."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-fish.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small silver fish like a sardine, side view, swimming."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-floor.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of the sandy ocean floor under blue water: pale sand, a few pebbles and a small shell, light rippling from above."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-flowers.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small bunch of pink and yellow flowers."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-foot.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "One cartoon bare foot seen from the side, simple and friendly."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-grass.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small tuft of green grass."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-hat.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A black top hat with a red band."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-head.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole hammerhead shark seen from directly above, swimming: grey body and tall dorsal fin, with its wide flat hammer-shaped head and an eye at each end of the hammer clearly visible. Natural, no smile. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-hoof.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A horse's lower leg and dark hoof, no rest of the horse."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-jaws.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A goblin shark in side view with its long flat pinkish snout and its jaws pushed forward out of its mouth to catch a small fish. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-jump.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A kangaroo jumping on grass, side view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-kite.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A colourful diamond-shaped kite with a ribbon tail."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-leaves.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Three green tree leaves on a small twig."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-moon.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A pale yellow crescent moon with three small stars in a small round patch of dark blue night sky."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-mountain.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a snowy mountain top under a pale sky."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-nest.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A twiggy bird nest holding three pale blue eggs."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-paint.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "An artist's wooden paint palette with bright dots of paint and a brush."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-paw.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A furry orange animal paw seen from below, showing soft pink pads."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-plankton.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Plankton as seen through a magnifying lens: a few tiny drifting see-through copepods with feathery antennae and small round golden-green diatoms, glowing softly in a small circle of blue sea water. Scientifically plausible plankton, not fish."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-pond.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a garden pond with lily pads and a pink water lily."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-puddle.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rain puddle on a grey pavement, reflecting the sky, a few raindrops."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-pup.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A newly hatched baby epaulette shark beside its empty brown egg case: a slender little shark with brown spots and a big dark eye-spot ringed in white just behind its front fin. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-ray.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A southern stingray seen from directly above: flat diamond-shaped sandy-grey body, two small eyes on top, long thin whip-like tail. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-reading.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "An open picture book with colourful blank pictures and no writing."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-reef.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a warm, shallow, colourful coral reef in clear turquoise water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-rocks.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small pile of three smooth grey rocks."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-roll.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single wooden cart wheel with spokes, rolling, with small motion marks."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-seahorse.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A yellow-orange seahorse in side view with its tail curled."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-shell.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single pink-and-cream spiral seashell."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-shoe.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A blue sneaker with white laces and no logo."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-singing.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Three colourful musical notes floating in a gentle curve."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-slow.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly tortoise walking slowly, side view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-smell.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole grey shark in side view swimming towards soft wavy pale-orange scent lines that drift through the water into its nostril at the front of its snout. Natural, no smile. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-snow.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a snow day: a snowy hill, a small snowman with a carrot nose, falling snowflakes."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-stripes.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A tiger shark in side view: blunt wide snout and dark vertical stripes and spots along its grey-brown back and sides. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-stun.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A thresher shark whipping its extremely long upper tail fin over its head into a small school of silver fish, with a curved swoosh line showing the motion. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-tail.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole grey shark in side view swishing its big tail, with curved motion lines behind the tail. The tail fin is a tall vertical crescent with the upper lobe slightly larger than the lower lobe, like a great white shark's tail. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-tree.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "One leafy round green tree with a brown trunk."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-wait.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A wobbegong carpet shark lying flat and still on a rocky reef: broad flat body with a blotchy brown, tan and cream pattern, and a frilly fringe of leafy skin flaps around its wide mouth. A small fish swims just in front of its mouth. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-walk.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "An epaulette shark walking on its fins across a shallow tide-pool reef, using its paddle-like front and back fins like legs; slender spotted body with a dark white-ringed eye-spot behind the front fin. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-warm.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a warm, sunny, turquoise tropical sea with gentle waves and a bright yellow sun above."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-whale.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whale shark in side view: huge blue-grey body covered in white spots and pale stripes, wide flat mouth at the very front of its broad head, tall crescent tail fin. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-wing.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "One outstretched bird wing with layered white and grey feathers, no bird body."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-yard.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of a back yard: green lawn, a wooden fence and a small swing."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-10-19-short-u.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A bright yellow sun with soft rays, no face."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-10-19-sort.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Three simple reef markers: a red square, a blue circle and a red circle, arranged in a row."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-10-26-patterns.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A row of alternating objects: a spiral seashell, a pink coral branch, a seashell, a coral branch."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-10-26-retell.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "An open storybook with a friendly little shark swimming out of the pages, no writing."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-11-02-fish.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small school of five silver-blue fish swimming together."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-11-02-vowels.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A brown hen standing, side view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-11-09-letters.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A soft grey rabbit sitting, side view."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/lesson-2026-11-09-race.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small checkered race flag on a pole above a blue wave, no writing."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-crab.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A friendly red-orange crab seen from the front with two claws raised."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-deep-fish.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small deep-sea lanternfish in side view: dark silvery-blue body with big eyes and neat rows of tiny glowing blue light spots along its belly. Nothing hanging from its mouth. Scientifically plausible."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-electric.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small glowing electric spark burst: soft yellow and white zigzag rays radiating from a bright centre."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-fish.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small silver fish like a sardine in side view, swimming."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-plankton.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A sparkling little cloud of plankton: many tiny glowing golden-white see-through copepods and round diatoms clustered together. Scientifically plausible plankton."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-rock.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A smooth wet grey-brown rock with a glossy shine, the kind a small shark could step onto in a tide pool."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-scent.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A soft wavy ribbon of drifting scent: three gently curling pale teal-and-white wavy lines."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-shell.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A single pale sandy spiral seashell with soft brown speckles."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-snowflake.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A glowing pale blue six-pointed snowflake crystal."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-body-clues.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A magnifying glass held over a patch of spotted and striped grey shark skin."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-food.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small silver fish, a red crab and a little squid grouped together, representing ocean food."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-home.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded vignette of an ocean home: a cosy coral reef with a sandy floor and waving seaweed, seen like a little habitat snow-globe without the globe."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-ocean-care.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A heart shape made of clean blue ocean water with a small fish and a sprig of seaweed inside it."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-power.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A grey shark fin rising from a small blue wave, surrounded by golden sparkles, like a special power."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-senses.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole friendly grey shark in side view with soft glowing ripple lines around its eye and snout to show its senses. Natural, no smile. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/topic-size.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small grey shark swimming above a long wooden measuring stick that has tick marks but no numbers."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-berry.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One single round blueberry with its little crown."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-butterfly.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One orange-and-yellow butterfly with open wings, seen from above."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-button.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One round red sewing button with four holes."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-cardboard-tower.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small cardboard box castle tower with a crenellated top, made from a brown cardboard box."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-firefly.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One small firefly with a softly glowing yellow tail."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-pillow.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small soft square yellow pillow."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-seedling.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One tiny seedling with two round leaves sprouting from a small mound of brown soil."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-star.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One plump five-pointed golden yellow star."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-stepping-stone.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One round flat orange-tan garden stepping stone."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-sunbeam.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small bright yellow sun with short rounded rays, no face."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-10-19-could.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A pair of round purple headphones."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-10-19-sh.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single pink-and-cream spiral seashell."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-10-26-ch.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small wooden chair."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-10-26-here.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A sitting orange tabby cat, whole body, front view."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-11-02-turkey-cycle.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A speckled brown egg beside a fluffy little turkey chick."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-11-02-turkey-parts.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly wild turkey standing, side view, with its tail feathers fanned."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-11-09-ice.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A light blue cat water bowl with ice cubes floating in the water."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/lesson-2026-11-09-treats.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Three small fish-shaped cat treats on a little plate."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/reward-meal.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A round blue ceramic cat food bowl full of brown cat food kibble."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/reward-treat.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "One small silver-and-orange fish-shaped cat treat."
+    }
+  ],
+  "catHappyPoses": [
+    {
+      "file": "apps/cat-math/Resources/Art/cat-mittens-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-mittens.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (red yarn ball) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-sprout-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-sprout.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (small seedling pot) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-biscuit-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-biscuit.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (soft blanket) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-poppy-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-poppy.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (paper crown and cardboard box castle) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-waffles-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-waffles.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (tiny bowl of blueberries) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-clover-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-clover.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (a butterfly) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-moon-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-moon.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (starry sky) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-ginger-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-ginger.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (stepping stone) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-starlight-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-starlight.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (glowing fireflies) visible beside it."
+    }
   ]
 }

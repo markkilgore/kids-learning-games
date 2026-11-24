@@ -109,7 +109,7 @@ struct CatActivityView: View {
                 .accessibilityLabel("Hear the question")
             }
 
-            MathVisualView(challenge: challenge, counted: $counted) { number in
+            MathVisualView(challenge: challenge, objectArt: cat.countingArtName, counted: $counted) { number in
                 feedback.play(.pop)
                 narration.play(CatLine.count(number))
             }
@@ -207,6 +207,8 @@ struct CatActivityView: View {
 /// The puzzle's picture. Countable objects can be tapped: each tap numbers the object and says the count.
 private struct MathVisualView: View {
     let challenge: MathChallenge
+    /// Bundled drawing of the counting object; the challenge's emoji stands in when it is missing.
+    let objectArt: String
     @Binding var counted: Int
     let onCount: (Int) -> Void
     @Environment(\.kidTheme) private var theme
@@ -273,8 +275,7 @@ private struct MathVisualView: View {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) { order[index] = counted }
             onCount(counted)
         } label: {
-            Text(challenge.icon)
-                .font(.system(size: 42))
+            KidArt(objectArt, fallback: challenge.icon, size: 42, style: .plain)
                 .frame(width: 58, height: 58)
                 .opacity(crossed ? 0.3 : 1)
                 .scaleEffect(order[index] == nil ? 1 : 1.12)
@@ -300,7 +301,7 @@ private struct MathVisualView: View {
 
     private func sequenceChip(_ text: String) -> some View {
         VStack(spacing: 4) {
-            Text(challenge.icon).font(.system(size: 40))
+            KidArt(objectArt, fallback: challenge.icon, size: 40, style: .plain)
             Text(text)
                 .font(.system(size: 40, weight: .black, design: .rounded))
                 .frame(minWidth: 84, minHeight: 64)
@@ -325,11 +326,11 @@ private struct CatRewardCard: View {
         VStack(spacing: 18) {
             HStack(spacing: 20) {
                 ZStack {
-                    Text(selectedReward == .meal ? "🥣" : selectedReward == .treat ? "🐟" : cat.trickSymbol)
-                        .font(.system(size: 54))
+                    rewardIcon
+                        .zIndex(1)
                         .opacity(selectedReward == nil ? 0 : 1)
                         .offset(x: selectedReward == .trick ? 0 : 70, y: selectedReward == .trick ? -70 : 20)
-                    KidArt(cat.artName, fallback: cat.symbol, size: 100)
+                    KidArt(cat.rewardArtName, fallback: cat.symbol, size: 100)
                         .scaleEffect(selectedReward == .meal && rewardMotion ? 1.14 : 1)
                         .rotationEffect(.degrees(selectedReward == .trick && rewardMotion ? 16 : 0))
                         .offset(x: selectedReward == .treat && rewardMotion ? 16 : 0, y: selectedReward == .trick && rewardMotion ? -24 : 0)
@@ -394,5 +395,24 @@ private struct CatRewardCard: View {
         .frame(maxWidth: 860)
         .background(.white, in: RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous))
         .shadow(color: .black.opacity(0.25), radius: 24, y: 10)
+    }
+
+    @ViewBuilder private var rewardIcon: some View {
+        switch selectedReward {
+        case .meal: KidArt("reward-meal", fallback: "🥣", size: 54, style: .plain)
+        case .treat: KidArt("reward-treat", fallback: "🐟", size: 54, style: .plain)
+        default: Text(cat.trickSymbol).font(.system(size: 54))
+        }
+    }
+}
+
+private extension CatDefinition {
+    /// Bundled drawing of the thing this cat's puzzles count, e.g. `count-stepping-stone`.
+    var countingArtName: String { "count-" + storyItem.replacingOccurrences(of: " ", with: "-") }
+
+    /// The celebrating pose for the reward card, or the usual portrait when there is none.
+    var rewardArtName: String {
+        let happy = "\(artName)-happy"
+        return UIImage(named: happy) == nil ? artName : happy
     }
 }

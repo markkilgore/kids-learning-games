@@ -72,7 +72,7 @@ struct EncounterView: View {
                             let done = game.hasCompleted(topic, for: shark)
                             Button { sheet = .topic(topic) } label: {
                                 HStack(spacing: 12) {
-                                    Text(topic.symbol).font(.system(size: 40))
+                                    KidArt("topic-\(topic.id)", fallback: topic.symbol, size: 40, style: .tile)
                                     Text(topic.title)
                                         .font(.kidHeadline)
                                         .lineLimit(2)

@@ -92,11 +92,17 @@ final class MissionScene: SKScene {
             spawnSilhouette()
             return
         }
-        let node = SKLabelNode(text: targetSymbol)
+        let node: SKNode
+        if let image = UIImage(named: targetAsset) {
+            node = SKSpriteNode(texture: SKTexture(image: image), size: CGSize(width: 120, height: 120))
+        } else {
+            let label = SKLabelNode(text: targetSymbol)
+            label.fontSize = 96
+            label.verticalAlignmentMode = .center
+            label.horizontalAlignmentMode = .center
+            node = label
+        }
         node.name = "target"
-        node.fontSize = 96
-        node.verticalAlignmentMode = .center
-        node.horizontalAlignmentMode = .center
         node.position = CGPoint(
             x: CGFloat.random(in: 120...max(121, size.width - 120)),
             y: CGFloat.random(in: 110...max(111, size.height - 100))
@@ -135,6 +141,22 @@ final class MissionScene: SKScene {
         node.isAccessibilityElement = true
         node.accessibilityLabel = "Mission target"
         target = node
+    }
+
+    /// Bundled cut-out drawn for the target; the emoji stands in when it is missing.
+    private var targetAsset: String {
+        switch mission.kind {
+        case "filterFeed": "mission-plankton"
+        case "electrosense": "mission-electric"
+        case "suctionForage": "mission-crab"
+        case "camouflageFind": "mission-shell"
+        case "tailStrike": "mission-fish"
+        case "scentTrack": "mission-scent"
+        case "tidalWalk": "mission-rock"
+        case "jawStrike": "mission-deep-fish"
+        case "energyTrail": "mission-snowflake"
+        default: "mission-star"
+        }
     }
 
     private var targetSymbol: String {
