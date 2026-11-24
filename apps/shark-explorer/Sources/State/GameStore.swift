@@ -9,6 +9,27 @@ struct SharkProgress: Codable, Equatable {
     var completedTopics: Set<String> = []
     var currentSharkID: String?
     var readingMode: ReadingMode = .earlyReader
+    /// Quiz questions answered right on the first tap, keyed by shark ID.
+    var quizFirstTry: [String: Int] = [:]
+    /// Quiz questions that needed another try, keyed by shark ID.
+    var quizRetried: [String: Int] = [:]
+}
+
+// Decoding lives in an extension so the memberwise initializer stays available.
+extension SharkProgress {
+    /// Every field falls back to its default, so saves from before a field existed still load.
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.init(
+            completedSharks: try container.decodeIfPresent(Set<String>.self, forKey: .completedSharks) ?? [],
+            collectedWords: try container.decodeIfPresent(Set<String>.self, forKey: .collectedWords) ?? [],
+            completedTopics: try container.decodeIfPresent(Set<String>.self, forKey: .completedTopics) ?? [],
+            currentSharkID: try container.decodeIfPresent(String.self, forKey: .currentSharkID),
+            readingMode: try container.decodeIfPresent(ReadingMode.self, forKey: .readingMode) ?? .earlyReader,
+            quizFirstTry: try container.decodeIfPresent([String: Int].self, forKey: .quizFirstTry) ?? [:],
+            quizRetried: try container.decodeIfPresent([String: Int].self, forKey: .quizRetried) ?? [:]
+        )
+    }
 }
 
 enum AppDestination: Hashable {
@@ -33,6 +54,8 @@ final class GameStore {
     var completedSharks: Set<String> = []
     var collectedWords: Set<String> = []
     var completedTopics: Set<String> = []
+    private(set) var quizFirstTry: [String: Int] = [:]
+    private(set) var quizRetried: [String: Int] = [:]
     /// The Passport page to show when the books open next.
     var passportSharkID: String?
     /// Sharks unlocked by the latest mission, so the map can reveal them.
@@ -58,6 +81,8 @@ final class GameStore {
         collectedWords = progress.collectedWords
         completedTopics = progress.completedTopics
         readingMode = progress.readingMode
+        quizFirstTry = progress.quizFirstTry
+        quizRetried = progress.quizRetried
         if let current = progress.currentSharkID { destination = .encounter(current) }
     }
 
@@ -108,6 +133,22 @@ final class GameStore {
         completedSharks.contains(shark.id) || completedTopics.contains("\(shark.id):\(trait.unlockTopicID)")
     }
 
+    /// Records a quiz question once it is answered correctly; `firstTry` is false if a wrong choice came first.
+    func recordQuizQuestion(for shark: SharkDefinition, firstTry: Bool) {
+        if firstTry {
+            quizFirstTry[shark.id, default: 0] += 1
+        } else {
+            quizRetried[shark.id, default: 0] += 1
+        }
+        save()
+    }
+
+    /// Quiz questions answered for one shark, or for every shark when `shark` is nil.
+    func quizTally(for shark: SharkDefinition? = nil) -> (firstTry: Int, retried: Int) {
+        guard let shark else { return (quizFirstTry.values.reduce(0, +), quizRetried.values.reduce(0, +)) }
+        return (quizFirstTry[shark.id, default: 0], quizRetried[shark.id, default: 0])
+    }
+
     @discardableResult
     func completeMission(for shark: SharkDefinition, in sharks: [SharkDefinition] = ContentStore.shared.catalog.sharks) -> MissionReward {
         let lockedBefore = sharks.filter { !isUnlocked($0) }
@@ -135,7 +176,9 @@ final class GameStore {
             collectedWords: collectedWords,
             completedTopics: completedTopics,
             currentSharkID: persistedCurrentID,
-            readingMode: readingMode
+            readingMode: readingMode,
+            quizFirstTry: quizFirstTry,
+            quizRetried: quizRetried
         ))
     }
 }

@@ -89,6 +89,7 @@ struct QuestionRoundView: View {
         guard !answeredCorrectly else { return }
         if choice.id == question.correctID {
             answeredCorrectly = true
+            game.recordQuizQuestion(for: shark, firstTry: wrongChoiceIDs.isEmpty)
             feedback.play(.correct)
             narration.play(question.success)
         } else {
