@@ -96,3 +96,19 @@ iPad. It generates the project, signs each app with your team, and installs it
 over the previous copy on the assigned device. Use `tools/deploy-ipads.sh kate` or
 `tools/deploy-ipads.sh henry` to update one device. A failed device can be
 retried individually. Free Personal Team profiles expire seven days from issue.
+
+To install both games on your own iPad for testing, pass its hardware UDID.
+This uses your saved development team and leaves the family device assignments
+as they are.
+
+```sh
+tools/deploy-ipads.sh --device YOUR_IPAD_UDID
+```
+
+You can also use `tools/deploy-ipads.sh both --device YOUR_IPAD_UDID`.
+
+If you haven't run setup, supply your development team ID for this run.
+
+```sh
+DEVELOPMENT_TEAM=YOUR_TEAM_ID tools/deploy-ipads.sh --device YOUR_IPAD_UDID
+```
