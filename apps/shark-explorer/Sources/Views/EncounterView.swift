@@ -122,7 +122,7 @@ struct EncounterView: View {
         Task { @MainActor in
             try? await Task.sleep(for: .milliseconds(450))
             feedback.play(revealed.isEmpty ? .correct : .unlock)
-            narration.play(line.text)
+            narration.play(line.text, after: 0.6)
             withAnimation(.spring(response: 0.45, dampingFraction: 0.75)) {
                 toast = revealed.first.map { ($0.symbol, "New trait card: \($0.title)") } ?? ("✅", "\(topic.title) explored!")
             }

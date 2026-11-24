@@ -102,12 +102,12 @@ struct QuestionRoundView: View {
             answeredCorrectly = true
             game.recordQuizQuestion(for: shark, firstTry: wrongChoiceIDs.isEmpty)
             feedback.play(.correct)
-            narration.play(question.success)
+            narration.play(question.success, after: 0.6)
         } else {
             wrongChoiceIDs.insert(choice.id)
             showingRetry = true
             feedback.play(.wrong)
-            narration.play(question.retry)
+            narration.play(question.retry, after: 0.5)
         }
     }
 

@@ -18,6 +18,9 @@ final class MissionScene: SKScene {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func didMove(to view: SKView) {
+        // These scenes are silent. SpriteKit otherwise runs its own audio engine, which can make the
+        // narration hiccup each time a scene comes on screen.
+        audioEngine.stop()
         if mission.kind == "ambushApproach" {
             let surface = SKShapeNode(rectOf: CGSize(width: size.width, height: size.height * 0.24))
             surface.fillColor = UIColor(red: 0.78, green: 0.95, blue: 1, alpha: 0.85)

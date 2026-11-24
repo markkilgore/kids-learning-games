@@ -72,7 +72,6 @@ struct MissionFlowView: View {
             scene.onProgress = { value in Task { @MainActor in hit(value) } }
             scene.onMiss = { Task { @MainActor in feedback.play(.tap) } }
         }
-        .onDisappear { narration.stop() }
     }
 
     private var title: String {
@@ -159,7 +158,8 @@ struct MissionFlowView: View {
             try? await Task.sleep(for: .milliseconds(450))
             phase = .complete
             feedback.play(.correct)
-            narration.play(shark.mission.completion)
+            // Let the chime ring before the voice comes in.
+            narration.play(shark.mission.completion, after: 0.6)
         }
     }
 
@@ -177,7 +177,8 @@ struct MissionFlowView: View {
         phase = .reward
         feedback.play(.celebrate)
         celebration += 1
-        narration.play(SharkLine.pageEarned.text)
+        // The fanfare is two seconds long; the voice waits for most of it.
+        narration.play(SharkLine.pageEarned.text, after: 1.5)
     }
 
     private func backToEncounter() {

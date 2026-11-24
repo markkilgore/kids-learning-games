@@ -28,7 +28,10 @@ struct BooksView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            KidTopBar(book == .passport ? "Henry’s Shark Passport" : "Henry’s Ocean Words", back: KidBackButton("Ocean Map", systemImage: "map.fill") { game.showMap() }) {
+            KidTopBar(book == .passport ? "Henry’s Shark Passport" : "Henry’s Ocean Words", back: KidBackButton("Ocean Map", systemImage: "map.fill") {
+                narration.stop()
+                game.showMap()
+            }) {
                 KidTabs(selection: $book, items: [
                     .init(.passport, "Passport", systemImage: "book.closed.fill"),
                     .init(.words, "Ocean Words", systemImage: "textformat.abc")
@@ -45,7 +48,6 @@ struct BooksView: View {
             selectedSharkID = game.passportSharkID ?? catalog.sharks.first { game.completedSharks.contains($0.id) }?.id
             game.passportSharkID = nil
         }
-        .onDisappear { narration.stop() }
     }
 
     private var passport: some View {

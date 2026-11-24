@@ -68,14 +68,17 @@ struct OceanMapView: View {
             guard !game.freshlyUnlockedSharkIDs.isEmpty else { return }
             try? await Task.sleep(for: .milliseconds(500))
             feedback.play(.unlock)
-            narration.play(SharkLine.newShark.text)
+            narration.play(SharkLine.newShark.text, after: 1.0)
         }
-        .onDisappear { narration.stop() }
+        .onDisappear {
+            // Stop only the map's own hints; the next screen may already be speaking.
+            if [SharkLine.newShark.text, SharkLine.locked.text].contains(narration.text) { narration.stop() }
+        }
     }
 
     private func showLockedHint(for shark: SharkDefinition) {
         feedback.play(.wrong)
-        narration.play(SharkLine.locked.text)
+        narration.play(SharkLine.locked.text, after: 0.5)
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { lockedHint = shark }
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(4))

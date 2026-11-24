@@ -134,7 +134,11 @@ public struct ReadAlongView: View {
         }
         .padding(compact ? 8 : 32)
         .onAppear { playCurrent() }
-        .onDisappear { narration.stop() }
+        .onDisappear {
+            // Only silence this passage. A leaving screen is torn down after the next one has
+            // started talking, and stopping everything would cut that new line off.
+            if sentences.contains(narration.text) { narration.stop() }
+        }
         .onChange(of: playbackID) { _, _ in
             let needsSentenceReset = sentenceIndex != 0
             sentenceIndex = 0

@@ -16,6 +16,9 @@ final class HabitatScene: SKScene {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func didMove(to view: SKView) {
+        // These scenes are silent. SpriteKit otherwise runs its own audio engine, which can make the
+        // narration hiccup each time a scene comes on screen.
+        audioEngine.stop()
         removeAllChildren()
         let floor = SKShapeNode(rectOf: CGSize(width: size.width * 1.2, height: 70))
         floor.fillColor = UIColor(red: 0.62, green: 0.48, blue: 0.29, alpha: 0.55)
