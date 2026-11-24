@@ -1,72 +1,96 @@
 import SpriteKit
 import SwiftUI
 import LearningUI
+import Narration
 
 struct EncounterView: View {
     let shark: SharkDefinition
     @Environment(GameStore.self) private var game
+    @Environment(NarrationCoordinator.self) private var narration
+    @Environment(FeedbackPlayer.self) private var feedback
     @State private var sheet: EncounterSheet?
     @State private var showMission = false
-    @State private var showQuestions = false
+    @State private var toast: (symbol: String, text: String)?
+    @State private var habitat: HabitatScene
+
+    init(shark: SharkDefinition) {
+        self.shark = shark
+        _habitat = State(initialValue: HabitatScene(shark: shark, size: CGSize(width: 700, height: 350)))
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
-                EncounterHeader(shark: shark, readingModeTitle: game.readingMode.title) {
-                    game.showMap()
-                } onReplay: {
-                    sheet = .discover
+                KidTopBar(shark.name, subtitle: shark.scientificName, back: KidBackButton("Ocean Map", systemImage: "map.fill") { game.showMap() }) {
+                    if game.completedSharks.contains(shark.id) {
+                        Label("Page collected", systemImage: "checkmark.seal.fill")
+                            .font(.kidLabel)
+                            .foregroundStyle(.yellow)
+                    }
                 }
 
                 HStack(spacing: 20) {
-                    SpriteView(scene: HabitatScene(shark: shark, size: CGSize(width: 700, height: 350)), options: [.allowsTransparency])
-                        .clipShape(RoundedRectangle(cornerRadius: 28))
+                    SpriteView(scene: habitat)
+                        .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous))
                         .overlay(alignment: .bottomLeading) {
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .leading, spacing: 2) {
                                 Text(shark.region.uppercased())
                                     .font(.caption.bold())
                                     .tracking(2)
                                 Text(shark.bookFact)
-                                    .font(.title3.bold())
-                                    .lineLimit(2)
+                                    .font(.kidBody.weight(.bold))
+                                    .lineLimit(3)
+                                    .minimumScaleFactor(0.8)
                             }
-                            .padding(18)
-                            .background(.black.opacity(0.4), in: RoundedRectangle(cornerRadius: 20))
                             .padding(16)
+                            .background(.black.opacity(0.45), in: RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous))
+                            .padding(14)
                         }
+                        .shadow(color: .black.opacity(0.25), radius: 10, y: 5)
 
                     VStack(spacing: 14) {
                         Button { sheet = .discover } label: {
                             BigFeatureLabel(symbol: "sparkles", title: "Discover", subtitle: "Meet this shark", color: shark.tint)
                         }
-                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("discover")
 
                         Button { showMission = true } label: {
                             BigFeatureLabel(symbol: shark.mission.symbol, title: "Play", subtitle: shark.mission.title, color: .orange)
                         }
-                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("play-mission")
                     }
+                    .buttonStyle(PressableStyle())
                     .frame(width: 320)
                 }
-                .frame(maxHeight: 370)
+                // Taller on bigger iPads so the tank, not empty water, fills the screen.
+                .containerRelativeFrame(.vertical) { height, _ in max(300, height * 0.44) }
 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Explore")
-                        .font(.title2.weight(.black))
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 5), spacing: 12) {
+                    Text("Explore").font(.kidTitle)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 4), spacing: 12) {
                         ForEach(shark.topics) { topic in
+                            let done = game.hasCompleted(topic, for: shark)
                             Button { sheet = .topic(topic) } label: {
-                                VStack(spacing: 8) {
-                                    Text(topic.symbol).font(.system(size: 36))
-                                    Text(topic.title).font(.headline)
-                                    if game.completedTopics.contains("\(shark.id):\(topic.id)") {
-                                        Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                                HStack(spacing: 12) {
+                                    Text(topic.symbol).font(.system(size: 40))
+                                    Text(topic.title)
+                                        .font(.kidHeadline)
+                                        .lineLimit(2)
+                                        .minimumScaleFactor(0.7)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer(minLength: 0)
+                                    if done {
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .font(.title2)
+                                            .foregroundStyle(.green)
+                                            .accessibilityLabel("Explored")
                                     }
                                 }
-                                .frame(maxWidth: .infinity, minHeight: 104)
-                                .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 20))
+                                .padding(.horizontal, 16)
+                                .frame(maxWidth: .infinity, minHeight: 84)
+                                .kidCard(done ? .raised : .regular)
                             }
-                            .buttonStyle(.plain)
+                            .buttonStyle(PressableStyle())
                         }
                     }
                 }
@@ -74,111 +98,36 @@ struct EncounterView: View {
             .padding(24)
         }
         .foregroundStyle(.white)
+        .overlay(alignment: .top) {
+            if let toast { KidToast(symbol: toast.symbol, text: toast.text).padding(.top, 20) }
+        }
         .sheet(item: $sheet) { active in
             NarrationSheet(shark: shark, active: active) {
-                if case .topic(let topic) = active { game.completeTopic(sharkID: shark.id, topicID: topic.id) }
+                if case .topic(let topic) = active { finished(topic) }
                 sheet = nil
             }
         }
         .fullScreenCover(isPresented: $showMission) {
-            MissionView(shark: shark) {
-                showMission = false
-                showQuestions = true
+            MissionFlowView(shark: shark) { showMission = false }
+        }
+        .onChange(of: sheet == nil && !showMission) { _, visible in habitat.isPaused = !visible }
+    }
+
+    private func finished(_ topic: ExploreTopic) {
+        let wasDone = game.hasCompleted(topic, for: shark)
+        let revealed = game.completeTopic(topic, for: shark)
+        guard !wasDone else { return }
+        let line: SharkLine = revealed.isEmpty ? .topicDone : .traitUnlocked
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(450))
+            feedback.play(revealed.isEmpty ? .correct : .unlock)
+            narration.play(line.text)
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.75)) {
+                toast = revealed.first.map { ($0.symbol, "New trait card: \($0.title)") } ?? ("✅", "\(topic.title) explored!")
             }
-            .environment(game)
+            try? await Task.sleep(for: .seconds(3.5))
+            withAnimation { toast = nil }
         }
-        .fullScreenCover(isPresented: $showQuestions) {
-            QuestionRoundView(shark: shark) {
-                game.completeMission(for: shark)
-                showQuestions = false
-            }
-            .environment(game)
-        }
-    }
-}
-
-private struct EncounterHeader: View {
-    let shark: SharkDefinition
-    let readingModeTitle: String
-    let onMap: () -> Void
-    let onReplay: () -> Void
-
-    var body: some View {
-        ViewThatFits(in: .horizontal) {
-            expandedHeader.frame(minWidth: 1_120)
-            compactHeader
-        }
-    }
-
-    private var expandedHeader: some View {
-        HStack {
-            mapButton
-            sharkTitle
-            Spacer()
-            readingMode
-            replayButton(showsLabel: true)
-        }
-    }
-
-    private var compactHeader: some View {
-        VStack(spacing: 8) {
-            HStack(spacing: 12) {
-                mapButton
-                sharkTitle
-                Spacer(minLength: 0)
-                replayButton(showsLabel: false)
-            }
-            HStack {
-                readingMode
-                Spacer()
-            }
-        }
-    }
-
-    private var sharkTitle: some View {
-        VStack(alignment: .leading, spacing: 1) {
-            Text(shark.name)
-                .font(.system(size: 36, weight: .black, design: .rounded))
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
-            Text(shark.scientificName)
-                .font(.subheadline.italic())
-                .foregroundStyle(.white.opacity(0.7))
-                .lineLimit(1)
-                .minimumScaleFactor(0.75)
-        }
-    }
-
-    private var readingMode: some View {
-        Label(readingModeTitle, systemImage: "text.book.closed.fill")
-            .font(.headline)
-    }
-
-    private var mapButton: some View {
-        Button(action: onMap) {
-            Label("Ocean Map", systemImage: "map.fill")
-                .font(.headline)
-                .frame(minHeight: 54)
-        }
-        .buttonStyle(.borderedProminent)
-        .tint(.white.opacity(0.2))
-    }
-
-    private func replayButton(showsLabel: Bool) -> some View {
-        Button(action: onReplay) {
-            if showsLabel {
-                Label("Replay", systemImage: "speaker.wave.2.fill")
-                    .font(.headline)
-                    .frame(minHeight: 54)
-            } else {
-                Image(systemName: "speaker.wave.2.fill")
-                    .font(.headline)
-                    .frame(width: 54, height: 54)
-            }
-        }
-        .buttonStyle(.borderedProminent)
-        .tint(shark.tint)
-        .accessibilityLabel("Replay")
     }
 }
 
@@ -201,31 +150,25 @@ private struct NarrationSheet: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                LinearGradient(colors: [Color(hex: "#052B52"), shark.tint.opacity(0.55)], startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
-                VStack {
-                    Text(title)
-                        .font(.largeTitle.weight(.black))
-                        .foregroundStyle(.white)
-                    ReadAlongView(sentences: narration.sentences(for: game.readingMode), vocabulary: vocabulary) {
-                        onDone()
-                        dismiss()
-                    }
+        ZStack {
+            LinearGradient(colors: [KidTheme.shark.background[0], shark.tint.opacity(0.55)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            VStack(spacing: 0) {
+                KidTopBar(title, back: KidBackButton("Close", systemImage: "xmark") { dismiss() })
+                    .padding([.horizontal, .top], 24)
+                ReadAlongView(sentences: narration.sentences(for: game.readingMode), vocabulary: vocabulary) {
+                    onDone()
+                    dismiss()
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Close", systemImage: "xmark.circle.fill") { dismiss() }
-                        .font(.headline)
-                }
+                Spacer(minLength: 0)
             }
         }
+        .foregroundStyle(.white)
+        .presentationDetents([.large])
     }
 
     private var title: String {
-        switch active { case .discover: "Discover \(shark.name)"; case .topic(let topic): topic.title }
+        switch active { case .discover: "Discover \(shark.name)"; case .topic(let topic): "\(topic.symbol) \(topic.title)" }
     }
     private var narration: NarrativePair {
         switch active { case .discover: shark.discover; case .topic(let topic): topic.narration }
@@ -245,18 +188,18 @@ private struct BigFeatureLabel: View {
         HStack(spacing: 16) {
             Image(systemName: symbol)
                 .font(.system(size: 34, weight: .bold))
-                .frame(width: 62, height: 62)
-                .background(.white.opacity(0.2), in: Circle())
-            VStack(alignment: .leading) {
-                Text(title).font(.title2.weight(.black))
-                Text(subtitle).font(.subheadline).lineLimit(2)
+                .frame(width: 66, height: 66)
+                .background(.white.opacity(0.22), in: Circle())
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.kidTitle)
+                Text(subtitle).font(.kidLabel).lineLimit(2)
             }
             Spacer()
             Image(systemName: "chevron.right").font(.title2.bold())
         }
         .foregroundStyle(.white)
         .padding(18)
-        .frame(maxWidth: .infinity, minHeight: 102)
-        .background(color.gradient, in: RoundedRectangle(cornerRadius: 24))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .kidCard(.raised, tint: color, radius: KidTheme.Radius.large)
     }
 }

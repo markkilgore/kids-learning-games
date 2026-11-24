@@ -57,7 +57,7 @@ enum CatRewardAction: String, CaseIterable, Identifiable {
     }
 }
 
-enum CatDestination: Equatable {
+enum CatDestination: Hashable {
     case home
     case activity(String)
     case journal
@@ -69,11 +69,11 @@ enum CatDestination: Equatable {
 final class CatGameStore {
     var destination: CatDestination = .home
     private(set) var progress = CatProgress()
-    private let progressStore: NamespacedProgressStore<CatProgress>
+    private let progressStore: NamespacedProgressStore<CatProgress>?
     private var didLoad = false
 
     init(baseDirectory: URL? = nil) {
-        progressStore = try! NamespacedProgressStore(namespace: CatAppConfiguration.value.storageNamespace, baseDirectory: baseDirectory)
+        progressStore = try? NamespacedProgressStore(namespace: CatAppConfiguration.value.storageNamespace, baseDirectory: baseDirectory)
     }
 
     var totalFriendship: Int { progress.friendship.values.reduce(0, +) }
@@ -85,7 +85,7 @@ final class CatGameStore {
     func load() {
         guard !didLoad else { return }
         didLoad = true
-        progress = (try? progressStore.load(default: CatProgress())) ?? CatProgress()
+        progress = (try? progressStore?.load(default: CatProgress())) ?? CatProgress()
     }
 
     func friendship(for cat: CatDefinition) -> Int { progress.friendship[cat.id, default: 0] }
@@ -96,10 +96,24 @@ final class CatGameStore {
         destination = .activity(cat.id)
     }
 
-    func completeActivity(for cat: CatDefinition) {
+    /// How many more hearts, across all cats, bring a shy cat out.
+    func heartsNeeded(for cat: CatDefinition) -> Int { max(0, cat.unlockAt - totalFriendship) }
+
+    /// Records a solved puzzle and returns any cats the new heart just unlocked.
+    @discardableResult
+    func completeActivity(for cat: CatDefinition) -> [CatDefinition] {
+        let lockedBefore = CatContent.cats.filter { !isUnlocked($0) }
         progress.friendship[cat.id, default: 0] += CatAppConfiguration.value.progression.pointsPerSuccess
         progress.completedActivities += 1
         progress.journaledCatIDs.insert(cat.id)
+        save()
+        return lockedBefore.filter(isUnlocked)
+    }
+
+    func resetProgress() {
+        let location = progress.selectedLocationID
+        progress = CatProgress()
+        progress.selectedLocationID = location
         save()
     }
 
@@ -127,5 +141,5 @@ final class CatGameStore {
     func showJournal() { destination = .journal }
     func showSettings() { destination = .settings }
 
-    private func save() { try? progressStore.save(progress) }
+    private func save() { try? progressStore?.save(progress) }
 }

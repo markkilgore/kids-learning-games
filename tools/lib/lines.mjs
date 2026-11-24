@@ -1,0 +1,111 @@
+import { readFile } from 'node:fs/promises';
+
+export const sharkResources = new URL('../../apps/shark-explorer/Resources/', import.meta.url);
+export const catResources = new URL('../../apps/cat-math/Resources/', import.meta.url);
+
+/** Spoken by the shared weekly-lesson player. Keep in step with `WeeklySpokenLines` in WeeklyLessons.swift. */
+export const weeklySharedLines = [
+  'One!', 'Two!', 'Three!', 'Four!', 'Five!', 'Six!', 'Seven!', 'Eight!', 'Nine!', 'Ten!',
+  'You did it!', 'Great job!', 'You got it!', 'Nice thinking!', 'Yes! That is right.'
+];
+
+const readJSON = async (name, base) => JSON.parse(await readFile(new URL(name, base), 'utf8'));
+
+async function weeklyLines(name, base) {
+  const lines = [...weeklySharedLines];
+  for (const week of await readJSON(name, base)) {
+    lines.push(week.overview);
+    for (const activity of week.activities) {
+      for (const step of activity.steps) lines.push(step.spoken ?? step.prompt, step.hint);
+    }
+  }
+  return lines;
+}
+
+/** Static interface lines each app speaks, shared with Swift through the bundled `ui-lines.json`. */
+async function uiLines(base) {
+  return Object.values(await readJSON('ui-lines.json', base));
+}
+
+export async function sharkLines() {
+  const catalog = await readJSON('catalog.json', sharkResources);
+  const lines = [];
+  const visit = (value, key = '') => {
+    if (Array.isArray(value)) {
+      if (key === 'earlyReader' || key === 'story') lines.push(...value);
+      else value.forEach((item) => visit(item));
+    } else if (value && typeof value === 'object') {
+      for (const [childKey, child] of Object.entries(value)) visit(child, childKey);
+    } else if (typeof value === 'string' && ['completion', 'success', 'retry'].includes(key)) {
+      lines.push(value);
+    }
+  };
+  visit(catalog);
+  for (const word of catalog.vocabulary) lines.push(word.word);
+  return [...lines, ...await weeklyLines('shark-weeks.json', sharkResources), ...await uiLines(sharkResources)];
+}
+
+export async function catLines() {
+  const source = await readFile(new URL('../../apps/cat-math/Sources/CatContent.swift', import.meta.url), 'utf8');
+  const cats = parseCats(source);
+  if (cats.length !== 10) throw new Error(`Expected 10 cats in CatContent.swift, found ${cats.length}`);
+  const lines = [];
+  for (const [catIndex, cat] of cats.entries()) {
+    cat.beats.forEach((beat) => lines.push(beat.story));
+    lines.push(
+      `You did it! ${cat.name}’s friendship grew.`,
+      `Crunch! ${cat.name} loved that tasty treat.`,
+      `Yum! ${cat.name} is happily eating from the bowl.`,
+      `Ta-da! ${cat.name} performed ${cat.trickName}!`
+    );
+    // Prompts repeat with period 18 once every story page is revealed, so 36 levels cover every prompt.
+    for (let friendship = 0; friendship < 36; friendship += 1) lines.push(challengePrompt(cat, catIndex, friendship));
+  }
+  return [...lines, ...await weeklyLines('cat-weeks.json', catResources), ...await uiLines(catResources)];
+}
+
+function parseCats(swift) {
+  const pattern = /cat\("([^"]+)", "([^"]+)", "[^"]+", "[^"]+", "[^"]+", "[^"]+", \d+, "([^"]+)", "([^"]+)", "[^"]+", "([^"]+)", "[^"]+", \[\n([\s\S]*?)\n        \]\)/g;
+  return [...swift.matchAll(pattern)].map((match) => ({
+    name: match[2],
+    item: match[3],
+    items: match[4],
+    trickName: match[5],
+    beats: [...match[6].matchAll(/\("[^"]+", "([^"]+)", "([^"]+)"\)/g)].map((beat) => ({ story: beat[1], lead: beat[2] }))
+  }));
+}
+
+const skills = ['counting', 'addition', 'subtraction', 'odd-even', 'skip-5', 'skip-10'];
+
+/** JavaScript port of `MathChallengeFactory.challenge(for:friendship:)`; the Cat tests fail if the two drift. */
+function challengePrompt(cat, catIndex, friendship) {
+  const skill = skills[(friendship + catIndex) % skills.length];
+  const seed = Math.max(1, (friendship + [...cat.name].length) % 9 + 1);
+  const lead = cat.beats[Math.min(friendship, cat.beats.length - 1)].lead;
+  const noun = (count) => (count === 1 ? cat.item : cat.items);
+  switch (skill) {
+    case 'addition': {
+      const other = (seed % 4) + 1;
+      return `${lead} ${cat.name} has ${seed} ${noun(seed)} and finds ${other} more. How many now?`;
+    }
+    case 'subtraction': {
+      const total = seed + 4;
+      const taken = Math.min(3, seed);
+      return `${lead} ${cat.name} counts ${total} ${noun(total)}. ${taken} ${taken === 1 ? 'is' : 'are'} put away. How many stay?`;
+    }
+    case 'odd-even': {
+      const number = seed + 3;
+      return `${lead} ${cat.name} finds ${number} ${noun(number)}. Is that odd or even?`;
+    }
+    case 'skip-5': {
+      const start = 5 * (seed % 3 + 1);
+      return `${lead} help ${cat.name} count ${cat.items} by fives: ${start}, ${start + 5}, ${start + 10}. What comes next?`;
+    }
+    case 'skip-10': {
+      const start = 10 * (seed % 3 + 1);
+      return `${lead} help ${cat.name} count ${cat.items} by tens: ${start}, ${start + 10}, ${start + 20}. What comes next?`;
+    }
+    default:
+      return `${lead} how many ${noun(seed)} did ${cat.name} find?`;
+  }
+}

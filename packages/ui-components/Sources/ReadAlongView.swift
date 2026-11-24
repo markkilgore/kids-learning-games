@@ -8,17 +8,25 @@ public struct ReadAlongView: View {
     /// Changes when a parent swaps to a different passage while keeping this view on screen.
     /// This restarts the passage without triggering the old view's `onDisappear` stop handler.
     public var playbackID: String? = nil
+    /// Label for the last control once every sentence has been heard; `nil` hides that control.
+    public var finishTitle: String? = "Done"
+    /// Tighter spacing for screens that also show answers below the passage.
+    public var compact = false
     public var onFinished: () -> Void = {}
 
     public init(
         sentences: [String],
         vocabulary: Set<String> = [],
         playbackID: String? = nil,
+        finishTitle: String? = "Done",
+        compact: Bool = false,
         onFinished: @escaping () -> Void = {}
     ) {
+        self.compact = compact
         self.sentences = sentences
         self.vocabulary = vocabulary
         self.playbackID = playbackID
+        self.finishTitle = finishTitle
         self.onFinished = onFinished
     }
 
@@ -30,16 +38,24 @@ public struct ReadAlongView: View {
 
     public var body: some View {
         @Bindable var narration = narration
-        VStack(spacing: 24) {
+        VStack(spacing: compact ? 12 : 24) {
             if sentences.isEmpty {
                 Text("This story is getting ready.")
                     .font(.largeTitle.bold())
             } else {
-                Text("Sentence \(sentenceIndex + 1) of \(sentences.count)")
-                    .font(.headline)
-                    .foregroundStyle(.white.opacity(0.7))
+                if sentences.count > 1 {
+                    HStack(spacing: 8) {
+                        ForEach(sentences.indices, id: \.self) { index in
+                            Capsule()
+                                .fill(index <= sentenceIndex ? Color.yellow : .white.opacity(0.25))
+                                .frame(width: index == sentenceIndex ? 34 : 14, height: 10)
+                        }
+                    }
+                    .animation(.spring(response: 0.35, dampingFraction: 0.8), value: sentenceIndex)
+                    .accessibilityLabel("Sentence \(sentenceIndex + 1) of \(sentences.count)")
+                }
 
-                WordFlowLayout(spacing: 12) {
+                WordFlowLayout(spacing: 6) {
                     ForEach(sentence.wordTokens) { token in
                         Button {
                             narration.speakWord(token.text, at: token.id, in: sentence)
@@ -47,9 +63,12 @@ public struct ReadAlongView: View {
                             Text(token.text)
                                 .font(.system(size: 38, weight: .bold, design: .rounded))
                                 .foregroundStyle(wordColor(token))
-                                .padding(.horizontal, 5)
-                                .padding(.vertical, 4)
-                                .background(wordBackground(token), in: RoundedRectangle(cornerRadius: 9))
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 6)
+                                .frame(minWidth: 48, minHeight: 60)
+                                .background(wordBackground(token), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                .scaleEffect(isSpeakingThisSentence && narration.currentWordIndex == token.id ? 1.08 : 1)
+                                .animation(.spring(response: 0.22, dampingFraction: 0.7), value: narration.currentWordIndex)
                         }
                         .buttonStyle(.plain)
                         .accessibilityLabel("Hear the word \(token.text)")
@@ -57,7 +76,7 @@ public struct ReadAlongView: View {
                 }
                 .frame(maxWidth: 900, alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(minHeight: 150, alignment: .top)
+                .frame(minHeight: compact ? 70 : 150, alignment: .top)
 
                 HStack(spacing: 18) {
                     control("Replay", systemImage: "speaker.wave.2.fill", tint: .blue) {
@@ -73,19 +92,23 @@ public struct ReadAlongView: View {
                     ) {
                         narration.setSlow(!narration.isSlow)
                     }
-                    control(
-                        sentenceIndex + 1 < sentences.count ? "Next sentence" : "Done",
-                        systemImage: sentenceIndex + 1 < sentences.count ? "arrow.right" : "checkmark",
-                        tint: .green
-                    ) {
-                        advance()
+                    let isLast = sentenceIndex + 1 >= sentences.count
+                    if !isLast || finishTitle != nil {
+                        control(
+                            isLast ? (finishTitle ?? "") : "Next sentence",
+                            systemImage: isLast ? "checkmark" : "arrow.right",
+                            tint: .green
+                        ) {
+                            advance()
+                        }
+                        .opacity(narration.state == .idle ? 1 : 0.35)
+                        .allowsHitTesting(narration.state == .idle)
+                        .animation(.easeOut(duration: 0.2), value: narration.state == .idle)
                     }
-                    .opacity(narration.state == .idle ? 1 : 0)
-                    .allowsHitTesting(narration.state == .idle)
                 }
             }
         }
-        .padding(32)
+        .padding(compact ? 8 : 32)
         .onAppear { playCurrent() }
         .onDisappear { narration.stop() }
         .onChange(of: playbackID) { _, _ in
@@ -126,17 +149,9 @@ public struct ReadAlongView: View {
         tint: Color,
         action: @escaping () -> Void
     ) -> some View {
-        Button(action: action) {
-            Label(title, systemImage: systemImage)
-                .font(.title3.bold())
-                .lineLimit(1)
-                .minimumScaleFactor(0.72)
-                .padding(.horizontal, 20)
-                .frame(maxWidth: .infinity, minHeight: 58)
-        }
-        .buttonStyle(.borderedProminent)
-        .tint(tint)
-        .frame(maxWidth: .infinity)
+        Button(action: action) { Label(title, systemImage: systemImage) }
+            .buttonStyle(KidButtonStyle(tint: tint, compact: true))
+            .frame(maxWidth: .infinity)
     }
 
     private func index(of token: WordToken) -> Int { token.id }
@@ -149,14 +164,17 @@ public struct ReadAlongView: View {
         switch narration.state { case .playing: "Pause"; case .paused: "Continue"; case .idle: "Play" }
     }
 
+    /// The coordinator may be speaking something else (quiz feedback, a hint); only then-current text is highlighted.
+    private var isSpeakingThisSentence: Bool { narration.text == sentence }
+
     private func wordColor(_ token: WordToken) -> Color {
-        if narration.currentWordIndex == index(of: token) { return .navy }
+        if isSpeakingThisSentence, narration.currentWordIndex == index(of: token) { return .navy }
         return .white
     }
 
     private func wordBackground(_ token: WordToken) -> Color {
-        if narration.currentWordIndex == index(of: token) { return .yellow }
-        if index(of: token) < narration.completedWordCount { return .white.opacity(0.18) }
+        if isSpeakingThisSentence, narration.currentWordIndex == index(of: token) { return .yellow }
+        if isSpeakingThisSentence, index(of: token) < narration.completedWordCount { return .white.opacity(0.18) }
         if vocabulary.contains(token.text.lowercased()) { return .cyan.opacity(0.22) }
         return .clear
     }

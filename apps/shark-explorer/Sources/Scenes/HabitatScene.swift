@@ -7,7 +7,10 @@ final class HabitatScene: SKScene {
         self.shark = shark
         super.init(size: size)
         scaleMode = .resizeFill
-        backgroundColor = UIColor(shark.tint.opacity(0.22))
+        // Deep water tinted toward this shark's colour, so the photo reads clearly against it.
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0
+        UIColor(shark.tint).getRed(&red, green: &green, blue: &blue, alpha: nil)
+        backgroundColor = UIColor(red: 0.02 + red * 0.3, green: 0.16 + green * 0.3, blue: 0.3 + blue * 0.3, alpha: 1)
     }
 
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -23,9 +26,9 @@ final class HabitatScene: SKScene {
         let sharkNode: SKNode
         if let image = UIImage(named: shark.imageAsset) {
             let sprite = SKSpriteNode(texture: SKTexture(image: image))
-            let targetWidth = min(size.width * 0.42, 380)
-            let aspect = image.size.height / max(image.size.width, 1)
-            sprite.size = CGSize(width: targetWidth, height: targetWidth * aspect)
+            // Fit inside the tank whatever the photo's shape: wide strips and tall portraits both stay whole.
+            let scale = min(min(size.width * 0.42, 380) / max(image.size.width, 1), size.height * 0.62 / max(image.size.height, 1))
+            sprite.size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
             sprite.name = "species-image"
             sharkNode = sprite
         } else {
@@ -34,16 +37,20 @@ final class HabitatScene: SKScene {
             label.verticalAlignmentMode = .center
             sharkNode = label
         }
-        sharkNode.position = CGPoint(x: -220, y: size.height * 0.54)
+        // Start in view so the shark is the first thing a child sees, then keep crossing the tank.
+        sharkNode.position = CGPoint(x: size.width * 0.4, y: size.height * 0.56)
         addChild(sharkNode)
-        let swim = SKAction.moveTo(x: size.width + 220, duration: 10)
+        let span = size.width + 440
+        let finish = SKAction.moveTo(x: size.width + 220, duration: 14 * Double((size.width * 0.6 + 220) / span))
         let reset = SKAction.moveTo(x: -220, duration: 0)
-        sharkNode.run(.repeatForever(.sequence([swim, reset])))
+        let cross = SKAction.moveTo(x: size.width + 220, duration: 14)
+        sharkNode.run(.sequence([finish, .repeatForever(.sequence([reset, cross]))]))
+        sharkNode.run(.repeatForever(.sequence([.moveBy(x: 0, y: 10, duration: 1.6), .moveBy(x: 0, y: -10, duration: 1.6)])))
 
         for index in 0..<16 {
             let bubble = SKShapeNode(circleOfRadius: CGFloat(2 + index % 6))
             bubble.strokeColor = UIColor.white.withAlphaComponent(0.35)
-            bubble.position = CGPoint(x: CGFloat((index * 73) % 900), y: CGFloat((index * 41) % 300))
+            bubble.position = CGPoint(x: size.width * CGFloat((index * 73) % 100) / 100, y: size.height * CGFloat((index * 41) % 100) / 100)
             addChild(bubble)
             bubble.run(.repeatForever(.sequence([
                 .moveBy(x: 12, y: size.height + 30, duration: 5 + Double(index % 4)),

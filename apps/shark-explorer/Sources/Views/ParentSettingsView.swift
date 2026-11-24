@@ -1,83 +1,76 @@
 import SwiftUI
 import LearningEngine
+import LearningUI
+import Narration
 
 struct ParentSettingsView: View {
     @Environment(GameStore.self) private var game
+    @Environment(SoundSettings.self) private var sound
+    @Environment(\.kidTheme) private var theme
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 28) {
-            HStack {
-                Text("Parent Settings")
-                    .font(.largeTitle.weight(.black))
-                Spacer()
-                Button("Done", systemImage: "checkmark.circle.fill") { game.showMap() }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.green)
-                    .frame(minHeight: 58)
-            }
+        @Bindable var sound = sound
+        VStack(spacing: 18) {
+            KidTopBar("Parent Settings", back: KidBackButton("Done", systemImage: "checkmark") { game.showMap() })
 
-            VStack(alignment: .leading, spacing: 12) {
-                Label("Reading level", systemImage: "text.book.closed.fill")
-                    .font(.title2.bold())
-                Picker("Reading level", selection: Binding(get: { game.readingMode }, set: { game.setReadingMode($0) })) {
-                    ForEach(ReadingMode.allCases) { mode in Text(mode.title).tag(mode) }
-                }
-                .pickerStyle(.segmented)
-                .frame(maxWidth: 600)
-                Text(game.readingMode == .earlyReader
-                     ? "Short, concrete sentences for independent play."
-                     : "Richer sentences for playing with an adult.")
-                    .foregroundStyle(.white.opacity(0.7))
-            }
-            .padding(24)
-            .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 22))
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    section("Reading level", systemImage: "text.book.closed.fill") {
+                        KidTabs(selection: Binding(get: { game.readingMode }, set: { game.setReadingMode($0) }), items: ReadingMode.allCases.map {
+                            .init($0, $0.title, systemImage: $0 == .earlyReader ? "textformat.size.smaller" : "textformat.size.larger")
+                        })
+                        .frame(maxWidth: 560)
+                        Text(game.readingMode == .earlyReader
+                             ? "Short, concrete sentences for independent play."
+                             : "Richer sentences for playing with an adult.")
+                            .foregroundStyle(theme.mutedInk)
+                    }
 
-            VStack(alignment: .leading, spacing: 12) {
-                Label("Learning design", systemImage: "sparkles")
-                    .font(.title2.bold())
-                Text("ST and SP words are worked naturally into the narration. Pronunciation recording and scoring are intentionally not part of this first version.")
-                Text("All incorrect-answer feedback is encouraging and gives Henry another visual clue.")
-            }
-            .font(.title3)
-            .padding(24)
-            .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 22))
+                    section("Sound", systemImage: "speaker.wave.2.fill") {
+                        Toggle("Read stories and questions aloud", isOn: $sound.voiceEnabled)
+                        Toggle("Sound effects", isOn: $sound.effectsEnabled)
+                        Text("Narration is recorded and bundled with the app; nothing is sent over the internet.")
+                            .foregroundStyle(theme.mutedInk)
+                    }
 
-            VStack(alignment: .leading, spacing: 8) {
-                Label("Saved on this iPad", systemImage: "ipad")
-                    .font(.title2.bold())
-                Text("\(game.completedCount) shark pages • \(game.collectedWords.count) Ocean Words • \(game.completedTopics.count) topics explored")
-            }
-            .padding(24)
-            .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 22))
+                    section("Learning design", systemImage: "sparkles") {
+                        Text("ST and SP words are worked naturally into the narration. Pronunciation recording and scoring are intentionally not part of this version.")
+                        Text("All incorrect-answer feedback is encouraging and gives Henry another visual clue.")
+                    }
 
-            DisclosureGroup("Species image credits") {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
+                    section("Saved on this iPad", systemImage: "ipad") {
+                        Text("\(game.completedCount) shark pages • \(game.collectedWords.count) Ocean Words • \(game.completedTopics.count) topics explored")
+                    }
+
+                    section("Species image credits", systemImage: "photo.fill") {
                         ForEach(ContentStore.shared.catalog.sharks) { shark in
                             if let url = URL(string: shark.imageSourceURL) {
                                 Link(destination: url) {
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text(shark.name).font(.headline)
-                                        Text("\(shark.imageAuthor) • \(shark.imageLicense)")
-                                            .font(.subheadline)
-                                            .foregroundStyle(.white.opacity(0.72))
-                                    }
+                                    Text("\(shark.name) — \(shark.imageAuthor) • \(shark.imageLicense)")
+                                        .multilineTextAlignment(.leading)
                                 }
+                                .tint(.cyan)
                             }
                         }
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 12)
                 }
-                .frame(maxHeight: 220)
+                .padding(.bottom, 12)
             }
-            .font(.title3.bold())
-            .padding(24)
-            .background(.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 22))
-
-            Spacer()
+            .scrollIndicators(.hidden)
         }
-        .padding(34)
+        .padding(24)
         .foregroundStyle(.white)
+    }
+
+    private func section(_ title: String, systemImage: String, @ViewBuilder content: () -> some View) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Label(title, systemImage: systemImage).font(.kidHeadline)
+            content()
+        }
+        .font(.kidBody)
+        .tint(theme.primary)
+        .padding(22)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .kidCard()
     }
 }

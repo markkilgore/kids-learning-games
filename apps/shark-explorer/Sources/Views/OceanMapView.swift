@@ -1,23 +1,23 @@
 import LearningUI
+import Narration
 import SwiftUI
+import UIKit
 
 struct OceanMapView: View {
     @Environment(GameStore.self) private var game
+    @Environment(NarrationCoordinator.self) private var narration
+    @Environment(FeedbackPlayer.self) private var feedback
+    @Environment(\.kidTheme) private var theme
+    @State private var lockedHint: SharkDefinition?
     private let catalog = ContentStore.shared.catalog
 
     var body: some View {
         VStack(spacing: 12) {
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Henry’s Shark Explorer")
-                        .font(.system(size: 40, weight: .black, design: .rounded))
-                    Text("Choose an ocean friend to discover")
-                        .font(.title3)
-                        .foregroundStyle(.white.opacity(0.78))
-                }
-                Spacer()
-                WeeklyLessonsButton(resource: "shark-weeks", namespace: SharkAppConfiguration.value.storageNamespace, guide: "🦈", color: .teal)
-                headerButton("books.vertical.fill", "My Books") { game.destination = .books }
+            KidTopBar(SharkAppConfiguration.value.identity.childFacingName, subtitle: "Tap a shark to dive in") {
+                WeeklyLessonsButton(resource: "shark-weeks", namespace: SharkAppConfiguration.value.storageNamespace, guide: "🦈", color: theme.primary)
+                Button { game.showBooks() } label: { Label("My Books", systemImage: "books.vertical.fill") }
+                    .buttonStyle(KidButtonStyle(.soft, compact: true))
+                    .accessibilityIdentifier("my-books")
                 ParentGateButton { game.destination = .settings }
             }
             .padding(.horizontal, 28)
@@ -25,114 +25,177 @@ struct OceanMapView: View {
 
             GeometryReader { proxy in
                 ZStack {
-                    WorldMapShape()
-                        .fill(.mint.opacity(0.16))
-                        .overlay(WorldMapShape().stroke(.white.opacity(0.15), lineWidth: 2))
-                        .padding(30)
+                    OceanMapArt().padding(24)
 
                     ForEach(catalog.sharks) { shark in
-                        SharkMapNode(shark: shark, unlocked: game.isUnlocked(shark)) {
-                            game.open(shark)
+                        SharkMapNode(
+                            shark: shark,
+                            unlocked: game.isUnlocked(shark),
+                            completed: game.completedSharks.contains(shark.id),
+                            fresh: game.freshlyUnlockedSharkIDs.contains(shark.id)
+                        ) {
+                            if game.isUnlocked(shark) { game.open(shark) } else { showLockedHint(for: shark) }
                         }
                         .position(x: proxy.size.width * shark.mapX, y: proxy.size.height * shark.mapY)
                     }
                 }
             }
 
-            HStack(spacing: 24) {
-                Label("\(game.completedCount) of 10 shark pages", systemImage: "book.closed.fill")
+            HStack(spacing: 18) {
+                Label("\(game.completedCount) of \(catalog.sharks.count) shark pages", systemImage: "book.closed.fill")
+                ProgressView(value: Double(game.completedCount), total: Double(max(catalog.sharks.count, 1)))
+                    .tint(.yellow)
+                    .frame(width: 180)
+                    .scaleEffect(y: 2.4)
                 Label("\(game.collectedWords.count) Ocean Words", systemImage: "text.book.closed.fill")
-                Text(game.readingMode.title)
             }
-            .font(.headline)
-            .padding(.horizontal, 24)
+            .font(.kidLabel)
+            .padding(.horizontal, 26)
             .frame(height: 52)
-            .background(.black.opacity(0.16), in: Capsule())
+            .background(.black.opacity(0.22), in: Capsule())
             .padding(.bottom, 12)
         }
         .foregroundStyle(.white)
+        .overlay(alignment: .bottom) {
+            if let lockedHint {
+                let needed = game.missionsNeeded(for: lockedHint)
+                KidToast(symbol: "🔒", text: "Finish \(needed) more shark \(needed == 1 ? "mission" : "missions") to find this shark")
+                    .padding(.bottom, 80)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .task {
+            guard !game.freshlyUnlockedSharkIDs.isEmpty else { return }
+            try? await Task.sleep(for: .milliseconds(500))
+            feedback.play(.unlock)
+            narration.play(SharkLine.newShark.text)
+        }
+        .onDisappear { narration.stop() }
     }
 
-    private func headerButton(_ icon: String, _ label: String, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Label(label, systemImage: icon)
-                .font(.headline)
-                .padding(.horizontal, 20)
-                .frame(minHeight: 58)
+    private func showLockedHint(for shark: SharkDefinition) {
+        feedback.play(.wrong)
+        narration.play(SharkLine.locked.text)
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { lockedHint = shark }
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(4))
+            if lockedHint == shark { withAnimation { lockedHint = nil } }
         }
-        .buttonStyle(.borderedProminent)
-        .tint(.white.opacity(0.18))
     }
 }
 
 private struct SharkMapNode: View {
     let shark: SharkDefinition
     let unlocked: Bool
+    let completed: Bool
+    let fresh: Bool
     let action: () -> Void
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var floating = false
+    @State private var pulsing = false
+    @State private var wiggles = 0
 
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 3) {
+        Button {
+            if !unlocked, !reduceMotion { withAnimation(.linear(duration: 0.45)) { wiggles += 1 } }
+            action()
+        } label: {
+            VStack(spacing: 4) {
                 ZStack {
+                    if fresh {
+                        Circle()
+                            .stroke(.yellow, lineWidth: 5)
+                            .frame(width: 96, height: 96)
+                            .scaleEffect(pulsing ? 1.35 : 1)
+                            .opacity(pulsing ? 0 : 0.9)
+                    }
                     Circle()
-                        .fill(unlocked ? shark.tint.gradient : Color.black.opacity(0.32).gradient)
-                        .frame(width: 78, height: 78)
-                        .overlay(Circle().stroke(.white.opacity(unlocked ? 0.8 : 0.25), lineWidth: 3))
+                        .fill(unlocked ? AnyShapeStyle(shark.tint.gradient) : AnyShapeStyle(Color.black.opacity(0.4)))
+                        .frame(width: 92, height: 92)
+                        .overlay(Circle().strokeBorder(.white.opacity(unlocked ? 0.9 : 0.3), lineWidth: 4))
+                        .shadow(color: .black.opacity(0.3), radius: 8, y: 5)
                     if unlocked {
                         SpeciesImageView(shark: shark)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 80, height: 80)
                             .clipShape(Circle())
                     } else {
-                        Text("🔒").font(.system(size: 42))
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 34, weight: .bold))
+                            .foregroundStyle(.white.opacity(0.8))
                     }
                 }
-                Text(shark.name)
-                    .font(.caption.bold())
+                .overlay(alignment: .topTrailing) {
+                    if completed {
+                        Image(systemName: "star.circle.fill")
+                            .font(.system(size: 32))
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.white, .orange)
+                            .offset(x: 6, y: -6)
+                            .accessibilityHidden(true)
+                    }
+                }
+                Text(unlocked ? shark.name : "Hidden shark")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
                     .lineLimit(1)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(.black.opacity(0.38), in: Capsule())
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(.black.opacity(0.45), in: Capsule())
             }
             .offset(y: floating ? -4 : 4)
         }
-        .buttonStyle(.plain)
-        .disabled(!unlocked)
-        .opacity(unlocked ? 1 : 0.72)
+        .buttonStyle(PressableStyle())
+        .modifier(ShakeEffect(shakes: wiggles))
+        .opacity(unlocked ? 1 : 0.8)
         .onAppear {
-            withAnimation(.easeInOut(duration: 2.0 + Double(abs(shark.id.hashValue % 5)) / 5).repeatForever(autoreverses: true)) {
-                floating = true
-            }
+            guard !reduceMotion else { return }
+            withAnimation(.easeInOut(duration: 2.0 + Double(shark.name.count % 5) / 5).repeatForever(autoreverses: true)) { floating = true }
+            if fresh { withAnimation(.easeOut(duration: 1.2).repeatForever(autoreverses: false)) { pulsing = true } }
         }
-        .accessibilityLabel(unlocked ? "Explore the \(shark.name)" : "\(shark.name), locked")
+        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", page collected" : "")" : "Hidden shark, locked")
+        .accessibilityIdentifier("shark-\(shark.id)")
     }
 }
 
-private struct WorldMapShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let islands = [
-            CGRect(x: rect.minX + rect.width * 0.08, y: rect.minY + rect.height * 0.22, width: rect.width * 0.22, height: rect.height * 0.45),
-            CGRect(x: rect.minX + rect.width * 0.33, y: rect.minY + rect.height * 0.12, width: rect.width * 0.18, height: rect.height * 0.35),
-            CGRect(x: rect.minX + rect.width * 0.52, y: rect.minY + rect.height * 0.22, width: rect.width * 0.18, height: rect.height * 0.46),
-            CGRect(x: rect.minX + rect.width * 0.74, y: rect.minY + rect.height * 0.48, width: rect.width * 0.16, height: rect.height * 0.25)
-        ]
-        for island in islands { path.addRoundedRect(in: island, cornerSize: CGSize(width: 80, height: 80)) }
-        return path
-    }
-}
-
-struct ParentGateButton: View {
-    let action: () -> Void
-    @GestureState private var pressing = false
-
+/// The world behind the shark markers: bundled artwork when present, otherwise drawn continents.
+private struct OceanMapArt: View {
     var body: some View {
-        Image(systemName: "gearshape.fill")
-            .font(.title2)
-            .frame(width: 60, height: 60)
-            .background(pressing ? .orange.opacity(0.7) : .white.opacity(0.16), in: Circle())
-            .contentShape(Circle())
-            .gesture(LongPressGesture(minimumDuration: 2).updating($pressing) { value, state, _ in state = value }.onEnded { _ in action() })
-            .accessibilityLabel("Parent settings. Press and hold.")
+        if let image = UIImage(named: "ocean-map") {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous).strokeBorder(.white.opacity(0.25), lineWidth: 2))
+                .accessibilityHidden(true)
+        } else {
+            Canvas { context, size in
+                // Each continent is a cluster of overlapping blobs, placed as fractions of the map.
+                let continents: [[(x: Double, y: Double, w: Double, h: Double)]] = [
+                    [(0.16, 0.30, 0.20, 0.30), (0.22, 0.44, 0.12, 0.20), (0.25, 0.68, 0.10, 0.34)],
+                    [(0.50, 0.24, 0.14, 0.20), (0.52, 0.54, 0.15, 0.42)],
+                    [(0.70, 0.28, 0.30, 0.30), (0.74, 0.46, 0.14, 0.18)],
+                    [(0.84, 0.74, 0.14, 0.16)]
+                ]
+                for blobs in continents {
+                    var land = Path()
+                    for blob in blobs {
+                        land.addEllipse(in: CGRect(x: (blob.x - blob.w / 2) * size.width, y: (blob.y - blob.h / 2) * size.height, width: blob.w * size.width, height: blob.h * size.height))
+                    }
+                    context.fill(land, with: .color(Color(hex: "#7FE3B5").opacity(0.2)))
+                    context.stroke(land, with: .color(.white.opacity(0.12)), lineWidth: 2)
+                }
+                for row in 1..<4 {
+                    var wave = Path()
+                    let y = size.height * Double(row) / 4
+                    wave.move(to: CGPoint(x: 0, y: y))
+                    for step in 1...24 {
+                        let x = size.width * Double(step) / 24
+                        wave.addQuadCurve(to: CGPoint(x: x, y: y), control: CGPoint(x: x - size.width / 48, y: y + (step.isMultiple(of: 2) ? 7 : -7)))
+                    }
+                    context.stroke(wave, with: .color(.white.opacity(0.07)), style: StrokeStyle(lineWidth: 2, dash: [10, 14]))
+                }
+            }
+            .accessibilityHidden(true)
+        }
     }
 }

@@ -2,6 +2,8 @@ import XCTest
 import LearningEngine
 import LearningPersistence
 import SwiftData
+import Narration
+@testable import LearningUI
 @testable import SharkExplorer
 
 @MainActor
@@ -78,7 +80,7 @@ final class ContentStoreTests: XCTestCase {
         let first = GameStore(progressStore: storage)
         first.load()
         first.open(shark)
-        first.completeTopic(sharkID: shark.id, topicID: shark.topics[0].id)
+        first.completeTopic(shark.topics[0], for: shark)
         first.completeMission(for: shark)
 
         let restored = GameStore(progressStore: storage)
@@ -97,7 +99,7 @@ final class ContentStoreTests: XCTestCase {
         let filterTrait = shark.traits.first { $0.id == "filter-mouth" }!
 
         XCTAssertFalse(game.hasUnlocked(filterTrait, for: shark))
-        game.completeTopic(sharkID: shark.id, topicID: filterTrait.unlockTopicID)
+        game.completeTopic(shark.topics.first { $0.id == filterTrait.unlockTopicID }!, for: shark)
         XCTAssertTrue(game.hasUnlocked(filterTrait, for: shark))
 
         let otherTrait = shark.traits.first { $0.id != filterTrait.id }!
@@ -134,6 +136,56 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertEqual(progress?.readingMode, .story)
     }
 
+    func testMissionRewardReportsNewPageWordsAndUnlockedSharks() throws {
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.reward", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        let game = GameStore(progressStore: storage)
+        let sharks = ContentStore.shared.catalog.sharks
+        let first = try XCTUnwrap(sharks.first { $0.unlockAt == 0 })
+        let waiting = sharks.filter { $0.unlockAt == 1 }
+        XCTAssertEqual(game.missionsNeeded(for: waiting[0]), 1)
+
+        let reward = game.completeMission(for: first)
+        XCTAssertTrue(reward.isNewPage)
+        XCTAssertEqual(reward.newWordIDs, first.vocabularyIDs)
+        XCTAssertEqual(Set(reward.unlockedSharkIDs), Set(waiting.map(\.id)))
+        XCTAssertEqual(game.freshlyUnlockedSharkIDs, Set(waiting.map(\.id)))
+
+        let again = game.completeMission(for: first)
+        XCTAssertFalse(again.isNewPage)
+        XCTAssertTrue(again.newWordIDs.isEmpty)
+        XCTAssertTrue(again.unlockedSharkIDs.isEmpty)
+    }
+
+    func testTopicCompletionReturnsNewTraitOnlyOnce() throws {
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.trait", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        let game = GameStore(progressStore: storage)
+        let shark = ContentStore.shared.catalog.sharks[0]
+        let trait = shark.traits[0]
+        let topic = try XCTUnwrap(shark.topics.first { $0.id == trait.unlockTopicID })
+        XCTAssertEqual(game.completeTopic(topic, for: shark).map(\.id), shark.traits.filter { $0.unlockTopicID == topic.id }.map(\.id))
+        XCTAssertTrue(game.completeTopic(topic, for: shark).isEmpty)
+    }
+
+    /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
+    func testEverySpokenLineHasARecording() throws {
+        let manifest = AudioManifest(bundle: .main, resourceName: SharkAppConfiguration.value.narration.bundledManifestName)
+        let catalog = ContentStore.shared.catalog
+        var lines = WeeklySpokenLines.all + SharkLine.allCases.map(\.text) + catalog.vocabulary.map(\.word)
+        for shark in catalog.sharks {
+            let narratives = [shark.discover, shark.mission.instructions] + shark.topics.map(\.narration) + shark.questions.map(\.prompt)
+            lines += narratives.flatMap { $0.earlyReader + $0.story }
+            lines.append(shark.mission.completion)
+            lines += shark.questions.flatMap { [$0.success, $0.retry] }
+        }
+        let url = try XCTUnwrap(Bundle.main.url(forResource: "shark-weeks", withExtension: "json"))
+        for week in try JSONDecoder().decode([LessonWeek].self, from: Data(contentsOf: url)) {
+            lines.append(week.overview)
+            lines += week.activities.flatMap(\.steps).flatMap { [$0.spoken ?? $0.prompt, $0.hint] }
+        }
+        XCTAssertFalse(lines.contains(""), "a SharkLine key is missing from ui-lines.json")
+        let missing = Set(lines).filter { manifest.clipURL(for: $0) == nil }
+        XCTAssertEqual(missing.sorted(), [], "run `npm --prefix tools run audio`")
+    }
 }
 
 private struct SeededRandomNumberGenerator: RandomNumberGenerator {

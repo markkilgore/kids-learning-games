@@ -1,4 +1,5 @@
 import XCTest
+import Narration
 @testable import LearningUI
 @testable import CatMathAdventure
 
@@ -96,5 +97,74 @@ final class CatMathTests: XCTestCase {
         XCTAssertEqual(config.identity.childFacingName, "Kate’s Cat Math Adventure")
         XCTAssertEqual(config.storageNamespace, "com.mkilgore.CatMathAdventure.kate")
         XCTAssertEqual(config.narration.bundledManifestName, "cat-audio-manifest")
+    }
+
+    func testCorrectAnswerMovesBetweenPositionsAndWrongAnswersVary() {
+        let mittens = CatContent.cats[0]
+        var positions = Set<Int>(), wrongAnswers = Set<Int>()
+        for _ in 0..<60 {
+            let challenge = MathChallengeFactory.challenge(for: mittens, friendship: 0)
+            XCTAssertEqual(challenge.choices.count, 3)
+            XCTAssertEqual(Set(challenge.choices).count, 3)
+            XCTAssertTrue(challenge.choices.allSatisfy { $0 > 0 })
+            positions.insert(challenge.choices.firstIndex(of: challenge.answer)!)
+            wrongAnswers.formUnion(challenge.choices.filter { $0 != challenge.answer })
+        }
+        XCTAssertEqual(positions, [0, 1, 2], "the correct answer must not always sit in the same place")
+        XCTAssertGreaterThan(wrongAnswers.count, 2)
+    }
+
+    func testOddEvenUsesWordsAndSkipCountingVaries() {
+        var skipAnswers = Set<Int>()
+        for cat in CatContent.cats {
+            for friendship in 0..<36 {
+                let challenge = MathChallengeFactory.challenge(for: cat, friendship: friendship)
+                switch challenge.skill.id {
+                case "odd-even":
+                    XCTAssertEqual(Set(challenge.choices.map(challenge.label)), ["Odd", "Even"])
+                    XCTAssertFalse(challenge.prompt.contains("Choose 1"))
+                case "skip-5":
+                    skipAnswers.insert(challenge.answer)
+                    XCTAssertTrue(challenge.answer.isMultiple(of: 5))
+                case "subtraction":
+                    XCTAssertFalse(challenge.prompt.contains(" 1 are "), challenge.prompt)
+                default: break
+                }
+            }
+        }
+        XCTAssertGreaterThan(skipAnswers.count, 1)
+    }
+
+    func testSolvingReportsNewFriendsAndResetClearsProgress() {
+        let game = CatGameStore(baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        game.load()
+        let mittens = CatContent.cats[0], poppy = CatContent.cats.first { $0.id == "poppy" }!
+        XCTAssertEqual(game.heartsNeeded(for: poppy), 4)
+        var unlocked: [CatDefinition] = []
+        for _ in 0..<4 { unlocked += game.completeActivity(for: mittens) }
+        XCTAssertEqual(unlocked.map(\.id), ["poppy"])
+        XCTAssertTrue(game.isUnlocked(poppy))
+        game.resetProgress()
+        XCTAssertEqual(game.totalFriendship, 0)
+        XCTAssertFalse(game.isUnlocked(poppy))
+    }
+
+    /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
+    func testEverySpokenLineHasARecording() throws {
+        let manifest = AudioManifest(bundle: .main, resourceName: CatAppConfiguration.value.narration.bundledManifestName)
+        var lines = WeeklySpokenLines.all + CatLine.allCases.map(\.text)
+        for cat in CatContent.cats {
+            lines += cat.backstory.map(\.story) + CatRewardAction.allCases.map { $0.celebration(for: cat) }
+            lines.append("You did it! \(cat.name)’s friendship grew.")
+            lines += (0..<80).map { MathChallengeFactory.challenge(for: cat, friendship: $0).prompt }
+        }
+        let url = try XCTUnwrap(Bundle.main.url(forResource: "cat-weeks", withExtension: "json"))
+        for week in try JSONDecoder().decode([LessonWeek].self, from: Data(contentsOf: url)) {
+            lines.append(week.overview)
+            lines += week.activities.flatMap(\.steps).flatMap { [$0.spoken ?? $0.prompt, $0.hint] }
+        }
+        XCTAssertFalse(lines.contains(""), "a CatLine key is missing from ui-lines.json")
+        let missing = Set(lines).filter { manifest.clipURL(for: $0) == nil }
+        XCTAssertEqual(missing.sorted(), [], "run `npm --prefix tools run cat-audio`")
     }
 }

@@ -1,9 +1,10 @@
 import { readFile, stat } from 'node:fs/promises';
+import { narrationProblems } from './lib/elevenlabs.mjs';
+import { catLines, catResources, sharkLines } from './lib/lines.mjs';
 
 const resourceURL = new URL('../apps/shark-explorer/Resources/', import.meta.url);
 const path = new URL('catalog.json', resourceURL);
 const catalog = JSON.parse(await readFile(path, 'utf8'));
-const audioManifest = JSON.parse(await readFile(new URL('audio-manifest.json', resourceURL), 'utf8'));
 const errors = [];
 
 if (catalog.schemaVersion !== 1) errors.push('schemaVersion must be 1');
@@ -57,33 +58,11 @@ for (const shark of expandedSharks) {
   }
 }
 
-const requiredAudio = new Set();
-function visitAudio(value, key = '') {
-  if (Array.isArray(value)) {
-    if (key === 'earlyReader' || key === 'story') value.forEach((line) => requiredAudio.add(line));
-    else value.forEach((item) => visitAudio(item));
-  } else if (value && typeof value === 'object') {
-    for (const [childKey, child] of Object.entries(value)) visitAudio(child, childKey);
-  } else if (typeof value === 'string' && ['completion', 'success', 'retry'].includes(key)) {
-    requiredAudio.add(value);
-  }
-}
-visitAudio(catalog);
-catalog.vocabulary.forEach((word) => requiredAudio.add(word.word));
-
-for (const text of requiredAudio) {
-  const clip = audioManifest[text];
-  if (!clip?.file || !clip.words?.length) {
-    errors.push(`missing timed narration: ${text}`);
-    continue;
-  }
-  try {
-    const audio = await stat(new URL(`Audio/${clip.file}`, resourceURL));
-    if (audio.size < 1_000) errors.push(`audio clip is unexpectedly small: ${text}`);
-  } catch {
-    errors.push(`missing audio file: ${text}`);
-  }
-}
+const sharkAudio = await sharkLines();
+errors.push(...await narrationProblems({ resourceURL, manifestName: 'audio-manifest.json', lines: sharkAudio }));
+const catAudio = await catLines();
+errors.push(...(await narrationProblems({ resourceURL: catResources, manifestName: 'cat-audio-manifest.json', lines: catAudio })).map((problem) => `cat-math: ${problem}`));
+const requiredAudio = new Set([...sharkAudio, ...catAudio]);
 
 if (errors.length) {
   for (const error of errors) process.stderr.write(`ERROR ${error}\n`);
@@ -94,4 +73,4 @@ const topicCount = expandedSharks.reduce((sum, shark) => sum + shark.topics.leng
 const questionCount = expandedSharks.reduce((sum, shark) => sum + shark.questions.length, 0);
 const traitCount = expandedSharks.reduce((sum, shark) => sum + shark.traits.length, 0);
 const traitImageCount = expandedSharks.reduce((sum, shark) => sum + shark.traits.filter((trait) => trait.imageAsset).length, 0);
-process.stdout.write(`Validated ${catalog.sharks.length} sharks, ${topicCount} topics, ${questionCount} questions, ${traitCount} Passport traits (${traitImageCount} illustrated), ${catalog.vocabulary.length} Ocean Words, ${requiredAudio.size} timed audio clips, and ${catalog.sharks.length} species images.\n`);
+process.stdout.write(`Validated ${catalog.sharks.length} sharks, ${topicCount} topics, ${questionCount} questions, ${traitCount} Passport traits (${traitImageCount} illustrated), ${catalog.vocabulary.length} Ocean Words, ${requiredAudio.size} timed audio clips across both apps, and ${catalog.sharks.length} species images.\n`);

@@ -95,7 +95,9 @@ targets:
       testTargets:
         - SharkExplorerTests
         - SharkExplorerWeeklyUITests
+        - SharkExplorerTourUITests
         - LearningPersistenceTests
+        - NarrationTests
 
   CatMathAdventure:
     type: application
@@ -136,7 +138,9 @@ targets:
       testTargets:
         - CatMathAdventureTests
         - CatMathAdventureWeeklyUITests
+        - CatMathAdventureTourUITests
         - LearningPersistenceTests
+        - NarrationTests
 
   SharkExplorerTests:
     type: bundle.unit-test
@@ -171,6 +175,42 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.LearningPersistenceTests
         GENERATE_INFOPLIST_FILE: YES
+
+  NarrationTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: packages/narration/Tests
+    dependencies:
+      - target: Narration
+      - target: LearningEngine
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.NarrationTests
+        GENERATE_INFOPLIST_FILE: YES
+
+  CatMathAdventureTourUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: tests/TourUI/CatTourUITests.swift
+    dependencies:
+      - target: CatMathAdventure
+    settings:
+      base:
+        TEST_TARGET_NAME: CatMathAdventure
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.CatMathAdventureTourUITests
+
+  SharkExplorerTourUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: tests/TourUI/SharkTourUITests.swift
+    dependencies:
+      - target: SharkExplorer
+    settings:
+      base:
+        TEST_TARGET_NAME: SharkExplorer
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.SharkExplorerTourUITests
 
   CatMathAdventureWeeklyUITests:
     type: bundle.ui-testing

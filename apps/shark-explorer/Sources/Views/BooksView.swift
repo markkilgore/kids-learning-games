@@ -1,14 +1,21 @@
+import LearningUI
+import Narration
 import SwiftUI
 import UIKit
 
 struct BooksView: View {
+    private enum Book: Hashable { case passport, words }
+
     @Environment(GameStore.self) private var game
-    @State private var selectedBook = 0
+    @Environment(NarrationCoordinator.self) private var narration
+    @Environment(\.kidTheme) private var theme
+    @State private var book = Book.passport
     @State private var selectedSharkID: String?
+    @State private var spokenWordID: String?
     private let catalog = ContentStore.shared.catalog
 
     private var selectedShark: SharkDefinition? {
-        catalog.sharks.first { $0.id == selectedSharkID }
+        catalog.sharks.first { $0.id == selectedSharkID && game.completedSharks.contains($0.id) }
     }
 
     private var collectedTraitCount: Int {
@@ -20,87 +27,45 @@ struct BooksView: View {
     private var totalTraitCount: Int { catalog.sharks.reduce(0) { $0 + $1.traits.count } }
 
     var body: some View {
-        VStack(spacing: 18) {
-            ViewThatFits(in: .horizontal) {
-                expandedHeader.frame(minWidth: 1_080)
-                compactHeader
+        VStack(spacing: 16) {
+            KidTopBar(book == .passport ? "Henry’s Shark Passport" : "Henry’s Ocean Words", back: KidBackButton("Ocean Map", systemImage: "map.fill") { game.showMap() }) {
+                KidTabs(selection: $book, items: [
+                    .init(.passport, "Passport", systemImage: "book.closed.fill"),
+                    .init(.words, "Ocean Words", systemImage: "textformat.abc")
+                ])
+                .frame(width: 430)
             }
 
-            if selectedBook == 0 { passport } else { wordBook }
+            if book == .passport { passport } else { wordBook }
         }
-        .padding(28)
+        .padding(24)
         .foregroundStyle(.white)
-    }
-
-    private var expandedHeader: some View {
-        HStack {
-            mapButton
-            Text("Henry’s Shark Passport")
-                .font(.largeTitle.weight(.black))
-            Spacer()
-            bookPicker
-                .frame(width: 420)
+        .onAppear {
+            // Open on the page just earned, or the first collected page, so the book never looks empty.
+            selectedSharkID = game.passportSharkID ?? catalog.sharks.first { game.completedSharks.contains($0.id) }?.id
+            game.passportSharkID = nil
         }
-    }
-
-    private var compactHeader: some View {
-        VStack(spacing: 12) {
-            HStack {
-                mapButton
-                Text("Henry’s Shark Passport")
-                    .font(.title.weight(.black))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                Spacer(minLength: 0)
-            }
-            bookPicker
-                .frame(maxWidth: 520)
-        }
-    }
-
-    private var mapButton: some View {
-        Button { game.showMap() } label: { Label("Ocean Map", systemImage: "map.fill") }
-            .buttonStyle(.borderedProminent)
-            .tint(.white.opacity(0.18))
-            .frame(minHeight: 58)
-    }
-
-    private var bookPicker: some View {
-        Picker("Book", selection: $selectedBook) {
-            Text("Shark Passport").tag(0)
-            Text("Ocean Words").tag(1)
-        }
-        .pickerStyle(.segmented)
+        .onDisappear { narration.stop() }
     }
 
     private var passport: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                HStack(spacing: 24) {
-                    ZStack {
-                        Circle()
-                            .fill(.cyan.opacity(0.25))
-                            .frame(width: 96, height: 96)
-                        Image(systemName: "book.closed.fill")
-                            .font(.system(size: 42, weight: .bold))
-                    }
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("Ocean Explorer")
-                            .font(.title.weight(.black))
-                        Text("Complete a shark’s mission to collect its page. Explore a topic to unlock a trait card.")
-                            .font(.subheadline)
-                            .foregroundStyle(.white.opacity(0.78))
-                    }
-                    Spacer()
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(spacing: 20) {
+                    Image(systemName: "book.closed.fill")
+                        .font(.system(size: 36, weight: .bold))
+                        .frame(width: 80, height: 80)
+                        .background(.cyan.opacity(0.3), in: Circle())
+                    Text("Finish a shark’s mission to collect its page. Explore topics to reveal trait cards.")
+                        .font(.kidBody)
+                        .foregroundStyle(theme.mutedInk)
+                    Spacer(minLength: 8)
                     PassportCount(value: "\(game.completedCount)/\(catalog.sharks.count)", title: "pages")
                     PassportCount(value: "\(collectedTraitCount)/\(totalTraitCount)", title: "traits")
                     PassportCount(value: "\(game.collectedWords.count)", title: "words")
                 }
-                .padding(20)
-                .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 26))
-
-                Text("Shark Pages")
-                    .font(.title2.weight(.black))
+                .padding(18)
+                .kidCard()
 
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 5), spacing: 14) {
                     ForEach(catalog.sharks) { shark in
@@ -110,82 +75,97 @@ struct BooksView: View {
 
                 if let selectedShark {
                     PassportDetail(shark: selectedShark)
-                        .environment(game)
+                        .id(selectedShark.id)
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
                 } else {
-                    ContentUnavailableView(
-                        "Your first passport page is waiting",
-                        systemImage: "fish.fill",
-                        description: Text("Finish a shark mission, then return here to open its page and trait cards."))
-                        .frame(maxWidth: .infinity, minHeight: 260)
-                        .background(.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 26))
+                    VStack(spacing: 10) {
+                        Text("🦈").font(.system(size: 64))
+                        Text(game.completedCount == 0 ? "Your first passport page is waiting" : "Tap a shark page to open it")
+                            .font(.kidTitle)
+                        if game.completedCount == 0 {
+                            Text("Finish a shark mission, then come back to see its page.")
+                                .font(.kidBody)
+                                .foregroundStyle(theme.mutedInk)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 220)
+                    .kidCard(.quiet, radius: KidTheme.Radius.large)
                 }
             }
             .padding(.bottom, 8)
         }
+        .scrollIndicators(.hidden)
     }
 
     private func passportPageButton(for shark: SharkDefinition) -> some View {
         let earned = game.completedSharks.contains(shark.id)
+        let selected = selectedSharkID == shark.id
         return Button {
             guard earned else { return }
-            selectedSharkID = shark.id
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) { selectedSharkID = shark.id }
         } label: {
             VStack(spacing: 8) {
-                ZStack(alignment: .topTrailing) {
+                Group {
                     if earned {
                         SpeciesImageView(shark: shark)
-                            .frame(height: 80)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
                     } else {
                         Image(systemName: "lock.fill")
                             .font(.title)
-                            .frame(maxWidth: .infinity, minHeight: 80)
-                            .background(.black.opacity(0.22), in: RoundedRectangle(cornerRadius: 14))
-                    }
-                    if earned {
-                        Image(systemName: selectedSharkID == shark.id ? "checkmark.seal.fill" : "book.closed.fill")
-                            .foregroundStyle(.yellow)
-                            .padding(7)
-                            .background(.black.opacity(0.5), in: Circle())
-                            .padding(5)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(.black.opacity(0.25))
                     }
                 }
-                Text(earned ? shark.name : "Shark page")
-                    .font(.headline.weight(.black))
+                .frame(height: 84)
+                .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
+                Text(earned ? shark.name : "Hidden page")
+                    .font(.kidLabel.weight(.heavy))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.72)
+                    .minimumScaleFactor(0.7)
                 Text(earned ? "\(shark.traits.filter { game.hasUnlocked($0, for: shark) }.count)/\(shark.traits.count) traits" : "Finish mission")
                     .font(.caption.bold())
-                    .foregroundStyle(.white.opacity(0.72))
+                    .foregroundStyle(theme.mutedInk)
             }
             .padding(10)
-            .frame(maxWidth: .infinity, minHeight: 142)
-            .background((earned ? shark.tint : .gray).opacity(selectedSharkID == shark.id ? 0.54 : 0.24), in: RoundedRectangle(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(selectedSharkID == shark.id ? .white : .clear, lineWidth: 2))
+            .frame(maxWidth: .infinity, minHeight: 148)
+            .kidCard(selected ? .raised : .regular, tint: earned ? shark.tint.opacity(selected ? 0.9 : 0.45) : nil)
+            .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous).strokeBorder(.yellow.opacity(selected ? 1 : 0), lineWidth: 4))
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(earned ? "Open \(shark.name) passport page" : "\(shark.name) passport page locked")
+        .buttonStyle(PressableStyle())
+        .accessibilityLabel(earned ? "Open \(shark.name) passport page" : "Hidden passport page, locked")
     }
 
     private var wordBook: some View {
         ScrollView {
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 18), count: 4), spacing: 18) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 16), count: 4), spacing: 16) {
                 ForEach(catalog.vocabulary) { word in
                     let earned = game.collectedWords.contains(word.id)
-                    VStack(spacing: 10) {
-                        Text(earned ? word.symbol : "🔒").font(.system(size: 58))
-                        Text(earned ? word.word : "Ocean Word").font(.title2.weight(.black))
-                        Text(earned ? word.explanation : "Find a shark that uses this word.")
-                            .font(.subheadline)
-                            .multilineTextAlignment(.center)
-                            .foregroundStyle(.white.opacity(0.78))
+                    Button {
+                        guard earned else { return }
+                        spokenWordID = word.id
+                        narration.play(word.word)
+                    } label: {
+                        VStack(spacing: 8) {
+                            Text(earned ? word.symbol : "🔒").font(.system(size: 56))
+                            HStack(spacing: 6) {
+                                Text(earned ? word.word : "Ocean Word").font(.kidHeadline)
+                                if earned { Image(systemName: "speaker.wave.2.fill").font(.kidLabel).foregroundStyle(.cyan) }
+                            }
+                            Text(earned ? word.explanation : "Find a shark that uses this word.")
+                                .font(.kidLabel)
+                                .multilineTextAlignment(.center)
+                                .foregroundStyle(theme.mutedInk)
+                        }
+                        .padding(16)
+                        .frame(maxWidth: .infinity, minHeight: 190)
+                        .kidCard(earned ? .regular : .quiet, tint: earned ? .cyan.opacity(spokenWordID == word.id ? 0.5 : 0.3) : nil)
                     }
-                    .padding(20)
-                    .frame(maxWidth: .infinity, minHeight: 190)
-                    .background(.cyan.opacity(earned ? 0.22 : 0.08), in: RoundedRectangle(cornerRadius: 24))
+                    .buttonStyle(PressableStyle())
+                    .accessibilityLabel(earned ? "Hear the word \(word.word)" : "Ocean Word, locked")
                 }
             }
+            .padding(.bottom, 8)
         }
+        .scrollIndicators(.hidden)
     }
 }
 
@@ -225,8 +205,9 @@ private struct PassportDetail: View {
                     .clipShape(RoundedRectangle(cornerRadius: 22))
                     .overlay(alignment: .bottomLeading) {
                         Text(shark.bookFact)
-                            .font(.caption.bold())
-                            .lineLimit(3)
+                            .font(.kidLabel)
+                            .lineLimit(4)
+                            .minimumScaleFactor(0.8)
                             .padding(12)
                             .background(.black.opacity(0.5), in: RoundedRectangle(cornerRadius: 14))
                             .padding(10)
@@ -240,7 +221,7 @@ private struct PassportDetail: View {
             }
         }
         .padding(22)
-        .background(shark.tint.opacity(0.28), in: RoundedRectangle(cornerRadius: 28))
+        .kidCard(tint: shark.tint.opacity(0.4), radius: KidTheme.Radius.large)
     }
 }
 
@@ -271,14 +252,15 @@ private struct PassportTraitCard: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.72)
             }
-            Text(unlocked ? trait.description : "Explore \(trait.unlockTopicID) to reveal this trait card.")
-                .font(.caption)
-                .foregroundStyle(.white.opacity(0.78))
-                .lineLimit(3)
+            Text(unlocked ? trait.description : "Explore “\(shark.topics.first { $0.id == trait.unlockTopicID }?.title ?? "more topics")” to reveal this card.")
+                .font(.kidLabel)
+                .foregroundStyle(.white.opacity(0.8))
+                .lineLimit(4)
+                .minimumScaleFactor(0.8)
         }
         .padding(10)
         .frame(maxWidth: .infinity, minHeight: 190, alignment: .topLeading)
-        .background(.black.opacity(unlocked ? 0.16 : 0.26), in: RoundedRectangle(cornerRadius: 18))
+        .background(.black.opacity(unlocked ? 0.16 : 0.26), in: RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous))
     }
 }
 

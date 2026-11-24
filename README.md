@@ -37,15 +37,28 @@ xcodebuild -project SharkExplorer.xcodeproj -scheme CatMathAdventure \
   -destination 'platform=iOS Simulator,id=<UDID>' test
 ```
 
-## Cat Math narration
+## Narration and sound
 
-Cat Math uses bundled ElevenLabs clips when a line exists in `cat-audio-manifest.json`, with the on-device Apple voice as an offline fallback for any line not yet generated. Generate or refresh the complete Cat script from the repository root:
+Both apps speak with bundled ElevenLabs recordings; the on-device Apple voice is only a fallback for a line with no clip. Put `ELEVENLABS_API_KEY=<key>` in a `.env` file at the repository root (it is git-ignored and never shipped), then:
 
 ```sh
-ELEVENLABS_API_KEY=<key> npm --prefix tools run cat-audio
+npm --prefix tools run audio        # Shark Explorer
+npm --prefix tools run cat-audio    # Cat Math Adventure
+npm --prefix tools run validate     # fails if any spoken line lacks a clip
 ```
 
-The generator defaults to the bright, warm **Bella** educational voice and `eleven_multilingual_v2`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override either one. API credentials are generation-time secrets and are never included in the iPad app.
+Each generator collects every line its app can speak — catalog text, Cat Math prompts, weekly lessons, and the interface lines in each app’s `Resources/ui-lines.json` — and only generates what is missing. Add `-- --dry-run` to see the clip and character count first, and `-- --prune` to delete clips that are no longer spoken. Both apps use the **Bella** voice and `eleven_multilingual_v2`; set `ELEVENLABS_VOICE_ID` or `ELEVENLABS_MODEL_ID` to override, which regenerates every clip. Run `xcodegen generate --spec project.yml` afterwards so new clips join the app.
+
+Interface sounds (tap, correct, try again, pop, unlock, celebrate) are synthesized locally with `npm --prefix tools run sfx`; no key is needed. Parents can switch narration and sound effects off in each app’s Parent Settings.
+
+## Checking every screen
+
+Each scheme includes a tour test that walks the whole app and attaches a screenshot of every screen. To also save them as files:
+
+```sh
+TEST_RUNNER_TOUR_DIR=/tmp/tour xcodebuild -project SharkExplorer.xcodeproj -scheme CatMathAdventure \
+  -destination 'platform=iOS Simulator,id=<UDID>' -only-testing:CatMathAdventureTourUITests test
+```
 
 See [docs/architecture.md](docs/architecture.md) for the assessment, migration stages, configuration contract, persistence strategy, and target structure. Run `tools/verify-monorepo.sh` for release-build and product-isolation checks.
 

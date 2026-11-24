@@ -2,14 +2,18 @@ import SwiftUI
 import LearningUI
 import Narration
 
+/// Three picture questions; a wrong answer gives a clue and another try.
 struct QuestionRoundView: View {
     let shark: SharkDefinition
     let onComplete: () -> Void
     @Environment(GameStore.self) private var game
     @Environment(NarrationCoordinator.self) private var narration
+    @Environment(FeedbackPlayer.self) private var feedback
+    @Environment(\.kidTheme) private var theme
     @State private var index = 0
-    @State private var feedback: String?
+    @State private var wrongChoiceIDs: Set<String> = []
     @State private var answeredCorrectly = false
+    @State private var showingRetry = false
     @State private var orderedChoices: [[AnswerChoice]]
 
     init(shark: SharkDefinition, onComplete: @escaping () -> Void) {
@@ -19,85 +23,94 @@ struct QuestionRoundView: View {
     }
 
     private var question: QuestionDefinition { shark.questions[index] }
-    private var displayedSentences: [String] {
-        feedback.map { [$0] } ?? question.prompt.sentences(for: game.readingMode)
-    }
-    private var displayedSentenceID: String { "\(question.id)-\(feedback ?? "prompt")" }
 
     var body: some View {
-        ZStack {
-            OceanBackdrop()
-            VStack(spacing: 20) {
-                HStack {
-                    Text("Picture Question \(index + 1) of \(shark.questions.count)")
-                        .font(.title.bold())
-                    Spacer()
-                    Button("Hear it again", systemImage: "speaker.wave.2.fill") { playPrompt() }
-                        .buttonStyle(.borderedProminent)
-                        .frame(minHeight: 58)
-                }
-
-                ReadAlongView(sentences: displayedSentences, playbackID: displayedSentenceID)
-                    .frame(maxHeight: 270)
-
-                HStack(spacing: 22) {
-                    ForEach(orderedChoices[index]) { choice in
-                        Button { choose(choice) } label: {
-                            VStack(spacing: 12) {
-                                Text(choice.symbol).font(.system(size: 76))
-                                Text(choice.label)
-                                    .font(.title2.weight(.black))
-                                    .multilineTextAlignment(.center)
-                            }
-                            .frame(maxWidth: .infinity, minHeight: 180)
-                            .background(.white.opacity(0.14), in: RoundedRectangle(cornerRadius: 26))
-                            .overlay(RoundedRectangle(cornerRadius: 26).stroke(.white.opacity(0.25), lineWidth: 2))
-                        }
-                        .buttonStyle(.plain)
-                        .disabled(answeredCorrectly)
-                        .accessibilityLabel(choice.label)
-                    }
-                }
-
-                if let feedback {
-                    HStack {
-                        Text(answeredCorrectly ? "⭐️" : "🔎")
-                        Text(feedback).font(.title2.bold())
-                        Spacer()
-                        if answeredCorrectly {
-                            Button(index + 1 < shark.questions.count ? "Next question" : "Open Shark Book") { advance() }
-                                .buttonStyle(.borderedProminent)
-                                .tint(.green)
-                                .font(.headline)
-                        }
-                    }
-                    .padding(20)
-                    .background((answeredCorrectly ? Color.green : Color.blue).opacity(0.28), in: RoundedRectangle(cornerRadius: 20))
+        VStack(spacing: 14) {
+            HStack(spacing: 8) {
+                ForEach(shark.questions.indices, id: \.self) { step in
+                    Capsule()
+                        .fill(step < index || (step == index && answeredCorrectly) ? theme.success : step == index ? .yellow : .white.opacity(0.25))
+                        .frame(width: 54, height: 12)
                 }
             }
-            .padding(32)
-            .foregroundStyle(.white)
+            .accessibilityLabel("Question \(index + 1) of \(shark.questions.count)")
+
+            ReadAlongView(sentences: question.prompt.sentences(for: game.readingMode), playbackID: question.id, finishTitle: nil, compact: true)
+
+            HStack(spacing: 18) {
+                ForEach(orderedChoices[index]) { choice in
+                    AnswerTile(state: state(of: choice)) { choose(choice) } label: {
+                        VStack(spacing: 8) {
+                            KidArt("choice-\(choice.id)", fallback: choice.symbol, size: 68)
+                            Text(choice.label)
+                                .font(.kidHeadline)
+                                .multilineTextAlignment(.center)
+                                .minimumScaleFactor(0.7)
+                        }
+                        .frame(minHeight: 130)
+                    }
+                    .accessibilityLabel(choice.label)
+                    .accessibilityIdentifier(choice.id == question.correctID ? "answer-correct" : "answer-other")
+                }
+            }
+
+            HStack(spacing: 14) {
+                if answeredCorrectly {
+                    Text("⭐️").font(.system(size: 36))
+                    Text(question.success).font(.kidHeadline)
+                    Spacer(minLength: 8)
+                    Button { advance() } label: {
+                        Label(index + 1 < shark.questions.count ? "Next question" : "See your prize", systemImage: "arrow.right")
+                    }
+                    .buttonStyle(KidButtonStyle(tint: theme.success, compact: true))
+                    .accessibilityIdentifier("next-question")
+                } else if showingRetry {
+                    Text("🔎").font(.system(size: 36))
+                    Text(question.retry).font(.kidHeadline)
+                    Spacer(minLength: 0)
+                }
+            }
+            .padding(.horizontal, 18)
+            .frame(maxWidth: .infinity, minHeight: 76)
+            .background((answeredCorrectly ? theme.success : .blue).opacity(answeredCorrectly || showingRetry ? 0.3 : 0), in: RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous))
+            .animation(.spring(response: 0.35, dampingFraction: 0.8), value: answeredCorrectly)
+            .animation(.spring(response: 0.35, dampingFraction: 0.8), value: showingRetry)
         }
+        .id(index)
+        .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
     }
 
-    private func playPrompt() {
-        guard let sentence = displayedSentences.first else { return }
-        narration.play(sentence)
+    private func state(of choice: AnswerChoice) -> AnswerState {
+        if answeredCorrectly { return choice.id == question.correctID ? .correct : .dimmed }
+        return wrongChoiceIDs.contains(choice.id) ? .wrong : .idle
     }
 
     private func choose(_ choice: AnswerChoice) {
-        answeredCorrectly = choice.id == question.correctID
-        feedback = answeredCorrectly ? question.success : question.retry
+        guard !answeredCorrectly else { return }
+        if choice.id == question.correctID {
+            answeredCorrectly = true
+            feedback.play(.correct)
+            narration.play(question.success)
+        } else {
+            wrongChoiceIDs.insert(choice.id)
+            showingRetry = true
+            feedback.play(.wrong)
+            narration.play(question.retry)
+        }
     }
 
     private func advance() {
-        if index + 1 < shark.questions.count {
-            index += 1
-            feedback = nil
-            answeredCorrectly = false
-        } else {
-            narration.stop()
+        guard answeredCorrectly else { return }
+        narration.stop()
+        guard index + 1 < shark.questions.count else {
             onComplete()
+            return
+        }
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+            index += 1
+            wrongChoiceIDs = []
+            answeredCorrectly = false
+            showingRetry = false
         }
     }
 }

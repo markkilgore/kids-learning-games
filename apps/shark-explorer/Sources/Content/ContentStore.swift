@@ -16,12 +16,16 @@ enum ContentError: LocalizedError {
 final class ContentStore {
     static let shared = ContentStore()
     let catalog: GameCatalog
+    /// Set when the bundled catalog could not be read; the app then shows a message instead of the map.
+    let loadError: String?
 
     private init() {
         do {
             catalog = try Self.loadCatalog()
+            loadError = nil
         } catch {
-            fatalError(error.localizedDescription)
+            catalog = GameCatalog(schemaVersion: 1, sharks: [], vocabulary: [], expansions: nil)
+            loadError = error.localizedDescription
         }
     }
 
