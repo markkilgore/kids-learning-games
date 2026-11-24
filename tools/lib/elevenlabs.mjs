@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readdir, readFile, stat, unlink, writeFile } from 'node:fs/promises';
 
 export const DEFAULT_VOICE_ID = 'hpp4J3VqNfWAUOO0d1Us';
-export const DEFAULT_MODEL_ID = 'eleven_multilingual_v2';
+export const DEFAULT_MODEL_ID = 'eleven_v3';
 export const VOICE_SETTINGS = { stability: 0.42, similarity_boost: 0.75, style: 0.45, use_speaker_boost: true };
 const MIN_CLIP_BYTES = 1_000;
 
