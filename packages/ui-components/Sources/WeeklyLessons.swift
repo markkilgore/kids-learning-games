@@ -99,10 +99,15 @@ public struct WeeklyLessonsButton: View {
     }
 }
 
-/// Remembers where a child stopped inside an activity until the app closes.
+/// The step a child had reached in each unfinished activity, kept across app launches.
 @MainActor
 private enum WeeklyResume {
-    static var steps: [String: Int] = [:]
+    private static let key = "weekly.resumeSteps"
+
+    static var steps: [String: Int] {
+        get { UserDefaults.standard.dictionary(forKey: key) as? [String: Int] ?? [:] }
+        set { UserDefaults.standard.set(newValue, forKey: key) }
+    }
 }
 
 private struct WeeklyShelf: View {

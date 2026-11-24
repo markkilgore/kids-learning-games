@@ -8,3 +8,4 @@ tools/node_modules/
 *.xcuserstate
 xcuserdata/
 
+.claude/worktrees/

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "sharks": [
     {
-      "id": "whale", "name": "Whale Shark", "scientificName": "Rhincodon typus", "symbol": "🦈", "imageAsset": "shark-whale.jpg", "imageAuthor": "Jean-Paul Boerekamps", "imageLicense": "CC0 1.0", "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Rhincodon_typus_420227950.jpg", "color": "#28B8C8", "region": "Tropical Open Water", "mapX": 0.18, "mapY": 0.33, "unlockAt": 0,
+      "id": "whale", "name": "Whale Shark", "scientificName": "Rhincodon typus", "symbol": "🦈", "imageAsset": "shark-whale.jpg", "imageAuthor": "Jean-Paul Boerekamps", "imageLicense": "CC0 1.0", "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Rhincodon_typus_420227950.jpg", "color": "#28B8C8", "region": "Tropical Open Water", "mapX": 0.67, "mapY": 0.62, "unlockAt": 0,
       "discover": {
         "earlyReader": ["This is a whale shark.", "It is the biggest fish in the world.", "Its spots help us know each shark."],
         "story": ["The spotted whale shark is the biggest fish in the world.", "It swims steadily through warm seas, searching for tiny food." ]
@@ -28,7 +28,7 @@
       "sourceURLs":["https://ocean.si.edu/ocean-life/sharks-rays/whale-shark"]
     },
     {
-      "id":"hammerhead","name":"Great Hammerhead","scientificName":"Sphyrna mokarran","symbol":"🦈","imageAsset":"shark-hammerhead.jpg","imageAuthor":"Dave M","imageLicense":"CC BY 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_head.jpg","color":"#54A7C7","region":"Sandy Tropical Reef","mapX":0.38,"mapY":0.48,"unlockAt":0,
+      "id":"hammerhead","name":"Great Hammerhead","scientificName":"Sphyrna mokarran","symbol":"🦈","imageAsset":"shark-hammerhead.jpg","imageAuthor":"Dave M","imageLicense":"CC BY 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_head.jpg","color":"#54A7C7","region":"Sandy Tropical Reef","mapX":0.4,"mapY":0.55,"unlockAt":0,
       "discover":{"earlyReader":["This is a hammerhead shark.","Its head is wide.","It can spot food under sand."],"story":["The great hammerhead swings its wide head from side to side.","Special sensors help it spot prey hidden under the sandy seafloor."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🏝️","narration":{"earlyReader":["Hammerheads like warm seas.","They visit reefs and sandy bays.","They swim near coasts and islands."],"story":["Great hammerheads roam warm seas near reefs, islands, and sandy coasts.","They also cross stretches of open ocean."]}},
@@ -51,7 +51,7 @@
       "sourceURLs":["https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/"]
     },
     {
-      "id":"nurse","name":"Nurse Shark","scientificName":"Ginglymostoma cirratum","symbol":"🦈","imageAsset":"shark-nurse.jpg","imageAuthor":"Dr. Mathew Gilligan / NOAA","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Nurse_shark.jpg","color":"#9A8065","region":"Coral Reef","mapX":0.62,"mapY":0.36,"unlockAt":0,
+      "id":"nurse","name":"Nurse Shark","scientificName":"Ginglymostoma cirratum","symbol":"🦈","imageAsset":"shark-nurse.jpg","imageAuthor":"Dr. Mathew Gilligan / NOAA","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Nurse_shark.jpg","color":"#9A8065","region":"Coral Reef","mapX":0.25,"mapY":0.5,"unlockAt":0,
       "discover":{"earlyReader":["This is a nurse shark.","It rests on the ocean floor.","It stays still and pumps water over its gills."],"story":["The nurse shark rests quietly on the ocean floor during the day.","It can stay still because it pumps water across its gills."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🪸","narration":{"earlyReader":["Nurse sharks live near reefs.","They rest in caves or on sand.","Some return to the same spot."],"story":["Nurse sharks live around warm reefs, sandy flats, and mangroves.","They often return to a favorite resting spot after hunting."]}},
@@ -74,7 +74,7 @@
       "sourceURLs":["https://aqua.org/explore/animals/nurse-shark"]
     },
     {
-      "id":"great-white","name":"Great White Shark","scientificName":"Carcharodon carcharias","symbol":"🦈","imageAsset":"shark-great-white.jpg","imageAuthor":"Sharkdiver68","imageLicense":"Public domain","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg","color":"#5F7D91","region":"Temperate Open Ocean","mapX":0.78,"mapY":0.58,"unlockAt":1,
+      "id":"great-white","name":"Great White Shark","scientificName":"Carcharodon carcharias","symbol":"🦈","imageAsset":"shark-great-white.jpg","imageAuthor":"Sharkdiver68","imageLicense":"Public domain","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg","color":"#5F7D91","region":"Temperate Open Ocean","mapX":0.1,"mapY":0.36,"unlockAt":1,
       "discover":{"earlyReader":["This is a great white shark.","It is a strong swimmer.","It can spot shapes above the water."],"story":["The great white is a strong predator of cool coastal seas.","It watches silhouettes above and can burst forward with surprising speed."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🌊","narration":{"earlyReader":["Great whites like cool coastal water.","They also cross open oceans.","Some migrate very far."],"story":["Great white sharks patrol cool and temperate coasts around the world.","They can migrate thousands of miles across open ocean."]}},
@@ -97,7 +97,7 @@
       "sourceURLs":["https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/"]
     },
     {
-      "id":"wobbegong","name":"Spotted Wobbegong","scientificName":"Orectolobus maculatus","symbol":"🦈","imageAsset":"shark-wobbegong-ambush.jpg","imageAuthor":"Richard Ling","imageLicense":"CC BY-SA 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Orectolobus_maculatus.jpg","color":"#9A784F","region":"Rocky Seafloor Reef","mapX":0.72,"mapY":0.76,"unlockAt":1,
+      "id":"wobbegong","name":"Spotted Wobbegong","scientificName":"Orectolobus maculatus","symbol":"🦈","imageAsset":"shark-wobbegong-ambush.jpg","imageAuthor":"Richard Ling","imageLicense":"CC BY-SA 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Orectolobus_maculatus.jpg","color":"#9A784F","region":"Rocky Seafloor Reef","mapX":0.88,"mapY":0.82,"unlockAt":1,
       "discover":{"earlyReader":["This is a spotted wobbegong.","It stays still on the seafloor.","Its spots help it disappear."],"story":["The spotted wobbegong rests flat against the rocky seafloor.","Its carpet-like pattern is camouflage that helps it almost disappear."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🪸","narration":{"earlyReader":["Wobbegongs live near rocky reefs.","They rest in caves and under ledges.","They stay close to the seafloor."],"story":["Spotted wobbegongs live on rocky and coral reefs around southern Australia.","They rest beneath ledges and inside caves during the day."]}},
@@ -120,7 +120,7 @@
       "sourceURLs":["https://australian.museum/learn/animals/fishes/spotted-wobbegong-orectolobus-maculatus/"]
     },
     {
-      "id":"thresher","name":"Thresher Shark","scientificName":"Alopias vulpinus","symbol":"🦈","imageAsset":"shark-thresher.png","imageAuthor":"NOAA Fisheries Apex Predators Investigation","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Alopias_vulpinus.png","color":"#567CB8","region":"Open Ocean","mapX":0.26,"mapY":0.68,"unlockAt":3,
+      "id":"thresher","name":"Thresher Shark","scientificName":"Alopias vulpinus","symbol":"🦈","imageAsset":"shark-thresher.png","imageAuthor":"NOAA Fisheries Apex Predators Investigation","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Alopias_vulpinus.png","color":"#567CB8","region":"Open Ocean","mapX":0.38,"mapY":0.3,"unlockAt":3,
       "discover":{"earlyReader":["This is a thresher shark.","Its tail is very long.","It can strike fish with a splash."],"story":["The thresher shark carries an upper tail lobe nearly as long as its body.","A swift tail strike can stun schooling fish."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🌊","narration":{"earlyReader":["Threshers swim in open water.","They visit deep and coastal seas.","Some travel far for food."],"story":["Thresher sharks range through temperate and tropical oceans.","They move between coastal feeding grounds and deeper open water."]}},
@@ -143,7 +143,7 @@
       "sourceURLs":["https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/common-thresher/"]
     },
     {
-      "id":"tiger","name":"Tiger Shark","scientificName":"Galeocerdo cuvier","symbol":"🦈","imageAsset":"shark-tiger-underwater.jpg","imageAuthor":"Albert Kok","imageLicense":"CC BY-SA 3.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg","color":"#728461","region":"Murky Tropical Coast","mapX":0.47,"mapY":0.27,"unlockAt":3,
+      "id":"tiger","name":"Tiger Shark","scientificName":"Galeocerdo cuvier","symbol":"🦈","imageAsset":"shark-tiger-underwater.jpg","imageAuthor":"Albert Kok","imageLicense":"CC BY-SA 3.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg","color":"#728461","region":"Murky Tropical Coast","mapX":0.38,"mapY":0.79,"unlockAt":3,
       "discover":{"earlyReader":["This is a tiger shark.","Young sharks have dark stripes.","It uses strong senses to search murky water."],"story":["Young tiger sharks wear dark stripes that fade as they grow.","Strong smell and hearing help this traveler search murky coastal water."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🏝️","narration":{"earlyReader":["Tiger sharks like warm seas.","They visit reefs, bays, and open water.","Some migrate between islands."],"story":["Tiger sharks use many warm-water habitats, from bays and reefs to open ocean.","Seasonal travelers may migrate great distances between islands."]}},
@@ -166,7 +166,7 @@
       "sourceURLs":["https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/tiger-shark/"]
     },
     {
-      "id":"epaulette","name":"Epaulette Shark","scientificName":"Hemiscyllium ocellatum","symbol":"🦈","imageAsset":"shark-epaulette.jpg","imageAuthor":"Richard Ling","imageLicense":"CC BY-SA 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Hemiscyllium_ocellatum.jpg","color":"#C19A55","region":"Shallow Reef Flat","mapX":0.87,"mapY":0.36,"unlockAt":3,
+      "id":"epaulette","name":"Epaulette Shark","scientificName":"Hemiscyllium ocellatum","symbol":"🦈","imageAsset":"shark-epaulette.jpg","imageAuthor":"Richard Ling","imageLicense":"CC BY-SA 2.0","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Hemiscyllium_ocellatum.jpg","color":"#C19A55","region":"Shallow Reef Flat","mapX":0.86,"mapY":0.6,"unlockAt":3,
       "discover":{"earlyReader":["This is an epaulette shark.","It has big black spots.","It can step across a reef with its fins."],"story":["The small spotted epaulette shark lives on shallow reef flats.","It uses sturdy paired fins to walk between tide pools."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🪸","narration":{"earlyReader":["Epaulette sharks live on shallow reefs.","Tides leave warm pools behind.","The shark stays near coral and sand."],"story":["Epaulette sharks live in warm, shallow reef flats around the Great Barrier Reef.","Falling tides can leave them inside isolated pools."]}},
@@ -189,7 +189,7 @@
       "sourceURLs":["https://australian.museum/learn/animals/fishes/epaulette-shark-hemiscyllium-ocellatum/"]
     },
     {
-      "id":"goblin","name":"Goblin Shark","scientificName":"Mitsukurina owstoni","symbol":"🦈","imageAsset":"shark-goblin.jpg","imageAuthor":"Dianne Bray / Museum Victoria","imageLicense":"CC BY 3.0 Australia","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Mistukurina_owstoni_museum_victoria.jpg","color":"#B98291","region":"Deep Ocean Slope","mapX":0.56,"mapY":0.72,"unlockAt":6,
+      "id":"goblin","name":"Goblin Shark","scientificName":"Mitsukurina owstoni","symbol":"🦈","imageAsset":"shark-goblin.jpg","imageAuthor":"Dianne Bray / Museum Victoria","imageLicense":"CC BY 3.0 Australia","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Mistukurina_owstoni_museum_victoria.jpg","color":"#B98291","region":"Deep Ocean Slope","mapX":0.9,"mapY":0.34,"unlockAt":6,
       "discover":{"earlyReader":["This is a goblin shark.","It lives in the dark deep sea.","Its jaws can spring forward to strike."],"story":["The pinkish goblin shark cruises slowly through the dark deep sea.","When prey comes close, its remarkable jaws spring far forward."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"🌑","narration":{"earlyReader":["Goblin sharks live very deep.","Sunlight cannot reach their home.","They stay near underwater slopes."],"story":["Goblin sharks live near deep seafloors and underwater slopes around the world.","Their habitat lies far below most sunlight."]}},
@@ -212,7 +212,7 @@
       "sourceURLs":["https://australian.museum/learn/animals/fishes/goblin-shark-mitsukurina-owstoni/"]
     },
     {
-      "id":"greenland","name":"Greenland Shark","scientificName":"Somniosus microcephalus","symbol":"🦈","imageAsset":"shark-greenland.jpg","imageAuthor":"NOAA Okeanos Explorer Program","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Somniosus_microcephalus_okeanos.jpg","color":"#567080","region":"Arctic Deep Water","mapX":0.34,"mapY":0.14,"unlockAt":6,
+      "id":"greenland","name":"Greenland Shark","scientificName":"Somniosus microcephalus","symbol":"🦈","imageAsset":"shark-greenland.jpg","imageAuthor":"NOAA Okeanos Explorer Program","imageLicense":"Public domain (U.S. NOAA)","imageSourceURL":"https://commons.wikimedia.org/wiki/File:Somniosus_microcephalus_okeanos.jpg","color":"#567080","region":"Arctic Deep Water","mapX":0.44,"mapY":0.16,"unlockAt":6,
       "discover":{"earlyReader":["This is a Greenland shark.","It stays in cold Arctic water.","It swims at a slow, steady speed."],"story":["The Greenland shark moves slowly through cold, deep Arctic water.","Its steady life may continue for several hundred years."]},
       "topics":[
         {"id":"home","title":"Home","symbol":"❄️","narration":{"earlyReader":["Greenland sharks like cold water.","They swim in the Arctic and North Atlantic.","Some stay very deep."],"story":["Greenland sharks inhabit the cold Arctic and North Atlantic oceans.","They often use deep water but may move shallower where water stays cold."]}},
