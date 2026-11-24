@@ -1,0 +1,390 @@
+[
+  {
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "dates": "Oct 19–25",
+    "overview": "You read sh words and sight words, learned about voting and helping your community, explored prayers of thanks and praise, and tested how candy corn dissolves.",
+    "activities": [
+      {
+        "id": "2026-10-19-sh",
+        "title": "The sh picture hunt",
+        "icon": "🐚",
+        "steps": [
+          {
+            "prompt": "Which picture starts with the sound at the beginning of shoe?",
+            "scene": "🐈",
+            "choices": [
+              "🐚",
+              "🐱",
+              "🧢"
+            ],
+            "answer": "🐚",
+            "hint": "Say shell, cat, cap. Listen to the beginning of shell."
+          },
+          {
+            "prompt": "Which picture starts with the sound at the beginning of shoe?",
+            "scene": "🐈",
+            "choices": [
+              "🍎",
+              "👕",
+              "🛏️"
+            ],
+            "answer": "👕",
+            "hint": "Shirt begins like shoe."
+          },
+          {
+            "prompt": "Which picture starts with the sound at the beginning of shoe?",
+            "scene": "🐈",
+            "choices": [
+              "🐑",
+              "🐟",
+              "🐕"
+            ],
+            "answer": "🐑",
+            "hint": "Sheep begins like shoe."
+          }
+        ]
+      },
+      {
+        "id": "2026-10-19-could",
+        "title": "Listen for the word",
+        "icon": "🎧",
+        "steps": [
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "could",
+              "would",
+              "there",
+              "some"
+            ],
+            "answer": "some",
+            "hint": "Listen once more. Find the word some.",
+            "spoken": "Find the word some."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "would",
+              "there",
+              "some",
+              "could"
+            ],
+            "answer": "there",
+            "hint": "Listen once more. Find the word there.",
+            "spoken": "Find the word there."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "there",
+              "some",
+              "could",
+              "would"
+            ],
+            "answer": "would",
+            "hint": "Listen once more. Find the word would.",
+            "spoken": "Find the word would."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "some",
+              "could",
+              "would",
+              "there"
+            ],
+            "answer": "could",
+            "hint": "Listen once more. Find the word could.",
+            "spoken": "Find the word could."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "dates": "Oct 26–Nov 1",
+    "overview": "You practiced ch and new sight words. In religion you talked about saints and ways to show love to a neighbor.",
+    "activities": [
+      {
+        "id": "2026-10-26-ch",
+        "title": "The ch picture hunt",
+        "icon": "🪑",
+        "steps": [
+          {
+            "prompt": "Which picture starts with the sound at the beginning of chin?",
+            "scene": "🐈",
+            "choices": [
+              "🪑",
+              "🚪",
+              "🛏️"
+            ],
+            "answer": "🪑",
+            "hint": "Say chair, door, bed. Chair starts like chin."
+          },
+          {
+            "prompt": "Which picture starts with the sound at the beginning of chin?",
+            "scene": "🐈",
+            "choices": [
+              "🥨",
+              "🧀",
+              "🍎"
+            ],
+            "answer": "🧀",
+            "hint": "Cheese starts like chin."
+          },
+          {
+            "prompt": "Which picture starts with the sound at the beginning of chin?",
+            "scene": "🐈",
+            "choices": [
+              "🍫",
+              "🥝",
+              "🥕"
+            ],
+            "answer": "🍫",
+            "hint": "Chocolate starts like chin."
+          }
+        ]
+      },
+      {
+        "id": "2026-10-26-here",
+        "title": "Cat word match",
+        "icon": "🐈",
+        "steps": [
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "here",
+              "play",
+              "today",
+              "very"
+            ],
+            "answer": "very",
+            "hint": "Listen once more. Find the word very.",
+            "spoken": "Find the word very."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "play",
+              "today",
+              "very",
+              "here"
+            ],
+            "answer": "today",
+            "hint": "Listen once more. Find the word today.",
+            "spoken": "Find the word today."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "today",
+              "very",
+              "here",
+              "play"
+            ],
+            "answer": "play",
+            "hint": "Listen once more. Find the word play.",
+            "spoken": "Find the word play."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "very",
+              "here",
+              "play",
+              "today"
+            ],
+            "answer": "here",
+            "hint": "Listen once more. Find the word here.",
+            "spoken": "Find the word here."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "dates": "Nov 2–8",
+    "overview": "You practiced ch and reviewed th and wh, explored turkey bodies and life cycles, studied Pilgrims, and talked about Creation and caring for Earth.",
+    "activities": [
+      {
+        "id": "2026-11-02-turkey-cycle",
+        "title": "From egg to turkey",
+        "icon": "🥚",
+        "steps": [
+          {
+            "prompt": "What comes first in a turkey’s life?",
+            "scene": "🐈 🔎",
+            "choices": [
+              "Poult",
+              "Egg",
+              "Adult"
+            ],
+            "answer": "Egg",
+            "hint": "A baby turkey hatches from it."
+          },
+          {
+            "prompt": "What hatches from the egg?",
+            "scene": "🥚",
+            "choices": [
+              "Adult",
+              "Poult"
+            ],
+            "answer": "Poult",
+            "hint": "A poult is a baby turkey."
+          },
+          {
+            "prompt": "What does the poult grow into?",
+            "scene": "🥚 → 🐣 → ?",
+            "choices": [
+              "Egg",
+              "Adult turkey"
+            ],
+            "answer": "Adult turkey",
+            "hint": "The little bird grows up."
+          }
+        ]
+      },
+      {
+        "id": "2026-11-02-turkey-parts",
+        "title": "Meet the turkey",
+        "icon": "🦃",
+        "steps": [
+          {
+            "prompt": "What helps a turkey peck seeds?",
+            "scene": "🦃",
+            "choices": [
+              "Legs",
+              "Feathers",
+              "Beak"
+            ],
+            "answer": "Beak",
+            "hint": "Look at its mouth."
+          },
+          {
+            "prompt": "What covers its wings?",
+            "scene": "🦃",
+            "choices": [
+              "Legs",
+              "Feathers",
+              "Beak"
+            ],
+            "answer": "Feathers",
+            "hint": "Think of the soft covering on a bird."
+          },
+          {
+            "prompt": "What helps it walk?",
+            "scene": "🦃",
+            "choices": [
+              "Legs",
+              "Feathers",
+              "Beak"
+            ],
+            "answer": "Legs",
+            "hint": "Look below its body."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "dates": "Nov 9–15",
+    "overview": "You started subtraction, read plurals and s blends, practiced sight words, and explored how matter changes. You also made a Creation wheel and learned about Veterans Day and the Pilgrims.",
+    "activities": [
+      {
+        "id": "2026-11-09-treats",
+        "title": "Share the treats",
+        "icon": "🐟",
+        "steps": [
+          {
+            "prompt": "Give the cat 2 treats. How many will be left?",
+            "scene": "🐟🐟🐟🐟🐟",
+            "choices": [
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": "3",
+            "hint": "Count the treats still on the screen.",
+            "moves": 2
+          },
+          {
+            "prompt": "Give the cat 2 treats. How many will be left?",
+            "scene": "🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "4",
+              "5",
+              "3"
+            ],
+            "answer": "4",
+            "hint": "Count the treats still on the screen.",
+            "moves": 2
+          },
+          {
+            "prompt": "Give the cat 4 treats. How many will be left?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "2",
+              "4",
+              "3"
+            ],
+            "answer": "3",
+            "hint": "Count the treats still on the screen.",
+            "moves": 4
+          }
+        ]
+      },
+      {
+        "id": "2026-11-09-ice",
+        "title": "Ice in the cat bowl",
+        "icon": "🧊",
+        "steps": [
+          {
+            "prompt": "What happens when water freezes?",
+            "scene": "🥣 💧",
+            "choices": [
+              "It becomes ice",
+              "It melts"
+            ],
+            "answer": "It becomes ice",
+            "hint": "Think about an ice cube tray in a freezer."
+          },
+          {
+            "prompt": "Which is a solid?",
+            "scene": "🐈",
+            "choices": [
+              "💧",
+              "🧊"
+            ],
+            "answer": "🧊",
+            "hint": "A solid ice cube keeps its shape."
+          },
+          {
+            "prompt": "What will warm ice turn into?",
+            "scene": "🧊 ☀️",
+            "choices": [
+              "Liquid water",
+              "More ice"
+            ],
+            "answer": "Liquid water",
+            "hint": "The ice melts into a puddle."
+          }
+        ]
+      }
+    ]
+  }
+]

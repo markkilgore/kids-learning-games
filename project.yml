@@ -47,6 +47,7 @@ targets:
     dependencies:
       - target: LearningEngine
       - target: Narration
+      - target: LearningPersistence
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.learning-ui
@@ -93,6 +94,7 @@ targets:
     scheme:
       testTargets:
         - SharkExplorerTests
+        - SharkExplorerWeeklyUITests
         - LearningPersistenceTests
 
   CatMathAdventure:
@@ -133,6 +135,7 @@ targets:
     scheme:
       testTargets:
         - CatMathAdventureTests
+        - CatMathAdventureWeeklyUITests
         - LearningPersistenceTests
 
   SharkExplorerTests:
@@ -168,3 +171,27 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.LearningPersistenceTests
         GENERATE_INFOPLIST_FILE: YES
+
+  CatMathAdventureWeeklyUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: tests/WeeklyUI
+    dependencies:
+      - target: CatMathAdventure
+    settings:
+      base:
+        TEST_TARGET_NAME: CatMathAdventure
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.CatMathAdventureWeeklyUITests
+
+  SharkExplorerWeeklyUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: tests/WeeklyUI
+    dependencies:
+      - target: SharkExplorer
+    settings:
+      base:
+        TEST_TARGET_NAME: SharkExplorer
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.mkilgore.SharkExplorerWeeklyUITests

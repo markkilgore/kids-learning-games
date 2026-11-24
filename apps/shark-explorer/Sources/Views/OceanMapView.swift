@@ -1,3 +1,4 @@
+import LearningUI
 import SwiftUI
 
 struct OceanMapView: View {
@@ -15,6 +16,7 @@ struct OceanMapView: View {
                         .foregroundStyle(.white.opacity(0.78))
                 }
                 Spacer()
+                WeeklyLessonsButton(resource: "shark-weeks", namespace: SharkAppConfiguration.value.storageNamespace, guide: "🦈", color: .teal)
                 headerButton("books.vertical.fill", "My Books") { game.destination = .books }
                 ParentGateButton { game.destination = .settings }
             }

@@ -1,8 +1,23 @@
 import XCTest
+@testable import LearningUI
 @testable import CatMathAdventure
 
 @MainActor
 final class CatMathTests: XCTestCase {
+    func testWeeklyShelfDatesAndNewRecaps() throws {
+        let url = try XCTUnwrap(Bundle.main.url(forResource: "cat-weeks", withExtension: "json"))
+        let weeks = try JSONDecoder().decode([LessonWeek].self, from: Data(contentsOf: url))
+        let original = weeks.filter { $0.start <= "2026-11-09" }
+        for day in ["2026-11-09", "2026-11-15", "2026-11-23"] {
+            let available = LessonWeek.available(in: original, on: day)
+            XCTAssertEqual(available.map(\.start), ["2026-11-09", "2026-11-02", "2026-10-26", "2026-10-19"])
+            XCTAssertEqual(available.first?.homeTitle(on: day), day == "2026-11-23" ? "Latest Week" : "This Week")
+        }
+        let extra = LessonWeek(start: "2026-11-16", end: "2026-11-22", dates: "Nov 16–22", overview: "", activities: [])
+        XCTAssertEqual(LessonWeek.available(in: original + [extra], on: "2026-11-16").prefix(2).map(\.start),
+                       ["2026-11-16", "2026-11-09"])
+    }
+
     func testCatScopeHasTwoLocationsTenCatsAndRequiredSkills() {
         XCTAssertEqual(Set(CatContent.locations.map(\.id)), ["house", "garden"])
         XCTAssertEqual(CatContent.cats.count, 10)

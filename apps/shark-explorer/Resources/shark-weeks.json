@@ -1,0 +1,379 @@
+[
+  {
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "dates": "Oct 19–25",
+    "overview": "You practiced short u and the letter g, sounded out little words, made books, and sorted objects by their color, shape, or size.",
+    "activities": [
+      {
+        "id": "2026-10-19-short-u",
+        "title": "Listen for short u",
+        "icon": "☀️",
+        "steps": [
+          {
+            "prompt": "Which picture has the middle sound you hear in sun?",
+            "scene": "🦈",
+            "choices": [
+              "🐛",
+              "🐟"
+            ],
+            "answer": "🐛",
+            "hint": "Say bug and fish. Bug sounds like sun in the middle."
+          },
+          {
+            "prompt": "Which picture has the middle sound you hear in sun?",
+            "scene": "🦈",
+            "choices": [
+              "🐈",
+              "🥤"
+            ],
+            "answer": "🥤",
+            "hint": "Say cat and cup. Listen to cup."
+          },
+          {
+            "prompt": "Which picture has the middle sound you hear in sun?",
+            "scene": "🦈",
+            "choices": [
+              "🚌",
+              "🖊️"
+            ],
+            "answer": "🚌",
+            "hint": "Say bus and pen. Listen to bus."
+          }
+        ]
+      },
+      {
+        "id": "2026-10-19-sort",
+        "title": "Sort the reef markers",
+        "icon": "🔴",
+        "steps": [
+          {
+            "prompt": "Which group fits this reef marker?",
+            "scene": "🟥",
+            "choices": [
+              "🟥 Red only",
+              "🔵 Round only",
+              "🔴 Both"
+            ],
+            "answer": "🟥 Red only",
+            "hint": "It is red and square.",
+            "spoken": "Sort this marker. Is it red only, round only, or both red and round?"
+          },
+          {
+            "prompt": "Which group fits this reef marker?",
+            "scene": "🔵",
+            "choices": [
+              "🟥 Red only",
+              "🔵 Round only",
+              "🔴 Both"
+            ],
+            "answer": "🔵 Round only",
+            "hint": "It is round and blue.",
+            "spoken": "Sort this marker. Is it red only, round only, or both red and round?"
+          },
+          {
+            "prompt": "Which group fits this reef marker?",
+            "scene": "🔴",
+            "choices": [
+              "🟥 Red only",
+              "🔵 Round only",
+              "🔴 Both"
+            ],
+            "answer": "🔴 Both",
+            "hint": "It is round and red.",
+            "spoken": "Sort this marker. Is it red only, round only, or both red and round?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "dates": "Oct 26–Nov 1",
+    "overview": "You counted, sorted, and made candy patterns. You retold Room on the Broom, practiced sounding out short words, and made crafts with your buddies.",
+    "activities": [
+      {
+        "id": "2026-10-26-patterns",
+        "title": "Finish the shell pattern",
+        "icon": "🐚",
+        "steps": [
+          {
+            "prompt": "What comes next?",
+            "scene": "🐚 🪸 🐚 🪸 ？",
+            "choices": [
+              "🐚",
+              "🪸"
+            ],
+            "answer": "🐚",
+            "hint": "Shell, coral. Start the pair again."
+          },
+          {
+            "prompt": "What comes next?",
+            "scene": "🪸 🪸 🐚 🪸 🪸 ？",
+            "choices": [
+              "🐚",
+              "🪸"
+            ],
+            "answer": "🐚",
+            "hint": "Two corals, then one shell."
+          },
+          {
+            "prompt": "What comes next?",
+            "scene": "🐚 🐚 🪸 🐚 ？",
+            "choices": [
+              "🐚",
+              "🪸"
+            ],
+            "answer": "🐚",
+            "hint": "Each group starts with two shells."
+          }
+        ]
+      },
+      {
+        "id": "2026-10-26-retell",
+        "title": "Tell a shark story",
+        "icon": "📖",
+        "steps": [
+          {
+            "prompt": "A shark finds an egg. It cracks. A turtle swims out. What did the shark find first?",
+            "scene": "🦈",
+            "choices": [
+              "🥚",
+              "🐢",
+              "🥚💥"
+            ],
+            "answer": "🥚",
+            "hint": "The egg was still whole."
+          },
+          {
+            "prompt": "A shark finds an egg. It cracks. A turtle swims out. Which picture shows the shell opening next?",
+            "scene": "🦈",
+            "choices": [
+              "🥚",
+              "🐢",
+              "🥚💥"
+            ],
+            "answer": "🥚💥",
+            "hint": "Look for the cracked shell."
+          },
+          {
+            "prompt": "A shark finds an egg. It cracks. A turtle swims out. Who swam away last?",
+            "scene": "🦈",
+            "choices": [
+              "🥚",
+              "🐢",
+              "🥚💥"
+            ],
+            "answer": "🐢",
+            "hint": "A turtle swam out."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "dates": "Nov 2–8",
+    "overview": "You worked on numbers up to ten, listened for short i and e, practiced the ending s, and added details to your handmade books.",
+    "activities": [
+      {
+        "id": "2026-11-02-fish",
+        "title": "Count the school of fish",
+        "icon": "🐟",
+        "steps": [
+          {
+            "prompt": "How many fish are swimming here?",
+            "scene": "🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "5",
+              "6",
+              "7"
+            ],
+            "answer": "6",
+            "hint": "Point to each fish once as you count."
+          },
+          {
+            "prompt": "How many fish are swimming here?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "8",
+              "7",
+              "9"
+            ],
+            "answer": "8",
+            "hint": "Point to each fish once as you count."
+          },
+          {
+            "prompt": "How many fish are swimming here?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "9",
+              "8",
+              "10"
+            ],
+            "answer": "10",
+            "hint": "Point to each fish once as you count."
+          }
+        ]
+      },
+      {
+        "id": "2026-11-02-vowels",
+        "title": "Fin or hen?",
+        "icon": "🐔",
+        "steps": [
+          {
+            "prompt": "Listen to the word. Which vowel sound is in the middle?",
+            "scene": "🦈",
+            "choices": [
+              "i",
+              "e"
+            ],
+            "answer": "i",
+            "hint": "Fin has the middle sound in sit.",
+            "spoken": "Say fin. Does fin have short i like fin, or short e like hen?"
+          },
+          {
+            "prompt": "Listen to the word. Which vowel sound is in the middle?",
+            "scene": "🐔",
+            "choices": [
+              "i",
+              "e"
+            ],
+            "answer": "e",
+            "hint": "Hen rhymes with pen.",
+            "spoken": "Say hen. Does hen have short i like fin, or short e like hen?"
+          },
+          {
+            "prompt": "Listen to the word. Which vowel sound is in the middle?",
+            "scene": "🥅",
+            "choices": [
+              "i",
+              "e"
+            ],
+            "answer": "e",
+            "hint": "Net rhymes with pet.",
+            "spoken": "Say net. Does net have short i like fin, or short e like hen?"
+          },
+          {
+            "prompt": "Listen to the word. Which vowel sound is in the middle?",
+            "scene": "🐷",
+            "choices": [
+              "i",
+              "e"
+            ],
+            "answer": "i",
+            "hint": "Pig rhymes with big.",
+            "spoken": "Say pig. Does pig have short i like fin, or short e like hen?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "dates": "Nov 9–15",
+    "overview": "You practiced writing h and r, made three-page books, and played a counting game with numbers up to ten.",
+    "activities": [
+      {
+        "id": "2026-11-09-race",
+        "title": "Race along the reef",
+        "icon": "🏁",
+        "steps": [
+          {
+            "prompt": "Swim forward 3 spaces, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": "3",
+            "hint": "Look at the number under your shark.",
+            "moves": 3,
+            "track": true
+          },
+          {
+            "prompt": "Swim forward 6 spaces, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "6",
+              "5",
+              "7"
+            ],
+            "answer": "6",
+            "hint": "Look at the number under your shark.",
+            "moves": 6,
+            "track": true
+          },
+          {
+            "prompt": "Swim forward 10 spaces, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "8",
+              "9",
+              "10"
+            ],
+            "answer": "10",
+            "hint": "Look at the number under your shark.",
+            "moves": 10,
+            "track": true
+          }
+        ]
+      },
+      {
+        "id": "2026-11-09-letters",
+        "title": "Hear h and r",
+        "icon": "🐇",
+        "steps": [
+          {
+            "prompt": "Which letter starts this picture’s name?",
+            "scene": "🎩",
+            "choices": [
+              "h",
+              "r"
+            ],
+            "answer": "h",
+            "hint": "Hat begins like hop.",
+            "spoken": "Which letter starts the word hat?"
+          },
+          {
+            "prompt": "Which letter starts this picture’s name?",
+            "scene": "🐇",
+            "choices": [
+              "h",
+              "r"
+            ],
+            "answer": "r",
+            "hint": "Rabbit begins like run.",
+            "spoken": "Which letter starts the word rabbit?"
+          },
+          {
+            "prompt": "Which letter starts this picture’s name?",
+            "scene": "🏠",
+            "choices": [
+              "h",
+              "r"
+            ],
+            "answer": "h",
+            "hint": "House begins like hat.",
+            "spoken": "Which letter starts the word house?"
+          },
+          {
+            "prompt": "Which letter starts this picture’s name?",
+            "scene": "🌧️",
+            "choices": [
+              "h",
+              "r"
+            ],
+            "answer": "r",
+            "hint": "Rain begins like rabbit.",
+            "spoken": "Which letter starts the word rain?"
+          }
+        ]
+      }
+    ]
+  }
+]

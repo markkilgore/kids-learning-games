@@ -57,10 +57,13 @@ private struct CatHomeView: View {
         VStack(spacing: 16) {
             CatHomeHeader()
 
-            Picker("Place", selection: $game.selectedLocationID) {
-                ForEach(CatContent.locations) { location in Label(location.name, systemImage: location.symbol).tag(location.id) }
+            HStack {
+                WeeklyLessonsButton(resource: "cat-weeks", namespace: CatAppConfiguration.value.storageNamespace, guide: "🐈", color: .purple)
+                Picker("Place", selection: $game.selectedLocationID) {
+                    ForEach(CatContent.locations) { location in Label(location.name, systemImage: location.symbol).tag(location.id) }
+                }
+                .pickerStyle(.segmented).frame(maxWidth: 520)
             }
-            .pickerStyle(.segmented).frame(maxWidth: 520)
 
             HStack(spacing: 22) {
                 ForEach(visibleCats) { cat in
