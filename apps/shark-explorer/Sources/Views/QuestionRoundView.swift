@@ -41,7 +41,7 @@ struct QuestionRoundView: View {
                 ForEach(orderedChoices[index]) { choice in
                     AnswerTile(state: state(of: choice)) { choose(choice) } label: {
                         VStack(spacing: 8) {
-                            KidArt("choice-\(choice.id)", fallback: choice.symbol, size: 68)
+                            KidArt(Self.artName(for: choice), fallback: choice.symbol, size: 68, style: .tile)
                             Text(choice.label)
                                 .font(.kidHeadline)
                                 .multilineTextAlignment(.center)
@@ -78,6 +78,17 @@ struct QuestionRoundView: View {
         }
         .id(index)
         .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
+    }
+
+    /// Choices that show the same thing share one picture.
+    private static let sharedArt = [
+        "trees": "tree", "forest": "tree", "climbs": "tree",
+        "sky": "cloud", "night": "moon", "lunch": "bell",
+        "fly": "wing", "flies": "wing"
+    ]
+
+    private static func artName(for choice: AnswerChoice) -> String {
+        "choice-\(sharedArt[choice.id] ?? choice.id)"
     }
 
     private func state(of choice: AnswerChoice) -> AnswerState {

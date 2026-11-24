@@ -156,24 +156,48 @@ public struct KidToast: View {
 
 /// Emoji or bundled artwork: shows the named image when the app ships one, otherwise the emoji.
 public struct KidArt: View {
+    public enum Style: Sendable {
+        /// A portrait painted on a plain background, cropped to a circle.
+        case medallion
+        /// A small square painting, shown whole with softly rounded corners.
+        case tile
+        /// A cut-out object on a transparent background, shown as is at about the emoji's size.
+        case plain
+    }
+
     private let asset: String
     private let fallback: String
     private let size: CGFloat
+    private let style: Style
 
-    public init(_ asset: String, fallback: String, size: CGFloat) {
+    public init(_ asset: String, fallback: String, size: CGFloat, style: Style = .medallion) {
         self.asset = asset
         self.fallback = fallback
         self.size = size
+        self.style = style
     }
 
     public var body: some View {
         if let image = UIImage(named: asset) {
-            // Portraits are painted on a plain background, so they are shown as round medallions.
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .frame(width: size * 1.45, height: size * 1.45)
-                .clipShape(Circle())
+            switch style {
+            case .medallion:
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size * 1.45, height: size * 1.45)
+                    .clipShape(Circle())
+            case .tile:
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: size * 1.45, height: size * 1.45)
+                    .clipShape(RoundedRectangle(cornerRadius: size * 0.3, style: .continuous))
+            case .plain:
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: size * 1.2, height: size * 1.2)
+            }
         } else {
             Text(fallback).font(.system(size: size))
         }
