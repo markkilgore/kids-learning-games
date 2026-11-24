@@ -38,6 +38,8 @@ struct ParentSettingsView: View {
                         Text("All incorrect-answer feedback is encouraging and gives Henry another visual clue.")
                     }
 
+                    SharkProgressSection()
+
                     section("Saved on this iPad", systemImage: "ipad") {
                         Text("\(game.completedCount) shark pages • \(game.collectedWords.count) Ocean Words • \(game.completedTopics.count) topics explored")
                     }

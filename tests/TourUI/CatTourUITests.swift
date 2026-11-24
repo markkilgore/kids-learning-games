@@ -58,6 +58,14 @@ final class CatTourUITests: XCTestCase {
         app.images["parent-gate"].firstMatch.press(forDuration: 2.6)
         XCTAssertTrue(app.staticTexts["Parent Settings"].waitForExistence(timeout: 5))
         snap("13-settings")
+
+        let progress = app.descendants(matching: .any)["parent-progress"]
+        XCTAssertTrue(progress.waitForExistence(timeout: 5))
+        // The simulator may report portrait while the app is landscape-only; match them so the swipe scrolls.
+        XCUIDevice.shared.orientation = .landscapeLeft
+        app.scrollViews.firstMatch.swipeUp(velocity: .slow)
+        XCTAssertTrue(app.staticTexts["Right first try"].exists)
+        snap("14-settings-progress")
     }
 
     private func tap(_ identifier: String) {

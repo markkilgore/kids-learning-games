@@ -25,12 +25,13 @@ struct CatSettingsView: View {
                         Text("Every puzzle has a picture Kate can tap to count. Wrong answers get an encouraging hint and another try.")
                         Text("Each solved puzzle adds a friendship heart and reveals more of that cat’s story.")
                     }
+                    CatProgressSection()
                     section("Saved on this iPad", systemImage: "ipad") {
                         Text("\(game.totalFriendship) friendship hearts • \(game.progress.completedActivities) puzzles solved • \(game.progress.journaledCatIDs.count) journal pages")
                         Button("Start over", systemImage: "arrow.counterclockwise", role: .destructive) { confirmingReset = true }
                             .buttonStyle(.bordered)
                             .controlSize(.large)
-                            .confirmationDialog("Erase all hearts, story pages, and rewards on this iPad?", isPresented: $confirmingReset, titleVisibility: .visible) {
+                            .confirmationDialog("Erase all hearts, story pages, rewards, and practice records on this iPad?", isPresented: $confirmingReset, titleVisibility: .visible) {
                                 Button("Erase progress", role: .destructive) { game.resetProgress() }
                             }
                     }

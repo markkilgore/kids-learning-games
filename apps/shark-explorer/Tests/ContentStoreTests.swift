@@ -166,6 +166,53 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertTrue(game.completeTopic(topic, for: shark).isEmpty)
     }
 
+    func testProgressSavedBeforeQuizCountsStillDecodes() throws {
+        let oldSave = Data(#"{"collectedWords":["teeth"],"completedSharks":["whale"],"completedTopics":["whale:food"],"currentSharkID":"whale","readingMode":"story"}"#.utf8)
+        let decoded = try JSONDecoder().decode(SharkProgress.self, from: oldSave)
+        XCTAssertEqual(decoded.completedSharks, ["whale"])
+        XCTAssertEqual(decoded.collectedWords, ["teeth"])
+        XCTAssertEqual(decoded.completedTopics, ["whale:food"])
+        XCTAssertEqual(decoded.currentSharkID, "whale")
+        XCTAssertEqual(decoded.readingMode, .story)
+        XCTAssertTrue(decoded.quizFirstTry.isEmpty)
+        XCTAssertTrue(decoded.quizRetried.isEmpty)
+
+        // An old file on disk loads into the store with no quiz answers recorded.
+        let base = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.oldsave", baseDirectory: base)
+        let url = try storage.fileURL
+        try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try oldSave.write(to: url)
+        let game = GameStore(progressStore: storage)
+        game.load()
+        XCTAssertTrue(game.completedSharks.contains("whale"))
+        XCTAssertEqual(game.quizTally().firstTry, 0)
+        XCTAssertEqual(game.quizTally().retried, 0)
+    }
+
+    func testQuizAnswersAreCountedPerSharkAndPersist() throws {
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.quiz", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        let sharks = ContentStore.shared.catalog.sharks
+        let game = GameStore(progressStore: storage)
+        game.load()
+        game.recordQuizQuestion(for: sharks[0], firstTry: true)
+        game.recordQuizQuestion(for: sharks[0], firstTry: false)
+        game.recordQuizQuestion(for: sharks[0], firstTry: true)
+        game.recordQuizQuestion(for: sharks[1], firstTry: false)
+
+        let restored = GameStore(progressStore: storage)
+        restored.load()
+        XCTAssertEqual(restored.quizTally(for: sharks[0]).firstTry, 2)
+        XCTAssertEqual(restored.quizTally(for: sharks[0]).retried, 1)
+        XCTAssertEqual(restored.quizTally(for: sharks[1]).retried, 1)
+        XCTAssertEqual(restored.quizTally().firstTry, 2)
+        XCTAssertEqual(restored.quizTally().retried, 2)
+        XCTAssertEqual(SharkProgressSection.accuracy(firstTry: 2, retried: 1), "67% (2 of 3)")
+        XCTAssertEqual(SharkProgressSection.accuracy(firstTry: 0, retried: 0), "—")
+        XCTAssertNotNil(SharkProgressSection.note(for: sharks[1], firstTry: 1, retried: 2))
+        XCTAssertNil(SharkProgressSection.note(for: sharks[0], firstTry: 2, retried: 1))
+    }
+
     /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
     func testEverySpokenLineHasARecording() throws {
         let manifest = AudioManifest(bundle: .main, resourceName: SharkAppConfiguration.value.narration.bundledManifestName)

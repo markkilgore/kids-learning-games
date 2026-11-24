@@ -149,6 +149,125 @@ final class CatMathTests: XCTestCase {
         XCTAssertFalse(game.isUnlocked(poppy))
     }
 
+    func testProgressSavedBeforeSkillStatsStillDecodes() throws {
+        let oldSave = Data(#"{"friendship":{"mittens":3},"completedActivities":3,"journaledCatIDs":["mittens"],"selectedLocationID":"garden","treatsGiven":{"mittens":1},"mealsServed":{},"tricksPerformed":{}}"#.utf8)
+        let decoded = try JSONDecoder().decode(CatProgress.self, from: oldSave)
+        XCTAssertEqual(decoded.friendship["mittens"], 3)
+        XCTAssertEqual(decoded.selectedLocationID, "garden")
+        XCTAssertTrue(decoded.skillStats.isEmpty)
+
+        // A stats entry missing newer fields decodes with defaults.
+        let partial = Data(#"{"skillStats":{"addition":{"attempts":2,"firstTryCorrect":1}}}"#.utf8)
+        let stats = try XCTUnwrap(JSONDecoder().decode(CatProgress.self, from: partial).skillStats["addition"])
+        XCTAssertEqual(stats.attempts, 2)
+        XCTAssertEqual(stats.firstTryCorrect, 1)
+        XCTAssertEqual(stats.wrongAnswers, 0)
+        XCTAssertEqual(stats.difficulty, 0)
+        XCTAssertNil(stats.lastPractised)
+    }
+
+    func testAnswersAreRecordedPerSkillAndPersist() throws {
+        let base = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let game = CatGameStore(baseDirectory: base)
+        game.load()
+        let skills = CatAppConfiguration.value.enabledSkills
+        let addition = try XCTUnwrap(skills.first { $0.id == "addition" })
+        let counting = try XCTUnwrap(skills.first { $0.id == "counting" })
+        let day = Date(timeIntervalSince1970: 1_800_000_000)
+        game.recordAnswer(for: addition, correct: false, isFirstAnswer: true, on: day)
+        game.recordAnswer(for: addition, correct: true, isFirstAnswer: false, on: day)
+        game.recordAnswer(for: addition, correct: true, isFirstAnswer: true, on: day)
+        game.recordAnswer(for: counting, correct: true, isFirstAnswer: true, on: day)
+
+        let restored = CatGameStore(baseDirectory: base)
+        restored.load()
+        let stats = restored.stats(for: addition)
+        XCTAssertEqual(stats.attempts, 2)
+        XCTAssertEqual(stats.firstTryCorrect, 1)
+        XCTAssertEqual(stats.wrongAnswers, 1)
+        XCTAssertEqual(stats.lastPractised, day)
+        XCTAssertEqual(stats.firstTryAccuracy, 0.5)
+        XCTAssertEqual(restored.stats(for: counting).attempts, 1)
+        XCTAssertEqual(restored.stats(for: try XCTUnwrap(skills.first { $0.id == "skip-5" })), SkillPracticeStats())
+
+        restored.resetProgress()
+        XCTAssertTrue(restored.progress.skillStats.isEmpty)
+    }
+
+    func testDifficultyStepsUpAfterAFirstTryStreakAndDownAfterRepeatedMisses() {
+        let day = Date(timeIntervalSince1970: 0)
+        var stats = SkillPracticeStats()
+        stats.record(correct: true, isFirstAnswer: true, on: day)
+        stats.record(correct: true, isFirstAnswer: true, on: day)
+        XCTAssertEqual(stats.difficulty, 0)
+        stats.record(correct: true, isFirstAnswer: true, on: day)
+        XCTAssertEqual(stats.difficulty, 1, "three first-try answers in a row step up")
+        for _ in 0..<3 { stats.record(correct: true, isFirstAnswer: true, on: day) }
+        XCTAssertEqual(stats.difficulty, 1, "difficulty never goes above +1")
+
+        // A miss breaks the streak; a right answer on a second try neither counts towards it nor clears the misses.
+        stats.record(correct: true, isFirstAnswer: true, on: day)
+        stats.record(correct: false, isFirstAnswer: true, on: day)
+        stats.record(correct: true, isFirstAnswer: false, on: day)
+        stats.record(correct: true, isFirstAnswer: true, on: day)
+        XCTAssertEqual(stats.difficulty, 1)
+        XCTAssertEqual(stats.missStreak, 0, "a first-try success clears earlier misses")
+
+        stats.record(correct: false, isFirstAnswer: true, on: day)
+        stats.record(correct: false, isFirstAnswer: false, on: day)
+        stats.record(correct: true, isFirstAnswer: false, on: day)
+        XCTAssertEqual(stats.difficulty, 1)
+        stats.record(correct: false, isFirstAnswer: true, on: day)
+        XCTAssertEqual(stats.difficulty, 0, "three misses without a first-try success step down")
+        for _ in 0..<3 { stats.record(correct: false, isFirstAnswer: true, on: day) }
+        XCTAssertEqual(stats.difficulty, -1)
+        for _ in 0..<6 { stats.record(correct: false, isFirstAnswer: true, on: day) }
+        XCTAssertEqual(stats.difficulty, -1, "difficulty never goes below -1")
+        XCTAssertTrue(stats.needsHelp)
+        XCTAssertNotNil(CatProgressSection.note(stats))
+
+        XCTAssertEqual(stats.attempts, 20)
+        XCTAssertEqual(stats.wrongAnswers, 13)
+        XCTAssertEqual(stats.firstTryCorrect, 8)
+    }
+
+    func testAdaptiveDifficultyOnlyRanksRecordedVariantsOfTheSameSkill() {
+        var changed = 0
+        for cat in CatContent.cats {
+            for friendship in 0..<40 {
+                let usual = MathChallengeFactory.challenge(for: cat, friendship: friendship)
+                let easier = MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: -1)
+                let harder = MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: 1)
+                XCTAssertEqual(MathChallengeFactory.skill(for: cat, friendship: friendship), usual.skill)
+                XCTAssertEqual(easier.skill, usual.skill)
+                XCTAssertEqual(harder.skill, usual.skill)
+                XCTAssertEqual(MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: -5).prompt, easier.prompt)
+                if friendship < cat.backstory.count - 1 {
+                    // Before the last story page each lead line has only one recorded prompt.
+                    XCTAssertEqual(easier.prompt, usual.prompt)
+                    XCTAssertEqual(harder.prompt, usual.prompt)
+                    continue
+                }
+                XCTAssertLessThanOrEqual(size(easier), size(usual), easier.prompt)
+                XCTAssertGreaterThanOrEqual(size(harder), size(usual), harder.prompt)
+                // The variant is a prompt the usual rotation also produces for this cat.
+                let recorded = Set((0..<36).map { MathChallengeFactory.challenge(for: cat, friendship: $0).prompt })
+                XCTAssertTrue(recorded.contains(easier.prompt))
+                XCTAssertTrue(recorded.contains(harder.prompt))
+                if easier.prompt != usual.prompt || harder.prompt != usual.prompt { changed += 1 }
+            }
+        }
+        XCTAssertGreaterThan(changed, 100, "difficulty should change most puzzles once the story is unlocked")
+    }
+
+    private func size(_ challenge: MathChallenge) -> Int {
+        switch challenge.visual {
+        case .count(let total), .pairs(let total), .subtract(let total, _): total
+        case .add(let first, let second): first + second
+        case .sequence(let numbers): numbers.last ?? 0
+        }
+    }
+
     /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
     func testEverySpokenLineHasARecording() throws {
         let manifest = AudioManifest(bundle: .main, resourceName: CatAppConfiguration.value.narration.bundledManifestName)
@@ -156,7 +275,9 @@ final class CatMathTests: XCTestCase {
         for cat in CatContent.cats {
             lines += cat.backstory.map(\.story) + CatRewardAction.allCases.map { $0.celebration(for: cat) }
             lines.append("You did it! \(cat.name)’s friendship grew.")
-            lines += (0..<80).map { MathChallengeFactory.challenge(for: cat, friendship: $0).prompt }
+            for difficulty in SkillPracticeStats.difficultyRange {
+                lines += (0..<80).map { MathChallengeFactory.challenge(for: cat, friendship: $0, difficulty: difficulty).prompt }
+            }
         }
         let url = try XCTUnwrap(Bundle.main.url(forResource: "cat-weeks", withExtension: "json"))
         for week in try JSONDecoder().decode([LessonWeek].self, from: Data(contentsOf: url)) {

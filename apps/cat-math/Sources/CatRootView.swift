@@ -64,7 +64,7 @@ struct CatRootView: View {
             CatHomeView()
         case .activity(let catID):
             if let cat = CatContent.cats.first(where: { $0.id == catID }) {
-                CatActivityView(cat: cat, friendship: game.friendship(for: cat))
+                CatActivityView(cat: cat, challenge: game.nextChallenge(for: cat))
             } else {
                 CatHomeView()
             }
