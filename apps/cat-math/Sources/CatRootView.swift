@@ -44,7 +44,7 @@ struct CatRootView: View {
 
     var body: some View {
         ZStack {
-            CatBackdrop(locationID: game.selectedLocationID)
+            CatBackdrop(locationID: game.selectedLocationID, showsDecorations: game.destination == .home)
             screen
                 .id(game.destination)
                 .transition(.opacity.combined(with: .scale(scale: 0.97)))
@@ -79,6 +79,8 @@ struct CatRootView: View {
 /// House or garden behind every screen: bundled artwork when present, otherwise a soft gradient with decorations.
 private struct CatBackdrop: View {
     let locationID: String
+    /// Emoji decorations only suit the home screen; elsewhere they show through translucent cards.
+    var showsDecorations = true
 
     private var isGarden: Bool { locationID == "garden" }
 
@@ -96,7 +98,7 @@ private struct CatBackdrop: View {
                     .resizable()
                     .scaledToFill()
                     .overlay(.white.opacity(0.35))
-            } else {
+            } else if showsDecorations {
                 // Decorations sit along the bottom edge, clear of the header controls.
                 VStack {
                     Spacer()
