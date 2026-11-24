@@ -31,24 +31,77 @@ enum MathChallengeFactory {
     static let oddChoice = 1
     static let evenChoice = 2
 
-    static func challenge(for cat: CatDefinition, friendship: Int) -> MathChallenge {
+    static func challenge(for cat: CatDefinition, friendship: Int, difficulty: Int = 0) -> MathChallenge {
         var generator = SystemRandomNumberGenerator()
-        return challenge(for: cat, friendship: friendship, using: &generator)
+        return challenge(for: cat, friendship: friendship, difficulty: difficulty, using: &generator)
     }
 
-    /// The prompt depends only on the cat and friendship, so every prompt has a recorded clip
-    /// (tools/lib/lines.mjs ports this). Only the order and choice of wrong answers is random.
-    static func challenge<Generator: RandomNumberGenerator>(for cat: CatDefinition, friendship: Int, using generator: inout Generator) -> MathChallenge {
+    /// The skill a cat practises at this friendship level; difficulty never changes it.
+    static func skill(for cat: CatDefinition, friendship: Int) -> EducationalSkill {
         let skills = CatAppConfiguration.value.enabledSkills
         let catIndex = CatContent.cats.firstIndex(of: cat) ?? 0
-        let skill = skills[(friendship + catIndex) % skills.count]
+        return skills[(max(friendship, 0) + catIndex) % skills.count]
+    }
+
+    /// Adaptive difficulty, limited to prompts that already have a recorded clip.
+    ///
+    /// Once a cat's last story page is showing, every puzzle shares that page's lead line, and the
+    /// friendship levels `f`, `f + 6` and `f + 12` give the same skill with three different numbers
+    /// (the seed cycles through 9 values while the skill cycles through 6). All three are in the
+    /// recorded set that tools/lib/lines.mjs enumerates. They are ranked from smallest to largest
+    /// numbers, and `difficulty` (-1, 0 or +1) moves one rank from the puzzle the rotation would
+    /// normally give. Before the last story page there is only one recorded prompt, so it is used as is.
+    static func variantFriendship(for cat: CatDefinition, friendship: Int, difficulty: Int) -> Int {
+        let step = min(max(difficulty, SkillPracticeStats.difficultyRange.lowerBound), SkillPracticeStats.difficultyRange.upperBound)
+        guard step != 0, friendship >= cat.backstory.count - 1 else { return friendship }
+        let skillCount = CatAppConfiguration.value.enabledSkills.count
+        let ranked = (0..<3).map { friendship + $0 * skillCount }.sorted { lhs, rhs in
+            let left = size(of: spec(for: cat, friendship: lhs)), right = size(of: spec(for: cat, friendship: rhs))
+            return left == right ? lhs < rhs : left < right
+        }
+        let rank = ranked.firstIndex(of: friendship) ?? 0
+        return ranked[min(max(rank + step, 0), ranked.count - 1)]
+    }
+
+    /// The prompt depends only on the cat, friendship and difficulty, so every prompt has a recorded clip
+    /// (tools/lib/lines.mjs ports this). Only the order and choice of wrong answers is random.
+    static func challenge<Generator: RandomNumberGenerator>(for cat: CatDefinition, friendship: Int, difficulty: Int = 0, using generator: inout Generator) -> MathChallenge {
+        let puzzle = spec(for: cat, friendship: variantFriendship(for: cat, friendship: friendship, difficulty: difficulty))
+        if puzzle.skill.id == "odd-even" {
+            return MathChallenge(skill: puzzle.skill, prompt: puzzle.prompt, choices: [oddChoice, evenChoice], answer: puzzle.answer, icon: cat.storyIcon, visual: puzzle.visual, visualHint: puzzle.hint)
+        }
+        let answer = puzzle.answer, step = puzzle.step
+        let wrong = [answer - 2 * step, answer - step, answer + step, answer + 2 * step].filter { $0 > 0 }.shuffled(using: &generator).prefix(2)
+        return MathChallenge(skill: puzzle.skill, prompt: puzzle.prompt, choices: ([answer] + wrong).shuffled(using: &generator), answer: answer, icon: cat.storyIcon, visual: puzzle.visual, visualHint: puzzle.hint)
+    }
+
+    /// Everything about a puzzle except its shuffled choices.
+    private struct Spec {
+        let skill: EducationalSkill
+        let prompt: String
+        let answer: Int
+        let visual: MathVisual
+        let hint: String
+        var step = 1
+    }
+
+    /// How big the numbers in a puzzle are, used to rank its recorded variants from easier to harder.
+    private static func size(of puzzle: Spec) -> Int {
+        switch puzzle.visual {
+        case .count(let total), .pairs(let total), .subtract(let total, _): total
+        case .add(let first, let second): first + second
+        case .sequence(let numbers): numbers.last ?? 0
+        }
+    }
+
+    private static func spec(for cat: CatDefinition, friendship: Int) -> Spec {
+        let skill = skill(for: cat, friendship: friendship)
         let seed = max(1, (friendship + cat.name.count) % 9 + 1)
         let lead = cat.storyBeat(for: friendship).puzzleLead
         let icon = cat.storyIcon
 
-        func make(_ prompt: String, _ answer: Int, _ visual: MathVisual, _ hint: String, step: Int = 1) -> MathChallenge {
-            let wrong = [answer - 2 * step, answer - step, answer + step, answer + 2 * step].filter { $0 > 0 }.shuffled(using: &generator).prefix(2)
-            return MathChallenge(skill: skill, prompt: prompt, choices: ([answer] + wrong).shuffled(using: &generator), answer: answer, icon: icon, visual: visual, visualHint: hint)
+        func make(_ prompt: String, _ answer: Int, _ visual: MathVisual, _ hint: String, step: Int = 1) -> Spec {
+            Spec(skill: skill, prompt: prompt, answer: answer, visual: visual, hint: hint, step: step)
         }
 
         switch skill.id {
@@ -60,14 +113,11 @@ enum MathChallengeFactory {
             return make("\(lead) \(cat.name) counts \(total) \(noun(cat, count: total)). \(taken) \(taken == 1 ? "is" : "are") put away. How many stay?", total - taken, .subtract(total: total, taken: taken), "\(repeated(icon, count: total)), put away \(repeated(icon, count: taken))")
         case "odd-even":
             let number = seed + 3
-            return MathChallenge(
-                skill: skill,
-                prompt: "\(lead) \(cat.name) finds \(number) \(noun(cat, count: number)). Is that odd or even?",
-                choices: [oddChoice, evenChoice],
-                answer: number.isMultiple(of: 2) ? evenChoice : oddChoice,
-                icon: icon,
-                visual: .pairs(number),
-                visualHint: "\(repeated(icon, count: number)) in pairs"
+            return make(
+                "\(lead) \(cat.name) finds \(number) \(noun(cat, count: number)). Is that odd or even?",
+                number.isMultiple(of: 2) ? evenChoice : oddChoice,
+                .pairs(number),
+                "\(repeated(icon, count: number)) in pairs"
             )
         case "skip-5", "skip-10":
             let step = skill.id == "skip-5" ? 5 : 10

@@ -1,4 +1,5 @@
 import Foundation
+import LearningEngine
 import LearningPersistence
 import Observation
 
@@ -10,6 +11,8 @@ struct CatProgress: Codable, Equatable {
     var treatsGiven: [String: Int] = [:]
     var mealsServed: [String: Int] = [:]
     var tricksPerformed: [String: Int] = [:]
+    /// Practice record for each skill, keyed by skill ID. Added later, so older saves have none.
+    var skillStats: [String: SkillPracticeStats] = [:]
 
     init() {}
 
@@ -22,6 +25,74 @@ struct CatProgress: Codable, Equatable {
         treatsGiven = try container.decodeIfPresent([String: Int].self, forKey: .treatsGiven) ?? [:]
         mealsServed = try container.decodeIfPresent([String: Int].self, forKey: .mealsServed) ?? [:]
         tricksPerformed = try container.decodeIfPresent([String: Int].self, forKey: .tricksPerformed) ?? [:]
+        skillStats = try container.decodeIfPresent([String: SkillPracticeStats].self, forKey: .skillStats) ?? [:]
+    }
+}
+
+/// How one skill is going: what a parent sees, plus the streaks that drive adaptive difficulty.
+struct SkillPracticeStats: Codable, Equatable {
+    /// Puzzles answered (counted at the first answer to each puzzle).
+    var attempts = 0
+    /// Puzzles whose first answer was right.
+    var firstTryCorrect = 0
+    /// Every wrong answer, including a second wrong try on the same puzzle.
+    var wrongAnswers = 0
+    var lastPractised: Date?
+    /// -1 easier numbers, 0 the usual rotation, +1 harder numbers.
+    var difficulty = 0
+    /// First-try-correct puzzles in a row since the last miss or step up.
+    var firstTryStreak = 0
+    /// Wrong answers since the last first-try-correct puzzle or step down.
+    var missStreak = 0
+
+    static let difficultyRange = -1...1
+    /// This many first-try-correct puzzles in a row steps the skill one level harder.
+    static let stepUpAfter = 3
+    /// This many wrong answers without a first-try-correct puzzle in between steps it one level easier.
+    static let stepDownAfter = 3
+
+    init() {}
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        attempts = try container.decodeIfPresent(Int.self, forKey: .attempts) ?? 0
+        firstTryCorrect = try container.decodeIfPresent(Int.self, forKey: .firstTryCorrect) ?? 0
+        wrongAnswers = try container.decodeIfPresent(Int.self, forKey: .wrongAnswers) ?? 0
+        lastPractised = try container.decodeIfPresent(Date.self, forKey: .lastPractised)
+        difficulty = try container.decodeIfPresent(Int.self, forKey: .difficulty) ?? 0
+        firstTryStreak = try container.decodeIfPresent(Int.self, forKey: .firstTryStreak) ?? 0
+        missStreak = try container.decodeIfPresent(Int.self, forKey: .missStreak) ?? 0
+    }
+
+    var firstTryAccuracy: Double? { attempts == 0 ? nil : Double(firstTryCorrect) / Double(attempts) }
+
+    /// Worth a parent's attention: difficulty has stepped down, or under half of several puzzles were right first time.
+    var needsHelp: Bool {
+        difficulty < 0 || (attempts >= 4 && (firstTryAccuracy ?? 1) < 0.5)
+    }
+
+    /// Records one tap on an answer. `isFirstAnswer` is true for the first tap on a puzzle.
+    mutating func record(correct: Bool, isFirstAnswer: Bool, on date: Date) {
+        lastPractised = date
+        if isFirstAnswer { attempts += 1 }
+        if correct {
+            guard isFirstAnswer else { return }
+            firstTryCorrect += 1
+            missStreak = 0
+            firstTryStreak += 1
+            if firstTryStreak >= Self.stepUpAfter {
+                difficulty = min(difficulty + 1, Self.difficultyRange.upperBound)
+                firstTryStreak = 0
+            }
+        } else {
+            wrongAnswers += 1
+            firstTryStreak = 0
+            missStreak += 1
+            if missStreak >= Self.stepDownAfter {
+                difficulty = max(difficulty - 1, Self.difficultyRange.lowerBound)
+                missStreak = 0
+            }
+        }
     }
 }
 
@@ -108,6 +179,21 @@ final class CatGameStore {
         progress.journaledCatIDs.insert(cat.id)
         save()
         return lockedBefore.filter(isUnlocked)
+    }
+
+    func stats(for skill: EducationalSkill) -> SkillPracticeStats { progress.skillStats[skill.id] ?? SkillPracticeStats() }
+
+    /// The next puzzle with this cat, at the difficulty its skill has earned.
+    func nextChallenge(for cat: CatDefinition) -> MathChallenge {
+        let friendship = friendship(for: cat)
+        let skill = MathChallengeFactory.skill(for: cat, friendship: friendship)
+        return MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: stats(for: skill).difficulty)
+    }
+
+    /// Records one answer tap for a puzzle's skill and adjusts that skill's difficulty.
+    func recordAnswer(for skill: EducationalSkill, correct: Bool, isFirstAnswer: Bool, on date: Date = .now) {
+        progress.skillStats[skill.id, default: SkillPracticeStats()].record(correct: correct, isFirstAnswer: isFirstAnswer, on: date)
+        save()
     }
 
     func resetProgress() {

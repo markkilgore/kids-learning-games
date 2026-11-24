@@ -21,9 +21,9 @@ struct CatActivityView: View {
     @State private var showReward = false
     @State private var celebration = 0
 
-    init(cat: CatDefinition, friendship: Int) {
+    init(cat: CatDefinition, challenge: MathChallenge) {
         self.cat = cat
-        _challenge = State(initialValue: MathChallengeFactory.challenge(for: cat, friendship: friendship))
+        _challenge = State(initialValue: challenge)
     }
 
     var body: some View {
@@ -146,6 +146,7 @@ struct CatActivityView: View {
 
     private func choose(_ choice: Int) {
         guard !correct else { return }
+        game.recordAnswer(for: challenge.skill, correct: choice == challenge.answer, isFirstAnswer: wrongChoices.isEmpty)
         guard choice == challenge.answer else {
             feedback.play(.wrong)
             withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { _ = wrongChoices.insert(choice) }
@@ -184,7 +185,7 @@ struct CatActivityView: View {
     private func nextPuzzle() {
         narration.stop()
         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-            challenge = MathChallengeFactory.challenge(for: cat, friendship: game.friendship(for: cat))
+            challenge = game.nextChallenge(for: cat)
             wrongChoices = []
             correct = false
             counted = 0

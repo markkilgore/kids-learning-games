@@ -77,7 +77,11 @@ function parseCats(swift) {
 
 const skills = ['counting', 'addition', 'subtraction', 'odd-even', 'skip-5', 'skip-10'];
 
-/** JavaScript port of `MathChallengeFactory.challenge(for:friendship:)`; the Cat tests fail if the two drift. */
+/**
+ * JavaScript port of `MathChallengeFactory.challenge(for:friendship:)`; the Cat tests fail if the two drift.
+ * Adaptive difficulty in Swift only swaps in the prompt for friendship + 6 or + 12 once the last story
+ * page shows, which this period-18 loop already covers, so it adds no new lines here.
+ */
 function challengePrompt(cat, catIndex, friendship) {
   const skill = skills[(friendship + catIndex) % skills.length];
   const seed = Math.max(1, (friendship + [...cat.name].length) % 9 + 1);
