@@ -160,10 +160,9 @@ private struct SharkMapNode: View {
 private struct OceanMapArt: View {
     var body: some View {
         if let image = UIImage(named: "ocean-map") {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            Color.clear
+                .overlay { Image(uiImage: image).resizable().scaledToFill() }
+                .allowsHitTesting(false)
                 .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous))
                 .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous).strokeBorder(.white.opacity(0.25), lineWidth: 2))
                 .accessibilityHidden(true)

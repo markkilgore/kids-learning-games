@@ -94,9 +94,10 @@ private struct CatBackdrop: View {
                 endPoint: .bottomTrailing
             )
             if let image = UIImage(named: isGarden ? "backdrop-garden" : "backdrop-house") {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
+                // Drawn as an overlay so the picture's own size never stretches the screen layout.
+                Color.clear
+                    .overlay { Image(uiImage: image).resizable().scaledToFill() }
+                    .clipped()
                     .overlay(.white.opacity(0.35))
             } else if showsDecorations {
                 // Decorations sit along the bottom edge, clear of the header controls.
@@ -114,6 +115,7 @@ private struct CatBackdrop: View {
         }
         .ignoresSafeArea()
         .animation(.easeInOut(duration: 0.5), value: locationID)
+        .allowsHitTesting(false)
         .accessibilityHidden(true)
     }
 }

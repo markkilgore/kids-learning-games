@@ -18,3 +18,13 @@ people; no existing characters from books, films or games.
 
 After adding files, run `xcodegen generate --spec project.yml` and the tour tests in the README to see
 them in place.
+
+## How the current art was made
+
+The images were generated with the Grok CLI in its `auto` permission mode, which headless runs need
+before the image tool will run:
+
+    grok --permission-mode auto -p "Read tools/art-brief.md and tools/art-prompts.json. Generate ..."
+
+Cat portraits are stored at 512 px. The scenes are stored at the size the generator produced
+(about 1152 px wide), which is smaller than the `size` listed in the prompts file.
