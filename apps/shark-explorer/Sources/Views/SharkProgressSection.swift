@@ -1,7 +1,7 @@
 import LearningUI
 import SwiftUI
 
-/// The parent's view of Henry's progress: sharks completed, topics explored, Ocean Words and quiz accuracy.
+/// The parent's view of Henry's progress: sharks completed, stars, topics explored, Ocean Words, and mission and quiz accuracy.
 /// Adult-facing text only; nothing here is narrated.
 struct SharkProgressSection: View {
     @Environment(GameStore.self) private var game
@@ -14,6 +14,8 @@ struct SharkProgressSection: View {
         VStack(alignment: .leading, spacing: 12) {
             Label("Progress", systemImage: "chart.bar.fill").font(.kidHeadline)
             Text("\(game.completedCount) of \(catalog.sharks.count) sharks completed • \(game.collectedWords.count) of \(catalog.vocabulary.count) Ocean Words collected • Quiz: \(Self.accuracy(firstTry: quiz.firstTry, retried: quiz.retried))")
+            let numbers = game.roundTally(for: .math), words = game.roundTally(for: .words)
+            Text("Mission rounds right first try • Numbers: \(Self.accuracy(firstTry: numbers.firstTry, retried: numbers.retried)) • Reading words: \(Self.accuracy(firstTry: words.firstTry, retried: words.retried))")
             Grid(alignment: .leading, horizontalSpacing: 28, verticalSpacing: 10) {
                 GridRow {
                     Text("Shark")
@@ -43,7 +45,7 @@ struct SharkProgressSection: View {
                     }
                 }
             }
-            Text("Quiz counts start from this version of the app; questions answered earlier are not included.")
+            Text("Mission rounds are counting, comparing and one more or less to ten, and reading words from each shark’s sound-it-out sentences. A second and third star need nearly every round right first time.")
                 .font(.kidLabel)
                 .foregroundStyle(theme.mutedInk)
         }
@@ -56,7 +58,7 @@ struct SharkProgressSection: View {
     }
 
     private func status(of shark: SharkDefinition) -> String {
-        if game.completedSharks.contains(shark.id) { return "Completed" }
+        if game.completedSharks.contains(shark.id) { return "Completed, \(game.stars(for: shark)) of \(MissionChallenges.maxLevel) stars" }
         return game.isUnlocked(shark) ? "Unlocked" : "Locked"
     }
 

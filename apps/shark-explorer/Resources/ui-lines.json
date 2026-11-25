@@ -4,5 +4,9 @@
   "pageEarned": "You earned a new page for your Shark Passport!",
   "traitUnlocked": "You unlocked a new trait card!",
   "topicDone": "Nice exploring!",
-  "leave": "Do you want to stop this mission?"
+  "leave": "Do you want to stop this mission?",
+  "tryAgain": "Not that one. Try again!",
+  "starEarned": "You earned a new star!",
+  "starNextTime": "Good work! Get them right the first time to earn the next star.",
+  "allStars": "You did it! This shark has all three stars."
 }

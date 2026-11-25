@@ -83,6 +83,40 @@ final class SharkTourUITests: XCTestCase {
         snap("19-settings-progress")
     }
 
+    /// Plays every shark's mission to the end, so a mission kind that cannot be finished is caught.
+    func testEveryMissionCanBePlayedToTheEnd() {
+        continueAfterFailure = true
+        app.launchArguments += ["-unlockAllSharks"]
+        app.launch()
+        if !app.buttons["shark-whale"].waitForExistence(timeout: 5) { tap("kid-back") }
+        let sharks = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher", "tiger", "epaulette", "goblin", "greenland",
+                      "mako", "basking", "zebra", "blacktip-reef", "lemon", "bull", "sawshark", "cookiecutter", "angel", "port-jackson"]
+        let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
+        let questions = app.buttons["start-questions"]
+
+        for shark in sharks {
+            tap("shark-\(shark)")
+            tap("play-mission")
+            let start = app.buttons["Start!"]
+            XCTAssertTrue(start.waitForExistence(timeout: 15), "\(shark): mission intro never offered Start")
+            tapWhenReady(start)
+            snap("mission-\(shark)")
+            for attempt in 0..<40 where !questions.exists {
+                if target.waitForExistence(timeout: 3) { target.tap() }
+                // The second round is a word to read.
+                if attempt == 0 { sleep(1); snap("mission-\(shark)-words") }
+            }
+            XCTAssertTrue(questions.waitForExistence(timeout: 5), "\(shark): mission never completed")
+            questions.tap()
+            XCTAssertTrue(app.buttons["answer-correct"].waitForExistence(timeout: 8), "\(shark): questions never appeared")
+            // Leave without finishing, back to the map for the next shark.
+            tap("kid-back")
+            tap("confirm-stop")
+            tap("kid-back")
+            XCTAssertTrue(app.buttons["shark-whale"].waitForExistence(timeout: 8), "\(shark): did not return to the map")
+        }
+    }
+
     private func tap(_ identifier: String) {
         let button = app.buttons[identifier].firstMatch
         XCTAssertTrue(button.waitForExistence(timeout: 8), identifier)

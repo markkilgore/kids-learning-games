@@ -3,11 +3,31 @@ import SwiftUI
 import LearningUI
 import Narration
 
-/// One full-screen journey: hear the mission, play it, answer the picture questions, collect the reward.
+/// Up to three stars for a shark's mission; unearned ones are shown faint.
+struct MissionStars: View {
+    let count: Int
+    var size: CGFloat = 20
+
+    var body: some View {
+        HStack(spacing: size * 0.15) {
+            ForEach(1...MissionChallenges.maxLevel, id: \.self) { star in
+                Image(systemName: star <= count ? "star.fill" : "star")
+                    .font(.system(size: size, weight: .bold))
+                    .foregroundStyle(star <= count ? .yellow : .white.opacity(0.5))
+            }
+        }
+        .accessibilityElement()
+        .accessibilityLabel("\(count) of \(MissionChallenges.maxLevel) stars")
+    }
+}
+
+/// One full-screen journey: hear the mission, play its number and word rounds, answer the picture questions, collect the reward.
 struct MissionFlowView: View {
     enum Phase: Equatable { case intro, play, complete, questions, reward }
 
     let shark: SharkDefinition
+    /// 1–3: harder numbers and closer-looking words at each level.
+    let level: Int
     let onClose: () -> Void
     @Environment(GameStore.self) private var game
     @Environment(NarrationCoordinator.self) private var narration
@@ -20,11 +40,17 @@ struct MissionFlowView: View {
     @State private var reward: MissionReward?
     @State private var celebration = 0
     @State private var scene: MissionScene
+    @State private var firstTryRounds = 0
+    @State private var missedThisRound = false
+    private let rounds: [MissionChallenge]
 
-    init(shark: SharkDefinition, onClose: @escaping () -> Void) {
+    init(shark: SharkDefinition, level: Int, onClose: @escaping () -> Void) {
         self.shark = shark
+        self.level = level
         self.onClose = onClose
-        _scene = State(initialValue: MissionScene(mission: shark.mission, size: CGSize(width: 1100, height: 620)))
+        let rounds = MissionChallenges.rounds(for: shark, level: level, sharks: ContentStore.shared.catalog.sharks, reading: .shared)
+        self.rounds = rounds
+        _scene = State(initialValue: MissionScene(mission: shark.mission, rounds: rounds, size: CGSize(width: 1100, height: 620)))
     }
 
     var body: some View {
@@ -34,10 +60,11 @@ struct MissionFlowView: View {
                 KidTopBar(title, back: phase == .reward ? nil : KidBackButton("Stop", systemImage: "xmark") { leave() }) {
                     if phase == .play || phase == .intro {
                         HStack(spacing: 12) {
-                            Text("\(progress) of \(shark.mission.targetCount)")
+                            MissionStars(count: level, size: 22)
+                            Text("\(progress) of \(rounds.count)")
                                 .font(.kidTitle)
                                 .scaleEffect(counterPop ? 1.3 : 1)
-                            ProgressView(value: Double(progress), total: Double(shark.mission.targetCount))
+                            ProgressView(value: Double(progress), total: Double(rounds.count))
                                 .tint(.yellow)
                                 .frame(width: 220)
                                 .scaleEffect(y: 2.6)
@@ -69,7 +96,8 @@ struct MissionFlowView: View {
         .animation(.spring(response: 0.45, dampingFraction: 0.85), value: phase)
         .environment(\.kidTheme, .shark)
         .onAppear {
-            scene.onProgress = { value in Task { @MainActor in hit(value) } }
+            scene.onCorrect = { value in Task { @MainActor in hit(value) } }
+            scene.onWrong = { Task { @MainActor in wrong() } }
             scene.onMiss = { Task { @MainActor in feedback.play(.tap) } }
         }
     }
@@ -99,13 +127,30 @@ struct MissionFlowView: View {
             .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.large, style: .continuous).strokeBorder(.white.opacity(0.2), lineWidth: 2))
             .overlay(alignment: .top) {
-                Text(missionPrompt)
-                    .font(.kidHeadline)
-                    .padding(.horizontal, 24).padding(.vertical, 12)
-                    .background(.black.opacity(0.5), in: Capsule())
+                if let round = currentRound {
+                    // Tapping the question says it again.
+                    Button { narration.play(round.spoken) } label: {
+                        Label(round.shown, systemImage: "speaker.wave.2.fill")
+                            .font(.kidTitle)
+                            .padding(.horizontal, 26)
+                            .frame(minHeight: KidTheme.touchTarget)
+                            .background(.black.opacity(0.55), in: Capsule())
+                    }
+                    .buttonStyle(PressableStyle())
+                    .accessibilityIdentifier("mission-prompt")
                     .padding()
+                    .id(progress)
+                    .transition(.opacity)
+                }
+            }
+            .task {
+                // The intro's own narration is cleared as it leaves; start the first question after that.
+                try? await Task.sleep(for: .milliseconds(900))
+                if phase == .play, progress == 0, let round = currentRound { narration.play(round.spoken) }
             }
     }
+
+    private var currentRound: MissionChallenge? { rounds.indices.contains(progress) ? rounds[progress] : nil }
 
     private var complete: some View {
         VStack(spacing: 22) {
@@ -148,12 +193,28 @@ struct MissionFlowView: View {
         .transition(.opacity)
     }
 
+    private func wrong() {
+        missedThisRound = true
+        feedback.play(.wrong)
+        guard let round = currentRound else { return }
+        narration.playSequence([SharkLine.tryAgain.text, round.spoken], gap: 0.3)
+    }
+
     private func hit(_ value: Int) {
-        progress = value
+        if let round = currentRound {
+            game.recordRound(round.area, firstTry: !missedThisRound)
+            if !missedThisRound { firstTryRounds += 1 }
+        }
+        missedThisRound = false
+        withAnimation { progress = value }
         feedback.play(.pop)
         withAnimation(.spring(response: 0.2, dampingFraction: 0.4)) { counterPop = true }
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7).delay(0.15)) { counterPop = false }
-        guard value >= shark.mission.targetCount else { return }
+        guard value >= rounds.count else {
+            if let next = currentRound { narration.play(next.spoken, after: 0.8) }
+            return
+        }
+        narration.stop()
         Task { @MainActor in
             try? await Task.sleep(for: .milliseconds(450))
             phase = .complete
@@ -173,12 +234,15 @@ struct MissionFlowView: View {
     }
 
     private func finishQuestions() {
-        reward = game.completeMission(for: shark)
+        let earned = MissionChallenges.earnsStar(level: level, firstTry: firstTryRounds, rounds: rounds.count)
+        let result = game.completeMission(for: shark, starLevel: earned ? level : 1)
+        reward = result
         phase = .reward
         feedback.play(.celebrate)
         celebration += 1
+        let line: SharkLine = result.isNewPage ? .pageEarned : result.isNewStar ? .starEarned : result.stars >= MissionChallenges.maxLevel ? .allStars : .starNextTime
         // The fanfare is two seconds long; the voice waits for most of it.
-        narration.play(SharkLine.pageEarned.text, after: 1.5)
+        narration.play(line.text, after: 1.5)
     }
 
     private func backToEncounter() {
@@ -196,31 +260,6 @@ struct MissionFlowView: View {
         narration.stop()
         onClose()
         game.showMap()
-    }
-
-    private var missionPrompt: String {
-        switch shark.mission.kind {
-        case "ambushApproach": "Spot the dark fish near the bright surface"
-        case "filterFeed": "Tap the plankton sparkle"
-        case "electrosense": "Tap the electric clue"
-        case "suctionForage": "Tap the crab"
-        case "camouflageFind": "Tap the hidden shell"
-        case "tailStrike": "Tap the schooling fish"
-        case "scentTrack": "Tap the scent trail"
-        case "tidalWalk": "Tap the next rock"
-        case "jawStrike": "Tap the deep-sea fish"
-        case "energyTrail": "Tap the snowy scent clue"
-        case "speedChase": "Tap the speedy tuna"
-        case "snailHunt": "Tap the sea snail"
-        case "reefPatrol": "Tap the reef fish"
-        case "mangroveNursery": "Tap the mangrove root"
-        case "riverJourney": "Tap the next river wave"
-        case "sawSweep": "Tap the shrimp in the sand"
-        case "glowLure": "Tap the green glow"
-        case "sandAmbush": "Tap the fish that swims close"
-        case "shellCrunch": "Tap the sea urchin"
-        default: "Tap the clue"
-        }
     }
 }
 
@@ -257,6 +296,13 @@ private struct MissionRewardView: View {
                         .textCase(.uppercase)
                         .foregroundStyle(.yellow)
                     Text(shark.name).font(.kidDisplay)
+                    HStack(spacing: 12) {
+                        MissionStars(count: reward.stars, size: 34)
+                            .scaleEffect(shown ? 1 : 0.4, anchor: .leading)
+                        Text(reward.isNewStar ? "New star!" : reward.stars >= MissionChallenges.maxLevel ? "All three stars!" : "Right the first time earns the next star")
+                            .font(.kidLabel)
+                            .foregroundStyle(reward.isNewStar ? .yellow : theme.mutedInk)
+                    }
 
                     let words = catalog.vocabulary.filter { shark.vocabularyIDs.contains($0.id) }
                     HStack(spacing: 10) {

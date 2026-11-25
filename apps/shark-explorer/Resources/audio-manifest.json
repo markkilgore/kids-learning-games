@@ -12729,6 +12729,76 @@
       }
     ]
   },
+  "Good work! Get them right the first time to earn the next star.": {
+    "file": "c0e63c72170b91fa18ae53d2.mp3",
+    "words": [
+      {
+        "text": "Good",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "work!",
+        "start": 0.24,
+        "end": 0.64
+      },
+      {
+        "text": "Get",
+        "start": 0.76,
+        "end": 1.12
+      },
+      {
+        "text": "them",
+        "start": 1.152,
+        "end": 1.28
+      },
+      {
+        "text": "right",
+        "start": 1.32,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "first",
+        "start": 1.653,
+        "end": 1.92
+      },
+      {
+        "text": "time",
+        "start": 1.984,
+        "end": 2.24
+      },
+      {
+        "text": "to",
+        "start": 2.267,
+        "end": 2.32
+      },
+      {
+        "text": "earn",
+        "start": 2.368,
+        "end": 2.56
+      },
+      {
+        "text": "the",
+        "start": 2.58,
+        "end": 2.64
+      },
+      {
+        "text": "next",
+        "start": 2.688,
+        "end": 2.88
+      },
+      {
+        "text": "star.",
+        "start": 2.976,
+        "end": 3.44
+      }
+    ]
+  },
   "Great hammerheads eat fish, crabs, squid, and stingrays.": {
     "file": "7f67ee93bc0c12d962ce1ece.mp3",
     "words": [
@@ -29589,6 +29659,36 @@
       }
     ]
   },
+  "Not that one. Try again!": {
+    "file": "1fdc308debec2524b73bcf3b.mp3",
+    "words": [
+      {
+        "text": "Not",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "that",
+        "start": 0.224,
+        "end": 0.48
+      },
+      {
+        "text": "one.",
+        "start": 0.56,
+        "end": 0.88
+      },
+      {
+        "text": "Try",
+        "start": 1,
+        "end": 1.36
+      },
+      {
+        "text": "again!",
+        "start": 1.44,
+        "end": 2
+      }
+    ]
+  },
   "Nurse sharks have broad heads, sturdy bodies, and long tails.": {
     "file": "67adbe05c6455a36eb7e10ff.mp3",
     "words": [
@@ -38019,6 +38119,306 @@
       }
     ]
   },
+  "Tap the group of 1.": {
+    "file": "9447dc1093a89ce66662846b.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "group",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "1.",
+        "start": 0.8,
+        "end": 1.2
+      }
+    ]
+  },
+  "Tap the group of 10.": {
+    "file": "23b7c7ab3aac02150e834a64.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "group",
+        "start": 0.44,
+        "end": 0.64
+      },
+      {
+        "text": "of",
+        "start": 0.667,
+        "end": 0.72
+      },
+      {
+        "text": "10.",
+        "start": 0.8,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the group of 2.": {
+    "file": "4d3223050c358deb9a25d1f7.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "group",
+        "start": 0.427,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "2.",
+        "start": 0.88,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the group of 3.": {
+    "file": "f7f83e936198de582a632f4f.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "group",
+        "start": 0.44,
+        "end": 0.64
+      },
+      {
+        "text": "of",
+        "start": 0.667,
+        "end": 0.72
+      },
+      {
+        "text": "3.",
+        "start": 1.04,
+        "end": 1.36
+      }
+    ]
+  },
+  "Tap the group of 4.": {
+    "file": "027922939a3fe0fbf6e4beec.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "group",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "4.",
+        "start": 0.8,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the group of 5.": {
+    "file": "b3a04a8b00fe0c4f88b4cc32.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "group",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "5.",
+        "start": 0.96,
+        "end": 1.36
+      }
+    ]
+  },
+  "Tap the group of 6.": {
+    "file": "fedfc835ae3b8956589883b9.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "group",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "6.",
+        "start": 0.8,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the group of 7.": {
+    "file": "d8209480f6a5ce98b1c58118.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "group",
+        "start": 0.28,
+        "end": 0.48
+      },
+      {
+        "text": "of",
+        "start": 0.507,
+        "end": 0.56
+      },
+      {
+        "text": "7.",
+        "start": 0.96,
+        "end": 1.12
+      }
+    ]
+  },
+  "Tap the group of 8.": {
+    "file": "955348064a580b46e9f215f7.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "group",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.587,
+        "end": 0.64
+      },
+      {
+        "text": "8.",
+        "start": 0.88,
+        "end": 1.12
+      }
+    ]
+  },
+  "Tap the group of 9.": {
+    "file": "a0c31f7f5cb7ce48274f15f3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "group",
+        "start": 0.427,
+        "end": 0.56
+      },
+      {
+        "text": "of",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "text": "9.",
+        "start": 0.8,
+        "end": 1.28
+      }
+    ]
+  },
   "Tap the hidden clues.": {
     "file": "3754d7991a5e0894a6f4db37.mp3",
     "words": [
@@ -38041,6 +38441,2631 @@
         "text": "clues.",
         "start": 0.813,
         "end": 1.36
+      }
+    ]
+  },
+  "Tap the number 1.": {
+    "file": "fe5f157b245b6a7f85fba9f3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "number",
+        "start": 0.274,
+        "end": 0.48
+      },
+      {
+        "text": "1.",
+        "start": 0.56,
+        "end": 0.96
+      }
+    ]
+  },
+  "Tap the number 10.": {
+    "file": "143c83be626b46331229e24c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.354,
+        "end": 0.56
+      },
+      {
+        "text": "10.",
+        "start": 0.64,
+        "end": 1.2
+      }
+    ]
+  },
+  "Tap the number 2.": {
+    "file": "fe774da0338aca7f895b93f1.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.354,
+        "end": 0.56
+      },
+      {
+        "text": "2.",
+        "start": 0.72,
+        "end": 1.04
+      }
+    ]
+  },
+  "Tap the number 3.": {
+    "file": "874f8d3abc654d54343f90ad.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.354,
+        "end": 0.56
+      },
+      {
+        "text": "3.",
+        "start": 0.64,
+        "end": 1.12
+      }
+    ]
+  },
+  "Tap the number 4.": {
+    "file": "506cfb09fefe23382dea8860.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.366,
+        "end": 0.64
+      },
+      {
+        "text": "4.",
+        "start": 0.8,
+        "end": 1.2
+      }
+    ]
+  },
+  "Tap the number 5.": {
+    "file": "3e9c4c2e8f91c9e549932f30.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "number",
+        "start": 0.434,
+        "end": 0.64
+      },
+      {
+        "text": "5.",
+        "start": 0.96,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the number 6.": {
+    "file": "5126295cc6295cad5d87d2eb.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.366,
+        "end": 0.64
+      },
+      {
+        "text": "6.",
+        "start": 1.04,
+        "end": 1.28
+      }
+    ]
+  },
+  "Tap the number 7.": {
+    "file": "2661987b245c4b2814d99d31.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "number",
+        "start": 0.446,
+        "end": 0.72
+      },
+      {
+        "text": "7.",
+        "start": 0.88,
+        "end": 1.44
+      }
+    ]
+  },
+  "Tap the number 8.": {
+    "file": "ce0105fbf90ec593c2be7810.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "number",
+        "start": 0.286,
+        "end": 0.56
+      },
+      {
+        "text": "8.",
+        "start": 0.64,
+        "end": 1.04
+      }
+    ]
+  },
+  "Tap the number 9.": {
+    "file": "330ef6535b02056187821b07.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "number",
+        "start": 0.354,
+        "end": 0.56
+      },
+      {
+        "text": "9.",
+        "start": 0.72,
+        "end": 1.36
+      }
+    ]
+  },
+  "Tap the word: and.": {
+    "file": "7e10e3f7163fcee8acc77085.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 0.88
+      },
+      {
+        "text": "and.",
+        "start": 1.12,
+        "end": 2
+      }
+    ]
+  },
+  "Tap the word: as.": {
+    "file": "1a925b8830bec00cf818322f.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "as.",
+        "start": 0.96,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: at.": {
+    "file": "5af013fcde740a5175884e20.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "at.",
+        "start": 0.96,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: bam.": {
+    "file": "2a9d79264b51c1caf5abd8db.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.288,
+        "end": 0.56
+      },
+      {
+        "text": "bam.",
+        "start": 0.78,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: bat.": {
+    "file": "0ef6721389b1941c3998e05e.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "bat.",
+        "start": 0.86,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: big.": {
+    "file": "e24ce9355528e7f02cc3e676.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "big.",
+        "start": 1.06,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: bit.": {
+    "file": "43b5dde9a11ba291281f91fc.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 1.12
+      },
+      {
+        "text": "bit.",
+        "start": 1.22,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: bits.": {
+    "file": "0d07939f4a2ec2ed81729692.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "bits.",
+        "start": 0.992,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: bob.": {
+    "file": "9409110f72f1079b5e211923.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "bob.",
+        "start": 0.92,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: bud.": {
+    "file": "517b740027bf5cc501bbb5dc.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "bud.",
+        "start": 0.88,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: bug.": {
+    "file": "833dd388f6b59b0855a07138.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.288,
+        "end": 0.56
+      },
+      {
+        "text": "bug.",
+        "start": 0.76,
+        "end": 1.44
+      }
+    ]
+  },
+  "Tap the word: bus.": {
+    "file": "be733dc5ba85a2f3a7c30437.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "bus.",
+        "start": 1.04,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: but.": {
+    "file": "f902c6e34e16f391e285ca6a.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "but.",
+        "start": 0.82,
+        "end": 1.44
+      }
+    ]
+  },
+  "Tap the word: cab.": {
+    "file": "f26dd5722273189697208482.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "cab.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: can.": {
+    "file": "5e8831615961138753f481df.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "can.",
+        "start": 1.02,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: cat.": {
+    "file": "82400a476565189fc9b8205d.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "cat.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: cod.": {
+    "file": "44d772e0b3dcd90edfe273fd.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.448,
+        "end": 0.72
+      },
+      {
+        "text": "cod.",
+        "start": 0.86,
+        "end": 1.44
+      }
+    ]
+  },
+  "Tap the word: dab.": {
+    "file": "089e1994af85427d2f9fe5e2.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.12
+      },
+      {
+        "text": "dab.",
+        "start": 1.22,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: dam.": {
+    "file": "ecd6e5d0834db4bf53a0b79c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.288,
+        "end": 0.56
+      },
+      {
+        "text": "dam.",
+        "start": 0.74,
+        "end": 1.44
+      }
+    ]
+  },
+  "Tap the word: den.": {
+    "file": "fabed597b396521c6b9777aa.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.416,
+        "end": 1.24
+      },
+      {
+        "text": "den.",
+        "start": 1.35,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: did.": {
+    "file": "fc3de7270cdd3eb9c0af9784.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "did.",
+        "start": 0.88,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: dig.": {
+    "file": "53a3a702a9ce17245c5122ca.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "dig.",
+        "start": 0.96,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: digs.": {
+    "file": "d5ccaf3d383baceee35dc5c3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "digs.",
+        "start": 0.896,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: dim.": {
+    "file": "f5a0e27eb7220da7dea919f1.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "dim.",
+        "start": 0.84,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: dip.": {
+    "file": "a86dd9a76a7ca8c1f565d644.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "dip.",
+        "start": 0.82,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: dips.": {
+    "file": "b224c05b676e30726cd22e65.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.416,
+        "end": 0.88
+      },
+      {
+        "text": "dips.",
+        "start": 1.088,
+        "end": 2.08
+      }
+    ]
+  },
+  "Tap the word: dot.": {
+    "file": "4dc53576cc3822e08e21ec4f.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "dot.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: dots.": {
+    "file": "f58a618c1937c0ac4876871e.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 1.08
+      },
+      {
+        "text": "dots.",
+        "start": 1.168,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: fat.": {
+    "file": "58f2f379e817dd32f45d6366.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 1.2
+      },
+      {
+        "text": "fat.",
+        "start": 1.3,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: fed.": {
+    "file": "b612f0d8c5f3bf1eb47e37eb.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.16
+      },
+      {
+        "text": "fed.",
+        "start": 1.27,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: fin.": {
+    "file": "2f289c618a1c895934aa7206.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.12
+      },
+      {
+        "text": "fin.",
+        "start": 1.22,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: fit.": {
+    "file": "4c0e110851f063f61448598c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "fit.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: gap.": {
+    "file": "6cecfa06db0b6dd1139050eb.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "gap.",
+        "start": 0.84,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: get.": {
+    "file": "85394ee6e834f344f03d783f.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "get.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: gets.": {
+    "file": "f318ca53940298a1aeb11214.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "gets.",
+        "start": 0.976,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: got.": {
+    "file": "6d7c2ca754fd13be9572af07.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "got.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: gut.": {
+    "file": "28e7eb588f992ba92acb82d7.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 0.72
+      },
+      {
+        "text": "gut.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: has.": {
+    "file": "4f9e0d4a9bac561f91426b17.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "has.",
+        "start": 0.92,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: hid.": {
+    "file": "5fcb4aa9c1f1ac9d6be35eca.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "hid.",
+        "start": 0.86,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: him.": {
+    "file": "7a6324fb4f9709d0d1742dad.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "him.",
+        "start": 0.98,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: his.": {
+    "file": "5f9ee669247abcdbca5a55b2.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 0.88
+      },
+      {
+        "text": "his.",
+        "start": 1.1,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: hit.": {
+    "file": "9c8aea968cc9a1aba0d71256.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.08
+      },
+      {
+        "text": "hit.",
+        "start": 1.17,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: hits.": {
+    "file": "db21358258b30483000da124.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.88
+      },
+      {
+        "text": "hits.",
+        "start": 0.944,
+        "end": 1.36
+      }
+    ]
+  },
+  "Tap the word: hop.": {
+    "file": "19a1b9cf5a03ad988d3c192d.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "hop.",
+        "start": 0.8,
+        "end": 1.36
+      }
+    ]
+  },
+  "Tap the word: hot.": {
+    "file": "dd52445c05bdf930b40cc16c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "hot.",
+        "start": 1.04,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: hum.": {
+    "file": "bca07a341130ba8ca01728e3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 0.88
+      },
+      {
+        "text": "hum.",
+        "start": 1.08,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: in.": {
+    "file": "ba2440e138cd34933161e7a5.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.288,
+        "end": 0.72
+      },
+      {
+        "text": "in.",
+        "start": 0.8,
+        "end": 1.12
+      }
+    ]
+  },
+  "Tap the word: is.": {
+    "file": "511530ee5a1c29332e082164.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "is.",
+        "start": 1.067,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: it.": {
+    "file": "eeb211d522253f8713ddd2cb.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 0.88
+      },
+      {
+        "text": "it.",
+        "start": 1.093,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: kid.": {
+    "file": "cd53657cc7926def4ae08346.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.24
+      },
+      {
+        "text": "kid.",
+        "start": 1.37,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: mad.": {
+    "file": "b68cedb714f4b12f023669df.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.16
+      },
+      {
+        "text": "mad.",
+        "start": 1.27,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: mat.": {
+    "file": "c5af3c942aa3a17ea1351cfd.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 0.72
+      },
+      {
+        "text": "mat.",
+        "start": 0.92,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: mob.": {
+    "file": "cd48448e7f599497e1d51230.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.416,
+        "end": 1.36
+      },
+      {
+        "text": "mob.",
+        "start": 1.5,
+        "end": 2
+      }
+    ]
+  },
+  "Tap the word: mom.": {
+    "file": "5d9610ecc5d44e2c88c50f8c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 0.72
+      },
+      {
+        "text": "mom.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: mud.": {
+    "file": "67a6f81fde02c227c407e706.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 1.28
+      },
+      {
+        "text": "mud.",
+        "start": 1.4,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: nab.": {
+    "file": "75e5cc2476b8f0928b30355b.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 1.16
+      },
+      {
+        "text": "nab.",
+        "start": 1.29,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: naps.": {
+    "file": "d662dbee0211a48d3ef7bb6e.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.32,
+        "end": 0.72
+      },
+      {
+        "text": "naps.",
+        "start": 0.96,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: net.": {
+    "file": "070f7c3b01865aff4c72ba17.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "net.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: nip.": {
+    "file": "92b323ebad453f4511cd19be.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.08
+      },
+      {
+        "text": "nip.",
+        "start": 1.17,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: not.": {
+    "file": "b39ec9da9d47c3b581e4b7d3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "not.",
+        "start": 1.02,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: of.": {
+    "file": "b6c12ae2b0b559bc987810d1.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "of.",
+        "start": 1.067,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: on.": {
+    "file": "2e6feb07d07169c304a3a84e.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 0.88
+      },
+      {
+        "text": "on.",
+        "start": 1.173,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: pan.": {
+    "file": "d0e61598753955348990d951.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "pan.",
+        "start": 0.96,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: pep.": {
+    "file": "345136147c30fb64db85485a.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "pep.",
+        "start": 0.88,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: pit.": {
+    "file": "34c9885b075a9eddaaec8f06.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.16
+      },
+      {
+        "text": "pit.",
+        "start": 1.27,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: pop.": {
+    "file": "89f5b4db8a61a27c6f3b589b.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "pop.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: pops.": {
+    "file": "f409fa29975a4bb986978556.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "pops.",
+        "start": 0.912,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: pup.": {
+    "file": "8690e300720acd6a25500cec.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "pup.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: ran.": {
+    "file": "6c08073bfb38c6f0d383ae03.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "ran.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: rap.": {
+    "file": "1acc628d15c3349bb04bad26.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "rap.",
+        "start": 1.02,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: rib.": {
+    "file": "2cdff9c1be87c9d804fa6dec.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.08
+      },
+      {
+        "text": "rib.",
+        "start": 1.17,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: rim.": {
+    "file": "bcd6926d497c4d7a261ae155.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "rim.",
+        "start": 0.96,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: rod.": {
+    "file": "d73bf350d9a4824ab14abfbd.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.28
+      },
+      {
+        "text": "rod.",
+        "start": 1.42,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: rug.": {
+    "file": "a7a11ecf8a66ebebde1024a2.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "rug.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: run.": {
+    "file": "e39e337b6cb10209a0ed4f84.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "run.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: runs.": {
+    "file": "1c1131492489c82db428c360.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 1.4
+      },
+      {
+        "text": "runs.",
+        "start": 1.52,
+        "end": 2.16
+      }
+    ]
+  },
+  "Tap the word: sat.": {
+    "file": "68790a254418696c033b3230.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "sat.",
+        "start": 1.04,
+        "end": 1.92
+      }
+    ]
+  },
+  "Tap the word: set.": {
+    "file": "f88e5def870e4cfce3ae9b43.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "set.",
+        "start": 0.98,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: sip.": {
+    "file": "23b48292a0f83619a8042f5b.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "sip.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: sips.": {
+    "file": "45fcca73d4e239812be99391.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.08
+      },
+      {
+        "text": "sips.",
+        "start": 1.26,
+        "end": 2
+      }
+    ]
+  },
+  "Tap the word: sit.": {
+    "file": "3f8f13675954aa940e823a25.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "sit.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: sits.": {
+    "file": "74e55aac28b0c91da3213f8f.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "sits.",
+        "start": 0.88,
+        "end": 1.6
+      }
+    ]
+  },
+  "Tap the word: sun.": {
+    "file": "57b81f067e15f09b34689233.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "sun.",
+        "start": 0.9,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: tan.": {
+    "file": "7f2e5ff832c11ce8eec7103b.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "tan.",
+        "start": 0.94,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: tap.": {
+    "file": "d4be10712f41c6d83b7e315c.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "tap.",
+        "start": 1.02,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: the.": {
+    "file": "0131d2dee9aec1ae4f291ccb.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "the.",
+        "start": 1,
+        "end": 1.76
+      }
+    ]
+  },
+  "Tap the word: tin.": {
+    "file": "d26c906205dc1c0889988980.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.464,
+        "end": 0.8
+      },
+      {
+        "text": "tin.",
+        "start": 1,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: tip.": {
+    "file": "f0fce76b88c4960572172ef3.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "tip.",
+        "start": 0.84,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: tips.": {
+    "file": "22410f9b6cccb3aad2d188c0.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "tips.",
+        "start": 0.8,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: to.": {
+    "file": "3c6b859f42409d6ef2cf7c66.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "word:",
+        "start": 0.304,
+        "end": 0.64
+      },
+      {
+        "text": "to.",
+        "start": 0.907,
+        "end": 1.52
+      }
+    ]
+  },
+  "Tap the word: top.": {
+    "file": "ab090435205faf25436231d5.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.16
+      },
+      {
+        "text": "top.",
+        "start": 1.27,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: tub.": {
+    "file": "cf01c8371639714d01a5c546.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "tub.",
+        "start": 1.02,
+        "end": 1.84
+      }
+    ]
+  },
+  "Tap the word: tug.": {
+    "file": "2a7a684b1645053c4181487d.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.4,
+        "end": 1.12
+      },
+      {
+        "text": "tug.",
+        "start": 1.22,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: tugs.": {
+    "file": "8018888e743c0db8f60078a4.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word:",
+        "start": 0.384,
+        "end": 0.72
+      },
+      {
+        "text": "tugs.",
+        "start": 0.92,
+        "end": 1.68
+      }
+    ]
+  },
+  "Tap the word: up.": {
+    "file": "aa6068694b6d71c01f622f57.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "word:",
+        "start": 0.48,
+        "end": 1.2
+      },
+      {
+        "text": "up.",
+        "start": 1.333,
+        "end": 1.68
       }
     ]
   },
@@ -54109,6 +57134,636 @@
       }
     ]
   },
+  "What is one less than 10?": {
+    "file": "1e4656be3f2336f177f9f047.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "less",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "than",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "10?",
+        "start": 1.2,
+        "end": 1.68
+      }
+    ]
+  },
+  "What is one less than 2?": {
+    "file": "2430ab4a75551cba223b400c.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "less",
+        "start": 0.544,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "2?",
+        "start": 1.28,
+        "end": 1.52
+      }
+    ]
+  },
+  "What is one less than 3?": {
+    "file": "ef8746a86524d17da5835f0a.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "less",
+        "start": 0.544,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "3?",
+        "start": 1.12,
+        "end": 1.6
+      }
+    ]
+  },
+  "What is one less than 4?": {
+    "file": "237615d98c0f4dfef73a5d7f.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "less",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "4?",
+        "start": 1.28,
+        "end": 1.6
+      }
+    ]
+  },
+  "What is one less than 5?": {
+    "file": "d70fb0b2abbaf80ac7c83630.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "less",
+        "start": 0.544,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "5?",
+        "start": 1.44,
+        "end": 1.68
+      }
+    ]
+  },
+  "What is one less than 6?": {
+    "file": "eb6a1e4fa51c3bb315f55843.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "less",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "than",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "6?",
+        "start": 1.6,
+        "end": 1.76
+      }
+    ]
+  },
+  "What is one less than 7?": {
+    "file": "5b5edd2c59b7cef3bd9831c9.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "one",
+        "start": 0.3,
+        "end": 0.48
+      },
+      {
+        "text": "less",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "7?",
+        "start": 1.28,
+        "end": 1.52
+      }
+    ]
+  },
+  "What is one less than 8?": {
+    "file": "3285fa7b006b546408da1fc5.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "less",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "8?",
+        "start": 1.2,
+        "end": 1.52
+      }
+    ]
+  },
+  "What is one less than 9?": {
+    "file": "8da7d736aa3dba624ab706b9.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "less",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "9?",
+        "start": 1.12,
+        "end": 1.68
+      }
+    ]
+  },
+  "What is one more than 1?": {
+    "file": "21a4a61970748958a1990db8.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "more",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "than",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "1?",
+        "start": 1.04,
+        "end": 1.52
+      }
+    ]
+  },
+  "What is one more than 2?": {
+    "file": "79d7afaabfcd1878f4316c0f.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.24,
+        "end": 0.4
+      },
+      {
+        "text": "one",
+        "start": 0.48,
+        "end": 0.72
+      },
+      {
+        "text": "more",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "than",
+        "start": 0.992,
+        "end": 1.12
+      },
+      {
+        "text": "2?",
+        "start": 1.36,
+        "end": 1.76
+      }
+    ]
+  },
+  "What is one more than 3?": {
+    "file": "c2e1b12889138618b50895cd.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "more",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "3?",
+        "start": 1.28,
+        "end": 1.6
+      }
+    ]
+  },
+  "What is one more than 4?": {
+    "file": "fccbdba577f5ae0b11fb4f13.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "more",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "4?",
+        "start": 1.2,
+        "end": 1.52
+      }
+    ]
+  },
+  "What is one more than 5?": {
+    "file": "9d9ac41790f3f779b7416c2e.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.24,
+        "end": 0.4
+      },
+      {
+        "text": "one",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "more",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "than",
+        "start": 0.944,
+        "end": 1.2
+      },
+      {
+        "text": "5?",
+        "start": 1.68,
+        "end": 1.84
+      }
+    ]
+  },
+  "What is one more than 6?": {
+    "file": "2d39becbd1053e591e1a28bf.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "more",
+        "start": 0.592,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "6?",
+        "start": 1.44,
+        "end": 1.68
+      }
+    ]
+  },
+  "What is one more than 7?": {
+    "file": "0cb5ee09d31a009a4e6cc33b.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.16,
+        "end": 0.32
+      },
+      {
+        "text": "one",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "more",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "7?",
+        "start": 1.04,
+        "end": 1.44
+      }
+    ]
+  },
+  "What is one more than 8?": {
+    "file": "d810ab5d239c3abd5725227b.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "is",
+        "start": 0.133,
+        "end": 0.24
+      },
+      {
+        "text": "one",
+        "start": 0.3,
+        "end": 0.48
+      },
+      {
+        "text": "more",
+        "start": 0.528,
+        "end": 0.72
+      },
+      {
+        "text": "than",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "8?",
+        "start": 1.2,
+        "end": 1.44
+      }
+    ]
+  },
+  "What is one more than 9?": {
+    "file": "8ee22b34841c30690eb5e550.mp3",
+    "words": [
+      {
+        "text": "What",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "is",
+        "start": 0.24,
+        "end": 0.4
+      },
+      {
+        "text": "one",
+        "start": 0.44,
+        "end": 0.56
+      },
+      {
+        "text": "more",
+        "start": 0.624,
+        "end": 0.88
+      },
+      {
+        "text": "than",
+        "start": 0.912,
+        "end": 1.04
+      },
+      {
+        "text": "9?",
+        "start": 1.52,
+        "end": 1.68
+      }
+    ]
+  },
   "What is special about a cookiecutter shark’s belly?": {
     "file": "238123846ade53337a5f40ec.mp3",
     "words": [
@@ -56331,6 +59986,56 @@
         "text": "school?",
         "start": 1.349,
         "end": 1.84
+      }
+    ]
+  },
+  "Which group has fewer?": {
+    "file": "f2fba7f60bc928988aaa4cba.mp3",
+    "words": [
+      {
+        "text": "Which",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "group",
+        "start": 0.213,
+        "end": 0.48
+      },
+      {
+        "text": "has",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "text": "fewer?",
+        "start": 0.72,
+        "end": 1.28
+      }
+    ]
+  },
+  "Which group has more?": {
+    "file": "4b54db597fe9db271890aa90.mp3",
+    "words": [
+      {
+        "text": "Which",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "group",
+        "start": 0.2,
+        "end": 0.4
+      },
+      {
+        "text": "has",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "more?",
+        "start": 0.72,
+        "end": 1.28
       }
     ]
   },
@@ -59174,6 +62879,56 @@
       }
     ]
   },
+  "You did it! This shark has all three stars.": {
+    "file": "7ba9f928fc15dfa49395673a.mp3",
+    "words": [
+      {
+        "text": "You",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "did",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "it!",
+        "start": 0.48,
+        "end": 0.72
+      },
+      {
+        "text": "This",
+        "start": 0.848,
+        "end": 1.36
+      },
+      {
+        "text": "shark",
+        "start": 1.413,
+        "end": 1.68
+      },
+      {
+        "text": "has",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "all",
+        "start": 1.9,
+        "end": 2.08
+      },
+      {
+        "text": "three",
+        "start": 2.12,
+        "end": 2.32
+      },
+      {
+        "text": "stars.",
+        "start": 2.427,
+        "end": 3.12
+      }
+    ]
+  },
   "You earned a new page for your Shark Passport!": {
     "file": "2c1e110cc8555c11d19e9b49.mp3",
     "words": [
@@ -59221,6 +62976,36 @@
         "text": "Passport!",
         "start": 1.84,
         "end": 2.56
+      }
+    ]
+  },
+  "You earned a new star!": {
+    "file": "4ecafeb02a48414f57bf2437.mp3",
+    "words": [
+      {
+        "text": "You",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "earned",
+        "start": 0.114,
+        "end": 0.32
+      },
+      {
+        "text": "a",
+        "start": 0.36,
+        "end": 0.4
+      },
+      {
+        "text": "new",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "star!",
+        "start": 0.768,
+        "end": 1.44
       }
     ]
   },

@@ -56,6 +56,7 @@ struct EncounterView: View {
 
                         Button { showMission = true } label: {
                             BigFeatureLabel(symbol: shark.mission.symbol, title: "Play", subtitle: shark.mission.title, color: .orange)
+                                .overlay(alignment: .topTrailing) { MissionStars(count: game.stars(for: shark), size: 18).padding(12) }
                         }
                         .accessibilityIdentifier("play-mission")
                     }
@@ -109,7 +110,7 @@ struct EncounterView: View {
             }
         }
         .fullScreenCover(isPresented: $showMission) {
-            MissionFlowView(shark: shark) { showMission = false }
+            MissionFlowView(shark: shark, level: game.missionLevel(for: shark)) { showMission = false }
         }
         .onChange(of: sheet == nil && !showMission) { _, visible in habitat.isPaused = !visible }
     }

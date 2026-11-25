@@ -81,13 +81,13 @@ struct QuestionRoundView: View {
     }
 
     /// Choices that show the same thing share one picture.
-    private static let sharedArt = [
+    static let sharedArt = [
         "trees": "tree", "forest": "tree", "climbs": "tree",
         "sky": "cloud", "night": "moon", "lunch": "bell",
         "fly": "wing", "flies": "wing"
     ]
 
-    private static func artName(for choice: AnswerChoice) -> String {
+    static func artName(for choice: AnswerChoice) -> String {
         "choice-\(sharedArt[choice.id] ?? choice.id)"
     }
 

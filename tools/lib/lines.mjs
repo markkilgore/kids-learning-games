@@ -27,6 +27,47 @@ async function uiLines(base) {
   return Object.values(await readJSON('ui-lines.json', base));
 }
 
+/**
+ * JavaScript port of `MissionChallenges.allSpokenLines` and `SharkReading.mark`; the Shark tests fail if they drift.
+ * Mission rounds ask for counts and numbers to ten and for each word Henry can read in the sound-it-out sentences.
+ */
+async function challengeLines(catalog) {
+  const reading = await readJSON('shark-reading.json', sharkResources);
+  const vowels = new Set('aeiou');
+  const isShortVowelWord = (word) => {
+    if (word.length !== 2 && word.length !== 3) return false;
+    const ending = word.at(-1), vowel = word.at(-2);
+    if (!vowels.has(vowel) || vowels.has(ending) || ending === 'r') return false;
+    return word.length === 2 || !vowels.has(word[0]);
+  };
+  const readable = (word) => {
+    if (reading.heartWords.includes(word)) return true;
+    if (reading.irregular.includes(word) || ![...word].every((letter) => reading.letters.includes(letter))) return false;
+    const bases = word.length > 3 && word.endsWith('s') ? [word, word.slice(0, -1)] : [word];
+    return bases.some(isShortVowelWord);
+  };
+  const words = new Set();
+  const visit = (value, key = '') => {
+    if (Array.isArray(value) && key === 'decodable') {
+      for (const sentence of value) for (const word of sentence.toLowerCase().match(/[a-z]+/g) ?? []) words.add(word);
+    } else if (value && typeof value === 'object') {
+      for (const [childKey, child] of Object.entries(value)) visit(child, childKey);
+    }
+  };
+  for (const shark of catalog.sharks) visit({ discover: shark.discover, topics: shark.topics });
+  visit(catalog.expansions);
+  const range = (from, to) => Array.from({ length: to - from + 1 }, (_, index) => from + index);
+  return [
+    ...range(1, 10).map((n) => `Tap the group of ${n}.`),
+    ...range(1, 10).map((n) => `Tap the number ${n}.`),
+    'Which group has more?',
+    'Which group has fewer?',
+    ...range(1, 9).map((n) => `What is one more than ${n}?`),
+    ...range(2, 10).map((n) => `What is one less than ${n}?`),
+    ...[...words].filter((word) => word.length >= 2 && readable(word)).map((word) => `Tap the word: ${word}.`)
+  ];
+}
+
 export async function sharkLines() {
   const catalog = await readJSON('catalog.json', sharkResources);
   const lines = [];
@@ -42,7 +83,7 @@ export async function sharkLines() {
   };
   visit(catalog);
   for (const word of catalog.vocabulary) lines.push(word.word);
-  return [...lines, ...await weeklyLines('shark-weeks.json', sharkResources), ...await uiLines(sharkResources)];
+  return [...lines, ...await challengeLines(catalog), ...await weeklyLines('shark-weeks.json', sharkResources), ...await uiLines(sharkResources)];
 }
 
 export async function catLines() {

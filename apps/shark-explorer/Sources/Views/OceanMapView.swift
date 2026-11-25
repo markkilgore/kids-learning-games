@@ -32,6 +32,7 @@ struct OceanMapView: View {
                             shark: shark,
                             unlocked: game.isUnlocked(shark),
                             completed: game.completedSharks.contains(shark.id),
+                            stars: game.stars(for: shark),
                             fresh: game.freshlyUnlockedSharkIDs.contains(shark.id)
                         ) {
                             if game.isUnlocked(shark) { game.open(shark) } else { showLockedHint(for: shark) }
@@ -91,6 +92,7 @@ private struct SharkMapNode: View {
     let shark: SharkDefinition
     let unlocked: Bool
     let completed: Bool
+    let stars: Int
     let fresh: Bool
     let action: () -> Void
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -127,13 +129,13 @@ private struct SharkMapNode: View {
                             .foregroundStyle(.white.opacity(0.8))
                     }
                 }
-                .overlay(alignment: .topTrailing) {
+                .overlay(alignment: .top) {
                     if completed {
-                        Image(systemName: "star.circle.fill")
-                            .font(.system(size: 28))
-                            .symbolRenderingMode(.palette)
-                            .foregroundStyle(.white, .orange)
-                            .offset(x: 6, y: -6)
+                        MissionStars(count: stars, size: 12)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 3)
+                            .background(.black.opacity(0.6), in: Capsule())
+                            .offset(y: -10)
                             .accessibilityHidden(true)
                     }
                 }
@@ -154,7 +156,7 @@ private struct SharkMapNode: View {
             withAnimation(.easeInOut(duration: 2.0 + Double(shark.name.count % 5) / 5).repeatForever(autoreverses: true)) { floating = true }
             if fresh { withAnimation(.easeOut(duration: 1.2).repeatForever(autoreverses: false)) { pulsing = true } }
         }
-        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", page collected" : "")" : "Hidden shark, locked")
+        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", \(stars) of 3 stars" : "")" : "Hidden shark, locked")
         .accessibilityIdentifier("shark-\(shark.id)")
     }
 }

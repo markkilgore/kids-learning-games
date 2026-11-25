@@ -106,6 +106,42 @@ struct MissionDefinition: Codable, Hashable {
     let completion: String
 }
 
+/// What a mission kind shows while it is played. Every kind in the catalog needs an entry here.
+struct MissionPlay: Equatable {
+    /// Bundled cut-out drawn for the target; nil when the scene draws its own shape.
+    let targetAsset: String?
+    /// Stands in for the cut-out if the image is missing.
+    let targetSymbol: String
+
+    static let fallback = MissionPlay(targetAsset: "mission-star", targetSymbol: "⭐️")
+
+    static let byKind: [String: MissionPlay] = [
+        "ambushApproach": MissionPlay(targetAsset: nil, targetSymbol: "⭐️"),
+        "filterFeed": MissionPlay(targetAsset: "mission-plankton", targetSymbol: "✨"),
+        "electrosense": MissionPlay(targetAsset: "mission-electric", targetSymbol: "⚡️"),
+        "suctionForage": MissionPlay(targetAsset: "mission-crab", targetSymbol: "🦀"),
+        "camouflageFind": MissionPlay(targetAsset: "mission-shell", targetSymbol: "🐚"),
+        "tailStrike": MissionPlay(targetAsset: "mission-fish", targetSymbol: "🐟"),
+        "scentTrack": MissionPlay(targetAsset: "mission-scent", targetSymbol: "〰️"),
+        "tidalWalk": MissionPlay(targetAsset: "mission-rock", targetSymbol: "🪨"),
+        "jawStrike": MissionPlay(targetAsset: "mission-deep-fish", targetSymbol: "🐠"),
+        "energyTrail": MissionPlay(targetAsset: "mission-snowflake", targetSymbol: "❄️"),
+        "speedChase": MissionPlay(targetAsset: "mission-tuna", targetSymbol: "🐟"),
+        "snailHunt": MissionPlay(targetAsset: "mission-snail", targetSymbol: "🐌"),
+        "reefPatrol": MissionPlay(targetAsset: "mission-reef-fish", targetSymbol: "🐠"),
+        "mangroveNursery": MissionPlay(targetAsset: "mission-mangrove", targetSymbol: "🌿"),
+        "riverJourney": MissionPlay(targetAsset: "mission-wave", targetSymbol: "🌊"),
+        "sawSweep": MissionPlay(targetAsset: "mission-shrimp", targetSymbol: "🦐"),
+        "glowLure": MissionPlay(targetAsset: "mission-glow", targetSymbol: "🟢"),
+        "sandAmbush": MissionPlay(targetAsset: "mission-flatfish", targetSymbol: "🐟"),
+        "shellCrunch": MissionPlay(targetAsset: "mission-urchin", targetSymbol: "🟣")
+    ]
+}
+
+extension MissionDefinition {
+    var play: MissionPlay { MissionPlay.byKind[kind] ?? .fallback }
+}
+
 struct QuestionDefinition: Codable, Identifiable, Hashable {
     let id: String
     let prompt: NarrativePair

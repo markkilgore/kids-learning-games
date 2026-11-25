@@ -13,6 +13,12 @@ struct SharkProgress: Codable, Equatable {
     var quizFirstTry: [String: Int] = [:]
     /// Quiz questions that needed another try, keyed by shark ID.
     var quizRetried: [String: Int] = [:]
+    /// Stars earned on each shark's mission (1–3), keyed by shark ID.
+    var missionStars: [String: Int] = [:]
+    /// Mission rounds answered right on the first tap, keyed by skill area ("math", "words").
+    var roundFirstTry: [String: Int] = [:]
+    /// Mission rounds that needed another try, keyed by skill area.
+    var roundRetried: [String: Int] = [:]
 }
 
 // Decoding lives in an extension so the memberwise initializer stays available.
@@ -27,7 +33,10 @@ extension SharkProgress {
             currentSharkID: try container.decodeIfPresent(String.self, forKey: .currentSharkID),
             readingMode: try container.decodeIfPresent(ReadingMode.self, forKey: .readingMode) ?? .earlyReader,
             quizFirstTry: try container.decodeIfPresent([String: Int].self, forKey: .quizFirstTry) ?? [:],
-            quizRetried: try container.decodeIfPresent([String: Int].self, forKey: .quizRetried) ?? [:]
+            quizRetried: try container.decodeIfPresent([String: Int].self, forKey: .quizRetried) ?? [:],
+            missionStars: try container.decodeIfPresent([String: Int].self, forKey: .missionStars) ?? [:],
+            roundFirstTry: try container.decodeIfPresent([String: Int].self, forKey: .roundFirstTry) ?? [:],
+            roundRetried: try container.decodeIfPresent([String: Int].self, forKey: .roundRetried) ?? [:]
         )
     }
 }
@@ -44,6 +53,9 @@ struct MissionReward: Equatable {
     let isNewPage: Bool
     let newWordIDs: [String]
     let unlockedSharkIDs: [String]
+    /// Stars this shark now has, and whether this mission added one.
+    var stars = 1
+    var isNewStar = false
 }
 
 @MainActor
@@ -56,6 +68,9 @@ final class GameStore {
     var completedTopics: Set<String> = []
     private(set) var quizFirstTry: [String: Int] = [:]
     private(set) var quizRetried: [String: Int] = [:]
+    private(set) var missionStars: [String: Int] = [:]
+    private(set) var roundFirstTry: [String: Int] = [:]
+    private(set) var roundRetried: [String: Int] = [:]
     /// The Passport page to show when the books open next.
     var passportSharkID: String?
     /// Sharks unlocked by the latest mission, so the map can reveal them.
@@ -83,11 +98,17 @@ final class GameStore {
         readingMode = progress.readingMode
         quizFirstTry = progress.quizFirstTry
         quizRetried = progress.quizRetried
+        missionStars = progress.missionStars
+        roundFirstTry = progress.roundFirstTry
+        roundRetried = progress.roundRetried
         if let current = progress.currentSharkID { destination = .encounter(current) }
     }
 
+    /// UI tests pass this launch argument to reach every shark without playing through the unlock order.
+    private static let unlockAllForTesting = ProcessInfo.processInfo.arguments.contains("-unlockAllSharks")
+
     func isUnlocked(_ shark: SharkDefinition) -> Bool {
-        completedSharks.contains(shark.id) || completedCount >= shark.unlockAt
+        Self.unlockAllForTesting || completedSharks.contains(shark.id) || completedCount >= shark.unlockAt
     }
 
     /// How many more missions reveal a locked shark.
@@ -149,20 +170,48 @@ final class GameStore {
         return (quizFirstTry[shark.id, default: 0], quizRetried[shark.id, default: 0])
     }
 
+    /// Stars on a shark's mission. A mission finished before stars existed counts as one.
+    func stars(for shark: SharkDefinition) -> Int {
+        missionStars[shark.id] ?? (completedSharks.contains(shark.id) ? 1 : 0)
+    }
+
+    /// The level the next mission is played at: one above the stars already earned.
+    func missionLevel(for shark: SharkDefinition) -> Int {
+        min(stars(for: shark) + 1, MissionChallenges.maxLevel)
+    }
+
+    /// Records one mission round once it is answered; `firstTry` is false if a wrong bubble came first.
+    func recordRound(_ area: MissionChallenge.Area, firstTry: Bool) {
+        if firstTry {
+            roundFirstTry[area.rawValue, default: 0] += 1
+        } else {
+            roundRetried[area.rawValue, default: 0] += 1
+        }
+        save()
+    }
+
+    func roundTally(for area: MissionChallenge.Area) -> (firstTry: Int, retried: Int) {
+        (roundFirstTry[area.rawValue, default: 0], roundRetried[area.rawValue, default: 0])
+    }
+
+    /// `starLevel` is the star this play earned: the level played if enough rounds were right first time.
     @discardableResult
-    func completeMission(for shark: SharkDefinition, in sharks: [SharkDefinition] = ContentStore.shared.catalog.sharks) -> MissionReward {
+    func completeMission(for shark: SharkDefinition, starLevel: Int = 1, in sharks: [SharkDefinition] = ContentStore.shared.catalog.sharks) -> MissionReward {
         let lockedBefore = sharks.filter { !isUnlocked($0) }
         let reward = MissionReward(
             isNewPage: !completedSharks.contains(shark.id),
             newWordIDs: shark.vocabularyIDs.filter { !collectedWords.contains($0) },
             unlockedSharkIDs: []
         )
+        let starsBefore = stars(for: shark)
+        let starsNow = min(MissionChallenges.maxLevel, max(starsBefore, starLevel, 1))
+        missionStars[shark.id] = starsNow
         completedSharks.insert(shark.id)
         collectedWords.formUnion(shark.vocabularyIDs)
         let unlocked = lockedBefore.filter(isUnlocked).map(\.id)
         freshlyUnlockedSharkIDs.formUnion(unlocked)
         save()
-        return MissionReward(isNewPage: reward.isNewPage, newWordIDs: reward.newWordIDs, unlockedSharkIDs: unlocked)
+        return MissionReward(isNewPage: reward.isNewPage, newWordIDs: reward.newWordIDs, unlockedSharkIDs: unlocked, stars: starsNow, isNewStar: starsNow > starsBefore)
     }
 
     private func save(currentSharkID: String? = nil) {
@@ -178,7 +227,10 @@ final class GameStore {
             currentSharkID: persistedCurrentID,
             readingMode: readingMode,
             quizFirstTry: quizFirstTry,
-            quizRetried: quizRetried
+            quizRetried: quizRetried,
+            missionStars: missionStars,
+            roundFirstTry: roundFirstTry,
+            roundRetried: roundRetried
         ))
     }
 }

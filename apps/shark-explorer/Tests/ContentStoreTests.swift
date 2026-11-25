@@ -24,6 +24,29 @@ final class ContentStoreTests: XCTestCase {
         })
     }
 
+    func testEveryMissionKindHasItsTargetPicture() throws {
+        for shark in ContentStore.shared.catalog.sharks {
+            let play = try XCTUnwrap(MissionPlay.byKind[shark.mission.kind], "\(shark.id): no play set-up for mission kind \(shark.mission.kind)")
+            if let asset = play.targetAsset {
+                XCTAssertNotNil(UIImage(named: asset), "\(shark.id): missing target picture \(asset)")
+            }
+            XCTAssertGreaterThan(shark.mission.targetCount, 0, shark.id)
+            XCTAssertFalse(shark.mission.completion.isEmpty, shark.id)
+            XCTAssertNotNil(UIImage(systemName: shark.mission.symbol), "\(shark.id): unknown SF Symbol \(shark.mission.symbol)")
+        }
+        // No kind is defined that the catalog never uses.
+        XCTAssertEqual(Set(MissionPlay.byKind.keys), Set(ContentStore.shared.catalog.sharks.map(\.mission.kind)))
+    }
+
+    func testEveryQuizChoiceOfTheNewSharksHasAPicture() throws {
+        let firstTen: Set = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher", "tiger", "epaulette", "goblin", "greenland"]
+        for shark in ContentStore.shared.catalog.sharks where !firstTen.contains(shark.id) {
+            for choice in shark.questions.flatMap(\.choices) {
+                XCTAssertNotNil(UIImage(named: QuestionRoundView.artName(for: choice)), "\(shark.id): no picture for choice \(choice.id)")
+            }
+        }
+    }
+
     func testBothReadingModesHaveContent() throws {
         let catalog = ContentStore.shared.catalog
         for shark in catalog.sharks {
@@ -257,11 +280,85 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertGreaterThan(featured, 30, "the newest letters should get plenty of practice")
     }
 
+    func testMissionRoundsPractiseNumbersAndThisSharksOwnWordsAtEveryLevel() throws {
+        let sharks = ContentStore.shared.catalog.sharks
+        let reading = SharkReading.shared
+        let spoken = Set(MissionChallenges.allSpokenLines(sharks: sharks, reading: reading))
+        var generator = SeededRandomNumberGenerator(seed: 7)
+        for shark in sharks {
+            let mine = MissionChallenges.readingWords(in: [shark], reading: reading)
+            for level in 1...MissionChallenges.maxLevel {
+                for _ in 0..<12 {
+                    let rounds = MissionChallenges.rounds(for: shark, level: level, sharks: sharks, reading: reading, using: &generator)
+                    XCTAssertEqual(rounds.count, shark.mission.targetCount, shark.id)
+                    XCTAssertTrue(rounds.contains { $0.area == .math } && rounds.contains { $0.area == .words }, "\(shark.id) level \(level) needs both numbers and words")
+                    for round in rounds {
+                        XCTAssertTrue(spoken.contains(round.spoken), round.spoken)
+                        XCTAssertTrue((2...3).contains(round.choices.count), "\(shark.id): \(round.spoken) \(round.choices)")
+                        XCTAssertEqual(round.choices.count, round.choices.reduce(into: [MissionChallenge.Choice]()) { if !$0.contains($1) { $0.append($1) } }.count, "repeated choice in \(round.spoken)")
+                        let right = round.choices[round.answer]
+                        switch right {
+                        case .group(let count):
+                            XCTAssertTrue((1...10).contains(count))
+                            if round.spoken == MissionChallenges.moreLine { XCTAssertTrue(round.choices.allSatisfy { if case .group(let other) = $0 { other <= count } else { false } }) }
+                            if round.spoken == MissionChallenges.fewerLine { XCTAssertTrue(round.choices.allSatisfy { if case .group(let other) = $0 { other >= count } else { false } }) }
+                            if round.spoken != MissionChallenges.moreLine, round.spoken != MissionChallenges.fewerLine { XCTAssertEqual(round.spoken, MissionChallenges.countLine(count)) }
+                        case .numeral(let number):
+                            XCTAssertTrue((1...10).contains(number))
+                            XCTAssertTrue([MissionChallenges.numeralLine(number), MissionChallenges.oneMoreLine(number - 1), MissionChallenges.oneLessLine(number + 1)].contains(round.spoken), round.spoken)
+                        case .word(let word):
+                            XCTAssertEqual(round.spoken, MissionChallenges.wordLine(word))
+                            XCTAssertTrue((mine.decodable + mine.heart).contains(word), "\(shark.id): \(word) is not in this shark's sentences")
+                            XCTAssertEqual(round.shown, MissionChallenges.listenPrompt, "the word must be read, not matched to the prompt")
+                            for case .word(let other) in round.choices { XCTAssertNotNil(reading.mark(other), "Henry cannot read \(other) yet") }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    func testStarsNeedRoundsRightFirstTimeAndOlderProgressCountsAsOneStar() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.stars", baseDirectory: directory)
+        try storage.save(SharkProgress(completedSharks: ["whale"]))
+        let game = GameStore(progressStore: storage)
+        game.load()
+        let whale = try XCTUnwrap(ContentStore.shared.catalog.sharks.first { $0.id == "whale" })
+        let nurse = try XCTUnwrap(ContentStore.shared.catalog.sharks.first { $0.id == "nurse" })
+        XCTAssertEqual(game.stars(for: whale), 1)
+        XCTAssertEqual(game.missionLevel(for: whale), 2)
+        XCTAssertEqual(game.stars(for: nurse), 0)
+        XCTAssertEqual(game.missionLevel(for: nurse), 1)
+
+        XCTAssertTrue(MissionChallenges.earnsStar(level: 1, firstTry: 0, rounds: 5))
+        XCTAssertTrue(MissionChallenges.earnsStar(level: 2, firstTry: 4, rounds: 5))
+        XCTAssertFalse(MissionChallenges.earnsStar(level: 2, firstTry: 3, rounds: 5))
+
+        let missed = game.completeMission(for: whale, starLevel: 1)
+        XCTAssertEqual(missed.stars, 1)
+        XCTAssertFalse(missed.isNewStar)
+        let earned = game.completeMission(for: whale, starLevel: 2)
+        XCTAssertEqual(earned.stars, 2)
+        XCTAssertTrue(earned.isNewStar)
+        XCTAssertEqual(game.completeMission(for: whale, starLevel: 1).stars, 2, "stars are never lost")
+        game.recordRound(.math, firstTry: true)
+        game.recordRound(.words, firstTry: false)
+
+        let reloaded = GameStore(progressStore: storage)
+        reloaded.load()
+        XCTAssertEqual(reloaded.stars(for: whale), 2)
+        XCTAssertEqual(reloaded.missionLevel(for: whale), 3)
+        XCTAssertEqual(reloaded.roundTally(for: .math).firstTry, 1)
+        XCTAssertEqual(reloaded.roundTally(for: .words).retried, 1)
+    }
+
     /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.
     func testEverySpokenLineHasARecording() throws {
         let manifest = AudioManifest(bundle: .main, resourceName: SharkAppConfiguration.value.narration.bundledManifestName)
         let catalog = ContentStore.shared.catalog
         var lines = WeeklySpokenLines.all + SharkLine.allCases.map(\.text) + catalog.vocabulary.map(\.word)
+        lines += MissionChallenges.allSpokenLines(sharks: catalog.sharks, reading: .shared)
         for shark in catalog.sharks {
             let narratives = [shark.discover, shark.mission.instructions] + shark.topics.map(\.narration) + shark.questions.map(\.prompt)
             lines += narratives.flatMap { ($0.decodable ?? []) + $0.earlyReader + $0.story }
