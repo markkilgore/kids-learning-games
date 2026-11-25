@@ -6,7 +6,7 @@ config_dir=.build/ipad-deploy
 config_file=$config_dir/devices
 usage() {
     echo "Usage: tools/deploy-ipads.sh [setup|both|kate|henry|--device UDID]" >&2
-    echo "       tools/deploy-ipads.sh both --device UDID" >&2
+    echo "       tools/deploy-ipads.sh {both|kate|henry} --device UDID" >&2
 }
 
 is_hardware_udid() {
@@ -32,14 +32,16 @@ if [ -f "$config_file" ]; then
     { read -r team; read -r kate; read -r henry; } < "$config_file"
 fi
 
-if [ "${1:-}" = both ] && [ "${2:-}" = --device ]; then
-    shift
-fi
 target=${1:-both}
-if [ "$target" = --device ]; then
+device_udid=
+case "$target:${2:-}" in
+    both:--device|kate:--device|henry:--device) shift ;;
+esac
+if [ "${1:-}" = --device ]; then
     if [ "$#" -ne 2 ]; then usage; exit 2; fi
-    testing_udid=$2
-    if ! is_hardware_udid "$testing_udid"; then
+    if [ "$target" = --device ]; then target=both; fi
+    device_udid=$2
+    if ! is_hardware_udid "$device_udid"; then
         echo 'Expected an iPad hardware UDID for --device.' >&2
         exit 2
     fi
@@ -84,24 +86,25 @@ case "$target" in
         echo 'Saved locally. Run tools/deploy-ipads.sh to update the configured iPads.'
         exit 0
         ;;
-    --device)
-        team=${DEVELOPMENT_TEAM:-$team}
-        if ! printf '%s\n' "$team" | grep -Eq '^[A-Z0-9]{10}$'; then
-            echo 'Set DEVELOPMENT_TEAM to your 10-character Apple development team ID or run tools/deploy-ipads.sh setup.' >&2
-            exit 1
-        fi
-        selected_udids=$testing_udid
-        ;;
     both|kate|henry)
-        if [ ! -f "$config_file" ]; then
-            echo 'First run tools/deploy-ipads.sh setup.' >&2
-            exit 1
+        if [ -n "$device_udid" ]; then
+            team=${DEVELOPMENT_TEAM:-$team}
+            if ! printf '%s\n' "$team" | grep -Eq '^[A-Z0-9]{10}$'; then
+                echo 'Set DEVELOPMENT_TEAM to your 10-character Apple development team ID or run tools/deploy-ipads.sh setup.' >&2
+                exit 1
+            fi
+            selected_udids=$device_udid
+        else
+            if [ ! -f "$config_file" ]; then
+                echo 'First run tools/deploy-ipads.sh setup.' >&2
+                exit 1
+            fi
+            case "$target" in
+                kate) selected_udids=$kate ;;
+                henry) selected_udids=$henry ;;
+                both) selected_udids=$kate$henry ;;
+            esac
         fi
-        case "$target" in
-            kate) selected_udids=$kate ;;
-            henry) selected_udids=$henry ;;
-            both) selected_udids=$kate$henry ;;
-        esac
         ;;
     -h|--help) usage; exit 0 ;;
     *) usage; exit 2 ;;
@@ -134,9 +137,9 @@ deploy() {
 }
 
 status=0
-if [ "$target" = --device ]; then
-    deploy testing CatMathAdventure "$testing_udid" || status=1
-    deploy testing SharkExplorer "$testing_udid" || status=1
+if [ -n "$device_udid" ]; then
+    if [ "$target" != henry ]; then deploy testing CatMathAdventure "$device_udid" || status=1; fi
+    if [ "$target" != kate ]; then deploy testing SharkExplorer "$device_udid" || status=1; fi
 else
     if [ "$target" != henry ] && [ -n "$kate" ]; then deploy kate CatMathAdventure "$kate" || status=1; fi
     if [ "$target" != kate ] && [ -n "$henry" ]; then deploy henry SharkExplorer "$henry" || status=1; fi

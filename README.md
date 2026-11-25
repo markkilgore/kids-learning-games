@@ -106,6 +106,9 @@ tools/deploy-ipads.sh --device YOUR_IPAD_UDID
 ```
 
 You can also use `tools/deploy-ipads.sh both --device YOUR_IPAD_UDID`.
+To install a single game on an explicit device, use
+`tools/deploy-ipads.sh kate --device YOUR_IPAD_UDID` for Cat Math Adventure or
+`tools/deploy-ipads.sh henry --device YOUR_IPAD_UDID` for Shark Explorer.
 
 If you haven't run setup, supply your development team ID for this run.
 
