@@ -158,6 +158,15 @@ final class MissionScene: SKScene {
         case "tidalWalk": "mission-rock"
         case "jawStrike": "mission-deep-fish"
         case "energyTrail": "mission-snowflake"
+        case "speedChase": "mission-tuna"
+        case "snailHunt": "mission-snail"
+        case "reefPatrol": "mission-reef-fish"
+        case "mangroveNursery": "mission-mangrove"
+        case "riverJourney": "mission-wave"
+        case "sawSweep": "mission-shrimp"
+        case "glowLure": "mission-glow"
+        case "sandAmbush": "mission-flatfish"
+        case "shellCrunch": "mission-urchin"
         default: "mission-star"
         }
     }
@@ -173,6 +182,14 @@ final class MissionScene: SKScene {
         case "tidalWalk": "🪨"
         case "jawStrike": "🐠"
         case "energyTrail": "❄️"
+        case "speedChase", "sandAmbush": "🐟"
+        case "snailHunt": "🐌"
+        case "reefPatrol": "🐠"
+        case "mangroveNursery": "🌿"
+        case "riverJourney": "🌊"
+        case "sawSweep": "🦐"
+        case "glowLure": "🟢"
+        case "shellCrunch": "🟣"
         default: "⭐️"
         }
     }

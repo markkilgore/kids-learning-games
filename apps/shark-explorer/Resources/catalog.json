@@ -1342,8 +1342,8 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Alopias_vulpinus.png",
       "color": "#567CB8",
       "region": "Open Ocean",
-      "mapX": 0.38,
-      "mapY": 0.3,
+      "mapX": 0.36,
+      "mapY": 0.32,
       "unlockAt": 3,
       "discover": {
         "decodable": [
@@ -2406,8 +2406,8 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Somniosus_microcephalus_okeanos.jpg",
       "color": "#567080",
       "region": "Arctic Deep Water",
-      "mapX": 0.44,
-      "mapY": 0.16,
+      "mapX": 0.46,
+      "mapY": 0.15,
       "unlockAt": 6,
       "discover": {
         "decodable": [
@@ -2660,6 +2660,2673 @@
       "sourceURLs": [
         "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/greenland-shark/"
       ]
+    },
+    {
+      "id": "mako",
+      "name": "Shortfin Mako",
+      "scientificName": "Isurus oxyrinchus",
+      "symbol": "🦈",
+      "imageAsset": "shark-mako.jpg",
+      "imageAuthor": "Mark Conlin, SWFSC Large Pelagics Program",
+      "imageLicense": "Public domain",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin2.JPG",
+      "color": "#4A5FA8",
+      "region": "Open Blue Ocean",
+      "mapX": 0.08,
+      "mapY": 0.62,
+      "unlockAt": 10,
+      "discover": {
+        "decodable": [
+          "It runs and runs. It has pep!"
+        ],
+        "earlyReader": [
+          "This is a shortfin mako.",
+          "It is the fastest shark in the sea.",
+          "Its smooth body cuts through the water."
+        ],
+        "story": [
+          "The shortfin mako is the fastest shark in the ocean.",
+          "Its pointed snout and smooth, streamlined body help it race after speedy fish."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It did not sit in a den. It runs on and on."
+            ],
+            "earlyReader": [
+              "Makos live far from shore.",
+              "They swim in the wide open ocean.",
+              "They like warm and cool water."
+            ],
+            "story": [
+              "Shortfin makos roam the open ocean in warm and temperate seas around the world.",
+              "They travel long distances and rarely rest near the seafloor."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It ran and ran. It got him!"
+            ],
+            "earlyReader": [
+              "Makos eat fast fish.",
+              "Tuna and mackerel are food.",
+              "Squid can be food too."
+            ],
+            "story": [
+              "Speedy fish such as tuna and mackerel are favorite mako prey.",
+              "A mako must swim even faster than its food to catch a meal."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big, not fat. It is fit to run."
+            ],
+            "earlyReader": [
+              "A mako is longer than a couch.",
+              "Its snout is pointed like a cone.",
+              "Its tail looks like a crescent moon."
+            ],
+            "story": [
+              "A grown shortfin mako is often about ten feet long.",
+              "Its cone-shaped snout and crescent tail are built for speed."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "A cod hid, but it got the hum."
+            ],
+            "earlyReader": [
+              "A mako has big dark eyes.",
+              "Its eyes help it spot quick fish.",
+              "It also feels moving water on its skin."
+            ],
+            "story": [
+              "Large dark eyes help a mako follow fast prey through open water.",
+              "Like other sharks, it also senses movement and tiny electric signals nearby."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "Run, run, hop! It can hop up to the sun."
+            ],
+            "earlyReader": [
+              "A mako keeps its muscles warm.",
+              "Warm muscles help it swim very fast.",
+              "It can even leap high out of the sea."
+            ],
+            "story": [
+              "A mako keeps its swimming muscles warmer than the water around it.",
+              "That warmth powers bursts of great speed and spectacular leaps above the waves."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "speed-body",
+          "title": "Speed-Built Body",
+          "symbol": "💨",
+          "description": "Its smooth, pointed body slips through water at top speed.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "crescent-tail",
+          "title": "Crescent Tail",
+          "symbol": "🌙",
+          "description": "Its stiff moon-shaped tail pushes it forward with strong beats.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        }
+      ],
+      "mission": {
+        "kind": "speedChase",
+        "title": "Mako Speed Chase",
+        "symbol": "hare.fill",
+        "instructions": {
+          "earlyReader": [
+            "The tuna are very fast.",
+            "Watch for each speedy fish.",
+            "Tap it before it zooms away."
+          ],
+          "story": [
+            "Race through open water with the fastest shark in the sea.",
+            "Tap each speedy tuna to help the mako catch up."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Whoosh! The mako used its speed to catch fast fish."
+      },
+      "questions": [
+        {
+          "id": "mak-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is the mako best at?"
+            ],
+            "story": [
+              "Which skill makes the shortfin mako famous?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fast",
+              "label": "Swimming fast",
+              "symbol": "💨"
+            },
+            {
+              "id": "reading",
+              "label": "Reading",
+              "symbol": "📖"
+            },
+            {
+              "id": "singing",
+              "label": "Singing",
+              "symbol": "🎵"
+            }
+          ],
+          "correctID": "fast",
+          "success": "Yes! The mako is the fastest shark.",
+          "retry": "Think about how it catches speedy fish."
+        },
+        {
+          "id": "mak-q2",
+          "prompt": {
+            "earlyReader": [
+              "What does the mako chase?"
+            ],
+            "story": [
+              "Which prey does a mako race after?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Fast fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! Makos chase fast fish like tuna.",
+          "retry": "Look for the food that swims."
+        },
+        {
+          "id": "mak-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does the mako live?"
+            ],
+            "story": [
+              "Which habitat belongs to a shortfin mako?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "warm",
+              "label": "Open ocean",
+              "symbol": "🌊"
+            },
+            {
+              "id": "farm",
+              "label": "Farm",
+              "symbol": "🚜"
+            },
+            {
+              "id": "mountain",
+              "label": "Mountain top",
+              "symbol": "🏔️"
+            }
+          ],
+          "correctID": "warm",
+          "success": "You got it! Makos roam the open ocean.",
+          "retry": "Choose the wide blue water."
+        }
+      ],
+      "vocabularyIDs": [
+        "streamlined",
+        "predator",
+        "migrate"
+      ],
+      "bookFact": "It is the fastest shark and can leap high above the waves.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+        "https://www.fisheries.noaa.gov/species/atlantic-shortfin-mako-shark"
+      ]
+    },
+    {
+      "id": "basking",
+      "name": "Basking Shark",
+      "scientificName": "Cetorhinus maximus",
+      "symbol": "🦈",
+      "imageAsset": "shark-basking.jpg",
+      "imageAuthor": "Green Fire Productions",
+      "imageLicense": "CC BY 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_atlantic.jpg",
+      "color": "#5E8C8A",
+      "region": "Cool Coastal Seas",
+      "mapX": 0.52,
+      "mapY": 0.36,
+      "unlockAt": 10,
+      "discover": {
+        "decodable": [
+          "It is big. It has a big, big gap."
+        ],
+        "earlyReader": [
+          "This is a basking shark.",
+          "It is the second biggest fish.",
+          "It swims with its mouth wide open."
+        ],
+        "story": [
+          "The basking shark is the second largest fish in the sea.",
+          "It cruises slowly with its enormous mouth open to gather tiny food."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is not hot. It sits at the top in the sun."
+            ],
+            "earlyReader": [
+              "Basking sharks like cool seas.",
+              "They often swim near the top.",
+              "They look like they bask in the sun."
+            ],
+            "story": [
+              "Basking sharks live in cool and temperate seas around the world.",
+              "They often feed slowly at the surface, which looks like basking in the sunshine."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "✨",
+          "narration": {
+            "decodable": [
+              "It has a gap. Bits bob in. It is fed."
+            ],
+            "earlyReader": [
+              "Basking sharks eat plankton.",
+              "Plankton is very tiny food.",
+              "The shark just swims and swallows."
+            ],
+            "story": [
+              "Basking sharks feed on tiny drifting animals called zooplankton.",
+              "They do not chase prey but simply swim forward with open mouths."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "A bus is big. It is as big as the bus!"
+            ],
+            "earlyReader": [
+              "A basking shark is as long as a bus.",
+              "Its mouth opens as wide as a doorway.",
+              "Only the whale shark is bigger."
+            ],
+            "story": [
+              "A basking shark can grow longer than twenty-six feet.",
+              "Its mouth can open more than three feet wide."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👃",
+          "narration": {
+            "decodable": [
+              "Bits bob at the top. It can get to the bits."
+            ],
+            "earlyReader": [
+              "Plankton gathers in patches.",
+              "The shark finds the thick patches.",
+              "Then it swims back and forth to feed."
+            ],
+            "story": [
+              "Basking sharks seek out places where plankton is most crowded.",
+              "They often follow lines in the sea where two kinds of water meet and food collects."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🪮",
+          "narration": {
+            "decodable": [
+              "It has a net in his gap. The net gets bits."
+            ],
+            "earlyReader": [
+              "Its gills have tiny combs.",
+              "The combs are called gill rakers.",
+              "They catch plankton as water flows out."
+            ],
+            "story": [
+              "Long bristles called gill rakers line the basking shark's huge gill slits.",
+              "They strain plankton from the water like a giant comb."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "gill-raker-comb",
+          "title": "Gill Raker Comb",
+          "symbol": "🪮",
+          "description": "Bristly gill rakers comb tiny plankton out of the water.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "giant-gill-slits",
+          "title": "Giant Gill Slits",
+          "symbol": "〰️",
+          "description": "Its gill slits are so long they almost circle its head.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "filterFeed",
+        "title": "Sunny Plankton Cruise",
+        "symbol": "sparkles",
+        "instructions": {
+          "earlyReader": [
+            "Plankton floats near the top.",
+            "Tap each sparkling patch.",
+            "Help the big shark fill up."
+          ],
+          "story": [
+            "Glide along the sunny surface with the basking shark.",
+            "Collect each sparkling plankton patch as it swims with its mouth open."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Gulp! The basking shark filtered plankton with its gill rakers."
+      },
+      "questions": [
+        {
+          "id": "bas-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does the basking shark eat?"
+            ],
+            "story": [
+              "Which food does a basking shark strain from the sea?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "plankton",
+              "label": "Plankton",
+              "symbol": "✨"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "plankton",
+          "success": "Yes! Basking sharks eat tiny plankton.",
+          "retry": "Look for the tiny sparkling food."
+        },
+        {
+          "id": "bas-q2",
+          "prompt": {
+            "earlyReader": [
+              "How does it catch its food?"
+            ],
+            "story": [
+              "Which body part gathers a basking shark's meal?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "mouth",
+              "label": "Wide open mouth",
+              "symbol": "😮"
+            },
+            {
+              "id": "paw",
+              "label": "Paw",
+              "symbol": "🐾"
+            },
+            {
+              "id": "wing",
+              "label": "Bird wing",
+              "symbol": "🪽"
+            }
+          ],
+          "correctID": "mouth",
+          "success": "Right! It swims with its mouth wide open.",
+          "retry": "Think about what it opens very wide."
+        },
+        {
+          "id": "bas-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does it like to feed?"
+            ],
+            "story": [
+              "Where do basking sharks often feed?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "surface",
+              "label": "Near the sunny top",
+              "symbol": "☀️"
+            },
+            {
+              "id": "cave",
+              "label": "Dry cave",
+              "symbol": "🕳️"
+            },
+            {
+              "id": "desert",
+              "label": "Dry desert",
+              "symbol": "🏜️"
+            }
+          ],
+          "correctID": "surface",
+          "success": "You got it! It feeds near the sunny surface.",
+          "retry": "Choose the place with water and sunshine."
+        }
+      ],
+      "vocabularyIDs": [
+        "gill-rakers",
+        "plankton",
+        "filter-feeding"
+      ],
+      "bookFact": "It is the second biggest fish and eats some of the smallest food.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/basking-shark/",
+        "https://www.sharktrust.org/basking-shark-project"
+      ]
+    },
+    {
+      "id": "zebra",
+      "name": "Zebra Shark",
+      "scientificName": "Stegostoma tigrinum",
+      "symbol": "🦈",
+      "imageAsset": "shark-zebra.jpg",
+      "imageAuthor": "Sigmund from Norway",
+      "imageLicense": "CC BY 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Stegostoma_fasciatum_thailand.jpg",
+      "color": "#A8743C",
+      "region": "Indo-Pacific Reef",
+      "mapX": 0.76,
+      "mapY": 0.42,
+      "unlockAt": 11,
+      "discover": {
+        "decodable": [
+          "The pup is not tan. The mom is tan and has dots."
+        ],
+        "earlyReader": [
+          "This is a zebra shark.",
+          "Pups have stripes like a zebra.",
+          "Grown-ups have spots instead."
+        ],
+        "story": [
+          "Zebra shark pups hatch dark with pale stripes, just like a zebra.",
+          "As they grow, the stripes break up into the dark spots of an adult."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🪸",
+          "narration": {
+            "decodable": [
+              "It is hot. It sits on the mud and naps."
+            ],
+            "earlyReader": [
+              "Zebra sharks live near coral reefs.",
+              "They rest on the sandy bottom.",
+              "The water is warm and shallow."
+            ],
+            "story": [
+              "Zebra sharks live around coral reefs and sandy flats in the warm Indian and Pacific Oceans.",
+              "By day they often rest quietly on the seafloor."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐌",
+          "narration": {
+            "decodable": [
+              "It gets a bug and a bit in the mud. It sips it up."
+            ],
+            "earlyReader": [
+              "Zebra sharks eat sea snails.",
+              "Clams and crabs are food too.",
+              "Strong jaws crush hard shells."
+            ],
+            "story": [
+              "Sea snails, clams, crabs, and small fish are zebra shark food.",
+              "Its small mouth and strong jaws suck up and crush shelled prey."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big. It has a fin as big as him."
+            ],
+            "earlyReader": [
+              "A zebra shark has a very long tail.",
+              "The tail is almost as long as its body.",
+              "Ridges run along its back."
+            ],
+            "story": [
+              "A zebra shark can reach about eight feet long.",
+              "Nearly half of that length is its low, ribbon-like tail."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "🌙",
+          "narration": {
+            "decodable": [
+              "It is dim. Tap, tap. It can get a bit in the mud."
+            ],
+            "earlyReader": [
+              "Zebra sharks hunt at night.",
+              "Small feelers sit near the mouth.",
+              "The feelers help find hidden food."
+            ],
+            "story": [
+              "Zebra sharks are nocturnal and search for food after dark.",
+              "Short barbels on the snout help them feel for prey hidden in sand and coral."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "〰️",
+          "narration": {
+            "decodable": [
+              "It can fit in a gap. It can dig in and tug."
+            ],
+            "earlyReader": [
+              "A zebra shark has a bendy body.",
+              "It wriggles into narrow cracks.",
+              "Hiding snails cannot get away."
+            ],
+            "story": [
+              "A slender, flexible body lets the zebra shark squirm into narrow reef crevices.",
+              "There it reaches snails and crabs that other hunters cannot."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "stripes-to-spots",
+          "title": "Stripes to Spots",
+          "symbol": "🦓",
+          "description": "Pups wear zebra stripes that change into spots as they grow.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "ribbon-tail",
+          "title": "Ribbon Tail",
+          "symbol": "🎀",
+          "description": "Its long, low tail is almost as long as the rest of its body.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        }
+      ],
+      "mission": {
+        "kind": "snailHunt",
+        "title": "Night Snail Hunt",
+        "symbol": "moon.fill",
+        "instructions": {
+          "earlyReader": [
+            "It is night on the reef.",
+            "Sea snails hide in the cracks.",
+            "Tap each snail you find."
+          ],
+          "story": [
+            "Search the reef after dark with the zebra shark.",
+            "Tap each sea snail tucked among the coral and sand."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Crunch! The zebra shark found snails hiding in the reef."
+      },
+      "questions": [
+        {
+          "id": "zeb-q1",
+          "prompt": {
+            "earlyReader": [
+              "What do zebra shark pups have?"
+            ],
+            "story": [
+              "Which pattern covers a zebra shark pup?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "stripes",
+              "label": "Stripes",
+              "symbol": "🟰"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🫎"
+            }
+          ],
+          "correctID": "stripes",
+          "success": "Yes! Pups have stripes like a zebra.",
+          "retry": "Think about what a zebra wears."
+        },
+        {
+          "id": "zeb-q2",
+          "prompt": {
+            "earlyReader": [
+              "What do grown-up zebra sharks have?"
+            ],
+            "story": [
+              "Which pattern replaces the stripes on an adult?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "spots",
+              "label": "Dark spots",
+              "symbol": "⚫️"
+            },
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            }
+          ],
+          "correctID": "spots",
+          "success": "Right! The stripes change into spots.",
+          "retry": "Look for the little round dots."
+        },
+        {
+          "id": "zeb-q3",
+          "prompt": {
+            "earlyReader": [
+              "When does the zebra shark hunt?"
+            ],
+            "story": [
+              "When do zebra sharks search for food?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "night",
+              "label": "Night",
+              "symbol": "🌙"
+            },
+            {
+              "id": "lunch",
+              "label": "Lunch bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "snow",
+              "label": "Snow day",
+              "symbol": "❄️"
+            }
+          ],
+          "correctID": "night",
+          "success": "You got it! Zebra sharks hunt at night.",
+          "retry": "Choose the dark, sleepy time."
+        }
+      ],
+      "vocabularyIDs": [
+        "nocturnal",
+        "barbels",
+        "seafloor"
+      ],
+      "bookFact": "Its pups hatch with zebra stripes that turn into spots.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/zebra-shark/",
+        "https://australian.museum/learn/animals/fishes/zebra-shark-stegostoma-fasciatum/"
+      ]
+    },
+    {
+      "id": "blacktip-reef",
+      "name": "Blacktip Reef Shark",
+      "scientificName": "Carcharhinus melanopterus",
+      "symbol": "🦈",
+      "imageAsset": "shark-blacktip-reef.jpg",
+      "imageAuthor": "Charles J. Sharp",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Blacktip_reef_shark_(Carcharhinus_melanopterus)_Moorea.jpg",
+      "color": "#C8684E",
+      "region": "Shallow Coral Reef",
+      "mapX": 0.54,
+      "mapY": 0.84,
+      "unlockAt": 12,
+      "discover": {
+        "decodable": [
+          "It has a dab on the tip of his fin."
+        ],
+        "earlyReader": [
+          "This is a blacktip reef shark.",
+          "Each fin has a black tip.",
+          "It swims in very shallow water."
+        ],
+        "story": [
+          "The blacktip reef shark wears a bold black tip on every fin.",
+          "It patrols warm, shallow water over coral reefs."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🪸",
+          "narration": {
+            "decodable": [
+              "It is hot. The fin is up in the sun."
+            ],
+            "earlyReader": [
+              "Blacktip reef sharks live on coral reefs.",
+              "The water can be only knee deep.",
+              "Sometimes a fin pokes above the water."
+            ],
+            "story": [
+              "Blacktip reef sharks live on shallow coral reefs in the Indian and Pacific Oceans.",
+              "They swim in water so shallow that their back fins often show above the surface."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐠",
+          "narration": {
+            "decodable": [
+              "A mob of cod runs. It got a cod!"
+            ],
+            "earlyReader": [
+              "Blacktip reef sharks eat reef fish.",
+              "Squid and shrimp are food too.",
+              "They hunt along the edge of the reef."
+            ],
+            "story": [
+              "Small reef fish make up most of a blacktip reef shark's meals.",
+              "It also eats squid, octopus, and shrimp."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not as big as a bus. It is as big as a mom."
+            ],
+            "earlyReader": [
+              "This shark is about as long as a grown-up is tall.",
+              "It is small for a reef hunter.",
+              "Its body is slim and quick."
+            ],
+            "story": [
+              "A blacktip reef shark usually grows to about five feet long.",
+              "Its slim body turns easily between coral heads."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👃",
+          "narration": {
+            "decodable": [
+              "A cod hid in a gap. It can get the hum."
+            ],
+            "earlyReader": [
+              "Fish hide in the coral.",
+              "The shark smells and feels them.",
+              "It senses splashes in the water."
+            ],
+            "story": [
+              "A blacktip reef shark uses smell and vibration to find fish among the coral.",
+              "Sensors along its sides feel the movement of prey nearby."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🤝",
+          "narration": {
+            "decodable": [
+              "It runs at a mob of cod. The cod run to the rim."
+            ],
+            "earlyReader": [
+              "Blacktip reef sharks can hunt as a team.",
+              "They push a school of fish to the shore.",
+              "Then the fish have nowhere to go."
+            ],
+            "story": [
+              "Groups of blacktip reef sharks sometimes work together to herd schools of fish.",
+              "They drive the school into the shallows, where it is easier to catch."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "black-fin-tips",
+          "title": "Black Fin Tips",
+          "symbol": "🖤",
+          "description": "Every fin has a bold black tip, with a white band on the tall back fin.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "shallow-swimmer",
+          "title": "Shallow Swimmer",
+          "symbol": "🏝️",
+          "description": "It hunts in water so shallow that its fin sticks out.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        }
+      ],
+      "mission": {
+        "kind": "reefPatrol",
+        "title": "Reef Patrol",
+        "symbol": "fish.fill",
+        "instructions": {
+          "earlyReader": [
+            "The reef is full of fish.",
+            "Watch them dart from the coral.",
+            "Tap each reef fish you see."
+          ],
+          "story": [
+            "Patrol the shallow coral reef with the blacktip reef shark.",
+            "Tap each reef fish as it darts out from the coral."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Splash! The blacktip reef shark found fish in the shallow reef."
+      },
+      "questions": [
+        {
+          "id": "bla-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is on the tips of its fins?"
+            ],
+            "story": [
+              "Which marking gives the blacktip reef shark its name?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "black-tip",
+              "label": "Black tips",
+              "symbol": "🖤"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "black-tip",
+          "success": "Yes! Every fin has a black tip.",
+          "retry": "Listen to the shark's name for a clue."
+        },
+        {
+          "id": "bla-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does this shark live?"
+            ],
+            "story": [
+              "Which habitat belongs to a blacktip reef shark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "reef",
+              "label": "Shallow reef",
+              "symbol": "🪸"
+            },
+            {
+              "id": "mountain",
+              "label": "Mountain top",
+              "symbol": "🏔️"
+            },
+            {
+              "id": "yard",
+              "label": "Back yard",
+              "symbol": "🏡"
+            }
+          ],
+          "correctID": "reef",
+          "success": "Right! It lives on shallow coral reefs.",
+          "retry": "Choose the warm place with coral."
+        },
+        {
+          "id": "bla-q3",
+          "prompt": {
+            "earlyReader": [
+              "What does it eat?"
+            ],
+            "story": [
+              "Which food does a blacktip reef shark hunt most?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Small fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "fish",
+          "success": "You got it! It eats small reef fish.",
+          "retry": "Look for the food that swims."
+        }
+      ],
+      "vocabularyIDs": [
+        "coral-reef",
+        "school",
+        "habitat"
+      ],
+      "bookFact": "Its black-tipped fin often pokes out of very shallow water.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blacktip-reef-shark/",
+        "https://oceanservice.noaa.gov/facts/coral_reefs.html"
+      ]
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon Shark",
+      "scientificName": "Negaprion brevirostris",
+      "symbol": "🦈",
+      "imageAsset": "shark-lemon.jpg",
+      "imageAuthor": "Albert kok",
+      "imageLicense": "CC BY-SA 3.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Lemonshark.jpg",
+      "color": "#A08A2E",
+      "region": "Mangrove Coast",
+      "mapX": 0.24,
+      "mapY": 0.72,
+      "unlockAt": 13,
+      "discover": {
+        "decodable": [
+          "It is tan. It sits on tan mud. It hid!"
+        ],
+        "earlyReader": [
+          "This is a lemon shark.",
+          "Its skin is yellow-brown.",
+          "It blends in with the sand."
+        ],
+        "story": [
+          "The lemon shark is named for its yellow-brown skin.",
+          "That color helps it blend in over sandy seafloors near the coast."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌿",
+          "narration": {
+            "decodable": [
+              "The pup has a den. It hid in a gap in the den."
+            ],
+            "earlyReader": [
+              "Lemon sharks live near warm coasts.",
+              "Pups grow up among mangrove roots.",
+              "The roots keep them safe."
+            ],
+            "story": [
+              "Lemon sharks live in warm, shallow coastal water, bays, and river mouths.",
+              "Their pups spend their first years in mangrove nurseries, hidden among tangled roots."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It gets a cod. It gets a bug in the mud."
+            ],
+            "earlyReader": [
+              "Lemon sharks eat fish.",
+              "Crabs and shrimp are food too.",
+              "Pups catch small food near the roots."
+            ],
+            "story": [
+              "Lemon sharks eat mostly fish, along with crabs, shrimp, and rays.",
+              "Young sharks hunt small prey in the shallows of their nursery."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big. It has a fin and a fin on top."
+            ],
+            "earlyReader": [
+              "A grown lemon shark is long and sturdy.",
+              "It has two back fins.",
+              "The two fins are almost the same size."
+            ],
+            "story": [
+              "An adult lemon shark can grow to about ten feet long.",
+              "Unlike most sharks, its two back fins are nearly equal in size."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "⚡️",
+          "narration": {
+            "decodable": [
+              "It is dim in the mud. It can get a hum."
+            ],
+            "earlyReader": [
+              "Coastal water can be cloudy.",
+              "Lemon sharks do not need to see well.",
+              "They sense tiny electric signals instead."
+            ],
+            "story": [
+              "Lemon sharks often hunt in murky water where eyes are little help.",
+              "Electric sensors in the snout and a sharp sense of smell lead them to prey."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🤝",
+          "narration": {
+            "decodable": [
+              "The pup has a bud. The pup and his bud run and dip."
+            ],
+            "earlyReader": [
+              "Lemon sharks like company.",
+              "Pups swim in friendly groups.",
+              "They can learn by watching each other."
+            ],
+            "story": [
+              "Lemon sharks are unusually social and often gather in groups.",
+              "Scientists have found that young lemon sharks can learn new tasks by watching other sharks."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "sandy-yellow-skin",
+          "title": "Sandy Yellow Skin",
+          "symbol": "🟡",
+          "description": "Its yellow-brown skin matches the sand below.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "mangrove-nursery",
+          "title": "Mangrove Nursery",
+          "symbol": "🌿",
+          "description": "Pups grow up safely among tangled mangrove roots.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        }
+      ],
+      "mission": {
+        "kind": "mangroveNursery",
+        "title": "Mangrove Hide-and-Seek",
+        "symbol": "leaf.fill",
+        "instructions": {
+          "earlyReader": [
+            "Lemon shark pups hide in the roots.",
+            "Look for each mangrove root.",
+            "Tap it to find a safe spot."
+          ],
+          "story": [
+            "Help the lemon shark pups stay safe in their mangrove nursery.",
+            "Tap each mangrove root to find a hiding place."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Safe! The lemon shark pups hid among the mangrove roots."
+      },
+      "questions": [
+        {
+          "id": "lem-q1",
+          "prompt": {
+            "earlyReader": [
+              "Where do lemon shark pups grow up?"
+            ],
+            "story": [
+              "Which place is a nursery for lemon shark pups?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "mangrove",
+              "label": "Mangrove roots",
+              "symbol": "🌿"
+            },
+            {
+              "id": "nest",
+              "label": "Bird nest",
+              "symbol": "🪺"
+            },
+            {
+              "id": "farm",
+              "label": "Farm",
+              "symbol": "🚜"
+            }
+          ],
+          "correctID": "mangrove",
+          "success": "Yes! Pups grow up among mangrove roots.",
+          "retry": "Look for the roots that stand in the water."
+        },
+        {
+          "id": "lem-q2",
+          "prompt": {
+            "earlyReader": [
+              "What helps it hide on the sand?"
+            ],
+            "story": [
+              "Which feature camouflages a lemon shark over sand?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "sand",
+              "label": "Sandy yellow skin",
+              "symbol": "🟡"
+            },
+            {
+              "id": "paint",
+              "label": "Paints",
+              "symbol": "🎨"
+            },
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            }
+          ],
+          "correctID": "sand",
+          "success": "Right! Its yellow-brown skin matches the sand.",
+          "retry": "Think about the color of a lemon."
+        },
+        {
+          "id": "lem-q3",
+          "prompt": {
+            "earlyReader": [
+              "What helps it hunt in cloudy water?"
+            ],
+            "story": [
+              "Which sense works when the water is murky?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "electric",
+              "label": "Electric sense",
+              "symbol": "⚡️"
+            },
+            {
+              "id": "bell",
+              "label": "Bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "electric",
+          "success": "Exactly! Electric sensors find hidden prey.",
+          "retry": "Choose the electric sparkle."
+        }
+      ],
+      "vocabularyIDs": [
+        "mangrove",
+        "nursery",
+        "pup"
+      ],
+      "bookFact": "Its pups grow up in mangrove nurseries with their friends.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/lemon-shark/",
+        "https://oceanservice.noaa.gov/facts/mangroves.html"
+      ]
+    },
+    {
+      "id": "bull",
+      "name": "Bull Shark",
+      "scientificName": "Carcharhinus leucas",
+      "symbol": "🦈",
+      "imageAsset": "shark-bull.jpg",
+      "imageAuthor": "Albert Kok",
+      "imageLicense": "CC BY-SA 3.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Bull_shark_(2007).jpg",
+      "color": "#6E7F8D",
+      "region": "Warm Coasts and Rivers",
+      "mapX": 0.53,
+      "mapY": 0.6,
+      "unlockAt": 14,
+      "discover": {
+        "decodable": [
+          "It is big. It can run up in the mud."
+        ],
+        "earlyReader": [
+          "This is a bull shark.",
+          "It swims in the sea and in rivers.",
+          "Not many sharks can do that."
+        ],
+        "story": [
+          "The sturdy bull shark swims along warm coasts and far up rivers.",
+          "Unlike most sharks, it can live in both salt water and fresh water."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🏞️",
+          "narration": {
+            "decodable": [
+              "It runs in the sun. It runs up to a dam."
+            ],
+            "earlyReader": [
+              "Bull sharks like warm, shallow water.",
+              "They swim where rivers meet the sea.",
+              "Some swim far up a river."
+            ],
+            "story": [
+              "Bull sharks live along warm coasts, in estuaries, and in rivers and lakes.",
+              "Some have been found hundreds of miles from the ocean."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It gets a cod. It gets a big bit."
+            ],
+            "earlyReader": [
+              "Bull sharks eat many kinds of fish.",
+              "They eat stingrays too.",
+              "They hunt in cloudy water."
+            ],
+            "story": [
+              "Bull sharks eat bony fish, stingrays, and other small sharks.",
+              "They often hunt in shallow, cloudy water near the bottom."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big and fat. It is not a pup."
+            ],
+            "earlyReader": [
+              "A bull shark has a thick body.",
+              "Its snout is short and round.",
+              "It can grow longer than a rowboat."
+            ],
+            "story": [
+              "The bull shark has a stout body and a short, blunt snout.",
+              "Large females can grow about eleven feet long."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👃",
+          "narration": {
+            "decodable": [
+              "The mud is dim. It can get a hum in the mud."
+            ],
+            "earlyReader": [
+              "River water can be muddy.",
+              "A bull shark smells food from far away.",
+              "It feels fish moving in the water."
+            ],
+            "story": [
+              "In muddy water a bull shark relies on smell, vibration, and electric senses more than sight.",
+              "These senses lead it to prey it cannot see."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💧",
+          "narration": {
+            "decodable": [
+              "Up, up, up it runs. It is fit in the mud."
+            ],
+            "earlyReader": [
+              "Sea water is salty.",
+              "River water is fresh.",
+              "A bull shark’s body can handle both."
+            ],
+            "story": [
+              "A bull shark’s kidneys and other organs adjust the salt and water inside its body.",
+              "That lets it move between the salty ocean and freshwater rivers."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "river-traveler",
+          "title": "River Traveler",
+          "symbol": "🏞️",
+          "description": "It can swim from the salty sea into freshwater rivers.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "sturdy-body",
+          "title": "Sturdy Body",
+          "symbol": "💪",
+          "description": "Its thick body and blunt snout give the bull shark its name.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        }
+      ],
+      "mission": {
+        "kind": "riverJourney",
+        "title": "River Journey",
+        "symbol": "water.waves",
+        "instructions": {
+          "earlyReader": [
+            "The river meets the sea here.",
+            "Swim from salt water to fresh water.",
+            "Tap each river wave to swim on."
+          ],
+          "story": [
+            "Guide the bull shark from the salty sea into a freshwater river.",
+            "Follow each wave upstream as its body adjusts to the fresh water."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Splash! The bull shark swam from the sea into the river."
+      },
+      "questions": [
+        {
+          "id": "bul-q1",
+          "prompt": {
+            "earlyReader": [
+              "Where can a bull shark swim?"
+            ],
+            "story": [
+              "Which place can a bull shark visit that most sharks cannot?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "river",
+              "label": "River",
+              "symbol": "🏞️"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud",
+              "symbol": "☁️"
+            },
+            {
+              "id": "tree",
+              "label": "Tree",
+              "symbol": "🌳"
+            }
+          ],
+          "correctID": "river",
+          "success": "Yes! It can swim up a river.",
+          "retry": "Choose the water that flows to the sea."
+        },
+        {
+          "id": "bul-q2",
+          "prompt": {
+            "earlyReader": [
+              "What does a bull shark eat?"
+            ],
+            "story": [
+              "Which food does a bull shark hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! Bull sharks eat fish.",
+          "retry": "Pick the food that swims."
+        },
+        {
+          "id": "bul-q3",
+          "prompt": {
+            "earlyReader": [
+              "What helps it find food in muddy water?"
+            ],
+            "story": [
+              "Which sense works well when the water is cloudy?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "smell",
+              "label": "Smell",
+              "symbol": "👃"
+            },
+            {
+              "id": "colors",
+              "label": "Crayons",
+              "symbol": "🖍️"
+            },
+            {
+              "id": "clock",
+              "label": "Clock",
+              "symbol": "⏰"
+            }
+          ],
+          "correctID": "smell",
+          "success": "Exactly! It can smell food in muddy water.",
+          "retry": "Choose the nose."
+        }
+      ],
+      "vocabularyIDs": [
+        "freshwater",
+        "estuary",
+        "habitat"
+      ],
+      "bookFact": "It can swim from the salty sea far up freshwater rivers.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/carcharhinus-leucas/",
+        "https://oceana.org/marine-life/bull-shark/"
+      ]
+    },
+    {
+      "id": "sawshark",
+      "name": "Longnose Sawshark",
+      "scientificName": "Pristiophorus cirratus",
+      "symbol": "🦈",
+      "imageAsset": "shark-sawshark.jpg",
+      "imageAuthor": "ume-y (photo shows a Japanese sawshark, a close relative)",
+      "imageLicense": "CC BY 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Pristiophorus_japonicus_2_(cropped).jpg",
+      "color": "#A9824E",
+      "region": "Sandy Southern Seafloor",
+      "mapX": 0.66,
+      "mapY": 0.86,
+      "unlockAt": 15,
+      "discover": {
+        "decodable": [
+          "It has a big rod. The rod has tips."
+        ],
+        "earlyReader": [
+          "This is a longnose sawshark.",
+          "Its snout looks like a saw.",
+          "Two long feelers hang from the snout."
+        ],
+        "story": [
+          "The longnose sawshark carries a long, flat snout edged with sharp teeth.",
+          "It glides over sandy seafloors off southern Australia."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🏖️",
+          "narration": {
+            "decodable": [
+              "It is dim. It sits in the mud."
+            ],
+            "earlyReader": [
+              "Sawsharks live near southern Australia.",
+              "They swim close to the sandy bottom.",
+              "The water there is cool."
+            ],
+            "story": [
+              "Longnose sawsharks live over sand and gravel off the southern coast of Australia.",
+              "They stay near the seafloor, from shallow bays to deep water."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🦐",
+          "narration": {
+            "decodable": [
+              "A bug hid in the mud. It can get the bug."
+            ],
+            "earlyReader": [
+              "Sawsharks eat small fish.",
+              "They eat shrimp and squid too.",
+              "Their food hides in the sand."
+            ],
+            "story": [
+              "Small fish, shrimp, and squid are a sawshark’s main foods.",
+              "Much of its prey hides in or just above the sand."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not big. It is as big as a kid."
+            ],
+            "earlyReader": [
+              "A sawshark is long and thin.",
+              "It is about as long as a child is tall.",
+              "Its saw is a big part of its body."
+            ],
+            "story": [
+              "A longnose sawshark grows to about four and a half feet long.",
+              "Its saw-shaped snout makes up more than a quarter of that length."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "〰️",
+          "narration": {
+            "decodable": [
+              "It can tap the mud. Is it a bug? It is!"
+            ],
+            "earlyReader": [
+              "Two feelers hang from the saw.",
+              "They are called barbels.",
+              "They touch the sand to find food."
+            ],
+            "story": [
+              "Two long barbels trail from the middle of the sawshark’s snout and brush the seafloor.",
+              "Along with electric sensors in the snout, they help it find buried prey."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🪚",
+          "narration": {
+            "decodable": [
+              "It can bat and hit. Rap, rap! It got a cod."
+            ],
+            "earlyReader": [
+              "The saw has teeth on both sides.",
+              "The shark swings it from side to side.",
+              "The saw knocks small fish still."
+            ],
+            "story": [
+              "A sawshark sweeps its toothed snout quickly from side to side.",
+              "The strike stuns small fish and stirs hidden prey out of the sand."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "saw-snout",
+          "title": "Saw Snout",
+          "symbol": "🪚",
+          "description": "Its long, flat snout has sharp teeth along both edges.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "snout-feelers",
+          "title": "Snout Feelers",
+          "symbol": "〰️",
+          "description": "Two long barbels on its snout feel for food in the sand.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        }
+      ],
+      "mission": {
+        "kind": "sawSweep",
+        "title": "Sandy Saw Sweep",
+        "symbol": "arrow.left.and.right",
+        "instructions": {
+          "earlyReader": [
+            "Shrimp hide in the sand.",
+            "Feel for them with the barbels.",
+            "Tap each shrimp you find."
+          ],
+          "story": [
+            "Glide the sawshark’s long snout just above the sandy seafloor.",
+            "Use its barbels to find each hidden shrimp, then tap to sweep the saw."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Swish! The sawshark swept its saw and found its food."
+      },
+      "questions": [
+        {
+          "id": "saw-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does a sawshark’s snout look like?"
+            ],
+            "story": [
+              "Which tool does a sawshark’s snout resemble?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "saw",
+              "label": "Saw",
+              "symbol": "🪚"
+            },
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            }
+          ],
+          "correctID": "saw",
+          "success": "Yes! Its snout looks like a saw.",
+          "retry": "Look for the tool with teeth."
+        },
+        {
+          "id": "saw-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does a sawshark look for food?"
+            ],
+            "story": [
+              "Where does a sawshark search for prey?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "floor",
+              "label": "Seafloor",
+              "symbol": "🏝️"
+            },
+            {
+              "id": "sky",
+              "label": "Sky",
+              "symbol": "☁️"
+            },
+            {
+              "id": "tree",
+              "label": "Tree",
+              "symbol": "🌳"
+            }
+          ],
+          "correctID": "floor",
+          "success": "Right! It hunts along the seafloor.",
+          "retry": "Choose the sandy bottom of the sea."
+        },
+        {
+          "id": "saw-q3",
+          "prompt": {
+            "earlyReader": [
+              "What feels for food in the sand?"
+            ],
+            "story": [
+              "Which body part touches the sand to find prey?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "barbels",
+              "label": "Barbels",
+              "symbol": "〰️"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            }
+          ],
+          "correctID": "barbels",
+          "success": "Exactly! Its barbels feel the sand.",
+          "retry": "Choose the soft feelers."
+        }
+      ],
+      "vocabularyIDs": [
+        "rostrum",
+        "barbels",
+        "seafloor"
+      ],
+      "bookFact": "Its long snout is a saw with teeth on both sides.",
+      "sourceURLs": [
+        "https://australian.museum/learn/animals/fishes/common-sawshark-pristiophorus-cirratus/"
+      ]
+    },
+    {
+      "id": "cookiecutter",
+      "name": "Cookiecutter Shark",
+      "scientificName": "Isistius brasiliensis",
+      "symbol": "🦈",
+      "imageAsset": "shark-cookiecutter.jpg",
+      "imageAuthor": "Hugues Evano / IFREMER",
+      "imageLicense": "CC BY 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squalelet_f%C3%A9roce_(Isistius_brasiliensis)_(Ifremer_00764-87574).jpg",
+      "color": "#5B6FA8",
+      "region": "Warm Deep Ocean",
+      "mapX": 0.1,
+      "mapY": 0.84,
+      "unlockAt": 16,
+      "discover": {
+        "decodable": [
+          "It is not big. It can get a bit."
+        ],
+        "earlyReader": [
+          "This is a cookiecutter shark.",
+          "It is a small shark from the deep sea.",
+          "Its belly glows green."
+        ],
+        "story": [
+          "The small cookiecutter shark spends its days deep in warm oceans.",
+          "Its belly glows with a soft green light."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌑",
+          "narration": {
+            "decodable": [
+              "The sun set. Up it runs to the top."
+            ],
+            "earlyReader": [
+              "Cookiecutter sharks live in warm oceans.",
+              "By day they stay very deep.",
+              "At night they swim up."
+            ],
+            "story": [
+              "Cookiecutter sharks live in warm oceans around the world.",
+              "They spend the day in deep, dark water and rise toward the surface at night."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🍪",
+          "narration": {
+            "decodable": [
+              "It gets a bit of a big cod. Nip!"
+            ],
+            "earlyReader": [
+              "This shark eats squid.",
+              "It also takes a small round bite from big fish.",
+              "The big fish swims away."
+            ],
+            "story": [
+              "Cookiecutter sharks eat squid and take small round bites from much larger fish and whales.",
+              "The larger animal swims on, left with a round mark."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is as big as a cat. It is not fat."
+            ],
+            "earlyReader": [
+              "A cookiecutter shark is small.",
+              "It is about as long as a cat.",
+              "Its body is shaped like a cigar."
+            ],
+            "story": [
+              "A cookiecutter shark grows to only about twenty inches long.",
+              "Its slim, rounded body once earned it the name cigar shark."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👀",
+          "narration": {
+            "decodable": [
+              "It is dim, but it can get a cod."
+            ],
+            "earlyReader": [
+              "The deep sea is dark.",
+              "This shark has big eyes.",
+              "Big eyes catch a little light."
+            ],
+            "story": [
+              "Large eyes help a cookiecutter shark gather the faint light of deep water.",
+              "Good vision helps it notice animals swimming nearby."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💚",
+          "narration": {
+            "decodable": [
+              "It is dim in the pit. But the gut is not dim!"
+            ],
+            "earlyReader": [
+              "Its belly makes green light.",
+              "A dark band crosses its throat.",
+              "The glow helps it hide from below."
+            ],
+            "story": [
+              "Tiny light organs make the cookiecutter shark’s belly glow green.",
+              "From below, the glow blends with light from above, while a dark collar stays unlit."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "glowing-belly",
+          "title": "Glowing Belly",
+          "symbol": "💚",
+          "description": "Tiny lights make its belly glow green in the dark sea.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "cookie-bite",
+          "title": "Cookie Bite",
+          "symbol": "🍪",
+          "description": "Its round mouth takes a small, cookie-shaped bite.",
+          "imageAsset": null,
+          "unlockTopicID": "food"
+        }
+      ],
+      "mission": {
+        "kind": "glowLure",
+        "title": "Glow in the Deep",
+        "symbol": "lightbulb.fill",
+        "instructions": {
+          "earlyReader": [
+            "The deep water is dark.",
+            "Look for a soft green glow.",
+            "Tap each glow you see."
+          ],
+          "story": [
+            "Dive into dark water where the cookiecutter shark’s belly shines green.",
+            "Spot each soft glow before it fades into the deep."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Glow! The cookiecutter shark lit up the deep sea."
+      },
+      "questions": [
+        {
+          "id": "coo-q1",
+          "prompt": {
+            "earlyReader": [
+              "Where does it stay in the day?"
+            ],
+            "story": [
+              "Where does a cookiecutter shark spend the daytime?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "deep",
+              "label": "Deep ocean",
+              "symbol": "🌑"
+            },
+            {
+              "id": "yard",
+              "label": "Back yard",
+              "symbol": "🏡"
+            },
+            {
+              "id": "mountain",
+              "label": "Mountain top",
+              "symbol": "⛰️"
+            }
+          ],
+          "correctID": "deep",
+          "success": "Yes! It stays in the deep ocean by day.",
+          "retry": "Choose the darkest underwater place."
+        },
+        {
+          "id": "coo-q2",
+          "prompt": {
+            "earlyReader": [
+              "What does its belly do?"
+            ],
+            "story": [
+              "What is special about a cookiecutter shark’s belly?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "glow",
+              "label": "Glows green",
+              "symbol": "💚"
+            },
+            {
+              "id": "singing",
+              "label": "Singing",
+              "symbol": "🎵"
+            },
+            {
+              "id": "paint",
+              "label": "Paints",
+              "symbol": "🎨"
+            }
+          ],
+          "correctID": "glow",
+          "success": "Right! Its belly glows green.",
+          "retry": "Look for the green light."
+        },
+        {
+          "id": "coo-q3",
+          "prompt": {
+            "earlyReader": [
+              "When does it swim up?"
+            ],
+            "story": [
+              "When does a cookiecutter shark rise toward the surface?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "night",
+              "label": "Night",
+              "symbol": "🌙"
+            },
+            {
+              "id": "lunch",
+              "label": "Lunch bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "snow",
+              "label": "Snow day",
+              "symbol": "☃️"
+            }
+          ],
+          "correctID": "night",
+          "success": "Exactly! It swims up at night.",
+          "retry": "Choose the time when the sky is dark."
+        }
+      ],
+      "vocabularyIDs": [
+        "bioluminescence",
+        "deep-sea",
+        "migrate"
+      ],
+      "bookFact": "Its belly glows green in the dark, deep sea.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/isistius-brasiliensis/",
+        "https://oceana.org/marine-life/cookiecutter-shark/"
+      ]
+    },
+    {
+      "id": "angel",
+      "name": "Angel Shark",
+      "scientificName": "Squatina californica",
+      "symbol": "🦈",
+      "imageAsset": "shark-angel.jpg",
+      "imageAuthor": "Julien Renoult (photo shows a common angelshark, a close relative)",
+      "imageLicense": "CC BY 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squatina_squatina_120867959.jpg",
+      "color": "#B08D62",
+      "region": "Sandy Pacific Coast",
+      "mapX": 0.64,
+      "mapY": 0.18,
+      "unlockAt": 17,
+      "discover": {
+        "decodable": [
+          "It is a mat in the mud."
+        ],
+        "earlyReader": [
+          "This is an angel shark.",
+          "Its body is flat and wide.",
+          "It hides under the sand."
+        ],
+        "story": [
+          "The flat, wide Pacific angel shark looks more like a ray than a shark.",
+          "It lies hidden under sand on the seafloor."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🏖️",
+          "narration": {
+            "decodable": [
+              "It sits in the mud. The mud is on top of it."
+            ],
+            "earlyReader": [
+              "Angel sharks live on sandy seafloors.",
+              "They rest near rocks and kelp.",
+              "Sand covers their backs."
+            ],
+            "story": [
+              "Pacific angel sharks live on sandy and muddy bottoms along the eastern Pacific coast.",
+              "They often settle near rocky reefs and kelp forests."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A cod runs in. Up it pops! It got the cod."
+            ],
+            "earlyReader": [
+              "Angel sharks eat fish.",
+              "They eat squid too.",
+              "The food swims right over them."
+            ],
+            "story": [
+              "Pacific angel sharks eat bottom fish such as halibut and croakers, along with squid.",
+              "They catch prey that swims just above their hiding place."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is as big as a kid. It is a fat mat."
+            ],
+            "earlyReader": [
+              "An angel shark is flat like a pancake.",
+              "Its side fins are wide like wings.",
+              "It is about as long as a child is tall."
+            ],
+            "story": [
+              "A Pacific angel shark grows to about five feet long.",
+              "Its broad pectoral fins spread out like wings beside its flat body."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👀",
+          "narration": {
+            "decodable": [
+              "It hid, but it is up. It can get a hum and a tap."
+            ],
+            "earlyReader": [
+              "Its eyes sit on top of its head.",
+              "They peek out of the sand.",
+              "The shark watches for fish above."
+            ],
+            "story": [
+              "An angel shark’s eyes sit on top of its head, so they stay clear when the body is buried.",
+              "It watches for the shape of prey passing overhead."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "⚡️",
+          "narration": {
+            "decodable": [
+              "It hid and sat. Pop! It hit as a cod ran in."
+            ],
+            "earlyReader": [
+              "The angel shark lies very still.",
+              "A fish swims close.",
+              "Snap! The shark lunges up fast."
+            ],
+            "story": [
+              "A buried angel shark can wait in one spot for days.",
+              "When a fish swims close, it lunges upward and catches it in a fraction of a second."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "sandy-disguise",
+          "title": "Sandy Disguise",
+          "symbol": "🏖️",
+          "description": "Its flat, speckled body disappears under the sand.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        },
+        {
+          "id": "lightning-lunge",
+          "title": "Lightning Lunge",
+          "symbol": "⚡️",
+          "description": "It bursts up from the sand to catch a fish in a flash.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "sandAmbush",
+        "title": "Sandy Surprise",
+        "symbol": "eye.fill",
+        "instructions": {
+          "earlyReader": [
+            "Hide under the sand.",
+            "Stay very still.",
+            "Tap each fish that swims close."
+          ],
+          "story": [
+            "Bury the angel shark in the sand and wait without moving.",
+            "When a fish swims close overhead, tap to lunge."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Whoosh! The angel shark popped out of the sand."
+      },
+      "questions": [
+        {
+          "id": "ang-q1",
+          "prompt": {
+            "earlyReader": [
+              "Where does an angel shark hide?"
+            ],
+            "story": [
+              "Where does an angel shark wait for prey?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "sand",
+              "label": "Under the sand",
+              "symbol": "🏖️"
+            },
+            {
+              "id": "nest",
+              "label": "Bird nest",
+              "symbol": "🪺"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud",
+              "symbol": "☁️"
+            }
+          ],
+          "correctID": "sand",
+          "success": "Yes! It hides under the sand.",
+          "retry": "Choose the soft seafloor."
+        },
+        {
+          "id": "ang-q2",
+          "prompt": {
+            "earlyReader": [
+              "How does it catch food?"
+            ],
+            "story": [
+              "How does an angel shark hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "wait",
+              "label": "Waits and strikes",
+              "symbol": "⚡️"
+            },
+            {
+              "id": "flies",
+              "label": "Flies away",
+              "symbol": "🕊️"
+            },
+            {
+              "id": "climbs",
+              "label": "Climbs a tree",
+              "symbol": "🌳"
+            }
+          ],
+          "correctID": "wait",
+          "success": "Right! It waits, then strikes fast.",
+          "retry": "Choose the hunter that stays still first."
+        },
+        {
+          "id": "ang-q3",
+          "prompt": {
+            "earlyReader": [
+              "What helps it stay hidden?"
+            ],
+            "story": [
+              "What helps an angel shark blend in with the sand?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "camo",
+              "label": "Camouflage",
+              "symbol": "🫥"
+            },
+            {
+              "id": "bell",
+              "label": "Bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            }
+          ],
+          "correctID": "camo",
+          "success": "Exactly! Camouflage hides it in the sand.",
+          "retry": "Choose the one that blends in."
+        }
+      ],
+      "vocabularyIDs": [
+        "ambush",
+        "camouflage",
+        "pectoral-fin"
+      ],
+      "bookFact": "It hides flat under the sand, then pops up to catch fish.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/squatina-californica/"
+      ]
+    },
+    {
+      "id": "port-jackson",
+      "name": "Port Jackson Shark",
+      "scientificName": "Heterodontus portusjacksoni",
+      "symbol": "🦈",
+      "imageAsset": "shark-port-jackson.jpg",
+      "imageAuthor": "Mark Norman, Museums Victoria",
+      "imageLicense": "CC BY 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Port-jackson-shark-heterodontus-portusjacksoni-417888-large.jpg",
+      "color": "#8C7A5E",
+      "region": "Rocky Southern Reef",
+      "mapX": 0.77,
+      "mapY": 0.86,
+      "unlockAt": 18,
+      "discover": {
+        "decodable": [
+          "It is tan. It has a rib on top."
+        ],
+        "earlyReader": [
+          "This is a Port Jackson shark.",
+          "It has a blunt head and dark bands.",
+          "It lives near Australia."
+        ],
+        "story": [
+          "The Port Jackson shark has a blunt head with a ridge above each eye.",
+          "Dark bands cross its body like a harness."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🪨",
+          "narration": {
+            "decodable": [
+              "It naps in a den. It gets up as the sun dips."
+            ],
+            "earlyReader": [
+              "Port Jackson sharks live on rocky reefs.",
+              "They rest in caves in the day.",
+              "They come out at night."
+            ],
+            "story": [
+              "Port Jackson sharks live on rocky reefs off southern Australia.",
+              "They rest in caves and gullies by day and search for food at night."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐚",
+          "narration": {
+            "decodable": [
+              "It bit. Bam! The top is in bits. It got it."
+            ],
+            "earlyReader": [
+              "This shark eats sea urchins.",
+              "It eats crabs and sea snails too.",
+              "Its food has hard shells."
+            ],
+            "story": [
+              "Sea urchins, crabs, and shellfish are favorite foods of the Port Jackson shark.",
+              "It searches the seafloor for these hard-shelled animals."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is as big as a kid. It is not as big as a cab."
+            ],
+            "earlyReader": [
+              "This shark is not very big.",
+              "Most are about as long as a child is tall.",
+              "It has a sharp spine by each back fin."
+            ],
+            "story": [
+              "Most Port Jackson sharks grow to about four or five feet long.",
+              "A sharp spine stands in front of each of the two fins on its back."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👃",
+          "narration": {
+            "decodable": [
+              "It is dim. A bug hid, but it can get to the bug."
+            ],
+            "earlyReader": [
+              "This shark hunts in the dark.",
+              "It has a very good nose.",
+              "It smells food hidden in the sand."
+            ],
+            "story": [
+              "A Port Jackson shark hunts at night, mostly by smell.",
+              "Its large nostrils help it find prey hidden among rocks and sand."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "It can sit and sit in a den. It can sip as it sits."
+            ],
+            "earlyReader": [
+              "Its front teeth are small and pointed.",
+              "Its back teeth are wide and flat.",
+              "The flat teeth crush hard shells."
+            ],
+            "story": [
+              "The Port Jackson shark has two kinds of teeth: pointed ones in front to grip and flat ones behind to crush.",
+              "It can also pump water over its gills, so it breathes while lying still."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "crushing-teeth",
+          "title": "Crushing Teeth",
+          "symbol": "🦷",
+          "description": "Flat back teeth crunch the hard shells of its food.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "harness-stripes",
+          "title": "Harness Stripes",
+          "symbol": "🎗️",
+          "description": "Dark bands cross its body like a harness.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        }
+      ],
+      "mission": {
+        "kind": "shellCrunch",
+        "title": "Crunchy Night Hunt",
+        "symbol": "moon.stars.fill",
+        "instructions": {
+          "earlyReader": [
+            "Night has come to the reef.",
+            "Sniff out the sea urchins.",
+            "Tap each sea urchin to crunch it."
+          ],
+          "story": [
+            "Leave the cave at night and follow the scent of food across the reef.",
+            "Find each sea urchin and crush its shell with flat back teeth."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Crunch! The Port Jackson shark cracked the hard shells."
+      },
+      "questions": [
+        {
+          "id": "por-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does this shark crunch?"
+            ],
+            "story": [
+              "Which food does a Port Jackson shark crush with its teeth?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "urchin",
+              "label": "Sea urchin",
+              "symbol": "🟣"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            }
+          ],
+          "correctID": "urchin",
+          "success": "Yes! It crunches sea urchins.",
+          "retry": "Choose the spiky sea animal."
+        },
+        {
+          "id": "por-q2",
+          "prompt": {
+            "earlyReader": [
+              "What shape is its egg case?"
+            ],
+            "story": [
+              "Which shape matches a Port Jackson shark’s egg case?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "spiral-egg",
+              "label": "Spiral",
+              "symbol": "🌀"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            },
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            }
+          ],
+          "correctID": "spiral-egg",
+          "success": "Right! Its egg case is a spiral.",
+          "retry": "Look for the twisty shape."
+        },
+        {
+          "id": "por-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does it rest in the day?"
+            ],
+            "story": [
+              "Where does a Port Jackson shark spend the daytime?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "rocks",
+              "label": "Rocky reef",
+              "symbol": "🪨"
+            },
+            {
+              "id": "desert",
+              "label": "Dry desert",
+              "symbol": "🏜️"
+            },
+            {
+              "id": "farm",
+              "label": "Farm",
+              "symbol": "🚜"
+            }
+          ],
+          "correctID": "rocks",
+          "success": "Exactly! It rests among the rocks.",
+          "retry": "Choose the rocky place under the sea."
+        }
+      ],
+      "vocabularyIDs": [
+        "egg-case",
+        "habitat",
+        "migrate"
+      ],
+      "bookFact": "Its flat back teeth crunch sea urchins and shells.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/heterodontus-portusjacksoni/"
+      ]
     }
   ],
   "vocabulary": [
@@ -2812,6 +5479,72 @@
       "word": "longevity",
       "symbol": "⌛️",
       "explanation": "Living for a very long time."
+    },
+    {
+      "id": "streamlined",
+      "word": "streamlined",
+      "symbol": "💨",
+      "explanation": "Having a smooth shape that slips easily through water."
+    },
+    {
+      "id": "gill-rakers",
+      "word": "gill rakers",
+      "symbol": "🪮",
+      "explanation": "Bristles in the gills that strain food from water."
+    },
+    {
+      "id": "nocturnal",
+      "word": "nocturnal",
+      "symbol": "🌙",
+      "explanation": "Awake and active at night."
+    },
+    {
+      "id": "coral-reef",
+      "word": "coral reef",
+      "symbol": "🪸",
+      "explanation": "An underwater ridge built by tiny coral animals."
+    },
+    {
+      "id": "mangrove",
+      "word": "mangrove",
+      "symbol": "🌿",
+      "explanation": "A tree that grows in salty water along warm coasts."
+    },
+    {
+      "id": "nursery",
+      "word": "nursery",
+      "symbol": "🍼",
+      "explanation": "A safe place where young animals grow up."
+    },
+    {
+      "id": "freshwater",
+      "word": "fresh water",
+      "symbol": "💧",
+      "explanation": "Water in rivers and lakes that is not salty."
+    },
+    {
+      "id": "estuary",
+      "word": "estuary",
+      "symbol": "🏞️",
+      "explanation": "A place where a river meets the sea."
+    },
+    {
+      "id": "rostrum",
+      "word": "rostrum",
+      "symbol": "🪚",
+      "explanation": "A long snout that sticks out in front of the head."
+    },
+    {
+      "id": "bioluminescence",
+      "word": "bioluminescence",
+      "symbol": "💚",
+      "explanation": "Light made by a living thing."
+    },
+    {
+      "id": "egg-case",
+      "word": "egg case",
+      "symbol": "🌀",
+      "explanation": "A tough pouch that protects a baby shark before it hatches."
     }
   ],
   "expansions": [
@@ -3219,6 +5952,418 @@
             "story": [
               "Ocean currents can move debris far from where people first drop it.",
               "Choosing reusable items and disposing of waste properly helps protect cold-water habitats as well as warm ones."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "mako",
+      "sourceURLs": [
+        "https://www.fisheries.noaa.gov/species/atlantic-shortfin-mako-shark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Built for Speed",
+          "symbol": "🚀",
+          "narration": {
+            "earlyReader": [
+              "A mako is shaped like a rocket.",
+              "Its back is deep blue and its belly is white.",
+              "Thin pointed teeth grip slippery fish."
+            ],
+            "story": [
+              "The mako's metallic blue back and white belly help it disappear in open water.",
+              "Slender, pointed teeth hold on to fast, slippery prey."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Makos grow up slowly.",
+              "Too much fishing means fewer makos.",
+              "Fishing rules give them time to grow."
+            ],
+            "story": [
+              "Shortfin makos grow slowly and have few pups, so their numbers recover slowly.",
+              "Careful fishing rules help mako populations rebuild."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "basking",
+      "sourceURLs": [
+        "https://www.sharktrust.org/basking-shark-project"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Giant Gills",
+          "symbol": "〰️",
+          "narration": {
+            "earlyReader": [
+              "A basking shark has huge gill slits.",
+              "They reach almost all the way around its head.",
+              "Water flows in the mouth and out the gills."
+            ],
+            "story": [
+              "Five enormous gill slits nearly circle the basking shark's head.",
+              "Seawater streams through them while the gill rakers hold back food."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Basking sharks feed near the top.",
+              "Boats should slow down and give them room.",
+              "Watching from far away keeps them safe."
+            ],
+            "story": [
+              "Because basking sharks feed at the surface, boats can disturb or bump them.",
+              "Slowing down and keeping a respectful distance lets them feed in peace."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "zebra",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/facts/coral_reefs.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Stripes and Spots",
+          "symbol": "🦓",
+          "narration": {
+            "earlyReader": [
+              "A baby zebra shark is dark with pale stripes.",
+              "The stripes fade as it grows.",
+              "A grown-up is tan with dark spots."
+            ],
+            "story": [
+              "Young zebra sharks are dark brown with pale yellow stripes.",
+              "Adults turn sandy tan with dark spots, so some people call them leopard sharks."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Zebra sharks need healthy reefs.",
+              "Coral can break when people touch it.",
+              "We can look at a reef and not touch."
+            ],
+            "story": [
+              "Zebra sharks depend on healthy coral reefs for food and shelter.",
+              "Looking without touching and keeping the water clean help reefs stay alive."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "blacktip-reef",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/facts/coralreef-climate.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Fin Tips",
+          "symbol": "🖤",
+          "narration": {
+            "earlyReader": [
+              "Look at the tall fin on its back.",
+              "The tip is black with a white band below.",
+              "The other fins have black tips too."
+            ],
+            "story": [
+              "A bright white band sits under the black tip of the blacktip reef shark's first back fin.",
+              "The bold markings make this shark easy to recognize in clear, shallow water."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Coral reefs are homes for many animals.",
+              "Reefs need clean, cool water.",
+              "Saving energy at home helps reefs far away."
+            ],
+            "story": [
+              "Coral reefs shelter the fish that blacktip reef sharks eat.",
+              "Reefs stay healthiest in clean water that does not get too warm, so caring for the climate helps them."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "lemon",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/facts/mangroves.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Lemon Color",
+          "symbol": "🍋",
+          "narration": {
+            "earlyReader": [
+              "A lemon shark has a yellow-brown back.",
+              "Its belly is pale.",
+              "It has a short, blunt snout."
+            ],
+            "story": [
+              "A lemon shark's yellow-brown back fades to a pale belly.",
+              "Its head is broad and flat with a short, rounded snout."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Mangrove trees grow in salty water.",
+              "Their roots are a nursery for baby fish and sharks.",
+              "Keeping mangroves standing keeps pups safe."
+            ],
+            "story": [
+              "Mangrove forests shelter young sharks, fish, and many other animals.",
+              "Protecting these trees along the coast protects the nurseries lemon sharks need."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "bull",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/facts/estuary.html",
+        "https://oceanservice.noaa.gov/ocean/help-our-ocean.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Blunt Snout",
+          "symbol": "🐂",
+          "narration": {
+            "earlyReader": [
+              "A bull shark has a short, wide snout.",
+              "Its body is thick and strong.",
+              "That shape gave the bull shark its name."
+            ],
+            "story": [
+              "The bull shark is named for its short, blunt snout and stocky body.",
+              "Its small eyes suit a life in cloudy water, where other senses matter more than sight."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Young bull sharks grow up where rivers meet the sea.",
+              "Clean rivers help the pups stay safe.",
+              "We can keep trash out of rivers and streams."
+            ],
+            "story": [
+              "Estuaries, where rivers meet the sea, shelter young bull sharks while they grow.",
+              "Keeping rivers clean protects these nursery waters and the animals that depend on them."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "sawshark",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/ocean/help-our-ocean.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Gills on the Side",
+          "symbol": "🔍",
+          "narration": {
+            "earlyReader": [
+              "A sawshark has gills on its sides.",
+              "A sawfish has gills under its body.",
+              "That is how you can tell them apart."
+            ],
+            "story": [
+              "Sawsharks are true sharks, with gill slits on the sides of the head and barbels on the snout.",
+              "Sawfish look similar but are rays, with gills underneath and no barbels."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Sawsharks live near the seafloor.",
+              "Fishing nets can catch them by mistake.",
+              "Careful fishing helps seafloor animals."
+            ],
+            "story": [
+              "Because sawsharks live near the bottom, they are sometimes caught by accident in fishing nets.",
+              "Careful fishing rules help keep seafloor animals and their habitats healthy."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "cookiecutter",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/hazards/marinedebris/plastics-in-the-ocean.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Round Mouth",
+          "symbol": "⭕️",
+          "narration": {
+            "earlyReader": [
+              "A cookiecutter shark has a round mouth.",
+              "Its lips hold on like a suction cup.",
+              "Its bottom teeth are joined in a row."
+            ],
+            "story": [
+              "Fleshy lips let the cookiecutter shark’s round mouth cling to a larger animal by suction.",
+              "Its lower teeth are joined together in a single row, like the edge of a saw."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "The deep ocean is far from land.",
+              "Trash can still drift all the way there.",
+              "Using less plastic helps deep-sea animals."
+            ],
+            "story": [
+              "Even the deep, open ocean is connected to land by moving water.",
+              "Keeping plastic out of waterways helps protect animals that live far below the surface."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "angel",
+      "sourceURLs": [
+        "https://oceanservice.noaa.gov/ocean/help-our-ocean.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Flat Body",
+          "symbol": "🥞",
+          "narration": {
+            "earlyReader": [
+              "An angel shark looks a bit like a ray.",
+              "But its gills are on its sides.",
+              "Its wide fins are not joined to its head."
+            ],
+            "story": [
+              "Angel sharks have flat bodies like rays, but their gill slits are on the sides of the head.",
+              "Their wide pectoral fins are separate from the head, which shows they are true sharks."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Angel sharks rest on the seafloor.",
+              "Nets on the bottom can catch them by mistake.",
+              "Fishing rules help angel sharks stay safe."
+            ],
+            "story": [
+              "Because angel sharks lie on the bottom, they are easily caught by accident in fishing nets.",
+              "Fishing rules that protect seafloor animals help Pacific angel sharks stay safe."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "port-jackson",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/heterodontus-portusjacksoni/",
+        "https://oceanservice.noaa.gov/ocean/help-our-ocean.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Spiral Egg",
+          "symbol": "🌀",
+          "narration": {
+            "earlyReader": [
+              "The mother lays dark spiral egg cases.",
+              "She wedges them between rocks.",
+              "A pup grows inside for many months."
+            ],
+            "story": [
+              "A Port Jackson shark’s egg case is a dark spiral that the mother wedges into cracks in the rocks.",
+              "The pup inside takes close to a year to hatch."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Empty egg cases wash up on beaches.",
+              "You can look, but leave reef animals alone.",
+              "Clean reefs help shark eggs stay safe."
+            ],
+            "story": [
+              "Each year Port Jackson sharks migrate back to the same reefs to lay their eggs.",
+              "Keeping those reefs clean and undisturbed helps the next generation hatch."
             ]
           }
         }

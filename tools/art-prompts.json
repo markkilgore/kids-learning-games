@@ -638,6 +638,60 @@
       "prompt": "A glowing pale blue six-pointed snowflake crystal."
     },
     {
+      "file": "apps/shark-explorer/Resources/Art/mission-tuna.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small speedy tuna in side view, sleek dark-blue back and silver belly, yellow finlets, swimming fast."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-snail.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A sea snail with a big spiral shell in warm orange and cream, side view, two little eye stalks."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-reef-fish.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A bright reef fish in side view with bold yellow and blue vertical stripes."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-mangrove.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small clump of arching brown mangrove roots with two dark olive-green leaves on top."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-wave.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A single curling river wave in soft blue and white with a foamy crest."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-shrimp.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A little pink-orange shrimp in side view with long feelers."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-glow.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A soft glowing light orb, pale yellow-white centre fading to a warm yellow-green glow with a few tiny sparkles around it. Edges faded to transparent after keying."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-flatfish.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A small sandy-brown speckled flounder (flatfish) seen from above, both eyes on top."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-urchin.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A round friendly purple sea urchin covered in short spikes."
+    },
+    {
       "file": "apps/shark-explorer/Resources/Art/topic-body-clues.png",
       "size": "256x256",
       "composition": "tileComposition",
@@ -798,6 +852,78 @@
       "size": "256x256",
       "composition": "cutoutComposition",
       "prompt": "One small silver-and-orange fish-shaped cat treat."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-fast.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly whole shortfin mako shark in side view zooming fast through blue water, with a few white speed lines trailing behind it. Natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-mouth.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Front view of a gentle basking shark swimming toward the viewer with its huge round mouth wide open like a big hoop, no sharp teeth showing, calm and friendly, not scary."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-surface.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A sunny sea surface: gentle blue waves with a bright yellow sun shining just above the water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-spots.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A whole adult zebra shark (leopard shark, Stegostoma) in side view: long slender sandy-tan body with a very long low tail, covered all over with many small dark brown round spots. Natural, friendly, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-black-tip.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single grey shark back fin (dorsal fin) poking up, with a bold black tip and a white band just below the black, small ripple of water at its base."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-mangrove.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small mangrove tree with arching tangled roots standing in shallow clear water, green leaves on top."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-sand.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A patch of yellow sandy seafloor with one small smooth mound of sand in the middle and a few ripples, a little blue water above."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-river.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A winding blue river between green grassy banks flowing down into the blue sea."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-saw.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A simple hand saw with a wooden handle and a silver blade with small teeth."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-glow.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A bright round glowing green light orb with soft rays and a halo, shining in the middle of a small rounded patch of very dark navy deep-sea water. The green glow is clearly the subject."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-urchin.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A round purple sea urchin covered in spikes, friendly and simple, no face."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-spiral-egg.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A single Port Jackson shark egg case: a dark brown leathery cone shaped like a big auger drill bit or screw, with two broad spiral flanges winding around it from the wide rounded top down to a pointed tip, standing upright. Not a snail shell, no round coil."
     }
   ],
   "catHappyPoses": [

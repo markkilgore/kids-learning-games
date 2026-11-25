@@ -210,6 +210,15 @@ struct MissionFlowView: View {
         case "tidalWalk": "Tap the next rock"
         case "jawStrike": "Tap the deep-sea fish"
         case "energyTrail": "Tap the snowy scent clue"
+        case "speedChase": "Tap the speedy tuna"
+        case "snailHunt": "Tap the sea snail"
+        case "reefPatrol": "Tap the reef fish"
+        case "mangroveNursery": "Tap the mangrove root"
+        case "riverJourney": "Tap the next river wave"
+        case "sawSweep": "Tap the shrimp in the sand"
+        case "glowLure": "Tap the green glow"
+        case "sandAmbush": "Tap the fish that swims close"
+        case "shellCrunch": "Tap the sea urchin"
         default: "Tap the clue"
         }
     }

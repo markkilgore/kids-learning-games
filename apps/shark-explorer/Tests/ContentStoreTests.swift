@@ -10,10 +10,11 @@ import Narration
 final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.sharks.count, 10)
-        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 70)
-        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 30)
-        XCTAssertEqual(catalog.vocabulary.count, 25)
+        XCTAssertEqual(catalog.sharks.count, 20)
+        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 140)
+        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 60)
+        XCTAssertGreaterThanOrEqual(catalog.vocabulary.count, 30)
+        XCTAssertTrue(catalog.vocabulary.allSatisfy { word in catalog.sharks.contains { $0.vocabularyIDs.contains(word.id) } })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 7 })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.allSatisfy { $0.id != "babies" } })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.questions.count == 3 })
@@ -71,6 +72,20 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertEqual(sharks.filter(game.isUnlocked).count, 8)
         game.completedSharks = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher"]
         XCTAssertEqual(sharks.filter(game.isUnlocked).count, 10)
+    }
+
+    func testSecondTenSharksStayLockedUntilTheFirstTenAreDoneThenOpenOneByOne() throws {
+        let game = GameStore()
+        let sharks = ContentStore.shared.catalog.sharks
+        let order = sharks.sorted { $0.unlockAt < $1.unlockAt }
+        game.completedSharks = Set(order.prefix(9).map(\.id))
+        XCTAssertEqual(sharks.filter(game.isUnlocked).count, 10)
+        for done in 10..<sharks.count {
+            game.completedSharks = Set(order.prefix(done).map(\.id))
+            XCTAssertGreaterThan(sharks.filter(game.isUnlocked).count, done, "nothing left to play after \(done) missions")
+        }
+        game.completedSharks = Set(order.prefix(10).map(\.id))
+        XCTAssertEqual(sharks.filter(game.isUnlocked).count, 12)
     }
 
     func testMissionCompletionPersistsRewardsAndRestoresDestination() throws {

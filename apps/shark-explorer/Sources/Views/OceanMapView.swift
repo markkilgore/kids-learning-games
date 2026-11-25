@@ -108,29 +108,29 @@ private struct SharkMapNode: View {
                     if fresh {
                         Circle()
                             .stroke(.yellow, lineWidth: 5)
-                            .frame(width: 96, height: 96)
+                            .frame(width: 82, height: 82)
                             .scaleEffect(pulsing ? 1.35 : 1)
                             .opacity(pulsing ? 0 : 0.9)
                     }
                     Circle()
                         .fill(unlocked ? AnyShapeStyle(shark.tint.gradient) : AnyShapeStyle(Color.black.opacity(0.4)))
-                        .frame(width: 92, height: 92)
-                        .overlay(Circle().strokeBorder(.white.opacity(unlocked ? 0.9 : 0.3), lineWidth: 4))
+                        .frame(width: 78, height: 78)
+                        .overlay(Circle().strokeBorder(.white.opacity(unlocked ? 0.9 : 0.3), lineWidth: 3))
                         .shadow(color: .black.opacity(0.3), radius: 8, y: 5)
                     if unlocked {
                         SpeciesImageView(shark: shark)
-                            .frame(width: 80, height: 80)
+                            .frame(width: 68, height: 68)
                             .clipShape(Circle())
                     } else {
                         Image(systemName: "lock.fill")
-                            .font(.system(size: 34, weight: .bold))
+                            .font(.system(size: 28, weight: .bold))
                             .foregroundStyle(.white.opacity(0.8))
                     }
                 }
                 .overlay(alignment: .topTrailing) {
                     if completed {
                         Image(systemName: "star.circle.fill")
-                            .font(.system(size: 32))
+                            .font(.system(size: 28))
                             .symbolRenderingMode(.palette)
                             .foregroundStyle(.white, .orange)
                             .offset(x: 6, y: -6)
@@ -138,10 +138,10 @@ private struct SharkMapNode: View {
                     }
                 }
                 Text(unlocked ? shark.name : "Hidden shark")
-                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
                     .lineLimit(1)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
                     .background(.black.opacity(0.45), in: Capsule())
             }
             .offset(y: floating ? -4 : 4)

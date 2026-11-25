@@ -22,7 +22,11 @@ enum SharkAppConfiguration {
             ("whale", "Whale Shark"), ("hammerhead", "Hammerhead Shark"), ("nurse", "Nurse Shark"),
             ("great-white", "Great White Shark"), ("wobbegong", "Wobbegong"), ("thresher", "Thresher Shark"),
             ("tiger", "Tiger Shark"), ("epaulette", "Epaulette Shark"), ("goblin", "Goblin Shark"),
-            ("greenland", "Greenland Shark")
+            ("greenland", "Greenland Shark"),
+            ("mako", "Shortfin Mako"), ("basking", "Basking Shark"), ("zebra", "Zebra Shark"),
+            ("blacktip-reef", "Blacktip Reef Shark"), ("lemon", "Lemon Shark"), ("bull", "Bull Shark"),
+            ("sawshark", "Longnose Sawshark"), ("cookiecutter", "Cookiecutter Shark"), ("angel", "Angel Shark"),
+            ("port-jackson", "Port Jackson Shark")
         ].map { LearningCharacter(id: $0.0, name: $0.1, locationID: "ocean-map") },
         enabledSkills: [
             EducationalSkill(id: "reading", displayName: "Guided reading"),

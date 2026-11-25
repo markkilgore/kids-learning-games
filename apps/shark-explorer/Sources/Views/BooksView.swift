@@ -69,7 +69,7 @@ struct BooksView: View {
                 .padding(18)
                 .kidCard()
 
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 5), spacing: 14) {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 10), spacing: 10) {
                     ForEach(catalog.sharks) { shark in
                         passportPageButton(for: shark)
                     }
@@ -117,18 +117,18 @@ struct BooksView: View {
                             .background(.black.opacity(0.25))
                     }
                 }
-                .frame(height: 84)
+                .frame(height: 62)
                 .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
-                Text(earned ? shark.name : "Hidden page")
-                    .font(.kidLabel.weight(.heavy))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                Text(earned ? "\(shark.traits.filter { game.hasUnlocked($0, for: shark) }.count)/\(shark.traits.count) traits" : "Finish mission")
-                    .font(.caption.bold())
-                    .foregroundStyle(theme.mutedInk)
+                // Twenty pages share two rows, so a name may take two short lines.
+                Text(earned ? shark.name.replacingOccurrences(of: " Shark", with: "") : "Hidden")
+                    .font(.system(size: 14, weight: .heavy, design: .rounded))
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.75)
+                    .frame(height: 36)
             }
-            .padding(10)
-            .frame(maxWidth: .infinity, minHeight: 148)
+            .padding(8)
+            .frame(maxWidth: .infinity, minHeight: 122)
             .kidCard(selected ? .raised : .regular, tint: earned ? shark.tint.opacity(selected ? 0.9 : 0.45) : nil)
             .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous).strokeBorder(.yellow.opacity(selected ? 1 : 0), lineWidth: 4))
         }

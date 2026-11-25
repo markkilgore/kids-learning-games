@@ -8,7 +8,8 @@ const catalog = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
 
 if (catalog.schemaVersion !== 1) errors.push('schemaVersion must be 1');
-if (catalog.sharks?.length !== 10) errors.push('catalog must contain exactly 10 sharks');
+if (catalog.sharks?.length !== 20) errors.push('catalog must contain exactly 20 sharks');
+if (!catalog.sharks.map((s) => s.unlockAt).sort((a, b) => a - b).every((unlockAt, index) => unlockAt <= index)) errors.push('a shark can never be unlocked');
 if (new Set(catalog.sharks.map((s) => s.id)).size !== catalog.sharks.length) errors.push('shark IDs must be unique');
 const vocabulary = new Set(catalog.vocabulary.map((word) => word.id));
 const expansions = new Map((catalog.expansions ?? []).map((expansion) => [expansion.sharkID, expansion]));

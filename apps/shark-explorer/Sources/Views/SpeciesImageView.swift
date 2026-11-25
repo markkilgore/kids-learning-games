@@ -8,9 +8,17 @@ struct SpeciesImageView: View {
     var body: some View {
         Group {
             if let image = UIImage(named: shark.imageAsset) {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: contentMode)
+                if contentMode == .fill {
+                    // Fill the space it is given without growing past it: a very wide photo (the goblin
+                    // shark's is nearly 5:1) would otherwise push its container wider than its neighbours.
+                    Color.clear
+                        .overlay { Image(uiImage: image).resizable().scaledToFill() }
+                        .clipped()
+                } else {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
             } else {
                 Text(shark.symbol)
                     .font(.system(size: 64))
