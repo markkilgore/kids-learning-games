@@ -143,8 +143,9 @@ function challengePrompt(cat, catIndex, friendship) {
         return `${lead} ${cat.name} has ${first} ${noun(first)} and finds ${(seed % 5) + 2} more. How many now?`;
       }
       case 'subtraction': {
-        const total = seed + 9;
-        return `${lead} ${cat.name} counts ${total} ${noun(total)}. ${(seed % 5) + 2} are put away. How many stay?`;
+        const total = 11 + ((seed - 1) % 8);
+        const taken = Math.min(9, total - 10 + 1 + ((seed * 2) % 5));
+        return `${lead} ${cat.name} counts ${total} ${noun(total)}. ${taken} are put away. How many stay?`;
       }
       case 'doubles': {
         const half = seed + 1;

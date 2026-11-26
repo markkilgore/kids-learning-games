@@ -34,11 +34,11 @@ struct CatProgressSection: View {
                         Text(skill.displayName).fontWeight(.bold)
                         Text(stats.attempts == 1 ? "1 time" : "\(stats.attempts) times")
                         Text(Self.accuracy(stats))
-                        Text(Self.difficulty(stats))
+                        Text(skill == CatContent.readingSkill ? "—" : Self.difficulty(stats))
                         Text(stats.lastPractised.map { $0.formatted(date: .abbreviated, time: .omitted) } ?? "—")
                     }
                     .accessibilityElement(children: .combine)
-                    if let note = Self.note(stats) {
+                    if skill != CatContent.readingSkill, let note = Self.note(stats) {
                         GridRow {
                             Label(note, systemImage: "exclamationmark.bubble.fill")
                                 .font(.kidLabel)

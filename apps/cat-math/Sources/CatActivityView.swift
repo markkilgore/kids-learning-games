@@ -3,9 +3,13 @@ import LearningUI
 import Narration
 import SwiftUI
 
-/// A round with a cat: its story page first, then three puzzles set in that scene, then a celebration.
+/// A round with a cat: its story page first, a reading question about that page, then three puzzles set in
+/// that scene, then a celebration.
 struct CatActivityView: View {
-    private enum Phase { case story, puzzle, celebrate }
+    private enum Phase { case story, reading, puzzle, celebrate }
+
+    /// Parent setting: narrate a story page as it opens. Off by default, so the child reads it first.
+    static let readsStoryFirstKey = "story.readAloudFirst"
 
     let cat: CatDefinition
     @Environment(CatGameStore.self) private var game
@@ -27,6 +31,10 @@ struct CatActivityView: View {
     @State private var selectedReward: CatRewardAction?
     @State private var rewardMotion = false
     @State private var celebration = 0
+    @State private var question: ReadingQuestion?
+    @State private var wrongSentences: Set<String> = []
+    @State private var foundSentence = false
+    @AppStorage(CatActivityView.readsStoryFirstKey) private var readsStoryFirst = false
 
     init(cat: CatDefinition, challenge: MathChallenge) {
         self.cat = cat
@@ -41,8 +49,9 @@ struct CatActivityView: View {
     var body: some View {
         VStack(spacing: 16) {
             KidTopBar(
-                phase == .story ? "\(cat.name)’s story" : "Math time with \(cat.name)",
-                subtitle: phase == .story ? "Page \(cat.storyPage(for: friendship) + 1) of \(cat.backstory.count)" : challenge.skill.displayName,
+                phase == .story ? "\(cat.name)’s story" : phase == .reading ? "Reading with \(cat.name)" : "Math time with \(cat.name)",
+                subtitle: phase == .story ? "Page \(cat.storyPage(for: friendship) + 1) of \(cat.backstory.count)"
+                    : phase == .reading ? cat.storyBeat(for: friendship).title : challenge.skill.displayName,
                 back: KidBackButton { goHome() }
             ) {
                 HStack(spacing: 18) {
@@ -58,6 +67,9 @@ struct CatActivityView: View {
             if phase == .story {
                 storyPage
                     .transition(.move(edge: .leading).combined(with: .opacity))
+            } else if phase == .reading, let question {
+                readingPage(question)
+                    .transition(.move(edge: .trailing).combined(with: .opacity))
             } else {
                 HStack(alignment: .top, spacing: 18) {
                     sceneColumn.frame(width: 260)
@@ -89,7 +101,7 @@ struct CatActivityView: View {
             }
         }
         .overlay { CelebrationView(trigger: celebration) }
-        .onAppear { tellStory() }
+        .onAppear { openStory() }
     }
 
     // MARK: Story page
@@ -123,9 +135,10 @@ struct CatActivityView: View {
                 .foregroundStyle(theme.mutedInk)
                 Spacer(minLength: 0)
                 HStack(spacing: 16) {
-                    Button { tellStory() } label: { Label("Hear it again", systemImage: "speaker.wave.2.fill") }
+                    Button { tellStory() } label: { Label("Read it to me", systemImage: "speaker.wave.2.fill") }
                         .buttonStyle(KidButtonStyle(.soft, tint: cat.tint))
-                    Button { startPuzzles() } label: { Label("Help \(cat.name)", systemImage: "arrow.right") }
+                        .accessibilityIdentifier("read-to-me")
+                    Button { leaveStory() } label: { Label("Help \(cat.name)", systemImage: "arrow.right") }
                         .buttonStyle(KidButtonStyle(tint: theme.success))
                         .accessibilityIdentifier("start-round")
                 }
@@ -144,6 +157,112 @@ struct CatActivityView: View {
             lines.append((cat.roundOpensPage(from: friendship) ? CatLine.roundIntro : CatLine.roundBonus).text)
         }
         narration.playSequence(lines, gap: 0.45)
+    }
+
+    /// A page opens quietly so the child reads it first, unless a parent has asked for it to be read aloud.
+    private func openStory() {
+        if readsStoryFirst { tellStory() }
+    }
+
+    /// From the story to its reading question, or straight to the puzzles when the page cannot make one.
+    private func leaveStory() {
+        narration.stop()
+        guard let next = ReadingQuestion.question(for: cat.storyBeat(for: friendship)) else { return startPuzzles() }
+        question = next
+        wrongSentences = []
+        foundSentence = false
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) { phase = .reading }
+        narration.playSequence([CatLine.readPrompt.text, next.sentence], gap: 0.45)
+    }
+
+    // MARK: Reading question
+
+    private func readingPage(_ question: ReadingQuestion) -> some View {
+        VStack(spacing: 16) {
+            HStack(spacing: 16) {
+                KidArt(cat.artName, fallback: cat.symbol, size: 84)
+                Text(CatLine.readPrompt.text)
+                    .font(.kidTitle)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Button { narration.play(question.sentence) } label: {
+                    Label("Hear it again", systemImage: "speaker.wave.2.fill")
+                }
+                .buttonStyle(KidButtonStyle(tint: theme.secondary))
+                .accessibilityIdentifier("hear-sentence")
+                .disabled(foundSentence)
+            }
+            ForEach(question.choices, id: \.self) { sentence in
+                AnswerTile(state: state(of: sentence, in: question), tint: cat.tint) { choose(sentence, in: question) } label: {
+                    Text(sentence)
+                        .font(.system(size: 27, weight: .bold, design: .rounded))
+                        .multilineTextAlignment(.leading)
+                        .minimumScaleFactor(0.75)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 10)
+                }
+                .accessibilityIdentifier(sentence == question.sentence ? "reading-correct" : "reading-other")
+            }
+            Spacer(minLength: 0)
+            if foundSentence, let praise {
+                Label(praise, systemImage: "star.fill")
+                    .font(.kidHeadline)
+                    .foregroundStyle(theme.success)
+                    .transition(.scale.combined(with: .opacity))
+            } else if !wrongSentences.isEmpty {
+                Label(CatLine.readRetry.text, systemImage: "pawprint.fill")
+                    .font(.kidHeadline)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .padding(24)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .kidCard(radius: KidTheme.Radius.large)
+    }
+
+    private func state(of sentence: String, in question: ReadingQuestion) -> AnswerState {
+        if foundSentence { return sentence == question.sentence ? .correct : .dimmed }
+        return wrongSentences.contains(sentence) ? .wrong : .idle
+    }
+
+    private func choose(_ sentence: String, in question: ReadingQuestion) {
+        guard !foundSentence else { return }
+        let right = sentence == question.sentence
+        game.recordAnswer(for: CatContent.readingSkill, correct: right, isFirstAnswer: wrongSentences.isEmpty)
+        guard right else {
+            feedback.play(.wrong)
+            withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { _ = wrongSentences.insert(sentence) }
+            narration.stop()
+            Task { @MainActor in
+                // Wait for the "try again" sound before speaking over it.
+                try? await Task.sleep(for: .milliseconds(450))
+                guard phase == .reading, !foundSentence else { return }
+                narration.playSequence([CatLine.readRetry.text, question.sentence], gap: 0.45)
+            }
+            return
+        }
+        let line = WeeklySpokenLines.praise[friendship % WeeklySpokenLines.praise.count]
+        feedback.play(.correct)
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            foundSentence = true
+            praise = line
+        }
+        narration.play(line, after: 0.5) {
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(500))
+                finishReading()
+            }
+        }
+        // If the praise is cut short (sound switched off mid-line), still move on.
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(5))
+            finishReading()
+        }
+    }
+
+    private func finishReading() {
+        guard phase == .reading, foundSentence else { return }
+        praise = nil
+        startPuzzles()
     }
 
     private func startPuzzles() {
@@ -339,7 +458,7 @@ struct CatActivityView: View {
             rewardMotion = false
             phase = opensStory ? .story : .puzzle
         }
-        if opensStory { tellStory() } else { narration.play(challenge.prompt, after: 0.4) }
+        if opensStory { openStory() } else { narration.play(challenge.prompt, after: 0.4) }
     }
 
     private func goHome() {
@@ -477,6 +596,8 @@ private struct MathVisualView: View {
                 }
             case .subtract(let total, let taken):
                 objects(0..<total, crossedFrom: total - taken)
+            case .makeTen(let total, let taken):
+                makeTen(total: total, taken: taken)
             case .pairs(let total):
                 HStack(spacing: 18) {
                     ForEach(0..<((total + 1) / 2), id: \.self) { pair in
@@ -495,6 +616,68 @@ private struct MathVisualView: View {
                 }
             }
         }
+    }
+
+    /// Two ten-frames. Each tap takes one away: the loose ones first, which leaves a full ten, then the rest.
+    private func makeTen(total: Int, taken: Int) -> some View {
+        let loose = max(0, total - 10)
+        let left = taken - counted
+        return VStack(spacing: 10) {
+            HStack(spacing: 22) {
+                tenFrame(0..<10, total: total, taken: taken)
+                tenFrame(10..<20, total: total, taken: taken)
+            }
+            Group {
+                if left <= 0 {
+                    Text("How many are left?")
+                } else if counted < loose {
+                    Text("Take away \(taken). First tap \(loose - counted) to make ten.")
+                } else if counted == loose, loose > 0 {
+                    Text("That makes ten! Now tap \(left) more.")
+                } else {
+                    Text("Tap \(left) more.")
+                }
+            }
+            .font(.system(size: 22, weight: .heavy, design: .rounded))
+            .foregroundStyle(theme.primary)
+            .contentTransition(.opacity)
+        }
+    }
+
+    private func tenFrame(_ places: Range<Int>, total: Int, taken: Int) -> some View {
+        let line = theme.ink.opacity(0.35)
+        return Grid(horizontalSpacing: 0, verticalSpacing: 0) {
+            ForEach(0..<2, id: \.self) { row in
+                GridRow {
+                    ForEach(0..<5, id: \.self) { column in
+                        let index = places.lowerBound + row * 5 + column
+                        // Taken from the end backwards, so the loose ones in the second frame go first.
+                        let gone = index >= total - counted
+                        Button {
+                            guard index < total, counted < taken else { return }
+                            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) { counted += 1 }
+                            onCount(counted)
+                        } label: {
+                            ZStack {
+                                if index < total {
+                                    KidArt(objectArt, fallback: challenge.icon, size: 36, style: .plain)
+                                        .opacity(gone ? 0.22 : 1)
+                                    if gone {
+                                        Image(systemName: "xmark").font(.system(size: 28, weight: .black)).foregroundStyle(.red.opacity(0.7))
+                                    }
+                                }
+                            }
+                            .frame(width: 54, height: 54)
+                            .border(line, width: 1.5)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityHidden(true)
+                    }
+                }
+            }
+        }
+        .border(line, width: 3)
+        .background(.white.opacity(0.6))
     }
 
     private func objects(_ range: Range<Int>, crossedFrom: Int? = nil) -> some View {

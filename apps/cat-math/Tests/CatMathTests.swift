@@ -23,7 +23,7 @@ final class CatMathTests: XCTestCase {
         XCTAssertEqual(CatContent.locations.map(\.id), ["house", "garden", "meadow"])
         XCTAssertEqual(CatContent.cats.count, 15)
         XCTAssertEqual(CatContent.cats.filter { $0.locationID == "meadow" }.count, 5)
-        XCTAssertEqual(Set(CatAppConfiguration.value.enabledSkills.map(\.id)), ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10", "doubles", "skip-2"])
+        XCTAssertEqual(Set(CatAppConfiguration.value.enabledSkills.map(\.id)), ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10", "doubles", "skip-2", "reading"])
         for cat in CatContent.cats {
             XCTAssertNotNil(UIImage(named: cat.artName), "no portrait for \(cat.id)")
             XCTAssertNotNil(UIImage(named: cat.countingArtName), "no counting picture for \(cat.id)")
@@ -125,6 +125,11 @@ final class CatMathTests: XCTestCase {
                 switch challenge.visual {
                 case .add(let first, let second): XCTAssertLessThanOrEqual(first + second, 20, challenge.prompt)
                 case .subtract(let total, let taken): XCTAssertTrue(total <= 20 && taken < total, challenge.prompt)
+                case .makeTen(let total, let taken):
+                    // School's "make a ten": the take-away always crosses ten, and the answer matches the frames.
+                    XCTAssertTrue((11...18).contains(total) && taken > total - 10 && taken <= 9, challenge.prompt)
+                    XCTAssertEqual(challenge.answer, total - taken, challenge.prompt)
+                    XCTAssertEqual(challenge.skill.id, "subtraction")
                 case .pairs(let total): XCTAssertLessThanOrEqual(total, 16, challenge.prompt)
                 default: break
                 }
@@ -333,10 +338,31 @@ final class CatMathTests: XCTestCase {
 
     private func size(_ challenge: MathChallenge) -> Int {
         switch challenge.visual {
-        case .count(let total), .pairs(let total), .subtract(let total, _): total
+        case .count(let total), .pairs(let total), .subtract(let total, _), .makeTen(let total, _): total
         case .add(let first, let second): first + second
         case .sequence(let numbers): numbers.last ?? 0
         }
+    }
+
+    /// After a story page the child hears one of its sentences and finds it among three from the same page.
+    func testEveryStoryPageHasAReadingQuestion() throws {
+        var generator = SystemRandomNumberGenerator()
+        var answers = Set<String>()
+        for cat in CatContent.cats {
+            for page in cat.backstory {
+                for _ in 0..<6 {
+                    let question = try XCTUnwrap(ReadingQuestion.question(for: page, using: &generator), page.id)
+                    XCTAssertEqual(Set(question.choices).count, 3, page.id)
+                    XCTAssertTrue(question.choices.contains(question.sentence), page.id)
+                    XCTAssertTrue(question.choices.allSatisfy(page.sentences.contains), page.id)
+                    answers.insert(question.sentence)
+                }
+            }
+        }
+        // The sentence asked for changes from visit to visit.
+        XCTAssertGreaterThan(answers.count, CatContent.cats.count * 8 * 2)
+        let short = CatStoryBeat(id: "short", title: "", focusID: "", sentences: ["One.", "Two."], puzzleLead: "")
+        XCTAssertNil(ReadingQuestion.question(for: short, using: &generator))
     }
 
     /// Every line the app can speak must have a bundled recording, or it falls back to the robotic device voice.

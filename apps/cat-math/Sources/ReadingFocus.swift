@@ -54,3 +54,24 @@ struct ReadingFocus: Decodable, Identifiable, Equatable {
 extension CatStoryBeat {
     var focus: ReadingFocus? { ReadingFocus.unit(focusID) }
 }
+
+/// Asked after a story page, before its puzzles: one sentence from the page is read aloud and the child
+/// finds it among three. Every sentence already has a recording, so the question needs no new ones.
+struct ReadingQuestion: Equatable {
+    /// The sentence that is read aloud.
+    let sentence: String
+    let choices: [String]
+
+    /// Nil when a page is too short to offer three different sentences.
+    static func question<Generator: RandomNumberGenerator>(for page: CatStoryBeat, using generator: inout Generator) -> ReadingQuestion? {
+        var seen = Set<String>()
+        let sentences = page.sentences.filter { seen.insert($0).inserted }.shuffled(using: &generator)
+        guard sentences.count >= 3 else { return nil }
+        return ReadingQuestion(sentence: sentences[0], choices: Array(sentences.prefix(3)).shuffled(using: &generator))
+    }
+
+    static func question(for page: CatStoryBeat) -> ReadingQuestion? {
+        var generator = SystemRandomNumberGenerator()
+        return question(for: page, using: &generator)
+    }
+}

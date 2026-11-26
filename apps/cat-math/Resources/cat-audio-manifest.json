@@ -2339,17 +2339,17 @@
       }
     ]
   },
-  "Along the chalk line, Poppy counts 16 cardboard towers. 4 are put away. How many stay?": {
-    "file": "4d189f8fb809475a1e249b64.mp3",
+  "Along the chalk line, Poppy counts 17 cardboard towers. 9 are put away. How many stay?": {
+    "file": "406e75bb3f15176ff6ab2d53.mp3",
     "words": [
       {
         "text": "Along",
         "start": 0,
-        "end": 0.24
+        "end": 0.32
       },
       {
         "text": "the",
-        "start": 0.28,
+        "start": 0.34,
         "end": 0.4
       },
       {
@@ -2365,62 +2365,62 @@
       {
         "text": "Poppy",
         "start": 1.42,
-        "end": 1.68
+        "end": 1.76
       },
       {
         "text": "counts",
-        "start": 1.749,
-        "end": 2.16
+        "start": 1.806,
+        "end": 2.08
       },
       {
-        "text": "16",
-        "start": 2.32,
-        "end": 2.96
+        "text": "17",
+        "start": 2.24,
+        "end": 2.8
       },
       {
         "text": "cardboard",
-        "start": 3.024,
-        "end": 3.6
+        "start": 2.856,
+        "end": 3.36
       },
       {
         "text": "towers.",
-        "start": 3.68,
-        "end": 4.4
+        "start": 3.44,
+        "end": 4.08
       },
       {
-        "text": "4",
-        "start": 4.72,
-        "end": 5.04
+        "text": "9",
+        "start": 4.56,
+        "end": 4.88
       },
       {
         "text": "are",
+        "start": 4.92,
+        "end": 5.04
+      },
+      {
+        "text": "put",
         "start": 5.08,
         "end": 5.2
       },
       {
-        "text": "put",
-        "start": 5.26,
-        "end": 5.44
-      },
-      {
         "text": "away.",
-        "start": 5.52,
-        "end": 5.92
+        "start": 5.296,
+        "end": 5.76
       },
       {
         "text": "How",
-        "start": 6.06,
-        "end": 6.48
+        "start": 5.92,
+        "end": 6.4
       },
       {
         "text": "many",
-        "start": 6.512,
-        "end": 6.64
+        "start": 6.432,
+        "end": 6.56
       },
       {
         "text": "stay?",
-        "start": 6.736,
-        "end": 7.28
+        "start": 6.656,
+        "end": 7.2
       }
     ]
   },
@@ -3064,8 +3064,8 @@
       }
     ]
   },
-  "Along the water chain, Hazel counts 17 carrots. 5 are put away. How many stay?": {
-    "file": "638a1ab5f8109a6521b777e7.mp3",
+  "Along the water chain, Hazel counts 18 carrots. 9 are put away. How many stay?": {
+    "file": "fbc66a2e663fa94cce386e23.mp3",
     "words": [
       {
         "text": "Along",
@@ -3089,58 +3089,58 @@
       },
       {
         "text": "Hazel",
-        "start": 1.493,
-        "end": 1.76
+        "start": 1.507,
+        "end": 1.84
       },
       {
         "text": "counts",
-        "start": 1.84,
-        "end": 2.32
+        "start": 1.897,
+        "end": 2.24
       },
       {
-        "text": "17",
-        "start": 2.4,
-        "end": 2.96
+        "text": "18",
+        "start": 2.52,
+        "end": 2.8
       },
       {
         "text": "carrots.",
-        "start": 3.03,
-        "end": 3.6
+        "start": 2.87,
+        "end": 3.84
       },
       {
-        "text": "5",
-        "start": 4.16,
-        "end": 4.64
+        "text": "9",
+        "start": 3.92,
+        "end": 4.32
       },
       {
         "text": "are",
-        "start": 4.68,
-        "end": 4.8
+        "start": 4.38,
+        "end": 4.56
       },
       {
         "text": "put",
-        "start": 4.84,
-        "end": 4.96
+        "start": 4.58,
+        "end": 4.64
       },
       {
         "text": "away.",
-        "start": 5.04,
-        "end": 5.44
+        "start": 4.736,
+        "end": 5.2
       },
       {
         "text": "How",
-        "start": 5.62,
-        "end": 6.16
+        "start": 5.3,
+        "end": 5.6
       },
       {
         "text": "many",
-        "start": 6.208,
-        "end": 6.4
+        "start": 5.648,
+        "end": 5.84
       },
       {
         "text": "stay?",
-        "start": 6.496,
-        "end": 6.96
+        "start": 5.936,
+        "end": 6.4
       }
     ]
   },
@@ -3529,8 +3529,8 @@
       }
     ]
   },
-  "At Moon’s star show, Moon counts 12 stars. 5 are put away. How many stay?": {
-    "file": "17d518b3a4d4f47d4dd5304a.mp3",
+  "At Moon’s star show, Moon counts 11 stars. 5 are put away. How many stay?": {
+    "file": "f85df3f9902887230214e0b4.mp3",
     "words": [
       {
         "text": "At",
@@ -3544,153 +3544,73 @@
       },
       {
         "text": "star",
-        "start": 0.544,
-        "end": 0.8
-      },
-      {
-        "text": "show,",
-        "start": 0.864,
-        "end": 1.2
-      },
-      {
-        "text": "Moon",
-        "start": 1.312,
-        "end": 1.76
-      },
-      {
-        "text": "counts",
-        "start": 1.829,
-        "end": 2.24
-      },
-      {
-        "text": "12",
-        "start": 2.44,
-        "end": 2.64
-      },
-      {
-        "text": "stars.",
-        "start": 2.733,
-        "end": 3.28
-      },
-      {
-        "text": "5",
-        "start": 3.92,
-        "end": 4
-      },
-      {
-        "text": "are",
-        "start": 4.02,
-        "end": 4.08
-      },
-      {
-        "text": "put",
-        "start": 4.12,
-        "end": 4.24
-      },
-      {
-        "text": "away.",
-        "start": 4.32,
-        "end": 5.04
-      },
-      {
-        "text": "How",
-        "start": 5.14,
-        "end": 5.44
-      },
-      {
-        "text": "many",
-        "start": 5.472,
-        "end": 5.6
-      },
-      {
-        "text": "stay?",
-        "start": 5.712,
-        "end": 6.24
-      }
-    ]
-  },
-  "At Moon’s star show, Moon counts 15 stars. 3 are put away. How many stay?": {
-    "file": "7ff3f5c503bea44926d3b86c.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "Moon’s",
-        "start": 0.224,
-        "end": 0.56
-      },
-      {
-        "text": "star",
-        "start": 0.624,
+        "start": 0.56,
         "end": 0.88
       },
       {
         "text": "show,",
-        "start": 0.944,
-        "end": 1.6
+        "start": 0.96,
+        "end": 1.36
       },
       {
         "text": "Moon",
-        "start": 1.648,
-        "end": 1.84
+        "start": 1.488,
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 1.897,
-        "end": 2.24
+        "start": 2.057,
+        "end": 2.4
       },
       {
-        "text": "15",
-        "start": 2.32,
-        "end": 2.8
+        "text": "11",
+        "start": 2.48,
+        "end": 2.88
       },
       {
         "text": "stars.",
-        "start": 2.893,
-        "end": 3.52
+        "start": 2.987,
+        "end": 3.6
       },
       {
-        "text": "3",
-        "start": 4,
-        "end": 4.24
+        "text": "5",
+        "start": 4.32,
+        "end": 4.4
       },
       {
         "text": "are",
-        "start": 4.3,
-        "end": 4.48
+        "start": 4.44,
+        "end": 4.56
       },
       {
         "text": "put",
-        "start": 4.52,
-        "end": 4.64
+        "start": 4.6,
+        "end": 4.72
       },
       {
         "text": "away.",
-        "start": 4.72,
-        "end": 5.28
+        "start": 4.8,
+        "end": 5.48
       },
       {
         "text": "How",
-        "start": 5.34,
-        "end": 5.52
+        "start": 5.57,
+        "end": 5.84
       },
       {
         "text": "many",
-        "start": 5.568,
-        "end": 5.76
+        "start": 5.888,
+        "end": 6.08
       },
       {
         "text": "stay?",
-        "start": 5.856,
-        "end": 6.32
+        "start": 6.176,
+        "end": 6.64
       }
     ]
   },
-  "At Moon’s star show, Moon counts 18 stars. 6 are put away. How many stay?": {
-    "file": "c08084bb12173c86aaaa7fe0.mp3",
+  "At Moon’s star show, Moon counts 13 stars. 5 are put away. How many stay?": {
+    "file": "77f728c391354995eb7045bb.mp3",
     "words": [
       {
         "text": "At",
@@ -3710,62 +3630,142 @@
       {
         "text": "show,",
         "start": 0.864,
-        "end": 1.2
+        "end": 1.52
       },
       {
         "text": "Moon",
-        "start": 1.296,
-        "end": 1.68
+        "start": 1.568,
+        "end": 1.76
       },
       {
         "text": "counts",
-        "start": 1.737,
-        "end": 2.08
+        "start": 1.817,
+        "end": 2.16
       },
       {
-        "text": "18",
-        "start": 2.16,
-        "end": 2.56
+        "text": "13",
+        "start": 2.32,
+        "end": 2.8
       },
       {
         "text": "stars.",
-        "start": 2.667,
-        "end": 3.36
+        "start": 2.907,
+        "end": 3.52
       },
       {
-        "text": "6",
-        "start": 4.16,
-        "end": 4.24
-      },
-      {
-        "text": "are",
-        "start": 4.26,
+        "text": "5",
+        "start": 4,
         "end": 4.32
       },
       {
-        "text": "put",
+        "text": "are",
         "start": 4.36,
         "end": 4.48
       },
       {
+        "text": "put",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
         "text": "away.",
-        "start": 4.56,
-        "end": 5.2
+        "start": 4.736,
+        "end": 5.48
       },
       {
         "text": "How",
-        "start": 5.28,
-        "end": 5.52
+        "start": 5.57,
+        "end": 5.84
       },
       {
         "text": "many",
-        "start": 5.568,
-        "end": 5.76
+        "start": 5.872,
+        "end": 6
       },
       {
         "text": "stay?",
+        "start": 6.096,
+        "end": 6.56
+      }
+    ]
+  },
+  "At Moon’s star show, Moon counts 16 stars. 9 are put away. How many stay?": {
+    "file": "96c43950264c8b8a1c04e10b.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "Moon’s",
+        "start": 0.144,
+        "end": 0.56
+      },
+      {
+        "text": "star",
+        "start": 0.64,
+        "end": 0.96
+      },
+      {
+        "text": "show,",
+        "start": 1.04,
+        "end": 1.76
+      },
+      {
+        "text": "Moon",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "counts",
+        "start": 2.08,
+        "end": 2.56
+      },
+      {
+        "text": "16",
+        "start": 2.64,
+        "end": 3.2
+      },
+      {
+        "text": "stars.",
+        "start": 3.307,
+        "end": 3.92
+      },
+      {
+        "text": "9",
+        "start": 4.48,
+        "end": 4.88
+      },
+      {
+        "text": "are",
+        "start": 4.92,
+        "end": 5.04
+      },
+      {
+        "text": "put",
+        "start": 5.08,
+        "end": 5.2
+      },
+      {
+        "text": "away.",
+        "start": 5.28,
+        "end": 5.68
+      },
+      {
+        "text": "How",
         "start": 5.84,
-        "end": 6.24
+        "end": 6.32
+      },
+      {
+        "text": "many",
+        "start": 6.368,
+        "end": 6.56
+      },
+      {
+        "text": "stay?",
+        "start": 6.64,
+        "end": 7.04
       }
     ]
   },
@@ -5044,8 +5044,8 @@
       }
     ]
   },
-  "At the bottom of the leaf slide, Bramble counts 11 acorns. 4 are put away. How many stay?": {
-    "file": "c384b616c24dcac59b2a8f85.mp3",
+  "At the bottom of the leaf slide, Bramble counts 12 acorns. 7 are put away. How many stay?": {
+    "file": "ea029a2fe93c659562ab265e.mp3",
     "words": [
       {
         "text": "At",
@@ -5060,6 +5060,101 @@
       {
         "text": "bottom",
         "start": 0.206,
+        "end": 0.48
+      },
+      {
+        "text": "of",
+        "start": 0.507,
+        "end": 0.56
+      },
+      {
+        "text": "the",
+        "start": 0.6,
+        "end": 0.72
+      },
+      {
+        "text": "leaf",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "slide,",
+        "start": 1.027,
+        "end": 1.68
+      },
+      {
+        "text": "Bramble",
+        "start": 1.728,
+        "end": 2.08
+      },
+      {
+        "text": "counts",
+        "start": 2.137,
+        "end": 2.48
+      },
+      {
+        "text": "12",
+        "start": 2.56,
+        "end": 2.96
+      },
+      {
+        "text": "acorns.",
+        "start": 3.04,
+        "end": 3.84
+      },
+      {
+        "text": "7",
+        "start": 4.24,
+        "end": 4.56
+      },
+      {
+        "text": "are",
+        "start": 4.6,
+        "end": 4.72
+      },
+      {
+        "text": "put",
+        "start": 4.78,
+        "end": 4.96
+      },
+      {
+        "text": "away.",
+        "start": 5.04,
+        "end": 5.44
+      },
+      {
+        "text": "How",
+        "start": 5.56,
+        "end": 5.92
+      },
+      {
+        "text": "many",
+        "start": 5.952,
+        "end": 6.08
+      },
+      {
+        "text": "stay?",
+        "start": 6.176,
+        "end": 6.64
+      }
+    ]
+  },
+  "At the bottom of the leaf slide, Bramble counts 15 acorns. 6 are put away. How many stay?": {
+    "file": "9bf24f85caf5b7b9039f2923.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "bottom",
+        "start": 0.274,
         "end": 0.48
       },
       {
@@ -5089,27 +5184,27 @@
       },
       {
         "text": "counts",
-        "start": 2.217,
-        "end": 2.56
+        "start": 2.229,
+        "end": 2.64
       },
       {
-        "text": "11",
+        "text": "15",
         "start": 2.72,
-        "end": 3.12
+        "end": 3.2
       },
       {
         "text": "acorns.",
-        "start": 3.253,
+        "start": 3.307,
         "end": 4.08
       },
       {
-        "text": "4",
+        "text": "6",
         "start": 4.56,
-        "end": 4.88
+        "end": 4.8
       },
       {
         "text": "are",
-        "start": 4.92,
+        "start": 4.86,
         "end": 5.04
       },
       {
@@ -5119,28 +5214,28 @@
       },
       {
         "text": "away.",
-        "start": 5.296,
+        "start": 5.28,
         "end": 6
       },
       {
         "text": "How",
-        "start": 6.08,
-        "end": 6.32
+        "start": 6.1,
+        "end": 6.4
       },
       {
         "text": "many",
-        "start": 6.352,
-        "end": 6.48
+        "start": 6.448,
+        "end": 6.64
       },
       {
         "text": "stay?",
-        "start": 6.576,
-        "end": 7.12
+        "start": 6.736,
+        "end": 7.2
       }
     ]
   },
-  "At the bottom of the leaf slide, Bramble counts 14 acorns. 2 are put away. How many stay?": {
-    "file": "6faaa9e8429e45de3845dcec.mp3",
+  "At the bottom of the leaf slide, Bramble counts 18 acorns. 9 are put away. How many stay?": {
+    "file": "23fdb0832f9ac9b4a9b38dba.mp3",
     "words": [
       {
         "text": "At",
@@ -5149,12 +5244,12 @@
       },
       {
         "text": "the",
-        "start": 0.1,
-        "end": 0.16
+        "start": 0.12,
+        "end": 0.24
       },
       {
         "text": "bottom",
-        "start": 0.206,
+        "start": 0.274,
         "end": 0.48
       },
       {
@@ -5169,132 +5264,37 @@
       },
       {
         "text": "leaf",
-        "start": 0.768,
-        "end": 0.96
+        "start": 0.784,
+        "end": 1.04
       },
       {
         "text": "slide,",
-        "start": 1.04,
-        "end": 1.76
+        "start": 1.12,
+        "end": 1.84
       },
       {
         "text": "Bramble",
-        "start": 1.808,
-        "end": 2.16
+        "start": 1.888,
+        "end": 2.24
       },
       {
         "text": "counts",
-        "start": 2.229,
+        "start": 2.297,
         "end": 2.64
       },
       {
-        "text": "14",
-        "start": 2.8,
-        "end": 3.36
-      },
-      {
-        "text": "acorns.",
-        "start": 3.467,
-        "end": 4.16
-      },
-      {
-        "text": "2",
-        "start": 4.56,
-        "end": 4.8
-      },
-      {
-        "text": "are",
-        "start": 4.84,
-        "end": 4.96
-      },
-      {
-        "text": "put",
-        "start": 5,
-        "end": 5.12
-      },
-      {
-        "text": "away.",
-        "start": 5.2,
-        "end": 5.6
-      },
-      {
-        "text": "How",
-        "start": 5.72,
-        "end": 6.08
-      },
-      {
-        "text": "many",
-        "start": 6.112,
-        "end": 6.24
-      },
-      {
-        "text": "stay?",
-        "start": 6.336,
-        "end": 6.88
-      }
-    ]
-  },
-  "At the bottom of the leaf slide, Bramble counts 17 acorns. 5 are put away. How many stay?": {
-    "file": "0620f1184727c808fda938eb.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "bottom",
-        "start": 0.206,
-        "end": 0.48
-      },
-      {
-        "text": "of",
-        "start": 0.533,
-        "end": 0.64
-      },
-      {
-        "text": "the",
-        "start": 0.66,
-        "end": 0.72
-      },
-      {
-        "text": "leaf",
-        "start": 0.768,
-        "end": 0.96
-      },
-      {
-        "text": "slide,",
-        "start": 1.04,
-        "end": 1.76
-      },
-      {
-        "text": "Bramble",
-        "start": 1.808,
-        "end": 2.16
-      },
-      {
-        "text": "counts",
-        "start": 2.217,
-        "end": 2.56
-      },
-      {
-        "text": "17",
+        "text": "18",
         "start": 2.72,
-        "end": 3.36
+        "end": 3.2
       },
       {
         "text": "acorns.",
-        "start": 3.467,
-        "end": 4.16
+        "start": 3.307,
+        "end": 4.08
       },
       {
-        "text": "5",
-        "start": 4.64,
+        "text": "9",
+        "start": 4.56,
         "end": 4.96
       },
       {
@@ -5314,18 +5314,18 @@
       },
       {
         "text": "How",
-        "start": 5.88,
-        "end": 6.24
-      },
-      {
-        "text": "many",
-        "start": 6.272,
+        "start": 5.92,
         "end": 6.4
       },
       {
+        "text": "many",
+        "start": 6.448,
+        "end": 6.64
+      },
+      {
         "text": "stay?",
-        "start": 6.496,
-        "end": 6.96
+        "start": 6.72,
+        "end": 7.12
       }
     ]
   },
@@ -6794,93 +6794,8 @@
       }
     ]
   },
-  "At the butterfly garden party, Clover counts 12 butterflies. 5 are put away. How many stay?": {
-    "file": "1cf81ec16fdfbc17b9066707.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "butterfly",
-        "start": 0.208,
-        "end": 0.64
-      },
-      {
-        "text": "garden",
-        "start": 0.686,
-        "end": 0.96
-      },
-      {
-        "text": "party,",
-        "start": 1.04,
-        "end": 1.76
-      },
-      {
-        "text": "Clover",
-        "start": 1.806,
-        "end": 2.08
-      },
-      {
-        "text": "counts",
-        "start": 2.149,
-        "end": 2.56
-      },
-      {
-        "text": "12",
-        "start": 2.64,
-        "end": 3.04
-      },
-      {
-        "text": "butterflies.",
-        "start": 3.107,
-        "end": 3.92
-      },
-      {
-        "text": "5",
-        "start": 4.48,
-        "end": 4.88
-      },
-      {
-        "text": "are",
-        "start": 4.92,
-        "end": 5.04
-      },
-      {
-        "text": "put",
-        "start": 5.08,
-        "end": 5.2
-      },
-      {
-        "text": "away.",
-        "start": 5.296,
-        "end": 5.76
-      },
-      {
-        "text": "How",
-        "start": 5.9,
-        "end": 6.32
-      },
-      {
-        "text": "many",
-        "start": 6.368,
-        "end": 6.56
-      },
-      {
-        "text": "stay?",
-        "start": 6.64,
-        "end": 7.12
-      }
-    ]
-  },
-  "At the butterfly garden party, Clover counts 15 butterflies. 3 are put away. How many stay?": {
-    "file": "7f6d05a9068a4bbb04741495.mp3",
+  "At the butterfly garden party, Clover counts 11 butterflies. 5 are put away. How many stay?": {
+    "file": "65ed2f9101e3eb1abce44e6e.mp3",
     "words": [
       {
         "text": "At",
@@ -6905,11 +6820,11 @@
       {
         "text": "party,",
         "start": 1.093,
-        "end": 1.68
+        "end": 1.76
       },
       {
         "text": "Clover",
-        "start": 1.737,
+        "start": 1.806,
         "end": 2.08
       },
       {
@@ -6918,38 +6833,123 @@
         "end": 2.48
       },
       {
-        "text": "15",
-        "start": 2.64,
-        "end": 3.12
+        "text": "11",
+        "start": 2.56,
+        "end": 2.96
       },
       {
         "text": "butterflies.",
-        "start": 3.187,
-        "end": 4
+        "start": 3.027,
+        "end": 3.92
       },
       {
-        "text": "3",
-        "start": 4.56,
-        "end": 4.88
+        "text": "5",
+        "start": 4.4,
+        "end": 4.8
       },
       {
         "text": "are",
+        "start": 4.84,
+        "end": 4.96
+      },
+      {
+        "text": "put",
+        "start": 5,
+        "end": 5.12
+      },
+      {
+        "text": "away.",
+        "start": 5.216,
+        "end": 5.68
+      },
+      {
+        "text": "How",
+        "start": 5.86,
+        "end": 6.4
+      },
+      {
+        "text": "many",
+        "start": 6.432,
+        "end": 6.56
+      },
+      {
+        "text": "stay?",
+        "start": 6.656,
+        "end": 7.2
+      }
+    ]
+  },
+  "At the butterfly garden party, Clover counts 13 butterflies. 5 are put away. How many stay?": {
+    "file": "a2aba0609ab67d941c77ee54.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "butterfly",
+        "start": 0.208,
+        "end": 0.64
+      },
+      {
+        "text": "garden",
+        "start": 0.686,
+        "end": 0.96
+      },
+      {
+        "text": "party,",
+        "start": 1.027,
+        "end": 1.68
+      },
+      {
+        "text": "Clover",
+        "start": 1.726,
+        "end": 2
+      },
+      {
+        "text": "counts",
+        "start": 2.057,
+        "end": 2.4
+      },
+      {
+        "text": "13",
+        "start": 2.56,
+        "end": 3.04
+      },
+      {
+        "text": "butterflies.",
+        "start": 3.107,
+        "end": 4
+      },
+      {
+        "text": "5",
+        "start": 4.4,
+        "end": 4.72
+      },
+      {
+        "text": "are",
+        "start": 4.76,
+        "end": 4.88
+      },
+      {
+        "text": "put",
         "start": 4.92,
         "end": 5.04
       },
       {
-        "text": "put",
-        "start": 5.08,
-        "end": 5.2
-      },
-      {
         "text": "away.",
-        "start": 5.28,
-        "end": 5.92
+        "start": 5.12,
+        "end": 5.52
       },
       {
         "text": "How",
-        "start": 6,
+        "start": 5.7,
         "end": 6.24
       },
       {
@@ -6964,8 +6964,8 @@
       }
     ]
   },
-  "At the butterfly garden party, Clover counts 18 butterflies. 6 are put away. How many stay?": {
-    "file": "2bd44abe5e37246b6ac634f6.mp3",
+  "At the butterfly garden party, Clover counts 16 butterflies. 9 are put away. How many stay?": {
+    "file": "75726ea179b666d9c179e709.mp3",
     "words": [
       {
         "text": "At",
@@ -6994,58 +6994,58 @@
       },
       {
         "text": "Clover",
-        "start": 1.806,
-        "end": 2.08
+        "start": 1.817,
+        "end": 2.16
       },
       {
         "text": "counts",
-        "start": 2.149,
-        "end": 2.56
+        "start": 2.229,
+        "end": 2.64
       },
       {
-        "text": "18",
-        "start": 2.64,
-        "end": 3.12
+        "text": "16",
+        "start": 2.88,
+        "end": 3.44
       },
       {
         "text": "butterflies.",
-        "start": 3.18,
-        "end": 4
+        "start": 3.507,
+        "end": 4.48
       },
       {
-        "text": "6",
-        "start": 4.48,
-        "end": 4.8
+        "text": "9",
+        "start": 4.88,
+        "end": 5.28
       },
       {
         "text": "are",
-        "start": 4.86,
-        "end": 5.04
+        "start": 5.32,
+        "end": 5.44
       },
       {
         "text": "put",
-        "start": 5.08,
-        "end": 5.2
+        "start": 5.48,
+        "end": 5.6
       },
       {
         "text": "away.",
-        "start": 5.28,
-        "end": 6
+        "start": 5.68,
+        "end": 6.08
       },
       {
         "text": "How",
-        "start": 6.1,
-        "end": 6.4
+        "start": 6.24,
+        "end": 6.72
       },
       {
         "text": "many",
-        "start": 6.432,
-        "end": 6.56
+        "start": 6.768,
+        "end": 6.96
       },
       {
         "text": "stay?",
-        "start": 6.672,
-        "end": 7.28
+        "start": 7.056,
+        "end": 7.52
       }
     ]
   },
@@ -8159,88 +8159,8 @@
       }
     ]
   },
-  "At the carrot feast, Hazel counts 11 carrots. 4 are put away. How many stay?": {
-    "file": "ac621750abd50c87a7dadc92.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.12,
-        "end": 0.24
-      },
-      {
-        "text": "carrot",
-        "start": 0.286,
-        "end": 0.56
-      },
-      {
-        "text": "feast,",
-        "start": 0.627,
-        "end": 1.28
-      },
-      {
-        "text": "Hazel",
-        "start": 1.333,
-        "end": 1.6
-      },
-      {
-        "text": "counts",
-        "start": 1.657,
-        "end": 2
-      },
-      {
-        "text": "11",
-        "start": 2.08,
-        "end": 2.48
-      },
-      {
-        "text": "carrots.",
-        "start": 2.55,
-        "end": 3.12
-      },
-      {
-        "text": "4",
-        "start": 3.68,
-        "end": 4
-      },
-      {
-        "text": "are",
-        "start": 4.06,
-        "end": 4.24
-      },
-      {
-        "text": "put",
-        "start": 4.28,
-        "end": 4.4
-      },
-      {
-        "text": "away.",
-        "start": 4.48,
-        "end": 4.88
-      },
-      {
-        "text": "How",
-        "start": 5.02,
-        "end": 5.44
-      },
-      {
-        "text": "many",
-        "start": 5.488,
-        "end": 5.68
-      },
-      {
-        "text": "stay?",
-        "start": 5.76,
-        "end": 6.24
-      }
-    ]
-  },
-  "At the carrot feast, Hazel counts 14 carrots. 2 are put away. How many stay?": {
-    "file": "fe5078acbbcc8a170a7d1a42.mp3",
+  "At the carrot feast, Hazel counts 12 carrots. 7 are put away. How many stay?": {
+    "file": "31d2ad967c8b7b5d917ef1ca.mp3",
     "words": [
       {
         "text": "At",
@@ -8260,11 +8180,11 @@
       {
         "text": "feast,",
         "start": 0.627,
-        "end": 1.28
+        "end": 1.2
       },
       {
         "text": "Hazel",
-        "start": 1.333,
+        "start": 1.267,
         "end": 1.6
       },
       {
@@ -8273,18 +8193,178 @@
         "end": 2
       },
       {
-        "text": "14",
-        "start": 2.16,
+        "text": "12",
+        "start": 2.08,
+        "end": 2.48
+      },
+      {
+        "text": "carrots.",
+        "start": 2.56,
+        "end": 3.2
+      },
+      {
+        "text": "7",
+        "start": 3.68,
+        "end": 4
+      },
+      {
+        "text": "are",
+        "start": 4.04,
+        "end": 4.16
+      },
+      {
+        "text": "put",
+        "start": 4.2,
+        "end": 4.32
+      },
+      {
+        "text": "away.",
+        "start": 4.4,
+        "end": 4.8
+      },
+      {
+        "text": "How",
+        "start": 4.94,
+        "end": 5.36
+      },
+      {
+        "text": "many",
+        "start": 5.408,
+        "end": 5.6
+      },
+      {
+        "text": "stay?",
+        "start": 5.696,
+        "end": 6.24
+      }
+    ]
+  },
+  "At the carrot feast, Hazel counts 15 carrots. 6 are put away. How many stay?": {
+    "file": "59be33de94d6229ae9c8a34b.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "carrot",
+        "start": 0.206,
+        "end": 0.48
+      },
+      {
+        "text": "feast,",
+        "start": 0.547,
+        "end": 1.2
+      },
+      {
+        "text": "Hazel",
+        "start": 1.253,
+        "end": 1.52
+      },
+      {
+        "text": "counts",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "15",
+        "start": 2,
+        "end": 2.4
+      },
+      {
+        "text": "carrots.",
+        "start": 2.47,
+        "end": 3.12
+      },
+      {
+        "text": "6",
+        "start": 3.6,
+        "end": 3.92
+      },
+      {
+        "text": "are",
+        "start": 3.98,
+        "end": 4.16
+      },
+      {
+        "text": "put",
+        "start": 4.2,
+        "end": 4.32
+      },
+      {
+        "text": "away.",
+        "start": 4.4,
+        "end": 4.8
+      },
+      {
+        "text": "How",
+        "start": 4.96,
+        "end": 5.44
+      },
+      {
+        "text": "many",
+        "start": 5.488,
+        "end": 5.68
+      },
+      {
+        "text": "stay?",
+        "start": 5.76,
+        "end": 6.24
+      }
+    ]
+  },
+  "At the carrot feast, Hazel counts 18 carrots. 9 are put away. How many stay?": {
+    "file": "74f6f8355f2079918a3916d1.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "carrot",
+        "start": 0.217,
+        "end": 0.56
+      },
+      {
+        "text": "feast,",
+        "start": 0.627,
+        "end": 1.2
+      },
+      {
+        "text": "Hazel",
+        "start": 1.267,
+        "end": 1.6
+      },
+      {
+        "text": "counts",
+        "start": 1.657,
+        "end": 2
+      },
+      {
+        "text": "18",
+        "start": 2.08,
         "end": 2.64
       },
       {
         "text": "carrots.",
-        "start": 2.72,
-        "end": 3.36
+        "start": 2.71,
+        "end": 3.28
       },
       {
-        "text": "2",
-        "start": 3.84,
+        "text": "9",
+        "start": 3.92,
         "end": 4.16
       },
       {
@@ -8299,103 +8379,23 @@
       },
       {
         "text": "away.",
-        "start": 4.576,
-        "end": 5.28
+        "start": 4.56,
+        "end": 4.96
       },
       {
         "text": "How",
-        "start": 5.36,
-        "end": 5.6
+        "start": 5.14,
+        "end": 5.68
       },
       {
         "text": "many",
-        "start": 5.648,
+        "start": 5.712,
         "end": 5.84
       },
       {
         "text": "stay?",
-        "start": 5.952,
+        "start": 5.936,
         "end": 6.48
-      }
-    ]
-  },
-  "At the carrot feast, Hazel counts 17 carrots. 5 are put away. How many stay?": {
-    "file": "b5c4da8b226b0fcf8ed47575.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.12,
-        "end": 0.24
-      },
-      {
-        "text": "carrot",
-        "start": 0.286,
-        "end": 0.56
-      },
-      {
-        "text": "feast,",
-        "start": 0.627,
-        "end": 1.28
-      },
-      {
-        "text": "Hazel",
-        "start": 1.347,
-        "end": 1.68
-      },
-      {
-        "text": "counts",
-        "start": 1.737,
-        "end": 2.08
-      },
-      {
-        "text": "17",
-        "start": 2.24,
-        "end": 2.72
-      },
-      {
-        "text": "carrots.",
-        "start": 2.8,
-        "end": 3.44
-      },
-      {
-        "text": "5",
-        "start": 3.92,
-        "end": 4.32
-      },
-      {
-        "text": "are",
-        "start": 4.36,
-        "end": 4.48
-      },
-      {
-        "text": "put",
-        "start": 4.52,
-        "end": 4.64
-      },
-      {
-        "text": "away.",
-        "start": 4.72,
-        "end": 5.12
-      },
-      {
-        "text": "How",
-        "start": 5.28,
-        "end": 5.76
-      },
-      {
-        "text": "many",
-        "start": 5.792,
-        "end": 5.92
-      },
-      {
-        "text": "stay?",
-        "start": 6.016,
-        "end": 6.56
       }
     ]
   },
@@ -9444,8 +9444,8 @@
       }
     ]
   },
-  "At the firefly dance, Starlight counts 11 fireflies. 4 are put away. How many stay?": {
-    "file": "fcf3a1a67216257f9e83ea53.mp3",
+  "At the firefly dance, Starlight counts 12 fireflies. 7 are put away. How many stay?": {
+    "file": "a9c4947690fbab2c0da7af58.mp3",
     "words": [
       {
         "text": "At",
@@ -9454,22 +9454,22 @@
       },
       {
         "text": "the",
-        "start": 0.12,
-        "end": 0.24
+        "start": 0.1,
+        "end": 0.16
       },
       {
         "text": "firefly",
-        "start": 0.304,
+        "start": 0.24,
         "end": 0.72
       },
       {
         "text": "dance,",
         "start": 0.8,
-        "end": 1.44
+        "end": 1.52
       },
       {
         "text": "Starlight",
-        "start": 1.504,
+        "start": 1.568,
         "end": 2
       },
       {
@@ -9478,54 +9478,54 @@
         "end": 2.4
       },
       {
-        "text": "11",
+        "text": "12",
         "start": 2.48,
-        "end": 2.88
+        "end": 2.96
       },
       {
         "text": "fireflies.",
-        "start": 2.96,
-        "end": 3.84
+        "start": 3.04,
+        "end": 4
       },
       {
-        "text": "4",
-        "start": 4.64,
-        "end": 4.72
-      },
-      {
-        "text": "are",
-        "start": 4.76,
+        "text": "7",
+        "start": 4.56,
         "end": 4.88
       },
       {
+        "text": "are",
+        "start": 4.9,
+        "end": 4.96
+      },
+      {
         "text": "put",
-        "start": 4.92,
-        "end": 5.04
+        "start": 5.02,
+        "end": 5.2
       },
       {
         "text": "away.",
-        "start": 5.12,
-        "end": 5.52
+        "start": 5.28,
+        "end": 5.68
       },
       {
         "text": "How",
-        "start": 5.68,
-        "end": 6.16
-      },
-      {
-        "text": "many",
-        "start": 6.208,
+        "start": 5.86,
         "end": 6.4
       },
       {
+        "text": "many",
+        "start": 6.448,
+        "end": 6.64
+      },
+      {
         "text": "stay?",
-        "start": 6.48,
-        "end": 6.96
+        "start": 6.736,
+        "end": 7.2
       }
     ]
   },
-  "At the firefly dance, Starlight counts 14 fireflies. 2 are put away. How many stay?": {
-    "file": "903b6d535eff245e05186ebe.mp3",
+  "At the firefly dance, Starlight counts 15 fireflies. 6 are put away. How many stay?": {
+    "file": "faa7bec6efc978cd86644bea.mp3",
     "words": [
       {
         "text": "At",
@@ -9550,62 +9550,62 @@
       {
         "text": "Starlight",
         "start": 1.584,
-        "end": 2.08
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 2.137,
+        "start": 2.069,
         "end": 2.48
       },
       {
-        "text": "14",
+        "text": "15",
         "start": 2.56,
-        "end": 3.12
+        "end": 3.2
       },
       {
         "text": "fireflies.",
-        "start": 3.2,
+        "start": 3.28,
         "end": 4.24
       },
       {
-        "text": "2",
-        "start": 4.72,
-        "end": 4.96
+        "text": "6",
+        "start": 4.8,
+        "end": 4.88
       },
       {
         "text": "are",
-        "start": 5,
-        "end": 5.12
+        "start": 4.92,
+        "end": 5.04
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 5.08,
+        "end": 5.2
       },
       {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 5.28,
+        "end": 5.68
       },
       {
         "text": "How",
-        "start": 5.94,
-        "end": 6.48
+        "start": 5.82,
+        "end": 6.24
       },
       {
         "text": "many",
-        "start": 6.528,
-        "end": 6.72
+        "start": 6.288,
+        "end": 6.48
       },
       {
         "text": "stay?",
-        "start": 6.816,
-        "end": 7.36
+        "start": 6.56,
+        "end": 7.04
       }
     ]
   },
-  "At the firefly dance, Starlight counts 17 fireflies. 5 are put away. How many stay?": {
-    "file": "030db1428d2afad4991092cb.mp3",
+  "At the firefly dance, Starlight counts 18 fireflies. 9 are put away. How many stay?": {
+    "file": "d1c4b55b845e0cd24ffc2aaf.mp3",
     "words": [
       {
         "text": "At",
@@ -9638,49 +9638,49 @@
         "end": 2.4
       },
       {
-        "text": "17",
-        "start": 2.64,
-        "end": 3.36
+        "text": "18",
+        "start": 2.56,
+        "end": 3.2
       },
       {
         "text": "fireflies.",
-        "start": 3.44,
+        "start": 3.28,
         "end": 4.32
       },
       {
-        "text": "5",
-        "start": 4.96,
-        "end": 5.2
+        "text": "9",
+        "start": 4.64,
+        "end": 5.04
       },
       {
         "text": "are",
-        "start": 5.24,
-        "end": 5.36
+        "start": 5.1,
+        "end": 5.28
       },
       {
         "text": "put",
-        "start": 5.4,
-        "end": 5.52
+        "start": 5.32,
+        "end": 5.44
       },
       {
         "text": "away.",
-        "start": 5.6,
-        "end": 6
+        "start": 5.52,
+        "end": 5.92
       },
       {
         "text": "How",
-        "start": 6.18,
-        "end": 6.72
+        "start": 6.06,
+        "end": 6.48
       },
       {
         "text": "many",
-        "start": 6.768,
-        "end": 6.96
+        "start": 6.512,
+        "end": 6.64
       },
       {
         "text": "stay?",
-        "start": 7.04,
-        "end": 7.44
+        "start": 6.736,
+        "end": 7.28
       }
     ]
   },
@@ -10729,88 +10729,8 @@
       }
     ]
   },
-  "At the harvest lunch, Maple counts 11 apples. 4 are put away. How many stay?": {
-    "file": "cd1b69840a7de120727c9c17.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "harvest",
-        "start": 0.22,
-        "end": 0.64
-      },
-      {
-        "text": "lunch,",
-        "start": 0.693,
-        "end": 1.36
-      },
-      {
-        "text": "Maple",
-        "start": 1.413,
-        "end": 1.68
-      },
-      {
-        "text": "counts",
-        "start": 1.749,
-        "end": 2.16
-      },
-      {
-        "text": "11",
-        "start": 2.24,
-        "end": 2.64
-      },
-      {
-        "text": "apples.",
-        "start": 2.731,
-        "end": 3.36
-      },
-      {
-        "text": "4",
-        "start": 3.84,
-        "end": 4.16
-      },
-      {
-        "text": "are",
-        "start": 4.2,
-        "end": 4.32
-      },
-      {
-        "text": "put",
-        "start": 4.38,
-        "end": 4.56
-      },
-      {
-        "text": "away.",
-        "start": 4.64,
-        "end": 5.28
-      },
-      {
-        "text": "How",
-        "start": 5.36,
-        "end": 5.6
-      },
-      {
-        "text": "many",
-        "start": 5.648,
-        "end": 5.84
-      },
-      {
-        "text": "stay?",
-        "start": 5.92,
-        "end": 6.4
-      }
-    ]
-  },
-  "At the harvest lunch, Maple counts 14 apples. 2 are put away. How many stay?": {
-    "file": "bdbcd366611af5e2826fd8d3.mp3",
+  "At the harvest lunch, Maple counts 12 apples. 7 are put away. How many stay?": {
+    "file": "3c955248983b569d80750bdc.mp3",
     "words": [
       {
         "text": "At",
@@ -10834,37 +10754,37 @@
       },
       {
         "text": "Maple",
-        "start": 1.32,
-        "end": 1.52
+        "start": 1.333,
+        "end": 1.6
       },
       {
         "text": "counts",
-        "start": 1.589,
-        "end": 2
+        "start": 1.669,
+        "end": 2.08
       },
       {
-        "text": "14",
-        "start": 2.08,
+        "text": "12",
+        "start": 2.16,
         "end": 2.48
       },
       {
         "text": "apples.",
         "start": 2.56,
-        "end": 3.12
+        "end": 3.2
       },
       {
-        "text": "2",
+        "text": "7",
         "start": 3.76,
-        "end": 3.84
+        "end": 3.92
       },
       {
         "text": "are",
-        "start": 3.88,
-        "end": 4
+        "start": 3.96,
+        "end": 4.08
       },
       {
         "text": "put",
-        "start": 4.04,
+        "start": 4.1,
         "end": 4.16
       },
       {
@@ -10879,18 +10799,98 @@
       },
       {
         "text": "many",
-        "start": 5.152,
-        "end": 5.28
+        "start": 5.168,
+        "end": 5.36
       },
       {
         "text": "stay?",
-        "start": 5.36,
-        "end": 5.84
+        "start": 5.44,
+        "end": 6
       }
     ]
   },
-  "At the harvest lunch, Maple counts 17 apples. 5 are put away. How many stay?": {
-    "file": "1e4e44cdcf8edde0abec1504.mp3",
+  "At the harvest lunch, Maple counts 15 apples. 6 are put away. How many stay?": {
+    "file": "bfe11953ee2f69959ca9d224.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "harvest",
+        "start": 0.22,
+        "end": 0.64
+      },
+      {
+        "text": "lunch,",
+        "start": 0.693,
+        "end": 1.28
+      },
+      {
+        "text": "Maple",
+        "start": 1.333,
+        "end": 1.6
+      },
+      {
+        "text": "counts",
+        "start": 1.669,
+        "end": 2.08
+      },
+      {
+        "text": "15",
+        "start": 2.16,
+        "end": 2.64
+      },
+      {
+        "text": "apples.",
+        "start": 2.731,
+        "end": 3.36
+      },
+      {
+        "text": "6",
+        "start": 4.16,
+        "end": 4.32
+      },
+      {
+        "text": "are",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "put",
+        "start": 4.54,
+        "end": 4.72
+      },
+      {
+        "text": "away.",
+        "start": 4.8,
+        "end": 5.2
+      },
+      {
+        "text": "How",
+        "start": 5.38,
+        "end": 5.92
+      },
+      {
+        "text": "many",
+        "start": 5.968,
+        "end": 6.16
+      },
+      {
+        "text": "stay?",
+        "start": 6.24,
+        "end": 6.72
+      }
+    ]
+  },
+  "At the harvest lunch, Maple counts 18 apples. 9 are put away. How many stay?": {
+    "file": "a426d57fef828eb3fe550963.mp3",
     "words": [
       {
         "text": "At",
@@ -10910,11 +10910,11 @@
       {
         "text": "lunch,",
         "start": 0.707,
-        "end": 1.36
+        "end": 1.28
       },
       {
         "text": "Maple",
-        "start": 1.4,
+        "start": 1.333,
         "end": 1.6
       },
       {
@@ -10923,49 +10923,49 @@
         "end": 2
       },
       {
-        "text": "17",
-        "start": 2.24,
-        "end": 2.64
+        "text": "18",
+        "start": 2.08,
+        "end": 2.48
       },
       {
         "text": "apples.",
-        "start": 2.72,
-        "end": 3.36
+        "start": 2.56,
+        "end": 3.2
       },
       {
-        "text": "5",
-        "start": 3.92,
-        "end": 4.16
+        "text": "9",
+        "start": 3.84,
+        "end": 4
       },
       {
         "text": "are",
+        "start": 4.04,
+        "end": 4.16
+      },
+      {
+        "text": "put",
         "start": 4.2,
         "end": 4.32
       },
       {
-        "text": "put",
-        "start": 4.36,
-        "end": 4.48
-      },
-      {
         "text": "away.",
-        "start": 4.56,
-        "end": 5.24
+        "start": 4.4,
+        "end": 4.8
       },
       {
         "text": "How",
-        "start": 5.33,
-        "end": 5.6
+        "start": 4.96,
+        "end": 5.44
       },
       {
         "text": "many",
-        "start": 5.632,
-        "end": 5.76
+        "start": 5.472,
+        "end": 5.6
       },
       {
         "text": "stay?",
-        "start": 5.856,
-        "end": 6.4
+        "start": 5.696,
+        "end": 6.24
       }
     ]
   },
@@ -12014,88 +12014,8 @@
       }
     ]
   },
-  "At the pancake picnic, Waffles counts 11 berries. 4 are put away. How many stay?": {
-    "file": "6f0805fbece678c40cecf0ad.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "pancake",
-        "start": 0.224,
-        "end": 0.64
-      },
-      {
-        "text": "picnic,",
-        "start": 0.72,
-        "end": 1.52
-      },
-      {
-        "text": "Waffles",
-        "start": 1.56,
-        "end": 1.92
-      },
-      {
-        "text": "counts",
-        "start": 1.977,
-        "end": 2.32
-      },
-      {
-        "text": "11",
-        "start": 2.4,
-        "end": 2.8
-      },
-      {
-        "text": "berries.",
-        "start": 2.87,
-        "end": 3.52
-      },
-      {
-        "text": "4",
-        "start": 4,
-        "end": 4.24
-      },
-      {
-        "text": "are",
-        "start": 4.3,
-        "end": 4.48
-      },
-      {
-        "text": "put",
-        "start": 4.5,
-        "end": 4.56
-      },
-      {
-        "text": "away.",
-        "start": 4.656,
-        "end": 5.12
-      },
-      {
-        "text": "How",
-        "start": 5.28,
-        "end": 5.76
-      },
-      {
-        "text": "many",
-        "start": 5.792,
-        "end": 5.92
-      },
-      {
-        "text": "stay?",
-        "start": 6.032,
-        "end": 6.56
-      }
-    ]
-  },
-  "At the pancake picnic, Waffles counts 14 berries. 2 are put away. How many stay?": {
-    "file": "04276e0c529f7a632a2606c4.mp3",
+  "At the pancake picnic, Waffles counts 12 berries. 7 are put away. How many stay?": {
+    "file": "ac06ff34afd5328dfeac1406.mp3",
     "words": [
       {
         "text": "At",
@@ -12124,58 +12044,58 @@
       },
       {
         "text": "counts",
-        "start": 1.977,
-        "end": 2.32
+        "start": 1.989,
+        "end": 2.4
       },
       {
-        "text": "14",
+        "text": "12",
         "start": 2.48,
-        "end": 2.96
+        "end": 2.88
       },
       {
         "text": "berries.",
-        "start": 3.03,
-        "end": 3.68
+        "start": 2.95,
+        "end": 3.6
       },
       {
-        "text": "2",
-        "start": 4.08,
-        "end": 4.24
-      },
-      {
-        "text": "are",
-        "start": 4.26,
+        "text": "7",
+        "start": 4,
         "end": 4.32
       },
       {
-        "text": "put",
+        "text": "are",
         "start": 4.38,
         "end": 4.56
       },
       {
+        "text": "put",
+        "start": 4.58,
+        "end": 4.64
+      },
+      {
         "text": "away.",
-        "start": 4.64,
-        "end": 5.28
+        "start": 4.72,
+        "end": 5.12
       },
       {
         "text": "How",
-        "start": 5.36,
-        "end": 5.6
+        "start": 5.28,
+        "end": 5.76
       },
       {
         "text": "many",
-        "start": 5.648,
-        "end": 5.84
+        "start": 5.792,
+        "end": 5.92
       },
       {
         "text": "stay?",
-        "start": 5.936,
-        "end": 6.48
+        "start": 6.032,
+        "end": 6.56
       }
     ]
   },
-  "At the pancake picnic, Waffles counts 17 berries. 5 are put away. How many stay?": {
-    "file": "f1c1c6d5315dd751787a717b.mp3",
+  "At the pancake picnic, Waffles counts 15 berries. 6 are put away. How many stay?": {
+    "file": "e4d228d89d7f820399807244.mp3",
     "words": [
       {
         "text": "At",
@@ -12190,11 +12110,11 @@
       {
         "text": "pancake",
         "start": 0.224,
-        "end": 0.56
+        "end": 0.64
       },
       {
         "text": "picnic,",
-        "start": 0.629,
+        "start": 0.709,
         "end": 1.36
       },
       {
@@ -12204,22 +12124,102 @@
       },
       {
         "text": "counts",
-        "start": 1.909,
-        "end": 2.32
+        "start": 1.897,
+        "end": 2.24
       },
       {
-        "text": "17",
-        "start": 2.48,
-        "end": 3.12
+        "text": "15",
+        "start": 2.32,
+        "end": 2.72
       },
       {
         "text": "berries.",
-        "start": 3.19,
-        "end": 3.84
+        "start": 2.79,
+        "end": 3.44
       },
       {
-        "text": "5",
-        "start": 4.16,
+        "text": "6",
+        "start": 3.84,
+        "end": 4.16
+      },
+      {
+        "text": "are",
+        "start": 4.2,
+        "end": 4.32
+      },
+      {
+        "text": "put",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "away.",
+        "start": 4.576,
+        "end": 5.04
+      },
+      {
+        "text": "How",
+        "start": 5.16,
+        "end": 5.52
+      },
+      {
+        "text": "many",
+        "start": 5.568,
+        "end": 5.76
+      },
+      {
+        "text": "stay?",
+        "start": 5.856,
+        "end": 6.4
+      }
+    ]
+  },
+  "At the pancake picnic, Waffles counts 18 berries. 9 are put away. How many stay?": {
+    "file": "d6b65345d636df54fff6efd3.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "pancake",
+        "start": 0.224,
+        "end": 0.64
+      },
+      {
+        "text": "picnic,",
+        "start": 0.709,
+        "end": 1.44
+      },
+      {
+        "text": "Waffles",
+        "start": 1.48,
+        "end": 1.84
+      },
+      {
+        "text": "counts",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "18",
+        "start": 2.4,
+        "end": 2.88
+      },
+      {
+        "text": "berries.",
+        "start": 2.95,
+        "end": 3.52
+      },
+      {
+        "text": "9",
+        "start": 4.08,
         "end": 4.48
       },
       {
@@ -12239,18 +12239,18 @@
       },
       {
         "text": "How",
-        "start": 5.42,
-        "end": 5.84
-      },
-      {
-        "text": "many",
-        "start": 5.872,
+        "start": 5.46,
         "end": 6
       },
       {
+        "text": "many",
+        "start": 6.048,
+        "end": 6.24
+      },
+      {
         "text": "stay?",
-        "start": 6.096,
-        "end": 6.64
+        "start": 6.336,
+        "end": 6.8
       }
     ]
   },
@@ -13539,8 +13539,8 @@
       }
     ]
   },
-  "At the splash show, Puddle counts 11 lily pads. 4 are put away. How many stay?": {
-    "file": "68f2fd324924dc9354386c5c.mp3",
+  "At the splash show, Puddle counts 12 lily pads. 7 are put away. How many stay?": {
+    "file": "f4a8ce601ec624bc6e2d79e9.mp3",
     "words": [
       {
         "text": "At",
@@ -13560,11 +13560,11 @@
       {
         "text": "show,",
         "start": 0.624,
-        "end": 1.2
+        "end": 1.28
       },
       {
         "text": "Puddle",
-        "start": 1.24,
+        "start": 1.32,
         "end": 1.52
       },
       {
@@ -13573,59 +13573,59 @@
         "end": 1.92
       },
       {
-        "text": "11",
+        "text": "12",
         "start": 2,
         "end": 2.4
       },
       {
         "text": "lily",
-        "start": 2.48,
-        "end": 2.72
+        "start": 2.44,
+        "end": 2.64
       },
       {
         "text": "pads.",
-        "start": 2.816,
+        "start": 2.752,
         "end": 3.36
       },
       {
-        "text": "4",
-        "start": 3.76,
-        "end": 4.08
+        "text": "7",
+        "start": 3.84,
+        "end": 4.24
       },
       {
         "text": "are",
-        "start": 4.14,
-        "end": 4.32
-      },
-      {
-        "text": "put",
-        "start": 4.36,
+        "start": 4.3,
         "end": 4.48
       },
       {
+        "text": "put",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
         "text": "away.",
-        "start": 4.56,
-        "end": 4.96
+        "start": 4.72,
+        "end": 5.12
       },
       {
         "text": "How",
-        "start": 5.1,
-        "end": 5.52
+        "start": 5.34,
+        "end": 6
       },
       {
         "text": "many",
-        "start": 5.552,
-        "end": 5.68
+        "start": 6.048,
+        "end": 6.24
       },
       {
         "text": "stay?",
-        "start": 5.776,
-        "end": 6.32
+        "start": 6.336,
+        "end": 6.8
       }
     ]
   },
-  "At the splash show, Puddle counts 14 lily pads. 2 are put away. How many stay?": {
-    "file": "3a83345b8d2527642d7051ea.mp3",
+  "At the splash show, Puddle counts 15 lily pads. 6 are put away. How many stay?": {
+    "file": "a6dfa1bd555b526d766b6b3b.mp3",
     "words": [
       {
         "text": "At",
@@ -13644,6 +13644,91 @@
       },
       {
         "text": "show,",
+        "start": 0.688,
+        "end": 1.2
+      },
+      {
+        "text": "Puddle",
+        "start": 1.24,
+        "end": 1.44
+      },
+      {
+        "text": "counts",
+        "start": 1.497,
+        "end": 1.84
+      },
+      {
+        "text": "15",
+        "start": 1.92,
+        "end": 2.4
+      },
+      {
+        "text": "lily",
+        "start": 2.44,
+        "end": 2.64
+      },
+      {
+        "text": "pads.",
+        "start": 2.752,
+        "end": 3.36
+      },
+      {
+        "text": "6",
+        "start": 3.76,
+        "end": 4.16
+      },
+      {
+        "text": "are",
+        "start": 4.2,
+        "end": 4.32
+      },
+      {
+        "text": "put",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "away.",
+        "start": 4.56,
+        "end": 4.96
+      },
+      {
+        "text": "How",
+        "start": 5.12,
+        "end": 5.6
+      },
+      {
+        "text": "many",
+        "start": 5.648,
+        "end": 5.84
+      },
+      {
+        "text": "stay?",
+        "start": 5.952,
+        "end": 6.48
+      }
+    ]
+  },
+  "At the splash show, Puddle counts 18 lily pads. 9 are put away. How many stay?": {
+    "file": "c95987df2d6434d6f6240ad0.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.12,
+        "end": 0.24
+      },
+      {
+        "text": "splash",
+        "start": 0.297,
+        "end": 0.64
+      },
+      {
+        "text": "show,",
         "start": 0.704,
         "end": 1.28
       },
@@ -13654,143 +13739,58 @@
       },
       {
         "text": "counts",
-        "start": 1.577,
-        "end": 1.92
+        "start": 1.589,
+        "end": 2
       },
       {
-        "text": "14",
-        "start": 2,
-        "end": 2.56
-      },
-      {
-        "text": "lily",
-        "start": 2.6,
-        "end": 2.88
-      },
-      {
-        "text": "pads.",
-        "start": 2.976,
-        "end": 3.52
-      },
-      {
-        "text": "2",
-        "start": 3.92,
-        "end": 4.08
-      },
-      {
-        "text": "are",
-        "start": 4.12,
-        "end": 4.24
-      },
-      {
-        "text": "put",
-        "start": 4.28,
-        "end": 4.4
-      },
-      {
-        "text": "away.",
-        "start": 4.48,
-        "end": 4.88
-      },
-      {
-        "text": "How",
-        "start": 5.04,
-        "end": 5.52
-      },
-      {
-        "text": "many",
-        "start": 5.568,
-        "end": 5.76
-      },
-      {
-        "text": "stay?",
-        "start": 5.856,
-        "end": 6.4
-      }
-    ]
-  },
-  "At the splash show, Puddle counts 17 lily pads. 5 are put away. How many stay?": {
-    "file": "9ac95de7366c5e015a9c547c.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "splash",
-        "start": 0.217,
-        "end": 0.56
-      },
-      {
-        "text": "show,",
-        "start": 0.608,
-        "end": 1.12
-      },
-      {
-        "text": "Puddle",
-        "start": 1.16,
-        "end": 1.44
-      },
-      {
-        "text": "counts",
-        "start": 1.497,
-        "end": 1.84
-      },
-      {
-        "text": "17",
-        "start": 2,
+        "text": "18",
+        "start": 2.08,
         "end": 2.64
       },
       {
         "text": "lily",
         "start": 2.68,
-        "end": 2.88
+        "end": 2.96
       },
       {
         "text": "pads.",
-        "start": 2.992,
+        "start": 3.056,
         "end": 3.52
       },
       {
-        "text": "5",
-        "start": 4.16,
-        "end": 4.32
+        "text": "9",
+        "start": 4,
+        "end": 4.4
       },
       {
         "text": "are",
-        "start": 4.36,
-        "end": 4.48
+        "start": 4.44,
+        "end": 4.56
       },
       {
         "text": "put",
-        "start": 4.52,
-        "end": 4.64
+        "start": 4.6,
+        "end": 4.72
       },
       {
         "text": "away.",
-        "start": 4.72,
-        "end": 5.12
+        "start": 4.816,
+        "end": 5.56
       },
       {
         "text": "How",
-        "start": 5.26,
-        "end": 5.68
-      },
-      {
-        "text": "many",
-        "start": 5.728,
+        "start": 5.65,
         "end": 5.92
       },
       {
+        "text": "many",
+        "start": 5.968,
+        "end": 6.16
+      },
+      {
         "text": "stay?",
-        "start": 6,
-        "end": 6.48
+        "start": 6.24,
+        "end": 6.64
       }
     ]
   },
@@ -14904,88 +14904,8 @@
       }
     ]
   },
-  "At the stick-fort party, Scout counts 12 sticks. 5 are put away. How many stay?": {
-    "file": "55f82951485591f41cf62d33.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "stick-fort",
-        "start": 0.213,
-        "end": 0.72
-      },
-      {
-        "text": "party,",
-        "start": 0.773,
-        "end": 1.36
-      },
-      {
-        "text": "Scout",
-        "start": 1.413,
-        "end": 1.68
-      },
-      {
-        "text": "counts",
-        "start": 1.737,
-        "end": 2.08
-      },
-      {
-        "text": "12",
-        "start": 2.16,
-        "end": 2.48
-      },
-      {
-        "text": "sticks.",
-        "start": 2.56,
-        "end": 3.12
-      },
-      {
-        "text": "5",
-        "start": 3.52,
-        "end": 3.76
-      },
-      {
-        "text": "are",
-        "start": 3.8,
-        "end": 3.92
-      },
-      {
-        "text": "put",
-        "start": 3.96,
-        "end": 4.08
-      },
-      {
-        "text": "away.",
-        "start": 4.16,
-        "end": 4.56
-      },
-      {
-        "text": "How",
-        "start": 4.68,
-        "end": 5.04
-      },
-      {
-        "text": "many",
-        "start": 5.088,
-        "end": 5.28
-      },
-      {
-        "text": "stay?",
-        "start": 5.376,
-        "end": 5.92
-      }
-    ]
-  },
-  "At the stick-fort party, Scout counts 15 sticks. 3 are put away. How many stay?": {
-    "file": "24651ab7061e8f6fd62b6a51.mp3",
+  "At the stick-fort party, Scout counts 11 sticks. 5 are put away. How many stay?": {
+    "file": "aeb3d748f8689808149f721d.mp3",
     "words": [
       {
         "text": "At",
@@ -15004,82 +14924,162 @@
       },
       {
         "text": "party,",
-        "start": 0.773,
-        "end": 1.36
+        "start": 0.787,
+        "end": 1.44
       },
       {
         "text": "Scout",
-        "start": 1.413,
-        "end": 1.68
+        "start": 1.507,
+        "end": 1.84
       },
       {
         "text": "counts",
-        "start": 1.737,
-        "end": 2.08
+        "start": 1.897,
+        "end": 2.24
       },
       {
-        "text": "15",
-        "start": 2.16,
-        "end": 2.64
+        "text": "11",
+        "start": 2.32,
+        "end": 2.8
       },
       {
         "text": "sticks.",
-        "start": 2.709,
-        "end": 3.28
+        "start": 2.88,
+        "end": 3.52
       },
       {
-        "text": "3",
-        "start": 3.6,
-        "end": 3.92
-      },
-      {
-        "text": "are",
-        "start": 3.96,
-        "end": 4.08
-      },
-      {
-        "text": "put",
-        "start": 4.14,
+        "text": "5",
+        "start": 4,
         "end": 4.32
       },
       {
-        "text": "away.",
-        "start": 4.4,
-        "end": 5.04
+        "text": "are",
+        "start": 4.34,
+        "end": 4.4
       },
       {
-        "text": "How",
-        "start": 5.12,
+        "text": "put",
+        "start": 4.46,
+        "end": 4.64
+      },
+      {
+        "text": "away.",
+        "start": 4.72,
         "end": 5.36
       },
       {
+        "text": "How",
+        "start": 5.44,
+        "end": 5.68
+      },
+      {
         "text": "many",
-        "start": 5.408,
-        "end": 5.6
+        "start": 5.712,
+        "end": 5.84
       },
       {
         "text": "stay?",
-        "start": 5.68,
-        "end": 6.16
+        "start": 5.952,
+        "end": 6.48
       }
     ]
   },
-  "At the stick-fort party, Scout counts 18 sticks. 6 are put away. How many stay?": {
-    "file": "cab4b1e8e8372be930f1c0dd.mp3",
+  "At the stick-fort party, Scout counts 13 sticks. 5 are put away. How many stay?": {
+    "file": "8e3e79f16716d7001ad2ed51.mp3",
     "words": [
       {
         "text": "At",
         "start": 0,
-        "end": 0.16
+        "end": 0.08
       },
       {
         "text": "the",
-        "start": 0.18,
+        "start": 0.12,
         "end": 0.24
       },
       {
         "text": "stick-fort",
         "start": 0.293,
+        "end": 0.8
+      },
+      {
+        "text": "party,",
+        "start": 0.853,
+        "end": 1.52
+      },
+      {
+        "text": "Scout",
+        "start": 1.573,
+        "end": 1.84
+      },
+      {
+        "text": "counts",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "13",
+        "start": 2.32,
+        "end": 2.8
+      },
+      {
+        "text": "sticks.",
+        "start": 2.88,
+        "end": 3.52
+      },
+      {
+        "text": "5",
+        "start": 4,
+        "end": 4.32
+      },
+      {
+        "text": "are",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "put",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
+        "text": "away.",
+        "start": 4.72,
+        "end": 5.12
+      },
+      {
+        "text": "How",
+        "start": 5.28,
+        "end": 5.76
+      },
+      {
+        "text": "many",
+        "start": 5.792,
+        "end": 5.92
+      },
+      {
+        "text": "stay?",
+        "start": 6,
+        "end": 8.48
+      }
+    ]
+  },
+  "At the stick-fort party, Scout counts 16 sticks. 9 are put away. How many stay?": {
+    "file": "a4730c9e41fd15f2cf0f83e4.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "stick-fort",
+        "start": 0.213,
         "end": 0.72
       },
       {
@@ -15089,58 +15089,58 @@
       },
       {
         "text": "Scout",
-        "start": 1.493,
-        "end": 1.76
+        "start": 1.507,
+        "end": 1.84
       },
       {
         "text": "counts",
-        "start": 1.817,
-        "end": 2.16
+        "start": 1.897,
+        "end": 2.24
       },
       {
-        "text": "18",
-        "start": 2.24,
-        "end": 2.72
+        "text": "16",
+        "start": 2.4,
+        "end": 2.96
       },
       {
         "text": "sticks.",
-        "start": 2.789,
-        "end": 3.36
+        "start": 3.04,
+        "end": 3.68
       },
       {
-        "text": "6",
-        "start": 3.92,
-        "end": 4.16
-      },
-      {
-        "text": "are",
-        "start": 4.2,
-        "end": 4.32
-      },
-      {
-        "text": "put",
-        "start": 4.36,
+        "text": "9",
+        "start": 4.08,
         "end": 4.48
       },
       {
+        "text": "are",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
+        "text": "put",
+        "start": 4.68,
+        "end": 4.8
+      },
+      {
         "text": "away.",
-        "start": 4.56,
-        "end": 5.2
+        "start": 4.88,
+        "end": 5.28
       },
       {
         "text": "How",
-        "start": 5.28,
-        "end": 5.52
-      },
-      {
-        "text": "many",
-        "start": 5.568,
+        "start": 5.4,
         "end": 5.76
       },
       {
+        "text": "many",
+        "start": 5.808,
+        "end": 6
+      },
+      {
         "text": "stay?",
-        "start": 5.856,
-        "end": 6.32
+        "start": 6.096,
+        "end": 8.64
       }
     ]
   },
@@ -16189,8 +16189,8 @@
       }
     ]
   },
-  "At the village gate, Poppy counts 10 cardboard towers. 3 are put away. How many stay?": {
-    "file": "ea5485ab42d3a78ad591598d.mp3",
+  "At the village gate, Poppy counts 11 cardboard towers. 4 are put away. How many stay?": {
+    "file": "cc3c1d0d3cdf33304afbbcec.mp3",
     "words": [
       {
         "text": "At",
@@ -16209,7 +16209,7 @@
       },
       {
         "text": "gate,",
-        "start": 0.56,
+        "start": 0.544,
         "end": 1.2
       },
       {
@@ -16223,59 +16223,144 @@
         "end": 1.92
       },
       {
-        "text": "10",
-        "start": 2,
-        "end": 2.32
+        "text": "11",
+        "start": 2.2,
+        "end": 2.48
       },
       {
         "text": "cardboard",
-        "start": 2.368,
-        "end": 2.8
+        "start": 2.544,
+        "end": 3.12
       },
       {
         "text": "towers.",
-        "start": 2.891,
-        "end": 3.6
+        "start": 3.2,
+        "end": 3.84
       },
       {
-        "text": "3",
-        "start": 3.92,
-        "end": 4.16
+        "text": "4",
+        "start": 4.24,
+        "end": 4.64
       },
       {
         "text": "are",
-        "start": 4.22,
-        "end": 4.4
+        "start": 4.68,
+        "end": 4.8
       },
       {
         "text": "put",
-        "start": 4.42,
-        "end": 4.48
+        "start": 4.84,
+        "end": 4.96
       },
       {
         "text": "away.",
-        "start": 4.576,
-        "end": 5.28
+        "start": 5.04,
+        "end": 5.72
       },
       {
         "text": "How",
-        "start": 5.36,
-        "end": 5.6
+        "start": 5.81,
+        "end": 6.08
       },
       {
         "text": "many",
-        "start": 5.648,
-        "end": 5.84
+        "start": 6.128,
+        "end": 6.32
       },
       {
         "text": "stay?",
-        "start": 5.92,
-        "end": 6.4
+        "start": 6.4,
+        "end": 6.88
       }
     ]
   },
-  "At the village gate, Poppy counts 13 cardboard towers. 6 are put away. How many stay?": {
-    "file": "e610a5956db313f4926cc596.mp3",
+  "At the village gate, Poppy counts 14 cardboard towers. 8 are put away. How many stay?": {
+    "file": "1d9abd2a9fe43d2bed33b7b2.mp3",
+    "words": [
+      {
+        "text": "At",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "the",
+        "start": 0.1,
+        "end": 0.16
+      },
+      {
+        "text": "village",
+        "start": 0.2,
+        "end": 0.48
+      },
+      {
+        "text": "gate,",
+        "start": 0.544,
+        "end": 1.04
+      },
+      {
+        "text": "Poppy",
+        "start": 1.1,
+        "end": 1.44
+      },
+      {
+        "text": "counts",
+        "start": 1.497,
+        "end": 1.84
+      },
+      {
+        "text": "14",
+        "start": 1.92,
+        "end": 2.56
+      },
+      {
+        "text": "cardboard",
+        "start": 2.608,
+        "end": 3.04
+      },
+      {
+        "text": "towers.",
+        "start": 3.131,
+        "end": 3.92
+      },
+      {
+        "text": "8",
+        "start": 4.24,
+        "end": 4.48
+      },
+      {
+        "text": "are",
+        "start": 4.54,
+        "end": 4.72
+      },
+      {
+        "text": "put",
+        "start": 4.76,
+        "end": 4.88
+      },
+      {
+        "text": "away.",
+        "start": 4.96,
+        "end": 5.36
+      },
+      {
+        "text": "How",
+        "start": 5.54,
+        "end": 6.08
+      },
+      {
+        "text": "many",
+        "start": 6.128,
+        "end": 6.32
+      },
+      {
+        "text": "stay?",
+        "start": 6.416,
+        "end": 6.88
+      }
+    ]
+  },
+  "At the village gate, Poppy counts 17 cardboard towers. 9 are put away. How many stay?": {
+    "file": "1320eae4464c1951731506f2.mp3",
     "words": [
       {
         "text": "At",
@@ -16300,147 +16385,62 @@
       {
         "text": "Poppy",
         "start": 1.18,
-        "end": 1.52
-      },
-      {
-        "text": "counts",
-        "start": 1.577,
-        "end": 1.92
-      },
-      {
-        "text": "13",
-        "start": 2.24,
-        "end": 2.56
-      },
-      {
-        "text": "cardboard",
-        "start": 2.608,
-        "end": 3.04
-      },
-      {
-        "text": "towers.",
-        "start": 3.131,
-        "end": 3.92
-      },
-      {
-        "text": "6",
-        "start": 4.32,
-        "end": 4.64
-      },
-      {
-        "text": "are",
-        "start": 4.68,
-        "end": 4.8
-      },
-      {
-        "text": "put",
-        "start": 4.84,
-        "end": 4.96
-      },
-      {
-        "text": "away.",
-        "start": 5.04,
-        "end": 5.44
-      },
-      {
-        "text": "How",
-        "start": 5.62,
-        "end": 6.16
-      },
-      {
-        "text": "many",
-        "start": 6.208,
-        "end": 6.4
-      },
-      {
-        "text": "stay?",
-        "start": 6.48,
-        "end": 7.04
-      }
-    ]
-  },
-  "At the village gate, Poppy counts 16 cardboard towers. 4 are put away. How many stay?": {
-    "file": "b0d34b51bc460ed04c5232fe.mp3",
-    "words": [
-      {
-        "text": "At",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "the",
-        "start": 0.1,
-        "end": 0.16
-      },
-      {
-        "text": "village",
-        "start": 0.2,
-        "end": 0.48
-      },
-      {
-        "text": "gate,",
-        "start": 0.544,
-        "end": 1.12
-      },
-      {
-        "text": "Poppy",
-        "start": 1.16,
         "end": 1.44
       },
       {
         "text": "counts",
-        "start": 1.509,
-        "end": 1.92
+        "start": 1.497,
+        "end": 1.84
       },
       {
-        "text": "16",
-        "start": 2.28,
+        "text": "17",
+        "start": 2.08,
         "end": 2.64
       },
       {
         "text": "cardboard",
-        "start": 2.704,
-        "end": 3.28
+        "start": 2.696,
+        "end": 3.2
       },
       {
         "text": "towers.",
-        "start": 3.36,
+        "start": 3.291,
         "end": 4
       },
       {
-        "text": "4",
-        "start": 4.48,
-        "end": 4.8
+        "text": "9",
+        "start": 4.32,
+        "end": 4.72
       },
       {
         "text": "are",
-        "start": 4.86,
-        "end": 5.04
+        "start": 4.76,
+        "end": 4.88
       },
       {
         "text": "put",
-        "start": 5.08,
-        "end": 5.2
+        "start": 4.92,
+        "end": 5.04
       },
       {
         "text": "away.",
-        "start": 5.28,
-        "end": 5.68
+        "start": 5.12,
+        "end": 5.52
       },
       {
         "text": "How",
-        "start": 5.82,
-        "end": 6.24
+        "start": 5.66,
+        "end": 6.08
       },
       {
         "text": "many",
-        "start": 6.272,
-        "end": 6.4
+        "start": 6.128,
+        "end": 6.32
       },
       {
         "text": "stay?",
-        "start": 6.512,
-        "end": 7.04
+        "start": 6.416,
+        "end": 6.88
       }
     ]
   },
@@ -18784,8 +18784,8 @@
       }
     ]
   },
-  "Bending the first arch, Sprout counts 18 seedlings. 6 are put away. How many stay?": {
-    "file": "5e720c17213ece7addcc6a3f.mp3",
+  "Bending the first arch, Sprout counts 11 seedlings. 5 are put away. How many stay?": {
+    "file": "a65df2c4263aace2fd9aa22d.mp3",
     "words": [
       {
         "text": "Bending",
@@ -18794,73 +18794,73 @@
       },
       {
         "text": "the",
-        "start": 0.34,
-        "end": 0.4
+        "start": 0.36,
+        "end": 0.48
       },
       {
         "text": "first",
-        "start": 0.453,
-        "end": 0.72
+        "start": 0.533,
+        "end": 0.8
       },
       {
         "text": "arch,",
-        "start": 0.8,
-        "end": 1.44
+        "start": 0.88,
+        "end": 1.52
       },
       {
         "text": "Sprout",
-        "start": 1.48,
-        "end": 1.76
+        "start": 1.58,
+        "end": 1.92
       },
       {
         "text": "counts",
-        "start": 1.829,
-        "end": 2.24
+        "start": 1.977,
+        "end": 2.32
       },
       {
-        "text": "18",
-        "start": 2.32,
-        "end": 2.88
+        "text": "11",
+        "start": 2.4,
+        "end": 2.8
       },
       {
         "text": "seedlings.",
-        "start": 2.944,
-        "end": 3.68
+        "start": 2.88,
+        "end": 3.76
       },
       {
-        "text": "6",
-        "start": 4.24,
-        "end": 4.64
+        "text": "5",
+        "start": 4.16,
+        "end": 4.48
       },
       {
         "text": "are",
-        "start": 4.7,
-        "end": 4.88
+        "start": 4.52,
+        "end": 4.64
       },
       {
         "text": "put",
-        "start": 4.92,
-        "end": 5.04
+        "start": 4.68,
+        "end": 4.8
       },
       {
         "text": "away.",
-        "start": 5.12,
-        "end": 5.52
+        "start": 4.88,
+        "end": 5.56
       },
       {
         "text": "How",
-        "start": 5.7,
-        "end": 6.24
+        "start": 5.65,
+        "end": 5.92
       },
       {
         "text": "many",
-        "start": 6.288,
-        "end": 6.48
+        "start": 5.952,
+        "end": 6.08
       },
       {
         "text": "stay?",
-        "start": 6.576,
-        "end": 7.04
+        "start": 6.192,
+        "end": 6.72
       }
     ]
   },
@@ -23029,83 +23029,83 @@
       }
     ]
   },
-  "Checking the green shoots, Hazel counts 11 carrots. 4 are put away. How many stay?": {
-    "file": "b4ab12cb6e0c1229cd2c8edc.mp3",
+  "Checking the green shoots, Hazel counts 12 carrots. 7 are put away. How many stay?": {
+    "file": "510773dd5ac3537a14aa8088.mp3",
     "words": [
       {
         "text": "Checking",
         "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
         "end": 0.32
       },
       {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
         "text": "green",
-        "start": 0.373,
-        "end": 0.64
+        "start": 0.453,
+        "end": 0.72
       },
       {
         "text": "shoots,",
-        "start": 0.72,
-        "end": 1.52
+        "start": 0.789,
+        "end": 1.44
       },
       {
         "text": "Hazel",
-        "start": 1.587,
-        "end": 1.92
+        "start": 1.493,
+        "end": 1.76
       },
       {
         "text": "counts",
-        "start": 1.977,
-        "end": 2.32
+        "start": 1.829,
+        "end": 2.24
       },
       {
-        "text": "11",
+        "text": "12",
         "start": 2.4,
-        "end": 2.8
+        "end": 2.56
       },
       {
         "text": "carrots.",
-        "start": 2.88,
-        "end": 3.52
+        "start": 2.64,
+        "end": 3.28
       },
       {
-        "text": "4",
-        "start": 4,
-        "end": 4.32
+        "text": "7",
+        "start": 3.68,
+        "end": 4.08
       },
       {
         "text": "are",
-        "start": 4.36,
-        "end": 4.48
+        "start": 4.12,
+        "end": 4.24
       },
       {
         "text": "put",
-        "start": 4.52,
-        "end": 4.64
+        "start": 4.28,
+        "end": 4.4
       },
       {
         "text": "away.",
-        "start": 4.736,
-        "end": 5.44
+        "start": 4.48,
+        "end": 4.88
       },
       {
         "text": "How",
-        "start": 5.52,
-        "end": 5.76
+        "start": 5,
+        "end": 5.36
       },
       {
         "text": "many",
-        "start": 5.792,
-        "end": 5.92
+        "start": 5.408,
+        "end": 5.6
       },
       {
         "text": "stay?",
-        "start": 6.032,
-        "end": 6.56
+        "start": 5.696,
+        "end": 6.24
       }
     ]
   },
@@ -23274,8 +23274,8 @@
       }
     ]
   },
-  "Cheering at the finish stone, Ginger counts 10 stepping stones. 3 are put away. How many stay?": {
-    "file": "11e3a67e8f599e750fb3d2f6.mp3",
+  "Cheering at the finish stone, Ginger counts 11 stepping stones. 4 are put away. How many stay?": {
+    "file": "ffde3360f147f381d498f415.mp3",
     "words": [
       {
         "text": "Cheering",
@@ -23300,11 +23300,11 @@
       {
         "text": "stone,",
         "start": 0.947,
-        "end": 1.6
+        "end": 1.68
       },
       {
         "text": "Ginger",
-        "start": 1.657,
+        "start": 1.726,
         "end": 2
       },
       {
@@ -23313,149 +23313,59 @@
         "end": 2.48
       },
       {
-        "text": "10",
-        "start": 2.64,
+        "text": "11",
+        "start": 2.481,
         "end": 2.96
       },
       {
         "text": "stepping",
-        "start": 3.004,
-        "end": 3.36
+        "start": 3.013,
+        "end": 3.44
       },
       {
         "text": "stones.",
-        "start": 3.44,
-        "end": 4.08
+        "start": 3.509,
+        "end": 4.16
       },
       {
-        "text": "3",
-        "start": 4.56,
-        "end": 4.88
-      },
-      {
-        "text": "are",
-        "start": 4.94,
-        "end": 5.12
-      },
-      {
-        "text": "put",
-        "start": 5.16,
-        "end": 5.28
-      },
-      {
-        "text": "away.",
-        "start": 5.36,
-        "end": 5.76
-      },
-      {
-        "text": "How",
-        "start": 5.92,
-        "end": 6.4
-      },
-      {
-        "text": "many",
-        "start": 6.448,
-        "end": 6.64
-      },
-      {
-        "text": "stay?",
-        "start": 6.736,
-        "end": 7.2
-      }
-    ]
-  },
-  "Cheering at the finish stone, Ginger counts 13 stepping stones. 6 are put away. How many stay?": {
-    "file": "7c5fea32324077d82d26bc50.mp3",
-    "words": [
-      {
-        "text": "Cheering",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "at",
-        "start": 0.373,
-        "end": 0.48
-      },
-      {
-        "text": "the",
-        "start": 0.5,
-        "end": 0.56
-      },
-      {
-        "text": "finish",
-        "start": 0.606,
-        "end": 0.88
-      },
-      {
-        "text": "stone,",
-        "start": 0.947,
-        "end": 1.6
-      },
-      {
-        "text": "Ginger",
-        "start": 1.646,
-        "end": 1.92
-      },
-      {
-        "text": "counts",
-        "start": 1.989,
-        "end": 2.4
-      },
-      {
-        "text": "13",
-        "start": 2.48,
-        "end": 3.04
-      },
-      {
-        "text": "stepping",
-        "start": 3.093,
-        "end": 3.52
-      },
-      {
-        "text": "stones.",
-        "start": 3.6,
-        "end": 4.24
-      },
-      {
-        "text": "6",
-        "start": 4.88,
-        "end": 5.12
+        "text": "4",
+        "start": 4.48,
+        "end": 4.8
       },
       {
         "text": "are",
-        "start": 5.16,
-        "end": 5.28
+        "start": 4.86,
+        "end": 5.04
       },
       {
         "text": "put",
-        "start": 5.32,
-        "end": 5.44
+        "start": 5.08,
+        "end": 5.2
       },
       {
         "text": "away.",
-        "start": 5.52,
-        "end": 5.92
+        "start": 5.28,
+        "end": 5.68
       },
       {
         "text": "How",
-        "start": 6.02,
-        "end": 6.32
+        "start": 5.82,
+        "end": 6.24
       },
       {
         "text": "many",
-        "start": 6.368,
-        "end": 6.56
+        "start": 6.288,
+        "end": 6.48
       },
       {
         "text": "stay?",
-        "start": 6.656,
-        "end": 7.12
+        "start": 6.56,
+        "end": 7.04
       }
     ]
   },
-  "Cheering at the finish stone, Ginger counts 16 stepping stones. 4 are put away. How many stay?": {
-    "file": "bca296cd808672ad45453c02.mp3",
+  "Cheering at the finish stone, Ginger counts 14 stepping stones. 8 are put away. How many stay?": {
+    "file": "f5a470e364b9dbeecd9aa8af.mp3",
     "words": [
       {
         "text": "Cheering",
@@ -23489,58 +23399,148 @@
       },
       {
         "text": "counts",
+        "start": 1.977,
+        "end": 2.32
+      },
+      {
+        "text": "14",
+        "start": 2.4,
+        "end": 2.88
+      },
+      {
+        "text": "stepping",
+        "start": 2.933,
+        "end": 3.36
+      },
+      {
+        "text": "stones.",
+        "start": 3.429,
+        "end": 4
+      },
+      {
+        "text": "8",
+        "start": 4.56,
+        "end": 4.8
+      },
+      {
+        "text": "are",
+        "start": 4.86,
+        "end": 5.04
+      },
+      {
+        "text": "put",
+        "start": 5.08,
+        "end": 5.2
+      },
+      {
+        "text": "away.",
+        "start": 5.28,
+        "end": 5.68
+      },
+      {
+        "text": "How",
+        "start": 5.82,
+        "end": 6.24
+      },
+      {
+        "text": "many",
+        "start": 6.288,
+        "end": 6.48
+      },
+      {
+        "text": "stay?",
+        "start": 6.576,
+        "end": 7.04
+      }
+    ]
+  },
+  "Cheering at the finish stone, Ginger counts 17 stepping stones. 9 are put away. How many stay?": {
+    "file": "8e251d1560d5df8f59f65929.mp3",
+    "words": [
+      {
+        "text": "Cheering",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "at",
+        "start": 0.373,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.56
+      },
+      {
+        "text": "finish",
+        "start": 0.606,
+        "end": 0.88
+      },
+      {
+        "text": "stone,",
+        "start": 0.947,
+        "end": 1.52
+      },
+      {
+        "text": "Ginger",
+        "start": 1.577,
+        "end": 1.92
+      },
+      {
+        "text": "counts",
         "start": 1.989,
         "end": 2.4
       },
       {
-        "text": "16",
+        "text": "17",
         "start": 2.56,
-        "end": 3.2
+        "end": 3.12
       },
       {
         "text": "stepping",
-        "start": 3.244,
+        "start": 3.173,
         "end": 3.6
       },
       {
         "text": "stones.",
-        "start": 3.691,
-        "end": 4.32
+        "start": 3.68,
+        "end": 4.24
       },
       {
-        "text": "4",
-        "start": 4.88,
-        "end": 5.2
+        "text": "9",
+        "start": 4.72,
+        "end": 5.12
       },
       {
         "text": "are",
-        "start": 5.24,
-        "end": 5.36
+        "start": 5.16,
+        "end": 5.28
       },
       {
         "text": "put",
-        "start": 5.4,
-        "end": 5.52
+        "start": 5.32,
+        "end": 5.44
       },
       {
         "text": "away.",
-        "start": 5.616,
-        "end": 6.08
+        "start": 5.536,
+        "end": 5.921
       },
       {
         "text": "How",
-        "start": 6.26,
-        "end": 6.8
+        "start": 6.06,
+        "end": 6.48
       },
       {
         "text": "many",
-        "start": 6.848,
-        "end": 7.04
+        "start": 6.512,
+        "end": 6.64
       },
       {
         "text": "stay?",
-        "start": 7.12,
-        "end": 7.52
+        "start": 6.736,
+        "end": 7.2
       }
     ]
   },
@@ -25279,8 +25279,8 @@
       }
     ]
   },
-  "Clipping the fort roof, Biscuit counts 16 pillows. 4 are put away. How many stay?": {
-    "file": "7458a332a8c3eeda2eb4acd6.mp3",
+  "Clipping the fort roof, Biscuit counts 17 pillows. 9 are put away. How many stay?": {
+    "file": "3a6ae5b69ae7a22499a8b88f.mp3",
     "words": [
       {
         "text": "Clipping",
@@ -25289,12 +25289,12 @@
       },
       {
         "text": "the",
-        "start": 0.34,
-        "end": 0.4
+        "start": 0.36,
+        "end": 0.48
       },
       {
         "text": "fort",
-        "start": 0.464,
+        "start": 0.528,
         "end": 0.72
       },
       {
@@ -25304,7 +25304,7 @@
       },
       {
         "text": "Biscuit",
-        "start": 1.44,
+        "start": 1.4,
         "end": 1.76
       },
       {
@@ -25313,49 +25313,49 @@
         "end": 2.16
       },
       {
-        "text": "16",
-        "start": 2.32,
-        "end": 2.88
+        "text": "17",
+        "start": 2.4,
+        "end": 2.96
       },
       {
         "text": "pillows.",
-        "start": 2.95,
-        "end": 3.6
+        "start": 3.04,
+        "end": 3.68
       },
       {
-        "text": "4",
-        "start": 4,
-        "end": 4.24
-      },
-      {
-        "text": "are",
-        "start": 4.28,
-        "end": 4.4
-      },
-      {
-        "text": "put",
-        "start": 4.44,
+        "text": "9",
+        "start": 4.24,
         "end": 4.56
       },
       {
+        "text": "are",
+        "start": 4.58,
+        "end": 4.64
+      },
+      {
+        "text": "put",
+        "start": 4.68,
+        "end": 4.8
+      },
+      {
         "text": "away.",
-        "start": 4.64,
-        "end": 5.04
+        "start": 4.88,
+        "end": 5.28
       },
       {
         "text": "How",
-        "start": 5.2,
-        "end": 5.68
-      },
-      {
-        "text": "many",
-        "start": 5.712,
+        "start": 5.42,
         "end": 5.84
       },
       {
+        "text": "many",
+        "start": 5.888,
+        "end": 6.08
+      },
+      {
         "text": "stay?",
-        "start": 5.936,
-        "end": 6.48
+        "start": 6.16,
+        "end": 6.64
       }
     ]
   },
@@ -26774,22 +26774,22 @@
       }
     ]
   },
-  "Decorating the porch, Starlight counts 17 fireflies. 5 are put away. How many stay?": {
-    "file": "ceaed0e777d59e0813996853.mp3",
+  "Decorating the porch, Starlight counts 18 fireflies. 9 are put away. How many stay?": {
+    "file": "130a953dc208b4d5f97d4cba.mp3",
     "words": [
       {
         "text": "Decorating",
         "start": 0,
-        "end": 0.48
+        "end": 0.4
       },
       {
         "text": "the",
-        "start": 0.5,
+        "start": 0.44,
         "end": 0.56
       },
       {
         "text": "porch,",
-        "start": 0.64,
+        "start": 0.627,
         "end": 1.28
       },
       {
@@ -26803,33 +26803,33 @@
         "end": 2.32
       },
       {
-        "text": "17",
-        "start": 2.48,
-        "end": 3.2
+        "text": "18",
+        "start": 2.64,
+        "end": 2.96
       },
       {
         "text": "fireflies.",
-        "start": 3.296,
-        "end": 4.32
+        "start": 3.056,
+        "end": 4
       },
       {
-        "text": "5",
-        "start": 4.72,
-        "end": 5.04
+        "text": "9",
+        "start": 4.56,
+        "end": 4.96
       },
       {
         "text": "are",
-        "start": 5.08,
+        "start": 5.02,
         "end": 5.2
       },
       {
         "text": "put",
-        "start": 5.22,
-        "end": 5.28
+        "start": 5.24,
+        "end": 5.36
       },
       {
         "text": "away.",
-        "start": 5.376,
+        "start": 5.44,
         "end": 6.12
       },
       {
@@ -26839,13 +26839,13 @@
       },
       {
         "text": "many",
-        "start": 6.528,
-        "end": 6.72
+        "start": 6.512,
+        "end": 6.64
       },
       {
         "text": "stay?",
-        "start": 6.816,
-        "end": 7.28
+        "start": 6.736,
+        "end": 7.2
       }
     ]
   },
@@ -27979,88 +27979,88 @@
       }
     ]
   },
-  "Digging the little stream, Puddle counts 17 lily pads. 5 are put away. How many stay?": {
-    "file": "3ae216d12439d18b46239249.mp3",
+  "Digging the little stream, Puddle counts 18 lily pads. 9 are put away. How many stay?": {
+    "file": "b93bb4d295e0e777099e59a9.mp3",
     "words": [
       {
         "text": "Digging",
         "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
         "end": 0.32
       },
       {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
         "text": "little",
-        "start": 0.354,
-        "end": 0.56
+        "start": 0.434,
+        "end": 0.64
       },
       {
         "text": "stream,",
-        "start": 0.629,
-        "end": 1.36
+        "start": 0.709,
+        "end": 1.44
       },
       {
         "text": "Puddle",
-        "start": 1.4,
-        "end": 1.6
+        "start": 1.48,
+        "end": 1.68
       },
       {
         "text": "counts",
-        "start": 1.669,
+        "start": 1.737,
         "end": 2.08
       },
       {
-        "text": "17",
-        "start": 2.24,
-        "end": 2.88
+        "text": "18",
+        "start": 2.16,
+        "end": 2.64
       },
       {
         "text": "lily",
-        "start": 2.92,
-        "end": 3.12
+        "start": 2.68,
+        "end": 2.88
       },
       {
         "text": "pads.",
-        "start": 3.232,
-        "end": 3.76
+        "start": 2.992,
+        "end": 3.6
       },
       {
-        "text": "5",
-        "start": 4.16,
-        "end": 4.4
+        "text": "9",
+        "start": 4,
+        "end": 4.32
       },
       {
         "text": "are",
-        "start": 4.44,
-        "end": 4.56
+        "start": 4.36,
+        "end": 4.48
       },
       {
         "text": "put",
-        "start": 4.58,
+        "start": 4.52,
         "end": 4.64
       },
       {
         "text": "away.",
-        "start": 4.736,
+        "start": 4.72,
         "end": 5.4
       },
       {
         "text": "How",
-        "start": 5.47,
-        "end": 5.68
+        "start": 5.49,
+        "end": 5.76
       },
       {
         "text": "many",
-        "start": 5.728,
+        "start": 5.792,
         "end": 5.92
       },
       {
         "text": "stay?",
-        "start": 6.016,
-        "end": 6.48
+        "start": 6.032,
+        "end": 6.56
       }
     ]
   },
@@ -30599,8 +30599,8 @@
       }
     ]
   },
-  "Fixing the floppy vines, Sprout counts 15 seedlings. 3 are put away. How many stay?": {
-    "file": "d92f8f6d124709e0268523bc.mp3",
+  "Fixing the floppy vines, Sprout counts 16 seedlings. 9 are put away. How many stay?": {
+    "file": "cafb46180bef7eecf32b0a6d.mp3",
     "words": [
       {
         "text": "Fixing",
@@ -30609,73 +30609,73 @@
       },
       {
         "text": "the",
-        "start": 0.36,
-        "end": 0.48
+        "start": 0.34,
+        "end": 0.4
       },
       {
         "text": "floppy",
-        "start": 0.537,
-        "end": 0.88
+        "start": 0.457,
+        "end": 0.8
       },
       {
         "text": "vines,",
-        "start": 0.96,
-        "end": 1.68
+        "start": 0.893,
+        "end": 1.6
       },
       {
         "text": "Sprout",
-        "start": 1.72,
-        "end": 2.08
+        "start": 1.66,
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 2.126,
-        "end": 2.4
+        "start": 2.08,
+        "end": 2.56
       },
       {
-        "text": "15",
-        "start": 2.48,
-        "end": 3.04
+        "text": "16",
+        "start": 2.72,
+        "end": 3.36
       },
       {
         "text": "seedlings.",
-        "start": 3.104,
-        "end": 3.84
+        "start": 3.44,
+        "end": 4.32
       },
       {
-        "text": "3",
-        "start": 4.32,
-        "end": 4.56
+        "text": "9",
+        "start": 4.72,
+        "end": 5.12
       },
       {
         "text": "are",
-        "start": 4.62,
-        "end": 4.8
+        "start": 5.16,
+        "end": 5.28
       },
       {
         "text": "put",
-        "start": 4.84,
-        "end": 4.96
+        "start": 5.32,
+        "end": 5.44
       },
       {
         "text": "away.",
-        "start": 5.056,
-        "end": 5.76
+        "start": 5.536,
+        "end": 6.24
       },
       {
         "text": "How",
-        "start": 5.84,
-        "end": 6.08
+        "start": 6.32,
+        "end": 6.56
       },
       {
         "text": "many",
-        "start": 6.128,
-        "end": 6.32
+        "start": 6.592,
+        "end": 6.72
       },
       {
         "text": "stay?",
-        "start": 6.4,
-        "end": 6.88
+        "start": 6.816,
+        "end": 7.36
       }
     ]
   },
@@ -30844,22 +30844,22 @@
       }
     ]
   },
-  "Fixing the slippery stones, Ginger counts 10 stepping stones. 3 are put away. How many stay?": {
-    "file": "1f3b0d24f05307fcdbf5e0b8.mp3",
+  "Fixing the slippery stones, Ginger counts 11 stepping stones. 4 are put away. How many stay?": {
+    "file": "dc2238dc9bbf8fd322c8c783.mp3",
     "words": [
       {
         "text": "Fixing",
         "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.34,
         "end": 0.4
       },
       {
+        "text": "the",
+        "start": 0.42,
+        "end": 0.48
+      },
+      {
         "text": "slippery",
-        "start": 0.453,
+        "start": 0.524,
         "end": 0.88
       },
       {
@@ -30874,57 +30874,57 @@
       },
       {
         "text": "counts",
-        "start": 2.149,
-        "end": 2.56
+        "start": 2.137,
+        "end": 2.48
       },
       {
-        "text": "10",
-        "start": 2.64,
-        "end": 2.96
+        "text": "11",
+        "start": 2.56,
+        "end": 3.04
       },
       {
         "text": "stepping",
-        "start": 3.004,
-        "end": 3.36
+        "start": 3.084,
+        "end": 3.44
       },
       {
         "text": "stones.",
-        "start": 3.451,
+        "start": 3.52,
         "end": 4.08
       },
       {
-        "text": "3",
+        "text": "4",
         "start": 4.56,
-        "end": 4.88
+        "end": 4.8
       },
       {
         "text": "are",
-        "start": 4.94,
-        "end": 5.12
+        "start": 4.84,
+        "end": 4.96
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 5,
+        "end": 5.12
       },
       {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 5.2,
+        "end": 5.6
       },
       {
         "text": "How",
-        "start": 5.86,
-        "end": 6.16
+        "start": 5.72,
+        "end": 6.08
       },
       {
         "text": "many",
-        "start": 6.192,
+        "start": 6.128,
         "end": 6.32
       },
       {
         "text": "stay?",
-        "start": 6.416,
+        "start": 6.4,
         "end": 6.88
       }
     ]
@@ -32309,8 +32309,8 @@
       }
     ]
   },
-  "Gathering leaves for the slide, Bramble counts 11 acorns. 4 are put away. How many stay?": {
-    "file": "39d46bb8efe84c7fb77a109b.mp3",
+  "Gathering leaves for the slide, Bramble counts 12 acorns. 7 are put away. How many stay?": {
+    "file": "b5212ffaa85c8843c22ca8de.mp3",
     "words": [
       {
         "text": "Gathering",
@@ -32324,12 +32324,12 @@
       },
       {
         "text": "for",
-        "start": 0.82,
-        "end": 0.88
+        "start": 0.84,
+        "end": 0.96
       },
       {
         "text": "the",
-        "start": 0.92,
+        "start": 0.98,
         "end": 1.04
       },
       {
@@ -32339,58 +32339,58 @@
       },
       {
         "text": "Bramble",
-        "start": 1.888,
+        "start": 1.904,
         "end": 2.24
       },
       {
         "text": "counts",
-        "start": 2.297,
-        "end": 2.64
+        "start": 2.309,
+        "end": 2.72
       },
       {
-        "text": "11",
-        "start": 2.641,
-        "end": 3.04
+        "text": "12",
+        "start": 2.8,
+        "end": 3.2
       },
       {
         "text": "acorns.",
-        "start": 3.147,
-        "end": 3.84
+        "start": 3.307,
+        "end": 4.08
       },
       {
-        "text": "4",
-        "start": 4.4,
-        "end": 4.72
+        "text": "7",
+        "start": 4.56,
+        "end": 4.96
       },
       {
         "text": "are",
-        "start": 4.76,
-        "end": 4.88
+        "start": 5,
+        "end": 5.12
       },
       {
         "text": "put",
-        "start": 4.92,
-        "end": 5.04
+        "start": 5.16,
+        "end": 5.28
       },
       {
         "text": "away.",
-        "start": 5.12,
-        "end": 5.52
+        "start": 5.36,
+        "end": 5.76
       },
       {
         "text": "How",
-        "start": 5.7,
-        "end": 6.24
-      },
-      {
-        "text": "many",
-        "start": 6.272,
+        "start": 5.92,
         "end": 6.4
       },
       {
+        "text": "many",
+        "start": 6.448,
+        "end": 6.64
+      },
+      {
         "text": "stay?",
-        "start": 6.496,
-        "end": 6.96
+        "start": 6.736,
+        "end": 7.2
       }
     ]
   },
@@ -32966,6 +32966,56 @@
         "text": "slip.",
         "start": 3.28,
         "end": 3.68
+      }
+    ]
+  },
+  "Good try. Listen once more and read each one.": {
+    "file": "9846f35ccbe6ead8a2b24e69.mp3",
+    "words": [
+      {
+        "text": "Good",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "try.",
+        "start": 0.28,
+        "end": 0.72
+      },
+      {
+        "text": "Listen",
+        "start": 0.811,
+        "end": 1.36
+      },
+      {
+        "text": "once",
+        "start": 1.424,
+        "end": 1.68
+      },
+      {
+        "text": "more",
+        "start": 1.744,
+        "end": 2
+      },
+      {
+        "text": "and",
+        "start": 2.06,
+        "end": 2.24
+      },
+      {
+        "text": "read",
+        "start": 2.288,
+        "end": 2.48
+      },
+      {
+        "text": "each",
+        "start": 2.528,
+        "end": 2.72
+      },
+      {
+        "text": "one.",
+        "start": 2.82,
+        "end": 3.28
       }
     ]
   },
@@ -38614,102 +38664,102 @@
       }
     ]
   },
-  "Inside the shady green tunnel, Sprout counts 12 seedlings. 5 are put away. How many stay?": {
-    "file": "3c8ac5c1a6f739d1ccb2e952.mp3",
+  "Inside the shady green tunnel, Sprout counts 11 seedlings. 5 are put away. How many stay?": {
+    "file": "e886eaf3f9510a7bfc306d58.mp3",
     "words": [
       {
         "text": "Inside",
         "start": 0,
-        "end": 0.48
+        "end": 0.4
       },
       {
         "text": "the",
-        "start": 0.52,
-        "end": 0.64
+        "start": 0.44,
+        "end": 0.56
       },
       {
         "text": "shady",
-        "start": 0.707,
-        "end": 1.04
+        "start": 0.613,
+        "end": 0.88
       },
       {
         "text": "green",
-        "start": 1.093,
-        "end": 1.36
+        "start": 0.933,
+        "end": 1.2
       },
       {
         "text": "tunnel,",
-        "start": 1.417,
-        "end": 2.08
+        "start": 1.269,
+        "end": 2
       },
       {
         "text": "Sprout",
-        "start": 2.12,
-        "end": 2.4
+        "start": 2.04,
+        "end": 2.32
       },
       {
         "text": "counts",
-        "start": 2.469,
-        "end": 2.88
+        "start": 2.377,
+        "end": 2.72
       },
       {
-        "text": "12",
-        "start": 3.12,
-        "end": 3.36
+        "text": "11",
+        "start": 2.8,
+        "end": 3.28
       },
       {
         "text": "seedlings.",
-        "start": 3.424,
-        "end": 4.16
+        "start": 3.344,
+        "end": 4.24
       },
       {
         "text": "5",
         "start": 4.56,
-        "end": 4.96
+        "end": 4.88
       },
       {
         "text": "are",
-        "start": 5,
-        "end": 5.12
+        "start": 4.92,
+        "end": 5.04
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 5.08,
+        "end": 5.2
       },
       {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 5.28,
+        "end": 5.68
       },
       {
         "text": "How",
-        "start": 5.94,
-        "end": 6.48
+        "start": 5.82,
+        "end": 6.24
       },
       {
         "text": "many",
-        "start": 6.528,
-        "end": 6.72
+        "start": 6.288,
+        "end": 6.48
       },
       {
         "text": "stay?",
-        "start": 6.816,
-        "end": 7.28
+        "start": 6.576,
+        "end": 7.12
       }
     ]
   },
-  "Inside the shady green tunnel, Sprout counts 15 seedlings. 3 are put away. How many stay?": {
-    "file": "1f4e9e9b1f8f677134e0d932.mp3",
+  "Inside the shady green tunnel, Sprout counts 13 seedlings. 5 are put away. How many stay?": {
+    "file": "473cea5c871c31eae5dedb05.mp3",
     "words": [
       {
         "text": "Inside",
         "start": 0,
-        "end": 0.48
+        "end": 0.4
       },
       {
         "text": "the",
-        "start": 0.5,
+        "start": 0.44,
         "end": 0.56
       },
       {
@@ -38729,92 +38779,92 @@
       },
       {
         "text": "Sprout",
-        "start": 2.06,
-        "end": 2.4
+        "start": 2.04,
+        "end": 2.32
       },
       {
         "text": "counts",
-        "start": 2.469,
-        "end": 2.88
+        "start": 2.389,
+        "end": 2.8
       },
       {
-        "text": "15",
-        "start": 2.96,
-        "end": 3.52
+        "text": "13",
+        "start": 2.88,
+        "end": 3.44
       },
       {
         "text": "seedlings.",
-        "start": 3.584,
-        "end": 4.4
+        "start": 3.504,
+        "end": 4.24
       },
       {
-        "text": "3",
-        "start": 5.04,
-        "end": 5.44
+        "text": "5",
+        "start": 4.64,
+        "end": 4.96
       },
       {
         "text": "are",
-        "start": 5.52,
-        "end": 5.76
+        "start": 4.98,
+        "end": 5.04
       },
       {
         "text": "put",
-        "start": 5.8,
-        "end": 5.92
+        "start": 5.1,
+        "end": 5.28
       },
       {
         "text": "away.",
-        "start": 6.016,
-        "end": 6.68
+        "start": 5.36,
+        "end": 5.76
       },
       {
         "text": "How",
-        "start": 6.75,
-        "end": 6.96
+        "start": 5.96,
+        "end": 6.56
       },
       {
         "text": "many",
-        "start": 7.008,
-        "end": 7.2
+        "start": 6.592,
+        "end": 6.72
       },
       {
         "text": "stay?",
-        "start": 7.312,
-        "end": 7.84
+        "start": 6.816,
+        "end": 7.28
       }
     ]
   },
-  "Inside the shady green tunnel, Sprout counts 18 seedlings. 6 are put away. How many stay?": {
-    "file": "5282343ddf74e9d4fba6f43e.mp3",
+  "Inside the shady green tunnel, Sprout counts 16 seedlings. 9 are put away. How many stay?": {
+    "file": "d85b26bbb8e69a1310d4f785.mp3",
     "words": [
       {
         "text": "Inside",
         "start": 0,
-        "end": 0.48
+        "end": 0.56
       },
       {
         "text": "the",
-        "start": 0.52,
+        "start": 0.58,
         "end": 0.64
       },
       {
         "text": "shady",
-        "start": 0.707,
-        "end": 1.04
+        "start": 0.693,
+        "end": 0.96
       },
       {
         "text": "green",
-        "start": 1.093,
-        "end": 1.36
+        "start": 1.013,
+        "end": 1.28
       },
       {
         "text": "tunnel,",
-        "start": 1.417,
-        "end": 2.16
+        "start": 1.337,
+        "end": 2.08
       },
       {
         "text": "Sprout",
-        "start": 2.22,
+        "start": 2.14,
         "end": 2.48
       },
       {
@@ -38823,49 +38873,49 @@
         "end": 2.96
       },
       {
-        "text": "18",
-        "start": 3.04,
-        "end": 3.6
+        "text": "16",
+        "start": 3.12,
+        "end": 3.68
       },
       {
         "text": "seedlings.",
-        "start": 3.664,
-        "end": 4.4
+        "start": 3.744,
+        "end": 4.48
       },
       {
-        "text": "6",
-        "start": 4.88,
-        "end": 5.2
-      },
-      {
-        "text": "are",
-        "start": 5.26,
+        "text": "9",
+        "start": 5.04,
         "end": 5.44
       },
       {
-        "text": "put",
+        "text": "are",
         "start": 5.48,
         "end": 5.6
       },
       {
+        "text": "put",
+        "start": 5.64,
+        "end": 5.76
+      },
+      {
         "text": "away.",
-        "start": 5.68,
-        "end": 6.08
+        "start": 5.84,
+        "end": 6.24
       },
       {
         "text": "How",
-        "start": 6.24,
-        "end": 6.72
+        "start": 6.38,
+        "end": 6.8
       },
       {
         "text": "many",
-        "start": 6.768,
-        "end": 6.96
+        "start": 6.848,
+        "end": 7.04
       },
       {
         "text": "stay?",
-        "start": 7.056,
-        "end": 7.52
+        "start": 7.136,
+        "end": 7.6
       }
     ]
   },
@@ -39979,37 +40029,37 @@
       }
     ]
   },
-  "Inside the snug reading fort, Biscuit counts 10 pillows. 3 are put away. How many stay?": {
-    "file": "3f15cb478ae70feaf4da682c.mp3",
+  "Inside the snug reading fort, Biscuit counts 11 pillows. 4 are put away. How many stay?": {
+    "file": "2c7e5019648df45ba7056833.mp3",
     "words": [
       {
         "text": "Inside",
         "start": 0,
-        "end": 0.48
+        "end": 0.4
       },
       {
         "text": "the",
-        "start": 0.5,
+        "start": 0.44,
         "end": 0.56
       },
       {
         "text": "snug",
-        "start": 0.64,
-        "end": 0.96
+        "start": 0.624,
+        "end": 0.88
       },
       {
         "text": "reading",
-        "start": 1,
+        "start": 0.93,
         "end": 1.28
       },
       {
         "text": "fort,",
-        "start": 1.36,
-        "end": 1.76
+        "start": 1.344,
+        "end": 1.68
       },
       {
         "text": "Biscuit",
-        "start": 1.92,
+        "start": 1.88,
         "end": 2.32
       },
       {
@@ -40018,54 +40068,54 @@
         "end": 2.72
       },
       {
-        "text": "10",
-        "start": 2.88,
-        "end": 3.12
+        "text": "11",
+        "start": 2.8,
+        "end": 3.2
       },
       {
         "text": "pillows.",
-        "start": 3.2,
-        "end": 3.84
+        "start": 3.28,
+        "end": 4
       },
       {
-        "text": "3",
-        "start": 4.4,
+        "text": "4",
+        "start": 4.56,
         "end": 4.64
       },
       {
         "text": "are",
-        "start": 4.7,
-        "end": 4.88
+        "start": 4.68,
+        "end": 4.8
       },
       {
         "text": "put",
-        "start": 4.9,
+        "start": 4.84,
         "end": 4.96
       },
       {
         "text": "away.",
-        "start": 5.056,
-        "end": 5.76
+        "start": 5.04,
+        "end": 5.44
       },
       {
         "text": "How",
-        "start": 5.84,
+        "start": 5.6,
         "end": 6.08
       },
       {
         "text": "many",
-        "start": 6.128,
-        "end": 6.32
+        "start": 6.112,
+        "end": 6.24
       },
       {
         "text": "stay?",
-        "start": 6.416,
+        "start": 6.336,
         "end": 6.88
       }
     ]
   },
-  "Inside the snug reading fort, Biscuit counts 13 pillows. 6 are put away. How many stay?": {
-    "file": "4b91a65d429af0ebdee468ac.mp3",
+  "Inside the snug reading fort, Biscuit counts 14 pillows. 8 are put away. How many stay?": {
+    "file": "9ce4708bdeb1db112475b67c.mp3",
     "words": [
       {
         "text": "Inside",
@@ -40084,73 +40134,73 @@
       },
       {
         "text": "reading",
-        "start": 1.09,
-        "end": 1.44
+        "start": 1.08,
+        "end": 1.36
       },
       {
         "text": "fort,",
-        "start": 1.52,
-        "end": 2.08
+        "start": 1.44,
+        "end": 2.16
       },
       {
         "text": "Biscuit",
-        "start": 2.12,
+        "start": 2.2,
         "end": 2.48
       },
       {
         "text": "counts",
-        "start": 2.526,
-        "end": 2.8
+        "start": 2.549,
+        "end": 2.96
       },
       {
-        "text": "13",
-        "start": 2.88,
-        "end": 3.28
+        "text": "14",
+        "start": 3.04,
+        "end": 3.6
       },
       {
         "text": "pillows.",
-        "start": 3.35,
-        "end": 3.92
+        "start": 3.68,
+        "end": 4.32
       },
       {
-        "text": "6",
-        "start": 4.32,
-        "end": 4.56
+        "text": "8",
+        "start": 4.72,
+        "end": 4.96
       },
       {
         "text": "are",
-        "start": 4.58,
-        "end": 4.64
+        "start": 5.02,
+        "end": 5.2
       },
       {
         "text": "put",
-        "start": 4.68,
-        "end": 4.8
+        "start": 5.24,
+        "end": 5.36
       },
       {
         "text": "away.",
-        "start": 4.88,
-        "end": 5.28
+        "start": 5.44,
+        "end": 6.04
       },
       {
         "text": "How",
-        "start": 5.38,
-        "end": 5.68
+        "start": 6.11,
+        "end": 6.32
       },
       {
         "text": "many",
-        "start": 5.728,
-        "end": 5.92
+        "start": 6.352,
+        "end": 6.48
       },
       {
         "text": "stay?",
-        "start": 6,
-        "end": 8.48
+        "start": 6.576,
+        "end": 7.04
       }
     ]
   },
-  "Inside the snug reading fort, Biscuit counts 16 pillows. 4 are put away. How many stay?": {
-    "file": "2bb10fd6f7d9801d40f4af16.mp3",
+  "Inside the snug reading fort, Biscuit counts 17 pillows. 9 are put away. How many stay?": {
+    "file": "fbe05ea8c6bbbffdb781dd88.mp3",
     "words": [
       {
         "text": "Inside",
@@ -40174,12 +40224,12 @@
       },
       {
         "text": "fort,",
-        "start": 1.52,
-        "end": 2.16
+        "start": 1.504,
+        "end": 2.08
       },
       {
         "text": "Biscuit",
-        "start": 2.2,
+        "start": 2.16,
         "end": 2.48
       },
       {
@@ -40188,49 +40238,49 @@
         "end": 2.96
       },
       {
-        "text": "16",
-        "start": 3.2,
-        "end": 3.76
+        "text": "17",
+        "start": 3.12,
+        "end": 3.68
       },
       {
         "text": "pillows.",
-        "start": 3.84,
-        "end": 4.56
+        "start": 3.76,
+        "end": 4.4
       },
       {
-        "text": "4",
-        "start": 5.12,
-        "end": 5.36
+        "text": "9",
+        "start": 5.04,
+        "end": 5.44
       },
       {
         "text": "are",
-        "start": 5.4,
-        "end": 5.52
+        "start": 5.48,
+        "end": 5.6
       },
       {
         "text": "put",
-        "start": 5.56,
-        "end": 5.68
+        "start": 5.64,
+        "end": 5.76
       },
       {
         "text": "away.",
-        "start": 5.76,
-        "end": 6.32
+        "start": 5.84,
+        "end": 6.24
       },
       {
         "text": "How",
-        "start": 6.38,
-        "end": 6.56
+        "start": 6.44,
+        "end": 7.04
       },
       {
         "text": "many",
-        "start": 6.608,
-        "end": 6.8
+        "start": 7.088,
+        "end": 7.28
       },
       {
         "text": "stay?",
-        "start": 6.88,
-        "end": 7.36
+        "start": 7.376,
+        "end": 7.84
       }
     ]
   },
@@ -41724,8 +41774,8 @@
       }
     ]
   },
-  "Leading the sunbeam walk, Pepper counts 10 sunbeams. 3 are put away. How many stay?": {
-    "file": "e90e8441c4950cf76fae792e.mp3",
+  "Leading the sunbeam walk, Pepper counts 11 sunbeams. 4 are put away. How many stay?": {
+    "file": "b4dc29cae8359da75855769a.mp3",
     "words": [
       {
         "text": "Leading",
@@ -41745,131 +41795,51 @@
       {
         "text": "walk,",
         "start": 0.96,
-        "end": 1.6
+        "end": 1.52
       },
       {
         "text": "Pepper",
-        "start": 1.646,
-        "end": 1.92
+        "start": 1.554,
+        "end": 1.76
       },
       {
         "text": "counts",
-        "start": 1.977,
-        "end": 2.32
+        "start": 1.817,
+        "end": 2.16
       },
       {
-        "text": "10",
-        "start": 2.4,
-        "end": 2.72
+        "text": "11",
+        "start": 2.24,
+        "end": 2.64
       },
       {
         "text": "sunbeams.",
-        "start": 2.8,
-        "end": 3.6
+        "start": 2.74,
+        "end": 3.52
       },
       {
-        "text": "3",
-        "start": 4,
-        "end": 4.32
+        "text": "4",
+        "start": 4.16,
+        "end": 4.4
       },
       {
         "text": "are",
-        "start": 4.36,
-        "end": 4.48
-      },
-      {
-        "text": "put",
-        "start": 4.54,
-        "end": 4.72
-      },
-      {
-        "text": "away.",
-        "start": 4.8,
-        "end": 5.2
-      },
-      {
-        "text": "How",
-        "start": 5.32,
-        "end": 5.68
-      },
-      {
-        "text": "many",
-        "start": 5.712,
-        "end": 5.84
-      },
-      {
-        "text": "stay?",
-        "start": 5.936,
-        "end": 6.48
-      }
-    ]
-  },
-  "Leading the sunbeam walk, Pepper counts 13 sunbeams. 6 are put away. How many stay?": {
-    "file": "1341730553920d52b427165a.mp3",
-    "words": [
-      {
-        "text": "Leading",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.28,
-        "end": 0.4
-      },
-      {
-        "text": "sunbeam",
-        "start": 0.48,
-        "end": 0.96
-      },
-      {
-        "text": "walk,",
-        "start": 1.04,
-        "end": 1.6
-      },
-      {
-        "text": "Pepper",
-        "start": 1.634,
-        "end": 1.84
-      },
-      {
-        "text": "counts",
-        "start": 1.909,
-        "end": 2.32
-      },
-      {
-        "text": "13",
-        "start": 2.4,
-        "end": 2.88
-      },
-      {
-        "text": "sunbeams.",
-        "start": 2.98,
-        "end": 3.76
-      },
-      {
-        "text": "6",
-        "start": 4.16,
+        "start": 4.44,
         "end": 4.56
       },
       {
-        "text": "are",
-        "start": 4.6,
-        "end": 4.72
-      },
-      {
         "text": "put",
-        "start": 4.76,
-        "end": 4.88
+        "start": 4.62,
+        "end": 4.8
       },
       {
         "text": "away.",
-        "start": 4.96,
-        "end": 5.56
+        "start": 4.88,
+        "end": 5.52
       },
       {
         "text": "How",
-        "start": 5.63,
+        "start": 5.6,
         "end": 5.84
       },
       {
@@ -41879,27 +41849,27 @@
       },
       {
         "text": "stay?",
-        "start": 6.16,
-        "end": 6.56
+        "start": 6.176,
+        "end": 6.64
       }
     ]
   },
-  "Leading the sunbeam walk, Pepper counts 16 sunbeams. 4 are put away. How many stay?": {
-    "file": "3a22f807966a0d15ed210647.mp3",
+  "Leading the sunbeam walk, Pepper counts 14 sunbeams. 8 are put away. How many stay?": {
+    "file": "71f5c35c93d3b62d33831f01.mp3",
     "words": [
       {
         "text": "Leading",
         "start": 0,
-        "end": 0.32
+        "end": 0.24
       },
       {
         "text": "the",
-        "start": 0.34,
-        "end": 0.4
+        "start": 0.26,
+        "end": 0.32
       },
       {
         "text": "sunbeam",
-        "start": 0.48,
+        "start": 0.42,
         "end": 0.96
       },
       {
@@ -41918,49 +41888,129 @@
         "end": 2.4
       },
       {
-        "text": "16",
+        "text": "14",
+        "start": 2.48,
+        "end": 3.12
+      },
+      {
+        "text": "sunbeams.",
+        "start": 3.2,
+        "end": 4
+      },
+      {
+        "text": "8",
+        "start": 4.56,
+        "end": 4.8
+      },
+      {
+        "text": "are",
+        "start": 4.84,
+        "end": 4.96
+      },
+      {
+        "text": "put",
+        "start": 5,
+        "end": 5.12
+      },
+      {
+        "text": "away.",
+        "start": 5.2,
+        "end": 5.6
+      },
+      {
+        "text": "How",
+        "start": 5.78,
+        "end": 6.32
+      },
+      {
+        "text": "many",
+        "start": 6.352,
+        "end": 6.48
+      },
+      {
+        "text": "stay?",
+        "start": 6.592,
+        "end": 7.04
+      }
+    ]
+  },
+  "Leading the sunbeam walk, Pepper counts 17 sunbeams. 9 are put away. How many stay?": {
+    "file": "a97ebd2ef23e0176f3d7c472.mp3",
+    "words": [
+      {
+        "text": "Leading",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "sunbeam",
+        "start": 0.48,
+        "end": 1.04
+      },
+      {
+        "text": "walk,",
+        "start": 1.104,
+        "end": 1.76
+      },
+      {
+        "text": "Pepper",
+        "start": 1.794,
+        "end": 2
+      },
+      {
+        "text": "counts",
+        "start": 2.057,
+        "end": 2.4
+      },
+      {
+        "text": "17",
         "start": 2.64,
         "end": 3.28
       },
       {
         "text": "sunbeams.",
         "start": 3.36,
-        "end": 4.24
+        "end": 4.16
       },
       {
-        "text": "4",
+        "text": "9",
         "start": 4.64,
-        "end": 4.96
+        "end": 5.04
       },
       {
         "text": "are",
-        "start": 5.02,
+        "start": 5.08,
         "end": 5.2
       },
       {
         "text": "put",
-        "start": 5.22,
-        "end": 5.28
+        "start": 5.24,
+        "end": 5.36
       },
       {
         "text": "away.",
-        "start": 5.376,
-        "end": 5.84
+        "start": 5.44,
+        "end": 6.16
       },
       {
         "text": "How",
-        "start": 5.96,
-        "end": 6.32
-      },
-      {
-        "text": "many",
-        "start": 6.368,
+        "start": 6.26,
         "end": 6.56
       },
       {
+        "text": "many",
+        "start": 6.608,
+        "end": 6.8
+      },
+      {
         "text": "stay?",
-        "start": 6.656,
-        "end": 7.12
+        "start": 6.88,
+        "end": 7.28
       }
     ]
   },
@@ -45539,8 +45589,8 @@
       }
     ]
   },
-  "Marking the pebble path, Puddle counts 11 lily pads. 4 are put away. How many stay?": {
-    "file": "5f53b4a0be395918fbd1ca95.mp3",
+  "Marking the pebble path, Puddle counts 12 lily pads. 7 are put away. How many stay?": {
+    "file": "f7667b9f2e596a61b07dad41.mp3",
     "words": [
       {
         "text": "Marking",
@@ -45549,22 +45599,22 @@
       },
       {
         "text": "the",
-        "start": 0.34,
-        "end": 0.4
+        "start": 0.36,
+        "end": 0.48
       },
       {
         "text": "pebble",
-        "start": 0.453,
+        "start": 0.507,
         "end": 0.72
       },
       {
         "text": "path,",
         "start": 0.816,
-        "end": 1.52
+        "end": 1.44
       },
       {
         "text": "Puddle",
-        "start": 1.56,
+        "start": 1.48,
         "end": 1.76
       },
       {
@@ -45573,54 +45623,54 @@
         "end": 2.16
       },
       {
-        "text": "11",
-        "start": 2.24,
+        "text": "12",
+        "start": 2.32,
         "end": 2.72
       },
       {
         "text": "lily",
-        "start": 2.76,
+        "start": 2.8,
         "end": 3.04
       },
       {
         "text": "pads.",
-        "start": 3.136,
-        "end": 3.6
+        "start": 3.152,
+        "end": 3.68
       },
       {
-        "text": "4",
-        "start": 4.08,
-        "end": 4.4
-      },
-      {
-        "text": "are",
-        "start": 4.46,
-        "end": 4.64
-      },
-      {
-        "text": "put",
-        "start": 4.66,
+        "text": "7",
+        "start": 4.48,
         "end": 4.72
       },
       {
+        "text": "are",
+        "start": 4.76,
+        "end": 4.88
+      },
+      {
+        "text": "put",
+        "start": 4.92,
+        "end": 5.04
+      },
+      {
         "text": "away.",
-        "start": 4.8,
-        "end": 5.2
+        "start": 5.12,
+        "end": 5.52
       },
       {
         "text": "How",
-        "start": 5.36,
-        "end": 5.84
+        "start": 5.66,
+        "end": 6.08
       },
       {
         "text": "many",
-        "start": 5.872,
-        "end": 6
+        "start": 6.128,
+        "end": 6.32
       },
       {
         "text": "stay?",
-        "start": 6.096,
-        "end": 6.56
+        "start": 6.416,
+        "end": 6.96
       }
     ]
   },
@@ -47649,8 +47699,8 @@
       }
     ]
   },
-  "On a gray, cloudy day, Pepper counts 10 sunbeams. 3 are put away. How many stay?": {
-    "file": "cb372c6d880164e885a52c9e.mp3",
+  "On a gray, cloudy day, Pepper counts 11 sunbeams. 4 are put away. How many stay?": {
+    "file": "4045b97a544c8c9adfa5d40f.mp3",
     "words": [
       {
         "text": "On",
@@ -47674,63 +47724,63 @@
       },
       {
         "text": "day,",
-        "start": 1.04,
+        "start": 1.06,
         "end": 1.68
       },
       {
         "text": "Pepper",
-        "start": 1.714,
-        "end": 1.92
+        "start": 1.726,
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 1.989,
-        "end": 2.4
+        "start": 2.069,
+        "end": 2.48
       },
       {
-        "text": "10",
-        "start": 2.48,
-        "end": 2.72
+        "text": "11",
+        "start": 2.56,
+        "end": 3.04
       },
       {
         "text": "sunbeams.",
-        "start": 2.8,
-        "end": 3.6
+        "start": 3.14,
+        "end": 3.92
       },
       {
-        "text": "3",
-        "start": 4,
-        "end": 4.32
+        "text": "4",
+        "start": 4.4,
+        "end": 4.72
       },
       {
         "text": "are",
-        "start": 4.36,
-        "end": 4.48
+        "start": 4.78,
+        "end": 4.96
       },
       {
         "text": "put",
-        "start": 4.52,
-        "end": 4.64
+        "start": 5,
+        "end": 5.12
       },
       {
         "text": "away.",
-        "start": 4.736,
-        "end": 5.4
+        "start": 5.2,
+        "end": 5.84
       },
       {
         "text": "How",
-        "start": 5.47,
-        "end": 5.68
+        "start": 5.92,
+        "end": 6.16
       },
       {
         "text": "many",
-        "start": 5.728,
-        "end": 5.92
+        "start": 6.208,
+        "end": 6.4
       },
       {
         "text": "stay?",
-        "start": 6.016,
-        "end": 6.48
+        "start": 6.48,
+        "end": 6.88
       }
     ]
   },
@@ -48194,8 +48244,8 @@
       }
     ]
   },
-  "On the leafy hill, Bramble counts 17 acorns. 5 are put away. How many stay?": {
-    "file": "d4c152878b130b5914c00213.mp3",
+  "On the leafy hill, Bramble counts 18 acorns. 9 are put away. How many stay?": {
+    "file": "0c216a4d42d6216a74b3461c.mp3",
     "words": [
       {
         "text": "On",
@@ -48209,68 +48259,68 @@
       },
       {
         "text": "leafy",
-        "start": 0.224,
-        "end": 0.56
+        "start": 0.208,
+        "end": 0.48
       },
       {
         "text": "hill,",
-        "start": 0.64,
-        "end": 1.28
+        "start": 0.544,
+        "end": 1.12
       },
       {
         "text": "Bramble",
-        "start": 1.328,
-        "end": 1.6
+        "start": 1.168,
+        "end": 1.52
       },
       {
         "text": "counts",
-        "start": 1.669,
-        "end": 2.08
+        "start": 1.566,
+        "end": 1.84
       },
       {
-        "text": "17",
-        "start": 2.24,
-        "end": 2.88
+        "text": "18",
+        "start": 1.92,
+        "end": 2.4
       },
       {
         "text": "acorns.",
-        "start": 2.987,
-        "end": 3.68
+        "start": 2.48,
+        "end": 3.12
       },
       {
-        "text": "5",
-        "start": 4.24,
-        "end": 4.64
+        "text": "9",
+        "start": 3.6,
+        "end": 4
       },
       {
         "text": "are",
-        "start": 4.68,
-        "end": 4.8
+        "start": 4.04,
+        "end": 4.16
       },
       {
         "text": "put",
-        "start": 4.84,
-        "end": 4.96
+        "start": 4.2,
+        "end": 4.32
       },
       {
         "text": "away.",
-        "start": 5.056,
-        "end": 5.88
+        "start": 4.4,
+        "end": 4.8
       },
       {
         "text": "How",
-        "start": 5.99,
-        "end": 6.32
+        "start": 4.98,
+        "end": 5.52
       },
       {
         "text": "many",
-        "start": 6.352,
-        "end": 6.48
+        "start": 5.568,
+        "end": 5.76
       },
       {
         "text": "stay?",
-        "start": 6.576,
-        "end": 7.12
+        "start": 5.84,
+        "end": 6.32
       }
     ]
   },
@@ -50094,32 +50144,32 @@
       }
     ]
   },
-  "Patching the windy fort, Scout counts 12 sticks. 5 are put away. How many stay?": {
-    "file": "bd4602027aec38cc464b10bd.mp3",
+  "Patching the windy fort, Scout counts 13 sticks. 5 are put away. How many stay?": {
+    "file": "ac126dd9e591cd655a1439cc.mp3",
     "words": [
       {
         "text": "Patching",
         "start": 0,
-        "end": 0.4
+        "end": 0.32
       },
       {
         "text": "the",
-        "start": 0.44,
-        "end": 0.56
+        "start": 0.36,
+        "end": 0.48
       },
       {
         "text": "windy",
-        "start": 0.627,
-        "end": 0.96
+        "start": 0.547,
+        "end": 0.88
       },
       {
         "text": "fort,",
-        "start": 1.024,
-        "end": 1.6
+        "start": 0.944,
+        "end": 1.52
       },
       {
         "text": "Scout",
-        "start": 1.653,
+        "start": 1.587,
         "end": 1.92
       },
       {
@@ -50128,18 +50178,18 @@
         "end": 2.32
       },
       {
-        "text": "12",
-        "start": 2.4,
-        "end": 2.72
+        "text": "13",
+        "start": 2.48,
+        "end": 2.88
       },
       {
         "text": "sticks.",
-        "start": 2.8,
-        "end": 3.44
+        "start": 2.96,
+        "end": 3.52
       },
       {
         "text": "5",
-        "start": 4.16,
+        "start": 4.08,
         "end": 4.48
       },
       {
@@ -50149,28 +50199,28 @@
       },
       {
         "text": "put",
-        "start": 4.66,
-        "end": 4.72
+        "start": 4.68,
+        "end": 4.8
       },
       {
         "text": "away.",
-        "start": 4.8,
-        "end": 5.2
+        "start": 4.896,
+        "end": 5.36
       },
       {
         "text": "How",
-        "start": 5.34,
-        "end": 5.76
-      },
-      {
-        "text": "many",
-        "start": 5.808,
+        "start": 5.52,
         "end": 6
       },
       {
+        "text": "many",
+        "start": 6.032,
+        "end": 6.16
+      },
+      {
         "text": "stay?",
-        "start": 6.096,
-        "end": 6.56
+        "start": 6.272,
+        "end": 6.8
       }
     ]
   },
@@ -51114,8 +51164,8 @@
       }
     ]
   },
-  "Picking up the rolling apples, Maple counts 14 apples. 2 are put away. How many stay?": {
-    "file": "d78849a59acaea18bebea259.mp3",
+  "Picking up the rolling apples, Maple counts 15 apples. 6 are put away. How many stay?": {
+    "file": "c27e0f7e12a7a5baeb99bcda.mp3",
     "words": [
       {
         "text": "Picking",
@@ -51139,7 +51189,7 @@
       },
       {
         "text": "apples,",
-        "start": 0.96,
+        "start": 0.949,
         "end": 1.68
       },
       {
@@ -51149,53 +51199,53 @@
       },
       {
         "text": "counts",
-        "start": 2.069,
-        "end": 2.48
+        "start": 2.057,
+        "end": 2.4
       },
       {
-        "text": "14",
-        "start": 2.64,
-        "end": 3.2
+        "text": "15",
+        "start": 2.48,
+        "end": 2.96
       },
       {
         "text": "apples.",
-        "start": 3.28,
-        "end": 3.92
+        "start": 3.04,
+        "end": 3.6
       },
       {
-        "text": "2",
-        "start": 4.48,
-        "end": 4.72
+        "text": "6",
+        "start": 4.24,
+        "end": 4.4
       },
       {
         "text": "are",
-        "start": 4.78,
-        "end": 4.96
+        "start": 4.44,
+        "end": 4.56
       },
       {
         "text": "put",
-        "start": 5,
-        "end": 5.12
+        "start": 4.6,
+        "end": 4.72
       },
       {
         "text": "away.",
-        "start": 5.2,
-        "end": 5.6
+        "start": 4.784,
+        "end": 5.12
       },
       {
         "text": "How",
-        "start": 5.74,
-        "end": 6.16
+        "start": 5.26,
+        "end": 5.68
       },
       {
         "text": "many",
-        "start": 6.192,
-        "end": 6.32
+        "start": 5.712,
+        "end": 5.84
       },
       {
         "text": "stay?",
-        "start": 6.416,
-        "end": 6.88
+        "start": 5.936,
+        "end": 6.4
       }
     ]
   },
@@ -55759,8 +55809,8 @@
       }
     ]
   },
-  "Practicing the dance steps, Starlight counts 11 fireflies. 4 are put away. How many stay?": {
-    "file": "69d71e0ae6f74f74818c7ad3.mp3",
+  "Practicing the dance steps, Starlight counts 12 fireflies. 7 are put away. How many stay?": {
+    "file": "0d0b162cf0a6f96946668695.mp3",
     "words": [
       {
         "text": "Practicing",
@@ -55779,63 +55829,63 @@
       },
       {
         "text": "steps,",
-        "start": 0.96,
+        "start": 0.947,
         "end": 1.6
       },
       {
         "text": "Starlight",
-        "start": 1.664,
+        "start": 1.648,
         "end": 2.08
       },
       {
         "text": "counts",
-        "start": 2.149,
-        "end": 2.56
+        "start": 2.137,
+        "end": 2.48
       },
       {
-        "text": "11",
+        "text": "12",
         "start": 2.64,
         "end": 3.04
       },
       {
         "text": "fireflies.",
         "start": 3.136,
-        "end": 4.16
+        "end": 4.08
       },
       {
-        "text": "4",
-        "start": 4.64,
-        "end": 4.96
+        "text": "7",
+        "start": 4.72,
+        "end": 5.04
       },
       {
         "text": "are",
-        "start": 5.02,
+        "start": 5.08,
         "end": 5.2
       },
       {
         "text": "put",
-        "start": 5.26,
-        "end": 5.44
+        "start": 5.24,
+        "end": 5.36
       },
       {
         "text": "away.",
-        "start": 5.52,
-        "end": 5.92
+        "start": 5.44,
+        "end": 5.84
       },
       {
         "text": "How",
-        "start": 6.08,
-        "end": 6.56
+        "start": 6.04,
+        "end": 6.64
       },
       {
         "text": "many",
-        "start": 6.608,
-        "end": 6.8
+        "start": 6.688,
+        "end": 6.88
       },
       {
         "text": "stay?",
-        "start": 6.896,
-        "end": 7.36
+        "start": 6.976,
+        "end": 7.44
       }
     ]
   },
@@ -58679,8 +58729,8 @@
       }
     ]
   },
-  "Searching for the shiny buttons, Mittens counts 12 buttons. 5 are put away. How many stay?": {
-    "file": "a21cb412a86e1d5adaa8bb2a.mp3",
+  "Searching for the shiny buttons, Mittens counts 13 buttons. 5 are put away. How many stay?": {
+    "file": "15c7ba37481470c71117eb7f.mp3",
     "words": [
       {
         "text": "Searching",
@@ -58709,58 +58759,58 @@
       },
       {
         "text": "Mittens",
-        "start": 1.792,
-        "end": 2.08
+        "start": 1.808,
+        "end": 2.16
       },
       {
         "text": "counts",
-        "start": 2.137,
-        "end": 2.48
+        "start": 2.217,
+        "end": 2.56
       },
       {
-        "text": "12",
-        "start": 2.56,
-        "end": 2.96
+        "text": "13",
+        "start": 2.72,
+        "end": 3.2
       },
       {
         "text": "buttons.",
-        "start": 3.02,
-        "end": 3.6
+        "start": 3.27,
+        "end": 3.84
       },
       {
         "text": "5",
-        "start": 4,
-        "end": 4.4
-      },
-      {
-        "text": "are",
-        "start": 4.44,
-        "end": 4.56
-      },
-      {
-        "text": "put",
-        "start": 4.6,
+        "start": 4.4,
         "end": 4.72
       },
       {
+        "text": "are",
+        "start": 4.76,
+        "end": 4.88
+      },
+      {
+        "text": "put",
+        "start": 4.9,
+        "end": 4.96
+      },
+      {
         "text": "away.",
-        "start": 4.8,
-        "end": 5.2
+        "start": 5.04,
+        "end": 5.44
       },
       {
         "text": "How",
-        "start": 5.32,
-        "end": 5.68
+        "start": 5.6,
+        "end": 6.08
       },
       {
         "text": "many",
-        "start": 5.728,
-        "end": 5.92
+        "start": 6.112,
+        "end": 6.24
       },
       {
         "text": "stay?",
-        "start": 6.016,
-        "end": 6.56
+        "start": 6.336,
+        "end": 6.8
       }
     ]
   },
@@ -59429,8 +59479,8 @@
       }
     ]
   },
-  "Setting out the picnic plates, Waffles counts 14 berries. 2 are put away. How many stay?": {
-    "file": "8e5c7cc3301eece107be6e12.mp3",
+  "Setting out the picnic plates, Waffles counts 15 berries. 6 are put away. How many stay?": {
+    "file": "c7c2d2ce00c1ba37f904f86d.mp3",
     "words": [
       {
         "text": "Setting",
@@ -59439,78 +59489,78 @@
       },
       {
         "text": "out",
-        "start": 0.26,
-        "end": 0.32
+        "start": 0.28,
+        "end": 0.4
       },
       {
         "text": "the",
-        "start": 0.36,
+        "start": 0.42,
         "end": 0.48
       },
       {
         "text": "picnic",
-        "start": 0.526,
-        "end": 0.8
+        "start": 0.537,
+        "end": 0.88
       },
       {
         "text": "plates,",
-        "start": 0.857,
-        "end": 1.52
+        "start": 0.937,
+        "end": 1.6
       },
       {
         "text": "Waffles",
-        "start": 1.56,
-        "end": 1.92
+        "start": 1.64,
+        "end": 2.08
       },
       {
         "text": "counts",
-        "start": 1.966,
-        "end": 2.24
+        "start": 2.149,
+        "end": 2.56
       },
       {
-        "text": "14",
-        "start": 2.4,
-        "end": 2.8
+        "text": "15",
+        "start": 2.64,
+        "end": 3.12
       },
       {
         "text": "berries.",
-        "start": 2.87,
-        "end": 3.52
+        "start": 3.19,
+        "end": 3.84
       },
       {
-        "text": "2",
-        "start": 3.76,
-        "end": 4.08
+        "text": "6",
+        "start": 4.32,
+        "end": 4.64
       },
       {
         "text": "are",
-        "start": 4.12,
-        "end": 4.24
-      },
-      {
-        "text": "put",
-        "start": 4.28,
-        "end": 4.4
-      },
-      {
-        "text": "away.",
-        "start": 4.48,
+        "start": 4.7,
         "end": 4.88
       },
       {
-        "text": "How",
-        "start": 5.04,
-        "end": 5.52
+        "text": "put",
+        "start": 4.92,
+        "end": 5.04
       },
       {
-        "text": "many",
-        "start": 5.568,
+        "text": "away.",
+        "start": 5.12,
         "end": 5.76
       },
       {
+        "text": "How",
+        "start": 5.84,
+        "end": 6.08
+      },
+      {
+        "text": "many",
+        "start": 6.112,
+        "end": 6.24
+      },
+      {
         "text": "stay?",
-        "start": 5.856,
-        "end": 6.32
+        "start": 6.352,
+        "end": 6.96
       }
     ]
   },
@@ -60164,168 +60214,8 @@
       }
     ]
   },
-  "Sharing the patchwork blankets, Mittens counts 12 buttons. 5 are put away. How many stay?": {
-    "file": "62849f71f3514ca6a090afbb.mp3",
-    "words": [
-      {
-        "text": "Sharing",
-        "start": 0,
-        "end": 0.4
-      },
-      {
-        "text": "the",
-        "start": 0.42,
-        "end": 0.48
-      },
-      {
-        "text": "patchwork",
-        "start": 0.533,
-        "end": 1.04
-      },
-      {
-        "text": "blankets,",
-        "start": 1.102,
-        "end": 1.92
-      },
-      {
-        "text": "Mittens",
-        "start": 1.952,
-        "end": 2.24
-      },
-      {
-        "text": "counts",
-        "start": 2.297,
-        "end": 2.64
-      },
-      {
-        "text": "12",
-        "start": 2.72,
-        "end": 3.04
-      },
-      {
-        "text": "buttons.",
-        "start": 3.11,
-        "end": 3.68
-      },
-      {
-        "text": "5",
-        "start": 4.16,
-        "end": 4.4
-      },
-      {
-        "text": "are",
-        "start": 4.44,
-        "end": 4.56
-      },
-      {
-        "text": "put",
-        "start": 4.58,
-        "end": 4.64
-      },
-      {
-        "text": "away.",
-        "start": 4.72,
-        "end": 5.12
-      },
-      {
-        "text": "How",
-        "start": 5.26,
-        "end": 5.68
-      },
-      {
-        "text": "many",
-        "start": 5.712,
-        "end": 5.84
-      },
-      {
-        "text": "stay?",
-        "start": 5.936,
-        "end": 6.48
-      }
-    ]
-  },
-  "Sharing the patchwork blankets, Mittens counts 15 buttons. 3 are put away. How many stay?": {
-    "file": "44f840dd770c552147beabf9.mp3",
-    "words": [
-      {
-        "text": "Sharing",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.34,
-        "end": 0.4
-      },
-      {
-        "text": "patchwork",
-        "start": 0.453,
-        "end": 0.96
-      },
-      {
-        "text": "blankets,",
-        "start": 1.013,
-        "end": 1.76
-      },
-      {
-        "text": "Mittens",
-        "start": 1.808,
-        "end": 2.16
-      },
-      {
-        "text": "counts",
-        "start": 2.217,
-        "end": 2.56
-      },
-      {
-        "text": "15",
-        "start": 2.64,
-        "end": 3.12
-      },
-      {
-        "text": "buttons.",
-        "start": 3.19,
-        "end": 3.76
-      },
-      {
-        "text": "3",
-        "start": 4.32,
-        "end": 4.64
-      },
-      {
-        "text": "are",
-        "start": 4.7,
-        "end": 4.88
-      },
-      {
-        "text": "put",
-        "start": 4.9,
-        "end": 4.96
-      },
-      {
-        "text": "away.",
-        "start": 5.04,
-        "end": 5.44
-      },
-      {
-        "text": "How",
-        "start": 5.58,
-        "end": 6
-      },
-      {
-        "text": "many",
-        "start": 6.048,
-        "end": 6.24
-      },
-      {
-        "text": "stay?",
-        "start": 6.32,
-        "end": 6.8
-      }
-    ]
-  },
-  "Sharing the patchwork blankets, Mittens counts 18 buttons. 6 are put away. How many stay?": {
-    "file": "4f568b605857e0809a480abe.mp3",
+  "Sharing the patchwork blankets, Mittens counts 11 buttons. 5 are put away. How many stay?": {
+    "file": "52117f967f1c02a28212b9ce.mp3",
     "words": [
       {
         "text": "Sharing",
@@ -60350,46 +60240,206 @@
       {
         "text": "Mittens",
         "start": 1.968,
-        "end": 2.32
+        "end": 2.4
       },
       {
         "text": "counts",
-        "start": 2.389,
+        "start": 2.457,
         "end": 2.8
       },
       {
-        "text": "18",
+        "text": "11",
         "start": 2.88,
-        "end": 3.44
+        "end": 3.28
       },
       {
         "text": "buttons.",
-        "start": 3.51,
-        "end": 4.16
+        "start": 3.35,
+        "end": 3.92
       },
       {
-        "text": "6",
-        "start": 4.72,
-        "end": 4.96
+        "text": "5",
+        "start": 4.4,
+        "end": 4.8
       },
       {
         "text": "are",
+        "start": 4.84,
+        "end": 4.96
+      },
+      {
+        "text": "put",
         "start": 5,
         "end": 5.12
       },
       {
-        "text": "put",
-        "start": 5.16,
-        "end": 5.28
-      },
-      {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 5.2,
+        "end": 5.6
       },
       {
         "text": "How",
-        "start": 5.9,
+        "start": 5.78,
+        "end": 6.32
+      },
+      {
+        "text": "many",
+        "start": 6.368,
+        "end": 6.56
+      },
+      {
+        "text": "stay?",
+        "start": 6.64,
+        "end": 7.12
+      }
+    ]
+  },
+  "Sharing the patchwork blankets, Mittens counts 13 buttons. 5 are put away. How many stay?": {
+    "file": "3832185773c0445fc5cce5fb.mp3",
+    "words": [
+      {
+        "text": "Sharing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "patchwork",
+        "start": 0.467,
+        "end": 0.96
+      },
+      {
+        "text": "blankets,",
+        "start": 1.022,
+        "end": 1.92
+      },
+      {
+        "text": "Mittens",
+        "start": 1.952,
+        "end": 2.32
+      },
+      {
+        "text": "counts",
+        "start": 2.366,
+        "end": 2.64
+      },
+      {
+        "text": "13",
+        "start": 2.8,
+        "end": 3.28
+      },
+      {
+        "text": "buttons.",
+        "start": 3.35,
+        "end": 3.92
+      },
+      {
+        "text": "5",
+        "start": 4.4,
+        "end": 4.72
+      },
+      {
+        "text": "are",
+        "start": 4.74,
+        "end": 4.8
+      },
+      {
+        "text": "put",
+        "start": 4.84,
+        "end": 4.96
+      },
+      {
+        "text": "away.",
+        "start": 5.04,
+        "end": 5.44
+      },
+      {
+        "text": "How",
+        "start": 5.56,
+        "end": 5.92
+      },
+      {
+        "text": "many",
+        "start": 5.968,
+        "end": 6.16
+      },
+      {
+        "text": "stay?",
+        "start": 6.256,
+        "end": 6.72
+      }
+    ]
+  },
+  "Sharing the patchwork blankets, Mittens counts 16 buttons. 9 are put away. How many stay?": {
+    "file": "ac187fd2eef35ab945d9390a.mp3",
+    "words": [
+      {
+        "text": "Sharing",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "patchwork",
+        "start": 0.453,
+        "end": 0.88
+      },
+      {
+        "text": "blankets,",
+        "start": 0.942,
+        "end": 1.76
+      },
+      {
+        "text": "Mittens",
+        "start": 1.808,
+        "end": 2.16
+      },
+      {
+        "text": "counts",
+        "start": 2.229,
+        "end": 2.64
+      },
+      {
+        "text": "16",
+        "start": 2.88,
+        "end": 3.36
+      },
+      {
+        "text": "buttons.",
+        "start": 3.42,
+        "end": 4
+      },
+      {
+        "text": "9",
+        "start": 4.48,
+        "end": 4.88
+      },
+      {
+        "text": "are",
+        "start": 4.92,
+        "end": 5.04
+      },
+      {
+        "text": "put",
+        "start": 5.08,
+        "end": 5.2
+      },
+      {
+        "text": "away.",
+        "start": 5.28,
+        "end": 5.68
+      },
+      {
+        "text": "How",
+        "start": 5.84,
         "end": 6.32
       },
       {
@@ -60400,7 +60450,7 @@
       {
         "text": "stay?",
         "start": 6.576,
-        "end": 7.04
+        "end": 7.12
       }
     ]
   },
@@ -65154,83 +65204,83 @@
       }
     ]
   },
-  "Sheltering from the shower, Clover counts 12 butterflies. 5 are put away. How many stay?": {
-    "file": "870d0eed13149075b2aaab66.mp3",
+  "Sheltering from the shower, Clover counts 13 butterflies. 5 are put away. How many stay?": {
+    "file": "48de9a6bc8aaa2377499d0e3.mp3",
     "words": [
       {
         "text": "Sheltering",
         "start": 0,
-        "end": 0.4
+        "end": 0.48
       },
       {
         "text": "from",
-        "start": 0.432,
-        "end": 0.56
+        "start": 0.512,
+        "end": 0.64
       },
       {
         "text": "the",
-        "start": 0.6,
+        "start": 0.66,
         "end": 0.72
       },
       {
         "text": "shower,",
-        "start": 0.777,
-        "end": 1.2
+        "start": 0.789,
+        "end": 1.52
       },
       {
         "text": "Clover",
-        "start": 1.291,
+        "start": 1.566,
         "end": 1.84
       },
       {
         "text": "counts",
-        "start": 1.909,
-        "end": 2.32
+        "start": 1.897,
+        "end": 2.24
       },
       {
-        "text": "12",
+        "text": "13",
         "start": 2.4,
-        "end": 2.8
+        "end": 2.88
       },
       {
         "text": "butterflies.",
-        "start": 2.867,
-        "end": 3.68
+        "start": 2.947,
+        "end": 3.84
       },
       {
         "text": "5",
-        "start": 4.56,
-        "end": 4.96
+        "start": 4.4,
+        "end": 4.72
       },
       {
         "text": "are",
-        "start": 5,
-        "end": 5.12
+        "start": 4.74,
+        "end": 4.8
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 4.84,
+        "end": 4.96
       },
       {
         "text": "away.",
-        "start": 5.36,
-        "end": 5.76
+        "start": 5.04,
+        "end": 5.44
       },
       {
         "text": "How",
-        "start": 5.92,
-        "end": 6.4
+        "start": 5.56,
+        "end": 5.92
       },
       {
         "text": "many",
-        "start": 6.448,
-        "end": 6.64
+        "start": 5.968,
+        "end": 6.16
       },
       {
         "text": "stay?",
-        "start": 6.736,
-        "end": 7.2
+        "start": 6.256,
+        "end": 6.72
       }
     ]
   },
@@ -67634,8 +67684,8 @@
       }
     ]
   },
-  "Starting the reading fort, Biscuit counts 10 pillows. 3 are put away. How many stay?": {
-    "file": "5188855d666fd8fcb94b5ceb.mp3",
+  "Starting the reading fort, Biscuit counts 11 pillows. 4 are put away. How many stay?": {
+    "file": "c994280dd98fd0e9a1a87daa.mp3",
     "words": [
       {
         "text": "Starting",
@@ -67654,63 +67704,63 @@
       },
       {
         "text": "fort,",
-        "start": 0.8,
-        "end": 1.44
+        "start": 0.784,
+        "end": 1.36
       },
       {
         "text": "Biscuit",
-        "start": 1.48,
-        "end": 1.76
+        "start": 1.4,
+        "end": 1.68
       },
       {
         "text": "counts",
-        "start": 1.817,
-        "end": 2.16
+        "start": 1.737,
+        "end": 2.08
       },
       {
-        "text": "10",
-        "start": 2.24,
-        "end": 2.48
+        "text": "11",
+        "start": 2.16,
+        "end": 2.64
       },
       {
         "text": "pillows.",
-        "start": 2.55,
-        "end": 3.2
+        "start": 2.71,
+        "end": 3.28
       },
       {
-        "text": "3",
-        "start": 3.52,
-        "end": 3.84
-      },
-      {
-        "text": "are",
-        "start": 3.88,
+        "text": "4",
+        "start": 3.68,
         "end": 4
       },
       {
+        "text": "are",
+        "start": 4.02,
+        "end": 4.08
+      },
+      {
         "text": "put",
-        "start": 4.04,
-        "end": 4.16
+        "start": 4.14,
+        "end": 4.32
       },
       {
         "text": "away.",
-        "start": 4.24,
-        "end": 4.64
+        "start": 4.384,
+        "end": 4.72
       },
       {
         "text": "How",
-        "start": 4.76,
-        "end": 5.12
+        "start": 4.88,
+        "end": 5.36
       },
       {
         "text": "many",
-        "start": 5.152,
-        "end": 5.28
+        "start": 5.392,
+        "end": 5.52
       },
       {
         "text": "stay?",
-        "start": 5.36,
-        "end": 5.84
+        "start": 5.6,
+        "end": 6.08
       }
     ]
   },
@@ -67879,83 +67929,83 @@
       }
     ]
   },
-  "Stirring the pancake batter, Waffles counts 17 berries. 5 are put away. How many stay?": {
-    "file": "1dd5e0f58c56a2ed38e49dda.mp3",
+  "Stirring the pancake batter, Waffles counts 18 berries. 9 are put away. How many stay?": {
+    "file": "701d3649005c083f7e7ae50d.mp3",
     "words": [
       {
         "text": "Stirring",
         "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
         "end": 0.32
       },
       {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
         "text": "pancake",
-        "start": 0.4,
-        "end": 0.8
+        "start": 0.48,
+        "end": 0.88
       },
       {
         "text": "batter,",
-        "start": 0.857,
-        "end": 1.52
+        "start": 0.937,
+        "end": 1.68
       },
       {
         "text": "Waffles",
-        "start": 1.56,
-        "end": 2
+        "start": 1.72,
+        "end": 2.16
       },
       {
         "text": "counts",
-        "start": 2.057,
-        "end": 2.4
+        "start": 2.217,
+        "end": 2.56
       },
       {
-        "text": "17",
-        "start": 2.56,
-        "end": 3.2
+        "text": "18",
+        "start": 2.64,
+        "end": 3.12
       },
       {
         "text": "berries.",
-        "start": 3.27,
+        "start": 3.19,
         "end": 3.84
       },
       {
-        "text": "5",
-        "start": 4.24,
+        "text": "9",
+        "start": 4.4,
         "end": 4.64
       },
       {
         "text": "are",
-        "start": 4.7,
-        "end": 4.88
+        "start": 4.66,
+        "end": 4.72
       },
       {
         "text": "put",
-        "start": 4.92,
-        "end": 5.04
+        "start": 4.76,
+        "end": 4.88
       },
       {
         "text": "away.",
-        "start": 5.12,
-        "end": 5.52
+        "start": 4.96,
+        "end": 5.36
       },
       {
         "text": "How",
-        "start": 5.66,
+        "start": 5.54,
         "end": 6.08
       },
       {
         "text": "many",
-        "start": 6.128,
-        "end": 6.32
+        "start": 6.112,
+        "end": 6.24
       },
       {
         "text": "stay?",
-        "start": 6.416,
-        "end": 6.88
+        "start": 6.336,
+        "end": 6.8
       }
     ]
   },
@@ -68889,6 +68939,36 @@
       }
     ]
   },
+  "Tap the sentence you hear.": {
+    "file": "9569ef56ab9e924ae0b57952.mp3",
+    "words": [
+      {
+        "text": "Tap",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "sentence",
+        "start": 0.364,
+        "end": 0.72
+      },
+      {
+        "text": "you",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "text": "hear.",
+        "start": 0.96,
+        "end": 1.36
+      }
+    ]
+  },
   "Ten!": {
     "file": "34dcc210c64ea56db879c9c9.mp3",
     "words": [
@@ -68899,88 +68979,88 @@
       }
     ]
   },
-  "Testing the cardboard bridge, Poppy counts 13 cardboard towers. 6 are put away. How many stay?": {
-    "file": "cc081175b107bbbd522e395c.mp3",
+  "Testing the cardboard bridge, Poppy counts 14 cardboard towers. 8 are put away. How many stay?": {
+    "file": "f307e06d654782903500af63.mp3",
     "words": [
       {
         "text": "Testing",
         "start": 0,
-        "end": 0.4
+        "end": 0.32
       },
       {
         "text": "the",
-        "start": 0.42,
-        "end": 0.48
+        "start": 0.34,
+        "end": 0.4
       },
       {
         "text": "cardboard",
-        "start": 0.528,
-        "end": 0.96
+        "start": 0.448,
+        "end": 0.88
       },
       {
         "text": "bridge,",
-        "start": 1.029,
-        "end": 1.76
+        "start": 0.937,
+        "end": 1.68
       },
       {
         "text": "Poppy",
-        "start": 1.8,
-        "end": 2.08
+        "start": 1.74,
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 2.137,
-        "end": 2.48
+        "start": 2.046,
+        "end": 2.32
       },
       {
-        "text": "13",
-        "start": 2.56,
-        "end": 3.12
+        "text": "14",
+        "start": 2.48,
+        "end": 2.96
       },
       {
         "text": "cardboard",
-        "start": 3.176,
-        "end": 3.68
+        "start": 3.016,
+        "end": 3.52
       },
       {
         "text": "towers.",
-        "start": 3.76,
-        "end": 4.48
+        "start": 3.611,
+        "end": 4.32
       },
       {
-        "text": "6",
-        "start": 4.88,
-        "end": 5.2
+        "text": "8",
+        "start": 4.72,
+        "end": 4.88
       },
       {
         "text": "are",
-        "start": 5.26,
-        "end": 5.44
+        "start": 4.94,
+        "end": 5.12
       },
       {
         "text": "put",
-        "start": 5.48,
-        "end": 5.6
+        "start": 5.16,
+        "end": 5.28
       },
       {
         "text": "away.",
-        "start": 5.68,
-        "end": 6.4
+        "start": 5.36,
+        "end": 5.76
       },
       {
         "text": "How",
-        "start": 6.5,
-        "end": 6.8
+        "start": 5.88,
+        "end": 6.24
       },
       {
         "text": "many",
-        "start": 6.848,
-        "end": 7.04
+        "start": 6.288,
+        "end": 6.48
       },
       {
         "text": "stay?",
-        "start": 7.136,
-        "end": 7.68
+        "start": 6.576,
+        "end": 7.04
       }
     ]
   },
@@ -80054,8 +80134,8 @@
       }
     ]
   },
-  "Waiting for the clouds to pass, Moon counts 18 stars. 6 are put away. How many stay?": {
-    "file": "b6fa7a6d98e22d124972e952.mp3",
+  "Waiting for the clouds to pass, Moon counts 11 stars. 5 are put away. How many stay?": {
+    "file": "48834d55ba688d289a2c231c.mp3",
     "words": [
       {
         "text": "Waiting",
@@ -80079,68 +80159,68 @@
       },
       {
         "text": "to",
-        "start": 0.933,
-        "end": 1.04
+        "start": 0.907,
+        "end": 0.96
       },
       {
         "text": "pass,",
-        "start": 1.12,
-        "end": 1.84
+        "start": 1.04,
+        "end": 1.76
       },
       {
         "text": "Moon",
-        "start": 1.904,
-        "end": 2.16
+        "start": 1.808,
+        "end": 2
       },
       {
         "text": "counts",
-        "start": 2.229,
-        "end": 2.64
+        "start": 2.057,
+        "end": 2.4
       },
       {
-        "text": "18",
-        "start": 2.72,
-        "end": 3.28
+        "text": "11",
+        "start": 2.48,
+        "end": 2.96
       },
       {
         "text": "stars.",
-        "start": 3.387,
-        "end": 4.08
+        "start": 3.053,
+        "end": 3.68
       },
       {
-        "text": "6",
-        "start": 4.56,
-        "end": 4.88
+        "text": "5",
+        "start": 4.16,
+        "end": 4.48
       },
       {
         "text": "are",
-        "start": 4.94,
-        "end": 5.12
+        "start": 4.52,
+        "end": 4.64
       },
       {
         "text": "put",
-        "start": 5.16,
-        "end": 5.28
+        "start": 4.68,
+        "end": 4.8
       },
       {
         "text": "away.",
-        "start": 5.344,
-        "end": 5.68
+        "start": 4.88,
+        "end": 5.28
       },
       {
         "text": "How",
-        "start": 5.84,
-        "end": 6.32
+        "start": 5.44,
+        "end": 5.92
       },
       {
         "text": "many",
-        "start": 6.368,
-        "end": 6.56
+        "start": 5.952,
+        "end": 6.08
       },
       {
         "text": "stay?",
-        "start": 6.656,
-        "end": 7.2
+        "start": 6.192,
+        "end": 6.72
       }
     ]
   },

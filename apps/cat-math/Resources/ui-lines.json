@@ -14,5 +14,7 @@
   "count20": "Twenty!",
   "roundIntro": "Solve three puzzles to turn the page.",
   "roundBonus": "Solve three puzzles to earn a treat.",
-  "newPage": "A new story page is ready!"
+  "newPage": "A new story page is ready!",
+  "readPrompt": "Tap the sentence you hear.",
+  "readRetry": "Good try. Listen once more and read each one."
 }

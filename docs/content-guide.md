@@ -21,10 +21,11 @@ Sharks unlock in three ways, all set in `catalog.json`: `unlockAt` (missions fin
 (stars across all sharks) and `unlockSuperStars` (fourth and fifth stars across all sharks). The later
 rules exist so that new sharks are reached by replaying earlier ones at harder levels.
 
-**Cat Math Adventure.** Each friend has an eight-page story. A round is three puzzles; finishing a round
-opens the next page. Chapter one is pages 1–4 (hearts 0, 3, 6, 9). Chapter two is pages 5–8 and starts at
+**Cat Math Adventure.** Each friend has an eight-page story. A page opens silently so Kate reads it herself
+(a parent setting narrates it instead); then she hears one of its sentences and finds it among three
+(`ReadingQuestion`, no extra recordings). A round is three puzzles; finishing a round opens the next page. Chapter one is pages 1–4 (hearts 0, 3, 6, 9). Chapter two is pages 5–8 and starts at
 27 hearts for the ten cats and 12 for the meadow animals (`CatDefinition.chapterTwoStart`). Chapter-two
-puzzles use sums and differences to 20, doubles, odd or even to 16, and counting by twos and fives.
+puzzles use sums to 20, take-aways across ten drawn on two ten-frames ("make a ten"), doubles, odd or even to 16, and counting by twos and fives.
 Friends unlock by total hearts (`unlockAt`).
 
 ## Add sharks

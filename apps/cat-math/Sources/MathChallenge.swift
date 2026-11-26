@@ -6,6 +6,8 @@ enum MathVisual: Equatable {
     case count(Int)
     case add(Int, Int)
     case subtract(total: Int, taken: Int)
+    /// Two ten-frames for taking away across ten: first the loose ones, to make ten, then the rest.
+    case makeTen(total: Int, taken: Int)
     case pairs(Int)
     case sequence([Int])
 }
@@ -89,7 +91,7 @@ enum MathChallengeFactory {
     /// How big the numbers in a puzzle are, used to rank its recorded variants from easier to harder.
     private static func size(of puzzle: Spec) -> Int {
         switch puzzle.visual {
-        case .count(let total), .pairs(let total), .subtract(let total, _): total
+        case .count(let total), .pairs(let total), .subtract(let total, _), .makeTen(let total, _): total
         case .add(let first, let second): first + second
         case .sequence(let numbers): numbers.last ?? 0
         }
@@ -112,8 +114,9 @@ enum MathChallengeFactory {
                 let first = seed + 5, other = seed % 5 + 2
                 return make("\(lead) \(cat.name) has \(first) \(noun(cat, count: first)) and finds \(other) more. How many now?", first + other, .add(first, other), "\(repeated(icon, count: first))  +  \(repeated(icon, count: other))")
             case "subtraction":
-                let total = seed + 9, taken = seed % 5 + 2
-                return make("\(lead) \(cat.name) counts \(total) \(noun(cat, count: total)). \(taken) are put away. How many stay?", total - taken, .subtract(total: total, taken: taken), "\(repeated(icon, count: total)), put away \(repeated(icon, count: taken))")
+                // Always takes away across ten (13 − 5), the "make a ten" strategy from school.
+                let total = 11 + (seed - 1) % 8, taken = min(9, total - 10 + 1 + (seed * 2) % 5)
+                return make("\(lead) \(cat.name) counts \(total) \(noun(cat, count: total)). \(taken) are put away. How many stay?", total - taken, .makeTen(total: total, taken: taken), "\(repeated(icon, count: total)) in two ten-frames, put away \(repeated(icon, count: taken))")
             case "doubles":
                 let half = seed + 1
                 return make("\(lead) \(cat.name) has \(half) \(noun(cat, count: half)) and finds \(half) more. What is double \(half)?", half * 2, .add(half, half), "\(repeated(icon, count: half))  +  \(repeated(icon, count: half))")

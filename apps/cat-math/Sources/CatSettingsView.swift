@@ -7,6 +7,7 @@ struct CatSettingsView: View {
     @Environment(SoundSettings.self) private var sound
     @Environment(\.kidTheme) private var theme
     @State private var confirmingReset = false
+    @AppStorage(CatActivityView.readsStoryFirstKey) private var readsStoryFirst = false
 
     var body: some View {
         @Bindable var sound = sound
@@ -17,11 +18,15 @@ struct CatSettingsView: View {
                     section("Sound", systemImage: "speaker.wave.2.fill") {
                         Toggle("Read stories and questions aloud", isOn: $sound.voiceEnabled)
                         Toggle("Sound effects", isOn: $sound.effectsEnabled)
+                        Toggle("Read each story page aloud as it opens", isOn: $readsStoryFirst)
+                        Text("When this is off, Kate reads the page herself first. She can tap a word to hear it, or “Read it to me” for the whole page.")
+                            .foregroundStyle(theme.mutedInk)
                         Text("Narration is recorded and bundled with the app; nothing is sent over the internet.")
                             .foregroundStyle(theme.mutedInk)
                     }
                     section("Learning in this app", systemImage: "sparkles") {
                         Text(CatAppConfiguration.value.enabledSkills.map(\.displayName).joined(separator: " • "))
+                        Text("After each story page Kate hears one of its sentences and finds it among three.")
                         Text("Every puzzle has a picture Kate can tap to count. Wrong answers get an encouraging hint and another try.")
                         Text("Each solved puzzle adds a friendship heart and reveals more of that cat’s story.")
                     }

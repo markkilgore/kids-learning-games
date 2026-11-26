@@ -17,7 +17,7 @@ final class CatTourUITests: XCTestCase {
         snap("21-home-meadow")
         tap("cat-scout")
         snap("22-scout-story")
-        tap("start-round")
+        startRound()
         snap("23-scout-puzzle")
         tap("kid-back")
 
@@ -25,7 +25,7 @@ final class CatTourUITests: XCTestCase {
         app.buttons["House"].tap()
         tap("cat-mittens")
         let start = app.buttons["start-round"].firstMatch
-        if start.waitForExistence(timeout: 3) { start.tap() }
+        if start.waitForExistence(timeout: 3) { startRound() }
         for _ in 1...2 {
             let answer = app.buttons["answer-correct"].firstMatch
             XCTAssertTrue(answer.waitForExistence(timeout: 8))
@@ -39,7 +39,7 @@ final class CatTourUITests: XCTestCase {
         tap("next-puzzle")
         XCTAssertTrue(start.waitForExistence(timeout: 8), "the new page should be read before its puzzles")
         snap("25-chapter-two-story")
-        start.tap()
+        startRound(snapAs: "25b-chapter-two-reading")
         for puzzle in 1...3 {
             let answer = app.buttons["answer-correct"].firstMatch
             XCTAssertTrue(answer.waitForExistence(timeout: 8))
@@ -53,6 +53,27 @@ final class CatTourUITests: XCTestCase {
         tap("kid-back")
         tap("cat-journal")
         snap("27-journal")
+    }
+
+    /// Chapter-two subtraction is drawn on two ten-frames; with 31 hearts it is Mittens's next puzzle.
+    func testMakeTenSubtraction() {
+        continueAfterFailure = false
+        app.launchArguments += ["-heartsWithEveryCat", "31"]
+        app.launch()
+        tap("cat-mittens")
+        startRound()
+        XCTAssertTrue(app.staticTexts["Subtraction"].waitForExistence(timeout: 5))
+        snap("30-make-ten")
+        // Counters are taken away from the end, whichever one is tapped.
+        let frames = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Picture hint")).firstMatch
+        XCTAssertTrue(frames.waitForExistence(timeout: 5))
+        for tapNumber in 1...9 {
+            frames.coordinate(withNormalizedOffset: CGVector(dx: 0.3, dy: 0.4)).tap()
+            if tapNumber == 2 { snap("31-make-ten-partway") }
+            sleep(1)
+        }
+        snap("32-make-ten-done")
+        tap("answer-correct")
     }
 
     func testTourEveryScreen() {
@@ -72,7 +93,7 @@ final class CatTourUITests: XCTestCase {
 
         tap("cat-mittens")
         snap("04-story-page")
-        tap("start-round")
+        startRound(snapAs: "04b-reading-question")
         snap("05-puzzle")
 
         // Two rounds of three puzzles cover all six skills, each with its own picture.
@@ -103,7 +124,7 @@ final class CatTourUITests: XCTestCase {
             let start = app.buttons["start-round"].firstMatch
             if start.waitForExistence(timeout: 3) {
                 if puzzle == 3 { snap("11-next-story-page") }
-                start.tap()
+                startRound()
             }
         }
         tap("kid-back")
@@ -131,6 +152,20 @@ final class CatTourUITests: XCTestCase {
         app.scrollViews.firstMatch.swipeUp(velocity: .slow)
         XCTAssertTrue(app.staticTexts["Right first try"].exists)
         snap("17-settings-progress")
+    }
+
+    /// Leaves a story page and answers its reading question, which comes before the puzzles.
+    private func startRound(snapAs name: String? = nil) {
+        tap("start-round")
+        let sentence = app.buttons["reading-correct"].firstMatch
+        XCTAssertTrue(sentence.waitForExistence(timeout: 8), "no reading question after the story page")
+        if let name {
+            snap(name)
+            app.buttons["reading-other"].firstMatch.tap()
+            snap(name + "-wrong")
+        }
+        sentence.tap()
+        XCTAssertTrue(app.buttons["answer-correct"].firstMatch.waitForExistence(timeout: 12), "puzzles did not follow the reading question")
     }
 
     private func tap(_ identifier: String) {

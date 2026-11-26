@@ -29,6 +29,7 @@ piece of work lands or a decision is made.
 | Nov 25 | Missions became number and reading rounds with stars. Sharks 21–30, star unlocks. Meadow animals and chapter two for Kate. `tools/test.sh`. |
 | Nov 25 | Map pages by ocean, sharks 31–35, super-star levels with sums and sentence reading. |
 | Nov 25 | Clean-up: Cat Math friends moved to `cat-friends.json`, Shark code made animal-neutral, mission intros for sharks 1–20 rewritten for the counting-and-reading game, repo guides added. |
+| Nov 26 | Kate: story pages open silently for her to read, a hear-and-find sentence question after each page, and make-a-ten subtraction on ten-frames. |
 
 ## Next steps
 
@@ -44,7 +45,8 @@ make each visit richer over simply adding more animals.
 3. **New worlds as map pages.** The map already supports pages that are not oceans. Planned, in rough
    order: whales and other sea mammals, prehistoric ocean animals (megalodon, ichthyosaurs, mosasaurs),
    then dinosaurs and ice-age megafauna. Each needs the animal schema loosened first (see debt).
-4. **Kate:** watch whether chapter-two math is the right level; next units are place value (tens and
+4. **Kate:** weekly lessons stop at Nov 9–15 in both games (Nov 16–22 was l blends and make-a-ten). Watch
+   whether chapter-two math is the right level; next units are place value (tens and
    ones), time to the hour and comparing numbers. New reading units as the newsletters arrive.
 5. **Listen through the recordings** on a device. Nothing recorded since mid-November has been checked
    by ear.

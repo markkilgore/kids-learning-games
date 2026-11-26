@@ -133,8 +133,12 @@ enum CatContent {
         EducationalSkill(id: "skip-5", displayName: "Skip counting by 5"),
         EducationalSkill(id: "skip-10", displayName: "Skip counting by 10"),
         EducationalSkill(id: "doubles", displayName: "Doubles"),
-        EducationalSkill(id: "skip-2", displayName: "Skip counting by 2")
+        EducationalSkill(id: "skip-2", displayName: "Skip counting by 2"),
+        readingSkill
     ]
+
+    /// The reading question after each story page. Recorded for the parent's progress table; it has no difficulty levels.
+    static let readingSkill = EducationalSkill(id: "reading", displayName: "Story reading")
 
     /// The six skills each chapter rotates through. Chapter two uses bigger numbers and swaps in doubles and twos.
     static let chapterOneSkillIDs = ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10"]
