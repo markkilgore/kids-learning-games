@@ -36,7 +36,7 @@ tools/deploy-ipads.sh                  # install on the family iPads (needs the 
   every combination is listed for the generator.
 - **Swift and JavaScript must agree.** `tools/lib/lines.mjs` re-implements the Swift code that decides which
   lines can be spoken (`MissionChallenges.allSpokenLines`, `SharkReading.mark`, `MathChallengeFactory`,
-  the cat story-page rules). Change both together; `testEverySpokenLineHasARecording` catches drift.
+  the story-page rules). Change both together; `testEverySpokenLineHasARecording` catches drift.
 - **Reading level is enforced by tests.** Henry's "decodable" lines may only use letters and heart words in
   `shark-reading.json`. Each of Kate's story pages must practise the unit it names from `cat-reading.json`.
   Update those files from the school newsletters, not from guesses.
@@ -56,9 +56,11 @@ tools/deploy-ipads.sh                  # install on the family iPads (needs the 
   (`MissionChallenges`, `MathChallengeFactory`), with randomness passed in as a generator.
 - Shared controls come from `packages/ui-components` (`KidButtonStyle`, `KidTabs`, `AnswerTile`, `KidTopBar`,
   `KidArt`, `ReadAlongView`); touch targets are at least `KidTheme.touchTarget`.
-- Content is data: sharks in `catalog.json`, weekly lessons in `*-weeks.json`. Cat friends are still Swift
-  literals in `CatContent.swift`, which `tools/lib/lines.mjs` parses with a regular expression, so keep the
-  `cat(...)` call shape exactly as it is.
+- Content is data: sharks in `catalog.json`, Cat Math friends and their stories in `cat-friends.json`, weekly
+  lessons in `*-weeks.json`. The apps and the audio generator read the same files.
+- Shark Explorer's code says "animal" (`AnimalDefinition`, `catalog.animals`, `AnimalKind`) because whales and
+  prehistoric animals are planned; the catalog key is still `sharks` and saved progress still uses
+  `completedSharks`. Child-facing text takes its noun from `AnimalKind`, not a literal "shark".
 - Pictures are looked up by name with an emoji or drawn fallback (`KidArt`), so art can arrive later. Quiz
   choice ids double as picture names (`choice-<id>.png`).
 - Comments say why, in plain words. Child-facing text is short, warm and concrete.

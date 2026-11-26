@@ -1,9 +1,9 @@
 import SpriteKit
 
 final class HabitatScene: SKScene {
-    private let shark: SharkDefinition
+    private let shark: AnimalDefinition
 
-    init(shark: SharkDefinition, size: CGSize) {
+    init(shark: AnimalDefinition, size: CGSize) {
         self.shark = shark
         super.init(size: size)
         scaleMode = .resizeFill

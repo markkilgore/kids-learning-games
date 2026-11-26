@@ -89,9 +89,14 @@ export async function sharkLines() {
 }
 
 export async function catLines() {
-  const source = await readFile(new URL('../../apps/cat-math/Sources/CatContent.swift', import.meta.url), 'utf8');
-  const cats = parseCats(source);
-  if (cats.length !== 15) throw new Error(`Expected 15 friends in CatContent.swift, found ${cats.length}`);
+  const cats = (await readJSON('cat-friends.json', catResources)).friends.map((friend) => ({
+    name: friend.name,
+    location: friend.locationID,
+    item: friend.storyItem,
+    items: friend.storyItemPlural,
+    trickName: friend.trickName,
+    beats: friend.pages.map((page) => ({ sentences: page.sentences, lead: page.puzzleLead }))
+  }));
   const lines = [];
   for (const [catIndex, cat] of cats.entries()) {
     cat.beats.forEach((beat) => lines.push(...beat.sentences));
@@ -106,21 +111,6 @@ export async function catLines() {
     for (let friendship = 0; friendship < lastPage + 18; friendship += 1) lines.push(challengePrompt(cat, catIndex, friendship));
   }
   return [...lines, ...await weeklyLines('cat-weeks.json', catResources), ...await uiLines(catResources)];
-}
-
-function parseCats(swift) {
-  const pattern = /cat\("([^"]+)", "([^"]+)", "[^"]+", "[^"]+", "([^"]+)", "[^"]+", \d+, "([^"]+)", "([^"]+)", "[^"]+", "([^"]+)", "[^"]+", \[\n([\s\S]*?)\n        \]\)/g;
-  return [...swift.matchAll(pattern)].map((match) => ({
-    name: match[2],
-    location: match[3],
-    item: match[4],
-    items: match[5],
-    trickName: match[6],
-    beats: [...match[7].matchAll(/\("[^"]+", "[^"]+", \[([^\]]+)\], "([^"]+)"\)/g)].map((beat) => ({
-      sentences: [...beat[1].matchAll(/"([^"]+)"/g)].map((sentence) => sentence[1]),
-      lead: beat[2]
-    }))
-  }));
 }
 
 const skills = ['counting', 'addition', 'subtraction', 'odd-even', 'skip-5', 'skip-10'];

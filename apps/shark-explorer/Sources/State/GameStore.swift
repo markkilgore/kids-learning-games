@@ -114,25 +114,25 @@ final class GameStore {
         return Int(arguments[index + 1])
     }()
 
-    func isUnlocked(_ shark: SharkDefinition) -> Bool {
+    func isUnlocked(_ shark: AnimalDefinition) -> Bool {
         Self.unlockAllForTesting || completedSharks.contains(shark.id) || (missionsNeeded(for: shark) == 0 && starsNeeded(for: shark) == 0 && superStarsNeeded(for: shark) == 0)
     }
 
     /// How many more missions reveal a locked shark.
-    func missionsNeeded(for shark: SharkDefinition) -> Int { max(0, shark.unlockAt - completedCount) }
+    func missionsNeeded(for shark: AnimalDefinition) -> Int { max(0, shark.unlockAt - completedCount) }
 
     /// Stars earned on every shark together.
-    var totalStars: Int { ContentStore.shared.catalog.sharks.reduce(0) { $0 + stars(for: $1) } }
+    var totalStars: Int { ContentStore.shared.catalog.animals.reduce(0) { $0 + stars(for: $1) } }
 
     /// A shark's fourth and fifth stars, earned at the two hardest levels, added up over every shark.
-    var totalSuperStars: Int { ContentStore.shared.catalog.sharks.reduce(0) { $0 + max(0, stars(for: $1) - MissionChallenges.plainStars) } }
+    var totalSuperStars: Int { ContentStore.shared.catalog.animals.reduce(0) { $0 + max(0, stars(for: $1) - MissionChallenges.plainStars) } }
 
-    func superStarsNeeded(for shark: SharkDefinition) -> Int { max(0, (shark.unlockSuperStars ?? 0) - totalSuperStars) }
+    func superStarsNeeded(for shark: AnimalDefinition) -> Int { max(0, (shark.unlockSuperStars ?? 0) - totalSuperStars) }
 
     /// How many more stars reveal a locked shark.
-    func starsNeeded(for shark: SharkDefinition) -> Int { max(0, (shark.unlockStars ?? 0) - totalStars) }
+    func starsNeeded(for shark: AnimalDefinition) -> Int { max(0, (shark.unlockStars ?? 0) - totalStars) }
 
-    func open(_ shark: SharkDefinition) {
+    func open(_ shark: AnimalDefinition) {
         guard isUnlocked(shark) else { return }
         freshlyUnlockedSharkIDs.remove(shark.id)
         destination = .encounter(shark.id)
@@ -157,23 +157,23 @@ final class GameStore {
 
     /// Records a finished topic and returns the trait cards it revealed for the first time.
     @discardableResult
-    func completeTopic(_ topic: ExploreTopic, for shark: SharkDefinition) -> [TraitDefinition] {
+    func completeTopic(_ topic: ExploreTopic, for shark: AnimalDefinition) -> [TraitDefinition] {
         let revealed = shark.traits.filter { $0.unlockTopicID == topic.id && !hasUnlocked($0, for: shark) }
         completedTopics.insert("\(shark.id):\(topic.id)")
         save()
         return revealed
     }
 
-    func hasCompleted(_ topic: ExploreTopic, for shark: SharkDefinition) -> Bool {
+    func hasCompleted(_ topic: ExploreTopic, for shark: AnimalDefinition) -> Bool {
         completedTopics.contains("\(shark.id):\(topic.id)")
     }
 
-    func hasUnlocked(_ trait: TraitDefinition, for shark: SharkDefinition) -> Bool {
+    func hasUnlocked(_ trait: TraitDefinition, for shark: AnimalDefinition) -> Bool {
         completedSharks.contains(shark.id) || completedTopics.contains("\(shark.id):\(trait.unlockTopicID)")
     }
 
     /// Records a quiz question once it is answered correctly; `firstTry` is false if a wrong choice came first.
-    func recordQuizQuestion(for shark: SharkDefinition, firstTry: Bool) {
+    func recordQuizQuestion(for shark: AnimalDefinition, firstTry: Bool) {
         if firstTry {
             quizFirstTry[shark.id, default: 0] += 1
         } else {
@@ -183,18 +183,18 @@ final class GameStore {
     }
 
     /// Quiz questions answered for one shark, or for every shark when `shark` is nil.
-    func quizTally(for shark: SharkDefinition? = nil) -> (firstTry: Int, retried: Int) {
+    func quizTally(for shark: AnimalDefinition? = nil) -> (firstTry: Int, retried: Int) {
         guard let shark else { return (quizFirstTry.values.reduce(0, +), quizRetried.values.reduce(0, +)) }
         return (quizFirstTry[shark.id, default: 0], quizRetried[shark.id, default: 0])
     }
 
     /// Stars on a shark's mission. A mission finished before stars existed counts as one.
-    func stars(for shark: SharkDefinition) -> Int {
+    func stars(for shark: AnimalDefinition) -> Int {
         missionStars[shark.id] ?? (completedSharks.contains(shark.id) ? 1 : 0)
     }
 
     /// The level the next mission is played at: one above the stars already earned.
-    func missionLevel(for shark: SharkDefinition) -> Int {
+    func missionLevel(for shark: AnimalDefinition) -> Int {
         if let forced = Self.levelForTesting { return min(max(forced, 1), MissionChallenges.maxLevel) }
         return min(stars(for: shark) + 1, MissionChallenges.maxLevel)
     }
@@ -215,7 +215,7 @@ final class GameStore {
 
     /// `starLevel` is the star this play earned: the level played if enough rounds were right first time.
     @discardableResult
-    func completeMission(for shark: SharkDefinition, starLevel: Int = 1, in sharks: [SharkDefinition] = ContentStore.shared.catalog.sharks) -> MissionReward {
+    func completeMission(for shark: AnimalDefinition, starLevel: Int = 1, in sharks: [AnimalDefinition] = ContentStore.shared.catalog.animals) -> MissionReward {
         let lockedBefore = sharks.filter { !isUnlocked($0) }
         let reward = MissionReward(
             isNewPage: !completedSharks.contains(shark.id),

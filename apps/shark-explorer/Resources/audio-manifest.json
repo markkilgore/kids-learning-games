@@ -14734,36 +14734,6 @@
       }
     ]
   },
-  "Build one strong tail strike.": {
-    "file": "c182f9dd2b25f54659e63e14.mp3",
-    "words": [
-      {
-        "text": "Build",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "one",
-        "start": 0.34,
-        "end": 0.64
-      },
-      {
-        "text": "strong",
-        "start": 0.731,
-        "end": 1.28
-      },
-      {
-        "text": "tail",
-        "start": 1.344,
-        "end": 1.6
-      },
-      {
-        "text": "strike.",
-        "start": 1.669,
-        "end": 2.16
-      }
-    ]
-  },
   "Bull sharks eat bony fish, stingrays, and other small sharks.": {
     "file": "6a3b59fca72a062956a3218e.mp3",
     "words": [
@@ -17359,121 +17329,6 @@
       }
     ]
   },
-  "Collect each cloud to finish its gentle ocean meal.": {
-    "file": "3ae495aa94c02196b3b01e36.mp3",
-    "words": [
-      {
-        "text": "Collect",
-        "start": 0,
-        "end": 0.4
-      },
-      {
-        "text": "each",
-        "start": 0.448,
-        "end": 0.64
-      },
-      {
-        "text": "cloud",
-        "start": 0.72,
-        "end": 1.12
-      },
-      {
-        "text": "to",
-        "start": 1.173,
-        "end": 1.28
-      },
-      {
-        "text": "finish",
-        "start": 1.326,
-        "end": 1.6
-      },
-      {
-        "text": "its",
-        "start": 1.66,
-        "end": 1.84
-      },
-      {
-        "text": "gentle",
-        "start": 1.909,
-        "end": 2.32
-      },
-      {
-        "text": "ocean",
-        "start": 2.4,
-        "end": 2.8
-      },
-      {
-        "text": "meal.",
-        "start": 2.88,
-        "end": 3.36
-      }
-    ]
-  },
-  "Collect each sparkling plankton patch as it swims with its mouth open.": {
-    "file": "234bb6f0136835252727663c.mp3",
-    "words": [
-      {
-        "text": "Collect",
-        "start": 0,
-        "end": 0.4
-      },
-      {
-        "text": "each",
-        "start": 0.464,
-        "end": 0.72
-      },
-      {
-        "text": "sparkling",
-        "start": 0.776,
-        "end": 1.28
-      },
-      {
-        "text": "plankton",
-        "start": 1.347,
-        "end": 1.76
-      },
-      {
-        "text": "patch",
-        "start": 1.827,
-        "end": 2.16
-      },
-      {
-        "text": "as",
-        "start": 2.213,
-        "end": 2.32
-      },
-      {
-        "text": "it",
-        "start": 2.373,
-        "end": 2.48
-      },
-      {
-        "text": "swims",
-        "start": 2.573,
-        "end": 3.04
-      },
-      {
-        "text": "with",
-        "start": 3.056,
-        "end": 3.12
-      },
-      {
-        "text": "its",
-        "start": 3.16,
-        "end": 3.28
-      },
-      {
-        "text": "mouth",
-        "start": 3.347,
-        "end": 3.68
-      },
-      {
-        "text": "open.",
-        "start": 3.76,
-        "end": 4.16
-      }
-    ]
-  },
   "Cookiecutter sharks eat squid and take small round bites from much larger fish and whales.": {
     "file": "56683f9d2a2cb0329d153f56.mp3",
     "words": [
@@ -17884,6 +17739,91 @@
       }
     ]
   },
+  "Count each group of crabs and read the words to help it slurp up a snack.": {
+    "file": "c3b53277a3fe496f0e6f2199.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "crabs",
+        "start": 0.96,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "read",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "the",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "words",
+        "start": 2.08,
+        "end": 2.48
+      },
+      {
+        "text": "to",
+        "start": 2.507,
+        "end": 2.56
+      },
+      {
+        "text": "help",
+        "start": 2.608,
+        "end": 2.8
+      },
+      {
+        "text": "it",
+        "start": 2.827,
+        "end": 2.88
+      },
+      {
+        "text": "slurp",
+        "start": 2.96,
+        "end": 3.36
+      },
+      {
+        "text": "up",
+        "start": 3.387,
+        "end": 3.44
+      },
+      {
+        "text": "a",
+        "start": 3.52,
+        "end": 3.6
+      },
+      {
+        "text": "snack.",
+        "start": 3.667,
+        "end": 4.16
+      }
+    ]
+  },
   "Count each group of deep-sea fish and read the words to help it find a meal.": {
     "file": "22902340d78ca81a44ecd8c5.mp3",
     "words": [
@@ -17966,6 +17906,86 @@
         "text": "meal.",
         "start": 3.84,
         "end": 4.24
+      }
+    ]
+  },
+  "Count each group of electric clues and read the words to find the hidden prey.": {
+    "file": "41df420b9b6f84b039c7395d.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "electric",
+        "start": 1.013,
+        "end": 1.44
+      },
+      {
+        "text": "clues",
+        "start": 1.533,
+        "end": 2
+      },
+      {
+        "text": "and",
+        "start": 2.1,
+        "end": 2.4
+      },
+      {
+        "text": "read",
+        "start": 2.448,
+        "end": 2.64
+      },
+      {
+        "text": "the",
+        "start": 2.68,
+        "end": 2.8
+      },
+      {
+        "text": "words",
+        "start": 2.88,
+        "end": 3.28
+      },
+      {
+        "text": "to",
+        "start": 3.307,
+        "end": 3.36
+      },
+      {
+        "text": "find",
+        "start": 3.44,
+        "end": 3.76
+      },
+      {
+        "text": "the",
+        "start": 3.8,
+        "end": 3.92
+      },
+      {
+        "text": "hidden",
+        "start": 3.966,
+        "end": 4.24
+      },
+      {
+        "text": "prey.",
+        "start": 4.336,
+        "end": 4.8
       }
     ]
   },
@@ -18061,6 +18081,86 @@
         "text": "up.",
         "start": 4.96,
         "end": 5.28
+      }
+    ]
+  },
+  "Count each group of fish and read the words to build one strong tail strike.": {
+    "file": "f7939ba992f3759084b8a38b.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "fish",
+        "start": 0.976,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.76
+      },
+      {
+        "text": "read",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "words",
+        "start": 2.147,
+        "end": 2.48
+      },
+      {
+        "text": "to",
+        "start": 2.507,
+        "end": 2.56
+      },
+      {
+        "text": "build",
+        "start": 2.6,
+        "end": 2.8
+      },
+      {
+        "text": "one",
+        "start": 2.9,
+        "end": 3.2
+      },
+      {
+        "text": "strong",
+        "start": 3.269,
+        "end": 3.68
+      },
+      {
+        "text": "tail",
+        "start": 3.76,
+        "end": 4.08
+      },
+      {
+        "text": "strike.",
+        "start": 4.137,
+        "end": 4.64
       }
     ]
   },
@@ -18229,6 +18329,981 @@
       }
     ]
   },
+  "Count each group of fish and read the words to pop out of the sand.": {
+    "file": "282e9ca5bdb71ff80d864777.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "fish",
+        "start": 0.976,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.76
+      },
+      {
+        "text": "read",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "words",
+        "start": 2.147,
+        "end": 2.48
+      },
+      {
+        "text": "to",
+        "start": 2.507,
+        "end": 2.56
+      },
+      {
+        "text": "pop",
+        "start": 2.64,
+        "end": 2.88
+      },
+      {
+        "text": "out",
+        "start": 2.92,
+        "end": 3.04
+      },
+      {
+        "text": "of",
+        "start": 3.067,
+        "end": 3.12
+      },
+      {
+        "text": "the",
+        "start": 3.14,
+        "end": 3.2
+      },
+      {
+        "text": "sand.",
+        "start": 3.312,
+        "end": 3.84
+      }
+    ]
+  },
+  "Count each group of fish and read the words to spring its jaws.": {
+    "file": "2dba4a016adb7b4b46bf4248.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "fish",
+        "start": 0.976,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.76
+      },
+      {
+        "text": "read",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "words",
+        "start": 2.16,
+        "end": 2.56
+      },
+      {
+        "text": "to",
+        "start": 2.613,
+        "end": 2.72
+      },
+      {
+        "text": "spring",
+        "start": 2.777,
+        "end": 3.12
+      },
+      {
+        "text": "its",
+        "start": 3.16,
+        "end": 3.28
+      },
+      {
+        "text": "jaws.",
+        "start": 3.408,
+        "end": 4
+      }
+    ]
+  },
+  "Count each group of glows and read the words before they fade into the deep.": {
+    "file": "6d464839abb50909bbb09369.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "glows",
+        "start": 0.96,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.5,
+        "end": 1.68
+      },
+      {
+        "text": "read",
+        "start": 1.744,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "words",
+        "start": 2.147,
+        "end": 2.48
+      },
+      {
+        "text": "before",
+        "start": 2.537,
+        "end": 2.88
+      },
+      {
+        "text": "they",
+        "start": 2.928,
+        "end": 3.12
+      },
+      {
+        "text": "fade",
+        "start": 3.2,
+        "end": 3.52
+      },
+      {
+        "text": "into",
+        "start": 3.584,
+        "end": 3.84
+      },
+      {
+        "text": "the",
+        "start": 3.86,
+        "end": 3.92
+      },
+      {
+        "text": "deep.",
+        "start": 3.984,
+        "end": 4.4
+      }
+    ]
+  },
+  "Count each group of plankton and read the words as it swims with its mouth open.": {
+    "file": "50e8564c53abd6b4d532ab76.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "plankton",
+        "start": 0.947,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.62,
+        "end": 1.92
+      },
+      {
+        "text": "read",
+        "start": 1.984,
+        "end": 2.24
+      },
+      {
+        "text": "the",
+        "start": 2.26,
+        "end": 2.32
+      },
+      {
+        "text": "words",
+        "start": 2.4,
+        "end": 2.8
+      },
+      {
+        "text": "as",
+        "start": 2.853,
+        "end": 2.96
+      },
+      {
+        "text": "it",
+        "start": 3.013,
+        "end": 3.12
+      },
+      {
+        "text": "swims",
+        "start": 3.227,
+        "end": 3.76
+      },
+      {
+        "text": "with",
+        "start": 3.776,
+        "end": 3.84
+      },
+      {
+        "text": "its",
+        "start": 3.88,
+        "end": 4
+      },
+      {
+        "text": "mouth",
+        "start": 4.053,
+        "end": 4.32
+      },
+      {
+        "text": "open.",
+        "start": 4.416,
+        "end": 4.88
+      }
+    ]
+  },
+  "Count each group of plankton and read the words to finish its gentle ocean meal.": {
+    "file": "e4c1970e6a71c72b2071b44f.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.613,
+        "end": 0.88
+      },
+      {
+        "text": "of",
+        "start": 0.907,
+        "end": 0.96
+      },
+      {
+        "text": "plankton",
+        "start": 1.013,
+        "end": 1.52
+      },
+      {
+        "text": "and",
+        "start": 1.62,
+        "end": 1.92
+      },
+      {
+        "text": "read",
+        "start": 1.968,
+        "end": 2.16
+      },
+      {
+        "text": "the",
+        "start": 2.18,
+        "end": 2.24
+      },
+      {
+        "text": "words",
+        "start": 2.307,
+        "end": 2.64
+      },
+      {
+        "text": "to",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "text": "finish",
+        "start": 2.857,
+        "end": 3.2
+      },
+      {
+        "text": "its",
+        "start": 3.26,
+        "end": 3.44
+      },
+      {
+        "text": "gentle",
+        "start": 3.509,
+        "end": 3.92
+      },
+      {
+        "text": "ocean",
+        "start": 4,
+        "end": 4.4
+      },
+      {
+        "text": "meal.",
+        "start": 4.496,
+        "end": 4.96
+      }
+    ]
+  },
+  "Count each group of reef fish and read the words as they dart from the coral.": {
+    "file": "b89a1ee9f53e3e4022f1051a.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.288,
+        "end": 0.48
+      },
+      {
+        "text": "group",
+        "start": 0.52,
+        "end": 0.72
+      },
+      {
+        "text": "of",
+        "start": 0.747,
+        "end": 0.8
+      },
+      {
+        "text": "reef",
+        "start": 0.864,
+        "end": 1.12
+      },
+      {
+        "text": "fish",
+        "start": 1.184,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.84
+      },
+      {
+        "text": "read",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "words",
+        "start": 2.307,
+        "end": 2.64
+      },
+      {
+        "text": "as",
+        "start": 2.667,
+        "end": 2.72
+      },
+      {
+        "text": "they",
+        "start": 2.752,
+        "end": 2.88
+      },
+      {
+        "text": "dart",
+        "start": 2.96,
+        "end": 3.28
+      },
+      {
+        "text": "from",
+        "start": 3.312,
+        "end": 3.44
+      },
+      {
+        "text": "the",
+        "start": 3.48,
+        "end": 3.6
+      },
+      {
+        "text": "coral.",
+        "start": 3.667,
+        "end": 4.16
+      }
+    ]
+  },
+  "Count each group of rocks and read the words to guide the epaulette shark to the next pool.": {
+    "file": "9130d20150ed68675b1d1283.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "rocks",
+        "start": 0.973,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "read",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "the",
+        "start": 1.86,
+        "end": 1.92
+      },
+      {
+        "text": "words",
+        "start": 1.987,
+        "end": 2.32
+      },
+      {
+        "text": "to",
+        "start": 2.373,
+        "end": 2.48
+      },
+      {
+        "text": "guide",
+        "start": 2.533,
+        "end": 2.8
+      },
+      {
+        "text": "the",
+        "start": 2.82,
+        "end": 2.88
+      },
+      {
+        "text": "epaulette",
+        "start": 2.96,
+        "end": 3.36
+      },
+      {
+        "text": "shark",
+        "start": 3.427,
+        "end": 3.76
+      },
+      {
+        "text": "to",
+        "start": 3.813,
+        "end": 3.92
+      },
+      {
+        "text": "the",
+        "start": 3.94,
+        "end": 4
+      },
+      {
+        "text": "next",
+        "start": 4.08,
+        "end": 4.4
+      },
+      {
+        "text": "pool.",
+        "start": 4.48,
+        "end": 4.88
+      }
+    ]
+  },
+  "Count each group of roots and read the words to find a hiding place.": {
+    "file": "44154cfea13a7e62ca4cb349.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "group",
+        "start": 0.68,
+        "end": 0.88
+      },
+      {
+        "text": "of",
+        "start": 0.933,
+        "end": 1.04
+      },
+      {
+        "text": "roots",
+        "start": 1.107,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.84
+      },
+      {
+        "text": "read",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "words",
+        "start": 2.307,
+        "end": 2.64
+      },
+      {
+        "text": "to",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "text": "find",
+        "start": 2.848,
+        "end": 3.04
+      },
+      {
+        "text": "a",
+        "start": 3.08,
+        "end": 3.12
+      },
+      {
+        "text": "hiding",
+        "start": 3.166,
+        "end": 3.44
+      },
+      {
+        "text": "place.",
+        "start": 3.52,
+        "end": 4.08
+      }
+    ]
+  },
+  "Count each group of scent clues and read the words as the tiger shark searches for food.": {
+    "file": "3683b31e06a310d69956e073.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.288,
+        "end": 0.48
+      },
+      {
+        "text": "group",
+        "start": 0.52,
+        "end": 0.72
+      },
+      {
+        "text": "of",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "scent",
+        "start": 0.933,
+        "end": 1.2
+      },
+      {
+        "text": "clues",
+        "start": 1.28,
+        "end": 1.68
+      },
+      {
+        "text": "and",
+        "start": 1.78,
+        "end": 2.08
+      },
+      {
+        "text": "read",
+        "start": 2.128,
+        "end": 2.32
+      },
+      {
+        "text": "the",
+        "start": 2.34,
+        "end": 2.4
+      },
+      {
+        "text": "words",
+        "start": 2.48,
+        "end": 2.88
+      },
+      {
+        "text": "as",
+        "start": 2.933,
+        "end": 3.04
+      },
+      {
+        "text": "the",
+        "start": 3.06,
+        "end": 3.12
+      },
+      {
+        "text": "tiger",
+        "start": 3.2,
+        "end": 3.6
+      },
+      {
+        "text": "shark",
+        "start": 3.653,
+        "end": 3.92
+      },
+      {
+        "text": "searches",
+        "start": 3.973,
+        "end": 4.4
+      },
+      {
+        "text": "for",
+        "start": 4.42,
+        "end": 4.48
+      },
+      {
+        "text": "food.",
+        "start": 4.576,
+        "end": 5.12
+      }
+    ]
+  },
+  "Count each group of sea snails and read the words to find them in the coral.": {
+    "file": "98df12f58c217938c9fcfa1b.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "sea",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "snails",
+        "start": 1.227,
+        "end": 1.68
+      },
+      {
+        "text": "and",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "read",
+        "start": 1.904,
+        "end": 2.16
+      },
+      {
+        "text": "the",
+        "start": 2.18,
+        "end": 2.24
+      },
+      {
+        "text": "words",
+        "start": 2.307,
+        "end": 2.64
+      },
+      {
+        "text": "to",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "text": "find",
+        "start": 2.848,
+        "end": 3.04
+      },
+      {
+        "text": "them",
+        "start": 3.072,
+        "end": 3.2
+      },
+      {
+        "text": "in",
+        "start": 3.227,
+        "end": 3.28
+      },
+      {
+        "text": "the",
+        "start": 3.3,
+        "end": 3.36
+      },
+      {
+        "text": "coral.",
+        "start": 3.44,
+        "end": 3.92
+      }
+    ]
+  },
+  "Count each group of sea urchins and read the words to crunch their shells.": {
+    "file": "8bb0a0a71597720078f0a544.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "sea",
+        "start": 1.02,
+        "end": 1.2
+      },
+      {
+        "text": "urchins",
+        "start": 1.28,
+        "end": 1.76
+      },
+      {
+        "text": "and",
+        "start": 1.86,
+        "end": 2.16
+      },
+      {
+        "text": "read",
+        "start": 2.224,
+        "end": 2.48
+      },
+      {
+        "text": "the",
+        "start": 2.5,
+        "end": 2.56
+      },
+      {
+        "text": "words",
+        "start": 2.64,
+        "end": 3.04
+      },
+      {
+        "text": "to",
+        "start": 3.093,
+        "end": 3.2
+      },
+      {
+        "text": "crunch",
+        "start": 3.246,
+        "end": 3.52
+      },
+      {
+        "text": "their",
+        "start": 3.56,
+        "end": 3.76
+      },
+      {
+        "text": "shells.",
+        "start": 3.851,
+        "end": 4.56
+      }
+    ]
+  },
+  "Count each group of shadows and read the words as the shark searches above.": {
+    "file": "ea5d88ac057e9782948abe5f.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "shadows",
+        "start": 1.02,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "read",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "the",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "words",
+        "start": 2.067,
+        "end": 2.4
+      },
+      {
+        "text": "as",
+        "start": 2.453,
+        "end": 2.56
+      },
+      {
+        "text": "the",
+        "start": 2.58,
+        "end": 2.64
+      },
+      {
+        "text": "shark",
+        "start": 2.72,
+        "end": 3.12
+      },
+      {
+        "text": "searches",
+        "start": 3.156,
+        "end": 3.44
+      },
+      {
+        "text": "above.",
+        "start": 3.52,
+        "end": 4.08
+      }
+    ]
+  },
   "Count each group of shells and read the words to help it dig up a meal.": {
     "file": "d7202fd9ddbb3de0a0938447.mp3",
     "words": [
@@ -18314,6 +19389,81 @@
       }
     ]
   },
+  "Count each group of shells and read the words to reveal the hidden shark.": {
+    "file": "f442d8878b791d31b6a667f3.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "shells",
+        "start": 0.96,
+        "end": 1.44
+      },
+      {
+        "text": "and",
+        "start": 1.54,
+        "end": 1.84
+      },
+      {
+        "text": "read",
+        "start": 1.888,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "words",
+        "start": 2.307,
+        "end": 2.64
+      },
+      {
+        "text": "to",
+        "start": 2.667,
+        "end": 2.72
+      },
+      {
+        "text": "reveal",
+        "start": 2.777,
+        "end": 3.12
+      },
+      {
+        "text": "the",
+        "start": 3.16,
+        "end": 3.28
+      },
+      {
+        "text": "hidden",
+        "start": 3.326,
+        "end": 3.6
+      },
+      {
+        "text": "shark.",
+        "start": 3.68,
+        "end": 4.16
+      }
+    ]
+  },
   "Count each group of shrimp and read the words to help it find a meal.": {
     "file": "1cb7d7367ca92b947e069edd.mp3",
     "words": [
@@ -18391,6 +19541,156 @@
         "text": "meal.",
         "start": 3.28,
         "end": 3.68
+      }
+    ]
+  },
+  "Count each group of shrimp and read the words to sweep the saw.": {
+    "file": "92501d799353c9ab38d49586.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "shrimp",
+        "start": 1.006,
+        "end": 1.28
+      },
+      {
+        "text": "and",
+        "start": 1.34,
+        "end": 1.52
+      },
+      {
+        "text": "read",
+        "start": 1.568,
+        "end": 1.76
+      },
+      {
+        "text": "the",
+        "start": 1.8,
+        "end": 1.92
+      },
+      {
+        "text": "words",
+        "start": 2,
+        "end": 2.4
+      },
+      {
+        "text": "to",
+        "start": 2.427,
+        "end": 2.48
+      },
+      {
+        "text": "sweep",
+        "start": 2.56,
+        "end": 2.96
+      },
+      {
+        "text": "the",
+        "start": 2.98,
+        "end": 3.04
+      },
+      {
+        "text": "saw.",
+        "start": 3.18,
+        "end": 3.68
+      }
+    ]
+  },
+  "Count each group of snowy clues and read the words without wasting the shark's energy.": {
+    "file": "563758485c1244a568b79a24.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.32,
+        "end": 0.64
+      },
+      {
+        "text": "group",
+        "start": 0.693,
+        "end": 0.96
+      },
+      {
+        "text": "of",
+        "start": 0.987,
+        "end": 1.04
+      },
+      {
+        "text": "snowy",
+        "start": 1.12,
+        "end": 1.52
+      },
+      {
+        "text": "clues",
+        "start": 1.613,
+        "end": 2.08
+      },
+      {
+        "text": "and",
+        "start": 2.2,
+        "end": 2.56
+      },
+      {
+        "text": "read",
+        "start": 2.608,
+        "end": 2.8
+      },
+      {
+        "text": "the",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "words",
+        "start": 3.027,
+        "end": 3.36
+      },
+      {
+        "text": "without",
+        "start": 3.4,
+        "end": 3.68
+      },
+      {
+        "text": "wasting",
+        "start": 3.74,
+        "end": 4.16
+      },
+      {
+        "text": "the",
+        "start": 4.18,
+        "end": 4.24
+      },
+      {
+        "text": "shark's",
+        "start": 4.293,
+        "end": 4.64
+      },
+      {
+        "text": "energy.",
+        "start": 4.709,
+        "end": 5.28
       }
     ]
   },
@@ -18564,6 +19864,156 @@
       }
     ]
   },
+  "Count each group of tuna and read the words to help the mako catch up.": {
+    "file": "dbd3af41dd75b12043f0fc84.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "each",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "tuna",
+        "start": 0.976,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.76
+      },
+      {
+        "text": "read",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "words",
+        "start": 2.227,
+        "end": 2.56
+      },
+      {
+        "text": "to",
+        "start": 2.613,
+        "end": 2.72
+      },
+      {
+        "text": "help",
+        "start": 2.752,
+        "end": 2.88
+      },
+      {
+        "text": "the",
+        "start": 2.92,
+        "end": 3.04
+      },
+      {
+        "text": "mako",
+        "start": 3.08,
+        "end": 3.44
+      },
+      {
+        "text": "catch",
+        "start": 3.493,
+        "end": 3.76
+      },
+      {
+        "text": "up.",
+        "start": 3.84,
+        "end": 4.08
+      }
+    ]
+  },
+  "Count each group of waves and read the words as it swims upstream.": {
+    "file": "b78e67207e39ffd05f8573aa.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "each",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "group",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "text": "of",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "waves",
+        "start": 0.96,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.46,
+        "end": 1.76
+      },
+      {
+        "text": "read",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "words",
+        "start": 2.16,
+        "end": 2.56
+      },
+      {
+        "text": "as",
+        "start": 2.587,
+        "end": 2.64
+      },
+      {
+        "text": "it",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "text": "swims",
+        "start": 2.867,
+        "end": 3.2
+      },
+      {
+        "text": "upstream.",
+        "start": 3.271,
+        "end": 4
+      }
+    ]
+  },
   "Count the crabs and read each word to help it find its dinner.": {
     "file": "db97b3c32d4206b978b557a9.mp3",
     "words": [
@@ -18699,6 +20149,76 @@
       }
     ]
   },
+  "Count the deep-sea fish you see.": {
+    "file": "3608c69ff97c2536e83050fb.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "deep-sea",
+        "start": 0.464,
+        "end": 1.12
+      },
+      {
+        "text": "fish",
+        "start": 1.152,
+        "end": 1.28
+      },
+      {
+        "text": "you",
+        "start": 1.32,
+        "end": 1.44
+      },
+      {
+        "text": "see.",
+        "start": 1.54,
+        "end": 1.92
+      }
+    ]
+  },
+  "Count the electric sparks you see.": {
+    "file": "7d8cb295af2e80178fc8dcfc.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "electric",
+        "start": 0.533,
+        "end": 0.96
+      },
+      {
+        "text": "sparks",
+        "start": 1.029,
+        "end": 1.44
+      },
+      {
+        "text": "you",
+        "start": 1.48,
+        "end": 1.6
+      },
+      {
+        "text": "see.",
+        "start": 1.68,
+        "end": 2.08
+      }
+    ]
+  },
   "Count the fish and read each word to help it spin up through the school.": {
     "file": "16e80fd8abd9e953c0784258.mp3",
     "words": [
@@ -18814,6 +20334,76 @@
       }
     ]
   },
+  "Count the fish shadows you see.": {
+    "file": "614510839bea0bc05ed4e993.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "fish",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "shadows",
+        "start": 0.7,
+        "end": 1.12
+      },
+      {
+        "text": "you",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "see.",
+        "start": 1.36,
+        "end": 1.68
+      }
+    ]
+  },
+  "Count the fish that swim close.": {
+    "file": "6488c5e5161be7516fd6a9e4.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "fish",
+        "start": 0.464,
+        "end": 0.72
+      },
+      {
+        "text": "that",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "swim",
+        "start": 1.024,
+        "end": 1.28
+      },
+      {
+        "text": "close.",
+        "start": 1.373,
+        "end": 1.92
+      }
+    ]
+  },
   "Count the fish you see.": {
     "file": "39c54a2a0f3e392ca3a9a32e.mp3",
     "words": [
@@ -18919,6 +20509,41 @@
       }
     ]
   },
+  "Count the green glows you see.": {
+    "file": "fe4fb0143e5e84a29a44a593.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "green",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "glows",
+        "start": 0.64,
+        "end": 1.04
+      },
+      {
+        "text": "you",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "see.",
+        "start": 1.28,
+        "end": 1.6
+      }
+    ]
+  },
   "Count the little glowing lights.": {
     "file": "a92001aa0e9c680940b9340b.mp3",
     "words": [
@@ -18945,6 +20570,246 @@
       {
         "text": "lights.",
         "start": 1.189,
+        "end": 1.76
+      }
+    ]
+  },
+  "Count the mangrove roots you see.": {
+    "file": "6e52ef8b7e7d5356739ed24e.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "mangrove",
+        "start": 0.384,
+        "end": 0.8
+      },
+      {
+        "text": "roots",
+        "start": 0.853,
+        "end": 1.12
+      },
+      {
+        "text": "you",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "see.",
+        "start": 1.36,
+        "end": 1.76
+      }
+    ]
+  },
+  "Count the plankton you see.": {
+    "file": "dfc403248bf789a67ec3446f.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "plankton",
+        "start": 0.387,
+        "end": 0.88
+      },
+      {
+        "text": "you",
+        "start": 0.92,
+        "end": 1.04
+      },
+      {
+        "text": "see.",
+        "start": 1.14,
+        "end": 1.52
+      }
+    ]
+  },
+  "Count the reef fish you see.": {
+    "file": "cf7ecc3a73668d273f308ffa.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "reef",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "fish",
+        "start": 0.768,
+        "end": 0.96
+      },
+      {
+        "text": "you",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "see.",
+        "start": 1.22,
+        "end": 1.6
+      }
+    ]
+  },
+  "Count the river waves you see.": {
+    "file": "257267e45bd4f73b0a8c1582.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "river",
+        "start": 0.36,
+        "end": 0.56
+      },
+      {
+        "text": "waves",
+        "start": 0.627,
+        "end": 0.96
+      },
+      {
+        "text": "you",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "see.",
+        "start": 1.2,
+        "end": 1.6
+      }
+    ]
+  },
+  "Count the scent clues you see.": {
+    "file": "0ba82d498f3d4877cb3a7e25.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "scent",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "clues",
+        "start": 0.707,
+        "end": 1.04
+      },
+      {
+        "text": "you",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "see.",
+        "start": 1.3,
+        "end": 1.68
+      }
+    ]
+  },
+  "Count the sea snails you see.": {
+    "file": "300477392e1b1fa39336ec3e.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "sea",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "snails",
+        "start": 0.64,
+        "end": 1.04
+      },
+      {
+        "text": "you",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "see.",
+        "start": 1.22,
+        "end": 1.6
+      }
+    ]
+  },
+  "Count the sea urchins you see.": {
+    "file": "c4d47082f014039cb4dc1a6c.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "text": "sea",
+        "start": 0.46,
+        "end": 0.64
+      },
+      {
+        "text": "urchins",
+        "start": 0.72,
+        "end": 1.12
+      },
+      {
+        "text": "you",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "see.",
+        "start": 1.38,
         "end": 1.76
       }
     ]
@@ -19106,6 +20971,41 @@
         "text": "see.",
         "start": 0.88,
         "end": 1.2
+      }
+    ]
+  },
+  "Count the snowy clues you see.": {
+    "file": "06bfe4310b4c8c4208469e1f.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "snowy",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "clues",
+        "start": 0.787,
+        "end": 1.12
+      },
+      {
+        "text": "you",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "see.",
+        "start": 1.38,
+        "end": 1.76
       }
     ]
   },
@@ -19276,6 +21176,41 @@
         "text": "group.",
         "start": 1.027,
         "end": 1.44
+      }
+    ]
+  },
+  "Count the wet rocks you see.": {
+    "file": "8cabb2d9cde984980ea092d8.mp3",
+    "words": [
+      {
+        "text": "Count",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "wet",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "rocks",
+        "start": 0.627,
+        "end": 0.96
+      },
+      {
+        "text": "you",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "see.",
+        "start": 1.22,
+        "end": 1.6
       }
     ]
   },
@@ -21694,41 +23629,6 @@
       }
     ]
   },
-  "Feel for them with the barbels.": {
-    "file": "b1406a6a38bbb39eddb3dd8d.mp3",
-    "words": [
-      {
-        "text": "Feel",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "for",
-        "start": 0.3,
-        "end": 0.48
-      },
-      {
-        "text": "them",
-        "start": 0.544,
-        "end": 0.8
-      },
-      {
-        "text": "with",
-        "start": 0.88,
-        "end": 1.2
-      },
-      {
-        "text": "the",
-        "start": 1.22,
-        "end": 1.28
-      },
-      {
-        "text": "barbels.",
-        "start": 1.36,
-        "end": 2.08
-      }
-    ]
-  },
   "Females are a bit longer than males.": {
     "file": "eb2dab3c7e47658000443d4b.mp3",
     "words": [
@@ -21836,241 +23736,6 @@
         "text": "sit.",
         "start": 1.48,
         "end": 2
-      }
-    ]
-  },
-  "Find each crab and use suction to pull it from hiding.": {
-    "file": "5076a0e164d5eab45d04da90.mp3",
-    "words": [
-      {
-        "text": "Find",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.368,
-        "end": 0.56
-      },
-      {
-        "text": "crab",
-        "start": 0.64,
-        "end": 0.96
-      },
-      {
-        "text": "and",
-        "start": 1,
-        "end": 1.12
-      },
-      {
-        "text": "use",
-        "start": 1.2,
-        "end": 1.44
-      },
-      {
-        "text": "suction",
-        "start": 1.5,
-        "end": 1.92
-      },
-      {
-        "text": "to",
-        "start": 1.947,
-        "end": 2
-      },
-      {
-        "text": "pull",
-        "start": 2.048,
-        "end": 2.24
-      },
-      {
-        "text": "it",
-        "start": 2.267,
-        "end": 2.32
-      },
-      {
-        "text": "from",
-        "start": 2.368,
-        "end": 2.56
-      },
-      {
-        "text": "hiding.",
-        "start": 2.629,
-        "end": 3.12
-      }
-    ]
-  },
-  "Find each sea urchin and crush its shell with flat back teeth.": {
-    "file": "4eb502f0431c5f0d2361923f.mp3",
-    "words": [
-      {
-        "text": "Find",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "sea",
-        "start": 0.54,
-        "end": 0.72
-      },
-      {
-        "text": "urchin",
-        "start": 0.8,
-        "end": 1.2
-      },
-      {
-        "text": "and",
-        "start": 1.24,
-        "end": 1.36
-      },
-      {
-        "text": "crush",
-        "start": 1.413,
-        "end": 1.68
-      },
-      {
-        "text": "its",
-        "start": 1.74,
-        "end": 1.92
-      },
-      {
-        "text": "shell",
-        "start": 1.973,
-        "end": 2.24
-      },
-      {
-        "text": "with",
-        "start": 2.272,
-        "end": 2.4
-      },
-      {
-        "text": "flat",
-        "start": 2.464,
-        "end": 2.72
-      },
-      {
-        "text": "back",
-        "start": 2.784,
-        "end": 3.04
-      },
-      {
-        "text": "teeth.",
-        "start": 3.107,
-        "end": 3.52
-      }
-    ]
-  },
-  "Find each shape that blends in.": {
-    "file": "7f6c79a51b53bc6177a49d41.mp3",
-    "words": [
-      {
-        "text": "Find",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.384,
-        "end": 0.64
-      },
-      {
-        "text": "shape",
-        "start": 0.707,
-        "end": 1.04
-      },
-      {
-        "text": "that",
-        "start": 1.072,
-        "end": 1.2
-      },
-      {
-        "text": "blends",
-        "start": 1.257,
-        "end": 1.6
-      },
-      {
-        "text": "in.",
-        "start": 1.707,
-        "end": 2
-      }
-    ]
-  },
-  "Find every clue to reveal the camouflaged wobbegong.": {
-    "file": "d292b96b93a9b4db0a9d01c1.mp3",
-    "words": [
-      {
-        "text": "Find",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "every",
-        "start": 0.307,
-        "end": 0.64
-      },
-      {
-        "text": "clue",
-        "start": 0.72,
-        "end": 1.04
-      },
-      {
-        "text": "to",
-        "start": 1.093,
-        "end": 1.2
-      },
-      {
-        "text": "reveal",
-        "start": 1.257,
-        "end": 1.6
-      },
-      {
-        "text": "the",
-        "start": 1.62,
-        "end": 1.68
-      },
-      {
-        "text": "camouflaged",
-        "start": 1.76,
-        "end": 2.48
-      },
-      {
-        "text": "wobbegong.",
-        "start": 2.56,
-        "end": 3.36
-      }
-    ]
-  },
-  "Find the hidden stingray clues.": {
-    "file": "22ac44f884336e07857f64cc.mp3",
-    "words": [
-      {
-        "text": "Find",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.36,
-        "end": 0.48
-      },
-      {
-        "text": "hidden",
-        "start": 0.526,
-        "end": 0.8
-      },
-      {
-        "text": "stingray",
-        "start": 0.88,
-        "end": 1.44
-      },
-      {
-        "text": "clues.",
-        "start": 1.533,
-        "end": 2.16
       }
     ]
   },
@@ -22734,248 +24399,8 @@
       }
     ]
   },
-  "Follow each clue upward and tag the final silhouette without showing a bite.": {
-    "file": "ebce274f034402abc65e2fbc.mp3",
-    "words": [
-      {
-        "text": "Follow",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "clue",
-        "start": 0.544,
-        "end": 0.8
-      },
-      {
-        "text": "upward",
-        "start": 0.869,
-        "end": 1.28
-      },
-      {
-        "text": "and",
-        "start": 1.32,
-        "end": 1.44
-      },
-      {
-        "text": "tag",
-        "start": 1.54,
-        "end": 1.84
-      },
-      {
-        "text": "the",
-        "start": 1.88,
-        "end": 2
-      },
-      {
-        "text": "final",
-        "start": 2.053,
-        "end": 2.32
-      },
-      {
-        "text": "silhouette",
-        "start": 2.364,
-        "end": 2.8
-      },
-      {
-        "text": "without",
-        "start": 2.84,
-        "end": 3.12
-      },
-      {
-        "text": "showing",
-        "start": 3.17,
-        "end": 3.52
-      },
-      {
-        "text": "a",
-        "start": 3.62,
-        "end": 3.72
-      },
-      {
-        "text": "bite.",
-        "start": 3.76,
-        "end": 4.08
-      }
-    ]
-  },
-  "Follow each electric clue toward hidden prey.": {
-    "file": "f2487ec6fae67d0d24af4f3e.mp3",
-    "words": [
-      {
-        "text": "Follow",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.368,
-        "end": 0.56
-      },
-      {
-        "text": "electric",
-        "start": 0.604,
-        "end": 0.96
-      },
-      {
-        "text": "clue",
-        "start": 1.056,
-        "end": 1.44
-      },
-      {
-        "text": "toward",
-        "start": 1.486,
-        "end": 1.76
-      },
-      {
-        "text": "hidden",
-        "start": 1.806,
-        "end": 2.08
-      },
-      {
-        "text": "prey.",
-        "start": 2.176,
-        "end": 2.64
-      }
-    ]
-  },
-  "Follow each wave upstream as its body adjusts to the fresh water.": {
-    "file": "2a3a2ab177ab82b8fb6a3341.mp3",
-    "words": [
-      {
-        "text": "Follow",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "wave",
-        "start": 0.624,
-        "end": 0.88
-      },
-      {
-        "text": "upstream",
-        "start": 0.951,
-        "end": 1.52
-      },
-      {
-        "text": "as",
-        "start": 1.573,
-        "end": 1.68
-      },
-      {
-        "text": "its",
-        "start": 1.72,
-        "end": 1.84
-      },
-      {
-        "text": "body",
-        "start": 1.92,
-        "end": 2.24
-      },
-      {
-        "text": "adjusts",
-        "start": 2.31,
-        "end": 2.8
-      },
-      {
-        "text": "to",
-        "start": 2.853,
-        "end": 2.96
-      },
-      {
-        "text": "the",
-        "start": 2.98,
-        "end": 3.04
-      },
-      {
-        "text": "fresh",
-        "start": 3.093,
-        "end": 3.36
-      },
-      {
-        "text": "water.",
-        "start": 3.427,
-        "end": 3.92
-      }
-    ]
-  },
-  "Follow smell and vibration clues as the tiger shark searches for food.": {
-    "file": "2e3d48ec12db0ae39ff57924.mp3",
-    "words": [
-      {
-        "text": "Follow",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "smell",
-        "start": 0.4,
-        "end": 0.8
-      },
-      {
-        "text": "and",
-        "start": 0.84,
-        "end": 0.96
-      },
-      {
-        "text": "vibration",
-        "start": 1.016,
-        "end": 1.52
-      },
-      {
-        "text": "clues",
-        "start": 1.613,
-        "end": 2.08
-      },
-      {
-        "text": "as",
-        "start": 2.133,
-        "end": 2.24
-      },
-      {
-        "text": "the",
-        "start": 2.26,
-        "end": 2.32
-      },
-      {
-        "text": "tiger",
-        "start": 2.387,
-        "end": 2.72
-      },
-      {
-        "text": "shark",
-        "start": 2.787,
-        "end": 3.12
-      },
-      {
-        "text": "searches",
-        "start": 3.164,
-        "end": 3.52
-      },
-      {
-        "text": "for",
-        "start": 3.56,
-        "end": 3.68
-      },
-      {
-        "text": "food.",
-        "start": 3.776,
-        "end": 4.32
-      }
-    ]
-  },
-  "Follow the trail to food.": {
-    "file": "be7bba0061022aa8469a8775.mp3",
+  "Follow the thresher shark toward a tight school of fish.": {
+    "file": "06cfd53b8fb4568d8f1dfccc.mp3",
     "words": [
       {
         "text": "Follow",
@@ -22988,19 +24413,44 @@
         "end": 0.4
       },
       {
-        "text": "trail",
-        "start": 0.453,
-        "end": 0.72
+        "text": "thresher",
+        "start": 0.427,
+        "end": 0.8
       },
       {
-        "text": "to",
-        "start": 0.773,
-        "end": 0.88
+        "text": "shark",
+        "start": 0.867,
+        "end": 1.2
       },
       {
-        "text": "food.",
-        "start": 0.976,
+        "text": "toward",
+        "start": 1.234,
         "end": 1.44
+      },
+      {
+        "text": "a",
+        "start": 1.52,
+        "end": 1.6
+      },
+      {
+        "text": "tight",
+        "start": 1.64,
+        "end": 1.84
+      },
+      {
+        "text": "school",
+        "start": 1.897,
+        "end": 2.24
+      },
+      {
+        "text": "of",
+        "start": 2.267,
+        "end": 2.32
+      },
+      {
+        "text": "fish.",
+        "start": 2.4,
+        "end": 2.88
       }
     ]
   },
@@ -23584,66 +25034,6 @@
       }
     ]
   },
-  "Gather the fish into a tight school and watch their movement.": {
-    "file": "ab0217ba1eb2b0e4228c396b.mp3",
-    "words": [
-      {
-        "text": "Gather",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.34,
-        "end": 0.4
-      },
-      {
-        "text": "fish",
-        "start": 0.464,
-        "end": 0.72
-      },
-      {
-        "text": "into",
-        "start": 0.768,
-        "end": 0.96
-      },
-      {
-        "text": "a",
-        "start": 1,
-        "end": 1.04
-      },
-      {
-        "text": "tight",
-        "start": 1.093,
-        "end": 1.36
-      },
-      {
-        "text": "school",
-        "start": 1.429,
-        "end": 1.84
-      },
-      {
-        "text": "and",
-        "start": 1.96,
-        "end": 2.32
-      },
-      {
-        "text": "watch",
-        "start": 2.387,
-        "end": 2.72
-      },
-      {
-        "text": "their",
-        "start": 2.747,
-        "end": 2.88
-      },
-      {
-        "text": "movement.",
-        "start": 2.942,
-        "end": 3.52
-      }
-    ]
-  },
   "Glide across the open ocean with the blue shark.": {
     "file": "d49d8eda36889d34a1852721.mp3",
     "words": [
@@ -23851,6 +25241,61 @@
         "text": "seafloor.",
         "start": 3.573,
         "end": 4.24
+      }
+    ]
+  },
+  "Glide with the whale shark through sparkling clouds of plankton.": {
+    "file": "af87e98a4b9b5d54da24abb2.mp3",
+    "words": [
+      {
+        "text": "Glide",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "with",
+        "start": 0.352,
+        "end": 0.48
+      },
+      {
+        "text": "the",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "text": "whale",
+        "start": 0.68,
+        "end": 0.88
+      },
+      {
+        "text": "shark",
+        "start": 0.933,
+        "end": 1.2
+      },
+      {
+        "text": "through",
+        "start": 1.24,
+        "end": 1.52
+      },
+      {
+        "text": "sparkling",
+        "start": 1.576,
+        "end": 2.08
+      },
+      {
+        "text": "clouds",
+        "start": 2.149,
+        "end": 2.56
+      },
+      {
+        "text": "of",
+        "start": 2.587,
+        "end": 2.64
+      },
+      {
+        "text": "plankton.",
+        "start": 2.707,
+        "end": 3.36
       }
     ]
   },
@@ -25409,116 +26854,6 @@
       }
     ]
   },
-  "Guide the epaulette shark from one tide pool to the next.": {
-    "file": "8761654f5424b6ae82c6e9c6.mp3",
-    "words": [
-      {
-        "text": "Guide",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.34,
-        "end": 0.4
-      },
-      {
-        "text": "epaulette",
-        "start": 0.453,
-        "end": 0.88
-      },
-      {
-        "text": "shark",
-        "start": 0.933,
-        "end": 1.2
-      },
-      {
-        "text": "from",
-        "start": 1.232,
-        "end": 1.36
-      },
-      {
-        "text": "one",
-        "start": 1.44,
-        "end": 1.68
-      },
-      {
-        "text": "tide",
-        "start": 1.744,
-        "end": 2
-      },
-      {
-        "text": "pool",
-        "start": 2.064,
-        "end": 2.32
-      },
-      {
-        "text": "to",
-        "start": 2.347,
-        "end": 2.4
-      },
-      {
-        "text": "the",
-        "start": 2.42,
-        "end": 2.48
-      },
-      {
-        "text": "next.",
-        "start": 2.576,
-        "end": 3.12
-      }
-    ]
-  },
-  "Guide the whale shark through sparkling clouds of plankton.": {
-    "file": "8d366afa0cbf57b2e855606f.mp3",
-    "words": [
-      {
-        "text": "Guide",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "the",
-        "start": 0.34,
-        "end": 0.4
-      },
-      {
-        "text": "whale",
-        "start": 0.453,
-        "end": 0.72
-      },
-      {
-        "text": "shark",
-        "start": 0.773,
-        "end": 1.04
-      },
-      {
-        "text": "through",
-        "start": 1.08,
-        "end": 1.36
-      },
-      {
-        "text": "sparkling",
-        "start": 1.416,
-        "end": 1.92
-      },
-      {
-        "text": "clouds",
-        "start": 2,
-        "end": 2.48
-      },
-      {
-        "text": "of",
-        "start": 2.507,
-        "end": 2.56
-      },
-      {
-        "text": "plankton.",
-        "start": 2.627,
-        "end": 3.36
-      }
-    ]
-  },
   "Gulp! The basking shark filtered plankton with its gill rakers.": {
     "file": "0aa1863bf1fa997b2e0b2349.mp3",
     "words": [
@@ -25849,41 +27184,6 @@
       }
     ]
   },
-  "Help the big shark fill up.": {
-    "file": "c30ba8cb4e4d24607bf90141.mp3",
-    "words": [
-      {
-        "text": "Help",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "the",
-        "start": 0.18,
-        "end": 0.24
-      },
-      {
-        "text": "big",
-        "start": 0.3,
-        "end": 0.48
-      },
-      {
-        "text": "shark",
-        "start": 0.533,
-        "end": 0.8
-      },
-      {
-        "text": "fill",
-        "start": 0.848,
-        "end": 1.04
-      },
-      {
-        "text": "up.",
-        "start": 1.12,
-        "end": 1.44
-      }
-    ]
-  },
   "Help the lemon shark pups stay safe in their mangrove nursery.": {
     "file": "e07b7779cd0fa3a53353e3c4.mp3",
     "words": [
@@ -25944,91 +27244,6 @@
       }
     ]
   },
-  "Help the shark eat its tiny food.": {
-    "file": "b51aae47b5d62b0d4f81f36c.mp3",
-    "words": [
-      {
-        "text": "Help",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "the",
-        "start": 0.2,
-        "end": 0.32
-      },
-      {
-        "text": "shark",
-        "start": 0.387,
-        "end": 0.72
-      },
-      {
-        "text": "eat",
-        "start": 0.76,
-        "end": 0.88
-      },
-      {
-        "text": "its",
-        "start": 0.94,
-        "end": 1.12
-      },
-      {
-        "text": "tiny",
-        "start": 1.184,
-        "end": 1.44
-      },
-      {
-        "text": "food.",
-        "start": 1.536,
-        "end": 2
-      }
-    ]
-  },
-  "Help the shark step to the next pool.": {
-    "file": "b62b69da1b6c57c032cc8b56.mp3",
-    "words": [
-      {
-        "text": "Help",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "the",
-        "start": 0.2,
-        "end": 0.32
-      },
-      {
-        "text": "shark",
-        "start": 0.387,
-        "end": 0.72
-      },
-      {
-        "text": "step",
-        "start": 0.768,
-        "end": 0.96
-      },
-      {
-        "text": "to",
-        "start": 1.013,
-        "end": 1.12
-      },
-      {
-        "text": "the",
-        "start": 1.14,
-        "end": 1.2
-      },
-      {
-        "text": "next",
-        "start": 1.264,
-        "end": 1.52
-      },
-      {
-        "text": "pool.",
-        "start": 1.6,
-        "end": 2
-      }
-    ]
-  },
   "Hen rhymes with pen.": {
     "file": "9ba0afb59def74c60e925c43.mp3",
     "words": [
@@ -26081,31 +27296,6 @@
         "text": "hidden.",
         "start": 1.497,
         "end": 1.92
-      }
-    ]
-  },
-  "Hide under the sand.": {
-    "file": "09c8ce127c694d63a806d16f.mp3",
-    "words": [
-      {
-        "text": "Hide",
-        "start": 0,
-        "end": 0.4
-      },
-      {
-        "text": "under",
-        "start": 0.44,
-        "end": 0.64
-      },
-      {
-        "text": "the",
-        "start": 0.68,
-        "end": 0.8
-      },
-      {
-        "text": "sand.",
-        "start": 0.896,
-        "end": 1.44
       }
     ]
   },
@@ -51994,8 +53184,8 @@
       }
     ]
   },
-  "Look closely at the patterned seafloor for shapes that do not quite belong.": {
-    "file": "e38c8fb4de9af52258ba28dc.mp3",
+  "Look closely at the patterned seafloor where the wobbegong blends in.": {
+    "file": "ecdbadc0002b3e53d27ebf17.mp3",
     "words": [
       {
         "text": "Look",
@@ -52004,63 +53194,53 @@
       },
       {
         "text": "closely",
-        "start": 0.24,
-        "end": 0.8
+        "start": 0.22,
+        "end": 0.64
       },
       {
         "text": "at",
-        "start": 0.827,
-        "end": 0.88
+        "start": 0.693,
+        "end": 0.8
       },
       {
         "text": "the",
-        "start": 0.9,
-        "end": 0.96
+        "start": 0.82,
+        "end": 0.88
       },
       {
         "text": "patterned",
-        "start": 1.02,
-        "end": 1.52
+        "start": 0.93,
+        "end": 1.36
       },
       {
         "text": "seafloor",
-        "start": 1.573,
+        "start": 1.413,
+        "end": 2
+      },
+      {
+        "text": "where",
+        "start": 2.027,
         "end": 2.16
       },
       {
-        "text": "for",
-        "start": 2.2,
-        "end": 2.32
+        "text": "the",
+        "start": 2.18,
+        "end": 2.24
       },
       {
-        "text": "shapes",
-        "start": 2.4,
+        "text": "wobbegong",
+        "start": 2.32,
         "end": 2.88
       },
       {
-        "text": "that",
-        "start": 2.912,
-        "end": 3.04
+        "text": "blends",
+        "start": 2.949,
+        "end": 3.36
       },
       {
-        "text": "do",
-        "start": 3.093,
-        "end": 3.2
-      },
-      {
-        "text": "not",
-        "start": 3.26,
-        "end": 3.44
-      },
-      {
-        "text": "quite",
-        "start": 3.507,
-        "end": 3.84
-      },
-      {
-        "text": "belong.",
-        "start": 3.92,
-        "end": 4.48
+        "text": "in.",
+        "start": 3.467,
+        "end": 3.76
       }
     ]
   },
@@ -52104,41 +53284,6 @@
       }
     ]
   },
-  "Look for a soft green glow.": {
-    "file": "7ea3523afaa5bbe8efd2b816.mp3",
-    "words": [
-      {
-        "text": "Look",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "for",
-        "start": 0.2,
-        "end": 0.32
-      },
-      {
-        "text": "a",
-        "start": 0.4,
-        "end": 0.48
-      },
-      {
-        "text": "soft",
-        "start": 0.56,
-        "end": 0.88
-      },
-      {
-        "text": "green",
-        "start": 0.933,
-        "end": 1.2
-      },
-      {
-        "text": "glow.",
-        "start": 1.296,
-        "end": 1.76
-      }
-    ]
-  },
   "Look for an animal that swims.": {
     "file": "173b62171d00bb95af208c6d.mp3",
     "words": [
@@ -52171,36 +53316,6 @@
         "text": "swims.",
         "start": 0.987,
         "end": 1.6
-      }
-    ]
-  },
-  "Look for each mangrove root.": {
-    "file": "dbfdfa55b3181a590ef01fd3.mp3",
-    "words": [
-      {
-        "text": "Look",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "for",
-        "start": 0.22,
-        "end": 0.4
-      },
-      {
-        "text": "each",
-        "start": 0.464,
-        "end": 0.72
-      },
-      {
-        "text": "mangrove",
-        "start": 0.784,
-        "end": 1.28
-      },
-      {
-        "text": "root.",
-        "start": 1.344,
-        "end": 1.76
       }
     ]
   },
@@ -54841,66 +55956,6 @@
         "text": "long.",
         "start": 4.32,
         "end": 4.8
-      }
-    ]
-  },
-  "Move steadily from clue to clue without wasting the shark's energy.": {
-    "file": "3f0579e314080813b9df7df5.mp3",
-    "words": [
-      {
-        "text": "Move",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "steadily",
-        "start": 0.293,
-        "end": 0.72
-      },
-      {
-        "text": "from",
-        "start": 0.784,
-        "end": 1.04
-      },
-      {
-        "text": "clue",
-        "start": 1.104,
-        "end": 1.36
-      },
-      {
-        "text": "to",
-        "start": 1.413,
-        "end": 1.52
-      },
-      {
-        "text": "clue",
-        "start": 1.616,
-        "end": 2
-      },
-      {
-        "text": "without",
-        "start": 2.07,
-        "end": 2.56
-      },
-      {
-        "text": "wasting",
-        "start": 2.62,
-        "end": 3.04
-      },
-      {
-        "text": "the",
-        "start": 3.06,
-        "end": 3.12
-      },
-      {
-        "text": "shark's",
-        "start": 3.173,
-        "end": 3.52
-      },
-      {
-        "text": "energy.",
-        "start": 3.589,
-        "end": 4.16
       }
     ]
   },
@@ -58884,6 +59939,176 @@
       }
     ]
   },
+  "Read the words to find a safe spot.": {
+    "file": "b193da483a03322d9e305711.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "to",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "find",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "a",
+        "start": 1.16,
+        "end": 1.2
+      },
+      {
+        "text": "safe",
+        "start": 1.264,
+        "end": 1.52
+      },
+      {
+        "text": "spot.",
+        "start": 1.6,
+        "end": 2
+      }
+    ]
+  },
+  "Read the words to find the hidden stingray.": {
+    "file": "4da80700fe56a28de25e83c3.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.747,
+        "end": 0.8
+      },
+      {
+        "text": "find",
+        "start": 0.88,
+        "end": 1.2
+      },
+      {
+        "text": "the",
+        "start": 1.24,
+        "end": 1.36
+      },
+      {
+        "text": "hidden",
+        "start": 1.406,
+        "end": 1.68
+      },
+      {
+        "text": "stingray.",
+        "start": 1.747,
+        "end": 2.64
+      }
+    ]
+  },
+  "Read the words to find the shark.": {
+    "file": "6befdf965639e82c020f9699.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "words",
+        "start": 0.307,
+        "end": 0.64
+      },
+      {
+        "text": "to",
+        "start": 0.667,
+        "end": 0.72
+      },
+      {
+        "text": "find",
+        "start": 0.784,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "shark.",
+        "start": 1.187,
+        "end": 1.68
+      }
+    ]
+  },
+  "Read the words to follow the trail.": {
+    "file": "f664fbdaab5a3fcbed15a242.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.373,
+        "end": 0.64
+      },
+      {
+        "text": "to",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "follow",
+        "start": 0.846,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.14,
+        "end": 1.2
+      },
+      {
+        "text": "trail.",
+        "start": 1.28,
+        "end": 1.84
+      }
+    ]
+  },
   "Read the words to help it.": {
     "file": "9fb108872bfd6a0cc6d57170.mp3",
     "words": [
@@ -58916,6 +60141,91 @@
         "text": "it.",
         "start": 1.12,
         "end": 1.36
+      }
+    ]
+  },
+  "Read the words to help the big shark.": {
+    "file": "70e929d02455d46e99a2a43f.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "help",
+        "start": 0.944,
+        "end": 1.2
+      },
+      {
+        "text": "the",
+        "start": 1.22,
+        "end": 1.28
+      },
+      {
+        "text": "big",
+        "start": 1.36,
+        "end": 1.6
+      },
+      {
+        "text": "shark.",
+        "start": 1.68,
+        "end": 2.16
+      }
+    ]
+  },
+  "Read the words to help the mako.": {
+    "file": "04079beb6a6be24d245ca028.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.747,
+        "end": 0.8
+      },
+      {
+        "text": "help",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "mako.",
+        "start": 1.16,
+        "end": 1.68
       }
     ]
   },
@@ -59046,6 +60356,141 @@
         "text": "shark.",
         "start": 1.587,
         "end": 2.08
+      }
+    ]
+  },
+  "Read the words to help the sawshark.": {
+    "file": "fc0cab5f2ade9d4e32bcca67.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "text": "words",
+        "start": 0.32,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.747,
+        "end": 0.8
+      },
+      {
+        "text": "help",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "the",
+        "start": 1.06,
+        "end": 1.12
+      },
+      {
+        "text": "sawshark.",
+        "start": 1.22,
+        "end": 1.84
+      }
+    ]
+  },
+  "Read the words to help the shark swim on.": {
+    "file": "3c833e7bf1ada899df872791.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.4,
+        "end": 0.8
+      },
+      {
+        "text": "to",
+        "start": 0.827,
+        "end": 0.88
+      },
+      {
+        "text": "help",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.14,
+        "end": 1.2
+      },
+      {
+        "text": "shark",
+        "start": 1.267,
+        "end": 1.6
+      },
+      {
+        "text": "swim",
+        "start": 1.648,
+        "end": 1.84
+      },
+      {
+        "text": "on.",
+        "start": 1.973,
+        "end": 2.32
+      }
+    ]
+  },
+  "Read the words to help the shark walk.": {
+    "file": "94d55533ae0f9d759df77500.mp3",
+    "words": [
+      {
+        "text": "Read",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "words",
+        "start": 0.387,
+        "end": 0.72
+      },
+      {
+        "text": "to",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "text": "help",
+        "start": 0.928,
+        "end": 1.12
+      },
+      {
+        "text": "the",
+        "start": 1.16,
+        "end": 1.28
+      },
+      {
+        "text": "shark",
+        "start": 1.347,
+        "end": 1.68
+      },
+      {
+        "text": "walk.",
+        "start": 1.776,
+        "end": 2.24
       }
     ]
   },
@@ -61964,41 +63409,6 @@
       }
     ]
   },
-  "Save energy while you find food.": {
-    "file": "63b0a15f66f1cc062df86232.mp3",
-    "words": [
-      {
-        "text": "Save",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "energy",
-        "start": 0.229,
-        "end": 0.64
-      },
-      {
-        "text": "while",
-        "start": 0.667,
-        "end": 0.8
-      },
-      {
-        "text": "you",
-        "start": 0.84,
-        "end": 0.96
-      },
-      {
-        "text": "find",
-        "start": 1.024,
-        "end": 1.28
-      },
-      {
-        "text": "food.",
-        "start": 1.376,
-        "end": 1.84
-      }
-    ]
-  },
   "Saving energy at home helps reefs far away.": {
     "file": "a44bdecabf633c4bafa5e366.mp3",
     "words": [
@@ -63756,41 +65166,6 @@
         "text": "see.",
         "start": 1.94,
         "end": 2.4
-      }
-    ]
-  },
-  "Sea snails hide in the cracks.": {
-    "file": "679f2c7540223c30f8e6aea2.mp3",
-    "words": [
-      {
-        "text": "Sea",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "snails",
-        "start": 0.24,
-        "end": 0.72
-      },
-      {
-        "text": "hide",
-        "start": 0.784,
-        "end": 1.04
-      },
-      {
-        "text": "in",
-        "start": 1.067,
-        "end": 1.12
-      },
-      {
-        "text": "the",
-        "start": 1.14,
-        "end": 1.2
-      },
-      {
-        "text": "cracks.",
-        "start": 1.291,
-        "end": 1.92
       }
     ]
   },
@@ -65939,36 +67314,6 @@
       }
     ]
   },
-  "Sniff out the sea urchins.": {
-    "file": "d6d6f2e449419f0ab2da08f6.mp3",
-    "words": [
-      {
-        "text": "Sniff",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "out",
-        "start": 0.22,
-        "end": 0.4
-      },
-      {
-        "text": "the",
-        "start": 0.42,
-        "end": 0.48
-      },
-      {
-        "text": "sea",
-        "start": 0.54,
-        "end": 0.72
-      },
-      {
-        "text": "urchins.",
-        "start": 0.84,
-        "end": 1.44
-      }
-    ]
-  },
   "So few megamouths have been seen that scientists keep a list of every confirmed sighting.": {
     "file": "75025361882c3b258ce681aa.mp3",
     "words": [
@@ -67494,146 +68839,6 @@
       }
     ]
   },
-  "Spot each electric clue.": {
-    "file": "203d88f0e31d16f3defa1c1b.mp3",
-    "words": [
-      {
-        "text": "Spot",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.384,
-        "end": 0.64
-      },
-      {
-        "text": "electric",
-        "start": 0.711,
-        "end": 1.28
-      },
-      {
-        "text": "clue.",
-        "start": 1.376,
-        "end": 1.92
-      }
-    ]
-  },
-  "Spot each shadow above.": {
-    "file": "6f33cf8e25bc7c9efb12ed4a.mp3",
-    "words": [
-      {
-        "text": "Spot",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.384,
-        "end": 0.64
-      },
-      {
-        "text": "shadow",
-        "start": 0.697,
-        "end": 1.04
-      },
-      {
-        "text": "above.",
-        "start": 1.12,
-        "end": 1.6
-      }
-    ]
-  },
-  "Spot each soft glow before it fades into the deep.": {
-    "file": "c0055ac0edf851b78b395374.mp3",
-    "words": [
-      {
-        "text": "Spot",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.368,
-        "end": 0.56
-      },
-      {
-        "text": "soft",
-        "start": 0.656,
-        "end": 1.04
-      },
-      {
-        "text": "glow",
-        "start": 1.12,
-        "end": 1.44
-      },
-      {
-        "text": "before",
-        "start": 1.486,
-        "end": 1.76
-      },
-      {
-        "text": "it",
-        "start": 1.787,
-        "end": 1.84
-      },
-      {
-        "text": "fades",
-        "start": 1.92,
-        "end": 2.32
-      },
-      {
-        "text": "into",
-        "start": 2.352,
-        "end": 2.48
-      },
-      {
-        "text": "the",
-        "start": 2.5,
-        "end": 2.56
-      },
-      {
-        "text": "deep.",
-        "start": 2.64,
-        "end": 3.04
-      }
-    ]
-  },
-  "Spot the crabs in reef cracks.": {
-    "file": "8f0020449a07dc75907a6a71.mp3",
-    "words": [
-      {
-        "text": "Spot",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
-        "end": 0.32
-      },
-      {
-        "text": "crabs",
-        "start": 0.373,
-        "end": 0.8
-      },
-      {
-        "text": "in",
-        "start": 0.853,
-        "end": 0.96
-      },
-      {
-        "text": "reef",
-        "start": 1.024,
-        "end": 1.28
-      },
-      {
-        "text": "cracks.",
-        "start": 1.349,
-        "end": 1.92
-      }
-    ]
-  },
   "Spots match rocks and sand.": {
     "file": "95ce50640e4b049e2a96f313.mp3",
     "words": [
@@ -68194,101 +69399,6 @@
       }
     ]
   },
-  "Start deep below.": {
-    "file": "605a751fd0a3047668470579.mp3",
-    "words": [
-      {
-        "text": "Start",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "deep",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "below.",
-        "start": 0.64,
-        "end": 1.12
-      }
-    ]
-  },
-  "Stay slow and steady.": {
-    "file": "701b3b4c6e1f97ba0b1c3243.mp3",
-    "words": [
-      {
-        "text": "Stay",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "slow",
-        "start": 0.368,
-        "end": 0.88
-      },
-      {
-        "text": "and",
-        "start": 0.94,
-        "end": 1.12
-      },
-      {
-        "text": "steady.",
-        "start": 1.189,
-        "end": 1.68
-      }
-    ]
-  },
-  "Stay very still.": {
-    "file": "a2e88e621479a13b36a42943.mp3",
-    "words": [
-      {
-        "text": "Stay",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "very",
-        "start": 0.224,
-        "end": 0.48
-      },
-      {
-        "text": "still.",
-        "start": 0.56,
-        "end": 1.04
-      }
-    ]
-  },
-  "Steer toward the bright plankton.": {
-    "file": "576796b19a910aa2eb396c1a.mp3",
-    "words": [
-      {
-        "text": "Steer",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "toward",
-        "start": 0.377,
-        "end": 0.72
-      },
-      {
-        "text": "the",
-        "start": 0.76,
-        "end": 0.88
-      },
-      {
-        "text": "bright",
-        "start": 0.937,
-        "end": 1.28
-      },
-      {
-        "text": "plankton.",
-        "start": 1.347,
-        "end": 2.08
-      }
-    ]
-  },
   "Step by step! The epaulette reached the next tide pool.": {
     "file": "b2fa3dbd47c2c9d9ec702c6e.mp3",
     "words": [
@@ -68574,31 +69684,6 @@
       }
     ]
   },
-  "Study the spotted seafloor.": {
-    "file": "4496abd38a323894c1978611.mp3",
-    "words": [
-      {
-        "text": "Study",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
-        "end": 0.32
-      },
-      {
-        "text": "spotted",
-        "start": 0.38,
-        "end": 0.8
-      },
-      {
-        "text": "seafloor.",
-        "start": 0.853,
-        "end": 1.6
-      }
-    ]
-  },
   "Stunned fish are easier to catch.": {
     "file": "8b8919d520b6dad2129e35b0.mp3",
     "words": [
@@ -68726,36 +69811,6 @@
         "text": "day.",
         "start": 2.9,
         "end": 3.36
-      }
-    ]
-  },
-  "Sweep across the sandy floor.": {
-    "file": "be5cd88f57e23f6f8b77c516.mp3",
-    "words": [
-      {
-        "text": "Sweep",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "across",
-        "start": 0.297,
-        "end": 0.64
-      },
-      {
-        "text": "the",
-        "start": 0.68,
-        "end": 0.8
-      },
-      {
-        "text": "sandy",
-        "start": 0.867,
-        "end": 1.2
-      },
-      {
-        "text": "floor.",
-        "start": 1.267,
-        "end": 1.68
       }
     ]
   },
@@ -69164,46 +70219,6 @@
       }
     ]
   },
-  "Swim from salt water to fresh water.": {
-    "file": "ab67e3beba24f6e4a07f088f.mp3",
-    "words": [
-      {
-        "text": "Swim",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "from",
-        "start": 0.368,
-        "end": 0.56
-      },
-      {
-        "text": "salt",
-        "start": 0.624,
-        "end": 0.88
-      },
-      {
-        "text": "water",
-        "start": 0.947,
-        "end": 1.28
-      },
-      {
-        "text": "to",
-        "start": 1.333,
-        "end": 1.44
-      },
-      {
-        "text": "fresh",
-        "start": 1.507,
-        "end": 1.84
-      },
-      {
-        "text": "water.",
-        "start": 1.907,
-        "end": 2.4
-      }
-    ]
-  },
   "Swim low over the bay floor with the leopard shark.": {
     "file": "34ad9e4f59fd0bb9afa9a2f7.mp3",
     "words": [
@@ -69421,766 +70436,6 @@
         "text": "food.",
         "start": 3.52,
         "end": 4
-      }
-    ]
-  },
-  "Tap each electric sparkle.": {
-    "file": "8d04b36b0e31be88f186fe81.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "electric",
-        "start": 0.533,
-        "end": 0.96
-      },
-      {
-        "text": "sparkle.",
-        "start": 1.04,
-        "end": 1.68
-      }
-    ]
-  },
-  "Tap each fish clue.": {
-    "file": "580c3d22ccf185c428461662.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.384,
-        "end": 0.64
-      },
-      {
-        "text": "fish",
-        "start": 0.688,
-        "end": 0.88
-      },
-      {
-        "text": "clue.",
-        "start": 0.96,
-        "end": 1.36
-      }
-    ]
-  },
-  "Tap each fish that swims close.": {
-    "file": "c90eb4a9d931b90714b0fc5e.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "fish",
-        "start": 0.56,
-        "end": 0.88
-      },
-      {
-        "text": "that",
-        "start": 0.896,
-        "end": 0.96
-      },
-      {
-        "text": "swims",
-        "start": 1.04,
-        "end": 1.44
-      },
-      {
-        "text": "close.",
-        "start": 1.52,
-        "end": 2
-      }
-    ]
-  },
-  "Tap each glow you see.": {
-    "file": "e893ac7035300598889b93f5.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.272,
-        "end": 0.4
-      },
-      {
-        "text": "glow",
-        "start": 0.464,
-        "end": 0.72
-      },
-      {
-        "text": "you",
-        "start": 0.78,
-        "end": 0.96
-      },
-      {
-        "text": "see.",
-        "start": 1.06,
-        "end": 1.44
-      }
-    ]
-  },
-  "Tap each mangrove root to find a hiding place.": {
-    "file": "a0f56732112969a9d9fac80c.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "mangrove",
-        "start": 0.624,
-        "end": 1.12
-      },
-      {
-        "text": "root",
-        "start": 1.168,
-        "end": 1.36
-      },
-      {
-        "text": "to",
-        "start": 1.413,
-        "end": 1.52
-      },
-      {
-        "text": "find",
-        "start": 1.568,
-        "end": 1.76
-      },
-      {
-        "text": "a",
-        "start": 1.8,
-        "end": 1.84
-      },
-      {
-        "text": "hiding",
-        "start": 1.886,
-        "end": 2.16
-      },
-      {
-        "text": "place.",
-        "start": 2.24,
-        "end": 2.72
-      }
-    ]
-  },
-  "Tap each reef fish as it darts out from the coral.": {
-    "file": "68eca2ff4bf8bf6c5c247022.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.368,
-        "end": 0.56
-      },
-      {
-        "text": "reef",
-        "start": 0.624,
-        "end": 0.88
-      },
-      {
-        "text": "fish",
-        "start": 0.928,
-        "end": 1.12
-      },
-      {
-        "text": "as",
-        "start": 1.173,
-        "end": 1.28
-      },
-      {
-        "text": "it",
-        "start": 1.333,
-        "end": 1.44
-      },
-      {
-        "text": "darts",
-        "start": 1.48,
-        "end": 1.76
-      },
-      {
-        "text": "out",
-        "start": 1.8,
-        "end": 1.92
-      },
-      {
-        "text": "from",
-        "start": 1.952,
-        "end": 2.08
-      },
-      {
-        "text": "the",
-        "start": 2.12,
-        "end": 2.24
-      },
-      {
-        "text": "coral.",
-        "start": 2.307,
-        "end": 2.72
-      }
-    ]
-  },
-  "Tap each reef fish you see.": {
-    "file": "e5514eb46f934c8c10e7ca5c.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "reef",
-        "start": 0.608,
-        "end": 0.8
-      },
-      {
-        "text": "fish",
-        "start": 0.864,
-        "end": 1.12
-      },
-      {
-        "text": "you",
-        "start": 1.16,
-        "end": 1.28
-      },
-      {
-        "text": "see.",
-        "start": 1.38,
-        "end": 1.76
-      }
-    ]
-  },
-  "Tap each river wave to swim on.": {
-    "file": "af54010cad9114d9d07a4562.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "river",
-        "start": 0.533,
-        "end": 0.8
-      },
-      {
-        "text": "wave",
-        "start": 0.864,
-        "end": 1.12
-      },
-      {
-        "text": "to",
-        "start": 1.173,
-        "end": 1.28
-      },
-      {
-        "text": "swim",
-        "start": 1.344,
-        "end": 1.6
-      },
-      {
-        "text": "on.",
-        "start": 1.707,
-        "end": 2
-      }
-    ]
-  },
-  "Tap each safe wet rock.": {
-    "file": "d4b230707d15a7c1173272d1.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "safe",
-        "start": 0.64,
-        "end": 0.96
-      },
-      {
-        "text": "wet",
-        "start": 1.02,
-        "end": 1.2
-      },
-      {
-        "text": "rock.",
-        "start": 1.28,
-        "end": 1.76
-      }
-    ]
-  },
-  "Tap each sea snail tucked among the coral and sand.": {
-    "file": "baffdaf0227fd38335fb962f.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "sea",
-        "start": 0.62,
-        "end": 0.8
-      },
-      {
-        "text": "snail",
-        "start": 0.853,
-        "end": 1.2
-      },
-      {
-        "text": "tucked",
-        "start": 1.234,
-        "end": 1.44
-      },
-      {
-        "text": "among",
-        "start": 1.48,
-        "end": 1.68
-      },
-      {
-        "text": "the",
-        "start": 1.72,
-        "end": 1.84
-      },
-      {
-        "text": "coral",
-        "start": 1.907,
-        "end": 2.24
-      },
-      {
-        "text": "and",
-        "start": 2.3,
-        "end": 2.48
-      },
-      {
-        "text": "sand.",
-        "start": 2.56,
-        "end": 3.04
-      }
-    ]
-  },
-  "Tap each sea urchin to crunch it.": {
-    "file": "5d4c09792a27865c41ec0e33.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "sea",
-        "start": 0.62,
-        "end": 0.8
-      },
-      {
-        "text": "urchin",
-        "start": 0.88,
-        "end": 1.12
-      },
-      {
-        "text": "to",
-        "start": 1.173,
-        "end": 1.28
-      },
-      {
-        "text": "crunch",
-        "start": 1.326,
-        "end": 1.6
-      },
-      {
-        "text": "it.",
-        "start": 1.653,
-        "end": 1.92
-      }
-    ]
-  },
-  "Tap each shrimp you find.": {
-    "file": "091a778c35486a9cb41aabb5.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "shrimp",
-        "start": 0.526,
-        "end": 0.8
-      },
-      {
-        "text": "you",
-        "start": 0.82,
-        "end": 0.88
-      },
-      {
-        "text": "find.",
-        "start": 0.976,
-        "end": 1.44
-      }
-    ]
-  },
-  "Tap each snail you find.": {
-    "file": "7f46bee83cd9624d5ba1f2a8.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "snail",
-        "start": 0.56,
-        "end": 0.88
-      },
-      {
-        "text": "you",
-        "start": 0.92,
-        "end": 1.04
-      },
-      {
-        "text": "find.",
-        "start": 1.136,
-        "end": 1.68
-      }
-    ]
-  },
-  "Tap each snowy scent clue.": {
-    "file": "41a15f39f8dcfc765076af84.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "each",
-        "start": 0.224,
-        "end": 0.48
-      },
-      {
-        "text": "snowy",
-        "start": 0.573,
-        "end": 1.04
-      },
-      {
-        "text": "scent",
-        "start": 1.107,
-        "end": 1.44
-      },
-      {
-        "text": "clue.",
-        "start": 1.52,
-        "end": 1.92
-      }
-    ]
-  },
-  "Tap each sparkling cloud.": {
-    "file": "f64bd6b40ccc6155212f49fd.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "sparkling",
-        "start": 0.624,
-        "end": 1.2
-      },
-      {
-        "text": "cloud.",
-        "start": 1.293,
-        "end": 1.84
-      }
-    ]
-  },
-  "Tap each sparkling patch.": {
-    "file": "4f30879aaecc63e97480de9e.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.304,
-        "end": 0.56
-      },
-      {
-        "text": "sparkling",
-        "start": 0.608,
-        "end": 1.04
-      },
-      {
-        "text": "patch.",
-        "start": 1.133,
-        "end": 1.68
-      }
-    ]
-  },
-  "Tap each speedy tuna to help the mako catch up.": {
-    "file": "a272d57a406310b5f8b2c9ad.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.32
-      },
-      {
-        "text": "each",
-        "start": 0.384,
-        "end": 0.64
-      },
-      {
-        "text": "speedy",
-        "start": 0.697,
-        "end": 1.04
-      },
-      {
-        "text": "tuna",
-        "start": 1.12,
-        "end": 1.44
-      },
-      {
-        "text": "to",
-        "start": 1.493,
-        "end": 1.6
-      },
-      {
-        "text": "help",
-        "start": 1.632,
-        "end": 1.76
-      },
-      {
-        "text": "the",
-        "start": 1.8,
-        "end": 1.92
-      },
-      {
-        "text": "mako",
-        "start": 1.96,
-        "end": 2.32
-      },
-      {
-        "text": "catch",
-        "start": 2.373,
-        "end": 2.64
-      },
-      {
-        "text": "up.",
-        "start": 2.72,
-        "end": 2.96
-      }
-    ]
-  },
-  "Tap each wavy scent clue.": {
-    "file": "3447544131b85d359e26970c.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "each",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "wavy",
-        "start": 0.52,
-        "end": 0.88
-      },
-      {
-        "text": "scent",
-        "start": 0.947,
-        "end": 1.28
-      },
-      {
-        "text": "clue.",
-        "start": 1.376,
-        "end": 1.92
-      }
-    ]
-  },
-  "Tap it before it zooms away.": {
-    "file": "d1ecd5fb1e8f7c85a683e3fd.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "it",
-        "start": 0.293,
-        "end": 0.4
-      },
-      {
-        "text": "before",
-        "start": 0.446,
-        "end": 0.72
-      },
-      {
-        "text": "it",
-        "start": 0.747,
-        "end": 0.8
-      },
-      {
-        "text": "zooms",
-        "start": 0.88,
-        "end": 1.4
-      },
-      {
-        "text": "away.",
-        "start": 1.44,
-        "end": 1.76
-      }
-    ]
-  },
-  "Tap it to find a safe spot.": {
-    "file": "739ab036060b6164924fbb6b.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "it",
-        "start": 0.293,
-        "end": 0.4
-      },
-      {
-        "text": "to",
-        "start": 0.427,
-        "end": 0.48
-      },
-      {
-        "text": "find",
-        "start": 0.528,
-        "end": 0.72
-      },
-      {
-        "text": "a",
-        "start": 0.76,
-        "end": 0.8
-      },
-      {
-        "text": "safe",
-        "start": 0.848,
-        "end": 1.04
-      },
-      {
-        "text": "spot.",
-        "start": 1.12,
-        "end": 1.6
-      }
-    ]
-  },
-  "Tap the clues to build speed.": {
-    "file": "24abab80b5742f24a40b4e4b.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
-        "end": 0.32
-      },
-      {
-        "text": "clues",
-        "start": 0.4,
-        "end": 0.8
-      },
-      {
-        "text": "to",
-        "start": 0.853,
-        "end": 0.96
-      },
-      {
-        "text": "build",
-        "start": 1,
-        "end": 1.2
-      },
-      {
-        "text": "speed.",
-        "start": 1.28,
-        "end": 1.84
       }
     ]
   },
@@ -70481,31 +70736,6 @@
         "text": "9.",
         "start": 0.8,
         "end": 1.28
-      }
-    ]
-  },
-  "Tap the hidden clues.": {
-    "file": "3754d7991a5e0894a6f4db37.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.28,
-        "end": 0.4
-      },
-      {
-        "text": "hidden",
-        "start": 0.446,
-        "end": 0.72
-      },
-      {
-        "text": "clues.",
-        "start": 0.813,
-        "end": 1.36
       }
     ]
   },
@@ -74039,71 +74269,6 @@
       }
     ]
   },
-  "Tap to slurp each one.": {
-    "file": "0bcb6998cdcfe7771a5b300b.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "to",
-        "start": 0.293,
-        "end": 0.4
-      },
-      {
-        "text": "slurp",
-        "start": 0.448,
-        "end": 0.72
-      },
-      {
-        "text": "each",
-        "start": 0.768,
-        "end": 0.96
-      },
-      {
-        "text": "one.",
-        "start": 1.04,
-        "end": 1.44
-      }
-    ]
-  },
-  "Tap when the fish swims close.": {
-    "file": "c4ca3f2ac8ae5207919e4d0c.mp3",
-    "words": [
-      {
-        "text": "Tap",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "when",
-        "start": 0.272,
-        "end": 0.4
-      },
-      {
-        "text": "the",
-        "start": 0.42,
-        "end": 0.48
-      },
-      {
-        "text": "fish",
-        "start": 0.544,
-        "end": 0.8
-      },
-      {
-        "text": "swims",
-        "start": 0.867,
-        "end": 1.2
-      },
-      {
-        "text": "close.",
-        "start": 1.28,
-        "end": 1.84
-      }
-    ]
-  },
   "Tap, tap in the mud. It has it!": {
     "file": "4a2ac1d4c489a176a6aab05c.mp3",
     "words": [
@@ -74859,6 +75024,46 @@
       }
     ]
   },
+  "The Greenland shark is slow and steady.": {
+    "file": "774c16e179f326fc721d421c.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "Greenland",
+        "start": 0.128,
+        "end": 0.56
+      },
+      {
+        "text": "shark",
+        "start": 0.627,
+        "end": 0.96
+      },
+      {
+        "text": "is",
+        "start": 1.04,
+        "end": 1.2
+      },
+      {
+        "text": "slow",
+        "start": 1.312,
+        "end": 1.76
+      },
+      {
+        "text": "and",
+        "start": 1.82,
+        "end": 2
+      },
+      {
+        "text": "steady.",
+        "start": 2.069,
+        "end": 2.56
+      }
+    ]
+  },
   "The Greenland shark moves slowly through cold, deep Arctic water.": {
     "file": "0f5062f9725f60361a37051b.mp3",
     "words": [
@@ -75206,6 +75411,46 @@
         "text": "water.",
         "start": 3.747,
         "end": 4.24
+      }
+    ]
+  },
+  "The angel shark hides under the sand.": {
+    "file": "66b6b924e2f1d9aa7d014b45.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "angel",
+        "start": 0.147,
+        "end": 0.48
+      },
+      {
+        "text": "shark",
+        "start": 0.547,
+        "end": 0.88
+      },
+      {
+        "text": "hides",
+        "start": 0.96,
+        "end": 1.36
+      },
+      {
+        "text": "under",
+        "start": 1.4,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "sand.",
+        "start": 1.776,
+        "end": 2.32
       }
     ]
   },
@@ -78149,6 +78394,41 @@
       }
     ]
   },
+  "The great white starts deep below.": {
+    "file": "f5c775cd1195793db9cd7f68.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "great",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "white",
+        "start": 0.453,
+        "end": 0.72
+      },
+      {
+        "text": "starts",
+        "start": 0.789,
+        "end": 1.2
+      },
+      {
+        "text": "deep",
+        "start": 1.248,
+        "end": 1.44
+      },
+      {
+        "text": "below.",
+        "start": 1.52,
+        "end": 2
+      }
+    ]
+  },
   "The hammer-shaped head is called a cephalofoil.": {
     "file": "920362a6fc97e36529707fa5.mp3",
     "words": [
@@ -78251,6 +78531,41 @@
         "text": "surface.",
         "start": 4.16,
         "end": 4.8
+      }
+    ]
+  },
+  "The hammerhead sweeps over the sand.": {
+    "file": "6ae2485afd9e49daf9b9a0b9.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "hammerhead",
+        "start": 0.126,
+        "end": 0.56
+      },
+      {
+        "text": "sweeps",
+        "start": 0.617,
+        "end": 0.96
+      },
+      {
+        "text": "over",
+        "start": 1.008,
+        "end": 1.2
+      },
+      {
+        "text": "the",
+        "start": 1.24,
+        "end": 1.36
+      },
+      {
+        "text": "sand.",
+        "start": 1.44,
+        "end": 1.92
       }
     ]
   },
@@ -79206,6 +79521,46 @@
         "text": "day.",
         "start": 3.04,
         "end": 3.44
+      }
+    ]
+  },
+  "The nurse shark searches the night reef.": {
+    "file": "b06304e1b114c75170220272.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "nurse",
+        "start": 0.147,
+        "end": 0.48
+      },
+      {
+        "text": "shark",
+        "start": 0.547,
+        "end": 0.88
+      },
+      {
+        "text": "searches",
+        "start": 0.933,
+        "end": 1.36
+      },
+      {
+        "text": "the",
+        "start": 1.4,
+        "end": 1.52
+      },
+      {
+        "text": "night",
+        "start": 1.56,
+        "end": 1.76
+      },
+      {
+        "text": "reef.",
+        "start": 1.84,
+        "end": 2.24
       }
     ]
   },
@@ -82904,6 +83259,46 @@
       }
     ]
   },
+  "The thresher finds a school of fish.": {
+    "file": "89bafd8341fc5bba367e18b9.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "thresher",
+        "start": 0.107,
+        "end": 0.48
+      },
+      {
+        "text": "finds",
+        "start": 0.547,
+        "end": 0.88
+      },
+      {
+        "text": "a",
+        "start": 0.92,
+        "end": 0.96
+      },
+      {
+        "text": "school",
+        "start": 1.006,
+        "end": 1.28
+      },
+      {
+        "text": "of",
+        "start": 1.307,
+        "end": 1.36
+      },
+      {
+        "text": "fish.",
+        "start": 1.44,
+        "end": 1.92
+      }
+    ]
+  },
   "The thresher shark carries an upper tail lobe nearly as long as its body.": {
     "file": "e7261de627046fe092bf7793.mp3",
     "words": [
@@ -83819,6 +84214,41 @@
       }
     ]
   },
+  "The whale shark looks for plankton.": {
+    "file": "bcb8bd6fc8e2f0ba67dde08a.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "whale",
+        "start": 0.133,
+        "end": 0.4
+      },
+      {
+        "text": "shark",
+        "start": 0.467,
+        "end": 0.8
+      },
+      {
+        "text": "looks",
+        "start": 0.84,
+        "end": 1.04
+      },
+      {
+        "text": "for",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "plankton.",
+        "start": 1.267,
+        "end": 1.92
+      }
+    ]
+  },
   "The whale shark's special power is filter feeding.": {
     "file": "dbae2e1dcf9861545b71c613.mp3",
     "words": [
@@ -84011,6 +84441,41 @@
         "text": "sensors.",
         "start": 2.24,
         "end": 2.96
+      }
+    ]
+  },
+  "The wobbegong hides on the seafloor.": {
+    "file": "57edffeab33b6e3be736e685.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "wobbegong",
+        "start": 0.16,
+        "end": 0.72
+      },
+      {
+        "text": "hides",
+        "start": 0.787,
+        "end": 1.12
+      },
+      {
+        "text": "on",
+        "start": 1.173,
+        "end": 1.28
+      },
+      {
+        "text": "the",
+        "start": 1.3,
+        "end": 1.36
+      },
+      {
+        "text": "seafloor.",
+        "start": 1.413,
+        "end": 2.08
       }
     ]
   },
@@ -94244,66 +94709,6 @@
       }
     ]
   },
-  "Time the thresher's long tail strike when the school is together.": {
-    "file": "ba0bcedbf982a40c5c67a38a.mp3",
-    "words": [
-      {
-        "text": "Time",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.26,
-        "end": 0.32
-      },
-      {
-        "text": "thresher's",
-        "start": 0.373,
-        "end": 0.88
-      },
-      {
-        "text": "long",
-        "start": 0.928,
-        "end": 1.12
-      },
-      {
-        "text": "tail",
-        "start": 1.2,
-        "end": 1.52
-      },
-      {
-        "text": "strike",
-        "start": 1.589,
-        "end": 2
-      },
-      {
-        "text": "when",
-        "start": 2.032,
-        "end": 2.16
-      },
-      {
-        "text": "the",
-        "start": 2.18,
-        "end": 2.24
-      },
-      {
-        "text": "school",
-        "start": 2.286,
-        "end": 2.56
-      },
-      {
-        "text": "is",
-        "start": 2.613,
-        "end": 2.72
-      },
-      {
-        "text": "together.",
-        "start": 2.773,
-        "end": 3.28
-      }
-    ]
-  },
   "Tiny animals live between the rocks.": {
     "file": "0c1986c64043a729fd445f5c.mp3",
     "words": [
@@ -95759,111 +96164,6 @@
       }
     ]
   },
-  "Use its barbels to find each hidden shrimp, then tap to sweep the saw.": {
-    "file": "7836b340130ef3254325b616.mp3",
-    "words": [
-      {
-        "text": "Use",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "its",
-        "start": 0.22,
-        "end": 0.4
-      },
-      {
-        "text": "barbels",
-        "start": 0.44,
-        "end": 0.88
-      },
-      {
-        "text": "to",
-        "start": 0.907,
-        "end": 0.96
-      },
-      {
-        "text": "find",
-        "start": 1.024,
-        "end": 1.28
-      },
-      {
-        "text": "each",
-        "start": 1.344,
-        "end": 1.6
-      },
-      {
-        "text": "hidden",
-        "start": 1.646,
-        "end": 1.92
-      },
-      {
-        "text": "shrimp,",
-        "start": 1.989,
-        "end": 2.72
-      },
-      {
-        "text": "then",
-        "start": 2.768,
-        "end": 2.96
-      },
-      {
-        "text": "tap",
-        "start": 3.04,
-        "end": 3.28
-      },
-      {
-        "text": "to",
-        "start": 3.333,
-        "end": 3.44
-      },
-      {
-        "text": "sweep",
-        "start": 3.493,
-        "end": 3.76
-      },
-      {
-        "text": "the",
-        "start": 3.78,
-        "end": 3.84
-      },
-      {
-        "text": "saw.",
-        "start": 3.94,
-        "end": 4.4
-      }
-    ]
-  },
-  "Use the barbels to search.": {
-    "file": "df86e143a2214184f4623b20.mp3",
-    "words": [
-      {
-        "text": "Use",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "the",
-        "start": 0.28,
-        "end": 0.4
-      },
-      {
-        "text": "barbels",
-        "start": 0.44,
-        "end": 0.8
-      },
-      {
-        "text": "to",
-        "start": 0.853,
-        "end": 0.96
-      },
-      {
-        "text": "search.",
-        "start": 1.017,
-        "end": 1.52
-      }
-    ]
-  },
   "Use the goblin shark's snout to sense prey in darkness.": {
     "file": "44de4e74b98fe15a0d4055b8.mp3",
     "words": [
@@ -96394,101 +96694,6 @@
       }
     ]
   },
-  "Wait for fish to school together.": {
-    "file": "59abc8fbadf80e485af42c01.mp3",
-    "words": [
-      {
-        "text": "Wait",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "for",
-        "start": 0.22,
-        "end": 0.4
-      },
-      {
-        "text": "fish",
-        "start": 0.464,
-        "end": 0.72
-      },
-      {
-        "text": "to",
-        "start": 0.773,
-        "end": 0.88
-      },
-      {
-        "text": "school",
-        "start": 0.926,
-        "end": 1.2
-      },
-      {
-        "text": "together.",
-        "start": 1.244,
-        "end": 1.76
-      }
-    ]
-  },
-  "Wait until each fish is close, then trigger the springing jaws.": {
-    "file": "b207628bce56e114f7626c26.mp3",
-    "words": [
-      {
-        "text": "Wait",
-        "start": 0,
-        "end": 0.16
-      },
-      {
-        "text": "until",
-        "start": 0.213,
-        "end": 0.48
-      },
-      {
-        "text": "each",
-        "start": 0.528,
-        "end": 0.72
-      },
-      {
-        "text": "fish",
-        "start": 0.784,
-        "end": 1.04
-      },
-      {
-        "text": "is",
-        "start": 1.093,
-        "end": 1.2
-      },
-      {
-        "text": "close,",
-        "start": 1.28,
-        "end": 2
-      },
-      {
-        "text": "then",
-        "start": 2.032,
-        "end": 2.16
-      },
-      {
-        "text": "trigger",
-        "start": 2.21,
-        "end": 2.56
-      },
-      {
-        "text": "the",
-        "start": 2.58,
-        "end": 2.64
-      },
-      {
-        "text": "springing",
-        "start": 2.697,
-        "end": 3.12
-      },
-      {
-        "text": "jaws.",
-        "start": 3.232,
-        "end": 3.76
-      }
-    ]
-  },
   "Warm muscles help it swim fast in cold seas.": {
     "file": "04b1a72848f0ae9ae553e012.mp3",
     "words": [
@@ -96674,8 +96879,8 @@
       }
     ]
   },
-  "Watch for each speedy fish.": {
-    "file": "8cc6ec6d214b92881554dc8c.mp3",
+  "Watch the bright surface for fish-shaped shadows.": {
+    "file": "f75cccd4d42160a1ad6a4189.mp3",
     "words": [
       {
         "text": "Watch",
@@ -96683,99 +96888,34 @@
         "end": 0.32
       },
       {
-        "text": "for",
-        "start": 0.36,
-        "end": 0.48
-      },
-      {
-        "text": "each",
-        "start": 0.528,
-        "end": 0.72
-      },
-      {
-        "text": "speedy",
-        "start": 0.789,
-        "end": 1.2
-      },
-      {
-        "text": "fish.",
-        "start": 1.264,
-        "end": 1.76
-      }
-    ]
-  },
-  "Watch the bright surface for prey-shaped silhouettes.": {
-    "file": "258309fd748a4bd3987d3eec.mp3",
-    "words": [
-      {
-        "text": "Watch",
-        "start": 0,
-        "end": 0.24
-      },
-      {
         "text": "the",
-        "start": 0.28,
+        "start": 0.34,
         "end": 0.4
       },
       {
         "text": "bright",
-        "start": 0.434,
-        "end": 0.64
+        "start": 0.446,
+        "end": 0.72
       },
       {
         "text": "surface",
-        "start": 0.7,
-        "end": 1.12
+        "start": 0.78,
+        "end": 1.2
       },
       {
         "text": "for",
-        "start": 1.16,
-        "end": 1.28
+        "start": 1.24,
+        "end": 1.36
       },
       {
-        "text": "prey-shaped",
-        "start": 1.36,
+        "text": "fish-shaped",
+        "start": 1.44,
         "end": 2.08
       },
       {
-        "text": "silhouettes.",
-        "start": 2.14,
-        "end": 2.96
-      }
-    ]
-  },
-  "Watch them dart from the coral.": {
-    "file": "ab457ccfdc61be704c963354.mp3",
-    "words": [
-      {
-        "text": "Watch",
-        "start": 0,
-        "end": 0.24
-      },
-      {
-        "text": "them",
-        "start": 0.288,
-        "end": 0.48
-      },
-      {
-        "text": "dart",
-        "start": 0.56,
-        "end": 0.88
-      },
-      {
-        "text": "from",
-        "start": 0.912,
-        "end": 1.04
-      },
-      {
-        "text": "the",
-        "start": 1.06,
-        "end": 1.12
-      },
-      {
-        "text": "coral.",
-        "start": 1.213,
-        "end": 1.76
+        "text": "shadows.",
+        "start": 2.16,
+        "end": 2.88
       }
     ]
   },
@@ -104731,56 +104871,6 @@
         "text": "mouth?",
         "start": 0.867,
         "end": 1.36
-      }
-    ]
-  },
-  "When a fish swims close overhead, tap to lunge.": {
-    "file": "d36e14387d32c906e156b46e.mp3",
-    "words": [
-      {
-        "text": "When",
-        "start": 0,
-        "end": 0.08
-      },
-      {
-        "text": "a",
-        "start": 0.12,
-        "end": 0.16
-      },
-      {
-        "text": "fish",
-        "start": 0.224,
-        "end": 0.48
-      },
-      {
-        "text": "swims",
-        "start": 0.547,
-        "end": 0.88
-      },
-      {
-        "text": "close",
-        "start": 0.947,
-        "end": 1.28
-      },
-      {
-        "text": "overhead,",
-        "start": 1.342,
-        "end": 2.24
-      },
-      {
-        "text": "tap",
-        "start": 2.32,
-        "end": 2.56
-      },
-      {
-        "text": "to",
-        "start": 2.64,
-        "end": 2.8
-      },
-      {
-        "text": "lunge.",
-        "start": 2.88,
-        "end": 3.44
       }
     ]
   },

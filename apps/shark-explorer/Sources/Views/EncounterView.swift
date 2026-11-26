@@ -4,7 +4,7 @@ import LearningUI
 import Narration
 
 struct EncounterView: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     @Environment(GameStore.self) private var game
     @Environment(NarrationCoordinator.self) private var narration
     @Environment(FeedbackPlayer.self) private var feedback
@@ -13,7 +13,7 @@ struct EncounterView: View {
     @State private var toast: (symbol: String, text: String)?
     @State private var habitat: HabitatScene
 
-    init(shark: SharkDefinition) {
+    init(shark: AnimalDefinition) {
         self.shark = shark
         _habitat = State(initialValue: HabitatScene(shark: shark, size: CGSize(width: 700, height: 350)))
     }
@@ -50,7 +50,7 @@ struct EncounterView: View {
 
                     VStack(spacing: 14) {
                         Button { sheet = .discover } label: {
-                            BigFeatureLabel(symbol: "sparkles", title: "Discover", subtitle: "Meet this shark", color: shark.tint)
+                            BigFeatureLabel(symbol: "sparkles", title: "Discover", subtitle: "Meet this \(shark.kindInfo.noun)", color: shark.tint)
                         }
                         .accessibilityIdentifier("discover")
 
@@ -145,7 +145,7 @@ enum EncounterSheet: Identifiable {
 }
 
 private struct NarrationSheet: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     let active: EncounterSheet
     let onDone: () -> Void
     @Environment(GameStore.self) private var game

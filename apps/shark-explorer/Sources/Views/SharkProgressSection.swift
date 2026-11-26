@@ -13,7 +13,7 @@ struct SharkProgressSection: View {
         let quiz = game.quizTally()
         VStack(alignment: .leading, spacing: 12) {
             Label("Progress", systemImage: "chart.bar.fill").font(.kidHeadline)
-            Text("\(game.completedCount) of \(catalog.sharks.count) sharks completed • \(game.collectedWords.count) of \(catalog.vocabulary.count) Ocean Words collected • Quiz: \(Self.accuracy(firstTry: quiz.firstTry, retried: quiz.retried))")
+            Text("\(game.completedCount) of \(catalog.animals.count) sharks completed • \(game.collectedWords.count) of \(catalog.vocabulary.count) Ocean Words collected • Quiz: \(Self.accuracy(firstTry: quiz.firstTry, retried: quiz.retried))")
             let numbers = game.roundTally(for: .math), words = game.roundTally(for: .words)
             Text("Mission rounds right first try • Numbers: \(Self.accuracy(firstTry: numbers.firstTry, retried: numbers.retried)) • Reading words: \(Self.accuracy(firstTry: words.firstTry, retried: words.retried))")
             Grid(alignment: .leading, horizontalSpacing: 28, verticalSpacing: 10) {
@@ -26,7 +26,7 @@ struct SharkProgressSection: View {
                 .font(.kidLabel)
                 .foregroundStyle(theme.mutedInk)
                 Divider().overlay(.white.opacity(0.3))
-                ForEach(catalog.sharks) { shark in
+                ForEach(catalog.animals) { shark in
                     let tally = game.quizTally(for: shark)
                     GridRow {
                         Text(shark.name).fontWeight(.bold)
@@ -57,7 +57,7 @@ struct SharkProgressSection: View {
         .accessibilityIdentifier("parent-progress")
     }
 
-    private func status(of shark: SharkDefinition) -> String {
+    private func status(of shark: AnimalDefinition) -> String {
         if game.completedSharks.contains(shark.id) { return "Completed, \(game.stars(for: shark)) of \(MissionChallenges.maxLevel) stars" }
         return game.isUnlocked(shark) ? "Unlocked" : "Locked"
     }
@@ -69,7 +69,7 @@ struct SharkProgressSection: View {
     }
 
     /// A plain note when a shark's questions often needed another try.
-    static func note(for shark: SharkDefinition, firstTry: Int, retried: Int) -> String? {
+    static func note(for shark: AnimalDefinition, firstTry: Int, retried: Int) -> String? {
         guard firstTry + retried >= 3, retried > firstTry else { return nil }
         return "Henry often needed a second try on the \(shark.name) questions. Re-reading its topics together can help."
     }

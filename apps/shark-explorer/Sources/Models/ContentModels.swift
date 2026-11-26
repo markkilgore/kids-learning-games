@@ -4,18 +4,46 @@ import LearningEngine
 import LearningUI
 
 struct GameCatalog: Codable {
+    /// The catalog file still calls the animals "sharks"; that key stays so older tools keep reading it.
+    enum CodingKeys: String, CodingKey {
+        case schemaVersion, vocabulary, expansions, maps
+        case animals = "sharks"
+    }
+
     let schemaVersion: Int
-    let sharks: [SharkDefinition]
+    /// Every animal on the map. All are sharks today; `AnimalDefinition.kind` says otherwise when that changes.
+    let animals: [AnimalDefinition]
     let vocabulary: [VocabularyDefinition]
-    let expansions: [SharkExpansion]?
+    let expansions: [AnimalExpansion]?
     /// The pages of the map, swiped between. Oceans today; other worlds (prehistoric seas, dinosaurs) can be added as pages.
     var maps: [MapPage]?
 
     var mapPages: [MapPage] { maps ?? [MapPage(id: "ocean", name: "Ocean", symbol: "map.fill")] }
 
-    func sharks(on page: MapPage) -> [SharkDefinition] {
-        sharks.filter { ($0.map ?? mapPages[0].id) == page.id }
+    /// What to call the animals in general: "shark" while they all are, "animal" once kinds are mixed.
+    var commonKind: AnimalKind {
+        let kinds = Set(animals.map(\.kindInfo))
+        return kinds.count == 1 ? kinds.first ?? .shark : .mixed
     }
+
+    func animals(on page: MapPage) -> [AnimalDefinition] {
+        animals.filter { ($0.map ?? mapPages[0].id) == page.id }
+    }
+}
+
+/// The words used for a kind of animal in child-facing text. Add an entry here (and its recordings; see the
+/// content guide) before putting a new kind in the catalog.
+struct AnimalKind: Hashable {
+    let id: String
+    let noun: String
+    let plural: String
+
+    /// "a shark", "an animal".
+    var withArticle: String { ("aeiou".contains(noun.prefix(1)) ? "an " : "a ") + noun }
+
+    static let shark = AnimalKind(id: "shark", noun: "shark", plural: "sharks")
+    static let mixed = AnimalKind(id: "animal", noun: "animal", plural: "animals")
+    static let all = [shark]
 }
 
 struct MapPage: Codable, Identifiable, Hashable {
@@ -25,14 +53,14 @@ struct MapPage: Codable, Identifiable, Hashable {
     let symbol: String
 }
 
-struct SharkExpansion: Codable, Hashable {
+struct AnimalExpansion: Codable, Hashable {
     let sharkID: String
     let topics: [ExploreTopic]
     let questions: [QuestionDefinition]
     let sourceURLs: [String]
 }
 
-struct SharkDefinition: Codable, Identifiable, Hashable {
+struct AnimalDefinition: Codable, Identifiable, Hashable {
     let id: String
     let name: String
     let scientificName: String
@@ -50,8 +78,12 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
     var unlockStars: Int?
     /// Super stars (a shark's fourth and fifth) needed across all sharks before this one appears.
     var unlockSuperStars: Int?
-    /// The map page this shark is on; `mapX` and `mapY` are positions on that page.
+    /// The map page this animal is on; `mapX` and `mapY` are positions on that page.
     var map: String?
+    /// What kind of animal this is, an `AnimalKind` id. Left out of the catalog for sharks.
+    var kind: String?
+
+    var kindInfo: AnimalKind { AnimalKind.all.first { $0.id == kind } ?? .shark }
     let discover: NarrativePair
     let topics: [ExploreTopic]
     let traits: [TraitDefinition]
@@ -63,9 +95,9 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
 
     var tint: Color { Color(hex: color) }
 
-    func expanded(with expansion: SharkExpansion?) -> SharkDefinition {
+    func expanded(with expansion: AnimalExpansion?) -> AnimalDefinition {
         guard let expansion else { return self }
-        return SharkDefinition(
+        return AnimalDefinition(
             id: id,
             name: name,
             scientificName: scientificName,
@@ -82,6 +114,7 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
             unlockStars: unlockStars,
             unlockSuperStars: unlockSuperStars,
             map: map,
+            kind: kind,
             discover: discover,
             topics: topics + expansion.topics,
             traits: traits,

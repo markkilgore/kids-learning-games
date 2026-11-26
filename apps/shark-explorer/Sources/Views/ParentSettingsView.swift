@@ -45,7 +45,7 @@ struct ParentSettingsView: View {
                     }
 
                     section("Species image credits", systemImage: "photo.fill") {
-                        ForEach(ContentStore.shared.catalog.sharks) { shark in
+                        ForEach(ContentStore.shared.catalog.animals) { shark in
                             if let url = URL(string: shark.imageSourceURL) {
                                 Link(destination: url) {
                                     Text("\(shark.name) — \(shark.imageAuthor) • \(shark.imageLicense)")

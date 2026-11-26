@@ -61,7 +61,7 @@ struct RootView: View {
         case .map:
             OceanMapView()
         case .encounter(let sharkID):
-            if let shark = ContentStore.shared.catalog.sharks.first(where: { $0.id == sharkID }) {
+            if let shark = ContentStore.shared.catalog.animals.first(where: { $0.id == sharkID }) {
                 EncounterView(shark: shark)
             } else {
                 OceanMapView()

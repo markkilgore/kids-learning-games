@@ -8,14 +8,14 @@ struct OceanMapView: View {
     @Environment(NarrationCoordinator.self) private var narration
     @Environment(FeedbackPlayer.self) private var feedback
     @Environment(\.kidTheme) private var theme
-    @State private var lockedHint: SharkDefinition?
+    @State private var lockedHint: AnimalDefinition?
     /// The ocean on screen; remembered so the map reopens where it was left.
     @AppStorage("map.page") private var pageID = ""
     private let catalog = ContentStore.shared.catalog
 
     var body: some View {
         VStack(spacing: 12) {
-            KidTopBar(SharkAppConfiguration.value.identity.childFacingName, subtitle: "Tap a shark to dive in") {
+            KidTopBar(SharkAppConfiguration.value.identity.childFacingName, subtitle: "Tap \(catalog.commonKind.withArticle) to dive in") {
                 WeeklyLessonsButton(resource: "shark-weeks", namespace: SharkAppConfiguration.value.storageNamespace, guide: "🦈", color: theme.primary)
                 Button { game.showBooks() } label: { Label("My Books", systemImage: "books.vertical.fill") }
                     .buttonStyle(KidButtonStyle(.soft, compact: true))
@@ -37,7 +37,7 @@ struct OceanMapView: View {
                         ZStack {
                             OceanMapArt(page: page).padding(.horizontal, 24).padding(.vertical, 6)
 
-                            ForEach(catalog.sharks(on: page)) { shark in
+                            ForEach(catalog.animals(on: page)) { shark in
                                 SharkMapNode(
                                     shark: shark,
                                     unlocked: game.isUnlocked(shark),
@@ -58,10 +58,10 @@ struct OceanMapView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
 
             HStack(spacing: 18) {
-                Label("\(game.completedCount) of \(catalog.sharks.count) shark pages", systemImage: "book.closed.fill")
+                Label("\(game.completedCount) of \(catalog.animals.count) \(catalog.commonKind.noun) pages", systemImage: "book.closed.fill")
                 Label("\(game.totalStars) stars", systemImage: "star.fill")
                 if game.totalSuperStars > 0 { Label("\(game.totalSuperStars) super", systemImage: "sparkles").foregroundStyle(.cyan) }
-                ProgressView(value: Double(game.completedCount), total: Double(max(catalog.sharks.count, 1)))
+                ProgressView(value: Double(game.completedCount), total: Double(max(catalog.animals.count, 1)))
                     .tint(.yellow)
                     .frame(width: 180)
                     .scaleEffect(y: 2.4)
@@ -77,18 +77,19 @@ struct OceanMapView: View {
         .overlay(alignment: .bottom) {
             if let lockedHint {
                 let needed = game.missionsNeeded(for: lockedHint), stars = game.starsNeeded(for: lockedHint), superStars = game.superStarsNeeded(for: lockedHint)
+                let noun = lockedHint.kindInfo.noun
                 KidToast(symbol: needed > 0 ? "🔒" : stars > 0 ? "⭐️" : "🌟", text: needed > 0
-                    ? "Finish \(needed) more shark \(needed == 1 ? "mission" : "missions") to find this shark"
+                    ? "Finish \(needed) more \(needed == 1 ? "mission" : "missions") to find this \(noun)"
                     : stars > 0
-                    ? "Earn \(stars) more \(stars == 1 ? "star" : "stars") to find this shark"
-                    : "Earn \(superStars) more super \(superStars == 1 ? "star" : "stars") to find this shark")
+                    ? "Earn \(stars) more \(stars == 1 ? "star" : "stars") to find this \(noun)"
+                    : "Earn \(superStars) more super \(superStars == 1 ? "star" : "stars") to find this \(noun)")
                     .padding(.bottom, 80)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .onAppear {
             // Open on the ocean with a newly found shark, else where the map was left.
-            let fresh = catalog.sharks.first { game.freshlyUnlockedSharkIDs.contains($0.id) }?.map
+            let fresh = catalog.animals.first { game.freshlyUnlockedSharkIDs.contains($0.id) }?.map
             if let fresh, catalog.mapPages.contains(where: { $0.id == fresh }) {
                 pageID = fresh
             } else if !catalog.mapPages.contains(where: { $0.id == pageID }) {
@@ -107,7 +108,7 @@ struct OceanMapView: View {
         }
     }
 
-    private func showLockedHint(for shark: SharkDefinition) {
+    private func showLockedHint(for shark: AnimalDefinition) {
         feedback.play(.wrong)
         let line: SharkLine = game.missionsNeeded(for: shark) > 0 ? .locked : game.starsNeeded(for: shark) > 0 ? .lockedStars : .lockedSuperStars
         narration.play(line.text, after: 0.5)
@@ -120,7 +121,7 @@ struct OceanMapView: View {
 }
 
 private struct SharkMapNode: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     let unlocked: Bool
     let completed: Bool
     let stars: Int
@@ -170,7 +171,7 @@ private struct SharkMapNode: View {
                             .accessibilityHidden(true)
                     }
                 }
-                Text(unlocked ? shark.name : "Hidden shark")
+                Text(unlocked ? shark.name : "Hidden \(shark.kindInfo.noun)")
                     .font(.system(size: 13, weight: .bold, design: .rounded))
                     .lineLimit(1)
                     .padding(.horizontal, 8)
@@ -187,7 +188,7 @@ private struct SharkMapNode: View {
             withAnimation(.easeInOut(duration: 2.0 + Double(shark.name.count % 5) / 5).repeatForever(autoreverses: true)) { floating = true }
             if fresh { withAnimation(.easeOut(duration: 1.2).repeatForever(autoreverses: false)) { pulsing = true } }
         }
-        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", \(stars) of \(MissionChallenges.maxLevel) stars" : "")" : "Hidden shark, locked")
+        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", \(stars) of \(MissionChallenges.maxLevel) stars" : "")" : "Hidden \(shark.kindInfo.noun), locked")
         .accessibilityIdentifier("shark-\(shark.id)")
     }
 }

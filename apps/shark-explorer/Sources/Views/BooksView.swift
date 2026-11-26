@@ -14,17 +14,17 @@ struct BooksView: View {
     @State private var spokenWordID: String?
     private let catalog = ContentStore.shared.catalog
 
-    private var selectedShark: SharkDefinition? {
-        catalog.sharks.first { $0.id == selectedSharkID && game.completedSharks.contains($0.id) }
+    private var selectedShark: AnimalDefinition? {
+        catalog.animals.first { $0.id == selectedSharkID && game.completedSharks.contains($0.id) }
     }
 
     private var collectedTraitCount: Int {
-        catalog.sharks.reduce(into: 0) { count, shark in
+        catalog.animals.reduce(into: 0) { count, shark in
             count += shark.traits.filter { game.hasUnlocked($0, for: shark) }.count
         }
     }
 
-    private var totalTraitCount: Int { catalog.sharks.reduce(0) { $0 + $1.traits.count } }
+    private var totalTraitCount: Int { catalog.animals.reduce(0) { $0 + $1.traits.count } }
 
     var body: some View {
         VStack(spacing: 16) {
@@ -45,7 +45,7 @@ struct BooksView: View {
         .foregroundStyle(.white)
         .onAppear {
             // Open on the page just earned, or the first collected page, so the book never looks empty.
-            selectedSharkID = game.passportSharkID ?? catalog.sharks.first { game.completedSharks.contains($0.id) }?.id
+            selectedSharkID = game.passportSharkID ?? catalog.animals.first { game.completedSharks.contains($0.id) }?.id
             game.passportSharkID = nil
         }
     }
@@ -58,11 +58,11 @@ struct BooksView: View {
                         .font(.system(size: 36, weight: .bold))
                         .frame(width: 80, height: 80)
                         .background(.cyan.opacity(0.3), in: Circle())
-                    Text("Finish a shark’s mission to collect its page. Explore topics to reveal trait cards.")
+                    Text("Finish \(catalog.commonKind.withArticle)’s mission to collect its page. Explore topics to reveal trait cards.")
                         .font(.kidBody)
                         .foregroundStyle(theme.mutedInk)
                     Spacer(minLength: 8)
-                    PassportCount(value: "\(game.completedCount)/\(catalog.sharks.count)", title: "pages")
+                    PassportCount(value: "\(game.completedCount)/\(catalog.animals.count)", title: "pages")
                     PassportCount(value: "\(collectedTraitCount)/\(totalTraitCount)", title: "traits")
                     PassportCount(value: "\(game.collectedWords.count)", title: "words")
                 }
@@ -70,7 +70,7 @@ struct BooksView: View {
                 .kidCard()
 
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 10), spacing: 10) {
-                    ForEach(catalog.sharks) { shark in
+                    ForEach(catalog.animals) { shark in
                         passportPageButton(for: shark)
                     }
                 }
@@ -82,10 +82,10 @@ struct BooksView: View {
                 } else {
                     VStack(spacing: 10) {
                         Text("🦈").font(.system(size: 64))
-                        Text(game.completedCount == 0 ? "Your first passport page is waiting" : "Tap a shark page to open it")
+                        Text(game.completedCount == 0 ? "Your first passport page is waiting" : "Tap a page to open it")
                             .font(.kidTitle)
                         if game.completedCount == 0 {
-                            Text("Finish a shark mission, then come back to see its page.")
+                            Text("Finish a mission, then come back to see its page.")
                                 .font(.kidBody)
                                 .foregroundStyle(theme.mutedInk)
                         }
@@ -99,7 +99,7 @@ struct BooksView: View {
         .scrollIndicators(.hidden)
     }
 
-    private func passportPageButton(for shark: SharkDefinition) -> some View {
+    private func passportPageButton(for shark: AnimalDefinition) -> some View {
         let earned = game.completedSharks.contains(shark.id)
         let selected = selectedSharkID == shark.id
         return Button {
@@ -152,7 +152,7 @@ struct BooksView: View {
                                 Text(earned ? word.word : "Ocean Word").font(.kidHeadline)
                                 if earned { Image(systemName: "speaker.wave.2.fill").font(.kidLabel).foregroundStyle(.cyan) }
                             }
-                            Text(earned ? word.explanation : "Find a shark that uses this word.")
+                            Text(earned ? word.explanation : "Find \(catalog.commonKind.withArticle) that uses this word.")
                                 .font(.kidLabel)
                                 .multilineTextAlignment(.center)
                                 .foregroundStyle(theme.mutedInk)
@@ -185,7 +185,7 @@ private struct PassportCount: View {
 }
 
 private struct PassportDetail: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     @Environment(GameStore.self) private var game
 
     var body: some View {
@@ -229,7 +229,7 @@ private struct PassportDetail: View {
 
 private struct PassportTraitCard: View {
     let trait: TraitDefinition
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     let unlocked: Bool
 
     var body: some View {
@@ -268,7 +268,7 @@ private struct PassportTraitCard: View {
 
 private struct TraitArtwork: View {
     let trait: TraitDefinition
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
 
     var body: some View {
         if let imageAsset = trait.imageAsset, let image = UIImage(named: imageAsset) {

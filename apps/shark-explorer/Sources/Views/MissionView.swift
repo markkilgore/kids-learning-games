@@ -27,7 +27,7 @@ struct MissionStars: View {
 struct MissionFlowView: View {
     enum Phase: Equatable { case intro, play, complete, questions, reward }
 
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     /// 1–3: harder numbers and closer-looking words at each level.
     let level: Int
     let onClose: () -> Void
@@ -46,11 +46,11 @@ struct MissionFlowView: View {
     @State private var missedThisRound = false
     private let rounds: [MissionChallenge]
 
-    init(shark: SharkDefinition, level: Int, onClose: @escaping () -> Void) {
+    init(shark: AnimalDefinition, level: Int, onClose: @escaping () -> Void) {
         self.shark = shark
         self.level = level
         self.onClose = onClose
-        let rounds = MissionChallenges.rounds(for: shark, level: level, sharks: ContentStore.shared.catalog.sharks, reading: .shared)
+        let rounds = MissionChallenges.rounds(for: shark, level: level, sharks: ContentStore.shared.catalog.animals, reading: .shared)
         self.rounds = rounds
         _scene = State(initialValue: MissionScene(mission: shark.mission, rounds: rounds, size: CGSize(width: 1100, height: 620)))
     }
@@ -291,7 +291,7 @@ struct MissionFlowView: View {
 
 /// The payoff after the questions: the new Passport page, new Ocean Words, and any sharks now on the map.
 private struct MissionRewardView: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     let reward: MissionReward
     let onBooks: () -> Void
     let onMap: () -> Void
@@ -347,11 +347,11 @@ private struct MissionRewardView: View {
                 Spacer(minLength: 0)
             }
 
-            let unlocked = catalog.sharks.filter { reward.unlockedSharkIDs.contains($0.id) }
+            let unlocked = catalog.animals.filter { reward.unlockedSharkIDs.contains($0.id) }
             if !unlocked.isEmpty {
                 HStack(spacing: 14) {
                     Image(systemName: "lock.open.fill").font(.title).foregroundStyle(.yellow)
-                    Text(unlocked.count == 1 ? "A new shark is on your map:" : "New sharks are on your map:")
+                    Text(unlocked.count == 1 ? "A new \(unlocked[0].kindInfo.noun) is on your map:" : "New \(catalog.commonKind.plural) are on your map:")
                         .font(.kidHeadline)
                     ForEach(unlocked) { newShark in
                         SpeciesImageView(shark: newShark)

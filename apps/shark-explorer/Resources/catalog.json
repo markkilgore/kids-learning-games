@@ -151,13 +151,13 @@
         "symbol": "gamecontroller.fill",
         "instructions": {
           "earlyReader": [
-            "Steer toward the bright plankton.",
-            "Tap each sparkling cloud.",
-            "Help the shark eat its tiny food."
+            "The whale shark looks for plankton.",
+            "Count the plankton you see.",
+            "Read the words to help the shark."
           ],
           "story": [
-            "Guide the whale shark through sparkling clouds of plankton.",
-            "Collect each cloud to finish its gentle ocean meal."
+            "Glide with the whale shark through sparkling clouds of plankton.",
+            "Count each group of plankton and read the words to finish its gentle ocean meal."
           ]
         },
         "targetCount": 6,
@@ -418,13 +418,13 @@
         "symbol": "bolt.fill",
         "instructions": {
           "earlyReader": [
-            "Sweep across the sandy floor.",
-            "Tap each electric sparkle.",
-            "Find the hidden stingray clues."
+            "The hammerhead sweeps over the sand.",
+            "Count the electric sparks you see.",
+            "Read the words to find the hidden stingray."
           ],
           "story": [
             "Use the hammerhead's electroreception to scan the sandy seafloor.",
-            "Follow each electric clue toward hidden prey."
+            "Count each group of electric clues and read the words to find the hidden prey."
           ]
         },
         "targetCount": 5,
@@ -685,13 +685,13 @@
         "symbol": "moon.stars.fill",
         "instructions": {
           "earlyReader": [
-            "Use the barbels to search.",
-            "Spot the crabs in reef cracks.",
-            "Tap to slurp each one."
+            "The nurse shark searches the night reef.",
+            "Count the crabs you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Search the night reef with the nurse shark's sensitive barbels.",
-            "Find each crab and use suction to pull it from hiding."
+            "Count each group of crabs and read the words to help it slurp up a snack."
           ]
         },
         "targetCount": 5,
@@ -952,13 +952,13 @@
         "symbol": "arrow.up.circle.fill",
         "instructions": {
           "earlyReader": [
-            "Start deep below.",
-            "Spot each shadow above.",
-            "Tap the clues to build speed."
+            "The great white starts deep below.",
+            "Count the fish shadows you see.",
+            "Read the words to help the shark."
           ],
           "story": [
-            "Watch the bright surface for prey-shaped silhouettes.",
-            "Follow each clue upward and tag the final silhouette without showing a bite."
+            "Watch the bright surface for fish-shaped shadows.",
+            "Count each group of shadows and read the words as the shark searches above."
           ]
         },
         "targetCount": 5,
@@ -1219,13 +1219,13 @@
         "symbol": "eye.fill",
         "instructions": {
           "earlyReader": [
-            "Study the spotted seafloor.",
-            "Find each shape that blends in.",
-            "Tap the hidden clues."
+            "The wobbegong hides on the seafloor.",
+            "Count the shells you see.",
+            "Read the words to find the shark."
           ],
           "story": [
-            "Look closely at the patterned seafloor for shapes that do not quite belong.",
-            "Find every clue to reveal the camouflaged wobbegong."
+            "Look closely at the patterned seafloor where the wobbegong blends in.",
+            "Count each group of shells and read the words to reveal the hidden shark."
           ]
         },
         "targetCount": 5,
@@ -1486,13 +1486,13 @@
         "symbol": "waveform.path.ecg",
         "instructions": {
           "earlyReader": [
-            "Wait for fish to school together.",
-            "Tap each fish clue.",
-            "Build one strong tail strike."
+            "The thresher finds a school of fish.",
+            "Count the fish in each group.",
+            "Read the words to help the shark."
           ],
           "story": [
-            "Gather the fish into a tight school and watch their movement.",
-            "Time the thresher's long tail strike when the school is together."
+            "Follow the thresher shark toward a tight school of fish.",
+            "Count each group of fish and read the words to build one strong tail strike."
           ]
         },
         "targetCount": 6,
@@ -1754,12 +1754,12 @@
         "instructions": {
           "earlyReader": [
             "The water is hard to see through.",
-            "Tap each wavy scent clue.",
-            "Follow the trail to food."
+            "Count the scent clues you see.",
+            "Read the words to follow the trail."
           ],
           "story": [
             "Vision is limited in this murky coastal water.",
-            "Follow smell and vibration clues as the tiger shark searches for food."
+            "Count each group of scent clues and read the words as the tiger shark searches for food."
           ]
         },
         "targetCount": 6,
@@ -2021,12 +2021,12 @@
         "instructions": {
           "earlyReader": [
             "The tide is going out.",
-            "Tap each safe wet rock.",
-            "Help the shark step to the next pool."
+            "Count the wet rocks you see.",
+            "Read the words to help the shark walk."
           ],
           "story": [
             "Choose a damp path across the reef as the water falls.",
-            "Guide the epaulette shark from one tide pool to the next."
+            "Count each group of rocks and read the words to guide the epaulette shark to the next pool."
           ]
         },
         "targetCount": 6,
@@ -2288,12 +2288,12 @@
         "instructions": {
           "earlyReader": [
             "The deep water is dark.",
-            "Spot each electric clue.",
-            "Tap when the fish swims close."
+            "Count the deep-sea fish you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Use the goblin shark's snout to sense prey in darkness.",
-            "Wait until each fish is close, then trigger the springing jaws."
+            "Count each group of fish and read the words to spring its jaws."
           ]
         },
         "targetCount": 5,
@@ -2554,13 +2554,13 @@
         "symbol": "snowflake",
         "instructions": {
           "earlyReader": [
-            "Stay slow and steady.",
-            "Tap each snowy scent clue.",
-            "Save energy while you find food."
+            "The Greenland shark is slow and steady.",
+            "Count the snowy clues you see.",
+            "Read the words to follow the trail."
           ],
           "story": [
             "Follow a scent trail through cold Arctic darkness.",
-            "Move steadily from clue to clue without wasting the shark's energy."
+            "Count each group of snowy clues and read the words without wasting the shark's energy."
           ]
         },
         "targetCount": 5,
@@ -2822,12 +2822,12 @@
         "instructions": {
           "earlyReader": [
             "The tuna are very fast.",
-            "Watch for each speedy fish.",
-            "Tap it before it zooms away."
+            "Count the tuna in each group.",
+            "Read the words to help the mako."
           ],
           "story": [
             "Race through open water with the fastest shark in the sea.",
-            "Tap each speedy tuna to help the mako catch up."
+            "Count each group of tuna and read the words to help the mako catch up."
           ]
         },
         "targetCount": 5,
@@ -3090,12 +3090,12 @@
         "instructions": {
           "earlyReader": [
             "Plankton floats near the top.",
-            "Tap each sparkling patch.",
-            "Help the big shark fill up."
+            "Count the plankton you see.",
+            "Read the words to help the big shark."
           ],
           "story": [
             "Glide along the sunny surface with the basking shark.",
-            "Collect each sparkling plankton patch as it swims with its mouth open."
+            "Count each group of plankton and read the words as it swims with its mouth open."
           ]
         },
         "targetCount": 5,
@@ -3358,12 +3358,12 @@
         "instructions": {
           "earlyReader": [
             "It is night on the reef.",
-            "Sea snails hide in the cracks.",
-            "Tap each snail you find."
+            "Count the sea snails you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Search the reef after dark with the zebra shark.",
-            "Tap each sea snail tucked among the coral and sand."
+            "Count each group of sea snails and read the words to find them in the coral."
           ]
         },
         "targetCount": 5,
@@ -3626,12 +3626,12 @@
         "instructions": {
           "earlyReader": [
             "The reef is full of fish.",
-            "Watch them dart from the coral.",
-            "Tap each reef fish you see."
+            "Count the reef fish you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Patrol the shallow coral reef with the blacktip reef shark.",
-            "Tap each reef fish as it darts out from the coral."
+            "Count each group of reef fish and read the words as they dart from the coral."
           ]
         },
         "targetCount": 5,
@@ -3894,12 +3894,12 @@
         "instructions": {
           "earlyReader": [
             "Lemon shark pups hide in the roots.",
-            "Look for each mangrove root.",
-            "Tap it to find a safe spot."
+            "Count the mangrove roots you see.",
+            "Read the words to find a safe spot."
           ],
           "story": [
             "Help the lemon shark pups stay safe in their mangrove nursery.",
-            "Tap each mangrove root to find a hiding place."
+            "Count each group of roots and read the words to find a hiding place."
           ]
         },
         "targetCount": 5,
@@ -4162,12 +4162,12 @@
         "instructions": {
           "earlyReader": [
             "The river meets the sea here.",
-            "Swim from salt water to fresh water.",
-            "Tap each river wave to swim on."
+            "Count the river waves you see.",
+            "Read the words to help the shark swim on."
           ],
           "story": [
             "Guide the bull shark from the salty sea into a freshwater river.",
-            "Follow each wave upstream as its body adjusts to the fresh water."
+            "Count each group of waves and read the words as it swims upstream."
           ]
         },
         "targetCount": 5,
@@ -4430,12 +4430,12 @@
         "instructions": {
           "earlyReader": [
             "Shrimp hide in the sand.",
-            "Feel for them with the barbels.",
-            "Tap each shrimp you find."
+            "Count the shrimp you see.",
+            "Read the words to help the sawshark."
           ],
           "story": [
             "Glide the sawshark’s long snout just above the sandy seafloor.",
-            "Use its barbels to find each hidden shrimp, then tap to sweep the saw."
+            "Count each group of shrimp and read the words to sweep the saw."
           ]
         },
         "targetCount": 5,
@@ -4697,12 +4697,12 @@
         "instructions": {
           "earlyReader": [
             "The deep water is dark.",
-            "Look for a soft green glow.",
-            "Tap each glow you see."
+            "Count the green glows you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Dive into dark water where the cookiecutter shark’s belly shines green.",
-            "Spot each soft glow before it fades into the deep."
+            "Count each group of glows and read the words before they fade into the deep."
           ]
         },
         "targetCount": 5,
@@ -4964,13 +4964,13 @@
         "symbol": "eye.fill",
         "instructions": {
           "earlyReader": [
-            "Hide under the sand.",
-            "Stay very still.",
-            "Tap each fish that swims close."
+            "The angel shark hides under the sand.",
+            "Count the fish that swim close.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Bury the angel shark in the sand and wait without moving.",
-            "When a fish swims close overhead, tap to lunge."
+            "Count each group of fish and read the words to pop out of the sand."
           ]
         },
         "targetCount": 5,
@@ -5232,12 +5232,12 @@
         "instructions": {
           "earlyReader": [
             "Night has come to the reef.",
-            "Sniff out the sea urchins.",
-            "Tap each sea urchin to crunch it."
+            "Count the sea urchins you see.",
+            "Read the words to help the shark."
           ],
           "story": [
             "Leave the cave at night and follow the scent of food across the reef.",
-            "Find each sea urchin and crush its shell with flat back teeth."
+            "Count each group of sea urchins and read the words to crunch their shells."
           ]
         },
         "targetCount": 5,

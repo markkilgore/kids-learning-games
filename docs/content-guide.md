@@ -53,11 +53,25 @@ A map page that is full needs a new entry in the catalog's `maps` (id, short nam
 ideally, a backdrop `Art/map-<id>.jpg`; without one the page shows the world map. Pages do not have to be
 oceans: the same mechanism is meant for future worlds such as prehistoric seas.
 
+## Add a new kind of animal to Shark Explorer
+
+Whales, prehistoric sea animals and dinosaurs are planned as new map pages. The code is ready for the first step:
+
+1. Add the kind to `AnimalKind.all` in `ContentModels.swift` (id, noun, plural) and set `"kind": "<id>"` on
+   each such animal in `catalog.json`. Sharks leave the field out.
+2. On-screen text already takes its noun from the kind ("Hidden whale", "Meet this whale"). Once kinds are
+   mixed, general text says "animal".
+3. **Still to do when the first non-shark arrives:** the spoken interface lines in `ui-lines.json` say
+   "shark" (`locked`, `lockedStars`, `lockedSuperStars`, `newShark`, `allStars`), so add per-kind or neutral
+   versions and record them; rename the Passport and book titles if they should not say "Shark"; and write
+   the animal's content so its questions and mission text never assume a shark.
+4. Give the new world its own map page (see "Add sharks").
+
 ## Add a friend to Cat Math
 
-1. Add a `cat("id", "Name", emoji, colour, location, favourite, unlockAt, item, items, itemEmoji, trick,
-   trickEmoji, [8 pages])` entry to `CatContent.swift`. Keep the argument order and quoting exactly:
-   `tools/lib/lines.mjs` parses this file. Each page is `(title, reading unit id, [4 sentences], puzzle lead)`.
+1. Add an entry to `apps/cat-math/Resources/cat-friends.json`, copying an existing friend: id, name, emoji,
+   colour, `locationID`, favourite thing, `unlockAt`, the counting item (singular, plural, emoji), the trick,
+   and eight `pages`, each with a title, reading unit id, four sentences and a puzzle lead.
    - The page must contain at least three pattern words and two sight words of its unit
      (`testEveryStoryPagePractisesItsSchoolReadingUnit`). The puzzle lead ends in a comma and must read
      naturally before "Name has 3 items…", "help Name count…" and "how many items did Name find?".
@@ -65,6 +79,7 @@ oceans: the same mechanism is meant for future worlds such as prehistoric seas.
    spaces in the item become hyphens), and `backdrop-<location>.png` for a new location.
 3. A new location is one more `LearningLocation` in `CatContent.locations`.
 4. Update the counts in `cat-catalog.json`, `tools/lib/lines.mjs` (`Expected 15 friends`) and the tests.
+   A friend that is not a cat still uses the `cat-<id>` picture names.
 5. Audio, `xcodegen generate`, fast tests.
 
 ## Weekly classroom lessons

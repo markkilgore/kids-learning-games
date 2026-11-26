@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 struct SpeciesImageView: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     var contentMode: ContentMode = .fill
 
     var body: some View {

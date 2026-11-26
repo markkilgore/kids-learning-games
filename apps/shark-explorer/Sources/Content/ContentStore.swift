@@ -24,7 +24,7 @@ final class ContentStore {
             catalog = try Self.loadCatalog()
             loadError = nil
         } catch {
-            catalog = GameCatalog(schemaVersion: 1, sharks: [], vocabulary: [], expansions: nil)
+            catalog = GameCatalog(schemaVersion: 1, animals: [], vocabulary: [], expansions: nil)
             loadError = error.localizedDescription
         }
     }
@@ -38,7 +38,7 @@ final class ContentStore {
         let expansions = Dictionary(uniqueKeysWithValues: (decodedCatalog.expansions ?? []).map { ($0.sharkID, $0) })
         let catalog = GameCatalog(
             schemaVersion: decodedCatalog.schemaVersion,
-            sharks: decodedCatalog.sharks.map { $0.expanded(with: expansions[$0.id]) },
+            animals: decodedCatalog.animals.map { $0.expanded(with: expansions[$0.id]) },
             vocabulary: decodedCatalog.vocabulary,
             expansions: decodedCatalog.expansions,
             maps: decodedCatalog.maps
@@ -49,15 +49,15 @@ final class ContentStore {
 
     static func validate(_ catalog: GameCatalog) throws {
         guard catalog.schemaVersion == 1 else { throw ContentError.invalidCatalog("unsupported schema") }
-        guard catalog.sharks.count == 35 else { throw ContentError.invalidCatalog("expected exactly 35 sharks") }
+        guard catalog.animals.count == 35 else { throw ContentError.invalidCatalog("expected exactly 35 sharks") }
         // Each finished mission must leave another shark to visit until every page is collected.
-        let unlockOrder = catalog.sharks.map(\.unlockAt).sorted()
+        let unlockOrder = catalog.animals.map(\.unlockAt).sorted()
         guard unlockOrder.enumerated().allSatisfy({ $0.element <= $0.offset }) else { throw ContentError.invalidCatalog("a shark can never be unlocked") }
-        guard Set(catalog.sharks.map(\.id)).count == catalog.sharks.count else { throw ContentError.invalidCatalog("duplicate shark IDs") }
+        guard Set(catalog.animals.map(\.id)).count == catalog.animals.count else { throw ContentError.invalidCatalog("duplicate shark IDs") }
         guard Set(catalog.vocabulary.map(\.id)).count == catalog.vocabulary.count else { throw ContentError.invalidCatalog("duplicate word IDs") }
         let wordIDs = Set(catalog.vocabulary.map(\.id))
 
-        for shark in catalog.sharks {
+        for shark in catalog.animals {
             guard shark.topics.count >= 7 else { throw ContentError.invalidCatalog("\(shark.id) must have at least seven topics") }
             guard shark.questions.count == 3 else { throw ContentError.invalidCatalog("\(shark.id) must have exactly three questions") }
             guard shark.traits.count >= 2 else { throw ContentError.invalidCatalog("\(shark.id) needs at least two Passport traits") }

@@ -4,7 +4,7 @@ import Narration
 
 /// Three picture questions; a wrong answer gives a clue and another try.
 struct QuestionRoundView: View {
-    let shark: SharkDefinition
+    let shark: AnimalDefinition
     let onComplete: () -> Void
     @Environment(GameStore.self) private var game
     @Environment(NarrationCoordinator.self) private var narration
@@ -16,7 +16,7 @@ struct QuestionRoundView: View {
     @State private var showingRetry = false
     @State private var orderedChoices: [[AnswerChoice]]
 
-    init(shark: SharkDefinition, onComplete: @escaping () -> Void) {
+    init(shark: AnimalDefinition, onComplete: @escaping () -> Void) {
         self.shark = shark
         self.onComplete = onComplete
         _orderedChoices = State(initialValue: QuizChoiceOrderer.order(for: shark.questions))

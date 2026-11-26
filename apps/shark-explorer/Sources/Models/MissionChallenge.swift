@@ -62,7 +62,7 @@ enum MissionChallenges {
     }
 
     /// The words Henry can read in these sharks' sound-it-out sentences, two letters or longer.
-    static func readingWords(in sharks: [SharkDefinition], reading: SharkReading) -> ReadingWords {
+    static func readingWords(in sharks: [AnimalDefinition], reading: SharkReading) -> ReadingWords {
         var result = ReadingWords()
         var seen: Set<String> = []
         for shark in sharks {
@@ -81,7 +81,7 @@ enum MissionChallenges {
     }
 
     /// Every line a mission round can speak, so each one gets a recording. Kept in step with `challengeLines` in tools/lib/lines.mjs.
-    static func allSpokenLines(sharks: [SharkDefinition], reading: SharkReading) -> [String] {
+    static func allSpokenLines(sharks: [AnimalDefinition], reading: SharkReading) -> [String] {
         let words = readingWords(in: sharks, reading: reading)
         var lines = (1...10).map(countLine) + (1...20).map(numeralLine) + [moreLine, fewerLine]
             + (1...19).map(oneMoreLine) + (2...20).map(oneLessLine)
@@ -100,7 +100,7 @@ enum MissionChallenges {
     }
 
     /// The sound-it-out lines of these sharks, split into their sentences of three to six words.
-    static func sentences(in sharks: [SharkDefinition]) -> [Sentence] {
+    static func sentences(in sharks: [AnimalDefinition]) -> [Sentence] {
         var result: [Sentence] = []
         var seen: Set<String> = []
         for shark in sharks {
@@ -127,16 +127,16 @@ enum MissionChallenges {
         return result
     }
 
-    static func rounds(for shark: SharkDefinition, level: Int, sharks: [SharkDefinition], reading: SharkReading) -> [MissionChallenge] {
+    static func rounds(for shark: AnimalDefinition, level: Int, sharks: [AnimalDefinition], reading: SharkReading) -> [MissionChallenge] {
         var generator = SystemRandomNumberGenerator()
         return rounds(for: shark, level: level, sharks: sharks, reading: reading, using: &generator)
     }
 
     /// Number rounds and word rounds take turns, starting with numbers.
     static func rounds<Generator: RandomNumberGenerator>(
-        for shark: SharkDefinition,
+        for shark: AnimalDefinition,
         level: Int,
-        sharks: [SharkDefinition],
+        sharks: [AnimalDefinition],
         reading: SharkReading,
         using generator: inout Generator
     ) -> [MissionChallenge] {
