@@ -6,6 +6,55 @@ import XCTest
 final class CatTourUITests: XCTestCase {
     private let app = XCUIApplication()
 
+    /// Starts where Kate is (25 hearts with every cat): the meadow animals, and a cat's second chapter with its harder math.
+    func testMeadowFriendsAndChapterTwo() {
+        continueAfterFailure = false
+        app.launchArguments += ["-heartsWithEveryCat", "25"]
+        app.launch()
+        XCTAssertTrue(app.buttons["cat-mittens"].waitForExistence(timeout: 8))
+        snap("20-home-25-hearts")
+        app.buttons["Meadow"].tap()
+        snap("21-home-meadow")
+        tap("cat-scout")
+        snap("22-scout-story")
+        tap("start-round")
+        snap("23-scout-puzzle")
+        tap("kid-back")
+
+        // Two more puzzles take Mittens from 25 to 27 hearts, which opens chapter two.
+        app.buttons["House"].tap()
+        tap("cat-mittens")
+        let start = app.buttons["start-round"].firstMatch
+        if start.waitForExistence(timeout: 3) { start.tap() }
+        for _ in 1...2 {
+            let answer = app.buttons["answer-correct"].firstMatch
+            XCTAssertTrue(answer.waitForExistence(timeout: 8))
+            answer.tap()
+            sleep(7)
+        }
+        let reward = app.buttons["reward-trick"]
+        XCTAssertTrue(reward.waitForExistence(timeout: 8))
+        reward.tap()
+        snap("24-chapter-two-opens")
+        tap("next-puzzle")
+        XCTAssertTrue(start.waitForExistence(timeout: 8), "the new page should be read before its puzzles")
+        snap("25-chapter-two-story")
+        start.tap()
+        for puzzle in 1...3 {
+            let answer = app.buttons["answer-correct"].firstMatch
+            XCTAssertTrue(answer.waitForExistence(timeout: 8))
+            snap("26-chapter-two-puzzle-\(puzzle)")
+            answer.tap()
+            sleep(7)
+        }
+        XCTAssertTrue(app.buttons["reward-treat"].waitForExistence(timeout: 8))
+        app.buttons["reward-treat"].tap()
+        tap("next-puzzle")
+        tap("kid-back")
+        tap("cat-journal")
+        snap("27-journal")
+    }
+
     func testTourEveryScreen() {
         continueAfterFailure = false
         app.launch()

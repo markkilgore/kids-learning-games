@@ -1,11 +1,17 @@
 {
   "retry": "Good try. Use the picture hint and count once more.",
-  "locked": "This cat is still shy. Solve more puzzles to earn hearts and make friends.",
+  "locked": "This friend is still shy. Solve more puzzles to earn hearts and make friends.",
   "newFriend": "You made a new friend!",
   "count11": "Eleven!",
   "count12": "Twelve!",
   "count13": "Thirteen!",
   "count14": "Fourteen!",
+  "count15": "Fifteen!",
+  "count16": "Sixteen!",
+  "count17": "Seventeen!",
+  "count18": "Eighteen!",
+  "count19": "Nineteen!",
+  "count20": "Twenty!",
   "roundIntro": "Solve three puzzles to turn the page.",
   "roundBonus": "Solve three puzzles to earn a treat.",
   "newPage": "A new story page is ready!"

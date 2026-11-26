@@ -90,7 +90,8 @@ final class SharkTourUITests: XCTestCase {
         app.launch()
         if !app.buttons["shark-whale"].waitForExistence(timeout: 5) { tap("kid-back") }
         let sharks = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher", "tiger", "epaulette", "goblin", "greenland",
-                      "mako", "basking", "zebra", "blacktip-reef", "lemon", "bull", "sawshark", "cookiecutter", "angel", "port-jackson"]
+                      "mako", "basking", "zebra", "blacktip-reef", "lemon", "bull", "sawshark", "cookiecutter", "angel", "port-jackson",
+                      "blue", "leopard", "sand-tiger", "frilled", "megamouth", "swell", "dwarf-lantern", "spinner", "oceanic-whitetip", "pyjama"]
         let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
         let questions = app.buttons["start-questions"]
 

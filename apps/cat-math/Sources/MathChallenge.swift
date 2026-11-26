@@ -38,9 +38,10 @@ enum MathChallengeFactory {
 
     /// The skill a cat practises at this friendship level; difficulty never changes it.
     static func skill(for cat: CatDefinition, friendship: Int) -> EducationalSkill {
-        let skills = CatAppConfiguration.value.enabledSkills
+        let ids = cat.isInChapterTwo(at: friendship) ? CatContent.chapterTwoSkillIDs : CatContent.chapterOneSkillIDs
         let catIndex = CatContent.cats.firstIndex(of: cat) ?? 0
-        return skills[(max(friendship, 0) + catIndex) % skills.count]
+        let id = ids[(max(friendship, 0) + catIndex) % ids.count]
+        return CatContent.skills.first { $0.id == id } ?? CatContent.skills[0]
     }
 
     /// Adaptive difficulty, limited to prompts that already have a recorded clip.
@@ -54,7 +55,7 @@ enum MathChallengeFactory {
     static func variantFriendship(for cat: CatDefinition, friendship: Int, difficulty: Int) -> Int {
         let step = min(max(difficulty, SkillPracticeStats.difficultyRange.lowerBound), SkillPracticeStats.difficultyRange.upperBound)
         guard step != 0, friendship >= cat.lastPageFriendship else { return friendship }
-        let skillCount = CatAppConfiguration.value.enabledSkills.count
+        let skillCount = CatContent.chapterOneSkillIDs.count
         let ranked = (0..<3).map { friendship + $0 * skillCount }.sorted { lhs, rhs in
             let left = size(of: spec(for: cat, friendship: lhs)), right = size(of: spec(for: cat, friendship: rhs))
             return left == right ? lhs < rhs : left < right
@@ -102,6 +103,40 @@ enum MathChallengeFactory {
 
         func make(_ prompt: String, _ answer: Int, _ visual: MathVisual, _ hint: String, step: Int = 1) -> Spec {
             Spec(skill: skill, prompt: prompt, answer: answer, visual: visual, hint: hint, step: step)
+        }
+
+        if cat.isInChapterTwo(at: friendship) {
+            // Chapter two: sums and differences to 20, doubles, and counting by twos.
+            switch skill.id {
+            case "addition":
+                let first = seed + 5, other = seed % 5 + 2
+                return make("\(lead) \(cat.name) has \(first) \(noun(cat, count: first)) and finds \(other) more. How many now?", first + other, .add(first, other), "\(repeated(icon, count: first))  +  \(repeated(icon, count: other))")
+            case "subtraction":
+                let total = seed + 9, taken = seed % 5 + 2
+                return make("\(lead) \(cat.name) counts \(total) \(noun(cat, count: total)). \(taken) are put away. How many stay?", total - taken, .subtract(total: total, taken: taken), "\(repeated(icon, count: total)), put away \(repeated(icon, count: taken))")
+            case "doubles":
+                let half = seed + 1
+                return make("\(lead) \(cat.name) has \(half) \(noun(cat, count: half)) and finds \(half) more. What is double \(half)?", half * 2, .add(half, half), "\(repeated(icon, count: half))  +  \(repeated(icon, count: half))")
+            case "odd-even":
+                let number = seed + 7
+                return make(
+                    "\(lead) \(cat.name) finds \(number) \(noun(cat, count: number)). Is that odd or even?",
+                    number.isMultiple(of: 2) ? evenChoice : oddChoice,
+                    .pairs(number),
+                    "\(repeated(icon, count: number)) in pairs"
+                )
+            default:
+                let step = skill.id == "skip-2" ? 2 : 5
+                let start = step == 2 ? 2 * (seed % 4 + 1) : 5 * (seed % 3 + 4)
+                let shown = [start, start + step, start + 2 * step]
+                return make(
+                    "\(lead) help \(cat.name) count \(cat.storyItemPlural) by \(step == 2 ? "twos" : "fives"): \(shown[0]), \(shown[1]), \(shown[2]). What comes next?",
+                    start + 3 * step,
+                    .sequence(shown),
+                    shown.map { "\(icon) \($0)" }.joined(separator: "   ") + "   \(icon) ?",
+                    step: step
+                )
+            }
         }
 
         switch skill.id {

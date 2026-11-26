@@ -14,7 +14,7 @@ struct CatHomeView: View {
     var body: some View {
         @Bindable var game = game
         VStack(spacing: 16) {
-            KidTopBar(CatAppConfiguration.value.identity.childFacingName, subtitle: "Solve puzzles to make cat friends") {
+            KidTopBar(CatAppConfiguration.value.identity.childFacingName, subtitle: "Solve puzzles to make animal friends") {
                 Label("\(game.totalFriendship)", systemImage: "heart.fill")
                     .font(.kidTitle)
                     .foregroundStyle(.pink)
@@ -32,7 +32,7 @@ struct CatHomeView: View {
             HStack(spacing: 16) {
                 WeeklyLessonsButton(resource: "cat-weeks", namespace: CatAppConfiguration.value.storageNamespace, guide: "🐈", color: theme.primary)
                 KidTabs(selection: $game.selectedLocationID, items: CatContent.locations.map { .init($0.id, $0.name, systemImage: $0.symbol) })
-                    .frame(maxWidth: 460)
+                    .frame(maxWidth: 640)
                 Spacer(minLength: 0)
             }
 
@@ -144,10 +144,11 @@ struct StoryDots: View {
     let tint: Color
 
     var body: some View {
-        HStack(spacing: 6) {
+        // Eight pages have to fit across a card on an 11-inch iPad.
+        HStack(spacing: total > 4 ? 2 : 6) {
             ForEach(0..<total, id: \.self) { page in
                 Image(systemName: page < revealed ? "book.pages.fill" : "book.pages")
-                    .font(.system(size: 17))
+                    .font(.system(size: total > 4 ? 13 : 17))
                     .foregroundStyle(page < revealed ? tint : tint.opacity(0.35))
             }
         }

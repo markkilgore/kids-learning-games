@@ -10,9 +10,9 @@ import Narration
 final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.sharks.count, 20)
-        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 140)
-        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 60)
+        XCTAssertEqual(catalog.sharks.count, 30)
+        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 210)
+        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 90)
         XCTAssertGreaterThanOrEqual(catalog.vocabulary.count, 30)
         XCTAssertTrue(catalog.vocabulary.allSatisfy { word in catalog.sharks.contains { $0.vocabularyIDs.contains(word.id) } })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 7 })
@@ -39,6 +39,7 @@ final class ContentStoreTests: XCTestCase {
     }
 
     func testEveryQuizChoiceOfTheNewSharksHasAPicture() throws {
+        // The first ten sharks' pictures were drawn before choice ids doubled as art keys; a few still use symbols.
         let firstTen: Set = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher", "tiger", "epaulette", "goblin", "greenland"]
         for shark in ContentStore.shared.catalog.sharks where !firstTen.contains(shark.id) {
             for choice in shark.questions.flatMap(\.choices) {
@@ -103,12 +104,36 @@ final class ContentStoreTests: XCTestCase {
         let order = sharks.sorted { $0.unlockAt < $1.unlockAt }
         game.completedSharks = Set(order.prefix(9).map(\.id))
         XCTAssertEqual(sharks.filter(game.isUnlocked).count, 10)
-        for done in 10..<sharks.count {
+        for done in 10..<20 {
             game.completedSharks = Set(order.prefix(done).map(\.id))
             XCTAssertGreaterThan(sharks.filter(game.isUnlocked).count, done, "nothing left to play after \(done) missions")
         }
         game.completedSharks = Set(order.prefix(10).map(\.id))
         XCTAssertEqual(sharks.filter(game.isUnlocked).count, 12)
+    }
+
+    func testThirdTenSharksNeedStarsFromReplayingEarlierSharks() throws {
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.unlockstars", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        let game = GameStore(progressStore: storage)
+        let sharks = ContentStore.shared.catalog.sharks
+        let firstTwenty = sharks.filter { $0.unlockStars == nil }
+        let starLocked = sharks.filter { $0.unlockStars != nil }.sorted { ($0.unlockStars ?? 0) < ($1.unlockStars ?? 0) }
+        XCTAssertEqual(firstTwenty.count, 20)
+        XCTAssertEqual(starLocked.count, 10)
+        for shark in firstTwenty { game.completeMission(for: shark, starLevel: 1, in: sharks) }
+        XCTAssertEqual(game.totalStars, 20)
+        XCTAssertEqual(sharks.filter(game.isUnlocked).count, 20, "one star each is not enough for the new sharks")
+        XCTAssertEqual(game.missionsNeeded(for: starLocked[0]), 0)
+        XCTAssertEqual(game.starsNeeded(for: starLocked[0]), 4)
+        // Second stars on four earlier sharks reveal the first new ones.
+        let reward = firstTwenty.prefix(4).map { game.completeMission(for: $0, starLevel: 2, in: sharks) }.last
+        XCTAssertEqual(game.totalStars, 24)
+        XCTAssertTrue(game.isUnlocked(starLocked[0]))
+        XCTAssertEqual(reward?.unlockedSharkIDs.isEmpty, false)
+        // Every new shark can be reached: with all earlier ones at three stars there are always enough.
+        for (index, shark) in starLocked.enumerated() {
+            XCTAssertLessThanOrEqual(shark.unlockStars ?? 0, 3 * (20 + index), shark.id)
+        }
     }
 
     func testMissionCompletionPersistsRewardsAndRestoresDestination() throws {

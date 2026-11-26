@@ -30,9 +30,24 @@ struct CatDefinition: Identifiable, Hashable {
     /// Puzzles in one round. A round is set in one story page and ends with a celebration.
     static let puzzlesPerRound = 3
 
+    /// Pages in the first chapter. They open one round apart from the very first puzzle.
+    static let chapterOnePages = 4
+
+    /// The friendship level at which chapter two (page 5 onward) begins. The meadow animals carry straight on
+    /// after chapter one. The ten cats' second chapter was written after Kate had reached 25 hearts with each of
+    /// them, so theirs starts at 27: the pages open one round at a time instead of all at once.
+    var chapterTwoStart: Int { locationID == "meadow" ? Self.chapterOnePages * Self.puzzlesPerRound : 27 }
+
+    func isInChapterTwo(at friendship: Int) -> Bool { backstory.count > Self.chapterOnePages && friendship >= chapterTwoStart }
+
+    /// The friendship level that opens a page.
+    func friendshipNeeded(forPage page: Int) -> Int {
+        page < Self.chapterOnePages ? page * Self.puzzlesPerRound : chapterTwoStart + (page - Self.chapterOnePages) * Self.puzzlesPerRound
+    }
+
     /// The story page a cat is on: a new page opens each time a round of puzzles is finished.
     func storyPage(for friendship: Int) -> Int {
-        min(max(friendship, 0) / Self.puzzlesPerRound, backstory.count - 1)
+        (0..<backstory.count).last { friendshipNeeded(forPage: $0) <= max(friendship, 0) } ?? 0
     }
 
     func storyBeat(for friendship: Int) -> CatStoryBeat { backstory[storyPage(for: friendship)] }
@@ -45,13 +60,25 @@ struct CatDefinition: Identifiable, Hashable {
     func solvedInRound(for friendship: Int) -> Int { max(friendship, 0) % Self.puzzlesPerRound }
 
     /// The friendship level at which the last story page opens.
-    var lastPageFriendship: Int { (backstory.count - 1) * Self.puzzlesPerRound }
+    var lastPageFriendship: Int { friendshipNeeded(forPage: backstory.count - 1) }
+
+    /// Puzzles still to solve before the next page opens, or nil once every page is open.
+    func puzzlesUntilNextPage(for friendship: Int) -> Int? {
+        let next = storyPage(for: friendship) + 1
+        return next < backstory.count ? friendshipNeeded(forPage: next) - max(friendship, 0) : nil
+    }
+
+    /// Whether finishing the round that starts at this friendship level opens a page.
+    func roundOpensPage(from friendship: Int) -> Bool {
+        storyPage(for: friendship + Self.puzzlesPerRound) > storyPage(for: friendship)
+    }
 }
 
 enum CatContent {
     static let locations = [
         LearningLocation(id: "house", name: "House", symbol: "house.fill"),
-        LearningLocation(id: "garden", name: "Garden", symbol: "leaf.fill")
+        LearningLocation(id: "garden", name: "Garden", symbol: "leaf.fill"),
+        LearningLocation(id: "meadow", name: "Meadow", symbol: "sun.max.fill")
     ]
 
     static let cats = [
@@ -79,7 +106,31 @@ enum CatContent {
                 "She does not stop before each small square is snug.",
                 "After the last stitch, she smooths the blankets into a soft stack.",
                 "No cat will sleep cold, and the stack will grow."
-            ], "To finish the patchwork blanket,")
+            ], "To finish the patchwork blanket,"),
+            ("The first square", "l-blends", [
+                "Mittens found a blue cloth and a plaid one to start her blankets.",
+                "Two other cats came to help her clip the loose threads.",
+                "They worked until the floor was full of fluffy scraps.",
+                "Mittens was glad, and she placed the first square on a clean pillow."
+            ], "Cutting the blanket squares,"),
+            ("The missing buttons", "sh", [
+                "Some shiny buttons were gone from the tin on the shelf.",
+                "Mittens did not know where they could be, so she looked by the door.",
+                "There they were, in a shoe, pushed under a shirt.",
+                "She would call that a good wish come true."
+            ], "Searching for the shiny buttons,"),
+            ("Help from friends", "th-wh", [
+                "Pepper and Biscuit asked what they could do with the thread.",
+                "Mittens showed them the right way to pull it through the cloth.",
+                "Their paws went up and down while the white yarn grew thin.",
+                "‘Why, this is fun,’ they say, and nobody wants to walk off."
+            ], "At the sewing circle,"),
+            ("Blankets for all", "ch", [
+                "Today Mittens started to give each cat a patchwork blanket.",
+                "She put one on the chair and one on the kitchen bench.",
+                "‘Here is one for me, too,’ she said with a cheerful purr.",
+                "The cats chose to play, then nap, and it will be a very snug night."
+            ], "Sharing the patchwork blankets,")
         ]),
         cat("pepper", "Pepper", "🐈‍⬛", "#5C677D", "house", "sunny windows", 0, "sunbeam", "sunbeams", "☀️", "the shadow pounce", "🌑", [
             ("The window watcher", "th-wh", [
@@ -105,7 +156,31 @@ enum CatContent {
                 "He found a bright glow on the floor by the plants.",
                 "By lunch it had come around to the big blue chair.",
                 "Two other cats came to help, and they worked on the plan all day."
-            ], "Drawing the sunbeam map,")
+            ], "Drawing the sunbeam map,"),
+            ("The finished map", "sh", [
+                "Pepper’s sunbeam map was finished, and he could not wait to share it.",
+                "He would show it to some friends by the bookshelf.",
+                "There were gold shapes for the sun and gray ones for the shade.",
+                "‘You know, we should call it the Shine Map,’ said Biscuit."
+            ], "Showing the sunbeam map,"),
+            ("A cloudy day", "ch", [
+                "Today the sky was gray, and each patch of sun was gone.",
+                "Pepper sat on his chair and started to check the map.",
+                "‘There is not much here for me to use,’ he said.",
+                "Then he chose to be very calm and watch for a change."
+            ], "On a gray, cloudy day,"),
+            ("A spark of sun", "s-blends", [
+                "Before lunch, a small spot of sun slid into the hall.",
+                "Pepper does a quick skip and stops to sniff the warm floor.",
+                "‘Don’t step on it,’ he says, and the spot starts to grow.",
+                "After that, no cat is still, and they all stretch in the glow."
+            ], "Watching the sunny spot grow,"),
+            ("Sun for everyone", "th-wh", [
+                "Pepper knows where the sun goes and which way it will turn.",
+                "He shows the other cats their own warm path with a nod.",
+                "They walk to the right when the light slips that way.",
+                "‘Why jump for sun,’ they say, ‘when Pepper can tell us where it is?’"
+            ], "Leading the sunbeam walk,")
         ]),
         cat("biscuit", "Biscuit", "🐱", "#F2CC8F", "house", "soft blankets", 0, "pillow", "pillows", "🟨", "the biscuit roll", "🌀", [
             ("The blanket burrower", "ch", [
@@ -131,7 +206,31 @@ enum CatContent {
                 "There would be a sheet for the roof and cushions by the door.",
                 "Some shelves could hold books for her friends to share.",
                 "She does not know when it will be finished, but she will not rush."
-            ], "Building the reading fort,")
+            ], "Building the reading fort,"),
+            ("The fort begins", "th-wh", [
+                "Biscuit thinks this is the day to start the reading fort.",
+                "She knows where the thick pillows are and which way to pull them.",
+                "With three tugs, they slide right to their place by the white wall.",
+                "‘Why walk when you can jump?’ she likes to say, and then she hops on top."
+            ], "Starting the reading fort,"),
+            ("A sagging roof", "sh", [
+                "There was a sheet for the roof, but it would not stay up.",
+                "It could slip and swish down on some cushions by the shelf.",
+                "Biscuit did not know what to do, so she gave a call.",
+                "Poppy and Pepper were there in a flash to push it back."
+            ], "Under the sagging sheet,"),
+            ("Many paws help", "l-blends", [
+                "Two other cats came with clips, and Poppy found a long flag pole.",
+                "They worked to place the pole and clamp the blue sheet flat.",
+                "People walking around the fort could see it glow like a cloud.",
+                "Biscuit was so glad that she had to clap her paws."
+            ], "Clipping the fort roof,"),
+            ("Story time", "s-blends", [
+                "After the last pillow is in its spot, the fort is snug.",
+                "Biscuit does not start before all her friends step inside.",
+                "They snuggle into the blankets, and no cat is left out.",
+                "Small stars shine on the sheet as the first story starts to grow."
+            ], "Inside the snug reading fort,")
         ]),
         cat("poppy", "Poppy", "😺", "#C77DFF", "house", "cardboard castles", 4, "cardboard tower", "cardboard towers", "🏰", "the royal wave", "👑", [
             ("Queen of boxes", "s-blends", [
@@ -157,7 +256,31 @@ enum CatContent {
                 "She thinks about where their paths and bridges should go.",
                 "Then she draws a white wheel to show which way to walk.",
                 "Why stop at three castles when there are boxes for thirty?"
-            ], "Planning the cardboard village,")
+            ], "Planning the cardboard village,"),
+            ("The village begins", "ch", [
+                "Today Poppy started the cardboard village with a chalk line.",
+                "She chose a spot for each castle and a church with a bell.",
+                "‘Here is a porch for me,’ said Waffles, ‘and I will use it very well.’",
+                "There will be much to do, so the cats munch lunch and then play."
+            ], "Along the chalk line,"),
+            ("A windy wobble", "l-blends", [
+                "A blast of wind came in and made the flags flap.",
+                "Two towers slid flat, and the other one began to slip.",
+                "Poppy found the glue, and her helpers worked to clamp each wall.",
+                "The people came around to clap when the last flag flew."
+            ], "Fixing the wobbly towers,"),
+            ("Paths and bridges", "th-wh", [
+                "Poppy thinks about which path should go to which castle.",
+                "She shows the cats where to walk and the right way to turn.",
+                "They jump on the thin bridge, and it holds with their weight.",
+                "‘Why, that is the best thing we have made,’ they say."
+            ], "Testing the cardboard bridge,"),
+            ("The grand opening", "s-blends", [
+                "Before the sun sets, Poppy stands on the top step.",
+                "She does a royal spin and snips the string with a smile.",
+                "Her friends skip into the village, and no cat has to stay out.",
+                "After the stars come out, small lights grow bright in each castle."
+            ], "At the village gate,")
         ]),
         cat("waffles", "Waffles", "😸", "#F4A261", "house", "breakfast time", 9, "berry", "berries", "🫐", "the breakfast boogie", "🥞", [
             ("The breakfast bell", "l-blends", [
@@ -183,7 +306,31 @@ enum CatContent {
                 "Today he started to choose the best spot for lunch.",
                 "He will use a big chair for the cheese and cherries.",
                 "‘Come here and play with me,’ he will say, and it will be a very happy day."
-            ], "Preparing the pancake picnic,")
+            ], "Preparing the pancake picnic,"),
+            ("Picnic morning", "s-blends", [
+                "Before the sun is up, Waffles steps into the still kitchen.",
+                "He does not stop to snack, for he has a stack to make.",
+                "He stirs with a spoon and smells the sweet steam grow.",
+                "After that, no pancake is too small to go on the plate."
+            ], "Stirring the pancake batter,"),
+            ("The berry spill", "sh", [
+                "Some berries were in a dish, but the dish could not hold them.",
+                "They went splash on the floor and rolled there by the shelf.",
+                "Waffles did not know if he should rush or wait.",
+                "He would call for help, and Mittens came in a flash to push them back."
+            ], "Chasing the spilled berries,"),
+            ("Setting the blanket", "l-blends", [
+                "Two cats came to help him place a plaid blanket on the grass.",
+                "Clover found flowers, and the other helpers set out blue plates.",
+                "They worked until each glass was clean and every plum was sliced.",
+                "People walking around the garden could see the picnic glow."
+            ], "Setting out the picnic plates,"),
+            ("A happy feast", "th-wh", [
+                "Waffles shows his friends where to sit and which plate is theirs.",
+                "They say thanks, and then they munch with both cheeks full.",
+                "‘Why not jump and dance?’ he asks, and they walk right to the grass.",
+                "That is the way their best day ends, with three cheers for Waffles."
+            ], "At the pancake picnic,")
         ]),
         cat("clover", "Clover", "🐈", "#76C893", "garden", "butterflies", 0, "butterfly", "butterflies", "🦋", "the butterfly bow", "🍀", [
             ("The garden greeter", "s-blends", [
@@ -209,7 +356,31 @@ enum CatContent {
                 "There would be fresh flowers by a shady bush.",
                 "Some butterflies were shy, so she made a place to shelter.",
                 "She could call them in with a soft shush, and they know they are safe."
-            ], "Growing the butterfly garden,")
+            ], "Growing the butterfly garden,"),
+            ("Planting day", "l-blends", [
+                "Clover came to the garden bed with two clay pots of blue flowers.",
+                "She found a flat place where the plants could get sun.",
+                "The other cats worked beside her and patted the cool soil down.",
+                "By lunch, glad butterflies had come around to float above each bloom."
+            ], "Planting the blue flowers,"),
+            ("A sudden shower", "sh", [
+                "A sudden shower began to splash the new butterfly garden.",
+                "Some butterflies could not fly with wet wings, so they shook and shivered.",
+                "Clover would call them to the shelter by the shady bush.",
+                "There they were, safe and dry, until the sun began to shine."
+            ], "Sheltering from the shower,"),
+            ("The butterfly bench", "ch", [
+                "Today Clover started to check on each flower after the rain.",
+                "A branch had dropped on the bench where the butterflies like to perch.",
+                "‘Come here and help me,’ she chirped, and Ginger gave it a push.",
+                "Now the bench can be a very cheerful place to rest and play."
+            ], "Clearing the butterfly bench,"),
+            ("The garden party", "th-wh", [
+                "When the flowers opened, Clover asked all her friends to the garden.",
+                "They knew the right way to walk, along the path that she had shown them.",
+                "Butterflies landed on their ears and whiskers, and nobody wanted to jump.",
+                "Why was Clover purring? Her butterfly garden was the best thing she had ever made."
+            ], "At the butterfly garden party,")
         ]),
         cat("moon", "Moon", "🐈‍⬛", "#7986CB", "garden", "evening breezes", 0, "star", "stars", "⭐", "the moonwalk", "🌙", [
             ("The evening explorer", "l-blends", [
@@ -235,7 +406,31 @@ enum CatContent {
                 "She knows where the white ones are and which are thin and far.",
                 "Three sit right above the path, and their light shows the way to walk.",
                 "Why are there so many? She cannot say, but she thanks them all the same."
-            ], "Making Moon’s star map,")
+            ], "Making Moon’s star map,"),
+            ("Naming the stars", "sh", [
+                "Moon sat by the garden wall and began to name the stars that shine.",
+                "There were some she could call by the shapes they made.",
+                "One would be Fish, one would be Ship, and a small one would be Shell.",
+                "She did not know them all yet, but she was not in a rush."
+            ], "Naming stars by the wall,"),
+            ("A cloudy night", "l-blends", [
+                "One night, gray clouds came and hid the stars like a blanket.",
+                "Moon found she could not see a single glow in the black sky.",
+                "Two other cats came around to sit close and keep her company.",
+                "Then a breeze blew, the clouds slid away, and the sky was clear."
+            ], "Waiting for the clouds to pass,"),
+            ("A star for each friend", "th-wh", [
+                "Moon thinks each friend should have a star of their own.",
+                "She knows where Clover’s star sits, right above the path.",
+                "This one is for Sprout, and that white one is for Starlight.",
+                "Why not say good night to them all on the way to bed?"
+            ], "Choosing a star for each friend,"),
+            ("The star show", "s-blends", [
+                "Before the sky is dark, Moon spreads a soft blanket on the stone step.",
+                "Her friends snuggle close, and she does not start until they are still.",
+                "‘Don’t blink,’ she says, as small stars slip into the sky.",
+                "After the last star is named, no cat wants to stop looking up."
+            ], "At Moon’s star show,")
         ]),
         cat("ginger", "Ginger", "😻", "#E76F51", "garden", "warm stepping stones", 6, "stepping stone", "stepping stones", "🟠", "the ginger leap", "✨", [
             ("The sunny-stone cat", "ch", [
@@ -261,7 +456,31 @@ enum CatContent {
                 "There would be a short hop for kittens and a dash by the shed.",
                 "Some cats could shoot ahead, and some could shuffle along.",
                 "They would all know they had done well when they heard a shout at the finish."
-            ], "Designing the obstacle course,")
+            ], "Designing the obstacle course,"),
+            ("Building the course", "th-wh", [
+                "Ginger thought about where each part of the course should go.",
+                "The stepping stones went this way, then that way, then through the thick ferns.",
+                "He put a white rope where cats could jump, and a log where they could walk.",
+                "Why did he test it three times? He wanted every path to be just right."
+            ], "Setting out the course,"),
+            ("A slippery problem", "l-blends", [
+                "Two stones by the stream were too slick, and a kitten slid off.",
+                "Ginger found flat, dry stones and placed them close together.",
+                "The other cats came to help, and they worked until the gap was closed.",
+                "Glad cats clapped when the kitten came around again and did not slip."
+            ], "Fixing the slippery stones,"),
+            ("Race day", "ch", [
+                "Today the garden course is open, and each cat can choose a turn.",
+                "Poppy started first and cleared the branch with a cheerful hop.",
+                "‘Watch me!’ called Sprout, as she chased a leaf past the bench.",
+                "It was very good to be here and play, even for the cats who only watched."
+            ], "On race day in the garden,"),
+            ("The last stone", "s-blends", [
+                "Before the last race, a small kitten stood still at the start.",
+                "‘Don’t stop,’ said Ginger, ‘just step onto one stone and then the next.’",
+                "She does a little skip, then a spring, and sails into the soft grass.",
+                "After that, no cat smiled more than Ginger, and his pride began to grow."
+            ], "Cheering at the finish stone,")
         ]),
         cat("sprout", "Sprout", "😽", "#52B788", "garden", "tiny seedlings", 12, "seedling", "seedlings", "🌱", "the sprout stretch", "🌿", [
             ("The seedling guardian", "s-blends", [
@@ -287,7 +506,31 @@ enum CatContent {
                 "The vines will go this way and that way, then meet at the top.",
                 "Cats can walk through it where the path is cool and the light is thin.",
                 "Why does she whisper to the seeds? It is their secret, she will say."
-            ], "Planning the green tunnel,")
+            ], "Planning the green tunnel,"),
+            ("The first arch", "ch", [
+                "Today Sprout started the green tunnel with one bent branch.",
+                "She chose a spot by the bench and tied each vine with string.",
+                "‘Come here and reach up for me,’ she said, and Ginger held the arch.",
+                "It will be a very long time before cats can play under it, but she is cheerful."
+            ], "Bending the first arch,"),
+            ("Slow and steady", "s-blends", [
+                "The little vines start out small, and they do not grow in one day.",
+                "Before the sun gets hot, Sprout sprinkles water on each stem.",
+                "She does not skip a pot, and she sweeps the snails into the grass.",
+                "After a week, no stem is slumped, and tiny leaves spread wide."
+            ], "Sprinkling the tunnel vines,"),
+            ("Helpers arrive", "l-blends", [
+                "The vines began to climb, but one side of the tunnel flopped down.",
+                "Clover and Moon came around with two long sticks to hold it up.",
+                "The other cats found clips and worked to fix every plant in place.",
+                "Sprout was glad that her friends had come to help."
+            ], "Fixing the floppy vines,"),
+            ("The shady tunnel", "sh", [
+                "By summer, the tunnel was finished, and its leaves made cool shade.",
+                "There were some sunny patches that would shine through and shift on the path.",
+                "The cats could dash in, shuffle along, and share a nap inside.",
+                "Sprout would not call it her tunnel, for she knows it belongs to them all."
+            ], "Inside the shady green tunnel,")
         ]),
         cat("starlight", "Starlight", "😺", "#9D4EDD", "garden", "fireflies", 18, "firefly", "fireflies", "🌟", "the starlight spin", "💫", [
             ("The firefly friend", "l-blends", [
@@ -313,7 +556,281 @@ enum CatContent {
                 "Today each cat started to choose a spot on the porch.",
                 "The fireflies will march in a chain and reach up high.",
                 "‘Come here and play with me,’ she will cheer, and it will be very bright."
-            ], "Planning the firefly dance,")
+            ], "Planning the firefly dance,"),
+            ("Practice steps", "s-blends", [
+                "Before the big dance, Starlight shows her friends the first steps.",
+                "She does a slow spin, then a small skip, and stops with a bow.",
+                "‘Don’t rush,’ she says, as the fireflies swirl into a line.",
+                "After a few tries, no cat stumbles, and the lights sparkle in time."
+            ], "Practicing the dance steps,"),
+            ("The missing light", "ch", [
+                "Today one little firefly could not catch up with the chain.",
+                "Starlight started to search by the porch and under each chair.",
+                "‘Come here to me,’ she chirped, and a tiny glow reached her paw.",
+                "The firefly was very glad to be found and went back to play."
+            ], "Searching for the little firefly,"),
+            ("Flags and flowers", "l-blends", [
+                "Two cats came with glass jars to make the porch glow.",
+                "Other cats found blue flowers and placed them around the steps.",
+                "Clover worked on a flag, and Moon cleaned the floor with her tail.",
+                "When people come by, they will see a place that glitters like the sky."
+            ], "Decorating the porch,"),
+            ("The firefly dance", "th-wh", [
+                "When the moon came up, the fireflies knew the right way to fly.",
+                "They made a white wheel in the air, then a path of light that went up and up.",
+                "The cats did not just walk, for their paws wanted to jump and spin.",
+                "Why did Starlight thank them all? It was the best night she had ever had."
+            ], "At the firefly dance,")
+        ]),
+        cat("scout", "Scout", "🐶", "#C68642", "meadow", "his squeaky ball", 100, "stick", "sticks", "🪵", "the tail-wag twirl", "🌀", [
+            ("The muddy visitor", "sh", [
+                "Scout dashed into the meadow one spring day with a squeaky ball in his mouth.",
+                "There were splashes of mud on his short brown legs.",
+                "He shook himself by the fence, and some mud landed on a bush.",
+                "You would know him by his floppy ears and his wish to share."
+            ], "Beside the meadow gate,"),
+            ("The stick finder", "th-wh", [
+                "Scout gathers fallen sticks so that the path stays clear for everyone.",
+                "He knows where they hide and which way the wind blows them.",
+                "With a jump and a wag, he carries them to their pile.",
+                "That is why the other animals can walk through without a trip."
+            ], "Along the meadow path,"),
+            ("The lost squeak", "ch", [
+                "Today Scout’s squeaky ball rolled away and landed in a ditch.",
+                "He started to search each patch of clover, inch by inch.",
+                "A chipmunk came to cheer him on and chose a spot to check.",
+                "‘Here it is!’ chirped the chipmunk, and Scout was very glad to play."
+            ], "Searching the clover patch,"),
+            ("A stick-fort dream", "s-blends", [
+                "Scout dreams of a snug stick fort where his friends can stay dry.",
+                "Before he starts, he sorts the small sticks from the strong ones.",
+                "He does not stop to snack, and he doesn’t skip a step.",
+                "After a while, the stack will grow into a home for everyone."
+            ], "Planning the stick fort,"),
+            ("The fort begins", "l-blends", [
+                "Scout found a flat place by the plum tree to build his stick fort.",
+                "Two friends came to help, and Clover brought a bundle of sticks.",
+                "The other helpers worked to place each stick and close the gaps.",
+                "When people come around, they clap for the walls and the little blue flag."
+            ], "Beside the plum tree,"),
+            ("A windy wobble", "sh", [
+                "A sharp gust of wind made the stick fort shiver and shake.",
+                "There were gaps by the door, and some sticks could slip out.",
+                "Scout would not give up, so he dashed off to find fresh mud.",
+                "‘I know what to do,’ he said, and he pushed mud into each gap."
+            ], "Patching the windy fort,"),
+            ("Friends pitch in", "th-wh", [
+                "Then Hazel and Bramble came with moss to make the walls thick.",
+                "They knew which gaps to fill and where the roof was thin.",
+                "Puddle showed them the right way to pat the mud smooth.",
+                "‘Why not work together?’ they say, and their fort grows strong."
+            ], "Working together at the fort,"),
+            ("The fort party", "ch", [
+                "Today the stick fort is finished, and every friend can be here.",
+                "Scout started the party with a cheerful tail-wag twirl by the porch.",
+                "Each friend chose a spot on the bench to munch a snack.",
+                "‘Come and play with me,’ said Scout to the very happy bunch."
+            ], "At the stick-fort party,")
+        ]),
+        cat("hazel", "Hazel", "🐰", "#9A8C98", "meadow", "crunchy carrots", 150, "carrot", "carrots", "🥕", "the bunny binky", "🐇", [
+            ("The clover-patch bunny", "th-wh", [
+                "Hazel hopped into the meadow on a path of thick white clover.",
+                "She did not know where to rest, so she sat with the daisies.",
+                "The other animals came to say hello, and that made her whiskers twitch.",
+                "Then she did a happy jump, and they made room in their burrow."
+            ], "In the white clover,"),
+            ("A crunchy helper", "ch", [
+                "Hazel shares her crunchy carrots so that nobody has an empty lunch.",
+                "Today she started to fetch a bunch from the garden patch.",
+                "She will use her teeth to chop each one for the chicks.",
+                "‘Here is some for you and some for me,’ she says, and they are very glad."
+            ], "Sharing the carrot lunch,"),
+            ("The secret tunnel", "s-blends", [
+                "Hazel knows a snug tunnel that slips under the stone wall.",
+                "Before the stars come out, she sneaks into it without a sound.",
+                "She does not stop until she smells the sweet garden leaves.",
+                "After a small snack, she skips home, and no one sees her go."
+            ], "By the secret bunny tunnel,"),
+            ("A carrot-patch plan", "l-blends", [
+                "Hazel plans to plant a carrot patch big enough for every friend.",
+                "She found a flat, sunny place where the clay is soft.",
+                "Two other bunnies came to dig, and they worked until the clouds turned pink.",
+                "When the green tops come up, people all around will clap."
+            ], "Planning the carrot patch,"),
+            ("The first shoots", "sh", [
+                "Hazel’s seeds pushed up fresh green shoots after a soft spring shower.",
+                "There were some by the fence and some in the shade.",
+                "She could not wait, but she knew she should let them grow.",
+                "‘I would call that a fine start,’ she said, and her nose shook with joy."
+            ], "Checking the green shoots,"),
+            ("The thirsty patch", "th-wh", [
+                "Then three hot days went by, and the carrot tops grew thin.",
+                "Hazel did not know which way to carry water from the pond.",
+                "‘Why not ask Puddle?’ thought Hazel, and she hopped down the path.",
+                "They could walk there together, and that was the right thing to do."
+            ], "On the way to the pond,"),
+            ("A water chain", "ch", [
+                "Today the friends made a chain to reach from the pond to the patch.",
+                "Puddle started to fill each cup, and Scout chose to carry them.",
+                "Maple let them use her back to fetch much more.",
+                "‘Play here by me,’ said Hazel, and the chore felt very much like a game."
+            ], "Along the water chain,"),
+            ("The carrot feast", "s-blends", [
+                "After the rain, Hazel’s carrots stand tall on strong green stems.",
+                "She pulls them up and does a bunny binky before she stops to smile.",
+                "Her friends wash the carrots and stack them into a small, sweet pile.",
+                "No one goes hungry, and don’t worry, the patch will grow again next spring."
+            ], "At the carrot feast,")
+        ]),
+        cat("puddle", "Puddle", "🐥", "#7FB7BE", "meadow", "rainy days", 255, "lily pad", "lily pads", "🪷", "the puddle splash", "💦", [
+            ("The rainy-day chick", "ch", [
+                "Puddle hatched by the pond on a very rainy day in March.",
+                "He started to cheep, and each raindrop made him chuckle.",
+                "Today he likes to perch on a branch and watch the drops.",
+                "‘Come here and play with me,’ he calls, and soon the pond will be full of friends."
+            ], "By the rainy pond,"),
+            ("The lily-pad sweeper", "s-blends", [
+                "Puddle sweeps the lily pads so small frogs have clean places to sit.",
+                "Before the sun is up, he swims out and starts to scrub.",
+                "He does not skip a spot, and he doesn’t splash the snails.",
+                "After that, he will wash his feet and slide into the reeds."
+            ], "Sweeping the lily pads,"),
+            ("A brave float", "l-blends", [
+                "Puddle once floated across the whole pond to bring back a lost blue feather.",
+                "He found it on a flat stone, close to the tall plants.",
+                "Two other ducklings came to cheer, and they clapped their wings.",
+                "He glided home around the reeds, glad that he had worked so hard."
+            ], "Floating across the pond,"),
+            ("A splashy wish", "sh", [
+                "Puddle wishes he could host a splash show for every friend.",
+                "There would be a stage by the shore made of shiny shells.",
+                "Some friends could dash, and some could shake their feathers.",
+                "He does not know when it will be, but he will call them all."
+            ], "Dreaming up the splash show,"),
+            ("Getting things ready", "th-wh", [
+                "Puddle thinks about where each friend should stand for the show.",
+                "He marks the path with white pebbles so they know which way to walk.",
+                "Then he tells them when to jump and what to say.",
+                "That is why their smiles are wide, and everything feels right."
+            ], "Marking the pebble path,"),
+            ("Not a drop", "ch", [
+                "Today the sky is very dry, and the pond is too low to splash much.",
+                "Puddle started to watch each cloud and scratch his chin.",
+                "‘Rain would be such a help,’ he said to a finch on a branch.",
+                "‘Stay here with me,’ chirped the finch, ‘and we can use the creek.’"
+            ], "Watching for rain clouds,"),
+            ("A stream of help", "s-blends", [
+                "Scout and Maple scoop a small path so the stream can spill into the pond.",
+                "Before long, the water starts to swirl, and the pond steps up higher.",
+                "Puddle does a happy spin, and no one stands still.",
+                "After the work, the friends wash off the mud, and they don’t stop smiling."
+            ], "Digging the little stream,"),
+            ("The splash show", "l-blends", [
+                "People and animals came from all around to clap for the splash show.",
+                "Two frogs flipped off a plank, and the other ducklings glided in a ring.",
+                "Puddle found his place and did the biggest puddle splash of all.",
+                "Then clouds rolled in, rain fell, and all were glad they had worked so hard."
+            ], "At the splash show,")
+        ]),
+        cat("bramble", "Bramble", "🦔", "#A47148", "meadow", "crunchy leaves", 265, "acorn", "acorns", "🌰", "the hedgehog roll", "🍂", [
+            ("The shy snuffler", "s-blends", [
+                "Bramble was found asleep under a stack of crunchy leaves by a stump.",
+                "Before she peeks out, she sniffs the air and stays very still.",
+                "She does not speak much, but her small smile is sweet.",
+                "After a while, she steps into the sun, and no one makes a sound."
+            ], "Beside the mossy stump,"),
+            ("The acorn keeper", "l-blends", [
+                "Bramble found a hollow log and made it a place to keep acorns safe.",
+                "Two squirrels came by, glad to see a clean, dry spot.",
+                "She worked to pile the acorns in a cluster under a blanket of leaves.",
+                "When cold winds blow around, the other animals come for a snack."
+            ], "Inside the hollow log,"),
+            ("Braver than her prickles", "sh", [
+                "One night, a little mouse was lost in the shadows by the shed.",
+                "Bramble could hear a hush and then a shaky squeak.",
+                "There were no stars, but she would not rush away.",
+                "‘I know the way,’ she said, and she shuffled ahead to show the mouse home."
+            ], "In the evening shadows,"),
+            ("A leafy thought", "th-wh", [
+                "Bramble thinks a leaf slide would be the best thing in the meadow.",
+                "She knows where the hill is and which way the leaves fall.",
+                "With a thick pile at the bottom, they could all jump in.",
+                "That is why she whispers her plan to the moths, who say it sounds right."
+            ], "Planning the leaf slide,"),
+            ("Leaves by the bunch", "ch", [
+                "Today Bramble started to fetch leaves for the slide, a bunch at a time.",
+                "She can use her prickles to catch each one as she rolls.",
+                "A robin on a branch chirped, ‘Let me help you reach the top.’",
+                "It will be a very big job, but here she goes, ready to play."
+            ], "Gathering leaves for the slide,"),
+            ("A sticky spot", "s-blends", [
+                "The slide is too slow, for the damp leaves stick and do not slip.",
+                "Bramble stops to think before she starts again.",
+                "She does not stamp her feet; she spreads the leaves to dry in the sun.",
+                "After lunch they will grow crisp, and no leaf will stay stuck."
+            ], "Drying the damp leaves,"),
+            ("Helpers on the hill", "l-blends", [
+                "Hazel and Scout came around the hill with a flat sled of dry leaves.",
+                "The other helpers worked to fluff the pile and clear the stones.",
+                "Two cats, Sprout and Ginger, found a plank to make the slide glide.",
+                "‘Come and climb up,’ they called, and Bramble’s face began to glow."
+            ], "On the leafy hill,"),
+            ("The whoosh down", "sh", [
+                "Bramble tucked into a ball and did her hedgehog roll with a whoosh.",
+                "She shot down the slide and landed in a crunchy leaf shower.",
+                "There were cheers by the hill, and some friends could not wait for a turn.",
+                "‘I wish you would all call this our slide,’ she said in a shy, happy voice."
+            ], "At the bottom of the leaf slide,")
+        ]),
+        cat("maple", "Maple", "🐴", "#BC6C25", "meadow", "red apples", 280, "apple", "apples", "🍎", "the happy trot", "🎠", [
+            ("The gentle newcomer", "l-blends", [
+                "Maple came to the meadow barn with a blue ribbon on her mane.",
+                "She found a clean stall and a plump pile of clover.",
+                "Two cats, Clover and Moon, came around to greet her.",
+                "The other animals were glad, for she let the small ones climb on her back."
+            ], "In the meadow barn,"),
+            ("Apples to share", "sh", [
+                "Maple knows which apples in the orchard are fresh and sweet.",
+                "There were some on a low branch that she could reach with a gentle shake.",
+                "She would push them by the fence so the short animals could share.",
+                "You might call her the kindest pony, and she shines when she hears it."
+            ], "Under the orchard branches,"),
+            ("The thunder night", "th-wh", [
+                "One night the thunder rumbled, and three small chicks did not know where to go.",
+                "Maple stood with them and showed them the way to the barn.",
+                "They could walk under her thick, warm mane the whole path.",
+                "That is why they say she is brave, and their hearts feel light when she is near."
+            ], "On the path to the barn,"),
+            ("An orchard wish", "ch", [
+                "Maple hopes to hold a harvest lunch beneath the orchard trees.",
+                "Today she started to choose which apples to pick for each friend.",
+                "There will be a bench for the chicks and a chair for the cats.",
+                "‘Sit here by me and play,’ she will say, and it will be a very cheerful day."
+            ], "Planning the harvest lunch,"),
+            ("Stacking the baskets", "s-blends", [
+                "Before the sun is high, Maple starts to stack baskets by the stable.",
+                "She steps into the orchard and stops under a tree full of red apples.",
+                "Her friends spread a cloth and wash each apple until it sparkles.",
+                "No one snacks yet, and they don’t stop until every basket is full."
+            ], "Stacking apple baskets,"),
+            ("A basket tumble", "l-blends", [
+                "A full basket slid off the cart, and apples rolled across the flat ground.",
+                "Maple found some in the flowers and some close to the plum tree.",
+                "Two helpers came, and the other animals worked to place them back.",
+                "Soon people all around could come and see a clean, glowing pile."
+            ], "Picking up the rolling apples,"),
+            ("Shade for everyone", "sh", [
+                "The noon sun was sharp, and there were no trees by the long table.",
+                "Maple knew she could push the old sheet up on some poles.",
+                "‘I know it would make fine shade,’ she said, and Scout dashed to help.",
+                "Soon a wide shadow fell, and they could call the lunch ready."
+            ], "Under the shady sheet,"),
+            ("The harvest lunch", "th-wh", [
+                "Then the friends sat together with apples, carrots, and warm bread.",
+                "Maple did her happy trot the whole way around the white cloth.",
+                "They thanked her, and she showed them where to jump in the hay.",
+                "‘This is the right place for us,’ they say, and that is why their meadow feels like home."
+            ], "At the harvest lunch,")
         ])
     ]
 
@@ -323,8 +840,14 @@ enum CatContent {
         EducationalSkill(id: "subtraction", displayName: "Subtraction"),
         EducationalSkill(id: "odd-even", displayName: "Odd and even"),
         EducationalSkill(id: "skip-5", displayName: "Skip counting by 5"),
-        EducationalSkill(id: "skip-10", displayName: "Skip counting by 10")
+        EducationalSkill(id: "skip-10", displayName: "Skip counting by 10"),
+        EducationalSkill(id: "doubles", displayName: "Doubles"),
+        EducationalSkill(id: "skip-2", displayName: "Skip counting by 2")
     ]
+
+    /// The six skills each chapter rotates through. Chapter two uses bigger numbers and swaps in doubles and twos.
+    static let chapterOneSkillIDs = ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10"]
+    static let chapterTwoSkillIDs = ["addition", "subtraction", "doubles", "odd-even", "skip-2", "skip-5"]
 
     private static func cat(
         _ id: String,
@@ -371,7 +894,7 @@ enum CatAppConfiguration {
         enabledSkills: CatContent.skills,
         narration: NarrationSettings(language: "en-US", normalRate: 0.46, slowRate: 0.36, pitch: 1.08, bundledManifestName: "cat-audio-manifest"),
         rewards: RewardVocabulary(singular: "friendship heart", plural: "friendship hearts", celebration: "Your friendship grew!"),
-        progression: ProgressionRules(model: "friendship", pointsPerSuccess: 1, unlockThresholds: [0, 4, 6, 9, 12, 18]),
+        progression: ProgressionRules(model: "friendship", pointsPerSuccess: 1, unlockThresholds: [0, 4, 6, 9, 12, 18, 100, 150, 255, 265, 280]),
         storageNamespace: "com.mkilgore.CatMathAdventure.kate",
         featureFlags: FeatureFlags(["journal": true, "visualHints": true, "narratedPrompts": true])
     )

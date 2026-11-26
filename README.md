@@ -27,7 +27,14 @@ xcodebuild -project SharkExplorer.xcodeproj -scheme CatMathAdventure \
   -destination 'generic/platform=iOS Simulator' build
 ```
 
-Run tests on an installed simulator by replacing `<UDID>`:
+The quick check before a commit, and the slow one afterwards:
+
+```sh
+tools/test.sh fast   # content checks and unit tests for both apps, about two minutes
+tools/test.sh slow   # on-screen walkthroughs, including all 30 shark missions, about 30 minutes
+```
+
+To run a scheme by hand on an installed simulator, replace `<UDID>`:
 
 ```sh
 xcodebuild -project SharkExplorer.xcodeproj -scheme SharkExplorer \

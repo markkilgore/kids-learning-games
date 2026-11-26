@@ -9,7 +9,7 @@ struct CatJournalView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            KidTopBar("Kate’s Cat Journal", subtitle: "\(game.progress.journaledCatIDs.count) of \(CatContent.cats.count) friends", back: KidBackButton {
+            KidTopBar("Kate’s Friend Journal", subtitle: "\(game.progress.journaledCatIDs.count) of \(CatContent.cats.count) friends", back: KidBackButton {
                 narration.stop()
                 game.showHome()
             })
@@ -86,8 +86,7 @@ private struct CatJournalCard: View {
                     .buttonStyle(PressableStyle())
                     .accessibilityLabel("Hear \(story.title)")
                 }
-                if stories.count < cat.backstory.count {
-                    let left = CatDefinition.puzzlesPerRound - cat.solvedInRound(for: friendship)
+                if let left = cat.puzzlesUntilNextPage(for: friendship) {
                     Label("Solve \(left) more \(left == 1 ? "puzzle" : "puzzles") for the next page", systemImage: "lock.fill")
                         .font(.kidLabel)
                         .foregroundStyle(theme.mutedInk)

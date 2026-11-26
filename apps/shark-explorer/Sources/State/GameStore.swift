@@ -108,11 +108,17 @@ final class GameStore {
     private static let unlockAllForTesting = ProcessInfo.processInfo.arguments.contains("-unlockAllSharks")
 
     func isUnlocked(_ shark: SharkDefinition) -> Bool {
-        Self.unlockAllForTesting || completedSharks.contains(shark.id) || completedCount >= shark.unlockAt
+        Self.unlockAllForTesting || completedSharks.contains(shark.id) || (missionsNeeded(for: shark) == 0 && starsNeeded(for: shark) == 0)
     }
 
     /// How many more missions reveal a locked shark.
     func missionsNeeded(for shark: SharkDefinition) -> Int { max(0, shark.unlockAt - completedCount) }
+
+    /// Stars earned on every shark together.
+    var totalStars: Int { ContentStore.shared.catalog.sharks.reduce(0) { $0 + stars(for: $1) } }
+
+    /// How many more stars reveal a locked shark.
+    func starsNeeded(for shark: SharkDefinition) -> Int { max(0, (shark.unlockStars ?? 0) - totalStars) }
 
     func open(_ shark: SharkDefinition) {
         guard isUnlocked(shark) else { return }

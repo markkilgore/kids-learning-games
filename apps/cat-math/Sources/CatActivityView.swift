@@ -114,7 +114,7 @@ struct CatActivityView: View {
                 }
                 .scrollBounceBehavior(.basedOnSize)
                 Label(
-                    friendship >= cat.lastPageFriendship
+                    !cat.roundOpensPage(from: friendship - cat.solvedInRound(for: friendship))
                         ? "Solve \(left) \(left == 1 ? "puzzle" : "puzzles") to earn a treat"
                         : "Solve \(left) \(left == 1 ? "puzzle" : "puzzles") to turn the page",
                     systemImage: "pawprint.fill"
@@ -141,7 +141,7 @@ struct CatActivityView: View {
     private func tellStory() {
         var lines = cat.storyBeat(for: friendship).sentences
         if cat.solvedInRound(for: friendship) == 0 {
-            lines.append((friendship >= cat.lastPageFriendship ? CatLine.roundBonus : CatLine.roundIntro).text)
+            lines.append((cat.roundOpensPage(from: friendship) ? CatLine.roundIntro : CatLine.roundBonus).text)
         }
         narration.playSequence(lines, gap: 0.45)
     }
@@ -645,7 +645,7 @@ private struct CatRewardCard: View {
     }
 }
 
-private extension CatDefinition {
+extension CatDefinition {
     /// Bundled drawing of the thing this cat's puzzles count, e.g. `count-stepping-stone`.
     var countingArtName: String { "count-" + storyItem.replacingOccurrences(of: " ", with: "-") }
 

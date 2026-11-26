@@ -31,6 +31,8 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
     let mapX: Double
     let mapY: Double
     let unlockAt: Int
+    /// Stars needed across all sharks before this one appears, on top of `unlockAt`. Earning them means replaying earlier sharks at harder levels.
+    var unlockStars: Int?
     let discover: NarrativePair
     let topics: [ExploreTopic]
     let traits: [TraitDefinition]
@@ -58,6 +60,7 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
             mapX: mapX,
             mapY: mapY,
             unlockAt: unlockAt,
+            unlockStars: unlockStars,
             discover: discover,
             topics: topics + expansion.topics,
             traits: traits,
@@ -134,6 +137,7 @@ struct MissionPlay: Equatable {
         "sawSweep": MissionPlay(targetAsset: "mission-shrimp", targetSymbol: "🦐"),
         "glowLure": MissionPlay(targetAsset: "mission-glow", targetSymbol: "🟢"),
         "sandAmbush": MissionPlay(targetAsset: "mission-flatfish", targetSymbol: "🐟"),
+        "squidHunt": MissionPlay(targetAsset: "mission-squid", targetSymbol: "🦑"),
         "shellCrunch": MissionPlay(targetAsset: "mission-urchin", targetSymbol: "🟣")
     ]
 }

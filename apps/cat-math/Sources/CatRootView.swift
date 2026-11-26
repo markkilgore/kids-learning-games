@@ -6,12 +6,13 @@ import UIKit
 
 /// Interface lines Cat Math speaks; the text lives in `ui-lines.json` so the audio generator sees it too.
 enum CatLine: String, CaseIterable {
-    case retry, locked, newFriend, roundIntro, roundBonus, newPage, count11, count12, count13, count14
+    case retry, locked, newFriend, roundIntro, roundBonus, newPage
+    case count11, count12, count13, count14, count15, count16, count17, count18, count19, count20
 
     private static let lines = SpokenLines()
     var text: String { Self.lines[rawValue] }
 
-    /// "One!" through "Fourteen!", spoken as a child taps objects to count them.
+    /// "One!" through "Twenty!", spoken as a child taps objects to count them.
     static func count(_ number: Int) -> String {
         let shared = WeeklySpokenLines.counts
         if shared.indices.contains(number - 1) { return shared[number - 1] }
@@ -76,24 +77,29 @@ struct CatRootView: View {
     }
 }
 
-/// House or garden behind every screen: bundled artwork when present, otherwise a soft gradient with decorations.
+/// House, garden or meadow behind every screen: bundled artwork when present, otherwise a soft gradient with decorations.
 private struct CatBackdrop: View {
     let locationID: String
     /// Emoji decorations only suit the home screen; elsewhere they show through translucent cards.
     var showsDecorations = true
 
-    private var isGarden: Bool { locationID == "garden" }
+    private var isGarden: Bool { locationID != "house" }
+    private var gradient: [Color] {
+        switch locationID {
+        case "garden": [Color(hex: "#DDF4D4"), Color(hex: "#BDE0FE"), Color(hex: "#FFF4D6")]
+        case "meadow": [Color(hex: "#FFF1C1"), Color(hex: "#D8F0C0"), Color(hex: "#BDE0FE")]
+        default: [Color(hex: "#FFF4D6"), Color(hex: "#FADADD"), Color(hex: "#E9D5FF")]
+        }
+    }
 
     var body: some View {
         ZStack {
             LinearGradient(
-                colors: isGarden
-                    ? [Color(hex: "#DDF4D4"), Color(hex: "#BDE0FE"), Color(hex: "#FFF4D6")]
-                    : [Color(hex: "#FFF4D6"), Color(hex: "#FADADD"), Color(hex: "#E9D5FF")],
+                colors: gradient,
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
-            if let image = UIImage(named: isGarden ? "backdrop-garden" : "backdrop-house") {
+            if let image = UIImage(named: "backdrop-\(locationID)") {
                 // Drawn as an overlay so the picture's own size never stretches the screen layout.
                 Color.clear
                     .overlay { Image(uiImage: image).resizable().scaledToFill() }

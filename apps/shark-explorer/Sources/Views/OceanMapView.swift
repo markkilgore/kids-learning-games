@@ -44,6 +44,7 @@ struct OceanMapView: View {
 
             HStack(spacing: 18) {
                 Label("\(game.completedCount) of \(catalog.sharks.count) shark pages", systemImage: "book.closed.fill")
+                Label("\(game.totalStars) stars", systemImage: "star.fill")
                 ProgressView(value: Double(game.completedCount), total: Double(max(catalog.sharks.count, 1)))
                     .tint(.yellow)
                     .frame(width: 180)
@@ -59,8 +60,10 @@ struct OceanMapView: View {
         .foregroundStyle(.white)
         .overlay(alignment: .bottom) {
             if let lockedHint {
-                let needed = game.missionsNeeded(for: lockedHint)
-                KidToast(symbol: "🔒", text: "Finish \(needed) more shark \(needed == 1 ? "mission" : "missions") to find this shark")
+                let needed = game.missionsNeeded(for: lockedHint), stars = game.starsNeeded(for: lockedHint)
+                KidToast(symbol: needed > 0 ? "🔒" : "⭐️", text: needed > 0
+                    ? "Finish \(needed) more shark \(needed == 1 ? "mission" : "missions") to find this shark"
+                    : "Earn \(stars) more \(stars == 1 ? "star" : "stars") to find this shark")
                     .padding(.bottom, 80)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
@@ -73,13 +76,13 @@ struct OceanMapView: View {
         }
         .onDisappear {
             // Stop only the map's own hints; the next screen may already be speaking.
-            if [SharkLine.newShark.text, SharkLine.locked.text].contains(narration.text) { narration.stop() }
+            if [SharkLine.newShark.text, SharkLine.locked.text, SharkLine.lockedStars.text].contains(narration.text) { narration.stop() }
         }
     }
 
     private func showLockedHint(for shark: SharkDefinition) {
         feedback.play(.wrong)
-        narration.play(SharkLine.locked.text, after: 0.5)
+        narration.play((game.missionsNeeded(for: shark) > 0 ? SharkLine.locked : .lockedStars).text, after: 0.5)
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { lockedHint = shark }
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(4))

@@ -143,8 +143,17 @@ final class CatGameStore {
     private let progressStore: NamespacedProgressStore<CatProgress>?
     private var didLoad = false
 
+    /// UI tests pass `-heartsWithEveryCat 25` to start where a long-time player is, without touching saved progress.
+    private static let heartsForTesting: Int? = {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard let index = arguments.firstIndex(of: "-heartsWithEveryCat"), arguments.indices.contains(index + 1) else { return nil }
+        return Int(arguments[index + 1])
+    }()
+
     init(baseDirectory: URL? = nil) {
-        progressStore = try? NamespacedProgressStore(namespace: CatAppConfiguration.value.storageNamespace, baseDirectory: baseDirectory)
+        progressStore = Self.heartsForTesting == nil
+            ? try? NamespacedProgressStore(namespace: CatAppConfiguration.value.storageNamespace, baseDirectory: baseDirectory)
+            : nil
     }
 
     var totalFriendship: Int { progress.friendship.values.reduce(0, +) }
@@ -157,6 +166,12 @@ final class CatGameStore {
         guard !didLoad else { return }
         didLoad = true
         progress = (try? progressStore?.load(default: CatProgress())) ?? CatProgress()
+        if let hearts = Self.heartsForTesting {
+            for cat in CatContent.cats where cat.locationID != "meadow" {
+                progress.friendship[cat.id] = hearts
+                progress.journaledCatIDs.insert(cat.id)
+            }
+        }
     }
 
     func friendship(for cat: CatDefinition) -> Int { progress.friendship[cat.id, default: 0] }

@@ -1,7 +1,20 @@
 {
-  "schemaVersion": 1,
-  "id": "kate-cat-math",
-  "locations": ["house", "garden"],
-  "catCount": 10,
-  "skills": ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10"]
+ "schemaVersion": 1,
+ "id": "kate-cat-math",
+ "locations": [
+  "house",
+  "garden",
+  "meadow"
+ ],
+ "catCount": 15,
+ "skills": [
+  "counting",
+  "addition",
+  "subtraction",
+  "odd-even",
+  "skip-5",
+  "skip-10",
+  "doubles",
+  "skip-2"
+ ]
 }

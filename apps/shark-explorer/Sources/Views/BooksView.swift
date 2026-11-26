@@ -117,7 +117,7 @@ struct BooksView: View {
                             .background(.black.opacity(0.25))
                     }
                 }
-                .frame(height: 62)
+                .frame(height: 52)
                 .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
                 // Twenty pages share two rows, so a name may take two short lines.
                 Text(earned ? shark.name.replacingOccurrences(of: " Shark", with: "") : "Hidden")
@@ -128,7 +128,7 @@ struct BooksView: View {
                     .frame(height: 36)
             }
             .padding(8)
-            .frame(maxWidth: .infinity, minHeight: 122)
+            .frame(maxWidth: .infinity, minHeight: 108)
             .kidCard(selected ? .raised : .regular, tint: earned ? shark.tint.opacity(selected ? 0.9 : 0.45) : nil)
             .overlay(RoundedRectangle(cornerRadius: KidTheme.Radius.medium, style: .continuous).strokeBorder(.yellow.opacity(selected ? 1 : 0), lineWidth: 4))
         }

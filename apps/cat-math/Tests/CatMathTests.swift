@@ -20,9 +20,15 @@ final class CatMathTests: XCTestCase {
     }
 
     func testCatScopeHasTwoLocationsTenCatsAndRequiredSkills() {
-        XCTAssertEqual(Set(CatContent.locations.map(\.id)), ["house", "garden"])
-        XCTAssertEqual(CatContent.cats.count, 10)
-        XCTAssertEqual(Set(CatAppConfiguration.value.enabledSkills.map(\.id)), ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10"])
+        XCTAssertEqual(CatContent.locations.map(\.id), ["house", "garden", "meadow"])
+        XCTAssertEqual(CatContent.cats.count, 15)
+        XCTAssertEqual(CatContent.cats.filter { $0.locationID == "meadow" }.count, 5)
+        XCTAssertEqual(Set(CatAppConfiguration.value.enabledSkills.map(\.id)), ["counting", "addition", "subtraction", "odd-even", "skip-5", "skip-10", "doubles", "skip-2"])
+        for cat in CatContent.cats {
+            XCTAssertNotNil(UIImage(named: cat.artName), "no portrait for \(cat.id)")
+            XCTAssertNotNil(UIImage(named: cat.countingArtName), "no counting picture for \(cat.id)")
+        }
+        for location in CatContent.locations { XCTAssertNotNil(UIImage(named: "backdrop-\(location.id)"), location.id) }
     }
 
     func testFriendshipUnlocksAndPersistsWithoutSharkVocabulary() {
@@ -90,14 +96,39 @@ final class CatMathTests: XCTestCase {
 
     func testEachCatHasAProgressivelyRevealedFourPartBackstory() {
         for cat in CatContent.cats {
-            XCTAssertEqual(cat.backstory.count, 4, cat.id)
+            XCTAssertEqual(cat.backstory.count, 8, cat.id)
             // A page opens each time a round of three puzzles is finished.
             XCTAssertEqual(cat.revealedStory(for: 0).count, 1, cat.id)
             XCTAssertEqual(cat.revealedStory(for: 2).count, 1, cat.id)
             XCTAssertEqual(cat.revealedStory(for: 3).count, 2, cat.id)
             XCTAssertEqual(cat.revealedStory(for: 8).count, 3, cat.id)
             XCTAssertEqual(cat.revealedStory(for: 9).count, 4, cat.id)
-            XCTAssertEqual(cat.revealedStory(for: 20).count, 4, cat.id)
+            // Chapter two opens a page a round from its start: 27 hearts for the cats, 12 for the meadow animals.
+            let start = cat.chapterTwoStart
+            XCTAssertEqual(start, cat.locationID == "meadow" ? 12 : 27, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: start - 1).count, 4, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: start).count, 5, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: start + 8).count, 7, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: start + 9).count, 8, cat.id)
+            XCTAssertEqual(cat.revealedStory(for: 200).count, 8, cat.id)
+            XCTAssertEqual(cat.lastPageFriendship, start + 9, cat.id)
+            XCTAssertEqual(cat.puzzlesUntilNextPage(for: 9), start - 9, cat.id)
+            XCTAssertEqual(cat.puzzlesUntilNextPage(for: start + 1), 2, cat.id)
+            XCTAssertNil(cat.puzzlesUntilNextPage(for: start + 9), cat.id)
+            XCTAssertTrue(cat.roundOpensPage(from: start - 3), cat.id)
+            XCTAssertFalse(cat.roundOpensPage(from: start + 9), cat.id)
+            for friendship in start..<(start + 30) {
+                let challenge = MathChallengeFactory.challenge(for: cat, friendship: friendship)
+                XCTAssertTrue(CatContent.chapterTwoSkillIDs.contains(challenge.skill.id), challenge.prompt)
+                XCTAssertTrue(challenge.prompt.hasPrefix(cat.storyBeat(for: friendship).puzzleLead), challenge.prompt)
+                XCTAssertTrue((1...100).contains(challenge.answer) && challenge.choices.contains(challenge.answer), challenge.prompt)
+                switch challenge.visual {
+                case .add(let first, let second): XCTAssertLessThanOrEqual(first + second, 20, challenge.prompt)
+                case .subtract(let total, let taken): XCTAssertTrue(total <= 20 && taken < total, challenge.prompt)
+                case .pairs(let total): XCTAssertLessThanOrEqual(total, 16, challenge.prompt)
+                default: break
+                }
+            }
             XCTAssertEqual(cat.solvedInRound(for: 7), 1, cat.id)
             // Every puzzle in a round is set in that round's story scene.
             for friendship in 0..<12 {
@@ -105,7 +136,8 @@ final class CatMathTests: XCTestCase {
                 XCTAssertTrue(MathChallengeFactory.challenge(for: cat, friendship: friendship).prompt.hasPrefix(lead), cat.id)
                 XCTAssertEqual(lead, cat.backstory[friendship / 3].puzzleLead, cat.id)
             }
-            XCTAssertEqual(Set(cat.backstory.map(\.id)).count, 4, cat.id)
+            XCTAssertEqual(Set(cat.backstory.map(\.id)).count, 8, cat.id)
+            XCTAssertEqual(Set(cat.backstory.map(\.puzzleLead)).count, 8, cat.id)
         }
     }
 
@@ -273,7 +305,7 @@ final class CatMathTests: XCTestCase {
     func testAdaptiveDifficultyOnlyRanksRecordedVariantsOfTheSameSkill() {
         var changed = 0
         for cat in CatContent.cats {
-            for friendship in 0..<40 {
+            for friendship in 0..<(cat.lastPageFriendship + 24) {
                 let usual = MathChallengeFactory.challenge(for: cat, friendship: friendship)
                 let easier = MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: -1)
                 let harder = MathChallengeFactory.challenge(for: cat, friendship: friendship, difficulty: 1)
@@ -290,7 +322,7 @@ final class CatMathTests: XCTestCase {
                 XCTAssertLessThanOrEqual(size(easier), size(usual), easier.prompt)
                 XCTAssertGreaterThanOrEqual(size(harder), size(usual), harder.prompt)
                 // The variant is a prompt the usual rotation also produces for this cat.
-                let recorded = Set((0..<36).map { MathChallengeFactory.challenge(for: cat, friendship: $0).prompt })
+                let recorded = Set((0..<(cat.lastPageFriendship + 18)).map { MathChallengeFactory.challenge(for: cat, friendship: $0).prompt })
                 XCTAssertTrue(recorded.contains(easier.prompt))
                 XCTAssertTrue(recorded.contains(harder.prompt))
                 if easier.prompt != usual.prompt || harder.prompt != usual.prompt { changed += 1 }

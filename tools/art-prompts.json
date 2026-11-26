@@ -94,6 +94,31 @@
       "file": "apps/cat-math/Resources/Art/cat-starlight.png",
       "size": "1024x1024",
       "prompt": "Portrait of a silver-white cat surrounded by glowing fireflies, centred, whole head and body visible with generous margin, on a plain soft background tinted #9D4EDD at low saturation."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-scout.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a floppy-eared brown puppy with a white chest sitting with a small blue squeaky ball between its paws, centred, whole head and body visible with generous margin, on a plain soft background tinted #C68642 at low saturation. Same cute big-eyed storybook look as the reference kittens."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-hazel.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a soft grey baby bunny with long ears sitting up and holding a small orange carrot, centred, whole head and body visible with generous margin, on a plain soft background tinted #9A8C98 at low saturation. Same cute big-eyed storybook look as the reference kittens."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-puddle.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a fluffy yellow duckling standing in a tiny rain puddle with a few raindrops falling, centred, whole head and body visible with generous margin, on a plain soft background tinted #7FB7BE at low saturation. Same cute big-eyed storybook look as the reference kittens."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-bramble.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a small shy brown hedgehog with soft spines sitting among a few crunchy autumn leaves and one acorn, centred, whole head and body visible with generous margin, on a plain soft background tinted #A47148 at low saturation. Same cute big-eyed storybook look as the reference kittens."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-maple.png",
+      "size": "1024x1024",
+      "prompt": "Portrait of a gentle chestnut pony foal with a cream mane, sitting or standing facing us, with a red apple at its feet, centred, whole head and body visible with generous margin, on a plain soft background tinted #BC6C25 at low saturation. Same cute big-eyed storybook look as the reference kittens."
     }
   ],
   "scenes": [
@@ -114,6 +139,12 @@
       "size": "2048x1280",
       "style": "style",
       "prompt": "Stylised flat world map for a children's ocean explorer game: deep teal-blue oceans filling most of the frame, continents as simple soft green-teal shapes in their real positions, gentle wave lines, a compass rose in one corner. Dark overall so white labels placed on top stay readable. No text, no labels, no animals."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/backdrop-meadow.png",
+      "size": "2048x1536",
+      "style": "catStyle",
+      "prompt": "Sunny meadow seen straight on: soft grassy hills, wildflowers, a small duck pond with lily pads, a little red barn and an apple tree in the distance, a wooden fence. Very pale and low-contrast so dark text placed on top stays readable. No animals, no people."
     }
   ],
   "iconStyle": "Warm hand-painted storybook illustration for ages 5-7, soft gouache texture, rounded friendly shapes, gentle pastel palette, one simple clear subject that reads instantly when shown small, bold readable silhouette, no text, no watermark, no borders.",
@@ -924,6 +955,90 @@
       "size": "256x256",
       "composition": "tileComposition",
       "prompt": "A single Port Jackson shark egg case: a dark brown leathery cone shaped like a big auger drill bit or screw, with two broad spiral flanges winding around it from the wide rounded top down to a pointed tip, standing upright. Not a snail shell, no round coil."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-squid.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A friendly pink-orange squid with a pointed mantle, two fins, big eye and long trailing arms, side view. Natural, no smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-air-gulp.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A sand tiger shark with its snout just breaking the sea surface, gulping a bubble of air, a few bubbles around its mouth, blue water below and sky above in a small rounded vignette. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-frill.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Close-up side view of a frilled shark's head: dark brown eel-like head with six frilly ruffled gill slits forming a collar around its neck. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-puff.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small spotted yellow-brown swell shark puffed up round like a balloon, wedged between two rocks. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-small.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A tiny dark-brown lanternshark lying beside a yellow pencil of the same length, to show how small it is. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-spin.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A slender grey spinner shark leaping out of the sea and twisting in the air, with a spiral swirl of white spray around it. Scientifically accurate, friendly but natural, not scary, no cartoon smile."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-kelp.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "A small rounded underwater vignette of tall golden-brown kelp fronds rising through blue-green water with shafts of light."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-white-tip.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "One large rounded paddle-shaped grey shark fin with a mottled white tip, shown on its own above a hint of the shark's back in blue water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-squid.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A friendly pink-orange squid with a pointed mantle, two small fins, a big eye and trailing arms, side view."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-stick.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A short brown wooden stick with one tiny twig stub, slightly diagonal."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-carrot.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A bright orange carrot with a dark-green leafy top."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-lily-pad.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A round dark-green lily pad seen from slightly above with a small pink water lily flower on it. Use dark olive green for the pad, never bright green."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-acorn.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A brown acorn with its textured cap."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/count-apple.png",
+      "size": "256x256",
+      "composition": "cutoutComposition",
+      "prompt": "A shiny red apple with a short brown stem and one small dark-green leaf."
     }
   ],
   "catHappyPoses": [
@@ -989,6 +1104,41 @@
       "reference": "apps/cat-math/Resources/Art/cat-starlight.png",
       "style": "catStyle",
       "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same cat: same breed look, fur colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with the cat's object (glowing fireflies) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-scout-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-scout.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same puppy: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes, tail wagging and both front paws raised in a little cheer, with its object (blue squeaky ball) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-hazel-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-hazel.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same bunny: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes, mid happy hop with both front paws raised and ears flopping, with its object (orange carrot) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-puddle-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-puddle.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same duckling: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: an open happy beak with happy squinting eyes and both little wings raised in a cheer, splashing in its puddle, with its object (rain puddle) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-bramble-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-bramble.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same hedgehog: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes and both front paws raised in a little cheer, with its object (acorn and leaves) visible beside it."
+    },
+    {
+      "file": "apps/cat-math/Resources/Art/cat-maple-happy.png",
+      "size": "512x512",
+      "reference": "apps/cat-math/Resources/Art/cat-maple.png",
+      "style": "catStyle",
+      "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same pony foal: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes, prancing with one front hoof raised and mane bouncing, with its object (red apple) visible beside it."
     }
   ]
 }
