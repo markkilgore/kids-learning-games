@@ -12,8 +12,16 @@ final class SharkTourUITests: XCTestCase {
         if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
         snap("01-map")
 
-        app.buttons.matching(NSPredicate(format: "label == %@", "Hidden shark, locked")).firstMatch.tap()
-        snap("02-map-locked-hint")
+        // A locked shark may be on any ocean page, or nowhere once every shark has been found.
+        let locked = app.buttons.matching(NSPredicate(format: "label == %@", "Hidden shark, locked")).firstMatch
+        for tab in ["Pacific", "Atlantic", "Indian", "Cold Seas"] where !locked.isHittable {
+            app.buttons[tab].tap()
+            sleep(1)
+        }
+        if locked.isHittable {
+            locked.tap()
+            snap("02-map-locked-hint")
+        }
 
         // The map is one page per ocean; the whale shark lives on the Indian Ocean page.
         app.buttons["Atlantic"].tap()
