@@ -40,7 +40,8 @@ final class ContentStore {
             schemaVersion: decodedCatalog.schemaVersion,
             sharks: decodedCatalog.sharks.map { $0.expanded(with: expansions[$0.id]) },
             vocabulary: decodedCatalog.vocabulary,
-            expansions: decodedCatalog.expansions
+            expansions: decodedCatalog.expansions,
+            maps: decodedCatalog.maps
         )
         try validate(catalog)
         return catalog
@@ -48,7 +49,7 @@ final class ContentStore {
 
     static func validate(_ catalog: GameCatalog) throws {
         guard catalog.schemaVersion == 1 else { throw ContentError.invalidCatalog("unsupported schema") }
-        guard catalog.sharks.count == 30 else { throw ContentError.invalidCatalog("expected exactly 30 sharks") }
+        guard catalog.sharks.count == 35 else { throw ContentError.invalidCatalog("expected exactly 35 sharks") }
         // Each finished mission must leave another shark to visit until every page is collected.
         let unlockOrder = catalog.sharks.map(\.unlockAt).sorted()
         guard unlockOrder.enumerated().allSatisfy({ $0.element <= $0.offset }) else { throw ContentError.invalidCatalog("a shark can never be unlocked") }

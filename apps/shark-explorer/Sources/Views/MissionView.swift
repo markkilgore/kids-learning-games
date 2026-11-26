@@ -11,9 +11,11 @@ struct MissionStars: View {
     var body: some View {
         HStack(spacing: size * 0.15) {
             ForEach(1...MissionChallenges.maxLevel, id: \.self) { star in
-                Image(systemName: star <= count ? "star.fill" : "star")
+                // The last two are super stars, from the hardest levels.
+                let isSuper = star > MissionChallenges.plainStars
+                Image(systemName: star <= count ? (isSuper ? "sparkle" : "star.fill") : (isSuper ? "sparkle" : "star"))
                     .font(.system(size: size, weight: .bold))
-                    .foregroundStyle(star <= count ? .yellow : .white.opacity(0.5))
+                    .foregroundStyle(star <= count ? (isSuper ? Color.cyan : .yellow) : .white.opacity(isSuper ? 0.3 : 0.5))
             }
         }
         .accessibilityElement()
@@ -129,7 +131,7 @@ struct MissionFlowView: View {
             .overlay(alignment: .top) {
                 if let round = currentRound {
                     // Tapping the question says it again.
-                    Button { narration.play(round.spoken) } label: {
+                    Button { say(round) } label: {
                         Label(round.shown, systemImage: "speaker.wave.2.fill")
                             .font(.kidTitle)
                             .padding(.horizontal, 26)
@@ -146,8 +148,22 @@ struct MissionFlowView: View {
             .task {
                 // The intro's own narration is cleared as it leaves; start the first question after that.
                 try? await Task.sleep(for: .milliseconds(900))
-                if phase == .play, progress == 0, let round = currentRound { narration.play(round.spoken) }
+                if phase == .play, progress == 0, let round = currentRound { say(round) }
             }
+    }
+
+    /// Asks the round's question. Sentence rounds then play the sentence itself from its line's recording.
+    private func say(_ round: MissionChallenge) {
+        guard let echo = round.echo else {
+            narration.play(round.spoken)
+            return
+        }
+        narration.play(round.spoken) {
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(250))
+                if currentRound == round, phase == .play { narration.speakWords(echo.words, in: echo.line) }
+            }
+        }
     }
 
     private var currentRound: MissionChallenge? { rounds.indices.contains(progress) ? rounds[progress] : nil }
@@ -197,7 +213,12 @@ struct MissionFlowView: View {
         missedThisRound = true
         feedback.play(.wrong)
         guard let round = currentRound else { return }
-        narration.playSequence([SharkLine.tryAgain.text, round.spoken], gap: 0.3)
+        narration.play(SharkLine.tryAgain.text) { [round] in
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(300))
+                if currentRound == round, phase == .play { say(round) }
+            }
+        }
     }
 
     private func hit(_ value: Int) {
@@ -211,7 +232,12 @@ struct MissionFlowView: View {
         withAnimation(.spring(response: 0.2, dampingFraction: 0.4)) { counterPop = true }
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7).delay(0.15)) { counterPop = false }
         guard value >= rounds.count else {
-            if let next = currentRound { narration.play(next.spoken, after: 0.8) }
+            if let next = currentRound {
+                Task { @MainActor in
+                    try? await Task.sleep(for: .milliseconds(800))
+                    if currentRound == next, phase == .play { say(next) }
+                }
+            }
             return
         }
         narration.stop()
@@ -240,7 +266,7 @@ struct MissionFlowView: View {
         phase = .reward
         feedback.play(.celebrate)
         celebration += 1
-        let line: SharkLine = result.isNewPage ? .pageEarned : result.isNewStar ? .starEarned : result.stars >= MissionChallenges.maxLevel ? .allStars : .starNextTime
+        let line: SharkLine = result.isNewPage ? .pageEarned : result.isNewStar ? (result.stars > MissionChallenges.plainStars ? .superStarEarned : .starEarned) : result.stars >= MissionChallenges.maxLevel ? .allStars : .starNextTime
         // The fanfare is two seconds long; the voice waits for most of it.
         narration.play(line.text, after: 1.5)
     }
@@ -299,7 +325,7 @@ private struct MissionRewardView: View {
                     HStack(spacing: 12) {
                         MissionStars(count: reward.stars, size: 34)
                             .scaleEffect(shown ? 1 : 0.4, anchor: .leading)
-                        Text(reward.isNewStar ? "New star!" : reward.stars >= MissionChallenges.maxLevel ? "All three stars!" : "Right the first time earns the next star")
+                        Text(reward.isNewStar ? (reward.stars > MissionChallenges.plainStars ? "New super star!" : "New star!") : reward.stars >= MissionChallenges.maxLevel ? "Every star!" : "Right the first time earns the next star")
                             .font(.kidLabel)
                             .foregroundStyle(reward.isNewStar ? .yellow : theme.mutedInk)
                     }

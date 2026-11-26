@@ -109,6 +109,30 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
         speak(AVSpeechUtterance(string: word))
     }
 
+    /// Speaks a run of words from `sentence` (one short sentence out of a longer recorded line), cut from the
+    /// line's own recording so the voice stays the same.
+    public func speakWords(_ words: Range<Int>, in sentence: String, completion: (() -> Void)? = nil) {
+        stop()
+        let allTokens = sentence.wordTokens
+        guard !words.isEmpty, allTokens.indices.contains(words.lowerBound), allTokens.indices.contains(words.upperBound - 1) else {
+            completion?()
+            return
+        }
+        text = sentence
+        tokens = allTokens
+        self.completion = completion
+        guard settings.voiceEnabled else {
+            finish()
+            return
+        }
+        isolatedWordIndex = words.lowerBound
+        state = .playing
+        if startRecording(for: sentence, from: words.lowerBound, through: words.upperBound - 1) { return }
+        let start = allTokens[words.lowerBound].range.location
+        let last = allTokens[words.upperBound - 1].range
+        speak(AVSpeechUtterance(string: (sentence as NSString).substring(with: NSRange(location: start, length: last.location + last.length - start))))
+    }
+
     public func replay() {
         guard !text.isEmpty else { return }
         play(text, completion: completion)
@@ -159,16 +183,17 @@ public final class NarrationCoordinator: NSObject, AVSpeechSynthesizerDelegate {
 
     // MARK: Recorded narration
 
-    private func startRecording(for sentence: String, from wordIndex: Int?) -> Bool {
+    private func startRecording(for sentence: String, from wordIndex: Int?, through lastWordIndex: Int? = nil) -> Bool {
         guard let entry = manifest.entry(for: sentence),
               let url = manifest.clipURL(for: sentence),
               let audioPlayer = try? AVAudioPlayer(contentsOf: url) else { return false }
         timeline = WordTimeline(sentence: sentence, timedWords: entry.words)
         if let wordIndex {
-            guard timeline.spans.indices.contains(wordIndex) else { return false }
+            let lastIndex = lastWordIndex ?? wordIndex
+            guard timeline.spans.indices.contains(wordIndex), timeline.spans.indices.contains(lastIndex) else { return false }
             let span = timeline.spans[wordIndex]
             audioPlayer.currentTime = max(0, span.start - 0.03)
-            sliceEnd = min(audioPlayer.duration, span.end + 0.05)
+            sliceEnd = min(audioPlayer.duration, timeline.spans[lastIndex].end + 0.05)
         }
         player = audioPlayer
         activeSource = ObjectIdentifier(audioPlayer)

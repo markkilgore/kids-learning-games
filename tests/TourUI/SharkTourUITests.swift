@@ -9,12 +9,16 @@ final class SharkTourUITests: XCTestCase {
     func testTourEveryScreen() {
         continueAfterFailure = false
         app.launch()
-        if !app.buttons["shark-whale"].waitForExistence(timeout: 5) { tap("kid-back") }
+        if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
         snap("01-map")
 
         app.buttons.matching(NSPredicate(format: "label == %@", "Hidden shark, locked")).firstMatch.tap()
         snap("02-map-locked-hint")
 
+        // The map is one page per ocean; the whale shark lives on the Indian Ocean page.
+        app.buttons["Atlantic"].tap()
+        snap("02b-map-atlantic")
+        app.buttons["Indian"].tap()
         tap("shark-whale")
         snap("03-encounter")
 
@@ -83,19 +87,50 @@ final class SharkTourUITests: XCTestCase {
         snap("19-settings-progress")
     }
 
+    /// The two super-star levels: sums and take-aways to ten, numbers to twenty, and whole sentences to read.
+    func testSuperStarLevelsCanBePlayed() {
+        continueAfterFailure = false
+        let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
+        for level in ["4", "5"] {
+            app.terminate()
+            app.launchArguments = ["-unlockAllSharks", "-missionLevel", level]
+            app.launch()
+            if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
+            app.buttons["Atlantic"].tap()
+            tap("shark-nurse")
+            tap("play-mission")
+            let start = app.buttons["Start!"]
+            XCTAssertTrue(start.waitForExistence(timeout: 15))
+            tapWhenReady(start)
+            let questions = app.buttons["start-questions"]
+            for attempt in 0..<40 where !questions.exists {
+                if attempt < 5 { snap("level-\(level)-round-\(attempt + 1)") }
+                if target.waitForExistence(timeout: 3) { target.tap() }
+                sleep(1)
+            }
+            XCTAssertTrue(questions.waitForExistence(timeout: 5), "level \(level) never completed")
+            tap("kid-back")
+            tap("kid-back")
+        }
+    }
+
     /// Plays every shark's mission to the end, so a mission kind that cannot be finished is caught.
     func testEveryMissionCanBePlayedToTheEnd() {
         continueAfterFailure = true
         app.launchArguments += ["-unlockAllSharks"]
         app.launch()
-        if !app.buttons["shark-whale"].waitForExistence(timeout: 5) { tap("kid-back") }
-        let sharks = ["whale", "hammerhead", "nurse", "great-white", "wobbegong", "thresher", "tiger", "epaulette", "goblin", "greenland",
-                      "mako", "basking", "zebra", "blacktip-reef", "lemon", "bull", "sawshark", "cookiecutter", "angel", "port-jackson",
-                      "blue", "leopard", "sand-tiger", "frilled", "megamouth", "swell", "dwarf-lantern", "spinner", "oceanic-whitetip", "pyjama"]
+        if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
+        let oceans: [(tab: String, sharks: [String])] = [
+            ("Pacific", ["great-white", "wobbegong", "epaulette", "goblin", "cookiecutter", "angel", "leopard", "frilled", "megamouth", "swell", "sixgill"]),
+            ("Atlantic", ["hammerhead", "nurse", "thresher", "mako", "lemon", "bull", "blue", "sand-tiger", "dwarf-lantern", "spinner", "bonnethead"]),
+            ("Indian", ["whale", "tiger", "zebra", "blacktip-reef", "oceanic-whitetip", "pyjama", "bamboo"]),
+            ("Cold Seas", ["greenland", "basking", "sawshark", "port-jackson", "salmon", "porbeagle"])
+        ]
         let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
         let questions = app.buttons["start-questions"]
 
-        for shark in sharks {
+        for (tab, shark) in oceans.flatMap({ ocean in ocean.sharks.map { (ocean.tab, $0) } }) {
+            app.buttons[tab].tap()
             tap("shark-\(shark)")
             tap("play-mission")
             let start = app.buttons["Start!"]
@@ -114,7 +149,7 @@ final class SharkTourUITests: XCTestCase {
             tap("kid-back")
             tap("confirm-stop")
             tap("kid-back")
-            XCTAssertTrue(app.buttons["shark-whale"].waitForExistence(timeout: 8), "\(shark): did not return to the map")
+            XCTAssertTrue(app.buttons["my-books"].waitForExistence(timeout: 8), "\(shark): did not return to the map")
         }
     }
 

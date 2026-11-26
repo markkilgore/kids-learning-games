@@ -146,6 +146,12 @@ final class MissionScene: SKScene {
             bubble.addChild(label("\(number)", size: 112))
         case .word(let word):
             bubble.addChild(label(word, size: word.count > 3 ? 72 : 84))
+        case .phrase(let text):
+            let phrase = label(text, size: 40)
+            phrase.numberOfLines = 0
+            phrase.preferredMaxLayoutWidth = plate.width - 32
+            phrase.lineBreakMode = .byWordWrapping
+            bubble.addChild(phrase)
         }
         return bubble
     }

@@ -45,7 +45,7 @@ struct SharkProgressSection: View {
                     }
                 }
             }
-            Text("Mission rounds are counting, comparing and one more or less to ten, and reading words from each shark’s sound-it-out sentences. A second and third star need nearly every round right first time.")
+            Text("Mission rounds are counting, comparing and one more or less to ten, and reading words from each shark’s sound-it-out sentences. The fourth and fifth stars (super stars) add sums and take-aways to ten, numbers to twenty, and reading whole short sentences. Every star after the first needs nearly every round right first time.")
                 .font(.kidLabel)
                 .foregroundStyle(theme.mutedInk)
         }

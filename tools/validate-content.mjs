@@ -8,9 +8,18 @@ const catalog = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
 
 if (catalog.schemaVersion !== 1) errors.push('schemaVersion must be 1');
-if (catalog.sharks?.length !== 30) errors.push('catalog must contain exactly 30 sharks');
+if (catalog.sharks?.length !== 35) errors.push('catalog must contain exactly 35 sharks');
 if (!catalog.sharks.map((s) => s.unlockAt).sort((a, b) => a - b).every((unlockAt, index) => unlockAt <= index)) errors.push('a shark can never be unlocked');
 if (!catalog.sharks.map((s) => s.unlockStars ?? 0).sort((a, b) => a - b).every((stars, index) => stars <= 3 * index)) errors.push('a shark needs more stars than can be earned');
+if (!catalog.sharks.map((s) => s.unlockSuperStars ?? 0).sort((a, b) => a - b).every((stars, index) => stars <= 2 * index)) errors.push('a shark needs more super stars than can be earned');
+const mapIDs = new Set((catalog.maps ?? []).map((page) => page.id));
+if (!mapIDs.size) errors.push('catalog needs map pages');
+for (const page of mapIDs) {
+  const spots = catalog.sharks.filter((s) => s.map === page).map((s) => `${s.mapX},${s.mapY}`);
+  if (!spots.length) errors.push(`map page ${page} has no sharks`);
+  if (new Set(spots).size !== spots.length) errors.push(`map page ${page} has two sharks in one spot`);
+}
+for (const shark of catalog.sharks) if (!mapIDs.has(shark.map)) errors.push(`${shark.id}: unknown map page ${shark.map}`);
 if (new Set(catalog.sharks.map((s) => s.id)).size !== catalog.sharks.length) errors.push('shark IDs must be unique');
 const vocabulary = new Set(catalog.vocabulary.map((word) => word.id));
 const expansions = new Map((catalog.expansions ?? []).map((expansion) => [expansion.sharkID, expansion]));

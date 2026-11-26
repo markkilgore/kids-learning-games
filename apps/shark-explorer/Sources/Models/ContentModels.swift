@@ -8,6 +8,21 @@ struct GameCatalog: Codable {
     let sharks: [SharkDefinition]
     let vocabulary: [VocabularyDefinition]
     let expansions: [SharkExpansion]?
+    /// The pages of the map, swiped between. Oceans today; other worlds (prehistoric seas, dinosaurs) can be added as pages.
+    var maps: [MapPage]?
+
+    var mapPages: [MapPage] { maps ?? [MapPage(id: "ocean", name: "Ocean", symbol: "map.fill")] }
+
+    func sharks(on page: MapPage) -> [SharkDefinition] {
+        sharks.filter { ($0.map ?? mapPages[0].id) == page.id }
+    }
+}
+
+struct MapPage: Codable, Identifiable, Hashable {
+    let id: String
+    /// Short enough for a tab, e.g. "Pacific".
+    let name: String
+    let symbol: String
 }
 
 struct SharkExpansion: Codable, Hashable {
@@ -33,6 +48,10 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
     let unlockAt: Int
     /// Stars needed across all sharks before this one appears, on top of `unlockAt`. Earning them means replaying earlier sharks at harder levels.
     var unlockStars: Int?
+    /// Super stars (a shark's fourth and fifth) needed across all sharks before this one appears.
+    var unlockSuperStars: Int?
+    /// The map page this shark is on; `mapX` and `mapY` are positions on that page.
+    var map: String?
     let discover: NarrativePair
     let topics: [ExploreTopic]
     let traits: [TraitDefinition]
@@ -61,6 +80,8 @@ struct SharkDefinition: Codable, Identifiable, Hashable {
             mapY: mapY,
             unlockAt: unlockAt,
             unlockStars: unlockStars,
+            unlockSuperStars: unlockSuperStars,
+            map: map,
             discover: discover,
             topics: topics + expansion.topics,
             traits: traits,

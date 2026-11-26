@@ -10,9 +10,9 @@ import Narration
 final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.sharks.count, 30)
-        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 210)
-        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 90)
+        XCTAssertEqual(catalog.sharks.count, 35)
+        XCTAssertEqual(catalog.sharks.flatMap(\.topics).count, 245)
+        XCTAssertEqual(catalog.sharks.flatMap(\.questions).count, 105)
         XCTAssertGreaterThanOrEqual(catalog.vocabulary.count, 30)
         XCTAssertTrue(catalog.vocabulary.allSatisfy { word in catalog.sharks.contains { $0.vocabularyIDs.contains(word.id) } })
         XCTAssertTrue(catalog.sharks.allSatisfy { $0.topics.count == 7 })
@@ -116,7 +116,7 @@ final class ContentStoreTests: XCTestCase {
         let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.unlockstars", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
         let game = GameStore(progressStore: storage)
         let sharks = ContentStore.shared.catalog.sharks
-        let firstTwenty = sharks.filter { $0.unlockStars == nil }
+        let firstTwenty = sharks.filter { $0.unlockStars == nil && $0.unlockSuperStars == nil }
         let starLocked = sharks.filter { $0.unlockStars != nil }.sorted { ($0.unlockStars ?? 0) < ($1.unlockStars ?? 0) }
         XCTAssertEqual(firstTwenty.count, 20)
         XCTAssertEqual(starLocked.count, 10)
@@ -133,6 +133,46 @@ final class ContentStoreTests: XCTestCase {
         // Every new shark can be reached: with all earlier ones at three stars there are always enough.
         for (index, shark) in starLocked.enumerated() {
             XCTAssertLessThanOrEqual(shark.unlockStars ?? 0, 3 * (20 + index), shark.id)
+        }
+    }
+
+    func testMapPagesHoldEverySharkWithoutOverlap() throws {
+        let catalog = ContentStore.shared.catalog
+        XCTAssertEqual(catalog.mapPages.map(\.id), ["pacific", "atlantic", "indian", "cold"])
+        XCTAssertEqual(catalog.mapPages.flatMap { catalog.sharks(on: $0) }.count, catalog.sharks.count, "every shark is on exactly one page")
+        for page in catalog.mapPages {
+            let sharks = catalog.sharks(on: page)
+            XCTAssertFalse(sharks.isEmpty, page.id)
+            XCTAssertNotNil(UIImage(systemName: page.symbol), page.symbol)
+            for (index, shark) in sharks.enumerated() {
+                XCTAssertTrue((0.05...0.95).contains(shark.mapX) && (0.1...0.9).contains(shark.mapY), shark.id)
+                for other in sharks[(index + 1)...] {
+                    XCTAssertTrue(abs(shark.mapX - other.mapX) >= 0.19 || abs(shark.mapY - other.mapY) >= 0.25, "\(shark.id) sits on \(other.id)")
+                }
+            }
+        }
+    }
+
+    func testNewestSharksNeedSuperStarsFromTheHardestLevels() throws {
+        let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.superstars", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
+        let game = GameStore(progressStore: storage)
+        let sharks = ContentStore.shared.catalog.sharks
+        let superLocked = sharks.filter { $0.unlockSuperStars != nil }.sorted { ($0.unlockSuperStars ?? 0) < ($1.unlockSuperStars ?? 0) }
+        let earlier = sharks.filter { $0.unlockSuperStars == nil }
+        XCTAssertEqual(superLocked.count, 5)
+        for shark in earlier { game.completeMission(for: shark, starLevel: 3, in: sharks) }
+        XCTAssertEqual(game.totalSuperStars, 0)
+        XCTAssertTrue(superLocked.allSatisfy { !game.isUnlocked($0) }, "three stars on everything is not enough")
+        XCTAssertEqual(game.superStarsNeeded(for: superLocked[0]), 3)
+        XCTAssertEqual(game.missionLevel(for: earlier[0]), 4)
+        for shark in earlier.prefix(3) { game.completeMission(for: shark, starLevel: 4, in: sharks) }
+        XCTAssertEqual(game.totalSuperStars, 3)
+        XCTAssertTrue(game.isUnlocked(superLocked[0]))
+        XCTAssertFalse(game.isUnlocked(superLocked[1]))
+        XCTAssertEqual(game.completeMission(for: earlier[0], starLevel: 5, in: sharks).stars, 5)
+        XCTAssertEqual(game.missionLevel(for: earlier[0]), 5)
+        for (index, shark) in superLocked.enumerated() {
+            XCTAssertLessThanOrEqual(shark.unlockSuperStars ?? 0, 2 * (earlier.count + index), shark.id)
         }
     }
 
@@ -312,6 +352,8 @@ final class ContentStoreTests: XCTestCase {
         var generator = SeededRandomNumberGenerator(seed: 7)
         for shark in sharks {
             let mine = MissionChallenges.readingWords(in: [shark], reading: reading)
+            let mySentences = Set(MissionChallenges.sentences(in: [shark]).map(\.text))
+            XCTAssertGreaterThanOrEqual(mySentences.count, 4, "\(shark.id) needs short sentences to read")
             for level in 1...MissionChallenges.maxLevel {
                 for _ in 0..<12 {
                     let rounds = MissionChallenges.rounds(for: shark, level: level, sharks: sharks, reading: reading, using: &generator)
@@ -320,6 +362,7 @@ final class ContentStoreTests: XCTestCase {
                     for round in rounds {
                         XCTAssertTrue(spoken.contains(round.spoken), round.spoken)
                         XCTAssertTrue((2...3).contains(round.choices.count), "\(shark.id): \(round.spoken) \(round.choices)")
+                        if case .phrase = round.choices[round.answer] {} else { XCTAssertNil(round.echo) }
                         XCTAssertEqual(round.choices.count, round.choices.reduce(into: [MissionChallenge.Choice]()) { if !$0.contains($1) { $0.append($1) } }.count, "repeated choice in \(round.spoken)")
                         let right = round.choices[round.answer]
                         switch right {
@@ -329,8 +372,31 @@ final class ContentStoreTests: XCTestCase {
                             if round.spoken == MissionChallenges.fewerLine { XCTAssertTrue(round.choices.allSatisfy { if case .group(let other) = $0 { other >= count } else { false } }) }
                             if round.spoken != MissionChallenges.moreLine, round.spoken != MissionChallenges.fewerLine { XCTAssertEqual(round.spoken, MissionChallenges.countLine(count)) }
                         case .numeral(let number):
-                            XCTAssertTrue((1...10).contains(number))
-                            XCTAssertTrue([MissionChallenges.numeralLine(number), MissionChallenges.oneMoreLine(number - 1), MissionChallenges.oneLessLine(number + 1)].contains(round.spoken), round.spoken)
+                            XCTAssertTrue((1...20).contains(number))
+                            if round.shown.contains("+") || round.shown.contains("−") {
+                                // "3 + 2 = ?" on screen, "What is 3 plus 2?" aloud.
+                                let parts = round.shown.split(separator: " ").compactMap { Int($0) }
+                                XCTAssertEqual(parts.count, 2, round.shown)
+                                XCTAssertEqual(number, round.shown.contains("+") ? parts[0] + parts[1] : parts[0] - parts[1], round.shown)
+                                XCTAssertEqual(round.spoken, round.shown.contains("+") ? MissionChallenges.plusLine(parts[0], parts[1]) : MissionChallenges.minusLine(parts[0], parts[1]))
+                                XCTAssertGreaterThan(level, MissionChallenges.plainStars)
+                            } else {
+                                XCTAssertTrue([MissionChallenges.numeralLine(number), MissionChallenges.oneMoreLine(number - 1), MissionChallenges.oneLessLine(number + 1)].contains(round.spoken), round.spoken)
+                            }
+                        case .phrase(let text):
+                            XCTAssertGreaterThan(level, MissionChallenges.plainStars)
+                            XCTAssertEqual(round.spoken, SharkLine.listen.text)
+                            XCTAssertEqual(round.shown, SharkLine.listen.text)
+                            let echo = try XCTUnwrap(round.echo)
+                            // The sentence that is played is the one on the right bubble, and it comes from this shark.
+                            let lineWords = echo.line.wordTokens.map(\.text)
+                            XCTAssertEqual(Array(lineWords[echo.words]), text.wordTokens.map(\.text), text)
+                            XCTAssertTrue(mySentences.contains(text), "\(shark.id): \(text)")
+                            XCTAssertEqual(round.choices.count, 3)
+                            for case .phrase(let other) in round.choices {
+                                XCTAssertEqual(other.wordTokens.count, text.wordTokens.count, "\(text) / \(other)")
+                                XCTAssertTrue(other.wordTokens.allSatisfy { reading.mark($0.text) != nil }, other)
+                            }
                         case .word(let word):
                             XCTAssertEqual(round.spoken, MissionChallenges.wordLine(word))
                             XCTAssertTrue((mine.decodable + mine.heart).contains(word), "\(shark.id): \(word) is not in this shark's sentences")

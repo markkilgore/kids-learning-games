@@ -4,7 +4,7 @@ import Narration
 
 /// Interface lines Shark Explorer speaks; the text lives in `ui-lines.json` so the audio generator sees it too.
 enum SharkLine: String, CaseIterable {
-    case locked, newShark, pageEarned, traitUnlocked, topicDone, leave, lockedStars, tryAgain, starEarned, starNextTime, allStars
+    case locked, newShark, pageEarned, traitUnlocked, topicDone, leave, lockedStars, lockedSuperStars, tryAgain, listen, starEarned, superStarEarned, starNextTime, allStars
 
     private static let lines = SpokenLines()
     var text: String { Self.lines[rawValue] }

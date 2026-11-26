@@ -9,5 +9,8 @@
   "tryAgain": "Not that one. Try again!",
   "starEarned": "You earned a new star!",
   "starNextTime": "Good work! Get them right the first time to earn the next star.",
-  "allStars": "You did it! This shark has all three stars."
+  "allStars": "You did it! This shark has every star.",
+  "lockedSuperStars": "This shark is still hiding. Earn super stars on your other sharks to find it.",
+  "listen": "Tap the words you hear.",
+  "superStarEarned": "You earned a super star!"
 }

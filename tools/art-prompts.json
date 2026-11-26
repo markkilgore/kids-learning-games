@@ -145,6 +145,30 @@
       "size": "2048x1536",
       "style": "catStyle",
       "prompt": "Sunny meadow seen straight on: soft grassy hills, wildflowers, a small duck pond with lily pads, a little red barn and an apple tree in the distance, a wooden fence. Very pale and low-contrast so dark text placed on top stays readable. No animals, no people."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/map-pacific.jpg",
+      "size": "1280x720",
+      "style": "style",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, layered paper-cut watercolor texture, soft ocean palette, stylised flat map matching ocean-map.png. Deep teal-blue ocean fills most of the frame, land as simple soft green-teal shapes at the edges, gentle wave lines, a small compass rose in one corner. Dark overall so white labels stay readable. No text, no labels, no animals. Subject: the Pacific Ocean: Asia and Australia along the left edge, North and South America along the right edge, a few small island dots in the middle."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/map-atlantic.jpg",
+      "size": "1280x720",
+      "style": "style",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, layered paper-cut watercolor texture, soft ocean palette, stylised flat map matching ocean-map.png. Deep teal-blue ocean fills most of the frame, land as simple soft green-teal shapes at the edges, gentle wave lines, a small compass rose in one corner. Dark overall so white labels stay readable. No text, no labels, no animals. Subject: the Atlantic Ocean: North and South America along the left edge, Europe and Africa along the right edge."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/map-indian.jpg",
+      "size": "1280x720",
+      "style": "style",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, layered paper-cut watercolor texture, soft ocean palette, stylised flat map matching ocean-map.png. Deep teal-blue ocean fills most of the frame, land as simple soft green-teal shapes at the edges, gentle wave lines, a small compass rose in one corner. Dark overall so white labels stay readable. No text, no labels, no animals. Subject: the Indian Ocean: Africa along the left edge, India and Asia along the top, Australia at the lower right."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/map-cold.jpg",
+      "size": "1280x720",
+      "style": "style",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, layered paper-cut watercolor texture, soft ocean palette, stylised flat map matching ocean-map.png. Deep teal-blue ocean fills most of the frame, land as simple soft green-teal shapes at the edges, gentle wave lines, a small compass rose in one corner. Dark overall so white labels stay readable. No text, no labels, no animals. Subject: cold polar seas: darker, icier blue water with pale ice sheets and icebergs along the top edge and a few floating ice floes; a strip of snowy coast at one side."
     }
   ],
   "iconStyle": "Warm hand-painted storybook illustration for ages 5-7, soft gouache texture, rounded friendly shapes, gentle pastel palette, one simple clear subject that reads instantly when shown small, bold readable silhouette, no text, no watermark, no borders.",
@@ -1039,6 +1063,24 @@
       "size": "256x256",
       "composition": "cutoutComposition",
       "prompt": "A shiny red apple with a short brown stem and one small dark-green leaf."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-seagrass.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a small rounded underwater vignette of green seagrass blades growing from pale sand in shallow sunlit water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-warm-body.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a whole grey-and-white salmon shark in side view swimming in icy pale-blue water with a few small ice floes above, and a soft warm orange glow in the middle of its body to show it is warm inside."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-six-gills.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "side view of the front half of a bluntnose sixgill shark: broad rounded head, small green eye, and six long gill slits in a clear row behind the head."
     }
   ],
   "catHappyPoses": [

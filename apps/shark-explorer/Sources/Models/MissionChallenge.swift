@@ -10,6 +10,14 @@ struct MissionChallenge: Equatable {
         case group(Int)
         case numeral(Int)
         case word(String)
+        /// A whole short sentence to read.
+        case phrase(String)
+    }
+
+    /// Words to play from a longer recorded line, after the spoken instruction.
+    struct Echo: Equatable {
+        let line: String
+        let words: Range<Int>
     }
 
     let area: Area
@@ -20,13 +28,20 @@ struct MissionChallenge: Equatable {
     let choices: [Choice]
     /// Index of the right choice.
     let answer: Int
+    /// For sentence rounds: the sentence itself, played from its line's recording after `spoken`.
+    var echo: Echo?
 }
 
 /// Builds each mission's rounds from kindergarten skills: counting and comparing to ten, one more and one less,
 /// and reading the sound-it-out and heart words from that shark's own sentences.
 enum MissionChallenges {
-    static let maxLevel = 3
+    /// Levels one to three earn the yellow stars; four and five are the super stars.
+    static let plainStars = 3
+    static let maxLevel = 5
     static let listenPrompt = "Tap the word you hear."
+    static let listenSentencePrompt = "Tap the words you hear."
+    static func plusLine(_ first: Int, _ second: Int) -> String { "What is \(first) plus \(second)?" }
+    static func minusLine(_ total: Int, _ taken: Int) -> String { "What is \(total) take away \(taken)?" }
 
     static func countLine(_ count: Int) -> String { "Tap the group of \(count)." }
     static func numeralLine(_ number: Int) -> String { "Tap the number \(number)." }
@@ -68,9 +83,48 @@ enum MissionChallenges {
     /// Every line a mission round can speak, so each one gets a recording. Kept in step with `challengeLines` in tools/lib/lines.mjs.
     static func allSpokenLines(sharks: [SharkDefinition], reading: SharkReading) -> [String] {
         let words = readingWords(in: sharks, reading: reading)
-        return (1...10).map(countLine) + (1...10).map(numeralLine) + [moreLine, fewerLine]
-            + (1...9).map(oneMoreLine) + (2...10).map(oneLessLine)
+        var lines = (1...10).map(countLine) + (1...20).map(numeralLine) + [moreLine, fewerLine]
+            + (1...19).map(oneMoreLine) + (2...20).map(oneLessLine)
             + (words.decodable + words.heart).map(wordLine)
+        for first in 1...9 { lines += (1...(10 - first)).map { plusLine(first, $0) } }
+        for total in 2...10 { lines += (1..<total).map { minusLine(total, $0) } }
+        return lines + [listenSentencePrompt]
+    }
+
+    /// A short sentence inside one of a shark's sound-it-out lines.
+    struct Sentence: Equatable {
+        let text: String
+        let echo: MissionChallenge.Echo
+        var wordCount: Int { echo.words.count }
+        var words: [String] { text.wordTokens.map { $0.text.lowercased() } }
+    }
+
+    /// The sound-it-out lines of these sharks, split into their sentences of three to six words.
+    static func sentences(in sharks: [SharkDefinition]) -> [Sentence] {
+        var result: [Sentence] = []
+        var seen: Set<String> = []
+        for shark in sharks {
+            let narratives = [shark.discover] + shark.topics.map(\.narration)
+            for line in narratives.flatMap({ $0.decodable ?? [] }) {
+                let tokens = line.wordTokens
+                let whole = line as NSString
+                var start = 0
+                for (index, token) in tokens.enumerated() {
+                    let end = token.range.location + token.range.length
+                    let gap = index + 1 < tokens.count ? whole.substring(with: NSRange(location: end, length: tokens[index + 1].range.location - end)) : "."
+                    guard gap.contains(where: { ".!?".contains($0) }) else { continue }
+                    let from = tokens[start].range.location
+                    let stop = gap.firstIndex(where: { ".!?".contains($0) }).map { gap.distance(from: gap.startIndex, to: $0) + 1 } ?? 0
+                    let text = whole.substring(with: NSRange(location: from, length: min(end + stop, whole.length) - from))
+                    let words = start..<(index + 1)
+                    start = index + 1
+                    // A sentence must read the same on its own as it does inside its line.
+                    guard (3...6).contains(words.count), text.wordTokens.map(\.text) == tokens[words].map(\.text), seen.insert(text.lowercased()).inserted else { continue }
+                    result.append(Sentence(text: text, echo: MissionChallenge.Echo(line: line, words: words)))
+                }
+            }
+        }
+        return result
     }
 
     static func rounds(for shark: SharkDefinition, level: Int, sharks: [SharkDefinition], reading: SharkReading) -> [MissionChallenge] {
@@ -93,12 +147,25 @@ enum MissionChallenges {
         var targets = mine.decodable.filter { $0.count >= 3 }.shuffled(using: &generator)
         var hearts = mine.heart.shuffled(using: &generator)
         let heartPool = reading.heartWords.filter { $0.count >= 2 }
+        let sentencePool = level > plainStars ? sentences(in: sharks) : []
+        let wanted = level == 4 ? 3...4 : 4...6
+        let allMine = sentences(in: [shark])
+        let fitting = allMine.filter { wanted.contains($0.wordCount) }
+        var mySentences = (fitting.count >= 2 ? fitting : allMine).shuffled(using: &generator)
 
         var rounds: [MissionChallenge] = []
         for index in 0..<max(1, shark.mission.targetCount) {
             let turn = index / 2
             var round: MissionChallenge?
-            if !index.isMultiple(of: 2) {
+            if !index.isMultiple(of: 2), level > plainStars {
+                // The two hardest levels read whole sentences.
+                while round == nil, let target = mySentences.popLast() {
+                    let others = sentenceDistractors(for: target, in: sentencePool, using: &generator)
+                    guard others.count == 2 else { continue }
+                    round = build(.words, listenSentencePrompt, listenSentencePrompt, right: .phrase(target.text), others: others.map { .phrase($0.text) }, using: &generator)
+                    round?.echo = target.echo
+                }
+            } else if !index.isMultiple(of: 2) {
                 if level > 1, !turn.isMultiple(of: 2), let heart = hearts.popLast() {
                     round = word(heart, others: Array(heartPool.filter { $0 != heart }.shuffled(using: &generator).prefix(2)), using: &generator)
                 } else if let target = targets.popLast() {
@@ -118,13 +185,15 @@ enum MissionChallenges {
     // MARK: Numbers
 
     private enum MathKind {
-        case count, numeral, compare, oneMore, oneLess
+        case count, numeral, compare, oneMore, oneLess, teen, teenStep, plus, minus
 
         static func kinds(for level: Int) -> [MathKind] {
             switch level {
             case 1: [.count, .numeral, .count]
             case 2: [.count, .compare, .count]
-            default: [.oneMore, .oneLess, .compare]
+            case 3: [.oneMore, .oneLess, .compare]
+            case 4: [.plus, .teen, .teenStep]
+            default: [.minus, .plus, .teenStep]
             }
         }
     }
@@ -151,6 +220,28 @@ enum MissionChallenges {
             let number = Int.random(in: 1...9, using: &generator)
             let others = Array([number - 1, number, number + 2].filter { (1...10).contains($0) }.shuffled(using: &generator).prefix(2))
             return build(.math, oneMoreLine(number), oneMoreLine(number), right: .numeral(number + 1), others: others.map(Choice.numeral), using: &generator)
+        case .teen:
+            let number = Int.random(in: 11...20, using: &generator)
+            let others = Array((11...20).filter { $0 != number }.shuffled(using: &generator).prefix(2))
+            return build(.math, numeralLine(number), numeralLine(number), right: .numeral(number), others: others.map(Choice.numeral), using: &generator)
+        case .teenStep:
+            let up = Bool.random(using: &generator)
+            let number = up ? Int.random(in: 10...19, using: &generator) : Int.random(in: 11...20, using: &generator)
+            let answer = up ? number + 1 : number - 1
+            let others = Array([number, answer + (up ? 1 : -1), answer + (up ? -2 : 2)].filter { (8...22).contains($0) }.shuffled(using: &generator).prefix(2))
+            let line = up ? oneMoreLine(number) : oneLessLine(number)
+            return build(.math, line, line, right: .numeral(answer), others: others.map(Choice.numeral), using: &generator)
+        case .plus:
+            // Level four keeps sums small; level five goes all the way to ten.
+            let first = Int.random(in: 1...(level == 4 ? 5 : 8), using: &generator)
+            let second = Int.random(in: 1...min(level == 4 ? 4 : 9, 10 - first), using: &generator)
+            let others = neighbours(of: first + second, within: 1...12, using: &generator)
+            return build(.math, plusLine(first, second), "\(first) + \(second) = ?", right: .numeral(first + second), others: others.map(Choice.numeral), using: &generator)
+        case .minus:
+            let total = Int.random(in: 3...10, using: &generator)
+            let taken = Int.random(in: 1...min(total - 1, 5), using: &generator)
+            let others = neighbours(of: total - taken, within: 1...10, using: &generator)
+            return build(.math, minusLine(total, taken), "\(total) − \(taken) = ?", right: .numeral(total - taken), others: others.map(Choice.numeral), using: &generator)
         case .oneLess:
             let number = Int.random(in: 2...10, using: &generator)
             let others = Array([number - 2, number, number + 1].filter { (1...10).contains($0) }.shuffled(using: &generator).prefix(2))
@@ -181,6 +272,14 @@ enum MissionChallenges {
         case 2: return Array(Set(close.prefix(1) + far.prefix(1))).sorted()
         default: return Array(close.prefix(2))
         }
+    }
+
+    /// Other sentences with the same number of words, nearest first, so the words have to be read and not just counted.
+    private static func sentenceDistractors<Generator: RandomNumberGenerator>(for target: Sentence, in pool: [Sentence], using generator: inout Generator) -> [Sentence] {
+        let mine = target.words
+        let shared: (Sentence) -> Int = { other in zip(other.words, mine).filter { $0 == $1 }.count }
+        let same = pool.filter { $0.wordCount == target.wordCount && $0.words != mine }.shuffled(using: &generator)
+        return Array(same.sorted { shared($0) > shared($1) }.prefix(2))
     }
 
     private static func build<Generator: RandomNumberGenerator>(

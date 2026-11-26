@@ -12,8 +12,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Rhincodon_typus_420227950.jpg",
       "color": "#28B8C8",
       "region": "Tropical Open Water",
-      "mapX": 0.68,
-      "mapY": 0.61,
+      "mapX": 0.3,
+      "mapY": 0.2,
+      "map": "indian",
       "unlockAt": 0,
       "discover": {
         "decodable": [
@@ -278,8 +279,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_head.jpg",
       "color": "#54A7C7",
       "region": "Sandy Tropical Reef",
-      "mapX": 0.44,
-      "mapY": 0.61,
+      "mapX": 0.1,
+      "mapY": 0.2,
+      "map": "atlantic",
       "unlockAt": 0,
       "discover": {
         "decodable": [
@@ -544,8 +546,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Nurse_shark.jpg",
       "color": "#9A8065",
       "region": "Coral Reef",
-      "mapX": 0.32,
-      "mapY": 0.61,
+      "mapX": 0.2,
+      "mapY": 0.5,
+      "map": "atlantic",
       "unlockAt": 0,
       "discover": {
         "decodable": [
@@ -810,8 +813,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg",
       "color": "#5F7D91",
       "region": "Temperate Open Ocean",
-      "mapX": 0.14,
-      "mapY": 0.38,
+      "mapX": 0.1,
+      "mapY": 0.2,
+      "map": "pacific",
       "unlockAt": 1,
       "discover": {
         "decodable": [
@@ -1076,8 +1080,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Orectolobus_maculatus.jpg",
       "color": "#9A784F",
       "region": "Rocky Seafloor Reef",
-      "mapX": 0.86,
-      "mapY": 0.84,
+      "mapX": 0.2,
+      "mapY": 0.5,
+      "map": "pacific",
       "unlockAt": 1,
       "discover": {
         "decodable": [
@@ -1342,8 +1347,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Alopias_vulpinus.png",
       "color": "#567CB8",
       "region": "Open Ocean",
-      "mapX": 0.38,
-      "mapY": 0.38,
+      "mapX": 0.3,
+      "mapY": 0.8,
+      "map": "atlantic",
       "unlockAt": 3,
       "discover": {
         "decodable": [
@@ -1608,8 +1614,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg",
       "color": "#728461",
       "region": "Murky Tropical Coast",
-      "mapX": 0.38,
-      "mapY": 0.84,
+      "mapX": 0.4,
+      "mapY": 0.5,
+      "map": "indian",
       "unlockAt": 3,
       "discover": {
         "decodable": [
@@ -1874,8 +1881,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Hemiscyllium_ocellatum.jpg",
       "color": "#C19A55",
       "region": "Shallow Reef Flat",
-      "mapX": 0.92,
-      "mapY": 0.61,
+      "mapX": 0.3,
+      "mapY": 0.8,
+      "map": "pacific",
       "unlockAt": 3,
       "discover": {
         "decodable": [
@@ -2140,8 +2148,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Mistukurina_owstoni_museum_victoria.jpg",
       "color": "#B98291",
       "region": "Deep Ocean Slope",
-      "mapX": 0.86,
-      "mapY": 0.38,
+      "mapX": 0.3,
+      "mapY": 0.2,
+      "map": "pacific",
       "unlockAt": 6,
       "discover": {
         "decodable": [
@@ -2406,8 +2415,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Somniosus_microcephalus_okeanos.jpg",
       "color": "#567080",
       "region": "Arctic Deep Water",
-      "mapX": 0.44,
-      "mapY": 0.15,
+      "mapX": 0.3,
+      "mapY": 0.2,
+      "map": "cold",
       "unlockAt": 6,
       "discover": {
         "decodable": [
@@ -2672,8 +2682,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin2.JPG",
       "color": "#4A5FA8",
       "region": "Open Blue Ocean",
-      "mapX": 0.08,
-      "mapY": 0.61,
+      "mapX": 0.3,
+      "mapY": 0.2,
+      "map": "atlantic",
       "unlockAt": 10,
       "discover": {
         "decodable": [
@@ -2939,8 +2950,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_atlantic.jpg",
       "color": "#5E8C8A",
       "region": "Cool Coastal Seas",
-      "mapX": 0.5,
-      "mapY": 0.38,
+      "mapX": 0.4,
+      "mapY": 0.5,
+      "map": "cold",
       "unlockAt": 10,
       "discover": {
         "decodable": [
@@ -3206,8 +3218,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Stegostoma_fasciatum_thailand.jpg",
       "color": "#A8743C",
       "region": "Indo-Pacific Reef",
-      "mapX": 0.74,
-      "mapY": 0.38,
+      "mapX": 0.3,
+      "mapY": 0.8,
+      "map": "indian",
       "unlockAt": 11,
       "discover": {
         "decodable": [
@@ -3474,7 +3487,8 @@
       "color": "#C8684E",
       "region": "Shallow Coral Reef",
       "mapX": 0.5,
-      "mapY": 0.84,
+      "mapY": 0.2,
+      "map": "indian",
       "unlockAt": 12,
       "discover": {
         "decodable": [
@@ -3740,8 +3754,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Lemonshark.jpg",
       "color": "#A08A2E",
       "region": "Mangrove Coast",
-      "mapX": 0.2,
-      "mapY": 0.61,
+      "mapX": 0.4,
+      "mapY": 0.5,
+      "map": "atlantic",
       "unlockAt": 13,
       "discover": {
         "decodable": [
@@ -4007,8 +4022,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Bull_shark_(2007).jpg",
       "color": "#6E7F8D",
       "region": "Warm Coasts and Rivers",
-      "mapX": 0.56,
-      "mapY": 0.61,
+      "mapX": 0.5,
+      "mapY": 0.8,
+      "map": "atlantic",
       "unlockAt": 14,
       "discover": {
         "decodable": [
@@ -4274,8 +4290,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Pristiophorus_japonicus_2_(cropped).jpg",
       "color": "#A9824E",
       "region": "Sandy Southern Seafloor",
-      "mapX": 0.62,
-      "mapY": 0.84,
+      "mapX": 0.3,
+      "mapY": 0.8,
+      "map": "cold",
       "unlockAt": 15,
       "discover": {
         "decodable": [
@@ -4540,8 +4557,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squalelet_f%C3%A9roce_(Isistius_brasiliensis)_(Ifremer_00764-87574).jpg",
       "color": "#5B6FA8",
       "region": "Warm Deep Ocean",
-      "mapX": 0.14,
-      "mapY": 0.84,
+      "mapX": 0.4,
+      "mapY": 0.5,
+      "map": "pacific",
       "unlockAt": 16,
       "discover": {
         "decodable": [
@@ -4807,8 +4825,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squatina_squatina_120867959.jpg",
       "color": "#B08D62",
       "region": "Sandy Pacific Coast",
-      "mapX": 0.68,
-      "mapY": 0.15,
+      "mapX": 0.5,
+      "mapY": 0.8,
+      "map": "pacific",
       "unlockAt": 17,
       "discover": {
         "decodable": [
@@ -5073,8 +5092,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Port-jackson-shark-heterodontus-portusjacksoni-417888-large.jpg",
       "color": "#8C7A5E",
       "region": "Rocky Southern Reef",
-      "mapX": 0.74,
-      "mapY": 0.84,
+      "mapX": 0.5,
+      "mapY": 0.2,
+      "map": "cold",
       "unlockAt": 18,
       "discover": {
         "decodable": [
@@ -5339,8 +5359,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Prionace_glauca_by_mark_conlin.JPG",
       "color": "#3B6FB5",
       "region": "Wide Open Ocean",
-      "mapX": 0.2,
-      "mapY": 0.15,
+      "mapX": 0.5,
+      "mapY": 0.2,
+      "map": "atlantic",
       "unlockAt": 20,
       "unlockStars": 24,
       "discover": {
@@ -5607,8 +5628,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Leopard_shark_in_kelp.jpg",
       "color": "#7A6A48",
       "region": "Pacific Bays",
-      "mapX": 0.08,
-      "mapY": 0.15,
+      "mapX": 0.5,
+      "mapY": 0.2,
+      "map": "pacific",
       "unlockAt": 20,
       "unlockStars": 24,
       "discover": {
@@ -5875,8 +5897,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Carcharias_taurus_newport.jpg",
       "color": "#8A6F5A",
       "region": "Coastal Reefs and Wrecks",
-      "mapX": 0.62,
-      "mapY": 0.38,
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "atlantic",
       "unlockAt": 20,
       "unlockStars": 33,
       "discover": {
@@ -6143,8 +6166,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Chlamydoselachus_anguineus2.jpg",
       "color": "#6B4F4A",
       "region": "Deep Dark Sea",
-      "mapX": 0.92,
-      "mapY": 0.15,
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "pacific",
       "unlockAt": 20,
       "unlockStars": 30,
       "discover": {
@@ -6411,8 +6435,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Megamouth_shark_Megachasma_pelagios.jpg",
       "color": "#4E5D78",
       "region": "Open Ocean Depths",
-      "mapX": 0.8,
-      "mapY": 0.15,
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "pacific",
       "unlockAt": 20,
       "unlockStars": 27,
       "discover": {
@@ -6679,8 +6704,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Cephaloscyllium_ventriosum.jpg",
       "color": "#8A6A3B",
       "region": "Pacific Kelp Reef",
-      "mapX": 0.26,
-      "mapY": 0.38,
+      "mapX": 0.7,
+      "mapY": 0.2,
+      "map": "pacific",
       "unlockAt": 20,
       "unlockStars": 36,
       "discover": {
@@ -6948,8 +6974,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Etmopterus_perryi_SI.jpg",
       "color": "#4B3F72",
       "region": "Deep Caribbean Sea",
-      "mapX": 0.26,
-      "mapY": 0.84,
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "atlantic",
       "unlockAt": 20,
       "unlockStars": 40,
       "discover": {
@@ -7216,8 +7243,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Carcharhinus_brevipinna_nefsc.jpg",
       "color": "#3F8FA3",
       "region": "Warm Coastal Seas",
-      "mapX": 0.32,
-      "mapY": 0.15,
+      "mapX": 0.7,
+      "mapY": 0.2,
+      "map": "atlantic",
       "unlockAt": 20,
       "unlockStars": 44,
       "discover": {
@@ -7485,8 +7513,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Oceanic_Whitetip_Shark_(Carcharhinus_longimanus)_at_Elphinstone_Reef,_Egypt.jpg",
       "color": "#96705A",
       "region": "Far Open Ocean",
-      "mapX": 0.8,
-      "mapY": 0.61,
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "indian",
       "unlockAt": 20,
       "unlockStars": 48,
       "discover": {
@@ -7753,8 +7782,9 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Poroderma_africanum.jpg",
       "color": "#5D5F71",
       "region": "South African Kelp Forest",
-      "mapX": 0.56,
-      "mapY": 0.15,
+      "mapX": 0.5,
+      "mapY": 0.8,
+      "map": "indian",
       "unlockAt": 20,
       "unlockStars": 52,
       "discover": {
@@ -8009,6 +8039,1349 @@
         "https://www.aquarium.co.za/animals/pyjama-catshark",
         "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/striped-catshark/",
         "https://www.sharks.org/pyjama-shark-poroderma-africanum"
+      ]
+    },
+    {
+      "id": "bonnethead",
+      "name": "Bonnethead Shark",
+      "scientificName": "Sphyrna tiburo",
+      "symbol": "🦈",
+      "imageAsset": "shark-bonnethead.jpg",
+      "imageAuthor": "Eric Kilby",
+      "imageLicense": "CC BY-SA 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Bonnethead_shark_Aquarium_of_the_Pacific.jpg",
+      "color": "#6F8F72",
+      "region": "Warm Grassy Shallows",
+      "mapX": 0.8,
+      "mapY": 0.5,
+      "map": "atlantic",
+      "unlockAt": 30,
+      "unlockSuperStars": 3,
+      "discover": {
+        "decodable": [
+          "It has a fat top. It can tip it."
+        ],
+        "earlyReader": [
+          "This is a bonnethead shark.",
+          "Its head is wide and round.",
+          "It is the smallest hammerhead."
+        ],
+        "story": [
+          "The bonnethead is the smallest of the hammerhead sharks.",
+          "Its head is shaped like a rounded shovel, with an eye at each end."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is in the sun. It is in a mob."
+            ],
+            "earlyReader": [
+              "Bonnetheads like warm, shallow water.",
+              "They swim over sand, mud and seagrass.",
+              "They often swim in small groups."
+            ],
+            "story": [
+              "Bonnetheads live in warm, shallow water over sand, mud, reefs and grass flats, and they are common in bays.",
+              "They usually swim in small schools of up to fifteen sharks."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It can nab a bug. It can nip a bud."
+            ],
+            "earlyReader": [
+              "Bonnetheads eat crabs.",
+              "They eat shrimp and small fish too.",
+              "They even eat seagrass."
+            ],
+            "story": [
+              "A bonnethead eats mostly crabs and shrimp, along with snails and small fish.",
+              "It also grazes on seagrass, which makes it a shark that eats both animals and plants."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not big. A kid is as big."
+            ],
+            "earlyReader": [
+              "A bonnethead is a small shark.",
+              "Most are about as long as a kid is tall.",
+              "A new pup is as long as a ruler."
+            ],
+            "story": [
+              "Most bonnetheads are three to four feet long, and the biggest reach about five feet.",
+              "Pups are about one foot long when they are born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It tips his top. It got a hum."
+            ],
+            "earlyReader": [
+              "Its eyes sit at the ends of its head.",
+              "That helps it see more around it.",
+              "Its head rolls from side to side as it swims."
+            ],
+            "story": [
+              "A bonnethead's eyes sit at the ends of its wide head, which lets it see more of the water around it.",
+              "As it swims, its head rolls from side to side."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It had a bud. It is fed. It is fit."
+            ],
+            "earlyReader": [
+              "Most sharks eat only animals.",
+              "A bonnethead eats plants too.",
+              "An animal like that is called an omnivore."
+            ],
+            "story": [
+              "Most sharks eat only other animals, but the bonnethead also grazes on seagrass.",
+              "An animal that eats both plants and animals is called an omnivore."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "shovel-head",
+          "title": "Rounded Shovel Head",
+          "symbol": "🥄",
+          "description": "Its wide, rounded head has an eye at each end.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "seagrass-snack",
+          "title": "Seagrass Snacker",
+          "symbol": "🌿",
+          "description": "It eats seagrass as well as crabs and shrimp.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "suctionForage",
+        "title": "Grass Flat Crab Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The bonnethead swims over the seagrass.",
+            "Count the crabs you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Glide over the warm, grassy shallows with the bonnethead shark.",
+            "Count each group of crabs and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The bonnethead found crabs in the seagrass."
+      },
+      "questions": [
+        {
+          "id": "bon-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is wide and round on a bonnethead?"
+            ],
+            "story": [
+              "Which part of the bonnethead is shaped like a rounded shovel?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "head",
+              "label": "Its head",
+              "symbol": "↔️"
+            },
+            {
+              "id": "foot",
+              "label": "Its foot",
+              "symbol": "🦶"
+            },
+            {
+              "id": "ear",
+              "label": "Ear",
+              "symbol": "👂"
+            }
+          ],
+          "correctID": "head",
+          "success": "Yes! Its head is wide and round.",
+          "retry": "Look at the front of the shark."
+        },
+        {
+          "id": "bon-q2",
+          "prompt": {
+            "earlyReader": [
+              "What plant does the bonnethead eat?"
+            ],
+            "story": [
+              "Which plant does the bonnethead graze on?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "seagrass",
+              "label": "Seagrass",
+              "symbol": "🌿"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "seagrass",
+          "success": "Right! Bonnetheads eat seagrass.",
+          "retry": "Choose the green plant under the sea."
+        },
+        {
+          "id": "bon-q3",
+          "prompt": {
+            "earlyReader": [
+              "What animal does the bonnethead eat most?"
+            ],
+            "story": [
+              "Which animal is the bonnethead's main food?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "crab",
+              "label": "Crabs",
+              "symbol": "🦀"
+            },
+            {
+              "id": "rocks",
+              "label": "Rocks",
+              "symbol": "🪨"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            }
+          ],
+          "correctID": "crab",
+          "success": "You got it! Bonnetheads eat lots of crabs.",
+          "retry": "Look for the animal with claws."
+        }
+      ],
+      "vocabularyIDs": [
+        "seagrass",
+        "omnivore",
+        "school"
+      ],
+      "bookFact": "It is the smallest hammerhead, and it eats seagrass as well as crabs.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/sphyrna-tiburo/",
+        "https://www.fisheries.noaa.gov/species/bonnethead-shark"
+      ]
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon Shark",
+      "scientificName": "Lamna ditropis",
+      "symbol": "🦈",
+      "imageAsset": "shark-salmon.jpg",
+      "imageAuthor": "The Nature Box (cut-out photo)",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Salmon_shark.png",
+      "color": "#4F6A8F",
+      "region": "Cold North Pacific",
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "cold",
+      "unlockAt": 30,
+      "unlockSuperStars": 5,
+      "discover": {
+        "decodable": [
+          "It is big and fat. It can run."
+        ],
+        "earlyReader": [
+          "This is a salmon shark.",
+          "It lives in cold water.",
+          "It is named for the salmon it eats."
+        ],
+        "story": [
+          "The salmon shark is named for one of its favorite foods, the Pacific salmon.",
+          "This strong, heavy-bodied shark lives only in the North Pacific Ocean."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun is dim. It is not hot."
+            ],
+            "earlyReader": [
+              "Salmon sharks live in the North Pacific.",
+              "The water there is cold.",
+              "They swim near Alaska and Japan."
+            ],
+            "story": [
+              "Salmon sharks live in the cold and cool waters of the North Pacific, from Japan and Russia across to Alaska and California.",
+              "They swim both near the coast and far out at sea."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It ran at a cod. It got it."
+            ],
+            "earlyReader": [
+              "Salmon sharks eat salmon.",
+              "They eat herring and cod too.",
+              "Squid can be food as well."
+            ],
+            "story": [
+              "Salmon sharks eat many kinds of fish, including salmon, herring, pollock and cod.",
+              "They also eat squid."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big. Is a man as big? Not a bit!"
+            ],
+            "earlyReader": [
+              "A salmon shark is big and heavy.",
+              "Most are longer than a tall grown-up.",
+              "The biggest are about ten feet long."
+            ],
+            "story": [
+              "Most salmon sharks are about six and a half to eight feet long.",
+              "The largest grow to about ten feet."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It is dim. It can get a hum."
+            ],
+            "earlyReader": [
+              "Salmon swim in big groups.",
+              "Salmon sharks follow them.",
+              "The sharks go where the fish go."
+            ],
+            "story": [
+              "Salmon sharks follow schools of Pacific salmon as the fish travel along the coasts.",
+              "Where there are plenty of salmon, there are often salmon sharks too."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It is dim, not hot. But his gut is hot."
+            ],
+            "earlyReader": [
+              "Most fish are as cold as the water.",
+              "A salmon shark keeps its body warm.",
+              "Warm muscles help it swim fast in cold seas."
+            ],
+            "story": [
+              "Most fish are the same temperature as the water around them, but a salmon shark can keep its body warmer than the sea.",
+              "Only a few fast swimmers, such as tunas and the salmon shark's close relatives, can do this."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "warm-engine",
+          "title": "Warm Body",
+          "symbol": "🔥",
+          "description": "It keeps its body warmer than the cold water around it.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "salmon-chaser",
+          "title": "Salmon Follower",
+          "symbol": "🐟",
+          "description": "It follows schools of salmon along the cold Pacific coasts.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Cold Water Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "A school of fish swims by.",
+            "Count the fish in each group.",
+            "Read the words to help the salmon shark."
+          ],
+          "story": [
+            "Swim through the cold North Pacific with the salmon shark.",
+            "Count each group of fish and read the words to help it keep up with the school."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The salmon shark kept up with the fish."
+      },
+      "questions": [
+        {
+          "id": "sal-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does the salmon shark eat?"
+            ],
+            "story": [
+              "Which food gives the salmon shark its name?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Salmon and other fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Yes! It eats salmon and other fish.",
+          "retry": "Its name gives you a clue."
+        },
+        {
+          "id": "sal-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does the salmon shark live?"
+            ],
+            "story": [
+              "What kind of water is the salmon shark's home?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "cold",
+              "label": "Cold northern sea",
+              "symbol": "❄️"
+            },
+            {
+              "id": "bath",
+              "label": "Warm bath",
+              "symbol": "🛁"
+            },
+            {
+              "id": "desert",
+              "label": "Dry desert",
+              "symbol": "🏜️"
+            }
+          ],
+          "correctID": "cold",
+          "success": "Right! It lives in the cold North Pacific.",
+          "retry": "Choose the chilly water."
+        },
+        {
+          "id": "sal-q3",
+          "prompt": {
+            "earlyReader": [
+              "What does its body stay?"
+            ],
+            "story": [
+              "What is special about the salmon shark's body in cold water?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "warm-body",
+              "label": "Warm inside",
+              "symbol": "🔥"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            }
+          ],
+          "correctID": "warm-body",
+          "success": "You got it! Its body stays warm inside.",
+          "retry": "Think about what helps in cold water."
+        }
+      ],
+      "vocabularyIDs": [
+        "warm-bodied",
+        "migrate",
+        "predator"
+      ],
+      "bookFact": "It keeps its body warm in the cold North Pacific and follows schools of salmon.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/lamna-ditropis/",
+        "https://www.adfg.alaska.gov/index.cfm?adfg=salmonshark.main"
+      ]
+    },
+    {
+      "id": "porbeagle",
+      "name": "Porbeagle Shark",
+      "scientificName": "Lamna nasus",
+      "symbol": "🦈",
+      "imageAsset": "shark-porbeagle.jpg",
+      "imageAuthor": "Citron (cut-out specimen photo)",
+      "imageLicense": "CC BY-SA 3.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Lamna_nasus2.jpg",
+      "color": "#3E5C76",
+      "region": "Cold Atlantic Seas",
+      "mapX": 0.5,
+      "mapY": 0.8,
+      "map": "cold",
+      "unlockAt": 30,
+      "unlockSuperStars": 8,
+      "discover": {
+        "decodable": [
+          "It has a fin. A dab is on it."
+        ],
+        "earlyReader": [
+          "This is a porbeagle shark.",
+          "It has a white patch on its back fin.",
+          "It swims in cold seas."
+        ],
+        "story": [
+          "The porbeagle is a strong, heavy-bodied shark of cold seas.",
+          "A white patch at the back of its tall dorsal fin helps people tell it from its relatives."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is not hot. It is in the dim."
+            ],
+            "earlyReader": [
+              "Porbeagles live in the North Atlantic.",
+              "They live in cold southern seas too.",
+              "They like cold water best."
+            ],
+            "story": [
+              "In the north, porbeagles live only in the Atlantic Ocean, and in the south they circle the globe in a band of cold water.",
+              "They swim near coasts and far out at sea, from the surface to more than two thousand feet deep."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A mob of cod ran. It ran in."
+            ],
+            "earlyReader": [
+              "Porbeagles eat fish.",
+              "Mackerel and herring are food.",
+              "Squid are food too."
+            ],
+            "story": [
+              "Porbeagles eat mostly bony fish, such as mackerel, herring and cod.",
+              "Squid are their second most common food."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big and fit. It is not a pup."
+            ],
+            "earlyReader": [
+              "A porbeagle is a big shark.",
+              "Its body is thick and strong.",
+              "The biggest are about twelve feet long."
+            ],
+            "story": [
+              "Porbeagles have heavy, spindle-shaped bodies and can grow to about twelve feet long.",
+              "They may live for about thirty years."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It got a hum. It ran to it."
+            ],
+            "earlyReader": [
+              "Fish move with the seasons.",
+              "Porbeagles move too.",
+              "They travel far to stay in cool water."
+            ],
+            "story": [
+              "Like other big open-ocean sharks, porbeagles make long trips as the seasons change.",
+              "Scientists think these travels help them stay in the cool water they prefer."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It can run and run. It did not sit."
+            ],
+            "earlyReader": [
+              "A porbeagle keeps its body warm.",
+              "Most fish cannot do that.",
+              "Tunas and a few other fast fish can."
+            ],
+            "story": [
+              "A porbeagle can keep its body warmer than the cold water around it.",
+              "This is unusual among fishes, and only a few other fast swimmers, such as tunas, can do it."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "white-patch",
+          "title": "White Fin Patch",
+          "symbol": "🤍",
+          "description": "The back tip of its tall dorsal fin is white.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "warm-swimmer",
+          "title": "Warm Swimmer",
+          "symbol": "🔥",
+          "description": "It keeps its body warmer than the cold sea.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "speedChase",
+        "title": "Cold Sea Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Fast fish swim in the cold sea.",
+            "Count the fish in each group.",
+            "Read the words to help the porbeagle."
+          ],
+          "story": [
+            "Speed through the cold Atlantic with the porbeagle shark.",
+            "Count each group of fast fish, such as mackerel, and read the words to help it keep up."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The porbeagle kept up with the fast fish."
+      },
+      "questions": [
+        {
+          "id": "pbg-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is on the back of its top fin?"
+            ],
+            "story": [
+              "Which mark helps people recognize a porbeagle?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "white-tip",
+              "label": "A white patch",
+              "symbol": "🤍"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "white-tip",
+          "success": "Yes! Its fin has a white patch.",
+          "retry": "Look at the back of the tall fin."
+        },
+        {
+          "id": "pbg-q2",
+          "prompt": {
+            "earlyReader": [
+              "What does the porbeagle eat?"
+            ],
+            "story": [
+              "Which food does the porbeagle eat most?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Mackerel and herring",
+              "symbol": "🐟"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! Porbeagles eat fish like mackerel.",
+          "retry": "Look for the food that swims."
+        },
+        {
+          "id": "pbg-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does the porbeagle live?"
+            ],
+            "story": [
+              "What kind of water does the porbeagle like best?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "cold",
+              "label": "Cold seas",
+              "symbol": "❄️"
+            },
+            {
+              "id": "pond",
+              "label": "Garden pond",
+              "symbol": "⛲️"
+            },
+            {
+              "id": "yard",
+              "label": "Back yard",
+              "symbol": "🏡"
+            }
+          ],
+          "correctID": "cold",
+          "success": "You got it! Porbeagles like cold seas.",
+          "retry": "Choose the chilly water."
+        }
+      ],
+      "vocabularyIDs": [
+        "warm-bodied",
+        "streamlined",
+        "prey"
+      ],
+      "bookFact": "A white patch on its dorsal fin sets it apart, and it keeps its body warm in cold seas.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/lamna-nasus/"
+      ]
+    },
+    {
+      "id": "sixgill",
+      "name": "Bluntnose Sixgill Shark",
+      "scientificName": "Hexanchus griseus",
+      "symbol": "🦈",
+      "imageAsset": "shark-sixgill.jpg",
+      "imageAuthor": "NOAA",
+      "imageLicense": "Public domain",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Pacific_2016_Selachii013.jpg",
+      "color": "#5A6B4E",
+      "region": "Deep Sea Slopes",
+      "mapX": 0.8,
+      "mapY": 0.5,
+      "map": "pacific",
+      "unlockAt": 30,
+      "unlockSuperStars": 11,
+      "discover": {
+        "decodable": [
+          "It is big. A fin is on top."
+        ],
+        "earlyReader": [
+          "This is a sixgill shark.",
+          "It has six gill slits on each side.",
+          "Most sharks have only five."
+        ],
+        "story": [
+          "The bluntnose sixgill shark has six long gill slits on each side of its head, while most sharks have five.",
+          "This big, slow, strong swimmer spends its days in deep water."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It sat in a pit. The sun set. It got up."
+            ],
+            "earlyReader": [
+              "Sixgills rest in deep water by day.",
+              "It is dark down there.",
+              "At night they swim up to feed."
+            ],
+            "story": [
+              "By day a sixgill rests near the bottom in deep water, as far as six thousand five hundred feet down.",
+              "At night it swims up toward the surface or into shallower water to feed."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It can get a cod. It can nab a bug."
+            ],
+            "earlyReader": [
+              "Sixgills eat at night.",
+              "They eat fish, big and small.",
+              "They eat crabs, shrimp and squid too."
+            ],
+            "story": [
+              "A sixgill feeds at night on many kinds of animals, from cod and flounder to rays.",
+              "It also eats snails, crabs, shrimp and squid."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "A cab is big. It is as big."
+            ],
+            "earlyReader": [
+              "A sixgill is a very big shark.",
+              "It can be as long as a big car.",
+              "A new pup is as long as your arm."
+            ],
+            "story": [
+              "The biggest sixgill sharks measured are almost sixteen feet long.",
+              "Pups are about two feet long when they are born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "The pit is dim. It got a hum."
+            ],
+            "earlyReader": [
+              "A sixgill has big green eyes.",
+              "It lives where there is little light.",
+              "It hunts in the dark of night."
+            ],
+            "story": [
+              "A living sixgill shark has large, glowing green eyes.",
+              "It spends its days in the dim deep sea and does its feeding at night."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It has ten pups. Ten and ten and ten!"
+            ],
+            "earlyReader": [
+              "A sixgill mother has many pups.",
+              "She can have more than twenty at once.",
+              "Some have had more than one hundred!"
+            ],
+            "story": [
+              "A mother sixgill gives birth to a very large litter of pups.",
+              "Scientists have counted from twenty-two to one hundred and eight pups in a single litter."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "six-gill-slits",
+          "title": "Six Gill Slits",
+          "symbol": "6️⃣",
+          "description": "It has six long gill slits on each side, one more than most sharks.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "night-riser",
+          "title": "Night Riser",
+          "symbol": "🌙",
+          "description": "It rests deep by day and swims up to feed at night.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        }
+      ],
+      "mission": {
+        "kind": "jawStrike",
+        "title": "Deep Night Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The sixgill swims up at night.",
+            "Count the fish you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Night has come, and the sixgill shark is rising from the deep.",
+            "Count each group of deep-sea fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The sixgill found fish in the dark."
+      },
+      "questions": [
+        {
+          "id": "six-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is special about this shark?"
+            ],
+            "story": [
+              "Which body clue gives the sixgill shark its name?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "six-gills",
+              "label": "Six gill slits",
+              "symbol": "6️⃣"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "six-gills",
+          "success": "Yes! It has six gill slits on each side.",
+          "retry": "Its name gives you a clue."
+        },
+        {
+          "id": "six-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does it rest by day?"
+            ],
+            "story": [
+              "Where does the sixgill shark spend its days?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "deep",
+              "label": "Deep ocean",
+              "symbol": "🌑"
+            },
+            {
+              "id": "farm",
+              "label": "Farm",
+              "symbol": "🚜"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud",
+              "symbol": "☁️"
+            }
+          ],
+          "correctID": "deep",
+          "success": "Right! It rests in the deep ocean by day.",
+          "retry": "Choose the darkest water."
+        },
+        {
+          "id": "six-q3",
+          "prompt": {
+            "earlyReader": [
+              "When does it swim up to eat?"
+            ],
+            "story": [
+              "When does the sixgill shark rise to feed?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "night",
+              "label": "Night",
+              "symbol": "🌙"
+            },
+            {
+              "id": "lunch",
+              "label": "Lunch bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "snow",
+              "label": "Snow day",
+              "symbol": "☃️"
+            }
+          ],
+          "correctID": "night",
+          "success": "You got it! It swims up to feed at night.",
+          "retry": "Think about when the sky is dark."
+        }
+      ],
+      "vocabularyIDs": [
+        "deep-sea",
+        "gills",
+        "nocturnal"
+      ],
+      "bookFact": "It has six gill slits on each side and swims up from the deep at night.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/hexanchus-griseus/"
+      ]
+    },
+    {
+      "id": "bamboo",
+      "name": "Brownbanded Bamboo Shark",
+      "scientificName": "Chiloscyllium punctatum",
+      "symbol": "🦈",
+      "imageAsset": "shark-bamboo.jpg",
+      "imageAuthor": "Rickard Zerpe",
+      "imageLicense": "CC BY 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Brownbanded_bambooshark_(Chiloscyllium_punctatum).jpg",
+      "color": "#B07A4A",
+      "region": "Indo-Pacific Reefs and Tide Pools",
+      "mapX": 0.7,
+      "mapY": 0.2,
+      "map": "indian",
+      "unlockAt": 30,
+      "unlockSuperStars": 14,
+      "discover": {
+        "decodable": [
+          "The pup has ribs. Mom is tan."
+        ],
+        "earlyReader": [
+          "This is a bamboo shark.",
+          "A pup has dark bands.",
+          "A grown one is plain brown."
+        ],
+        "story": [
+          "A young brownbanded bamboo shark is boldly marked with dark bands.",
+          "As it grows up the bands fade, and adults are plain light brown."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It hid in a gap. It is dim in it."
+            ],
+            "earlyReader": [
+              "Bamboo sharks live on coral reefs.",
+              "They live over sand and mud too.",
+              "Little ones hide in cracks."
+            ],
+            "story": [
+              "Brownbanded bamboo sharks live on coral reefs and over sandy and muddy bottoms close to shore, from India to Japan and northern Australia.",
+              "Small ones hide in cracks in the reef, where their bands help them blend in."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "The sun set. It digs in the mud. It got a bug."
+            ],
+            "earlyReader": [
+              "Bamboo sharks eat at night.",
+              "They dig in the sand for food.",
+              "They eat crabs, worms and shrimp."
+            ],
+            "story": [
+              "A bamboo shark is most active at night, when it digs in the sand and mud for food.",
+              "It eats crabs, worms, shrimp and small fish."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not big. It fits in a tub."
+            ],
+            "earlyReader": [
+              "A bamboo shark is a small shark.",
+              "It is about as long as a yardstick.",
+              "A new pup is as long as a pencil."
+            ],
+            "story": [
+              "The biggest brownbanded bamboo sharks are about three and a half feet long.",
+              "A pup is only five to seven inches long when it hatches."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "Bits sit at the tip. It taps the mud."
+            ],
+            "earlyReader": [
+              "Short feelers sit by its nose.",
+              "They are called barbels.",
+              "Barbels help it find food in the sand."
+            ],
+            "story": [
+              "A bamboo shark has barbels, short feelers beside its nostrils, near the tip of its rounded snout.",
+              "It uses them to find crabs, worms and other small animals on the bottom."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It sat in a pit. The pit got hot. It is fit!"
+            ],
+            "earlyReader": [
+              "This shark is very tough.",
+              "It is often seen in tide pools.",
+              "It can even live out of water for hours."
+            ],
+            "story": [
+              "The brownbanded bamboo shark is an extremely hardy shark that is often seen in tide pools.",
+              "It can get by with very little oxygen, and can survive out of water for several hours at a time."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "baby-bands",
+          "title": "Baby Bands",
+          "symbol": "🟫",
+          "description": "Pups wear dark bands that fade away as they grow up.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "tide-pool-tough",
+          "title": "Tide Pool Tough",
+          "symbol": "💪",
+          "description": "It can survive for hours when the tide leaves it with little water.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "sawSweep",
+        "title": "Night Reef Shrimp Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The bamboo shark digs at night.",
+            "Count the shrimp you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Night has come to the reef, and the bamboo shark is digging in the sand.",
+            "Count each group of shrimp and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The bamboo shark found shrimp in the sand."
+      },
+      "questions": [
+        {
+          "id": "bam-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does a bamboo shark pup have?"
+            ],
+            "story": [
+              "Which pattern does a young bamboo shark wear?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "stripes",
+              "label": "Dark bands",
+              "symbol": "🟰"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "stripes",
+          "success": "Yes! A pup has dark bands.",
+          "retry": "Look for the dark lines across its body."
+        },
+        {
+          "id": "bam-q2",
+          "prompt": {
+            "earlyReader": [
+              "When does the bamboo shark look for food?"
+            ],
+            "story": [
+              "When is the bamboo shark most active?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "night",
+              "label": "Night",
+              "symbol": "🌙"
+            },
+            {
+              "id": "lunch",
+              "label": "Lunch bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "snow",
+              "label": "Snow day",
+              "symbol": "☃️"
+            }
+          ],
+          "correctID": "night",
+          "success": "Right! It looks for food at night.",
+          "retry": "Think about when the sky is dark."
+        },
+        {
+          "id": "bam-q3",
+          "prompt": {
+            "earlyReader": [
+              "What does the bamboo shark eat?"
+            ],
+            "story": [
+              "Which food does the bamboo shark dig for?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "crab",
+              "label": "Crabs and shrimp",
+              "symbol": "🦀"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "crab",
+          "success": "You got it! It eats crabs and shrimp.",
+          "retry": "Look for the animal with claws."
+        }
+      ],
+      "vocabularyIDs": [
+        "tide-pool",
+        "barbels",
+        "egg-case"
+      ],
+      "bookFact": "Pups have dark bands that fade, and this tough shark can survive for hours out of water.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/chiloscyllium-punctatum/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/brown_banded_bamboo_shark"
       ]
     }
   ],
@@ -8270,6 +9643,24 @@
       "word": "kelp forest",
       "symbol": "🌿",
       "explanation": "A place where tall seaweed grows like trees under the sea."
+    },
+    {
+      "id": "seagrass",
+      "word": "seagrass",
+      "symbol": "🌿",
+      "explanation": "A green plant that grows under the sea in shallow water."
+    },
+    {
+      "id": "omnivore",
+      "word": "omnivore",
+      "symbol": "🥗",
+      "explanation": "An animal that eats both plants and animals."
+    },
+    {
+      "id": "warm-bodied",
+      "word": "warm-bodied",
+      "symbol": "🔥",
+      "explanation": "Able to keep its body warmer than the water around it."
     }
   ],
   "expansions": [
@@ -9512,6 +10903,236 @@
         }
       ],
       "questions": []
+    },
+    {
+      "sharkID": "bonnethead",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/sphyrna-tiburo/",
+        "https://www.fisheries.noaa.gov/species/bonnethead-shark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Small Hammerhead Clues",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A bonnethead is gray or tan on top.",
+              "Its belly is pale.",
+              "Small dark spots may dot its sides."
+            ],
+            "story": [
+              "A bonnethead is gray, tan or greenish on top with a paler belly, and its sides are often dotted with small dark spots.",
+              "Its rounded head makes it easy to tell from other hammerheads."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Bonnethead pups grow up in shallow bays.",
+              "Seagrass beds are their first home.",
+              "Healthy seagrass helps the pups grow."
+            ],
+            "story": [
+              "Mother bonnetheads give birth in shallow water, and the young sharks live in seagrass beds for their first years.",
+              "Keeping bays and seagrass healthy protects the places where these small sharks grow up."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "salmon",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/lamna-ditropis/",
+        "https://www.adfg.alaska.gov/index.cfm?adfg=salmonshark.main"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Dark Back, White Belly",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A salmon shark is dark on top.",
+              "Its belly is white with dark blotches.",
+              "Its snout is short and blunt."
+            ],
+            "story": [
+              "A salmon shark is dark blue-gray to black on top and white underneath, and adults often have dusky blotches on the belly.",
+              "It has a heavy body, a short cone-shaped snout and a tail shaped like a crescent moon."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "A salmon shark has only a few pups.",
+              "The pups take years to grow up.",
+              "Alaska has rules to keep them safe."
+            ],
+            "story": [
+              "A mother salmon shark has only two to five pups at a time, so their numbers grow slowly.",
+              "Alaska closed commercial shark fishing in its state waters in 1997 and limits how many salmon sharks people may catch for sport."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "porbeagle",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/lamna-nasus/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A White Patch",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A porbeagle is dark blue or gray on top.",
+              "Its belly is white.",
+              "Its snout is shaped like a cone."
+            ],
+            "story": [
+              "A porbeagle is dark blue to gray above and white below, with a cone-shaped snout and a crescent-shaped tail.",
+              "The white tip at the back of its dorsal fin sets it apart from the salmon shark and the white shark."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "There used to be many more porbeagles.",
+              "Too much fishing made them rare.",
+              "Fishing rules now help protect them."
+            ],
+            "story": [
+              "Porbeagle numbers in the North Atlantic dropped badly because of too much fishing in the last century.",
+              "Today the porbeagle is protected in United States waters, and other countries limit how many may be caught."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "sixgill",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/hexanchus-griseus/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "One Fin on Top",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A sixgill has a wide, flat head.",
+              "Its snout is round and blunt.",
+              "It has only one fin on its back."
+            ],
+            "story": [
+              "A sixgill has a heavy body, a broad flat head and a blunt, rounded snout.",
+              "It has just one dorsal fin, set far back near its tail, and it is gray, olive green or brown with a paler belly."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Sixgills grow up very slowly.",
+              "Too much fishing can use them up.",
+              "Careful fishing helps them last."
+            ],
+            "story": [
+              "Sixgill sharks take many years to grow up, so they cannot keep up with heavy fishing.",
+              "Scientists still need to learn how many there are, and careful fishing helps keep them in the deep sea."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "bamboo",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/chiloscyllium-punctatum/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/brown_banded_bamboo_shark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Bands That Fade",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A bamboo shark is long and slim.",
+              "Its tail is long and thick.",
+              "Its two back fins are about the same size."
+            ],
+            "story": [
+              "A brownbanded bamboo shark has a slender body, a long thick tail and two dorsal fins of about the same size.",
+              "Its mouth sits close to its eyes, behind a rounded snout."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Bamboo sharks hatch from egg cases.",
+              "They need healthy coral reefs.",
+              "Careful fishing keeps reefs safe."
+            ],
+            "story": [
+              "A mother bamboo shark lays flat egg cases on the bottom, and each pup grows inside for months before it hatches.",
+              "Harmful ways of fishing can damage the reefs where these sharks live, so protecting reefs protects them too."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    }
+  ],
+  "maps": [
+    {
+      "id": "pacific",
+      "name": "Pacific",
+      "symbol": "globe.asia.australia.fill"
+    },
+    {
+      "id": "atlantic",
+      "name": "Atlantic",
+      "symbol": "globe.americas.fill"
+    },
+    {
+      "id": "indian",
+      "name": "Indian",
+      "symbol": "globe.central.south.asia.fill"
+    },
+    {
+      "id": "cold",
+      "name": "Cold Seas",
+      "symbol": "snowflake"
     }
   ]
 }

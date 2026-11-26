@@ -59,11 +59,13 @@ async function challengeLines(catalog) {
   const range = (from, to) => Array.from({ length: to - from + 1 }, (_, index) => from + index);
   return [
     ...range(1, 10).map((n) => `Tap the group of ${n}.`),
-    ...range(1, 10).map((n) => `Tap the number ${n}.`),
+    ...range(1, 20).map((n) => `Tap the number ${n}.`),
     'Which group has more?',
     'Which group has fewer?',
-    ...range(1, 9).map((n) => `What is one more than ${n}?`),
-    ...range(2, 10).map((n) => `What is one less than ${n}?`),
+    ...range(1, 19).map((n) => `What is one more than ${n}?`),
+    ...range(2, 20).map((n) => `What is one less than ${n}?`),
+    ...range(1, 9).flatMap((first) => range(1, 10 - first).map((second) => `What is ${first} plus ${second}?`)),
+    ...range(2, 10).flatMap((total) => range(1, total - 1).map((taken) => `What is ${total} take away ${taken}?`)),
     ...[...words].filter((word) => word.length >= 2 && readable(word)).map((word) => `Tap the word: ${word}.`)
   ];
 }

@@ -9,6 +9,8 @@ struct OceanMapView: View {
     @Environment(FeedbackPlayer.self) private var feedback
     @Environment(\.kidTheme) private var theme
     @State private var lockedHint: SharkDefinition?
+    /// The ocean on screen; remembered so the map reopens where it was left.
+    @AppStorage("map.page") private var pageID = ""
     private let catalog = ContentStore.shared.catalog
 
     var body: some View {
@@ -23,28 +25,42 @@ struct OceanMapView: View {
             .padding(.horizontal, 28)
             .padding(.top, 12)
 
-            GeometryReader { proxy in
-                ZStack {
-                    OceanMapArt().padding(24)
+            if catalog.mapPages.count > 1 {
+                KidTabs(selection: $pageID, items: catalog.mapPages.map { .init($0.id, $0.name, systemImage: $0.symbol) })
+                    .frame(maxWidth: 860)
+            }
 
-                    ForEach(catalog.sharks) { shark in
-                        SharkMapNode(
-                            shark: shark,
-                            unlocked: game.isUnlocked(shark),
-                            completed: game.completedSharks.contains(shark.id),
-                            stars: game.stars(for: shark),
-                            fresh: game.freshlyUnlockedSharkIDs.contains(shark.id)
-                        ) {
-                            if game.isUnlocked(shark) { game.open(shark) } else { showLockedHint(for: shark) }
+            // Swipe sideways, or tap a tab, to move between oceans.
+            TabView(selection: $pageID) {
+                ForEach(catalog.mapPages) { page in
+                    GeometryReader { proxy in
+                        ZStack {
+                            OceanMapArt(page: page).padding(.horizontal, 24).padding(.vertical, 6)
+
+                            ForEach(catalog.sharks(on: page)) { shark in
+                                SharkMapNode(
+                                    shark: shark,
+                                    unlocked: game.isUnlocked(shark),
+                                    completed: game.completedSharks.contains(shark.id),
+                                    stars: game.stars(for: shark),
+                                    fresh: game.freshlyUnlockedSharkIDs.contains(shark.id)
+                                ) {
+                                    if game.isUnlocked(shark) { game.open(shark) } else { showLockedHint(for: shark) }
+                                }
+                                .scaleEffect(1.2)
+                                .position(x: proxy.size.width * shark.mapX, y: proxy.size.height * shark.mapY)
+                            }
                         }
-                        .position(x: proxy.size.width * shark.mapX, y: proxy.size.height * shark.mapY)
                     }
+                    .tag(page.id)
                 }
             }
+            .tabViewStyle(.page(indexDisplayMode: .never))
 
             HStack(spacing: 18) {
                 Label("\(game.completedCount) of \(catalog.sharks.count) shark pages", systemImage: "book.closed.fill")
                 Label("\(game.totalStars) stars", systemImage: "star.fill")
+                if game.totalSuperStars > 0 { Label("\(game.totalSuperStars) super", systemImage: "sparkles").foregroundStyle(.cyan) }
                 ProgressView(value: Double(game.completedCount), total: Double(max(catalog.sharks.count, 1)))
                     .tint(.yellow)
                     .frame(width: 180)
@@ -60,12 +76,23 @@ struct OceanMapView: View {
         .foregroundStyle(.white)
         .overlay(alignment: .bottom) {
             if let lockedHint {
-                let needed = game.missionsNeeded(for: lockedHint), stars = game.starsNeeded(for: lockedHint)
-                KidToast(symbol: needed > 0 ? "🔒" : "⭐️", text: needed > 0
+                let needed = game.missionsNeeded(for: lockedHint), stars = game.starsNeeded(for: lockedHint), superStars = game.superStarsNeeded(for: lockedHint)
+                KidToast(symbol: needed > 0 ? "🔒" : stars > 0 ? "⭐️" : "🌟", text: needed > 0
                     ? "Finish \(needed) more shark \(needed == 1 ? "mission" : "missions") to find this shark"
-                    : "Earn \(stars) more \(stars == 1 ? "star" : "stars") to find this shark")
+                    : stars > 0
+                    ? "Earn \(stars) more \(stars == 1 ? "star" : "stars") to find this shark"
+                    : "Earn \(superStars) more super \(superStars == 1 ? "star" : "stars") to find this shark")
                     .padding(.bottom, 80)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .onAppear {
+            // Open on the ocean with a newly found shark, else where the map was left.
+            let fresh = catalog.sharks.first { game.freshlyUnlockedSharkIDs.contains($0.id) }?.map
+            if let fresh, catalog.mapPages.contains(where: { $0.id == fresh }) {
+                pageID = fresh
+            } else if !catalog.mapPages.contains(where: { $0.id == pageID }) {
+                pageID = catalog.mapPages[0].id
             }
         }
         .task {
@@ -76,13 +103,14 @@ struct OceanMapView: View {
         }
         .onDisappear {
             // Stop only the map's own hints; the next screen may already be speaking.
-            if [SharkLine.newShark.text, SharkLine.locked.text, SharkLine.lockedStars.text].contains(narration.text) { narration.stop() }
+            if [SharkLine.newShark.text, SharkLine.locked.text, SharkLine.lockedStars.text, SharkLine.lockedSuperStars.text].contains(narration.text) { narration.stop() }
         }
     }
 
     private func showLockedHint(for shark: SharkDefinition) {
         feedback.play(.wrong)
-        narration.play((game.missionsNeeded(for: shark) > 0 ? SharkLine.locked : .lockedStars).text, after: 0.5)
+        let line: SharkLine = game.missionsNeeded(for: shark) > 0 ? .locked : game.starsNeeded(for: shark) > 0 ? .lockedStars : .lockedSuperStars
+        narration.play(line.text, after: 0.5)
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { lockedHint = shark }
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(4))
@@ -159,15 +187,18 @@ private struct SharkMapNode: View {
             withAnimation(.easeInOut(duration: 2.0 + Double(shark.name.count % 5) / 5).repeatForever(autoreverses: true)) { floating = true }
             if fresh { withAnimation(.easeOut(duration: 1.2).repeatForever(autoreverses: false)) { pulsing = true } }
         }
-        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", \(stars) of 3 stars" : "")" : "Hidden shark, locked")
+        .accessibilityLabel(unlocked ? "Explore the \(shark.name)\(completed ? ", \(stars) of \(MissionChallenges.maxLevel) stars" : "")" : "Hidden shark, locked")
         .accessibilityIdentifier("shark-\(shark.id)")
     }
 }
 
 /// The world behind the shark markers: bundled artwork when present, otherwise drawn continents.
 private struct OceanMapArt: View {
+    let page: MapPage
+
     var body: some View {
-        if let image = UIImage(named: "ocean-map") {
+        // Each page can have its own picture (`map-pacific.jpg`); the shared world map stands in until it does.
+        if let image = UIImage(named: "map-\(page.id).jpg") ?? UIImage(named: "ocean-map") {
             Color.clear
                 .overlay { Image(uiImage: image).resizable().scaledToFill() }
                 .allowsHitTesting(false)

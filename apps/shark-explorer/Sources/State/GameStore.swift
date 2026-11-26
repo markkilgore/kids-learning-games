@@ -107,8 +107,15 @@ final class GameStore {
     /// UI tests pass this launch argument to reach every shark without playing through the unlock order.
     private static let unlockAllForTesting = ProcessInfo.processInfo.arguments.contains("-unlockAllSharks")
 
+    /// UI tests pass `-missionLevel 5` to play a chosen level without earning the stars first.
+    private static let levelForTesting: Int? = {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard let index = arguments.firstIndex(of: "-missionLevel"), arguments.indices.contains(index + 1) else { return nil }
+        return Int(arguments[index + 1])
+    }()
+
     func isUnlocked(_ shark: SharkDefinition) -> Bool {
-        Self.unlockAllForTesting || completedSharks.contains(shark.id) || (missionsNeeded(for: shark) == 0 && starsNeeded(for: shark) == 0)
+        Self.unlockAllForTesting || completedSharks.contains(shark.id) || (missionsNeeded(for: shark) == 0 && starsNeeded(for: shark) == 0 && superStarsNeeded(for: shark) == 0)
     }
 
     /// How many more missions reveal a locked shark.
@@ -116,6 +123,11 @@ final class GameStore {
 
     /// Stars earned on every shark together.
     var totalStars: Int { ContentStore.shared.catalog.sharks.reduce(0) { $0 + stars(for: $1) } }
+
+    /// A shark's fourth and fifth stars, earned at the two hardest levels, added up over every shark.
+    var totalSuperStars: Int { ContentStore.shared.catalog.sharks.reduce(0) { $0 + max(0, stars(for: $1) - MissionChallenges.plainStars) } }
+
+    func superStarsNeeded(for shark: SharkDefinition) -> Int { max(0, (shark.unlockSuperStars ?? 0) - totalSuperStars) }
 
     /// How many more stars reveal a locked shark.
     func starsNeeded(for shark: SharkDefinition) -> Int { max(0, (shark.unlockStars ?? 0) - totalStars) }
@@ -183,7 +195,8 @@ final class GameStore {
 
     /// The level the next mission is played at: one above the stars already earned.
     func missionLevel(for shark: SharkDefinition) -> Int {
-        min(stars(for: shark) + 1, MissionChallenges.maxLevel)
+        if let forced = Self.levelForTesting { return min(max(forced, 1), MissionChallenges.maxLevel) }
+        return min(stars(for: shark) + 1, MissionChallenges.maxLevel)
     }
 
     /// Records one mission round once it is answered; `firstTry` is false if a wrong bubble came first.
