@@ -268,7 +268,7 @@ struct MissionFlowView: View {
         celebration += 1
         let line: SharkLine = result.isNewPage ? .pageEarned : result.isNewStar ? (result.stars > MissionChallenges.plainStars ? .superStarEarned : .starEarned) : result.stars >= MissionChallenges.maxLevel ? .allStars : .starNextTime
         // The fanfare is two seconds long; the voice waits for most of it.
-        narration.play(line.text, after: 1.5)
+        narration.play(line.about(shark).text, after: 1.5)
     }
 
     private func backToEncounter() {

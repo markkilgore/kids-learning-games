@@ -32,7 +32,11 @@ enum SharkAppConfiguration {
             ("dwarf-lantern", "Dwarf Lanternshark"), ("spinner", "Spinner Shark"),
             ("oceanic-whitetip", "Oceanic Whitetip Shark"), ("pyjama", "Pyjama Shark"),
             ("bonnethead", "Bonnethead Shark"), ("salmon", "Salmon Shark"), ("porbeagle", "Porbeagle Shark"),
-            ("sixgill", "Bluntnose Sixgill Shark"), ("bamboo", "Brownbanded Bamboo Shark")
+            ("sixgill", "Bluntnose Sixgill Shark"), ("bamboo", "Brownbanded Bamboo Shark"),
+            ("megalodon", "Megalodon"), ("mosasaurus", "Mosasaurus"), ("dunkleosteus", "Dunkleosteus"),
+            ("ichthyosaurus", "Ichthyosaur"), ("helicoprion", "Helicoprion"), ("elasmosaurus", "Elasmosaurus"),
+            ("basilosaurus", "Basilosaurus"), ("cretoxyrhina", "Ginsu Shark"), ("archelon", "Archelon"),
+            ("cladoselache", "Cladoselache")
         ].map { LearningCharacter(id: $0.0, name: $0.1, locationID: "ocean-map") },
         enabledSkills: [
             EducationalSkill(id: "reading", displayName: "Guided reading"),

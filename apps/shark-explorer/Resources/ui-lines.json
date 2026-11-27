@@ -12,5 +12,10 @@
   "allStars": "You did it! This shark has every star.",
   "lockedSuperStars": "This shark is still hiding. Earn super stars on your other sharks to find it.",
   "listen": "Tap the words you hear.",
-  "superStarEarned": "You earned a super star!"
+  "superStarEarned": "You earned a super star!",
+  "lockedAnimal": "This animal is still hiding. Finish another mission to find it.",
+  "lockedStarsAnimal": "This animal is still hiding. Earn more stars on your other pages to find it.",
+  "lockedSuperStarsAnimal": "This animal is still hiding. Earn super stars on your other pages to find it.",
+  "newAnimal": "A new animal is waiting on your map!",
+  "allStarsAnimal": "You did it! This animal has every star."
 }

@@ -54,19 +54,25 @@ A map page that is full needs a new entry in the catalog's `maps` (id, short nam
 ideally, a backdrop `Art/map-<id>.jpg`; without one the page shows the world map. Pages do not have to be
 oceans: the same mechanism is meant for future worlds such as prehistoric seas.
 
-## Add a new kind of animal to Shark Explorer
+## Animals that are not living sharks
 
-Whales, prehistoric sea animals and dinosaurs are planned as new map pages. The code is ready for the first step:
+The Ancient Seas page holds extinct sharks, armored fish, sea reptiles and an early whale. They use the same
+shape as a shark, with these differences:
 
-1. Add the kind to `AnimalKind.all` in `ContentModels.swift` (id, noun, plural) and set `"kind": "<id>"` on
-   each such animal in `catalog.json`. Sharks leave the field out.
-2. On-screen text already takes its noun from the kind ("Hidden whale", "Meet this whale"). Once kinds are
-   mixed, general text says "animal".
-3. **Still to do when the first non-shark arrives:** the spoken interface lines in `ui-lines.json` say
-   "shark" (`locked`, `lockedStars`, `lockedSuperStars`, `newShark`, `allStars`), so add per-kind or neutral
-   versions and record them; rename the Passport and book titles if they should not say "Shark"; and write
-   the animal's content so its questions and mission text never assume a shark.
-4. Give the new world its own map page (see "Add sharks").
+1. **Kind.** Set `"kind"` to an id from `AnimalKind.all` in `ContentModels.swift` (`fish`, `sea-reptile`,
+   `whale`; sharks leave the field out). On-screen text takes its noun from the kind ("Hidden sea reptile").
+   A new kind is one more entry there.
+2. **Spoken lines.** Five interface lines say "shark"; each has a neutral twin in `ui-lines.json`
+   (`lockedAnimal`, `newAnimal`, `allStarsAnimal` and so on) that `SharkLine.about(_:)` picks for a
+   non-shark. The animal's own text must never call it a shark.
+3. **Pictures.** There are no photos of extinct animals, so the picture is a generated painting, credited as
+   an illustration with `imageSourceURL` pointing at the museum page it was checked against. Check each
+   painting against that page (tail shape, flippers, neck) before using it.
+4. **Topics.** The ids stay `home`, `food`, `size`, `senses`, `power`, `body-clues`, `ocean-care`, but titles
+   may change: `ocean-care` becomes "Fossil Clues" (how we know about the animal), and `senses` may become
+   "Teeth" or "Armor" when no senses fact can be sourced.
+5. **Facts** follow the same rule as sharks (a fetched museum page), and say "scientists think" where the
+   source is unsure. The Passport and book titles still say "Shark".
 
 ## Add a friend to Cat Math
 

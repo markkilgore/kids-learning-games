@@ -58,8 +58,8 @@ tools/deploy-ipads.sh                  # install on the family iPads (needs the 
   `KidArt`, `ReadAlongView`); touch targets are at least `KidTheme.touchTarget`.
 - Content is data: sharks in `catalog.json`, Cat Math friends and their stories in `cat-friends.json`, weekly
   lessons in `*-weeks.json`. The apps and the audio generator read the same files.
-- Shark Explorer's code says "animal" (`AnimalDefinition`, `catalog.animals`, `AnimalKind`) because whales and
-  prehistoric animals are planned; the catalog key is still `sharks` and saved progress still uses
+- Shark Explorer's code says "animal" (`AnimalDefinition`, `catalog.animals`, `AnimalKind`) because not every animal is a shark
+  (the Ancient Seas page has fish, sea reptiles and a whale); the catalog key is still `sharks` and saved progress still uses
   `completedSharks`. Child-facing text takes its noun from `AnimalKind`, not a literal "shark".
 - Pictures are looked up by name with an emoji or drawn fallback (`KidArt`), so art can arrive later. Quiz
   choice ids double as picture names (`choice-<id>.png`).

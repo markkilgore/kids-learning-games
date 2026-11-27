@@ -5,9 +5,24 @@ import Narration
 /// Interface lines Shark Explorer speaks; the text lives in `ui-lines.json` so the audio generator sees it too.
 enum SharkLine: String, CaseIterable {
     case locked, newShark, pageEarned, traitUnlocked, topicDone, leave, lockedStars, lockedSuperStars, tryAgain, listen, starEarned, superStarEarned, starNextTime, allStars
+    /// The same lines for an animal that is not a shark.
+    case lockedAnimal, lockedStarsAnimal, lockedSuperStarsAnimal, newAnimal, allStarsAnimal
 
     private static let lines = SpokenLines()
     var text: String { Self.lines[rawValue] }
+
+    /// The line to speak about this animal: the recorded "shark" wording for sharks, the neutral one otherwise.
+    func about(_ animal: AnimalDefinition) -> SharkLine {
+        guard animal.kindInfo != .shark else { return self }
+        switch self {
+        case .locked: return .lockedAnimal
+        case .lockedStars: return .lockedStarsAnimal
+        case .lockedSuperStars: return .lockedSuperStarsAnimal
+        case .newShark: return .newAnimal
+        case .allStars: return .allStarsAnimal
+        default: return self
+        }
+    }
 }
 
 extension KidTheme {

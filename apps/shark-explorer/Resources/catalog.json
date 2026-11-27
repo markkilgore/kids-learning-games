@@ -9383,6 +9383,2716 @@
         "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/chiloscyllium-punctatum/",
         "https://www.aquariumofpacific.org/onlinelearningcenter/species/brown_banded_bamboo_shark"
       ]
+    },
+    {
+      "id": "megalodon",
+      "name": "Megalodon",
+      "scientificName": "Otodus megalodon",
+      "symbol": "🦈",
+      "imageAsset": "shark-megalodon.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nhm.ac.uk/discover/megalodon--the-truth-about-the-largest-shark-that-ever-lived.html",
+      "color": "#3F5F7A",
+      "region": "Warm Seas Around the World, Long Ago",
+      "mapX": 0.1,
+      "mapY": 0.2,
+      "map": "ancient",
+      "unlockAt": 35,
+      "discover": {
+        "decodable": [
+          "It was big. It had fins. It is not a pet!"
+        ],
+        "earlyReader": [
+          "This is megalodon.",
+          "It was a giant shark.",
+          "It is extinct now."
+        ],
+        "story": [
+          "Megalodon was one of the biggest sharks that ever lived.",
+          "It is extinct, which means none are alive today."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It has pups. The pups hid. The sun is up."
+            ],
+            "earlyReader": [
+              "Megalodon lived in warm seas.",
+              "It lived millions of years ago.",
+              "Its pups grew up near the shore."
+            ],
+            "story": [
+              "Megalodon lived in warm seas around the world, from about twenty-three million years ago until about three and a half million years ago, long after the dinosaurs were gone.",
+              "Scientists think its pups grew up in shallow water near the shore, which worked like a nursery."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐋",
+          "narration": {
+            "decodable": [
+              "It had a big cod. It bit and fed."
+            ],
+            "earlyReader": [
+              "Megalodon was a predator.",
+              "It hunted big sea animals.",
+              "Scientists think it ate whales and big fish."
+            ],
+            "story": [
+              "Megalodon most likely ate whales and large fish, and probably other sharks too.",
+              "Tooth marks on fossil whale bones help scientists know what it ate."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big. A bus is not as big!"
+            ],
+            "earlyReader": [
+              "No one has found a whole megalodon.",
+              "Scientists use its teeth to work out its size.",
+              "It may have been longer than a school bus."
+            ],
+            "story": [
+              "Scientists think megalodon may have grown to about sixty feet long, and one new study says it may have been even longer.",
+              "Nobody knows for sure, because no one has ever found a whole skeleton."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Teeth",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "A kid dug in mud. A big tip!"
+            ],
+            "earlyReader": [
+              "Megalodon means big tooth.",
+              "Most of its teeth are four or five inches long.",
+              "The biggest are as long as a grown-up's hand."
+            ],
+            "story": [
+              "The name megalodon means large tooth, and the biggest teeth are about seven inches long.",
+              "Sharks lose teeth all through their lives, so megalodon teeth rained down onto the sea floor, where many became fossils."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Giant Bite",
+          "symbol": "💪",
+          "narration": {
+            "decodable": [
+              "It can rip. It can nip. It is the top!"
+            ],
+            "earlyReader": [
+              "Megalodon had a very big mouth.",
+              "Its bite was very strong.",
+              "It was a mighty hunter."
+            ],
+            "story": [
+              "Scientists think megalodon's open jaws were about nine feet by eleven feet, and that its bite was far stronger than a great white shark's.",
+              "They consider it one of the most powerful predators that ever lived."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "giant-teeth",
+          "title": "Giant Teeth",
+          "symbol": "🦷",
+          "description": "Its biggest teeth are as long as a grown-up's hand.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "shallow-nursery",
+          "title": "Shallow Nursery",
+          "symbol": "🏖️",
+          "description": "Scientists think its pups grew up in shallow water near the shore.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Megalodon Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Megalodon swims in a warm sea.",
+            "Count the fish you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Travel back millions of years to a warm sea where megalodon is looking for food.",
+            "Count each group of fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Megalodon found big fish in the warm sea."
+      },
+      "questions": [
+        {
+          "id": "mgd-q1",
+          "prompt": {
+            "earlyReader": [
+              "What did megalodon eat?"
+            ],
+            "story": [
+              "Which big sea animals do scientists think megalodon ate?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "whales",
+              "label": "Whales",
+              "symbol": "🐋"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "whales",
+          "success": "Yes! Scientists think it ate whales and big fish.",
+          "retry": "Think of a very big animal that lives in the sea."
+        },
+        {
+          "id": "mgd-q2",
+          "prompt": {
+            "earlyReader": [
+              "What do people find from megalodon?"
+            ],
+            "story": [
+              "Which fossils of megalodon are found all over the world?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            },
+            {
+              "id": "fossil-tooth",
+              "label": "Big teeth",
+              "symbol": "🦷"
+            }
+          ],
+          "correctID": "fossil-tooth",
+          "success": "Right! People find its big fossil teeth.",
+          "retry": "Its name means big tooth."
+        },
+        {
+          "id": "mgd-q3",
+          "prompt": {
+            "earlyReader": [
+              "Megalodon may have been longer than a what?"
+            ],
+            "story": [
+              "Megalodon may have grown longer than which of these?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "bee",
+              "label": "Bee",
+              "symbol": "🐝"
+            },
+            {
+              "id": "bus",
+              "label": "School bus",
+              "symbol": "🚌"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "bus",
+          "success": "You got it! It may have been longer than a school bus.",
+          "retry": "Pick the biggest thing."
+        }
+      ],
+      "vocabularyIDs": [
+        "fossil",
+        "extinct",
+        "predator"
+      ],
+      "bookFact": "Megalodon means big tooth, and this extinct giant may have grown longer than a school bus.",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/megalodon--the-truth-about-the-largest-shark-that-ever-lived.html",
+        "https://www.floridamuseum.ufl.edu/science/five-facts-megalodon/",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ]
+    },
+    {
+      "id": "mosasaurus",
+      "name": "Mosasaurus",
+      "scientificName": "Mosasaurus hoffmannii",
+      "kind": "sea-reptile",
+      "symbol": "🦎",
+      "imageAsset": "shark-mosasaurus.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nhm.ac.uk/discover/what-is-a-mosasaur.html",
+      "color": "#2F6F73",
+      "region": "Warm Seas, Long Ago",
+      "mapX": 0.2,
+      "mapY": 0.5,
+      "map": "ancient",
+      "unlockAt": 35,
+      "discover": {
+        "decodable": [
+          "It was big. It had big fins. It hid in the dim."
+        ],
+        "earlyReader": [
+          "This is Mosasaurus.",
+          "It was a giant sea lizard.",
+          "It was not a dinosaur."
+        ],
+        "story": [
+          "Mosasaurus was a giant lizard that lived in the sea when dinosaurs walked on land.",
+          "It was a reptile, but it was not a dinosaur, and its family includes the snakes and lizards of today."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun is up. It is hot. It dips in."
+            ],
+            "earlyReader": [
+              "Mosasaurs lived in warm seas.",
+              "They lived millions of years ago.",
+              "Dinosaurs lived on land at that time."
+            ],
+            "story": [
+              "Mosasaurs swam in warm seas all around the world, in the last part of the time of the dinosaurs.",
+              "The sea was much higher then, so shallow water covered places that are dry land today."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐚",
+          "narration": {
+            "decodable": [
+              "It bit a cod. It did not nap."
+            ],
+            "earlyReader": [
+              "Mosasaurs were hunters.",
+              "They ate fish and squid.",
+              "They ate ammonites with coiled shells too."
+            ],
+            "story": [
+              "Mosasaurs were top hunters that grabbed fish, squid and other sea animals.",
+              "They often ate ammonites too, and we know because fossil ammonite shells have been found with mosasaur tooth marks."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "Big as a bus! It is not a pup."
+            ],
+            "earlyReader": [
+              "Mosasaurus was huge.",
+              "It was as long as a bus.",
+              "Some scientists think it grew even longer."
+            ],
+            "story": [
+              "Some scientists think the biggest Mosasaurus was about forty feet long, which is as long as a bus.",
+              "Other scientists think it may have grown to nearly sixty feet."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Teeth",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "It had a top set. It bit and bit."
+            ],
+            "earlyReader": [
+              "Its teeth were curved and sharp.",
+              "It had more teeth on the roof of its mouth.",
+              "The teeth helped it hold its food."
+            ],
+            "story": [
+              "Mosasaurus had curved teeth with sharp points for grabbing its food.",
+              "It also had extra teeth on the roof of its mouth, just as some snakes still do today."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Tail Power",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It had a big fin. It ran and ran."
+            ],
+            "earlyReader": [
+              "A mosasaur had a long, strong tail.",
+              "The tail swept from side to side.",
+              "That pushed it through the water."
+            ],
+            "story": [
+              "A mosasaur swam by sweeping its long tail from side to side.",
+              "In some mosasaurs the tail made up more than half of the whole body."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "roof-teeth",
+          "title": "Roof Teeth",
+          "symbol": "🦷",
+          "description": "Extra teeth on the roof of its mouth helped it hold on to its food.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "sweeping-tail",
+          "title": "Sweeping Tail",
+          "symbol": "💨",
+          "description": "Its long tail swept from side to side to push it through the sea.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "ammoniteHunt",
+        "title": "Ammonite Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Mosasaurus swims through a warm sea.",
+            "Count the ammonites you see.",
+            "Read the words to help Mosasaurus."
+          ],
+          "story": [
+            "Long ago, Mosasaurus is swimming through a warm, shallow sea full of coiled ammonites.",
+            "Count each group of ammonites and read the words to help the giant sea lizard find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Mosasaurus found ammonites in the warm sea."
+      },
+      "questions": [
+        {
+          "id": "mos-q1",
+          "prompt": {
+            "earlyReader": [
+              "What was Mosasaurus?"
+            ],
+            "story": [
+              "What kind of animal was Mosasaurus?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "sea-lizard",
+              "label": "A giant sea lizard",
+              "symbol": "🦎"
+            },
+            {
+              "id": "bird",
+              "label": "A bird",
+              "symbol": "🐦"
+            },
+            {
+              "id": "cat",
+              "label": "A cat",
+              "symbol": "🐱"
+            }
+          ],
+          "correctID": "sea-lizard",
+          "success": "Yes! Mosasaurus was a giant sea lizard.",
+          "retry": "Think of a lizard that swims."
+        },
+        {
+          "id": "mos-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did mosasaurs eat?"
+            ],
+            "story": [
+              "Which coiled sea animal did mosasaurs often eat?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "ammonite",
+              "label": "Ammonites",
+              "symbol": "🐚"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "ammonite",
+          "success": "Right! Mosasaurs ate ammonites.",
+          "retry": "Look for the coiled shell."
+        },
+        {
+          "id": "mos-q3",
+          "prompt": {
+            "earlyReader": [
+              "How long was Mosasaurus?"
+            ],
+            "story": [
+              "How long could Mosasaurus grow?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "bus",
+              "label": "As long as a bus",
+              "symbol": "🚌"
+            },
+            {
+              "id": "small",
+              "label": "As small as a pencil",
+              "symbol": "✏️"
+            },
+            {
+              "id": "shoe",
+              "label": "As long as a shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "bus",
+          "success": "You got it! Mosasaurus was as long as a bus.",
+          "retry": "Pick the biggest thing."
+        }
+      ],
+      "vocabularyIDs": [
+        "reptile",
+        "ammonite",
+        "extinct"
+      ],
+      "bookFact": "Mosasaurus was a giant sea lizard as long as a bus, with extra teeth on the roof of its mouth.",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-a-mosasaur.html",
+        "https://www.nps.gov/articles/000/mosasaur.htm",
+        "https://www.nps.gov/articles/fossils-of-the-2011-national-fossil-day-artwork.htm",
+        "https://www.nationalgeographic.com/animals/facts/tylosaurus"
+      ]
+    },
+    {
+      "id": "dunkleosteus",
+      "name": "Dunkleosteus",
+      "scientificName": "Dunkleosteus terrelli",
+      "kind": "fish",
+      "symbol": "🛡️",
+      "imageAsset": "shark-dunkleosteus.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/geology/GF35_Dunkleosteus_Peter_2025.pdf",
+      "color": "#8A6B4A",
+      "region": "Shallow Sea Over Ohio, Long Ago",
+      "mapX": 0.3,
+      "mapY": 0.8,
+      "map": "ancient",
+      "unlockAt": 35,
+      "discover": {
+        "decodable": [
+          "It has a big cap. It is not a hat!"
+        ],
+        "earlyReader": [
+          "This is Dunkleosteus.",
+          "It was a big fish with armor.",
+          "People call it Dunk."
+        ],
+        "story": [
+          "Dunkleosteus was a giant armored fish that lived about three hundred and sixty million years ago, long before the dinosaurs.",
+          "It was one of the largest predators of its time, which is called the Age of Fishes."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun was hot. It was not in a tub!"
+            ],
+            "earlyReader": [
+              "A warm, shallow sea once covered Ohio.",
+              "Dunkleosteus swam in that sea.",
+              "Its fossils are found near Lake Erie."
+            ],
+            "story": [
+              "When Dunkleosteus was alive, the land that is now Ohio was covered by a warm, shallow sea.",
+              "Scientists think it cruised near the surface, and its fossils are found today in black rock in northern Ohio."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A cod had a cap. It bit the cap!"
+            ],
+            "earlyReader": [
+              "Dunkleosteus was a top predator.",
+              "It ate other fish.",
+              "It could bite through armor."
+            ],
+            "story": [
+              "Dunkleosteus likely ate other armored fish, bony fish and early sharks.",
+              "Its bite was among the strongest for an animal of its size, and may have gone right through the armor of other fish."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "A cab is big. It was as big."
+            ],
+            "earlyReader": [
+              "No one has found a whole Dunkleosteus.",
+              "So its size is a puzzle.",
+              "It may have been as long as a car, or longer."
+            ],
+            "story": [
+              "Scientists have estimated the length of Dunkleosteus at anywhere from about thirteen feet to thirty feet.",
+              "A newer study says eleven to thirteen feet, about as long as a car, with a thick, strong body."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Armor",
+          "symbol": "🛡️",
+          "narration": {
+            "decodable": [
+              "Tap the cap. It did not rip."
+            ],
+            "earlyReader": [
+              "Bony plates covered its head.",
+              "They covered the front of its body too.",
+              "The plates were hard and stiff."
+            ],
+            "story": [
+              "Bony plates covered the head and the front part of the body of Dunkleosteus, like a suit of armor.",
+              "The rest of its body had no hard plates, so it did not become a fossil and is mostly unknown."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Blade Jaws",
+          "symbol": "✂️",
+          "narration": {
+            "decodable": [
+              "It has a big gap. The gap can cut."
+            ],
+            "earlyReader": [
+              "A grown Dunkleosteus had no teeth.",
+              "Its jaws had sharp edges of bone.",
+              "The edges kept themselves sharp."
+            ],
+            "story": [
+              "Instead of teeth, a grown Dunkleosteus had sharp blades of bone on its jaws, and they sharpened themselves as the mouth opened and closed.",
+              "It could open its mouth very wide in a tiny part of a second, which may have pulled food in with a rush of water."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "bony-armor",
+          "title": "Bony Armor",
+          "symbol": "🛡️",
+          "description": "Hard plates of bone covered its head and the front of its body.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "blade-jaws",
+          "title": "Blade Jaws",
+          "symbol": "✂️",
+          "description": "Sharp edges of bone did the work of teeth.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Armored Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Dunkleosteus looks for fish.",
+            "Count the fish you see.",
+            "Read the words to help the big fish."
+          ],
+          "story": [
+            "Travel back to the Age of Fishes, where Dunkleosteus is cruising a warm, shallow sea.",
+            "Count each group of fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Dunkleosteus found fish in the warm sea."
+      },
+      "questions": [
+        {
+          "id": "dun-q1",
+          "prompt": {
+            "earlyReader": [
+              "What covered the head of Dunkleosteus?"
+            ],
+            "story": [
+              "What protected the head of Dunkleosteus?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "armor",
+              "label": "Bony armor",
+              "symbol": "🛡️"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "armor",
+          "success": "Yes! Bony armor covered its head.",
+          "retry": "Look for something hard, like a shield."
+        },
+        {
+          "id": "dun-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did Dunkleosteus eat?"
+            ],
+            "story": [
+              "Which food did Dunkleosteus hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            },
+            {
+              "id": "fish",
+              "label": "Other fish",
+              "symbol": "🐟"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! It ate other fish.",
+          "retry": "Look for the animal that swims."
+        },
+        {
+          "id": "dun-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where did Dunkleosteus live?"
+            ],
+            "story": [
+              "Where did Dunkleosteus swim?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "mountain",
+              "label": "Mountain top",
+              "symbol": "⛰️"
+            },
+            {
+              "id": "warm",
+              "label": "Warm sea",
+              "symbol": "🌊"
+            },
+            {
+              "id": "forest",
+              "label": "Forest",
+              "symbol": "🌲"
+            }
+          ],
+          "correctID": "warm",
+          "success": "You got it! It lived in a warm, shallow sea.",
+          "retry": "A fish needs water."
+        }
+      ],
+      "vocabularyIDs": [
+        "armor",
+        "extinct",
+        "jaw"
+      ],
+      "bookFact": "Dunkleosteus was an armored fish with sharp blades of bone where its teeth would be.",
+      "sourceURLs": [
+        "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/geology/GF35_Dunkleosteus_Peter_2025.pdf",
+        "https://www.cmnh.org/learn/science-blog/2025/02/07/meet-dunk-ohios-ancient-apex-predator",
+        "https://case.edu/news/chunky-dunk-clevelands-prehistoric-sea-monster-may-have-been-shorter-stouter-once-believed",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ]
+    },
+    {
+      "id": "ichthyosaurus",
+      "name": "Ichthyosaur",
+      "scientificName": "Ichthyosaurus",
+      "kind": "sea-reptile",
+      "symbol": "🐉",
+      "imageAsset": "shark-ichthyosaurus.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nhm.ac.uk/discover/what-is-an-ichthyosaur.html",
+      "color": "#3E5C8A",
+      "region": "Open Seas, Long Ago",
+      "mapX": 0.3,
+      "mapY": 0.2,
+      "map": "ancient",
+      "unlockAt": 36,
+      "discover": {
+        "decodable": [
+          "A fin sat on top. It was not a cod."
+        ],
+        "earlyReader": [
+          "This is an ichthyosaur.",
+          "It was a reptile that lived in the sea.",
+          "It was not a dinosaur."
+        ],
+        "story": [
+          "Ichthyosaurs were sea reptiles that lived in the oceans while dinosaurs lived on land.",
+          "Many of them looked a lot like dolphins, but they were reptiles, and they were not dinosaurs."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It dips to the dim. It is not hot."
+            ],
+            "earlyReader": [
+              "Ichthyosaurs lived in the sea.",
+              "They never came out on land.",
+              "They lived in the time of the dinosaurs."
+            ],
+            "story": [
+              "Ichthyosaurs lived in oceans all over the world during the time of the dinosaurs, and they never left the water.",
+              "They are extinct now, and the last of them died out about ninety million years ago."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🦑",
+          "narration": {
+            "decodable": [
+              "It ran at a cod. It got it."
+            ],
+            "earlyReader": [
+              "Ichthyosaurs were meat eaters.",
+              "Many ate small fish.",
+              "Many ate squid too."
+            ],
+            "story": [
+              "Every ichthyosaur we know of was a meat eater.",
+              "They ate animals ranging from small fish and squid to other sea reptiles."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It was big. A net did not fit."
+            ],
+            "earlyReader": [
+              "Ichthyosaurs came in many sizes.",
+              "One famous skeleton is sixteen feet long.",
+              "The biggest were as long as two buses."
+            ],
+            "story": [
+              "The ichthyosaur skeleton that Mary Anning dug out of the rocks was about sixteen feet long.",
+              "The very biggest ichthyosaurs may have grown to about eighty feet, which is as long as two buses."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Giant Eyes",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It is dim. It can get a cod."
+            ],
+            "earlyReader": [
+              "Some ichthyosaurs had huge eyes.",
+              "One kind had eyes as wide as a soccer ball.",
+              "Big eyes may have helped it see in the dark."
+            ],
+            "story": [
+              "An ichthyosaur called Ophthalmosaurus had eyes more than eight inches across, about as wide as a soccer ball.",
+              "Scientists think such huge eyes helped it see in dark water."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Born at Sea",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "Mom had a pup. The pup can dip. It has fins."
+            ],
+            "earlyReader": [
+              "Ichthyosaurs did not lay eggs.",
+              "Their babies were born in the sea.",
+              "They breathed air, as whales do."
+            ],
+            "story": [
+              "Ichthyosaurs did not lay eggs, and fossils of mothers show that their babies were born alive in the open ocean.",
+              "They had no gills, so they still breathed air, as whales do today."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "giant-eyes",
+          "title": "Giant Eyes",
+          "symbol": "👁️",
+          "description": "One kind of ichthyosaur had eyes about as wide as a soccer ball.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "born-at-sea",
+          "title": "Born at Sea",
+          "symbol": "🍼",
+          "description": "Ichthyosaur babies were born alive in the open ocean.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "squidHunt",
+        "title": "Dark Water Squid Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The ichthyosaur dives into dark water.",
+            "Count the squid you see.",
+            "Read the words to help the ichthyosaur."
+          ],
+          "story": [
+            "Long ago, an ichthyosaur with huge eyes is diving into dark water to look for squid.",
+            "Count each group of squid and read the words to help the sea reptile find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The ichthyosaur found squid in the dark water."
+      },
+      "questions": [
+        {
+          "id": "ich-q1",
+          "prompt": {
+            "earlyReader": [
+              "What did some ichthyosaurs have?"
+            ],
+            "story": [
+              "What may have helped Ophthalmosaurus see in dark water?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "big-eyes",
+              "label": "Huge eyes",
+              "symbol": "👁️"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "big-eyes",
+          "success": "Yes! It had huge eyes.",
+          "retry": "Think about what you see with."
+        },
+        {
+          "id": "ich-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did many ichthyosaurs eat?"
+            ],
+            "story": [
+              "Which food did many ichthyosaurs hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "squid",
+              "label": "Fish and squid",
+              "symbol": "🦑"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            }
+          ],
+          "correctID": "squid",
+          "success": "Right! They ate fish and squid.",
+          "retry": "Look for the sea animal with many arms."
+        },
+        {
+          "id": "ich-q3",
+          "prompt": {
+            "earlyReader": [
+              "What did Mary Anning find?"
+            ],
+            "story": [
+              "What did Mary Anning dig out of the rocks by the sea?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fossil",
+              "label": "Fossil bones",
+              "symbol": "🦴"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            },
+            {
+              "id": "hat",
+              "label": "Hat",
+              "symbol": "🎩"
+            }
+          ],
+          "correctID": "fossil",
+          "success": "You got it! Mary found fossil bones.",
+          "retry": "Look for the old bones in the rock."
+        }
+      ],
+      "vocabularyIDs": [
+        "reptile",
+        "fossil",
+        "squid"
+      ],
+      "bookFact": "Ichthyosaurs were dolphin-shaped sea reptiles, and one kind had eyes about as wide as a soccer ball.",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-an-ichthyosaur.html",
+        "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+        "https://ucmp.berkeley.edu/diapsids/ichthyosauria.html",
+        "https://www.nhm.ac.uk/discover/meet-the-monsters-of-the-jurassic-seas.html"
+      ]
+    },
+    {
+      "id": "helicoprion",
+      "name": "Helicoprion",
+      "scientificName": "Helicoprion",
+      "kind": "fish",
+      "symbol": "🌀",
+      "imageAsset": "shark-helicoprion.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3639784",
+      "color": "#7A5C99",
+      "region": "Ancient Seas, Fossils in Idaho",
+      "mapX": 0.4,
+      "mapY": 0.5,
+      "map": "ancient",
+      "unlockAt": 37,
+      "discover": {
+        "decodable": [
+          "It has a rim. The rim can cut."
+        ],
+        "earlyReader": [
+          "This is Helicoprion.",
+          "It was a fish with a spiral of teeth.",
+          "It lived before the dinosaurs."
+        ],
+        "story": [
+          "Helicoprion was a fish that lived about two hundred and seventy million years ago, before the first dinosaurs.",
+          "Its teeth grew in a spiral, called a tooth whorl, that looks a little like a round saw blade."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "Men dug a big pit. It was in it!"
+            ],
+            "earlyReader": [
+              "Helicoprion swam in ancient seas.",
+              "Its fossils are found in Idaho.",
+              "They were found in mines."
+            ],
+            "story": [
+              "Fossils of Helicoprion have been found in the phosphate mines of Idaho, in rock about two hundred and seventy million years old.",
+              "One famous fossil was collected in nineteen fifty from a mine near the town of Montpelier."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🦑",
+          "narration": {
+            "decodable": [
+              "It got a bit. It cut it up. It had it."
+            ],
+            "earlyReader": [
+              "Scientists think it ate soft animals.",
+              "It may have eaten squid.",
+              "Its spiral of teeth sliced the food."
+            ],
+            "story": [
+              "Scientists think Helicoprion ate soft-bodied animals, such as squid and their relatives.",
+              "When it closed its mouth, the spiral of teeth turned backward, slicing the food and moving it toward the back of the mouth."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "The rim was not big. It was big!"
+            ],
+            "earlyReader": [
+              "One tooth whorl is nine inches across.",
+              "The whole fish was much bigger.",
+              "A big one may have been longer than a car."
+            ],
+            "story": [
+              "The tooth whorl in one Idaho fossil is about nine inches across and holds one hundred and seventeen teeth.",
+              "Scientists think a large Helicoprion may have been about twenty to twenty-five feet long."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Tooth Whorl",
+          "symbol": "🌀",
+          "narration": {
+            "decodable": [
+              "The rim has tips. The tips can cut."
+            ],
+            "earlyReader": [
+              "The spiral sat in its lower jaw.",
+              "It had no teeth on top.",
+              "The biggest teeth were on the outside."
+            ],
+            "story": [
+              "The tooth whorl filled the whole lower jaw, and scans show no upper teeth at all.",
+              "The teeth got bigger toward the outside of the spiral, and some whorls had more than one hundred and fifty teeth."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Kept Every Tooth",
+          "symbol": "✨",
+          "narration": {
+            "decodable": [
+              "A tip got big. It sat in the rim. It did not pop!"
+            ],
+            "earlyReader": [
+              "Helicoprion kept its old teeth.",
+              "It grew new teeth too.",
+              "So the spiral grew and grew."
+            ],
+            "story": [
+              "Helicoprion kept adding new teeth without losing the old ones, so its spiral kept growing.",
+              "The smallest teeth sat curled in the middle, and the biggest sat on the outside."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "tooth-whorl",
+          "title": "Tooth Whorl",
+          "symbol": "🌀",
+          "description": "A spiral of more than one hundred teeth filled its lower jaw.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "ratfish-cousin",
+          "title": "Ratfish Cousin",
+          "symbol": "🐟",
+          "description": "Its living relatives are ratfish and chimaeras.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "squidHunt",
+        "title": "Helicoprion Squid Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Helicoprion looks for squid.",
+            "Count the squid you see.",
+            "Read the words to help the fish."
+          ],
+          "story": [
+            "Travel back to a sea from before the dinosaurs, where Helicoprion is looking for soft squid.",
+            "Count each group of squid and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Helicoprion found soft squid to eat."
+      },
+      "questions": [
+        {
+          "id": "hel-q1",
+          "prompt": {
+            "earlyReader": [
+              "What shape did its teeth make?"
+            ],
+            "story": [
+              "What did the teeth of Helicoprion grow in?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "tooth-whorl",
+              "label": "A spiral",
+              "symbol": "🌀"
+            },
+            {
+              "id": "bell",
+              "label": "A bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "kite",
+              "label": "A kite",
+              "symbol": "🪁"
+            }
+          ],
+          "correctID": "tooth-whorl",
+          "success": "Yes! Its teeth grew in a spiral.",
+          "retry": "Look for the shape that curls round and round."
+        },
+        {
+          "id": "hel-q2",
+          "prompt": {
+            "earlyReader": [
+              "What do scientists think Helicoprion ate?"
+            ],
+            "story": [
+              "Which soft animal do scientists think Helicoprion ate?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            },
+            {
+              "id": "squid",
+              "label": "Squid",
+              "symbol": "🦑"
+            }
+          ],
+          "correctID": "squid",
+          "success": "Right! Scientists think it ate squid.",
+          "retry": "Look for the soft sea animal with long arms."
+        },
+        {
+          "id": "hel-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where was the spiral of teeth?"
+            ],
+            "story": [
+              "Where on its body did the tooth whorl sit?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "wing",
+              "label": "On a bird wing",
+              "symbol": "🪽"
+            },
+            {
+              "id": "jaws",
+              "label": "In its jaw",
+              "symbol": "🦷"
+            },
+            {
+              "id": "hat",
+              "label": "On a hat",
+              "symbol": "🎩"
+            }
+          ],
+          "correctID": "jaws",
+          "success": "You got it! The spiral sat in its lower jaw.",
+          "retry": "Think about where teeth belong."
+        }
+      ],
+      "vocabularyIDs": [
+        "fossil",
+        "cartilage",
+        "squid"
+      ],
+      "bookFact": "Helicoprion was a fish whose teeth grew in a spiral inside its lower jaw.",
+      "sourceURLs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3639784",
+        "https://www.nationalgeographic.com/science/article/buzzsaw-jaw-helicoprion-was-a-freaky-ratfish",
+        "https://www.isu.edu/news/2013-spring/shark-week-is-every-week-in-idaho-this-year-idaho-museum-of-natural-history-opens-whorl-tooth-sharks-exhibit-june-22.html",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ]
+    },
+    {
+      "id": "elasmosaurus",
+      "name": "Elasmosaurus",
+      "scientificName": "Elasmosaurus platyurus",
+      "kind": "sea-reptile",
+      "symbol": "🦕",
+      "imageAsset": "shark-elasmosaurus.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nhm.ac.uk/discover/what-is-a-plesiosaur.html",
+      "color": "#5B8C6E",
+      "region": "Inland Sea, Long Ago",
+      "mapX": 0.5,
+      "mapY": 0.8,
+      "map": "ancient",
+      "unlockAt": 38,
+      "discover": {
+        "decodable": [
+          "The top bit is big. It tips and dips."
+        ],
+        "earlyReader": [
+          "This is Elasmosaurus.",
+          "It was a sea reptile with a very long neck.",
+          "It was not a dinosaur."
+        ],
+        "story": [
+          "Elasmosaurus was a plesiosaur, a sea reptile that swam in the ocean while dinosaurs lived on land.",
+          "It had a very long neck and four flippers, and it was not a dinosaur."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun is on it. It tips up."
+            ],
+            "earlyReader": [
+              "Elasmosaurus lived in a sea.",
+              "That sea once covered Kansas.",
+              "It lived in the time of the dinosaurs."
+            ],
+            "story": [
+              "The first Elasmosaurus bones were found in Kansas, which was covered by a sea in the time of the dinosaurs.",
+              "Plesiosaurs like Elasmosaurus died out sixty-six million years ago, at the same time as the dinosaurs."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It bit a cod. It did not rip it."
+            ],
+            "earlyReader": [
+              "Long-necked sea reptiles ate fish.",
+              "They had long, pointed teeth.",
+              "They swallowed fish whole."
+            ],
+            "story": [
+              "Long-necked plesiosaurs like Elasmosaurus had long, pointed teeth that could grab and hold a fish but could not chew.",
+              "So scientists think they swallowed their fish whole."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Long Neck",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It was not a pup. It was big, big, big!"
+            ],
+            "earlyReader": [
+              "Its neck was more than twenty-three feet long.",
+              "It had seventy-two neck bones.",
+              "That is longer than three grown-ups lying down."
+            ],
+            "story": [
+              "The neck of Elasmosaurus was more than twenty-three feet long, with seventy-two bones in it.",
+              "That is longer than three grown-ups lying head to toe, and long-necked plesiosaurs often had necks that were longer than their bodies."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Sneaky Neck",
+          "symbol": "🤫",
+          "narration": {
+            "decodable": [
+              "It hid and sat. A cod ran in. It got it!"
+            ],
+            "earlyReader": [
+              "Why was its neck so long?",
+              "Scientists are not sure.",
+              "It may have helped it sneak up on fish."
+            ],
+            "story": [
+              "Scientists are still not sure why Elasmosaurus had such a long neck.",
+              "It might have helped the animal sneak its head up to a school of fish."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Four Flippers",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "It has big fins. Tip, dip, tip, dip!"
+            ],
+            "earlyReader": [
+              "Elasmosaurus had four flippers.",
+              "The flippers were shaped like wings.",
+              "They pushed it through the water."
+            ],
+            "story": [
+              "Elasmosaurus had four flippers shaped like wings to push it through the water.",
+              "Scientists think that by timing the beats of its flippers it could swim without wasting effort."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "longest-neck",
+          "title": "Seventy-Two Neck Bones",
+          "symbol": "📏",
+          "description": "Its neck had seventy-two bones and was more than twenty-three feet long.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        },
+        {
+          "id": "four-flippers",
+          "title": "Four Flippers",
+          "symbol": "🪽",
+          "description": "Four wing-shaped flippers pushed it through the water.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Long Neck Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Elasmosaurus finds a school of fish.",
+            "Count the fish in each group.",
+            "Read the words to help Elasmosaurus."
+          ],
+          "story": [
+            "Long ago, Elasmosaurus is stretching its long neck toward a school of fish.",
+            "Count the fish in each group and read the words to help the long-necked sea reptile."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Elasmosaurus found fish with its long neck."
+      },
+      "questions": [
+        {
+          "id": "ela-q1",
+          "prompt": {
+            "earlyReader": [
+              "What did Elasmosaurus have?"
+            ],
+            "story": [
+              "Which body part of Elasmosaurus had seventy-two bones?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "long-neck",
+              "label": "A very long neck",
+              "symbol": "📏"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "long-neck",
+          "success": "Yes! It had a very long neck.",
+          "retry": "Look for the part that holds up the head."
+        },
+        {
+          "id": "ela-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did long-necked sea reptiles eat?"
+            ],
+            "story": [
+              "What do scientists think Elasmosaurus swallowed whole?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! They swallowed fish whole.",
+          "retry": "Look for the animal that swims."
+        },
+        {
+          "id": "ela-q3",
+          "prompt": {
+            "earlyReader": [
+              "What did Elasmosaurus swim with?"
+            ],
+            "story": [
+              "What pushed Elasmosaurus through the water?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "flippers",
+              "label": "Four flippers",
+              "symbol": "🪽"
+            },
+            {
+              "id": "paw",
+              "label": "Paws",
+              "symbol": "🐾"
+            },
+            {
+              "id": "wing",
+              "label": "Bird wings",
+              "symbol": "🐦"
+            }
+          ],
+          "correctID": "flippers",
+          "success": "You got it! It swam with four flippers.",
+          "retry": "Think about what a sea animal paddles with."
+        }
+      ],
+      "vocabularyIDs": [
+        "reptile",
+        "flipper",
+        "fossil"
+      ],
+      "bookFact": "Elasmosaurus had seventy-two bones in a neck that was more than twenty-three feet long.",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-a-plesiosaur.html",
+        "https://www.nhm.ac.uk/discover/meet-the-monsters-of-the-jurassic-seas.html",
+        "https://www.nationalgeographic.com/animals/facts/styxosaurus",
+        "https://www.kgs.ku.edu/Publications/Bulletins/18/02_intro.html",
+        "https://geokansas.ku.edu/plesiosaur",
+        "https://geokansas.ku.edu/mosasaur"
+      ]
+    },
+    {
+      "id": "basilosaurus",
+      "name": "Basilosaurus",
+      "scientificName": "Basilosaurus",
+      "kind": "whale",
+      "symbol": "🐋",
+      "imageAsset": "shark-basilosaurus.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://prod.lsa.umich.edu/paleontology/resources/beyond-exhibits/basilosaurus-isis.html",
+      "color": "#56708F",
+      "region": "Ancient Seas, After the Dinosaurs",
+      "mapX": 0.5,
+      "mapY": 0.2,
+      "map": "ancient",
+      "unlockAt": 39,
+      "discover": {
+        "decodable": [
+          "Is it a cod? It is not! It is big."
+        ],
+        "earlyReader": [
+          "This is Basilosaurus.",
+          "It was an early whale.",
+          "Its name means king lizard, but it was not a lizard."
+        ],
+        "story": [
+          "Basilosaurus was an early whale with a long body like a snake or an eel.",
+          "Its name means king lizard, because the first scientists to study it thought it was a sea reptile, but it was a mammal."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It bobs to the top. It has fun."
+            ],
+            "earlyReader": [
+              "Basilosaurus lived in the sea.",
+              "It lived about thirty-five million years ago.",
+              "The dinosaurs were long gone by then."
+            ],
+            "story": [
+              "Basilosaurus lived in the sea about thirty-five million years ago, long after the time of the dinosaurs.",
+              "Its fossils have been found in Egypt and in Alabama."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A big cod ran. It got the cod. It bit it."
+            ],
+            "earlyReader": [
+              "Basilosaurus was a top hunter.",
+              "It ate fish and sharks.",
+              "It hunted other big sea animals too."
+            ],
+            "story": [
+              "Basilosaurus was likely the top hunter in its sea.",
+              "It ate bony fish, sharks and other big sea animals, and we know because some fossils still hold the remains of a last meal."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "A bus is big. It is as big!"
+            ],
+            "earlyReader": [
+              "Basilosaurus was very long.",
+              "It was longer than a school bus.",
+              "Its body was shaped like an eel."
+            ],
+            "story": [
+              "Basilosaurus grew to between fifty and sixty feet long, which is longer than a school bus.",
+              "Its body was long and slim, like a snake or an eel."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Teeth",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "It can rip. It can nip. It gets fed."
+            ],
+            "earlyReader": [
+              "Its back teeth were shaped like blades.",
+              "Each tooth had many points.",
+              "The teeth could cut and crush food."
+            ],
+            "story": [
+              "Basilosaurus had big back teeth shaped like blades, each with many points.",
+              "With them it could cut, crush and poke holes in its food."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Tiny Legs",
+          "symbol": "🦵",
+          "narration": {
+            "decodable": [
+              "Bits sit at the hip. It did not hop."
+            ],
+            "earlyReader": [
+              "Basilosaurus had two tiny back legs.",
+              "They were shorter than your arms.",
+              "They were too small for walking."
+            ],
+            "story": [
+              "Basilosaurus still had back legs, like a land mammal, but they were shorter than a person's arms.",
+              "The legs were not joined to its backbone and could not hold it up, so it never used them for walking."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "tiny-legs",
+          "title": "Tiny Back Legs",
+          "symbol": "🦵",
+          "description": "A whale longer than a school bus had back legs shorter than your arms.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "king-lizard",
+          "title": "King Lizard Mix-Up",
+          "symbol": "👑",
+          "description": "Its name means king lizard, but it was a whale and not a lizard at all.",
+          "imageAsset": null,
+          "unlockTopicID": "ocean-care"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Early Whale Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Basilosaurus finds a school of fish.",
+            "Count the fish in each group.",
+            "Read the words to help the early whale."
+          ],
+          "story": [
+            "Long ago, Basilosaurus is pushing through the sea with its long tail and has found a school of fish.",
+            "Count the fish in each group and read the words to help the early whale."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Basilosaurus found fish in the ancient sea."
+      },
+      "questions": [
+        {
+          "id": "bas-q1",
+          "prompt": {
+            "earlyReader": [
+              "What was Basilosaurus?"
+            ],
+            "story": [
+              "What kind of animal was Basilosaurus?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "ancient-whale",
+              "label": "An early whale",
+              "symbol": "🐋"
+            },
+            {
+              "id": "bird",
+              "label": "A bird",
+              "symbol": "🐦"
+            },
+            {
+              "id": "bee",
+              "label": "A bee",
+              "symbol": "🐝"
+            }
+          ],
+          "correctID": "ancient-whale",
+          "success": "Yes! Basilosaurus was an early whale.",
+          "retry": "Think of a huge mammal that lives in the sea."
+        },
+        {
+          "id": "bas-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did Basilosaurus still have?"
+            ],
+            "story": [
+              "Which small body parts did Basilosaurus still have?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "tiny-legs",
+              "label": "Tiny back legs",
+              "symbol": "🦵"
+            },
+            {
+              "id": "wing",
+              "label": "Bird wings",
+              "symbol": "🐦"
+            },
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            }
+          ],
+          "correctID": "tiny-legs",
+          "success": "Right! It had tiny back legs.",
+          "retry": "Think about what land animals walk on."
+        },
+        {
+          "id": "bas-q3",
+          "prompt": {
+            "earlyReader": [
+              "What did Basilosaurus eat?"
+            ],
+            "story": [
+              "Which food did Basilosaurus hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Fish and sharks",
+              "symbol": "🐟"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "fish",
+          "success": "You got it! It ate fish and sharks.",
+          "retry": "Look for the animal that swims."
+        }
+      ],
+      "vocabularyIDs": [
+        "mammal",
+        "predator",
+        "fossil"
+      ],
+      "bookFact": "Basilosaurus was an early whale longer than a school bus, with tiny back legs shorter than your arms.",
+      "sourceURLs": [
+        "https://prod.lsa.umich.edu/paleontology/resources/beyond-exhibits/basilosaurus-isis.html",
+        "https://encyclopediaofalabama.org/article/basilosaurus-cetoides/"
+      ]
+    },
+    {
+      "id": "cretoxyrhina",
+      "name": "Ginsu Shark",
+      "scientificName": "Cretoxyrhina mantelli",
+      "symbol": "🦈",
+      "imageAsset": "shark-cretoxyrhina.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nationalgeographic.com/animals/facts/cretoxyrhina",
+      "color": "#66788F",
+      "region": "Dinosaur-Time Seas, Fossils in Kansas",
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "ancient",
+      "unlockAt": 35,
+      "unlockSuperStars": 18,
+      "discover": {
+        "decodable": [
+          "It was big. A fin was on top."
+        ],
+        "earlyReader": [
+          "This is the Ginsu shark.",
+          "Its other name is Cretoxyrhina.",
+          "It lived when dinosaurs walked on land."
+        ],
+        "story": [
+          "Cretoxyrhina was one of the largest sharks in the seas of the Late Cretaceous, near the end of the time of the dinosaurs.",
+          "People call it the Ginsu shark, after a kitchen knife, because its teeth were so sharp."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is not in mud. It is up top."
+            ],
+            "earlyReader": [
+              "The Ginsu shark lived in ancient seas.",
+              "Dinosaurs lived on land then.",
+              "A whole skeleton was found in Kansas."
+            ],
+            "story": [
+              "The Ginsu shark lived in the seas of the Late Cretaceous, when dinosaurs still lived on land.",
+              "A whole skeleton was dug from the chalk of Kansas, which is far from any ocean today."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It bit a big cod. It did not get a bun."
+            ],
+            "earlyReader": [
+              "The Ginsu shark was a top predator.",
+              "It ate big fish.",
+              "It ate big sea reptiles too."
+            ],
+            "story": [
+              "Fossils suggest that the Ginsu shark fed on big bony fish, on sea reptiles called mosasaurs, and possibly on plesiosaurs.",
+              "Scientists think it was probably at the top of the food chain in its sea."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "Is it big? It is big! It is not a pup."
+            ],
+            "earlyReader": [
+              "The Ginsu shark was big.",
+              "It was about as big as a great white shark.",
+              "It may have been twenty-four feet long."
+            ],
+            "story": [
+              "From the few skeletons that have been found, scientists think the Ginsu shark grew to about twenty-four feet long.",
+              "That is close to the size of a great white shark today."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Teeth",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "It has ten and ten. It can cut a cod."
+            ],
+            "earlyReader": [
+              "Its teeth were smooth and curved.",
+              "Each one was more than two inches long.",
+              "They were very sharp."
+            ],
+            "story": [
+              "The teeth of the Ginsu shark were smooth, curved and more than two inches long.",
+              "They were hard and there were lots of them, so most of what we know about this shark comes from its teeth."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Top Hunter",
+          "symbol": "💪",
+          "narration": {
+            "decodable": [
+              "It is at the top. It did not sit."
+            ],
+            "earlyReader": [
+              "The Ginsu shark had a strong bite.",
+              "It could catch other hunters.",
+              "Even a giant fish was its food."
+            ],
+            "story": [
+              "The Ginsu shark could catch Xiphactinus, a giant bony fish that was a hunter itself.",
+              "Scientists say the great white shark does the same job in today's ocean."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "knife-teeth",
+          "title": "Knife Teeth",
+          "symbol": "🔪",
+          "description": "Smooth, curved teeth more than two inches long gave it its nickname.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        },
+        {
+          "id": "top-of-the-sea",
+          "title": "Top of the Food Chain",
+          "symbol": "👑",
+          "description": "It hunted big fish and big sea reptiles.",
+          "imageAsset": null,
+          "unlockTopicID": "food"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Ginsu Shark Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The Ginsu shark hunts big fish.",
+            "Count the fish you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Travel back to a sea from the time of the dinosaurs, where the Ginsu shark is looking for big fish.",
+            "Count each group of fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The Ginsu shark found big fish in the ancient sea."
+      },
+      "questions": [
+        {
+          "id": "cre-q1",
+          "prompt": {
+            "earlyReader": [
+              "Which shark today is about as big as the Ginsu shark?"
+            ],
+            "story": [
+              "Which living shark is close to the size of the Ginsu shark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "great-white",
+              "label": "Great white shark",
+              "symbol": "🦈"
+            },
+            {
+              "id": "seahorse",
+              "label": "Seahorse",
+              "symbol": "🐴"
+            },
+            {
+              "id": "crab",
+              "label": "Crab",
+              "symbol": "🦀"
+            }
+          ],
+          "correctID": "great-white",
+          "success": "Yes! It was about as big as a great white shark.",
+          "retry": "Look for the big shark."
+        },
+        {
+          "id": "cre-q2",
+          "prompt": {
+            "earlyReader": [
+              "What did the Ginsu shark eat?"
+            ],
+            "story": [
+              "Which food did the Ginsu shark hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "fish",
+              "label": "Big fish",
+              "symbol": "🐟"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! It ate big fish and sea reptiles.",
+          "retry": "Look for the animal that swims."
+        },
+        {
+          "id": "cre-q3",
+          "prompt": {
+            "earlyReader": [
+              "What tells us most about the Ginsu shark?"
+            ],
+            "story": [
+              "Which fossils teach us the most about the Ginsu shark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "antlers",
+              "label": "Antlers",
+              "symbol": "🦌"
+            },
+            {
+              "id": "fossil-tooth",
+              "label": "Its teeth",
+              "symbol": "🦷"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "fossil-tooth",
+          "success": "You got it! Its hard teeth became fossils.",
+          "retry": "Think about the sharp parts in a shark's mouth."
+        }
+      ],
+      "vocabularyIDs": [
+        "cartilage",
+        "fossil",
+        "predator"
+      ],
+      "bookFact": "The Ginsu shark was as big as a great white and swam in the sea when dinosaurs lived on land.",
+      "sourceURLs": [
+        "https://www.nationalgeographic.com/animals/facts/cretoxyrhina",
+        "https://www.cambridge.org/core/journals/journal-of-paleontology/article/paleoecological-relationships-of-the-late-cretaceous-lamniform-shark-cretoxyrhina-mantelli-agassiz/F0DB6D29CF9A5D3C06C87C9FD05433A1",
+        "https://sternbergca.fhsu.edu/index.php/Detail/objects/74c6eaaa-30cb-4327-9877-5d8611c95aea",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ]
+    },
+    {
+      "id": "archelon",
+      "name": "Archelon",
+      "scientificName": "Archelon ischyros",
+      "kind": "sea-reptile",
+      "symbol": "🐢",
+      "imageAsset": "shark-archelon.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.nhm.ac.uk/discover/giant-prehistoric-turtles.html",
+      "color": "#7A8450",
+      "region": "Inland Sea, Long Ago",
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "ancient",
+      "unlockAt": 35,
+      "unlockSuperStars": 22,
+      "discover": {
+        "decodable": [
+          "It had a big, big top. It had fins."
+        ],
+        "earlyReader": [
+          "This is Archelon.",
+          "It was a giant sea turtle.",
+          "It was the biggest turtle that ever lived."
+        ],
+        "story": [
+          "Archelon was the largest turtle that ever lived.",
+          "This giant sea turtle swam in the ocean when dinosaurs walked on land."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is not in mud. It dips and bobs."
+            ],
+            "earlyReader": [
+              "Archelon lived in a wide, shallow sea.",
+              "The sea ran through North America.",
+              "That was millions of years ago."
+            ],
+            "story": [
+              "Archelon lived between eighty and seventy-four million years ago, when a wide, shallow sea cut through the middle of North America.",
+              "It shared that sea with mosasaurs, plesiosaurs and sharks."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐚",
+          "narration": {
+            "decodable": [
+              "It got a bit. It bit and bit. It is fed."
+            ],
+            "earlyReader": [
+              "No one has found its last meal.",
+              "It may have eaten clams and ammonites.",
+              "It may have eaten jellyfish too."
+            ],
+            "story": [
+              "Scientists have not yet found a fossil Archelon with food inside it.",
+              "They think it likely ate smaller sea animals such as clams, ammonites, sponges and jellyfish."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "Big as a cab! A tub did not fit."
+            ],
+            "earlyReader": [
+              "Archelon was about fifteen feet long.",
+              "That is as long as a car.",
+              "It was heavier than a car too."
+            ],
+            "story": [
+              "The biggest Archelon ever found is about fifteen feet long and thirteen feet across from flipper to flipper.",
+              "Scientists think it weighed more than two tons, and the leatherback, the largest turtle alive today, is only about nine feet long."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Hooked Beak",
+          "symbol": "🪝",
+          "narration": {
+            "decodable": [
+              "It had a big tip. The tip can nip."
+            ],
+            "earlyReader": [
+              "Archelon had a hooked beak.",
+              "The beak curved down at the tip.",
+              "Its bite was likely very strong."
+            ],
+            "story": [
+              "Archelon had a big hooked beak.",
+              "The shape of the beak suggests that it had a very strong bite."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Flippers and Eggs",
+          "symbol": "🥚",
+          "narration": {
+            "decodable": [
+              "Mom dug a pit. A pup is in it."
+            ],
+            "earlyReader": [
+              "Archelon had big, flat front flippers.",
+              "It likely laid eggs on a beach.",
+              "Sea turtles still do that today."
+            ],
+            "story": [
+              "Archelon had large, flat front flippers for swimming.",
+              "Scientists think it likely laid its eggs on beaches, just as sea turtles do today."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "biggest-turtle",
+          "title": "Biggest Turtle Ever",
+          "symbol": "🐢",
+          "description": "Archelon was about fifteen feet long, the largest turtle that ever lived.",
+          "imageAsset": null,
+          "unlockTopicID": "size"
+        },
+        {
+          "id": "hooked-beak",
+          "title": "Hooked Beak",
+          "symbol": "🪝",
+          "description": "A hooked beak likely gave it a very strong bite.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        }
+      ],
+      "mission": {
+        "kind": "ammoniteHunt",
+        "title": "Giant Turtle Ammonite Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Archelon paddles through a shallow sea.",
+            "Count the ammonites you see.",
+            "Read the words to help Archelon."
+          ],
+          "story": [
+            "Long ago, Archelon is paddling through a wide, shallow sea with its big flippers.",
+            "Count each group of ammonites and read the words to help the giant sea turtle find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Archelon found ammonites in the shallow sea."
+      },
+      "questions": [
+        {
+          "id": "arc-q1",
+          "prompt": {
+            "earlyReader": [
+              "What was Archelon?"
+            ],
+            "story": [
+              "What kind of animal was Archelon?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "sea-turtle",
+              "label": "A giant sea turtle",
+              "symbol": "🐢"
+            },
+            {
+              "id": "bee",
+              "label": "A bee",
+              "symbol": "🐝"
+            },
+            {
+              "id": "cat",
+              "label": "A cat",
+              "symbol": "🐱"
+            }
+          ],
+          "correctID": "sea-turtle",
+          "success": "Yes! Archelon was a giant sea turtle.",
+          "retry": "Look for the animal with a shell and flippers."
+        },
+        {
+          "id": "arc-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where did Archelon likely lay eggs?"
+            ],
+            "story": [
+              "Where do scientists think Archelon laid its eggs?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "beach",
+              "label": "On a beach",
+              "symbol": "🏖️"
+            },
+            {
+              "id": "cloud",
+              "label": "On a cloud",
+              "symbol": "☁️"
+            },
+            {
+              "id": "mountain",
+              "label": "On a mountain top",
+              "symbol": "⛰️"
+            }
+          ],
+          "correctID": "beach",
+          "success": "Right! It likely laid eggs on a beach.",
+          "retry": "Think about where sea turtles go today."
+        },
+        {
+          "id": "arc-q3",
+          "prompt": {
+            "earlyReader": [
+              "What may Archelon have eaten?"
+            ],
+            "story": [
+              "Which coiled sea animal may Archelon have eaten?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "ammonite",
+              "label": "Ammonites",
+              "symbol": "🐚"
+            },
+            {
+              "id": "kite",
+              "label": "Kite",
+              "symbol": "🪁"
+            },
+            {
+              "id": "shoe",
+              "label": "Shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "ammonite",
+          "success": "You got it! It may have eaten ammonites.",
+          "retry": "Look for the coiled shell."
+        }
+      ],
+      "vocabularyIDs": [
+        "flipper",
+        "ammonite",
+        "extinct"
+      ],
+      "bookFact": "Archelon was the largest turtle that ever lived, about as long as a car.",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/giant-prehistoric-turtles.html",
+        "https://www.bhigr.com/archelon-sea-turtle/"
+      ]
+    },
+    {
+      "id": "cladoselache",
+      "name": "Cladoselache",
+      "scientificName": "Cladoselache",
+      "symbol": "🦈",
+      "imageAsset": "shark-cladoselache.jpg",
+      "imageAuthor": "Painting made for this app",
+      "imageLicense": "AI-generated illustration",
+      "imageSourceURL": "https://www.news5cleveland.com/news/local-news/oh-cuyahoga/its-shark-week-did-you-know-there-are-prehistoric-shark-fossils-in-northeast-ohio",
+      "color": "#4F8C7D",
+      "region": "Shallow Sea Over Ohio, Long Ago",
+      "mapX": 0.7,
+      "mapY": 0.2,
+      "map": "ancient",
+      "unlockAt": 35,
+      "unlockSuperStars": 26,
+      "discover": {
+        "decodable": [
+          "It has big fins. It is fit and fun."
+        ],
+        "earlyReader": [
+          "This is Cladoselache.",
+          "It was a very early shark.",
+          "It lived long before the dinosaurs."
+        ],
+        "story": [
+          "Cladoselache swam in the sea about three hundred and sixty million years ago, long before the first dinosaurs.",
+          "It is one of the first animals that we would recognize as a shark."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Where and When",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It ran in the sun. It ran in the dim."
+            ],
+            "earlyReader": [
+              "A shallow sea once covered Ohio.",
+              "Cladoselache swam in that sea.",
+              "Today its fossils are found near Cleveland."
+            ],
+            "story": [
+              "Nearly three hundred and sixty million years ago, a shallow sea covered the land that is now Ohio.",
+              "Cladoselache lived in that sea, and its fossils are found in rock called the Cleveland Shale, in and around the city of Cleveland."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It got a cod. It did not cut it."
+            ],
+            "earlyReader": [
+              "Cladoselache ate fish.",
+              "It did not chew them.",
+              "It swallowed its fish whole."
+            ],
+            "story": [
+              "Some fossils of Cladoselache still hold its last meal inside.",
+              "The meals are whole fish, not pieces of fish, so scientists think it swallowed its food whole."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not big. A man is as big."
+            ],
+            "earlyReader": [
+              "Cladoselache was not a giant.",
+              "It was about six feet long.",
+              "That is as long as a grown-up is tall."
+            ],
+            "story": [
+              "Cladoselache was about six feet long, about as long as a tall grown-up lying down.",
+              "It was much smaller than megalodon, the giant shark that lived long afterward."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Mouth",
+          "symbol": "👄",
+          "narration": {
+            "decodable": [
+              "The tip has a gap. A cod fits in it."
+            ],
+            "earlyReader": [
+              "Its mouth was at the tip of its snout.",
+              "Most sharks today have a mouth underneath.",
+              "It could not push its jaws forward."
+            ],
+            "story": [
+              "The mouth of Cladoselache sat right at the front of its head, at the tip of the snout.",
+              "Most sharks today have a mouth on the underside, and early sharks like this one could not push their jaws forward."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Built to Swim",
+          "symbol": "💨",
+          "narration": {
+            "decodable": [
+              "A cod ran. It ran and got it!"
+            ],
+            "earlyReader": [
+              "Its body was shaped like a torpedo.",
+              "It had a forked tail.",
+              "It was an active hunter."
+            ],
+            "story": [
+              "Cladoselache had a torpedo-shaped body, a forked tail and fins on its back.",
+              "That is the shape of an active predator that swims after its food."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "torpedo-body",
+          "title": "Torpedo Body",
+          "symbol": "🚀",
+          "description": "A smooth body and a forked tail made it an active swimmer.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "front-mouth",
+          "title": "Front Mouth",
+          "symbol": "👄",
+          "description": "Its mouth sat at the tip of its snout, not underneath.",
+          "imageAsset": null,
+          "unlockTopicID": "senses"
+        }
+      ],
+      "mission": {
+        "kind": "tailStrike",
+        "title": "Ancient Sea Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Cladoselache swims after fish.",
+            "Count the fish you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Travel back to a shallow sea from long before the dinosaurs, where Cladoselache is swimming after fish.",
+            "Count each group of fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! Cladoselache found fish to swallow whole."
+      },
+      "questions": [
+        {
+          "id": "cla-q1",
+          "prompt": {
+            "earlyReader": [
+              "What did Cladoselache eat?"
+            ],
+            "story": [
+              "Which food did Cladoselache swallow whole?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Yes! It swallowed fish whole.",
+          "retry": "Look for the animal that swims."
+        },
+        {
+          "id": "cla-q2",
+          "prompt": {
+            "earlyReader": [
+              "What helped Cladoselache swim?"
+            ],
+            "story": [
+              "Which body part helped Cladoselache swim after its food?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "wing",
+              "label": "Bird wing",
+              "symbol": "🪽"
+            },
+            {
+              "id": "paw",
+              "label": "Paw",
+              "symbol": "🐾"
+            },
+            {
+              "id": "tail",
+              "label": "Forked tail",
+              "symbol": "🌊"
+            }
+          ],
+          "correctID": "tail",
+          "success": "Right! It had a forked tail for swimming.",
+          "retry": "Think about what a fish uses to swim."
+        },
+        {
+          "id": "cla-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where do people find Cladoselache fossils?"
+            ],
+            "story": [
+              "Where are the fossils of Cladoselache found?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "nest",
+              "label": "In a bird nest",
+              "symbol": "🪺"
+            },
+            {
+              "id": "rocks",
+              "label": "In rocks",
+              "symbol": "🪨"
+            },
+            {
+              "id": "cloud",
+              "label": "In a cloud",
+              "symbol": "☁️"
+            }
+          ],
+          "correctID": "rocks",
+          "success": "You got it! Its fossils are found inside rocks.",
+          "retry": "Fossil hunters dig for them."
+        }
+      ],
+      "vocabularyIDs": [
+        "fossil",
+        "extinct",
+        "snout"
+      ],
+      "bookFact": "Cladoselache was an early shark that swallowed fish whole, long before the dinosaurs.",
+      "sourceURLs": [
+        "https://www.news5cleveland.com/news/local-news/oh-cuyahoga/its-shark-week-did-you-know-there-are-prehistoric-shark-fossils-in-northeast-ohio",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.openaccessgovernment.org/article/cladoselache-a-puzzling-ancient-shark-like-fish/202090/",
+        "https://clevelandhistorical.org/files/show/7419",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ]
     }
   ],
   "vocabulary": [
@@ -9661,6 +12371,54 @@
       "word": "warm-bodied",
       "symbol": "🔥",
       "explanation": "Able to keep its body warmer than the water around it."
+    },
+    {
+      "id": "fossil",
+      "word": "fossil",
+      "symbol": "🦴",
+      "explanation": "A part or a print of a living thing from long ago that has turned to stone."
+    },
+    {
+      "id": "extinct",
+      "word": "extinct",
+      "symbol": "⏳",
+      "explanation": "A kind of animal is extinct when none of them are alive any more."
+    },
+    {
+      "id": "cartilage",
+      "word": "cartilage",
+      "symbol": "👂",
+      "explanation": "A bendy, strong material, like the stiff part of your ear, that makes up a shark's skeleton."
+    },
+    {
+      "id": "armor",
+      "word": "armor",
+      "symbol": "🛡️",
+      "explanation": "A hard covering that protects an animal's body."
+    },
+    {
+      "id": "reptile",
+      "word": "reptile",
+      "symbol": "🦎",
+      "explanation": "An animal with scaly skin, like a lizard, a snake or a turtle."
+    },
+    {
+      "id": "flipper",
+      "word": "flipper",
+      "symbol": "🐢",
+      "explanation": "A wide, flat limb that a sea animal uses to swim."
+    },
+    {
+      "id": "ammonite",
+      "word": "ammonite",
+      "symbol": "🐚",
+      "explanation": "A sea animal from long ago that lived in a coiled shell and was a relative of the octopus."
+    },
+    {
+      "id": "mammal",
+      "word": "mammal",
+      "symbol": "🐋",
+      "explanation": "An animal, like a whale, a dog or a person, whose babies drink milk from their mother."
     }
   ],
   "expansions": [
@@ -11111,6 +13869,446 @@
         }
       ],
       "questions": []
+    },
+    {
+      "sharkID": "megalodon",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/megalodon--the-truth-about-the-largest-shark-that-ever-lived.html",
+        "https://www.floridamuseum.ufl.edu/science/five-facts-megalodon/",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Soft Skeleton",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A shark skeleton is made of cartilage.",
+              "Cartilage does not last like bone.",
+              "So we mostly find megalodon teeth."
+            ],
+            "story": [
+              "Most of a shark's skeleton is cartilage, which does not turn into a fossil easily, so almost all megalodon fossils are teeth.",
+              "A few pieces of its backbone have been found too, each about the size of a dinner plate."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Megalodon teeth are found around the world.",
+              "Some are found in Florida.",
+              "Divers find them on the sea floor."
+            ],
+            "story": [
+              "Megalodon teeth have been found on every continent except Antarctica.",
+              "Scientists measure the teeth, and compare them with sharks alive today, to work out how big megalodon was."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "cladoselache",
+      "sourceURLs": [
+        "https://www.news5cleveland.com/news/local-news/oh-cuyahoga/its-shark-week-did-you-know-there-are-prehistoric-shark-fossils-in-northeast-ohio",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.openaccessgovernment.org/article/cladoselache-a-puzzling-ancient-shark-like-fish/202090/",
+        "https://clevelandhistorical.org/files/show/7419",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Skin and Muscles",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Most shark fossils are only teeth.",
+              "Cladoselache fossils show much more.",
+              "Some show skin and muscles."
+            ],
+            "story": [
+              "It is very rare to find shark fossils that are not teeth, but the rock near Cleveland kept whole bodies of Cladoselache.",
+              "Some fossils even show traces of its skin, its muscles and the cartilage of its skeleton."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Fossil hunters look in creek banks.",
+              "They find hard lumps of stone.",
+              "A fossil can hide inside."
+            ],
+            "story": [
+              "In nineteen twenty-seven, museum fossil hunters pulled a lump of stone up a creek bank and found the head and front fins of a Cladoselache inside.",
+              "Scientists are still studying these fossils, and some now think Cladoselache may be a closer cousin of ratfish than of the sharks alive today."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "cretoxyrhina",
+      "sourceURLs": [
+        "https://www.nationalgeographic.com/animals/facts/cretoxyrhina",
+        "https://www.cambridge.org/core/journals/journal-of-paleontology/article/paleoecological-relationships-of-the-late-cretaceous-lamniform-shark-cretoxyrhina-mantelli-agassiz/F0DB6D29CF9A5D3C06C87C9FD05433A1",
+        "https://sternbergca.fhsu.edu/index.php/Detail/objects/74c6eaaa-30cb-4327-9877-5d8611c95aea",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Soft Skeleton",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Sharks have no hard bones.",
+              "Their skeleton is cartilage.",
+              "Cartilage does not make good fossils."
+            ],
+            "story": [
+              "Sharks are made of cartilage, which does not fossilize well, so much of what we know about the Ginsu shark comes from its teeth.",
+              "A few rare skeletons hardened enough to last, and they show how big it grew."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "A fossil hunter found a Ginsu shark in Kansas.",
+              "It had a skull, teeth and a backbone.",
+              "A museum in Kansas keeps it safe."
+            ],
+            "story": [
+              "In nineteen sixty-five, a collector named Sternberg dug a Ginsu shark skeleton out of the chalk in Ellis County, Kansas.",
+              "A university museum in Kansas keeps the skeleton, with its skull, its teeth and its backbone."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "helicoprion",
+      "sourceURLs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3639784",
+        "https://www.nationalgeographic.com/science/article/buzzsaw-jaw-helicoprion-was-a-freaky-ratfish",
+        "https://www.isu.edu/news/2013-spring/shark-week-is-every-week-in-idaho-this-year-idaho-museum-of-natural-history-opens-whorl-tooth-sharks-exhibit-june-22.html",
+        "https://www.nhm.ac.uk/discover/shark-evolution-a-450-million-year-timeline.html",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Ratfish Cousin",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Helicoprion has cousins alive today.",
+              "They are called ratfish.",
+              "Its skeleton was made of cartilage."
+            ],
+            "story": [
+              "Scientists place Helicoprion in a group of fish that includes the ratfish and chimaeras alive today.",
+              "Cartilage in its jaw held the tooth whorl firmly on both sides."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "The tooth whorl was a puzzle.",
+              "For a hundred years, no one knew where it went.",
+              "A scan of a fossil showed the answer."
+            ],
+            "story": [
+              "For about one hundred years, scientists had no idea where the coil of teeth sat on the body.",
+              "Then a team at a museum in Idaho scanned one of their best fossils, and the scan showed the spiral sitting in the lower jaw."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "dunkleosteus",
+      "sourceURLs": [
+        "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/geology/GF35_Dunkleosteus_Peter_2025.pdf",
+        "https://www.cmnh.org/learn/science-blog/2025/02/07/meet-dunk-ohios-ancient-apex-predator",
+        "https://case.edu/news/chunky-dunk-clevelands-prehistoric-sea-monster-may-have-been-shorter-stouter-once-believed",
+        "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Head That Lifts",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Its armor had a joint at the neck.",
+              "It could lift its head and drop its jaw.",
+              "That made a very wide mouth."
+            ],
+            "story": [
+              "Dunkleosteus had joints between its head armor and its body armor, so it could lift its head while dropping its lower jaw.",
+              "Inside, its skeleton was cartilage, like a shark's, which is why only the armor is found."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Jay Terrell found the first fossils.",
+              "He found them by Lake Erie.",
+              "Now it is the state fossil fish of Ohio."
+            ],
+            "story": [
+              "In eighteen sixty-seven, a fossil hunter named Jay Terrell found the first Dunkleosteus fossils in black rock on the shore of Lake Erie.",
+              "Many more were collected when a highway was built near Cleveland in the nineteen sixties, and the Cleveland Museum of Natural History keeps them today."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "mosasaurus",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-a-mosasaur.html",
+        "https://www.nps.gov/articles/000/mosasaur.htm",
+        "https://www.nps.gov/articles/fossils-of-the-2011-national-fossil-day-artwork.htm",
+        "https://www.nationalgeographic.com/animals/facts/tylosaurus"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Lizard Built to Swim",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Mosasaurus had scales like a snake.",
+              "Its legs were paddles for swimming.",
+              "Snakes and monitor lizards are its relatives."
+            ],
+            "story": [
+              "Mosasaurus was covered in scales like a snake, and mosasaurs had paddles for swimming where their land relatives have legs.",
+              "Mosasaurs did not have to come on land to have babies, because their young were likely born alive in the open sea."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Mosasaurus is extinct.",
+              "We know it from its fossils.",
+              "The first one was found in a rock quarry."
+            ],
+            "story": [
+              "The first Mosasaurus fossil was found in the seventeen hundreds by miners digging in a limestone quarry near the city of Maastricht, in the Netherlands.",
+              "Its name means Meuse lizard, after the river that flows through that city."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "ichthyosaurus",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-an-ichthyosaur.html",
+        "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html",
+        "https://ucmp.berkeley.edu/diapsids/ichthyosauria.html",
+        "https://www.nhm.ac.uk/discover/meet-the-monsters-of-the-jurassic-seas.html"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Shaped for Speed",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "An ichthyosaur had a smooth body.",
+              "It had a fin on its back.",
+              "Its tail was shaped like a crescent moon."
+            ],
+            "story": [
+              "Later ichthyosaurs had smooth skin, a fin on the back and a tail shaped like a crescent moon.",
+              "Their bodies were shaped like those of tunas and dolphins, so scientists say they were built for speed."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Mary Anning lived by the sea in England.",
+              "Her brother Joseph found a strange skull.",
+              "Mary dug out the rest of the skeleton."
+            ],
+            "story": [
+              "About two hundred years ago, when Mary Anning was twelve, her brother Joseph found a strange fossil skull near their home in Lyme Regis, England.",
+              "About a year later Mary dug out the rest of the skeleton, and the animal was named Ichthyosaurus, which means fish lizard, though it was neither a fish nor a lizard."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "elasmosaurus",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/what-is-a-plesiosaur.html",
+        "https://www.nhm.ac.uk/discover/meet-the-monsters-of-the-jurassic-seas.html",
+        "https://www.nationalgeographic.com/animals/facts/styxosaurus",
+        "https://www.kgs.ku.edu/Publications/Bulletins/18/02_intro.html",
+        "https://geokansas.ku.edu/plesiosaur",
+        "https://geokansas.ku.edu/mosasaur"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Neck, Tail and Flippers",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A plesiosaur had a short tail.",
+              "It had four flippers like paddles.",
+              "Elasmosaurus had the long-necked shape."
+            ],
+            "story": [
+              "Plesiosaurs came in two shapes, long necked and short necked, and all of them had short tails and four flippers like paddles.",
+              "Scientists think their babies were very likely born alive in the open water."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "An army doctor found the bones in Kansas.",
+              "A scientist put the head on the wrong end.",
+              "He thought the long neck was a tail!"
+            ],
+            "story": [
+              "A doctor named Theophilus Turner collected the bones of Elasmosaurus near Fort Wallace in Kansas, and they went by wagon and train to a scientist named Edward Cope.",
+              "At first Cope thought the long neck was the tail, so he put the skull on the wrong end."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "archelon",
+      "sourceURLs": [
+        "https://www.nhm.ac.uk/discover/giant-prehistoric-turtles.html",
+        "https://www.bhigr.com/archelon-sea-turtle/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "A Shell Like a Frame",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Its shell was not one solid piece.",
+              "It was more like a frame of bones.",
+              "Its front flippers were big and flat."
+            ],
+            "story": [
+              "The shell of Archelon was more like a frame of bones than one solid piece.",
+              "Its front flippers were large and flat, and scientists think it may have used its flippers and its big shell to protect itself."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "Archelon is extinct.",
+              "Its bones were found in South Dakota.",
+              "The biggest skeleton is in a museum in Vienna."
+            ],
+            "story": [
+              "The biggest Archelon skeleton was dug out of rock in South Dakota, where the shallow sea used to be, and it now stands in a museum in Vienna.",
+              "Archelon died out at the end of the time of the dinosaurs, along with about three out of every four kinds of living things."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "basilosaurus",
+      "sourceURLs": [
+        "https://prod.lsa.umich.edu/paleontology/resources/beyond-exhibits/basilosaurus-isis.html",
+        "https://encyclopediaofalabama.org/article/basilosaurus-cetoides/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Built Like an Eel",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Its tail pushed it through the water.",
+              "Its front legs were flippers.",
+              "It swam with a wave of its long body."
+            ],
+            "story": [
+              "Scientists think Basilosaurus swam with a wave-like motion, using its tail to push and its front flippers to steer.",
+              "Its heavy ribs helped to keep it steady as it swam."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Fossil Clues",
+          "symbol": "🦴",
+          "narration": {
+            "earlyReader": [
+              "The first bone found was one backbone.",
+              "People thought it was a reptile.",
+              "Its teeth showed it was a mammal."
+            ],
+            "story": [
+              "The first Basilosaurus fossil that scientists saw was a single bone from its back, and it was named king lizard.",
+              "Later a scientist named Richard Owen looked at its teeth, which each had two roots, and worked out that it was a mammal, and today it is the state fossil of Alabama."
+            ]
+          }
+        }
+      ],
+      "questions": []
     }
   ],
   "maps": [
@@ -11133,6 +14331,11 @@
       "id": "cold",
       "name": "Cold Seas",
       "symbol": "snowflake"
+    },
+    {
+      "id": "ancient",
+      "name": "Ancient",
+      "symbol": "fossil.shell.fill"
     }
   ]
 }

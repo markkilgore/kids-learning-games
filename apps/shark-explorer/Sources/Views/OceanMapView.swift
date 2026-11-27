@@ -100,18 +100,20 @@ struct OceanMapView: View {
             guard !game.freshlyUnlockedSharkIDs.isEmpty else { return }
             try? await Task.sleep(for: .milliseconds(500))
             feedback.play(.unlock)
-            narration.play(SharkLine.newShark.text, after: 1.0)
+            let fresh = catalog.animals.first { game.freshlyUnlockedSharkIDs.contains($0.id) }
+            narration.play((fresh.map { SharkLine.newShark.about($0) } ?? .newShark).text, after: 1.0)
         }
         .onDisappear {
             // Stop only the map's own hints; the next screen may already be speaking.
-            if [SharkLine.newShark.text, SharkLine.locked.text, SharkLine.lockedStars.text, SharkLine.lockedSuperStars.text].contains(narration.text) { narration.stop() }
+            let hints: [SharkLine] = [.newShark, .locked, .lockedStars, .lockedSuperStars, .newAnimal, .lockedAnimal, .lockedStarsAnimal, .lockedSuperStarsAnimal]
+            if hints.map(\.text).contains(narration.text) { narration.stop() }
         }
     }
 
     private func showLockedHint(for shark: AnimalDefinition) {
         feedback.play(.wrong)
         let line: SharkLine = game.missionsNeeded(for: shark) > 0 ? .locked : game.starsNeeded(for: shark) > 0 ? .lockedStars : .lockedSuperStars
-        narration.play(line.text, after: 0.5)
+        narration.play(line.about(shark).text, after: 0.5)
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { lockedHint = shark }
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(4))

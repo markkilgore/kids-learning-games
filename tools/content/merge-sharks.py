@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CATALOG = os.path.join(ROOT, 'apps/shark-explorer/Resources/catalog.json')
 ART = os.path.join(ROOT, 'apps/shark-explorer/Resources/Art')
 # Keys every shark has, in catalog order; the optional ones sit right after the key named here.
-OPTIONAL_AFTER = {'unlockStars': 'unlockAt', 'unlockSuperStars': 'unlockAt', 'map': 'mapY'}
+OPTIONAL_AFTER = {'kind': 'scientificName', 'unlockStars': 'unlockAt', 'unlockSuperStars': 'unlockAt', 'map': 'mapY'}
 # Each page is a staggered grid with room for 14 markers: rows of 5, 4 and 5.
 ROWS = [[(0.1 + i * 0.2, 0.2) for i in range(5)], [(0.2 + i * 0.2, 0.5) for i in range(4)], [(0.1 + i * 0.2, 0.8) for i in range(5)]]
 
@@ -58,7 +58,11 @@ def main():
             catalog['sharks'].append(shark)
         catalog['expansions'] += batch['expansions']
         known = {word['id'] for word in catalog['vocabulary']}
-        catalog['vocabulary'] += [word for word in batch.get('vocabulary', []) if word['id'] not in known]
+        for word in batch.get('vocabulary', []):
+            # A batch written in parts may define the same word twice; the first definition wins.
+            if word['id'] not in known:
+                known.add(word['id'])
+                catalog['vocabulary'].append(word)
     layout(catalog['sharks'], pages)
     catalog['sharks'] = [ordered(s, keys) for s in catalog['sharks']]
     with open(CATALOG, 'w') as out:

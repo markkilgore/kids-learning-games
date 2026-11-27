@@ -43,7 +43,10 @@ struct AnimalKind: Hashable {
 
     static let shark = AnimalKind(id: "shark", noun: "shark", plural: "sharks")
     static let mixed = AnimalKind(id: "animal", noun: "animal", plural: "animals")
-    static let all = [shark]
+    static let fish = AnimalKind(id: "fish", noun: "fish", plural: "fish")
+    static let seaReptile = AnimalKind(id: "sea-reptile", noun: "sea reptile", plural: "sea reptiles")
+    static let whale = AnimalKind(id: "whale", noun: "whale", plural: "whales")
+    static let all = [shark, fish, seaReptile, whale]
 }
 
 struct MapPage: Codable, Identifiable, Hashable {
@@ -192,7 +195,8 @@ struct MissionPlay: Equatable {
         "glowLure": MissionPlay(targetAsset: "mission-glow", targetSymbol: "🟢"),
         "sandAmbush": MissionPlay(targetAsset: "mission-flatfish", targetSymbol: "🐟"),
         "squidHunt": MissionPlay(targetAsset: "mission-squid", targetSymbol: "🦑"),
-        "shellCrunch": MissionPlay(targetAsset: "mission-urchin", targetSymbol: "🟣")
+        "shellCrunch": MissionPlay(targetAsset: "mission-urchin", targetSymbol: "🟣"),
+        "ammoniteHunt": MissionPlay(targetAsset: "mission-ammonite", targetSymbol: "🐚")
     ]
 }
 

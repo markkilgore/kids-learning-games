@@ -13,12 +13,12 @@ struct SharkProgressSection: View {
         let quiz = game.quizTally()
         VStack(alignment: .leading, spacing: 12) {
             Label("Progress", systemImage: "chart.bar.fill").font(.kidHeadline)
-            Text("\(game.completedCount) of \(catalog.animals.count) sharks completed • \(game.collectedWords.count) of \(catalog.vocabulary.count) Ocean Words collected • Quiz: \(Self.accuracy(firstTry: quiz.firstTry, retried: quiz.retried))")
+            Text("\(game.completedCount) of \(catalog.animals.count) animals completed • \(game.collectedWords.count) of \(catalog.vocabulary.count) Ocean Words collected • Quiz: \(Self.accuracy(firstTry: quiz.firstTry, retried: quiz.retried))")
             let numbers = game.roundTally(for: .math), words = game.roundTally(for: .words)
             Text("Mission rounds right first try • Numbers: \(Self.accuracy(firstTry: numbers.firstTry, retried: numbers.retried)) • Reading words: \(Self.accuracy(firstTry: words.firstTry, retried: words.retried))")
             Grid(alignment: .leading, horizontalSpacing: 28, verticalSpacing: 10) {
                 GridRow {
-                    Text("Shark")
+                    Text("Animal")
                     Text("Status")
                     Text("Topics explored")
                     Text("Quiz: right first try")

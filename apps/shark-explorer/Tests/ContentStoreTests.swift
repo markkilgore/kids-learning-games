@@ -10,9 +10,9 @@ import Narration
 final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.animals.count, 35)
-        XCTAssertEqual(catalog.animals.flatMap(\.topics).count, 245)
-        XCTAssertEqual(catalog.animals.flatMap(\.questions).count, 105)
+        XCTAssertEqual(catalog.animals.count, 45)
+        XCTAssertEqual(catalog.animals.flatMap(\.topics).count, 315)
+        XCTAssertEqual(catalog.animals.flatMap(\.questions).count, 135)
         XCTAssertGreaterThanOrEqual(catalog.vocabulary.count, 30)
         XCTAssertTrue(catalog.vocabulary.allSatisfy { word in catalog.animals.contains { $0.vocabularyIDs.contains(word.id) } })
         XCTAssertTrue(catalog.animals.allSatisfy { $0.topics.count == 7 })
@@ -116,7 +116,7 @@ final class ContentStoreTests: XCTestCase {
         let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.unlockstars", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
         let game = GameStore(progressStore: storage)
         let sharks = ContentStore.shared.catalog.animals
-        let firstTwenty = sharks.filter { $0.unlockStars == nil && $0.unlockSuperStars == nil }
+        let firstTwenty = sharks.filter { $0.unlockAt < 20 }
         let starLocked = sharks.filter { $0.unlockStars != nil }.sorted { ($0.unlockStars ?? 0) < ($1.unlockStars ?? 0) }
         XCTAssertEqual(firstTwenty.count, 20)
         XCTAssertEqual(starLocked.count, 10)
@@ -138,7 +138,7 @@ final class ContentStoreTests: XCTestCase {
 
     func testMapPagesHoldEverySharkWithoutOverlap() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.mapPages.map(\.id), ["pacific", "atlantic", "indian", "cold"])
+        XCTAssertEqual(catalog.mapPages.map(\.id), ["pacific", "atlantic", "indian", "cold", "ancient"])
         XCTAssertEqual(catalog.mapPages.flatMap { catalog.animals(on: $0) }.count, catalog.animals.count, "every shark is on exactly one page")
         for page in catalog.mapPages {
             let sharks = catalog.animals(on: page)
@@ -159,7 +159,7 @@ final class ContentStoreTests: XCTestCase {
         let sharks = ContentStore.shared.catalog.animals
         let superLocked = sharks.filter { $0.unlockSuperStars != nil }.sorted { ($0.unlockSuperStars ?? 0) < ($1.unlockSuperStars ?? 0) }
         let earlier = sharks.filter { $0.unlockSuperStars == nil }
-        XCTAssertEqual(superLocked.count, 5)
+        XCTAssertEqual(superLocked.count, 8)
         for shark in earlier { game.completeMission(for: shark, starLevel: 3, in: sharks) }
         XCTAssertEqual(game.totalSuperStars, 0)
         XCTAssertTrue(superLocked.allSatisfy { !game.isUnlocked($0) }, "three stars on everything is not enough")
@@ -262,7 +262,8 @@ final class ContentStoreTests: XCTestCase {
     func testTopicCompletionReturnsNewTraitOnlyOnce() throws {
         let storage = try NamespacedProgressStore<SharkProgress>(namespace: "test.trait", baseDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString))
         let game = GameStore(progressStore: storage)
-        let shark = ContentStore.shared.catalog.animals[0]
+        XCTAssertNil(ContentStore.shared.loadError)
+        let shark = try XCTUnwrap(ContentStore.shared.catalog.animals.first)
         let trait = shark.traits[0]
         let topic = try XCTUnwrap(shark.topics.first { $0.id == trait.unlockTopicID })
         XCTAssertEqual(game.completeTopic(topic, for: shark).map(\.id), shark.traits.filter { $0.unlockTopicID == topic.id }.map(\.id))

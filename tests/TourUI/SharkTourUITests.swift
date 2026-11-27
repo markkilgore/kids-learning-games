@@ -14,7 +14,7 @@ final class SharkTourUITests: XCTestCase {
 
         // A locked shark may be on any ocean page, or nowhere once every shark has been found.
         let locked = app.buttons.matching(NSPredicate(format: "label == %@", "Hidden shark, locked")).firstMatch
-        for tab in ["Pacific", "Atlantic", "Indian", "Cold Seas"] where !locked.isHittable {
+        for tab in ["Pacific", "Atlantic", "Indian", "Cold Seas", "Ancient"] where !locked.isHittable {
             app.buttons[tab].tap()
             sleep(1)
         }
@@ -122,6 +122,43 @@ final class SharkTourUITests: XCTestCase {
         }
     }
 
+    /// The Ancient Seas page: painted animals that are not all sharks, and the ammonite counting mission.
+    func testAncientSeasPage() {
+        continueAfterFailure = false
+        app.launchArguments = ["-unlockAllSharks"]
+        app.launch()
+        if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
+        app.buttons["Ancient"].tap()
+        snap("ancient-01-map")
+        tap("shark-megalodon")
+        snap("ancient-02-megalodon")
+        tap("discover")
+        snap("ancient-03-megalodon-discover")
+        tap("kid-back")
+        tap("kid-back")
+        tap("shark-mosasaurus")
+        snap("ancient-04-mosasaurus")
+        tap("play-mission")
+        let start = app.buttons["Start!"]
+        XCTAssertTrue(start.waitForExistence(timeout: 15))
+        tapWhenReady(start)
+        snap("ancient-05-ammonite-mission")
+        let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
+        let questions = app.buttons["start-questions"]
+        for _ in 0..<40 where !questions.exists {
+            if target.waitForExistence(timeout: 3) { target.tap() }
+        }
+        XCTAssertTrue(questions.waitForExistence(timeout: 5), "mission never completed")
+        questions.tap()
+        for question in 1...3 {
+            XCTAssertTrue(app.buttons["answer-correct"].waitForExistence(timeout: 8))
+            snap("ancient-06-question-\(question)")
+            app.buttons["answer-correct"].tap()
+            tap("next-question")
+        }
+        snap("ancient-07-reward")
+    }
+
     /// Plays every shark's mission to the end, so a mission kind that cannot be finished is caught.
     func testEveryMissionCanBePlayedToTheEnd() {
         continueAfterFailure = true
@@ -132,7 +169,8 @@ final class SharkTourUITests: XCTestCase {
             ("Pacific", ["great-white", "wobbegong", "epaulette", "goblin", "cookiecutter", "angel", "leopard", "frilled", "megamouth", "swell", "sixgill"]),
             ("Atlantic", ["hammerhead", "nurse", "thresher", "mako", "lemon", "bull", "blue", "sand-tiger", "dwarf-lantern", "spinner", "bonnethead"]),
             ("Indian", ["whale", "tiger", "zebra", "blacktip-reef", "oceanic-whitetip", "pyjama", "bamboo"]),
-            ("Cold Seas", ["greenland", "basking", "sawshark", "port-jackson", "salmon", "porbeagle"])
+            ("Cold Seas", ["greenland", "basking", "sawshark", "port-jackson", "salmon", "porbeagle"]),
+            ("Ancient", ["megalodon", "mosasaurus", "dunkleosteus", "ichthyosaurus", "helicoprion", "elasmosaurus", "basilosaurus", "cretoxyrhina", "archelon", "cladoselache"])
         ]
         let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
         let questions = app.buttons["start-questions"]

@@ -1081,6 +1081,102 @@
       "size": "256x256",
       "composition": "tileComposition",
       "prompt": "side view of the front half of a bluntnose sixgill shark: broad rounded head, small green eye, and six long gill slits in a clear row behind the head."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-sea-lizard.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a mosasaur, a giant swimming sea lizard, in side view: long crocodile-like head, four paddle flippers and a long tail with a fin at the end, grey-blue with a pale belly."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-ammonite.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a living ammonite: a tightly coiled ribbed spiral shell in orange and cream stripes with a few short pink tentacles and one small eye peeking out of the opening."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-bus.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a yellow school bus in side view with black stripes and round wheels."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-big-eyes.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "close-up of the head of an ichthyosaur (a dolphin-shaped sea reptile with a long thin snout) showing one enormous round eye that takes up much of the head."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-fossil.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a pale flat slab of rock with the fossil skeleton of a fish-shaped sea reptile lying in it: skull with long snout, backbone, ribs and paddle bones in brown."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-long-neck.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a plesiosaur in side view with a very, very long neck stretched out, a small head, a round body, four flippers and a short tail, blue-grey."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-flippers.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a plesiosaur seen from above, showing its four big wing-shaped flippers spread wide like two pairs of wings, short tail, blue-grey."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-sea-turtle.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a giant sea turtle swimming, with a hooked beak, a wide shell and very long front flippers, olive green and tan."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-beach.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a small rounded vignette of a sandy beach at the edge of gentle blue waves, with a few round white turtle eggs in a hollow in the sand."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-ancient-whale.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Basilosaurus, an early whale, in side view: a very long slim eel-shaped grey body, a small long-snouted head with teeth, two front flippers and a small whale tail fluke."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-tiny-legs.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "the tail end of a very long slim grey early whale with a small tail fluke, and two tiny little hind legs sticking out from under the body, circled by a soft yellow highlight ring."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-whales.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a friendly big blue-grey baleen whale in side view, swimming."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-fossil-tooth.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "one large fossil shark tooth: a broad dark grey-brown triangle with finely serrated edges and a thick lighter root across the top."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-great-white.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a whole great white shark in side view: grey back, white belly, pointed snout, tall back fin, crescent tail, calm closed mouth."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-tooth-whorl.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "the fossil tooth whorl of Helicoprion: a flat spiral coil of pointed triangular teeth like a round saw blade, small teeth curled in the middle and bigger teeth around the outside, in tan and brown stone colours."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-armor.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "the head of Dunkleosteus, an ancient armored fish, in side view: a rounded helmet of large smooth olive-brown bony plates with a round eye in a bony ring and a beak-like jaw edge, no separate teeth."
     }
   ],
   "catHappyPoses": [
@@ -1181,6 +1277,68 @@
       "reference": "apps/cat-math/Resources/Art/cat-maple.png",
       "style": "catStyle",
       "prompt": "Edit the reference portrait (image-to-image) so it stays recognisably the same pony foal: same look, fur or feather colours, markings, eye colour, face, accessory, background tint, gouache storybook style and centred framing. Change only the pose and expression to a happy, celebrating pose: a big content smile with happy squinting eyes, prancing with one front hoof raised and mane bouncing, with its object (red apple) visible beside it."
+    }
+  ],
+  "ancientSeas": [
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-megalodon.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Megalodon, the giant extinct shark: a very large, thick-bodied shark shaped like a heavier great white, broad rounded snout, grey back and pale belly, big triangular dorsal fin, crescent tail."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-cladoselache.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration painted for a children's science book: accurate anatomy, soft underwater light, calm mood, clear blue-green sea, the whole animal in side view filling most of the frame, only water, light rays and a hint of seafloor around it. Landscape 4:3. No text, no watermark, no border, no people, no blood. Subject: Cladoselache, an early shark of the Devonian seas, about as long as a person. Slim torpedo-shaped body. Important: the mouth opens at the very FRONT TIP of a short rounded head, like a tuna's mouth, NOT underneath like a modern shark; there is no long pointed snout overhanging the mouth. Large round eyes near the front. Five to seven gill slits. Two low triangular back fins, each with a short stout spine standing just in front of it. Very broad triangular wing-like front fins. No anal fin. A tall, symmetrical, crescent-moon tail like a tuna or mako, with small side keels at its base. Smooth brownish-grey skin with a pale belly. Mouth closed."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-cretoxyrhina.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Cretoxyrhina, the Cretaceous 'Ginsu shark': a big fast mackerel shark built like a large mako or great white, pointed snout, tall crescent tail, dark blue-grey back and white belly, swimming in a warm shallow sea."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-helicoprion.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Helicoprion, the whorl-tooth fish: a large smooth shark-shaped fish related to ratfish, with one round spiral whorl of teeth like a circular saw blade set in the middle of its lower jaw, visible in the slightly open mouth; no teeth in the upper jaw; grey-brown body."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-dunkleosteus.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration painted for a children's science book: accurate anatomy, soft underwater light, calm mood, clear blue-green sea, the whole animal in side view filling most of the frame, only water, light rays and a hint of seafloor around it. Landscape 4:3. No text, no watermark, no border, no people, no blood. Subject: Dunkleosteus, the Devonian armored fish, following the Cleveland Museum of Natural History reconstruction. ONLY the head and the chest are armored: a rounded helmet of a few large, smooth, curved bone plates with a clear hinge line behind the head. The jaws have NO separate teeth at all: instead each jaw edge is one smooth bony blade with a single pointed fang-like cusp at the front, like a snapping turtle's beak. A round eye sits inside a ring of bone. Behind the armor the body is a plain, smooth-skinned, chunky tuna-like fish body with NO plates and NO large scales, a small back fin, paddle-like front fins and a shark-like tail. Olive-grey armor, slate-blue body, pale belly. Mouth nearly closed."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-mosasaurus.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Mosasaurus, the giant sea lizard: long body with smooth small scales, long narrow crocodile-like head, four paddle-shaped flippers, and a long tail ending in a downward-bent tail fin like a shark's tail upside down; dark grey-blue back and pale belly."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-ichthyosaurus.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: an ichthyosaur, the 'fish lizard': a sea reptile shaped like a dolphin, long thin snout with many small teeth, one very large round eye, a triangular back fin, four small flippers and an upright crescent tail; smooth dark grey back and pale belly."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-elasmosaurus.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Elasmosaurus, a long-necked plesiosaur: small head on an extremely long neck held nearly straight out in front, broad body, four long pointed flippers and a short tail; blue-grey with a pale belly, gliding through open water."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-archelon.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Archelon, the giant prehistoric sea turtle: an enormous sea turtle with a wide leathery shell (smooth skin stretched over a bony frame, not hard scales), a narrow head with a strongly hooked beak, and very long wide front flippers; swimming near the surface."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/shark-basilosaurus.jpg",
+      "size": "1280x960",
+      "prompt": "Realistic natural-history museum illustration, the kind painted for a children's science book: accurate anatomy, soft underwater light, calm and friendly mood, clear blue-green sea, the whole animal visible in side view filling most of the frame, nothing else in the picture except water, light rays and a hint of seafloor or surface. Landscape 4:3. No text, no labels, no watermark, no border, no people, no blood, mouth closed or only slightly open. Subject: Basilosaurus, an early whale: an extremely long, slender, eel-like whale body, a fairly small long-snouted head with teeth, two front flippers, two tiny hind legs near the tail, and a small whale tail fluke; grey with a pale belly."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/map-ancient.jpg",
+      "size": "1280x720",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, layered paper-cut watercolor texture, soft ocean palette, stylised flat map. Deep teal-blue ocean fills most of the frame, land as simple soft green-teal shapes at the edges, gentle wave lines, a small compass rose in one corner. Dark overall so white labels stay readable. No text, no labels, no animals. Subject: the ancient world long ago: one large joined supercontinent with unfamiliar rounded coastlines along the edges of the frame (not today's continents), wide open sea in the middle, and a few pale spiral ammonite fossil shapes and fern-leaf fossil prints worked faintly into the corners like a museum chart. Landscape 16:9."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/mission-ammonite.png",
+      "size": "1024x1024",
+      "prompt": "Warm scientific storybook illustration for ages 5-7, clean readable silhouette, layered paper-cut watercolor texture. Square image. One single object centred, filling about 75 percent of the frame, with crisp clean edges and generous padding, on a perfectly flat solid pure green (#00FF00) chroma-key background: uniform, no shadow, no gradient, no texture, no floor. Do not use any green on the object. Subject: a living ammonite: a tightly coiled ribbed spiral shell in warm orange and cream stripes, with a few short pink tentacles and one small friendly eye peeking out of the shell opening. No text or watermark."
     }
   ]
 }
