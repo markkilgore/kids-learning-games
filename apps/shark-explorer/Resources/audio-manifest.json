@@ -35499,6 +35499,106 @@
       }
     ]
   },
+  "Find the word hat.": {
+    "file": "7365184565698e0266fed2a9.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "hat.",
+        "start": 0.68,
+        "end": 1.12
+      }
+    ]
+  },
+  "Find the word hen.": {
+    "file": "bd912961c944d836391bde3c.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "the",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "word",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "hen.",
+        "start": 0.9,
+        "end": 1.6
+      }
+    ]
+  },
+  "Find the word rug.": {
+    "file": "1b1d3a9695cbf37ef091a683.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "word",
+        "start": 0.576,
+        "end": 0.96
+      },
+      {
+        "text": "rug.",
+        "start": 1.2,
+        "end": 2
+      }
+    ]
+  },
+  "Find the word run.": {
+    "file": "e75122a4af0af4620189c066.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "word",
+        "start": 0.576,
+        "end": 0.96
+      },
+      {
+        "text": "run.",
+        "start": 1.16,
+        "end": 1.92
+      }
+    ]
+  },
   "Fins tap the mud. It did not hop. It did a tip tap.": {
     "file": "bdc0113fffab4fdcd19fa3e2.mp3",
     "words": [
@@ -39594,6 +39694,51 @@
       }
     ]
   },
+  "Hat starts with h. Find the word hat.": {
+    "file": "bb09f8e45e21f3be65812cf3.mp3",
+    "words": [
+      {
+        "text": "Hat",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "starts",
+        "start": 0.297,
+        "end": 0.64
+      },
+      {
+        "text": "with",
+        "start": 0.672,
+        "end": 0.8
+      },
+      {
+        "text": "h.",
+        "start": 1.04,
+        "end": 1.36
+      },
+      {
+        "text": "Find",
+        "start": 1.488,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "word",
+        "start": 2.16,
+        "end": 2.48
+      },
+      {
+        "text": "hat.",
+        "start": 2.66,
+        "end": 3.36
+      }
+    ]
+  },
   "He found them by Lake Erie.": {
     "file": "9d39f201b71642e98f32f81a.mp3",
     "words": [
@@ -40141,6 +40286,51 @@
         "text": "pen.",
         "start": 1.34,
         "end": 1.92
+      }
+    ]
+  },
+  "Hen starts with h. Find the word hen.": {
+    "file": "a1a2cd74422b9c5fa61d8a88.mp3",
+    "words": [
+      {
+        "text": "Hen",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "starts",
+        "start": 0.377,
+        "end": 0.72
+      },
+      {
+        "text": "with",
+        "start": 0.752,
+        "end": 0.88
+      },
+      {
+        "text": "h.",
+        "start": 1.08,
+        "end": 1.68
+      },
+      {
+        "text": "Find",
+        "start": 1.76,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.1,
+        "end": 2.16
+      },
+      {
+        "text": "word",
+        "start": 2.208,
+        "end": 2.4
+      },
+      {
+        "text": "hen.",
+        "start": 2.52,
+        "end": 2.96
       }
     ]
   },
@@ -97794,6 +97984,51 @@
       }
     ]
   },
+  "Rug starts with r. Find the word rug.": {
+    "file": "01371e0849fb5775326270dc.mp3",
+    "words": [
+      {
+        "text": "Rug",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "starts",
+        "start": 0.377,
+        "end": 0.72
+      },
+      {
+        "text": "with",
+        "start": 0.736,
+        "end": 0.8
+      },
+      {
+        "text": "r.",
+        "start": 1,
+        "end": 1.28
+      },
+      {
+        "text": "Find",
+        "start": 1.44,
+        "end": 2.08
+      },
+      {
+        "text": "the",
+        "start": 2.12,
+        "end": 2.24
+      },
+      {
+        "text": "word",
+        "start": 2.304,
+        "end": 2.56
+      },
+      {
+        "text": "rug.",
+        "start": 2.7,
+        "end": 3.2
+      }
+    ]
+  },
   "Rules keep people from catching them.": {
     "file": "98f34e8d67a4e613ffdb7521.mp3",
     "words": [
@@ -97886,6 +98121,51 @@
         "text": "sea.",
         "start": 2.18,
         "end": 2.56
+      }
+    ]
+  },
+  "Run starts with r. Find the word run.": {
+    "file": "5dbcf4b2dd70776dcd1ad46d.mp3",
+    "words": [
+      {
+        "text": "Run",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "starts",
+        "start": 0.377,
+        "end": 0.72
+      },
+      {
+        "text": "with",
+        "start": 0.736,
+        "end": 0.8
+      },
+      {
+        "text": "r.",
+        "start": 1,
+        "end": 1.28
+      },
+      {
+        "text": "Find",
+        "start": 1.424,
+        "end": 2
+      },
+      {
+        "text": "the",
+        "start": 2.02,
+        "end": 2.08
+      },
+      {
+        "text": "word",
+        "start": 2.144,
+        "end": 2.4
+      },
+      {
+        "text": "run.",
+        "start": 2.5,
+        "end": 2.88
       }
     ]
   },
@@ -110600,6 +110880,216 @@
       {
         "text": "forests.",
         "start": 4.08,
+        "end": 4.72
+      }
+    ]
+  },
+  "Swim 2 spaces, then 3 more, counting each tap. Where did you land?": {
+    "file": "349282a3ea774703dbcf4f7a.mp3",
+    "words": [
+      {
+        "text": "Swim",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "2",
+        "start": 0.32,
+        "end": 0.48
+      },
+      {
+        "text": "spaces,",
+        "start": 0.571,
+        "end": 1.2
+      },
+      {
+        "text": "then",
+        "start": 1.296,
+        "end": 1.68
+      },
+      {
+        "text": "3",
+        "start": 1.84,
+        "end": 2
+      },
+      {
+        "text": "more,",
+        "start": 2.08,
+        "end": 2.48
+      },
+      {
+        "text": "counting",
+        "start": 2.551,
+        "end": 3.12
+      },
+      {
+        "text": "each",
+        "start": 3.168,
+        "end": 3.36
+      },
+      {
+        "text": "tap.",
+        "start": 3.48,
+        "end": 3.92
+      },
+      {
+        "text": "Where",
+        "start": 4.04,
+        "end": 4.64
+      },
+      {
+        "text": "did",
+        "start": 4.7,
+        "end": 4.88
+      },
+      {
+        "text": "you",
+        "start": 4.9,
+        "end": 4.96
+      },
+      {
+        "text": "land?",
+        "start": 5.04,
+        "end": 5.52
+      }
+    ]
+  },
+  "Swim 4 spaces, then 3 more, counting each tap. Where did you land?": {
+    "file": "fd9d2e67f6c889261d7adeb5.mp3",
+    "words": [
+      {
+        "text": "Swim",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "4",
+        "start": 0.4,
+        "end": 0.56
+      },
+      {
+        "text": "spaces,",
+        "start": 0.651,
+        "end": 1.28
+      },
+      {
+        "text": "then",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "3",
+        "start": 1.6,
+        "end": 1.76
+      },
+      {
+        "text": "more,",
+        "start": 1.84,
+        "end": 2.24
+      },
+      {
+        "text": "counting",
+        "start": 2.311,
+        "end": 2.88
+      },
+      {
+        "text": "each",
+        "start": 2.928,
+        "end": 3.12
+      },
+      {
+        "text": "tap.",
+        "start": 3.24,
+        "end": 3.96
+      },
+      {
+        "text": "Where",
+        "start": 4.02,
+        "end": 4.32
+      },
+      {
+        "text": "did",
+        "start": 4.36,
+        "end": 4.48
+      },
+      {
+        "text": "you",
+        "start": 4.52,
+        "end": 4.64
+      },
+      {
+        "text": "land?",
+        "start": 4.72,
+        "end": 5.2
+      }
+    ]
+  },
+  "Swim 5 spaces, then 4 more, counting each tap. Where did you land?": {
+    "file": "a286da9fa51d0d1f15784b78.mp3",
+    "words": [
+      {
+        "text": "Swim",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "5",
+        "start": 0.4,
+        "end": 0.64
+      },
+      {
+        "text": "spaces,",
+        "start": 0.731,
+        "end": 1.4
+      },
+      {
+        "text": "then",
+        "start": 1.424,
+        "end": 1.52
+      },
+      {
+        "text": "4",
+        "start": 1.84,
+        "end": 2
+      },
+      {
+        "text": "more,",
+        "start": 2.032,
+        "end": 2.24
+      },
+      {
+        "text": "counting",
+        "start": 2.284,
+        "end": 2.64
+      },
+      {
+        "text": "each",
+        "start": 2.688,
+        "end": 2.88
+      },
+      {
+        "text": "tap.",
+        "start": 3,
+        "end": 3.64
+      },
+      {
+        "text": "Where",
+        "start": 3.687,
+        "end": 3.92
+      },
+      {
+        "text": "did",
+        "start": 3.96,
+        "end": 4.08
+      },
+      {
+        "text": "you",
+        "start": 4.1,
+        "end": 4.16
+      },
+      {
+        "text": "land?",
+        "start": 4.24,
         "end": 4.72
       }
     ]
@@ -174566,6 +175056,121 @@
         "text": "night.",
         "start": 2.307,
         "end": 2.72
+      }
+    ]
+  },
+  "You kept practicing h and r, wrote more three-page books, played Racing Bears with numbers up to ten, and practiced friendship songs.": {
+    "file": "dfe720a590d11bfcddbebe6f.mp3",
+    "words": [
+      {
+        "text": "You",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "kept",
+        "start": 0.192,
+        "end": 0.32
+      },
+      {
+        "text": "practicing",
+        "start": 0.371,
+        "end": 0.88
+      },
+      {
+        "text": "h",
+        "start": 1.12,
+        "end": 1.36
+      },
+      {
+        "text": "and",
+        "start": 1.42,
+        "end": 1.6
+      },
+      {
+        "text": "r,",
+        "start": 1.8,
+        "end": 2.28
+      },
+      {
+        "text": "wrote",
+        "start": 2.327,
+        "end": 2.56
+      },
+      {
+        "text": "more",
+        "start": 2.624,
+        "end": 2.88
+      },
+      {
+        "text": "three-page",
+        "start": 2.92,
+        "end": 3.44
+      },
+      {
+        "text": "books,",
+        "start": 3.507,
+        "end": 4.16
+      },
+      {
+        "text": "played",
+        "start": 4.206,
+        "end": 4.48
+      },
+      {
+        "text": "Racing",
+        "start": 4.537,
+        "end": 4.88
+      },
+      {
+        "text": "Bears",
+        "start": 4.947,
+        "end": 5.28
+      },
+      {
+        "text": "with",
+        "start": 5.296,
+        "end": 5.36
+      },
+      {
+        "text": "numbers",
+        "start": 5.41,
+        "end": 5.76
+      },
+      {
+        "text": "up",
+        "start": 5.813,
+        "end": 5.92
+      },
+      {
+        "text": "to",
+        "start": 5.947,
+        "end": 6
+      },
+      {
+        "text": "ten,",
+        "start": 6.12,
+        "end": 6.64
+      },
+      {
+        "text": "and",
+        "start": 6.74,
+        "end": 7.04
+      },
+      {
+        "text": "practiced",
+        "start": 7.096,
+        "end": 7.6
+      },
+      {
+        "text": "friendship",
+        "start": 7.651,
+        "end": 8.16
+      },
+      {
+        "text": "songs.",
+        "start": 8.24,
+        "end": 8.8
       }
     ]
   },

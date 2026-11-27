@@ -375,5 +375,114 @@
         ]
       }
     ]
+  },
+  {
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "dates": "Nov 16–22",
+    "overview": "You kept practicing h and r, wrote more three-page books, played Racing Bears with numbers up to ten, and practiced friendship songs.",
+    "activities": [
+      {
+        "id": "2026-11-16-words",
+        "title": "Read h and r words",
+        "icon": "🎩",
+        "steps": [
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🦈 🎧",
+            "choices": [
+              "hat",
+              "rat",
+              "hot"
+            ],
+            "answer": "hat",
+            "hint": "Hat starts with h. Find the word hat.",
+            "spoken": "Find the word hat."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🦈 🎧",
+            "choices": [
+              "hug",
+              "rug",
+              "rag"
+            ],
+            "answer": "rug",
+            "hint": "Rug starts with r. Find the word rug.",
+            "spoken": "Find the word rug."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🦈 🎧",
+            "choices": [
+              "ten",
+              "him",
+              "hen"
+            ],
+            "answer": "hen",
+            "hint": "Hen starts with h. Find the word hen.",
+            "spoken": "Find the word hen."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🦈 🎧",
+            "choices": [
+              "run",
+              "sun",
+              "rub"
+            ],
+            "answer": "run",
+            "hint": "Run starts with r. Find the word run.",
+            "spoken": "Find the word run."
+          }
+        ]
+      },
+      {
+        "id": "2026-11-16-bears",
+        "title": "Two rolls on the reef",
+        "icon": "🎲",
+        "steps": [
+          {
+            "prompt": "Swim 2 spaces, then 3 more, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "4",
+              "5",
+              "6"
+            ],
+            "answer": "5",
+            "hint": "Look at the number under your shark.",
+            "moves": 5,
+            "track": true
+          },
+          {
+            "prompt": "Swim 4 spaces, then 3 more, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "7",
+              "6",
+              "8"
+            ],
+            "answer": "7",
+            "hint": "Look at the number under your shark.",
+            "moves": 7,
+            "track": true
+          },
+          {
+            "prompt": "Swim 5 spaces, then 4 more, counting each tap. Where did you land?",
+            "scene": "",
+            "choices": [
+              "8",
+              "10",
+              "9"
+            ],
+            "answer": "9",
+            "hint": "Look at the number under your shark.",
+            "moves": 9,
+            "track": true
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -35,6 +35,7 @@ piece of work lands or a decision is made.
 | Nov 25 | Clean-up: Cat Math friends moved to `cat-friends.json`, Shark code made animal-neutral, mission intros for sharks 1–20 rewritten for the counting-and-reading game, repo guides added. |
 | Nov 26 | Henry had found all 35 sharks: Ancient Seas page with ten prehistoric animals, animal kinds beyond sharks, ammonite counting mission. |
 | Nov 27 | Eight more living sharks (horn, whitetip reef, spiny dogfish, sevengill, silky, puffadder shyshark, kitefin, pocket), opening one per finished mission after the first 35. Animal Passport grouped by kind. |
+| Nov 27 | Weekly lessons for Nov 16–22: make-a-ten subtraction and l-blend words for Kate, h and r words and two-roll counting for Henry. |
 | Nov 26 | Kate: story pages open silently for her to read, a hear-and-find sentence question after each page, and make-a-ten subtraction on ten-frames. |
 
 ## Next steps
@@ -51,7 +52,8 @@ make each visit richer over simply adding more animals.
 3. **More worlds as map pages.** Ancient Seas is the first page that is not an ocean. Next in rough order:
    whales and other sea mammals, more prehistoric sea animals (Livyatan, Liopleurodon, Xiphactinus, giant sea
    scorpions), then dinosaurs and ice-age animals. The content guide says what a non-shark needs.
-4. **Kate:** weekly lessons stop at Nov 9–15 in both games (Nov 16–22 was l blends and make-a-ten). Watch
+4. **Kate:** weekly lessons run to Nov 16–22 in both games; Nov 23–27 was Thanksgiving break with no recap, and
+   the next recap (for Nov 30–Dec 4) is due Friday Dec 4. Watch
    whether chapter-two math is the right level; next units are place value (tens and
    ones), time to the hour and comparing numbers. New reading units as the newsletters arrive.
 5. **Work through `docs/review.md`**: recordings nobody has heard, pictures and facts nobody has checked.

@@ -1,4 +1,199 @@
 {
+  "11 take away 1 is ten. Ten take away 3 is 7.": {
+    "file": "8b62f7f2341a7b8106eac870.mp3",
+    "words": [
+      {
+        "text": "11",
+        "start": 0,
+        "end": 0.4
+      },
+      {
+        "text": "take",
+        "start": 0.448,
+        "end": 0.64
+      },
+      {
+        "text": "away",
+        "start": 0.688,
+        "end": 0.88
+      },
+      {
+        "text": "1",
+        "start": 1.12,
+        "end": 1.28
+      },
+      {
+        "text": "is",
+        "start": 1.36,
+        "end": 1.52
+      },
+      {
+        "text": "ten.",
+        "start": 1.62,
+        "end": 2.08
+      },
+      {
+        "text": "Ten",
+        "start": 2.26,
+        "end": 2.8
+      },
+      {
+        "text": "take",
+        "start": 2.848,
+        "end": 3.04
+      },
+      {
+        "text": "away",
+        "start": 3.088,
+        "end": 3.28
+      },
+      {
+        "text": "3",
+        "start": 3.44,
+        "end": 3.68
+      },
+      {
+        "text": "is",
+        "start": 3.76,
+        "end": 3.92
+      },
+      {
+        "text": "7.",
+        "start": 4.16,
+        "end": 4.4
+      }
+    ]
+  },
+  "13 take away 3 is ten. Ten take away 2 is 8.": {
+    "file": "a27bbc48b46dbc5204608242.mp3",
+    "words": [
+      {
+        "text": "13",
+        "start": 0,
+        "end": 0.56
+      },
+      {
+        "text": "take",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "away",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "3",
+        "start": 1.2,
+        "end": 1.44
+      },
+      {
+        "text": "is",
+        "start": 1.493,
+        "end": 1.6
+      },
+      {
+        "text": "ten.",
+        "start": 1.7,
+        "end": 2.16
+      },
+      {
+        "text": "Ten",
+        "start": 2.3,
+        "end": 2.72
+      },
+      {
+        "text": "take",
+        "start": 2.768,
+        "end": 2.96
+      },
+      {
+        "text": "away",
+        "start": 3.008,
+        "end": 3.2
+      },
+      {
+        "text": "2",
+        "start": 3.36,
+        "end": 3.52
+      },
+      {
+        "text": "is",
+        "start": 3.6,
+        "end": 3.76
+      },
+      {
+        "text": "8.",
+        "start": 3.84,
+        "end": 4.24
+      }
+    ]
+  },
+  "14 take away 4 is ten. Ten take away 1 is 9.": {
+    "file": "48dfffe13c7ae20045d827e6.mp3",
+    "words": [
+      {
+        "text": "14",
+        "start": 0,
+        "end": 0.56
+      },
+      {
+        "text": "take",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "away",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "4",
+        "start": 1.12,
+        "end": 1.44
+      },
+      {
+        "text": "is",
+        "start": 1.52,
+        "end": 1.68
+      },
+      {
+        "text": "ten.",
+        "start": 1.78,
+        "end": 2.24
+      },
+      {
+        "text": "Ten",
+        "start": 2.4,
+        "end": 2.88
+      },
+      {
+        "text": "take",
+        "start": 2.928,
+        "end": 3.12
+      },
+      {
+        "text": "away",
+        "start": 3.168,
+        "end": 3.36
+      },
+      {
+        "text": "1",
+        "start": 3.44,
+        "end": 3.68
+      },
+      {
+        "text": "is",
+        "start": 3.787,
+        "end": 4
+      },
+      {
+        "text": "9.",
+        "start": 4.08,
+        "end": 4.56
+      }
+    ]
+  },
   "A baby turkey hatches from it.": {
     "file": "c41bdc4edab1333f2017823b.mp3",
     "words": [
@@ -30389,6 +30584,56 @@
       }
     ]
   },
+  "Find the word came.": {
+    "file": "1738ed07e88852e23428d6b6.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "word",
+        "start": 0.56,
+        "end": 0.88
+      },
+      {
+        "text": "came.",
+        "start": 1.088,
+        "end": 2.08
+      }
+    ]
+  },
+  "Find the word clap.": {
+    "file": "750f1758f1f1a7278195015d.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "text": "clap.",
+        "start": 0.896,
+        "end": 1.68
+      }
+    ]
+  },
   "Find the word could.": {
     "file": "8114c03a408094d985f4938a.mp3",
     "words": [
@@ -30414,6 +30659,56 @@
       }
     ]
   },
+  "Find the word flag.": {
+    "file": "cb327ba64c6db171534957ff.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.4
+      },
+      {
+        "text": "word",
+        "start": 0.48,
+        "end": 0.8
+      },
+      {
+        "text": "flag.",
+        "start": 0.96,
+        "end": 1.68
+      }
+    ]
+  },
+  "Find the word found.": {
+    "file": "e1638158e2b654db57699fca.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "found.",
+        "start": 0.733,
+        "end": 1.36
+      }
+    ]
+  },
   "Find the word here.": {
     "file": "70947a12fc51e96c6285f81f.mp3",
     "words": [
@@ -30436,6 +30731,31 @@
         "text": "here.",
         "start": 0.8,
         "end": 1.28
+      }
+    ]
+  },
+  "Find the word people.": {
+    "file": "6b51738892be3997ad240f6d.mp3",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "the",
+        "start": 0.26,
+        "end": 0.32
+      },
+      {
+        "text": "word",
+        "start": 0.384,
+        "end": 0.64
+      },
+      {
+        "text": "people.",
+        "start": 0.731,
+        "end": 1.44
       }
     ]
   },
@@ -43539,6 +43859,86 @@
       }
     ]
   },
+  "Listen once more. Find the word came.": {
+    "file": "31a3b84a7357786f34aac016.mp3",
+    "words": [
+      {
+        "text": "Listen",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "once",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "more.",
+        "start": 0.64,
+        "end": 1.04
+      },
+      {
+        "text": "Find",
+        "start": 1.168,
+        "end": 1.68
+      },
+      {
+        "text": "the",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "word",
+        "start": 1.92,
+        "end": 2.24
+      },
+      {
+        "text": "came.",
+        "start": 2.384,
+        "end": 3.12
+      }
+    ]
+  },
+  "Listen once more. Find the word clap.": {
+    "file": "0d9847aa5301b020c2d959e2.mp3",
+    "words": [
+      {
+        "text": "Listen",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "text": "once",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "text": "more.",
+        "start": 0.64,
+        "end": 1.04
+      },
+      {
+        "text": "Find",
+        "start": 1.152,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.62,
+        "end": 1.68
+      },
+      {
+        "text": "word",
+        "start": 1.744,
+        "end": 2
+      },
+      {
+        "text": "clap.",
+        "start": 2.112,
+        "end": 2.64
+      }
+    ]
+  },
   "Listen once more. Find the word could.": {
     "file": "160cec1e6969c7ee8ddc8f91.mp3",
     "words": [
@@ -43579,6 +43979,86 @@
       }
     ]
   },
+  "Listen once more. Find the word flag.": {
+    "file": "01abe0a1dbbb5f9983c97b65.mp3",
+    "words": [
+      {
+        "text": "Listen",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "once",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "more.",
+        "start": 0.624,
+        "end": 0.96
+      },
+      {
+        "text": "Find",
+        "start": 1.088,
+        "end": 1.6
+      },
+      {
+        "text": "the",
+        "start": 1.64,
+        "end": 1.76
+      },
+      {
+        "text": "word",
+        "start": 1.824,
+        "end": 2.08
+      },
+      {
+        "text": "flag.",
+        "start": 2.24,
+        "end": 2.96
+      }
+    ]
+  },
+  "Listen once more. Find the word found.": {
+    "file": "8c4576542f020dd8d80e60d9.mp3",
+    "words": [
+      {
+        "text": "Listen",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "once",
+        "start": 0.304,
+        "end": 0.56
+      },
+      {
+        "text": "more.",
+        "start": 0.624,
+        "end": 0.96
+      },
+      {
+        "text": "Find",
+        "start": 1.072,
+        "end": 1.52
+      },
+      {
+        "text": "the",
+        "start": 1.54,
+        "end": 1.6
+      },
+      {
+        "text": "word",
+        "start": 1.664,
+        "end": 1.92
+      },
+      {
+        "text": "found.",
+        "start": 2,
+        "end": 2.48
+      }
+    ]
+  },
   "Listen once more. Find the word here.": {
     "file": "1ecea49a68e3abf5f84f5324.mp3",
     "words": [
@@ -43616,6 +44096,46 @@
         "text": "here.",
         "start": 2.08,
         "end": 2.48
+      }
+    ]
+  },
+  "Listen once more. Find the word people.": {
+    "file": "d4616a1649cdb8b0bfdede3b.mp3",
+    "words": [
+      {
+        "text": "Listen",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "once",
+        "start": 0.288,
+        "end": 0.48
+      },
+      {
+        "text": "more.",
+        "start": 0.56,
+        "end": 0.96
+      },
+      {
+        "text": "Find",
+        "start": 1.136,
+        "end": 1.84
+      },
+      {
+        "text": "the",
+        "start": 1.86,
+        "end": 1.92
+      },
+      {
+        "text": "word",
+        "start": 2,
+        "end": 2.32
+      },
+      {
+        "text": "people.",
+        "start": 2.411,
+        "end": 3.12
       }
     ]
   },
@@ -69864,6 +70384,321 @@
       }
     ]
   },
+  "The cat has 11 treats. Give away 4: first 1 to make ten, then 3 more. How many are left?": {
+    "file": "d8c67e1327586fc27af7bc74.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "cat",
+        "start": 0.14,
+        "end": 0.32
+      },
+      {
+        "text": "has",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "11",
+        "start": 0.64,
+        "end": 0.96
+      },
+      {
+        "text": "treats.",
+        "start": 1.04,
+        "end": 1.6
+      },
+      {
+        "text": "Give",
+        "start": 1.776,
+        "end": 2.48
+      },
+      {
+        "text": "away",
+        "start": 2.528,
+        "end": 2.72
+      },
+      {
+        "text": "4:",
+        "start": 2.88,
+        "end": 3.6
+      },
+      {
+        "text": "first",
+        "start": 3.653,
+        "end": 3.92
+      },
+      {
+        "text": "1",
+        "start": 4,
+        "end": 4.16
+      },
+      {
+        "text": "to",
+        "start": 4.187,
+        "end": 4.24
+      },
+      {
+        "text": "make",
+        "start": 4.272,
+        "end": 4.4
+      },
+      {
+        "text": "ten,",
+        "start": 4.52,
+        "end": 5.04
+      },
+      {
+        "text": "then",
+        "start": 5.12,
+        "end": 5.44
+      },
+      {
+        "text": "3",
+        "start": 5.52,
+        "end": 5.68
+      },
+      {
+        "text": "more.",
+        "start": 5.76,
+        "end": 6.4
+      },
+      {
+        "text": "How",
+        "start": 6.48,
+        "end": 6.72
+      },
+      {
+        "text": "many",
+        "start": 6.768,
+        "end": 6.96
+      },
+      {
+        "text": "are",
+        "start": 6.98,
+        "end": 7.04
+      },
+      {
+        "text": "left?",
+        "start": 7.12,
+        "end": 7.6
+      }
+    ]
+  },
+  "The cat has 13 treats. Give away 5: first 3 to make ten, then 2 more. How many are left?": {
+    "file": "8e25a3dc30f3ec91347f35dd.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "cat",
+        "start": 0.14,
+        "end": 0.32
+      },
+      {
+        "text": "has",
+        "start": 0.4,
+        "end": 0.64
+      },
+      {
+        "text": "13",
+        "start": 0.72,
+        "end": 1.12
+      },
+      {
+        "text": "treats.",
+        "start": 1.189,
+        "end": 1.68
+      },
+      {
+        "text": "Give",
+        "start": 1.824,
+        "end": 2.4
+      },
+      {
+        "text": "away",
+        "start": 2.464,
+        "end": 2.72
+      },
+      {
+        "text": "5:",
+        "start": 2.88,
+        "end": 3.36
+      },
+      {
+        "text": "first",
+        "start": 3.48,
+        "end": 4.08
+      },
+      {
+        "text": "3",
+        "start": 4.24,
+        "end": 4.4
+      },
+      {
+        "text": "to",
+        "start": 4.427,
+        "end": 4.48
+      },
+      {
+        "text": "make",
+        "start": 4.512,
+        "end": 4.64
+      },
+      {
+        "text": "ten,",
+        "start": 4.76,
+        "end": 5.28
+      },
+      {
+        "text": "then",
+        "start": 5.312,
+        "end": 5.44
+      },
+      {
+        "text": "2",
+        "start": 5.68,
+        "end": 5.88
+      },
+      {
+        "text": "more.",
+        "start": 5.92,
+        "end": 6.24
+      },
+      {
+        "text": "How",
+        "start": 6.36,
+        "end": 6.72
+      },
+      {
+        "text": "many",
+        "start": 6.752,
+        "end": 6.88
+      },
+      {
+        "text": "are",
+        "start": 6.9,
+        "end": 6.96
+      },
+      {
+        "text": "left?",
+        "start": 7.056,
+        "end": 7.52
+      }
+    ]
+  },
+  "The cat has 14 treats. Give away 5: first 4 to make ten, then 1 more. How many are left?": {
+    "file": "308559098171af273530f891.mp3",
+    "words": [
+      {
+        "text": "The",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "cat",
+        "start": 0.16,
+        "end": 0.4
+      },
+      {
+        "text": "has",
+        "start": 0.48,
+        "end": 0.72
+      },
+      {
+        "text": "14",
+        "start": 0.8,
+        "end": 1.2
+      },
+      {
+        "text": "treats.",
+        "start": 1.28,
+        "end": 2.08
+      },
+      {
+        "text": "Give",
+        "start": 2.144,
+        "end": 2.4
+      },
+      {
+        "text": "away",
+        "start": 2.464,
+        "end": 2.72
+      },
+      {
+        "text": "5:",
+        "start": 3.12,
+        "end": 3.28
+      },
+      {
+        "text": "first",
+        "start": 3.387,
+        "end": 3.92
+      },
+      {
+        "text": "4",
+        "start": 4,
+        "end": 4.16
+      },
+      {
+        "text": "to",
+        "start": 4.213,
+        "end": 4.32
+      },
+      {
+        "text": "make",
+        "start": 4.352,
+        "end": 4.48
+      },
+      {
+        "text": "ten,",
+        "start": 4.6,
+        "end": 5.12
+      },
+      {
+        "text": "then",
+        "start": 5.2,
+        "end": 5.52
+      },
+      {
+        "text": "1",
+        "start": 5.68,
+        "end": 5.84
+      },
+      {
+        "text": "more.",
+        "start": 5.872,
+        "end": 6.16
+      },
+      {
+        "text": "How",
+        "start": 6.28,
+        "end": 6.64
+      },
+      {
+        "text": "many",
+        "start": 6.672,
+        "end": 6.8
+      },
+      {
+        "text": "are",
+        "start": 6.84,
+        "end": 6.96
+      },
+      {
+        "text": "left?",
+        "start": 7.04,
+        "end": 7.52
+      }
+    ]
+  },
   "The cats chose to play, then nap, and it will be a very snug night.": {
     "file": "d5140e8f3875d452505ee1ac.mp3",
     "words": [
@@ -84881,6 +85716,151 @@
         "text": "friend!",
         "start": 0.64,
         "end": 1.28
+      }
+    ]
+  },
+  "You made a ten to help you subtract, read plurals and l blends, and practiced new sight words. You finished your Creation wheel and talked about being thankful.": {
+    "file": "30d2b17ca354d1520948f8bd.mp3",
+    "words": [
+      {
+        "text": "You",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "text": "made",
+        "start": 0.112,
+        "end": 0.24
+      },
+      {
+        "text": "a",
+        "start": 0.28,
+        "end": 0.32
+      },
+      {
+        "text": "ten",
+        "start": 0.4,
+        "end": 0.64
+      },
+      {
+        "text": "to",
+        "start": 0.693,
+        "end": 0.8
+      },
+      {
+        "text": "help",
+        "start": 0.832,
+        "end": 0.96
+      },
+      {
+        "text": "you",
+        "start": 1,
+        "end": 1.12
+      },
+      {
+        "text": "subtract,",
+        "start": 1.191,
+        "end": 2.08
+      },
+      {
+        "text": "read",
+        "start": 2.128,
+        "end": 2.32
+      },
+      {
+        "text": "plurals",
+        "start": 2.4,
+        "end": 2.96
+      },
+      {
+        "text": "and",
+        "start": 3,
+        "end": 3.12
+      },
+      {
+        "text": "l",
+        "start": 3.28,
+        "end": 3.44
+      },
+      {
+        "text": "blends,",
+        "start": 3.52,
+        "end": 4.08
+      },
+      {
+        "text": "and",
+        "start": 4.2,
+        "end": 4.56
+      },
+      {
+        "text": "practiced",
+        "start": 4.616,
+        "end": 5.12
+      },
+      {
+        "text": "new",
+        "start": 5.18,
+        "end": 5.36
+      },
+      {
+        "text": "sight",
+        "start": 5.413,
+        "end": 5.68
+      },
+      {
+        "text": "words.",
+        "start": 5.76,
+        "end": 6.24
+      },
+      {
+        "text": "You",
+        "start": 6.42,
+        "end": 6.96
+      },
+      {
+        "text": "finished",
+        "start": 7.004,
+        "end": 7.36
+      },
+      {
+        "text": "your",
+        "start": 7.376,
+        "end": 7.44
+      },
+      {
+        "text": "Creation",
+        "start": 7.502,
+        "end": 8
+      },
+      {
+        "text": "wheel",
+        "start": 8.067,
+        "end": 8.4
+      },
+      {
+        "text": "and",
+        "start": 8.44,
+        "end": 8.56
+      },
+      {
+        "text": "talked",
+        "start": 8.606,
+        "end": 8.88
+      },
+      {
+        "text": "about",
+        "start": 8.92,
+        "end": 9.12
+      },
+      {
+        "text": "being",
+        "start": 9.16,
+        "end": 9.36
+      },
+      {
+        "text": "thankful.",
+        "start": 9.422,
+        "end": 10
       }
     ]
   },

@@ -386,5 +386,128 @@
         ]
       }
     ]
+  },
+  {
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "dates": "Nov 16–22",
+    "overview": "You made a ten to help you subtract, read plurals and l blends, and practiced new sight words. You finished your Creation wheel and talked about being thankful.",
+    "activities": [
+      {
+        "id": "2026-11-16-make-ten",
+        "title": "Make a ten to take away",
+        "icon": "🔟",
+        "steps": [
+          {
+            "prompt": "The cat has 13 treats. Give away 5: first 3 to make ten, then 2 more. How many are left?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "7",
+              "8",
+              "9"
+            ],
+            "answer": "8",
+            "hint": "13 take away 3 is ten. Ten take away 2 is 8.",
+            "moves": 5
+          },
+          {
+            "prompt": "The cat has 11 treats. Give away 4: first 1 to make ten, then 3 more. How many are left?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "8",
+              "6",
+              "7"
+            ],
+            "answer": "7",
+            "hint": "11 take away 1 is ten. Ten take away 3 is 7.",
+            "moves": 4
+          },
+          {
+            "prompt": "The cat has 14 treats. Give away 5: first 4 to make ten, then 1 more. How many are left?",
+            "scene": "🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟",
+            "choices": [
+              "9",
+              "10",
+              "8"
+            ],
+            "answer": "9",
+            "hint": "14 take away 4 is ten. Ten take away 1 is 9.",
+            "moves": 5
+          }
+        ]
+      },
+      {
+        "id": "2026-11-16-blends",
+        "title": "Flag, clap, found",
+        "icon": "🚩",
+        "steps": [
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "flag",
+              "clap",
+              "glad",
+              "plan"
+            ],
+            "answer": "flag",
+            "hint": "Listen once more. Find the word flag.",
+            "spoken": "Find the word flag."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "flap",
+              "clap",
+              "slap",
+              "plan"
+            ],
+            "answer": "clap",
+            "hint": "Listen once more. Find the word clap.",
+            "spoken": "Find the word clap."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "around",
+              "found",
+              "other",
+              "people"
+            ],
+            "answer": "found",
+            "hint": "Listen once more. Find the word found.",
+            "spoken": "Find the word found."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "come",
+              "came",
+              "two",
+              "worked"
+            ],
+            "answer": "came",
+            "hint": "Listen once more. Find the word came.",
+            "spoken": "Find the word came."
+          },
+          {
+            "prompt": "Listen, then tap the word you heard.",
+            "scene": "🐈 🎧",
+            "choices": [
+              "other",
+              "people",
+              "around",
+              "worked"
+            ],
+            "answer": "people",
+            "hint": "Listen once more. Find the word people.",
+            "spoken": "Find the word people."
+          }
+        ]
+      }
+    ]
   }
 ]

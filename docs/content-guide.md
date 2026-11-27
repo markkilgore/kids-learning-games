@@ -96,8 +96,24 @@ shape as a shark, with these differences:
 
 ## Weekly classroom lessons
 
-See "Weekly classroom lessons" in the README. When the newsletter names new letters or sight words, also
-update `shark-reading.json` (letters, newest letters, heart words) or add a unit to `cat-reading.json`.
+The format of a week is described under "Weekly classroom lessons" in the README. Each school recap feeds up
+to three places; do them in this order so nothing is missed.
+
+1. **Find the recap.** Kate's arrives by email on Friday afternoons as "FIRST GRADE REMINDERS for <next
+   week>"; its "This Week" paragraph describes the week that just ended (math, language arts with the eight
+   sight words, science, social studies, religion). Henry's is the kindergarten class letter, a shared
+   document dated the Sunday before the week it describes. A holiday week has no recap; skip it.
+2. **Weekly lesson** (always): one entry per child in `cat-weeks.json` / `shark-weeks.json`, dated the Monday
+   and Sunday of the week described, with an overview and two activities taken from what the class did
+   (usually one maths, one reading or science). Every prompt, hint and overview needs a recording.
+3. **Reading level** (when the recap names new sounds, letters or sight words): for Kate add a unit to
+   `cat-reading.json` with the pattern and the sight words; for Henry update `shark-reading.json`. New story
+   pages or sound-it-out lines can then use them, and the tests hold them to it.
+4. **Maths in the main game** (when the recap names a new strategy or chapter): add it to
+   `MathChallengeFactory` (Kate, chapter two) or `MissionChallenges` (Henry) and to the JavaScript copy in
+   `tools/lib/lines.mjs`. This is the largest step; a weekly lesson can cover the topic until it is done.
+5. Dry-run and record the audio, `xcodegen generate`, fast tests, and look at the new week on the simulator.
+   Note the week in the roadmap's "Next steps" so the next session knows where the lessons stop.
 
 ## Art
 
