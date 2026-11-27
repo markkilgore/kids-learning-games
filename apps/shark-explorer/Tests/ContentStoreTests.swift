@@ -10,9 +10,9 @@ import Narration
 final class ContentStoreTests: XCTestCase {
     func testCatalogHasCompleteTenSharkScope() throws {
         let catalog = ContentStore.shared.catalog
-        XCTAssertEqual(catalog.animals.count, 45)
-        XCTAssertEqual(catalog.animals.flatMap(\.topics).count, 315)
-        XCTAssertEqual(catalog.animals.flatMap(\.questions).count, 135)
+        XCTAssertEqual(catalog.animals.count, 53)
+        XCTAssertEqual(catalog.animals.flatMap(\.topics).count, 371)
+        XCTAssertEqual(catalog.animals.flatMap(\.questions).count, 159)
         XCTAssertGreaterThanOrEqual(catalog.vocabulary.count, 30)
         XCTAssertTrue(catalog.vocabulary.allSatisfy { word in catalog.animals.contains { $0.vocabularyIDs.contains(word.id) } })
         XCTAssertTrue(catalog.animals.allSatisfy { $0.topics.count == 7 })

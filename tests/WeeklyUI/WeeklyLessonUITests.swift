@@ -6,6 +6,10 @@ final class WeeklyLessonUITests: XCTestCase {
         continueAfterFailure = false
         let app = XCUIApplication()
         app.launch()
+        // An earlier walkthrough may have left the app on another screen; go back to the home screen first.
+        if !app.buttons["weekly-home"].waitForExistence(timeout: 5), app.buttons["kid-back"].firstMatch.exists {
+            app.buttons["kid-back"].firstMatch.tap()
+        }
         func tap(_ id: String) {
             let button = app.buttons[id].firstMatch
             XCTAssertTrue(button.waitForExistence(timeout: 8), id)

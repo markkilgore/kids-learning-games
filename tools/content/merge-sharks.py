@@ -53,6 +53,8 @@ def main():
         catalog['expansions'] = [e for e in catalog['expansions'] if e['sharkID'] not in ids]
         for shark in batch['sharks']:
             shark.update({k: v for k, v in photos.get(shark['id'], {}).items() if k.startswith('image')})
+            # The layout below sets the real position.
+            shark.setdefault('mapX', 0.5); shark.setdefault('mapY', 0.5)
             missing = set(keys) - set(shark)
             if missing or shark.get('map') not in pages: sys.exit(f"{shark['id']}: missing {sorted(missing)} or unknown map {shark.get('map')}")
             catalog['sharks'].append(shark)

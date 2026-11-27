@@ -24,11 +24,22 @@ struct BooksView: View {
         }
     }
 
+    /// The pages grouped by kind of animal, so a sea reptile or a whale is never filed under sharks.
+    private var passportSections: [(title: String, symbol: String, animals: [AnimalDefinition])] {
+        let named: [(AnimalKind, String, String)] = [
+            (.shark, "Sharks", "fish.fill"), (.whale, "Whales", "water.waves"), (.seaReptile, "Sea Reptiles", "tortoise.fill")
+        ]
+        var sections = named.map { kind, title, symbol in (title, symbol, catalog.animals.filter { $0.kindInfo == kind }) }
+        let rest = catalog.animals.filter { animal in !named.contains { $0.0 == animal.kindInfo } }
+        sections.append(("Other Animals", "fossil.shell.fill", rest))
+        return sections.filter { !$0.2.isEmpty }.map { (title: $0.0, symbol: $0.1, animals: $0.2) }
+    }
+
     private var totalTraitCount: Int { catalog.animals.reduce(0) { $0 + $1.traits.count } }
 
     var body: some View {
         VStack(spacing: 16) {
-            KidTopBar(book == .passport ? "Henry’s Shark Passport" : "Henry’s Ocean Words", back: KidBackButton("Ocean Map", systemImage: "map.fill") {
+            KidTopBar(book == .passport ? "Henry’s Animal Passport" : "Henry’s Ocean Words", back: KidBackButton("Ocean Map", systemImage: "map.fill") {
                 narration.stop()
                 game.showMap()
             }) {
@@ -69,9 +80,15 @@ struct BooksView: View {
                 .padding(18)
                 .kidCard()
 
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 10), spacing: 10) {
-                    ForEach(catalog.animals) { shark in
-                        passportPageButton(for: shark)
+                // Sharks first, then everything that is not a shark, each under its own heading.
+                ForEach(passportSections, id: \.title) { section in
+                    Label(section.title, systemImage: section.symbol)
+                        .font(.kidHeadline)
+                        .accessibilityAddTraits(.isHeader)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 14), count: 10), spacing: 10) {
+                        ForEach(section.animals) { shark in
+                            passportPageButton(for: shark)
+                        }
                     }
                 }
 
@@ -119,7 +136,7 @@ struct BooksView: View {
                 }
                 .frame(height: 52)
                 .clipShape(RoundedRectangle(cornerRadius: KidTheme.Radius.small, style: .continuous))
-                // Twenty pages share two rows, so a name may take two short lines.
+                // Ten pages share a row, so a name may take two short lines.
                 Text(earned ? shark.name.replacingOccurrences(of: " Shark", with: "") : "Hidden")
                     .font(.system(size: 14, weight: .heavy, design: .rounded))
                     .lineLimit(2)

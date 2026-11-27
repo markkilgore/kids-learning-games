@@ -6,14 +6,15 @@ piece of work lands or a decision is made.
 ## Where things are (November 2026)
 
 **Shark Explorer (Henry, kindergarten)**
-- 45 animals on five swipeable map pages: 35 living sharks (Pacific, Atlantic, Indian, Cold Seas) and ten
+- 53 animals on five swipeable map pages: 43 living sharks (Pacific, Atlantic, Indian, Cold Seas) and ten
   prehistoric animals on Ancient Seas (megalodon and two other extinct sharks, two ancient fish, four sea
   reptiles and an early whale), with painted pictures instead of photos.
 - Missions are number and reading rounds at five levels (three stars, then two super stars).
 - Sharks 21–30 unlock by total stars; sharks 31–35 unlock by super stars. On Ancient Seas three animals open
   once 35 missions are done, four more one per mission, and the last three at 18, 22 and 26 super stars.
+  Sharks 36–43 open the same way: two at 35 missions, then one per mission up to 41.
 - Read-along Discover and Explore pages with sound-it-out sentences limited to the letters taught so far.
-- Shark Passport, Ocean Words, weekly classroom lessons, parent progress screen.
+- Animal Passport (pages grouped as sharks, whales, sea reptiles and other animals), Ocean Words, weekly classroom lessons, parent progress screen.
 
 **Cat Math Adventure (Kate, first grade)**
 - 15 friends in three places: House and Garden (ten cats) and Meadow (puppy, bunny, duckling, hedgehog, pony).
@@ -33,6 +34,7 @@ piece of work lands or a decision is made.
 | Nov 25 | Map pages by ocean, sharks 31–35, super-star levels with sums and sentence reading. |
 | Nov 25 | Clean-up: Cat Math friends moved to `cat-friends.json`, Shark code made animal-neutral, mission intros for sharks 1–20 rewritten for the counting-and-reading game, repo guides added. |
 | Nov 26 | Henry had found all 35 sharks: Ancient Seas page with ten prehistoric animals, animal kinds beyond sharks, ammonite counting mission. |
+| Nov 27 | Eight more living sharks (horn, whitetip reef, spiny dogfish, sevengill, silky, puffadder shyshark, kitefin, pocket), opening one per finished mission after the first 35. Animal Passport grouped by kind. |
 | Nov 26 | Kate: story pages open silently for her to read, a hear-and-find sentence question after each page, and make-a-ten subtraction on ten-frames. |
 
 ## Next steps
@@ -52,27 +54,23 @@ make each visit richer over simply adding more animals.
 4. **Kate:** weekly lessons stop at Nov 9–15 in both games (Nov 16–22 was l blends and make-a-ten). Watch
    whether chapter-two math is the right level; next units are place value (tens and
    ones), time to the hour and comparing numbers. New reading units as the newsletters arrive.
-5. **Listen through the recordings** on a device. Nothing recorded since mid-November has been checked
-   by ear.
+5. **Work through `docs/review.md`**: recordings nobody has heard, pictures and facts nobody has checked.
 
 ## Open questions
 
 - Should the star-locked sharks be easier to reach? Thresholds are in `catalog.json`.
-- Four shark photos are models or specimens (megamouth, frilled, spinner, dwarf lanternshark), the salmon
-  shark photo is black and white, and the porbeagle is a specimen. Replace when better free photos exist.
+- Pictures, recordings and facts still waiting for a person are listed in `docs/review.md`.
 
 ## Known debt
 
-- **Shark wording that remains.** Non-sharks get neutral spoken lines, but the app name, "Shark Passport",
-  "Open Shark Book", the `shark-<id>.jpg` picture names and the saved-progress field `completedSharks` still
+- **Shark wording that remains.** Non-sharks get neutral spoken lines and the book is the "Animal
+  Passport", but the app name, the `shark-<id>.jpg` picture names and the saved-progress field `completedSharks` still
   say shark.
-- **Prehistoric pictures are AI paintings** checked by eye against museum reconstructions, not by an expert.
-  The Mosasaurus tail fin is fainter than current reconstructions show; replace if a better one is made.
 - **Cat-only naming.** `CatDefinition`, `cat-<id>.png` and `CatContent.cats` now also hold a puppy and a
   pony. Harmless, but rename before adding much more.
 - **Swift logic is ported by hand to JavaScript** for the audio generator. A small Swift command that
   prints every spoken line would replace both ports.
-- **Counts are hard-coded in several places** (45 animals, 15 friends): validators, tests, the tour test's
+- **Counts are hard-coded in several places** (53 animals, 15 friends): validators, tests, the tour test's
   ocean lists. The content guide lists them.
 - `CatActivityView.swift` (650 lines) and `CatContent.swift` (900 lines) are the largest files and the
   hardest to change safely.

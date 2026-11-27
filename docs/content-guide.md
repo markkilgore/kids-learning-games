@@ -30,7 +30,9 @@ Friends unlock by total hearts (`unlockAt`).
 
 ## Add sharks
 
-1. **Write the batch.** A JSON file shaped `{"sharks": [], "expansions": [], "vocabulary": []}` using an
+1. **Write the batch.** `tools/content/writer-brief.md` is the brief to hand a helper, and
+   `node tools/content/check-batch.mjs batch.json` checks the result (shape, readable words, new pictures
+   needed). A JSON file shaped `{"sharks": [], "expansions": [], "vocabulary": []}` using an
    existing shark (and its expansion) as the model. Per shark: five topics (`home`, `food`, `size`,
    `senses`, `power`) plus `body-clues` and `ocean-care` in the expansion, two traits, a mission
    (`kind` picks the picture that is counted; reuse a kind from `MissionPlay.byKind` when one fits),
@@ -49,6 +51,9 @@ Friends unlock by total hearts (`unlockAt`).
    in `tests/TourUI/SharkTourUITests.swift`. A new mission kind needs a `MissionPlay.byKind` entry and a
    `mission-<name>.png` cut-out.
 5. **Art** for new quiz choices (below), **audio** (below), then `xcodegen generate` and the fast tests.
+6. **Look and record what was not checked.** Open each new animal on the simulator (photo, map label, a
+   question with new pictures), then add the batch to `docs/review.md`: recordings nobody has heard, pictures
+   that are not live photos, facts the sources disagree on.
 
 A map page that is full needs a new entry in the catalog's `maps` (id, short name, SF Symbol) and,
 ideally, a backdrop `Art/map-<id>.jpg`; without one the page shows the world map. Pages do not have to be
@@ -72,7 +77,7 @@ shape as a shark, with these differences:
    may change: `ocean-care` becomes "Fossil Clues" (how we know about the animal), and `senses` may become
    "Teeth" or "Armor" when no senses fact can be sourced.
 5. **Facts** follow the same rule as sharks (a fetched museum page), and say "scientists think" where the
-   source is unsure. The Passport and book titles still say "Shark".
+   source is unsure. The book is the "Animal Passport"; its pages are grouped as Sharks, Whales, Sea Reptiles and Other Animals (`BooksView.passportSections`).
 
 ## Add a friend to Cat Math
 
@@ -107,7 +112,8 @@ Prompts for every generated picture are recorded in `tools/art-prompts.json`; ad
 With the Grok CLI, write the prompt to a file and run
 `grok --permission-mode auto -p "$(cat prompt.txt)"` from the repo root. Tell it to generate and name the
 images only; then collect them from `~/.grok/sessions/<url-encoded repo path>/<newest session>/images/`.
-Look at every image before using it.
+Look at every image before using it. Generated pictures cannot be trusted to count: a "seven gill slits"
+tile came back with five, so `choice-seven-gills.png` was made by editing the six-gill picture.
 
 ## Audio
 

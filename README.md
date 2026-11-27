@@ -8,7 +8,7 @@ This repository builds two independent child-facing iPad apps from a small set o
 The apps have separate targets, schemes, bundle identifiers, display names, icons, launch screens, content, release settings, and persistence namespaces. Neither application target compiles the other app’s source or resources.
 
 For conventions and rules see [CLAUDE.md](CLAUDE.md); for adding sharks, friends, art and audio see
-[docs/content-guide.md](docs/content-guide.md); for what is done and what is next see [docs/roadmap.md](docs/roadmap.md).
+[docs/content-guide.md](docs/content-guide.md); for what is done and what is next see [docs/roadmap.md](docs/roadmap.md). What still needs a person's eyes or ears is in [docs/review.md](docs/review.md).
 
 ## Quick start
 

@@ -366,7 +366,7 @@ private struct MissionRewardView: View {
             }
 
             HStack(spacing: 18) {
-                Button(action: onBooks) { Label("Open Shark Book", systemImage: "book.fill") }
+                Button(action: onBooks) { Label("Open Animal Passport", systemImage: "book.fill") }
                     .buttonStyle(KidButtonStyle(tint: theme.success))
                     .accessibilityIdentifier("open-shark-book")
                 Button(action: onMap) { Label("Ocean Map", systemImage: "map.fill") }

@@ -7,8 +7,9 @@ Two iPad learning games for two children, built from one Xcode project:
 
 Shared code lives in `packages/` (learning-engine, persistence, narration, ui-components). Read
 [docs/content-guide.md](docs/content-guide.md) before adding content and [docs/roadmap.md](docs/roadmap.md)
-for what is done, what is next, and known debt. [docs/architecture.md](docs/architecture.md) is the
-history of how the monorepo was split.
+for what is done, what is next, and known debt. [docs/review.md](docs/review.md) lists what only a person can
+check (recordings, pictures, doubtful facts); add to it whenever content ships unheard or unverified.
+[docs/architecture.md](docs/architecture.md) is the history of how the monorepo was split.
 
 ## Commands
 
@@ -77,5 +78,7 @@ tools/deploy-ipads.sh                  # install on the family iPads (needs the 
 - SpriteKit scenes must call `audioEngine.stop()` in `didMove`, or narration stutters.
 - A `ReadAlongView` stops narration when it leaves the screen; start the next line slightly later or from the
   next view's own task.
+- The app reopens on the screen it was last left on. A walkthrough test that needs the map must first go back to
+  it (see the first lines of each tour test); otherwise it passes alone and fails after another test.
 - The full Shark walkthrough plays every mission and takes over 20 minutes. Run a single test with
   `-only-testing:SharkExplorerTourUITests/SharkTourUITests/<test name>` while iterating.

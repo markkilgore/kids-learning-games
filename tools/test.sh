@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage: tools/test.sh [fast|slow|all]
 #   fast  content checks and both apps' unit tests (about two minutes). Run this before every commit.
-#   slow  the on-screen walkthroughs: every screen of both apps and all 30 shark missions (about 30 minutes).
+#   slow  the on-screen walkthroughs: every screen of both apps and every animal's mission (about 35 minutes).
 #         Run it after a push, or before sending a build to the iPads.
 # TEST_SIMULATOR names the simulator to use; the default is the kids' iPad size.
 set -eu

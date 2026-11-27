@@ -8,7 +8,7 @@ const catalog = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
 
 if (catalog.schemaVersion !== 1) errors.push('schemaVersion must be 1');
-if (catalog.sharks?.length !== 45) errors.push('catalog must contain exactly 45 animals');
+if (catalog.sharks?.length !== 53) errors.push('catalog must contain exactly 53 animals');
 if (!catalog.sharks.map((s) => s.unlockAt).sort((a, b) => a - b).every((unlockAt, index) => unlockAt <= index)) errors.push('a shark can never be unlocked');
 if (!catalog.sharks.map((s) => s.unlockStars ?? 0).sort((a, b) => a - b).every((stars, index) => stars <= 3 * index)) errors.push('a shark needs more stars than can be earned');
 if (!catalog.sharks.map((s) => s.unlockSuperStars ?? 0).sort((a, b) => a - b).every((stars, index) => stars <= 2 * index)) errors.push('a shark needs more super stars than can be earned');

@@ -1347,7 +1347,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Alopias_vulpinus.png",
       "color": "#567CB8",
       "region": "Open Ocean",
-      "mapX": 0.3,
+      "mapX": 0.1,
       "mapY": 0.8,
       "map": "atlantic",
       "unlockAt": 3,
@@ -1614,7 +1614,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg",
       "color": "#728461",
       "region": "Murky Tropical Coast",
-      "mapX": 0.4,
+      "mapX": 0.2,
       "mapY": 0.5,
       "map": "indian",
       "unlockAt": 3,
@@ -1881,7 +1881,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Hemiscyllium_ocellatum.jpg",
       "color": "#C19A55",
       "region": "Shallow Reef Flat",
-      "mapX": 0.3,
+      "mapX": 0.1,
       "mapY": 0.8,
       "map": "pacific",
       "unlockAt": 3,
@@ -2950,7 +2950,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_atlantic.jpg",
       "color": "#5E8C8A",
       "region": "Cool Coastal Seas",
-      "mapX": 0.4,
+      "mapX": 0.2,
       "mapY": 0.5,
       "map": "cold",
       "unlockAt": 10,
@@ -4022,7 +4022,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Bull_shark_(2007).jpg",
       "color": "#6E7F8D",
       "region": "Warm Coasts and Rivers",
-      "mapX": 0.5,
+      "mapX": 0.3,
       "mapY": 0.8,
       "map": "atlantic",
       "unlockAt": 14,
@@ -4825,7 +4825,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squatina_squatina_120867959.jpg",
       "color": "#B08D62",
       "region": "Sandy Pacific Coast",
-      "mapX": 0.5,
+      "mapX": 0.3,
       "mapY": 0.8,
       "map": "pacific",
       "unlockAt": 17,
@@ -6435,7 +6435,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Megamouth_shark_Megachasma_pelagios.jpg",
       "color": "#4E5D78",
       "region": "Open Ocean Depths",
-      "mapX": 0.7,
+      "mapX": 0.5,
       "mapY": 0.8,
       "map": "pacific",
       "unlockAt": 20,
@@ -6974,7 +6974,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Etmopterus_perryi_SI.jpg",
       "color": "#4B3F72",
       "region": "Deep Caribbean Sea",
-      "mapX": 0.7,
+      "mapX": 0.5,
       "mapY": 0.8,
       "map": "atlantic",
       "unlockAt": 20,
@@ -7513,7 +7513,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Oceanic_Whitetip_Shark_(Carcharhinus_longimanus)_at_Elphinstone_Reef,_Egypt.jpg",
       "color": "#96705A",
       "region": "Far Open Ocean",
-      "mapX": 0.6,
+      "mapX": 0.4,
       "mapY": 0.5,
       "map": "indian",
       "unlockAt": 20,
@@ -8321,7 +8321,7 @@
       "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Salmon_shark.png",
       "color": "#4F6A8F",
       "region": "Cold North Pacific",
-      "mapX": 0.6,
+      "mapX": 0.4,
       "mapY": 0.5,
       "map": "cold",
       "unlockAt": 30,
@@ -12093,6 +12093,2160 @@
         "https://clevelandhistorical.org/files/show/7419",
         "https://www.nhm.ac.uk/discover/when-did-dinosaurs-live.html"
       ]
+    },
+    {
+      "id": "horn",
+      "name": "Horn Shark",
+      "scientificName": "Heterodontus francisci",
+      "symbol": "🦈",
+      "imageAsset": "shark-horn.jpg",
+      "imageAuthor": "Ed Bierman",
+      "imageLicense": "CC BY 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Heterodontus_francisci_catalina.jpg",
+      "color": "#A38A5C",
+      "region": "California Kelp and Rocky Reefs",
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "pacific",
+      "unlockAt": 35,
+      "discover": {
+        "decodable": [
+          "A peg is on top. It is at a fin."
+        ],
+        "earlyReader": [
+          "This is a horn shark.",
+          "A sharp spine sits by each back fin.",
+          "The spines are its horns."
+        ],
+        "story": [
+          "The horn shark is named for the spine in front of each of its two back fins.",
+          "It is a small, slow shark from the coast of California and Mexico."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun is up. It sat in a gap. It did not get up."
+            ],
+            "earlyReader": [
+              "Horn sharks live by California.",
+              "They hide in caves and kelp.",
+              "They rest all day."
+            ],
+            "story": [
+              "Horn sharks live in shallow water from central California to Mexico, on rocky reefs and among kelp.",
+              "By day they hide under ledges and in caves, and each one rests in the same spot day after day."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🦀",
+          "narration": {
+            "decodable": [
+              "A bug has a cup. It bit the cup. It got the bug."
+            ],
+            "earlyReader": [
+              "Horn sharks eat crabs.",
+              "They eat sea urchins too.",
+              "They crunch the hard shells."
+            ],
+            "story": [
+              "A horn shark eats mostly sea urchins and crabs, and sometimes small fish.",
+              "Its front teeth are small and pointed for grabbing, and its back teeth are flat for crushing hard shells."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "Is it big? It is not. A kid is as big."
+            ],
+            "earlyReader": [
+              "A horn shark is a small shark.",
+              "It can be four feet long.",
+              "A new pup is about as long as a pencil."
+            ],
+            "story": [
+              "Horn sharks can grow to four feet long, but most grown ones are about three feet.",
+              "A pup is only six or seven inches long when it hatches."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "⚡️",
+          "narration": {
+            "decodable": [
+              "The sun set. It is dim. It can get a bug."
+            ],
+            "earlyReader": [
+              "Horn sharks hunt at night.",
+              "Sharks can feel tiny electric signals.",
+              "A horn shark uses that sense less than other sharks."
+            ],
+            "story": [
+              "A horn shark hunts in the dark, close to shore.",
+              "Sharks have tiny sensors that pick up electric signals from living things, but a horn shark has far fewer of them than other sharks, so that sense is a smaller part of its hunt."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🐾",
+          "narration": {
+            "decodable": [
+              "Fins tap the mud. It did not hop. It did a tip tap."
+            ],
+            "earlyReader": [
+              "A horn shark is a slow swimmer.",
+              "It has strong fins.",
+              "It can crawl over the rocks."
+            ],
+            "story": [
+              "The horn shark is slow and not a graceful swimmer.",
+              "Sometimes it uses its strong fins to crawl along the rocks on the bottom."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "fin-spines",
+          "title": "Fin Spines",
+          "symbol": "📌",
+          "description": "A sharp spine stands in front of each of its two back fins.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "rock-crawler",
+          "title": "Rock Crawler",
+          "symbol": "🐾",
+          "description": "It crawls over the rocks on its strong fins.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "shellCrunch",
+        "title": "Kelp Forest Urchin Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Night falls in the kelp.",
+            "Count the sea urchins you see.",
+            "Read the words to help the horn shark."
+          ],
+          "story": [
+            "The sun has set, and the horn shark leaves its cave to look for sea urchins.",
+            "Count the sea urchins and read each word to help it find its dinner."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "Crunch! The horn shark found sea urchins in the kelp."
+      },
+      "questions": [
+        {
+          "id": "hrn-q1",
+          "prompt": {
+            "earlyReader": [
+              "What sits by each back fin?"
+            ],
+            "story": [
+              "What stands in front of each of the horn shark's back fins?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "spine",
+              "label": "A sharp spine",
+              "symbol": "📌"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "spine",
+          "success": "Yes! A sharp spine sits by each back fin.",
+          "retry": "Look for the sharp point."
+        },
+        {
+          "id": "hrn-q2",
+          "prompt": {
+            "earlyReader": [
+              "What does the horn shark crunch?"
+            ],
+            "story": [
+              "Which food does a horn shark crush with its flat back teeth?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "urchin",
+              "label": "Sea urchin",
+              "symbol": "🟣"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            }
+          ],
+          "correctID": "urchin",
+          "success": "Right! Horn sharks crunch sea urchins.",
+          "retry": "Look for the round, spiky animal."
+        },
+        {
+          "id": "hrn-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does the horn shark hide?"
+            ],
+            "story": [
+              "Where does a horn shark hide during the day?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "kelp",
+              "label": "Kelp and rocks",
+              "symbol": "🌿"
+            },
+            {
+              "id": "desert",
+              "label": "Dry desert",
+              "symbol": "🏜️"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud",
+              "symbol": "☁️"
+            }
+          ],
+          "correctID": "kelp",
+          "success": "You got it! It hides in kelp and rocky caves.",
+          "retry": "Choose the tall plants under the sea."
+        }
+      ],
+      "vocabularyIDs": [
+        "spine",
+        "kelp-forest",
+        "nocturnal"
+      ],
+      "bookFact": "It has a sharp spine by each back fin and can crawl over rocks on its fins.",
+      "sourceURLs": [
+        "https://www.montereybayaquarium.org/animals/animals-a-to-z/horn-shark",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/horn-shark/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/horn_shark"
+      ]
+    },
+    {
+      "id": "whitetip-reef",
+      "name": "Whitetip Reef Shark",
+      "scientificName": "Triaenodon obesus",
+      "symbol": "🦈",
+      "imageAsset": "shark-whitetip-reef.jpg",
+      "imageAuthor": "Diego Delso",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Tiburones_de_arrecife_de_punta_blanca_(Triaenodon_obesus),_Nosy_Tanikely,_Madagascar,_2025-09-19,_DD_118.jpg",
+      "color": "#7F8C8A",
+      "region": "Indo-Pacific Reef Caves",
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "indian",
+      "unlockAt": 35,
+      "discover": {
+        "decodable": [
+          "The fin has a tip. The tip is not tan."
+        ],
+        "earlyReader": [
+          "This is a whitetip reef shark.",
+          "It is slim, with white fin tips.",
+          "It rests on the bottom by day."
+        ],
+        "story": [
+          "The whitetip reef shark is a slender gray-brown shark with a white tip on its back fin and its tail.",
+          "It lives close to the bottom on coral reefs, resting by day and hunting by night."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🪸",
+          "narration": {
+            "decodable": [
+              "It is in a den. The sun is up. It sat and sat."
+            ],
+            "earlyReader": [
+              "Whitetip reef sharks live on coral reefs.",
+              "By day they rest in caves.",
+              "They come back to the same cave."
+            ],
+            "story": [
+              "Whitetip reef sharks live near the bottom in clear, shallow water around coral reefs in the Indian and Pacific Oceans.",
+              "They spend the day resting in caves, often crowded together, and return to the same caves for months or even years."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A cod hid in gaps. It got in a gap. It got the cod."
+            ],
+            "earlyReader": [
+              "This shark hunts at night.",
+              "It wriggles into cracks in the reef.",
+              "It finds fish, crabs and octopuses."
+            ],
+            "story": [
+              "At night the whitetip reef shark hunts for fish, crabs, lobsters and octopuses hiding in the reef.",
+              "It wriggles its long, slim body into cracks and under coral that other sharks cannot reach."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "A man is as big. It is not fat."
+            ],
+            "earlyReader": [
+              "A whitetip reef shark is slim.",
+              "It is about as long as a grown-up is tall.",
+              "A new pup is about two feet long."
+            ],
+            "story": [
+              "Whitetip reef sharks are usually less than six feet long.",
+              "A mother has one to five pups at a time, and each is about two feet long when it is born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "⚡️",
+          "narration": {
+            "decodable": [
+              "The gap is dim. A cod has a hum. It can get it."
+            ],
+            "earlyReader": [
+              "It is dark when this shark hunts.",
+              "Its snout can feel tiny electric signals.",
+              "That helps it find hidden animals."
+            ],
+            "story": [
+              "Because it hunts at night, a whitetip reef shark probably uses its eyes less than its other senses.",
+              "Sensors on its snout can pick up the tiny electric signals made by animals hiding nearby."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "😴",
+          "narration": {
+            "decodable": [
+              "It can sit and nap. It did not run. It is fit."
+            ],
+            "earlyReader": [
+              "Many sharks must swim to breathe.",
+              "This shark does not have to.",
+              "It can lie still and still breathe."
+            ],
+            "story": [
+              "Unlike many sharks, a whitetip reef shark does not need to keep swimming to breathe.",
+              "It can move water over its gills while it rests on the seafloor or in a cave."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "white-fin-tips",
+          "title": "White Fin Tips",
+          "symbol": "🤍",
+          "description": "Its back fin and the top of its tail each end in a white tip.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "still-breather",
+          "title": "Still Breather",
+          "symbol": "😴",
+          "description": "It can lie still on the bottom and keep breathing.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "reefPatrol",
+        "title": "Night Reef Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "Night has come to the reef.",
+            "Count the reef fish you see.",
+            "Read the words to help the whitetip."
+          ],
+          "story": [
+            "It is dark, and the whitetip reef shark leaves its cave to search the cracks in the reef.",
+            "Count the reef fish and read each word to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The whitetip reef shark found fish hiding in the reef."
+      },
+      "questions": [
+        {
+          "id": "wtr-q1",
+          "prompt": {
+            "earlyReader": [
+              "What is on this shark's fins?"
+            ],
+            "story": [
+              "Which fin marking gives the whitetip reef shark its name?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "white-tip",
+              "label": "White tips",
+              "symbol": "🤍"
+            },
+            {
+              "id": "black-tip",
+              "label": "Black tips",
+              "symbol": "🖤"
+            },
+            {
+              "id": "stripes",
+              "label": "Dark stripes",
+              "symbol": "🟰"
+            }
+          ],
+          "correctID": "white-tip",
+          "success": "Yes! Its fins have white tips.",
+          "retry": "Look for the fin with the pale tip."
+        },
+        {
+          "id": "wtr-q2",
+          "prompt": {
+            "earlyReader": [
+              "When does this shark hunt?"
+            ],
+            "story": [
+              "When does the whitetip reef shark look for food?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "night",
+              "label": "Night",
+              "symbol": "🌙"
+            },
+            {
+              "id": "lunch",
+              "label": "Lunch bell",
+              "symbol": "🔔"
+            },
+            {
+              "id": "snow",
+              "label": "Snow day",
+              "symbol": "☃️"
+            }
+          ],
+          "correctID": "night",
+          "success": "Right! It rests by day and hunts at night.",
+          "retry": "Think about when the sky is dark."
+        },
+        {
+          "id": "wtr-q3",
+          "prompt": {
+            "earlyReader": [
+              "What does it find in the reef?"
+            ],
+            "story": [
+              "Which food does the whitetip reef shark find in cracks in the reef?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Reef fish",
+              "symbol": "🐟"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            }
+          ],
+          "correctID": "fish",
+          "success": "You got it! It finds fish hiding in the reef.",
+          "retry": "Look for the animal with fins."
+        }
+      ],
+      "vocabularyIDs": [
+        "coral-reef",
+        "nocturnal",
+        "electroreception"
+      ],
+      "bookFact": "It rests in caves by day and can lie still and keep breathing.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+        "https://oceana.org/marine-life/whitetip-reef-shark/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/whitetip_reef_shark",
+        "https://www.marinebio.org/species/whitetip-reef-sharks/triaenodon-obesus/"
+      ]
+    },
+    {
+      "id": "spiny-dogfish",
+      "name": "Spiny Dogfish",
+      "scientificName": "Squalus acanthias",
+      "symbol": "🦈",
+      "imageAsset": "shark-spiny-dogfish.jpg",
+      "imageAuthor": "Doug Costa, NOAA/SBNMS",
+      "imageLicense": "Public domain",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Squalus_acanthias_stellwagen.jpg",
+      "color": "#6F7C86",
+      "region": "Cool Northern Seas",
+      "mapX": 0.7,
+      "mapY": 0.2,
+      "map": "cold",
+      "unlockAt": 36,
+      "discover": {
+        "decodable": [
+          "Is it a dog? It is not! It has fins and pegs."
+        ],
+        "earlyReader": [
+          "This is a spiny dogfish.",
+          "It is a small, slim shark.",
+          "A sharp spine sits by each back fin."
+        ],
+        "story": [
+          "The spiny dogfish is a small, slim shark with a sharp spine at the front of each of its two back fins.",
+          "It is one of the most common sharks in cool seas."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The sun is not hot. It dips and dips. It is at the mud."
+            ],
+            "earlyReader": [
+              "Spiny dogfish live in cool seas.",
+              "They often swim near the bottom.",
+              "They move when the water warms or cools."
+            ],
+            "story": [
+              "Spiny dogfish live in the cool waters of the North Atlantic and North Pacific, usually near the bottom but sometimes at the surface.",
+              "Many of them travel north in spring and summer and south again in fall and winter."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🦑",
+          "narration": {
+            "decodable": [
+              "It can nab a cod. It can nab a bug. It is fed."
+            ],
+            "earlyReader": [
+              "Little dogfish eat shrimp and crabs.",
+              "Bigger ones eat fish and squid.",
+              "They eat jellyfish too."
+            ],
+            "story": [
+              "Spiny dogfish eat whatever food is easiest to find.",
+              "Small ones eat mostly crabs and shrimp, and bigger ones eat squid, jellyfish and fish that swim in schools."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "Mom is big. Dad is not as big. Pups fit in a pan."
+            ],
+            "earlyReader": [
+              "A spiny dogfish is a small shark.",
+              "Females can be four feet long.",
+              "A new pup is about as long as a ruler."
+            ],
+            "story": [
+              "Female spiny dogfish grow up to four feet long, and males are a little smaller.",
+              "Pups are eight to thirteen inches long when they are born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Big Eyes",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It is dim. Is a cod in it? It can get it."
+            ],
+            "earlyReader": [
+              "A spiny dogfish has big eyes.",
+              "Its snout is narrow and pointed.",
+              "It swims in bright water and in deep, dark water."
+            ],
+            "story": [
+              "A spiny dogfish has fairly large eyes and a narrow, pointed snout.",
+              "It can be found from the surface all the way down to deep water, almost three thousand feet below."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It is in a mob. Is it ten? It is ten and ten!"
+            ],
+            "earlyReader": [
+              "Spiny dogfish swim in very big groups.",
+              "A group is called a school.",
+              "A school can have thousands of sharks."
+            ],
+            "story": [
+              "Spiny dogfish often travel in large schools of hundreds or even thousands of sharks.",
+              "Sharks of the same size stay together in a school as they grow."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "back-fin-spines",
+          "title": "Back Fin Spines",
+          "symbol": "📌",
+          "description": "A sharp spine at the front of each back fin helps keep it safe.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        },
+        {
+          "id": "giant-school",
+          "title": "Giant School",
+          "symbol": "🐟",
+          "description": "It travels in schools of hundreds or thousands of sharks.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        }
+      ],
+      "mission": {
+        "kind": "squidHunt",
+        "title": "Cool Sea Squid Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "A school of dogfish looks for squid.",
+            "Count the squid you see.",
+            "Read the words to help the dogfish."
+          ],
+          "story": [
+            "A big school of spiny dogfish is swimming through the cool sea, looking for squid.",
+            "Count each group of squid and read the words to help the school find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The spiny dogfish found squid in the cool sea."
+      },
+      "questions": [
+        {
+          "id": "sdf-q1",
+          "prompt": {
+            "earlyReader": [
+              "What sits by each back fin?"
+            ],
+            "story": [
+              "What does a spiny dogfish have at the front of each back fin?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "spine",
+              "label": "A sharp spine",
+              "symbol": "📌"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "spine",
+          "success": "Yes! A sharp spine sits by each back fin.",
+          "retry": "Look for the sharp point."
+        },
+        {
+          "id": "sdf-q2",
+          "prompt": {
+            "earlyReader": [
+              "How do spiny dogfish travel?"
+            ],
+            "story": [
+              "How do spiny dogfish usually travel?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "shark-school",
+              "label": "In a big school",
+              "symbol": "🐟"
+            },
+            {
+              "id": "fly",
+              "label": "Flies",
+              "symbol": "🪽"
+            },
+            {
+              "id": "roll",
+              "label": "Rolls a wheel",
+              "symbol": "🛞"
+            }
+          ],
+          "correctID": "shark-school",
+          "success": "Right! They swim in very big schools.",
+          "retry": "Look for lots of sharks swimming together."
+        },
+        {
+          "id": "sdf-q3",
+          "prompt": {
+            "earlyReader": [
+              "What do big dogfish eat?"
+            ],
+            "story": [
+              "Which food does a grown spiny dogfish hunt?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "squid",
+              "label": "Squid",
+              "symbol": "🦑"
+            },
+            {
+              "id": "cake",
+              "label": "Birthday cake",
+              "symbol": "🎂"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            }
+          ],
+          "correctID": "squid",
+          "success": "You got it! Big dogfish eat squid and fish.",
+          "retry": "Look for the animal with long arms."
+        }
+      ],
+      "vocabularyIDs": [
+        "school",
+        "longevity",
+        "migrate"
+      ],
+      "bookFact": "It swims in schools of thousands and can live for more than 35 years.",
+      "sourceURLs": [
+        "https://www.fisheries.noaa.gov/species/atlantic-spiny-dogfish",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/spiny-dogfish/",
+        "https://oceana.org/marine-life/spiny-dogfish/",
+        "https://www.marlin.ac.uk/species/detail/68"
+      ]
+    },
+    {
+      "id": "sevengill",
+      "name": "Broadnose Sevengill Shark",
+      "scientificName": "Notorynchus cepedianus",
+      "symbol": "🦈",
+      "imageAsset": "shark-sevengill.jpg",
+      "imageAuthor": "Derek Keats",
+      "imageLicense": "CC BY-SA 2.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Notorynchus_cepedianus_false_bay1.jpg",
+      "color": "#7B7468",
+      "region": "Cool Pacific Bays and Coasts",
+      "mapX": 0.9,
+      "mapY": 0.2,
+      "map": "pacific",
+      "unlockAt": 37,
+      "discover": {
+        "decodable": [
+          "It has dots. A fin is on top. It has gaps to sip."
+        ],
+        "earlyReader": [
+          "This is a sevengill shark.",
+          "It has seven gill slits on each side.",
+          "Most sharks have only five."
+        ],
+        "story": [
+          "The broadnose sevengill shark has seven gill slits on each side, where most sharks have only five.",
+          "It has a wide head, a blunt nose and skin speckled with small dark spots."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "The dip is not big. It is at the rim. Mud is in it."
+            ],
+            "earlyReader": [
+              "Sevengill sharks like cool water.",
+              "They swim close to shore.",
+              "Pups grow up in bays."
+            ],
+            "story": [
+              "Broadnose sevengill sharks live in cool seas and like shallow water close to shore, over rocks, sand and mud.",
+              "Mothers swim into shallow bays to have their pups, and the young sharks stay there for their first few years."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "Is it a cod? Is it a bug? It can get it."
+            ],
+            "earlyReader": [
+              "A sevengill is not a picky eater.",
+              "It eats fish and rays.",
+              "It eats crabs and octopuses too."
+            ],
+            "story": [
+              "The sevengill shark is not a picky eater.",
+              "It eats fish, rays, crabs and octopuses, and it can go for weeks between meals because it digests its food slowly."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big! Is a man as big? A man is not."
+            ],
+            "earlyReader": [
+              "A sevengill is a big shark.",
+              "It can be ten feet long.",
+              "A new pup is about a foot and a half long."
+            ],
+            "story": [
+              "A broadnose sevengill shark can grow up to ten feet long.",
+              "Its pups are about sixteen to eighteen inches long when they are born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Teeth",
+          "symbol": "🦷",
+          "narration": {
+            "decodable": [
+              "A set can nip. A set can cut. It is a big kit!"
+            ],
+            "earlyReader": [
+              "This shark has two kinds of teeth.",
+              "Its bottom teeth look like combs.",
+              "Its top teeth are sharp and jagged."
+            ],
+            "story": [
+              "The teeth in a sevengill shark's lower jaw are wide and shaped like combs.",
+              "The teeth in its upper jaw are sharp and jagged."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "7️⃣",
+          "narration": {
+            "decodable": [
+              "It has gaps and gaps. It sips at a gap. It is not a fib!"
+            ],
+            "earlyReader": [
+              "Gill slits let a shark breathe.",
+              "Most sharks have five on each side.",
+              "This shark has seven."
+            ],
+            "story": [
+              "Most sharks have five pairs of gill slits, but the sevengill shark has seven pairs.",
+              "It also has only one back fin, where most sharks have two."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "seven-gill-slits",
+          "title": "Seven Gill Slits",
+          "symbol": "7️⃣",
+          "description": "It has seven gill slits on each side, two more than most sharks.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "one-back-fin",
+          "title": "One Back Fin",
+          "symbol": "🔎",
+          "description": "It has just one small back fin, set far back, and speckled skin.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "suctionForage",
+        "title": "Bay Crab Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The sevengill swims into the bay.",
+            "Count the crabs you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "The sevengill shark is cruising slowly over the bottom of a shallow bay, looking for crabs.",
+            "Count each group of crabs and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The sevengill shark found crabs in the bay."
+      },
+      "questions": [
+        {
+          "id": "svg-q1",
+          "prompt": {
+            "earlyReader": [
+              "How many gill slits are on each side?"
+            ],
+            "story": [
+              "How many gill slits does this shark have on each side?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "seven-gills",
+              "label": "Seven gill slits",
+              "symbol": "7️⃣"
+            },
+            {
+              "id": "six-gills",
+              "label": "Six gill slits",
+              "symbol": "6️⃣"
+            },
+            {
+              "id": "feathers",
+              "label": "Feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "seven-gills",
+          "success": "Yes! It has seven gill slits on each side.",
+          "retry": "Count the slits. Look for seven."
+        },
+        {
+          "id": "svg-q2",
+          "prompt": {
+            "earlyReader": [
+              "What is on its skin?"
+            ],
+            "story": [
+              "What marks the skin of a sevengill shark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "spots",
+              "label": "Small dark spots",
+              "symbol": "⚫️"
+            },
+            {
+              "id": "stripes",
+              "label": "Dark stripes",
+              "symbol": "🟰"
+            },
+            {
+              "id": "flowers",
+              "label": "Flowers",
+              "symbol": "🌸"
+            }
+          ],
+          "correctID": "spots",
+          "success": "Right! Its skin is speckled with small dark spots.",
+          "retry": "Look for the little dots."
+        },
+        {
+          "id": "svg-q3",
+          "prompt": {
+            "earlyReader": [
+              "Where does the sevengill live?"
+            ],
+            "story": [
+              "Where does the broadnose sevengill shark like to swim?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "cool",
+              "label": "Cool coast",
+              "symbol": "🌊"
+            },
+            {
+              "id": "desert",
+              "label": "Dry desert",
+              "symbol": "🏜️"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud",
+              "symbol": "☁️"
+            }
+          ],
+          "correctID": "cool",
+          "success": "You got it! It swims along cool coasts and in bays.",
+          "retry": "Choose the place with sea water."
+        }
+      ],
+      "vocabularyIDs": [
+        "gills",
+        "nursery",
+        "predator"
+      ],
+      "bookFact": "It has seven gill slits on each side, and only one back fin.",
+      "sourceURLs": [
+        "https://www.montereybayaquarium.org/animals/animals-a-to-z/broadnose-sevengill-shark",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/notorynchus-cepedianus/",
+        "https://aquarium.org/animals/broadnose-sevengill/"
+      ]
+    },
+    {
+      "id": "silky",
+      "name": "Silky Shark",
+      "scientificName": "Carcharhinus falciformis",
+      "symbol": "🦈",
+      "imageAsset": "shark-silky.jpg",
+      "imageAuthor": "Alex Chernikh",
+      "imageLicense": "CC BY 2.5",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Carcharhinus_falciformis_off_Cuba.jpg",
+      "color": "#8A7B62",
+      "region": "Warm Open Ocean",
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "atlantic",
+      "unlockAt": 38,
+      "discover": {
+        "decodable": [
+          "It is tan on top. It has big fins. It is fit."
+        ],
+        "earlyReader": [
+          "This is a silky shark.",
+          "Its skin feels very smooth.",
+          "It swims far out at sea."
+        ],
+        "story": [
+          "The silky shark is named for its skin, which feels smooth, almost like silk.",
+          "It is a large, slender shark that lives in warm seas all around the world."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It did not sit. It did not nap. It runs and runs."
+            ],
+            "earlyReader": [
+              "Silky sharks live in warm water.",
+              "Grown ones swim far from land.",
+              "Pups stay near reefs at first."
+            ],
+            "story": [
+              "Silky sharks live in the warm parts of the Atlantic, Pacific and Indian oceans, mostly out in open water.",
+              "Pups spend their first months near reefs, then move out to the open ocean."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "A big pod runs. It runs at the pod. It gets a bit."
+            ],
+            "earlyReader": [
+              "Silky sharks eat fish.",
+              "They eat squid too.",
+              "They often swim near schools of tuna."
+            ],
+            "story": [
+              "Silky sharks eat mostly fish such as tuna, mackerel and mullet, along with squid and sometimes crabs.",
+              "Young silky sharks are often found swimming with schools of tuna."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big. Is it a bus? It is not as big."
+            ],
+            "earlyReader": [
+              "A silky shark is a big shark.",
+              "It can grow ten feet long.",
+              "A new pup is over two feet long."
+            ],
+            "story": [
+              "The biggest silky sharks are about ten feet long.",
+              "A pup is two to two and a half feet long when it is born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "A pod has a hum. It gets the hum. It runs to it."
+            ],
+            "earlyReader": [
+              "Silky sharks hear very well.",
+              "They notice sounds in the water.",
+              "Sounds may lead them to food."
+            ],
+            "story": [
+              "Silky sharks are very sensitive to sounds in the water.",
+              "Scientists think they may follow the sounds that other animals make when they feed."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🧣",
+          "narration": {
+            "decodable": [
+              "Rub his fin. Is it a rug? It is not!"
+            ],
+            "earlyReader": [
+              "Shark skin has tiny scales.",
+              "A silky shark's scales are packed close.",
+              "That makes its skin feel smooth."
+            ],
+            "story": [
+              "A shark's skin is covered in tiny scales called denticles.",
+              "On a silky shark they are small, tightly packed and overlapping, which gives the skin its smooth, silky feel."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "silky-skin",
+          "title": "Silky Skin",
+          "symbol": "🧣",
+          "description": "Tiny, tightly packed scales make its skin feel smooth.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "long-front-fins",
+          "title": "Long Front Fins",
+          "symbol": "🦈",
+          "description": "Its front fins are long and slim, often with dusky tips.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "speedChase",
+        "title": "Silky Shark Tuna Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The silky shark swims with tuna.",
+            "Count the tuna in each group.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "Far out at sea, the silky shark glides beside a school of tuna.",
+            "Count each group of tuna and read the words to help it keep up."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The silky shark kept up with the tuna."
+      },
+      "questions": [
+        {
+          "id": "slk-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does a silky shark's skin feel like?"
+            ],
+            "story": [
+              "How does the silky shark's skin feel?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "silk",
+              "label": "Smooth like silk",
+              "symbol": "🧣"
+            },
+            {
+              "id": "rocks",
+              "label": "Bumpy like rocks",
+              "symbol": "🪨"
+            },
+            {
+              "id": "feathers",
+              "label": "Soft feathers",
+              "symbol": "🪶"
+            }
+          ],
+          "correctID": "silk",
+          "success": "Yes! Its skin feels smooth like silk.",
+          "retry": "Think about its name."
+        },
+        {
+          "id": "slk-q2",
+          "prompt": {
+            "earlyReader": [
+              "Which fish does it swim near?"
+            ],
+            "story": [
+              "Which fish do silky sharks often swim with?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "fish",
+              "label": "Tuna",
+              "symbol": "🐟"
+            },
+            {
+              "id": "bee",
+              "label": "Bees",
+              "symbol": "🐝"
+            },
+            {
+              "id": "bird",
+              "label": "Birds",
+              "symbol": "🐦"
+            }
+          ],
+          "correctID": "fish",
+          "success": "Right! Silky sharks often swim near tuna.",
+          "retry": "Look for the animal that lives in the sea."
+        },
+        {
+          "id": "slk-q3",
+          "prompt": {
+            "earlyReader": [
+              "What helps it hear sounds in the water?"
+            ],
+            "story": [
+              "Which body part helps a silky shark notice sounds?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "ear",
+              "label": "Ears",
+              "symbol": "👂"
+            },
+            {
+              "id": "hoof",
+              "label": "Hoof",
+              "symbol": "🐴"
+            },
+            {
+              "id": "paw",
+              "label": "Paw",
+              "symbol": "🐾"
+            }
+          ],
+          "correctID": "ear",
+          "success": "You got it! Silky sharks hear very well.",
+          "retry": "Which one is for hearing?"
+        }
+      ],
+      "vocabularyIDs": [
+        "denticles",
+        "school",
+        "prey"
+      ],
+      "bookFact": "Tiny, tightly packed scales make its skin feel silky smooth, and it often swims near schools of tuna.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/carcharhinus-falciformis/",
+        "https://mote.org/animal-encyclopedia/silky-shark/"
+      ]
+    },
+    {
+      "id": "shyshark",
+      "name": "Puffadder Shyshark",
+      "scientificName": "Haploblepharus edwardsii",
+      "symbol": "🦈",
+      "imageAsset": "shark-shyshark.jpg",
+      "imageAuthor": "Seascapeza",
+      "imageLicense": "CC BY 3.0",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Haploblepharus_edwardsii_Puffadder_shyshark.jpg",
+      "color": "#B5793F",
+      "region": "South African Coast",
+      "mapX": 0.7,
+      "mapY": 0.8,
+      "map": "indian",
+      "unlockAt": 39,
+      "discover": {
+        "decodable": [
+          "It is tan and red. It has dots. It hid in a gap."
+        ],
+        "earlyReader": [
+          "This is a puffadder shyshark.",
+          "It is a small, shy shark.",
+          "It hides its eyes with its tail."
+        ],
+        "story": [
+          "The puffadder shyshark is a small shark from South Africa with a friendly nickname, Happy Eddie.",
+          "When it is worried, it curls up and covers its eyes with its tail."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It sits on the mud. It is not big. It fits in a gap."
+            ],
+            "earlyReader": [
+              "Shysharks live only in South Africa.",
+              "They live on rocky reefs and sand.",
+              "They live in kelp forests too."
+            ],
+            "story": [
+              "Puffadder shysharks live only along the coast of South Africa.",
+              "They are found on rocky reefs, over sandy bottoms and in kelp forests."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It digs in mud. It got a bug. It fed and sat."
+            ],
+            "earlyReader": [
+              "Shysharks eat small fish.",
+              "They eat crabs and shrimp.",
+              "They eat worms too."
+            ],
+            "story": [
+              "Puffadder shysharks eat small bony fish, crabs, shrimp and squid.",
+              "They also eat bristle worms."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is not big. It fits in a bag. Pups fit in a cup."
+            ],
+            "earlyReader": [
+              "A shyshark is a small shark.",
+              "It is about as long as two rulers.",
+              "A new pup is as long as a crayon."
+            ],
+            "story": [
+              "The biggest puffadder shysharks are about two feet long.",
+              "A pup is only about four inches long when it hatches from its egg case."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "Is it a cat? It is not. It is as a cat."
+            ],
+            "earlyReader": [
+              "A shyshark has eyes like a cat.",
+              "Big flaps cover its nose.",
+              "The flaps reach down to its mouth."
+            ],
+            "story": [
+              "A puffadder shyshark has cat-like eyes.",
+              "It also has very large nose flaps that reach all the way down to its mouth."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "🍩",
+          "narration": {
+            "decodable": [
+              "A big fin is up. Is it a bun? His tip is on top."
+            ],
+            "earlyReader": [
+              "A worried shyshark curls up.",
+              "It makes a ring like a donut.",
+              "Its tail covers its eyes."
+            ],
+            "story": [
+              "When it feels threatened, a puffadder shyshark curls its body into a ring, like a donut, and covers its eyes with its tail.",
+              "This protects its eyes and makes it harder for a bigger animal to eat."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "shy-curl",
+          "title": "Shy Curl",
+          "symbol": "🍩",
+          "description": "It curls into a ring and hides its eyes behind its tail.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "saddle-spots",
+          "title": "Saddles and Spots",
+          "symbol": "🟠",
+          "description": "Reddish-brown saddles and small white spots cover its golden back.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "sawSweep",
+        "title": "Shyshark Shrimp Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The shyshark looks for shrimp.",
+            "Count the shrimp you see.",
+            "Read the words to help the shark."
+          ],
+          "story": [
+            "The little shyshark noses along the seafloor, looking for shrimp.",
+            "Count each group of shrimp and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The shy little shark found its shrimp."
+      },
+      "questions": [
+        {
+          "id": "shy-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does a worried shyshark do?"
+            ],
+            "story": [
+              "What does a puffadder shyshark do when it feels threatened?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "curl-ring",
+              "label": "Curls into a ring",
+              "symbol": "🍩"
+            },
+            {
+              "id": "flies",
+              "label": "Flies away",
+              "symbol": "🕊️"
+            },
+            {
+              "id": "climbs",
+              "label": "Climbs a tree",
+              "symbol": "🌳"
+            }
+          ],
+          "correctID": "curl-ring",
+          "success": "Yes! It curls up and hides its eyes with its tail.",
+          "retry": "Think of a donut shape."
+        },
+        {
+          "id": "shy-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does the shyshark live?"
+            ],
+            "story": [
+              "Which home belongs to the puffadder shyshark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "kelp",
+              "label": "Kelp forest",
+              "symbol": "🌿"
+            },
+            {
+              "id": "farm",
+              "label": "Farm",
+              "symbol": "🚜"
+            },
+            {
+              "id": "mountain",
+              "label": "Mountain top",
+              "symbol": "⛰️"
+            }
+          ],
+          "correctID": "kelp",
+          "success": "Right! It lives in kelp forests and on rocky reefs.",
+          "retry": "Choose the tall plants under the sea."
+        },
+        {
+          "id": "shy-q3",
+          "prompt": {
+            "earlyReader": [
+              "What does the shyshark eat?"
+            ],
+            "story": [
+              "Which food does a puffadder shyshark look for?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "crab",
+              "label": "Crabs and shrimp",
+              "symbol": "🦀"
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "symbol": "🍎"
+            },
+            {
+              "id": "grass",
+              "label": "Grass",
+              "symbol": "🌱"
+            }
+          ],
+          "correctID": "crab",
+          "success": "You got it! It eats crabs and shrimp.",
+          "retry": "Look for the animal with claws."
+        }
+      ],
+      "vocabularyIDs": [
+        "egg-case",
+        "kelp-forest",
+        "predator"
+      ],
+      "bookFact": "When it is worried, this small shark curls into a ring and covers its eyes with its tail.",
+      "sourceURLs": [
+        "https://www.aquarium.co.za/animals/puffadder-shyshark",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/haploblepharus-edwardsii/",
+        "https://saveourseas.com/worldofsharks/species/puffadder-shyshark"
+      ]
+    },
+    {
+      "id": "kitefin",
+      "name": "Kitefin Shark",
+      "scientificName": "Dalatias licha",
+      "symbol": "🦈",
+      "imageAsset": "shark-kitefin.jpg",
+      "imageAuthor": "P. Clarke (drawing, 1909-10)",
+      "imageLicense": "Public domain",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Dalatias_licha1.jpg",
+      "color": "#5A4640",
+      "region": "Deep Dark Slopes",
+      "mapX": 0.6,
+      "mapY": 0.5,
+      "map": "cold",
+      "unlockAt": 40,
+      "discover": {
+        "decodable": [
+          "It is big. It is in the dim. It has sun in it."
+        ],
+        "earlyReader": [
+          "This is a kitefin shark.",
+          "It lives deep in the dark.",
+          "It is a big shark that glows."
+        ],
+        "story": [
+          "The kitefin shark is a dark brown shark that lives in deep water.",
+          "It is the biggest animal with a backbone that is known to make its own light."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It dips to the dim. Fat is in it. It bobs up and sits."
+            ],
+            "earlyReader": [
+              "Kitefin sharks live in deep water.",
+              "They swim slowly.",
+              "They float just above the bottom."
+            ],
+            "story": [
+              "Kitefin sharks live in deep water in many parts of the world, usually more than six hundred feet down.",
+              "A kitefin swims very slowly, and its big liver full of oil helps it float just above the seafloor."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "It can get a cod. It can get a bug. It is fed."
+            ],
+            "earlyReader": [
+              "Kitefin sharks eat deep-sea fish.",
+              "They eat squid and octopus.",
+              "They hunt alone."
+            ],
+            "story": [
+              "Kitefin sharks eat mostly deep-water fish, including smaller sharks and skates.",
+              "They also eat squid, octopus and lobsters."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is big as dad. A pup is not big. Pups fit in a tub."
+            ],
+            "earlyReader": [
+              "A kitefin can be five feet long.",
+              "That is as long as a bathtub.",
+              "A new pup is as long as a ruler."
+            ],
+            "story": [
+              "Most kitefin sharks are three to four and a half feet long, and the biggest are over five feet.",
+              "A pup is about twelve inches long when it is born."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "The sun is not in. It is dim. Can it get fed?"
+            ],
+            "earlyReader": [
+              "It is dark in deep water.",
+              "A kitefin shark has big eyes.",
+              "Big eyes help it in the dark."
+            ],
+            "story": [
+              "A kitefin shark has large eyes that suit its dark, deep-water home.",
+              "It also has a short, blunt snout and thick lips."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "💡",
+          "narration": {
+            "decodable": [
+              "Is the sun in it? It is not. But it is not dim!"
+            ],
+            "earlyReader": [
+              "A kitefin shark glows in the dark.",
+              "Its belly gives off blue light.",
+              "No bigger glowing animal with a backbone is known."
+            ],
+            "story": [
+              "In 2021 scientists found that the kitefin shark's belly gives off a soft blue glow, and even its back fins light up.",
+              "Scientists think the glow may help it hide or hunt in the dark, but they are not sure yet."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "giant-glow",
+          "title": "Giant Glow",
+          "symbol": "💡",
+          "description": "It is the biggest known glowing animal with a backbone.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "oily-liver",
+          "title": "Floating Liver",
+          "symbol": "🎈",
+          "description": "A big liver full of oil helps it float above the seafloor.",
+          "imageAsset": null,
+          "unlockTopicID": "home"
+        }
+      ],
+      "mission": {
+        "kind": "jawStrike",
+        "title": "Deep Glow Fish Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "The deep water is dark.",
+            "Count the deep-sea fish you see.",
+            "Read the words to help the kitefin shark."
+          ],
+          "story": [
+            "Far down in the dark, the big kitefin shark drifts slowly along with its belly glowing blue.",
+            "Count each group of deep-sea fish and read the words to help it find a meal."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The big glowing kitefin shark found its fish."
+      },
+      "questions": [
+        {
+          "id": "kit-q1",
+          "prompt": {
+            "earlyReader": [
+              "What can a kitefin shark do?"
+            ],
+            "story": [
+              "What makes the kitefin shark special in the dark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "glow",
+              "label": "Glows in the dark",
+              "symbol": "💡"
+            },
+            {
+              "id": "flies",
+              "label": "Flies away",
+              "symbol": "🕊️"
+            },
+            {
+              "id": "climbs",
+              "label": "Climbs a tree",
+              "symbol": "🌳"
+            }
+          ],
+          "correctID": "glow",
+          "success": "Yes! The kitefin shark glows in the dark.",
+          "retry": "Think about light in the dark sea."
+        },
+        {
+          "id": "kit-q2",
+          "prompt": {
+            "earlyReader": [
+              "Where does the kitefin shark live?"
+            ],
+            "story": [
+              "Which home belongs to the kitefin shark?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "deep",
+              "label": "Deep ocean",
+              "symbol": "🌑"
+            },
+            {
+              "id": "pond",
+              "label": "Garden pond",
+              "symbol": "⛲️"
+            },
+            {
+              "id": "puddle",
+              "label": "Sidewalk puddle",
+              "symbol": "💧"
+            }
+          ],
+          "correctID": "deep",
+          "success": "Right! It lives deep in the dark ocean.",
+          "retry": "Choose the darkest, deepest water."
+        },
+        {
+          "id": "kit-q3",
+          "prompt": {
+            "earlyReader": [
+              "How does a kitefin shark swim?"
+            ],
+            "story": [
+              "How does the kitefin shark move through the deep sea?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "slow",
+              "label": "Slow and steady",
+              "symbol": "🐢"
+            },
+            {
+              "id": "jump",
+              "label": "Jumping on land",
+              "symbol": "🦘"
+            },
+            {
+              "id": "fly",
+              "label": "Flies",
+              "symbol": "🪽"
+            }
+          ],
+          "correctID": "slow",
+          "success": "You got it! It swims very slowly.",
+          "retry": "It is not in a hurry."
+        }
+      ],
+      "vocabularyIDs": [
+        "bioluminescence",
+        "deep-sea",
+        "buoyancy"
+      ],
+      "bookFact": "It is the biggest known glowing animal with a backbone, and its oily liver helps it float in the deep.",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/dalatias-licha/",
+        "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2021.633582/full",
+        "https://www.sharks.org/kitefin-shark-dalatias-licha"
+      ]
+    },
+    {
+      "id": "pocket",
+      "name": "Pocket Shark",
+      "scientificName": "Mollisquama mississippiensis",
+      "symbol": "🦈",
+      "imageAsset": "shark-pocket.jpg",
+      "imageAuthor": "J. Wicker, NOAA (preserved specimen)",
+      "imageLicense": "Public domain",
+      "imageSourceURL": "https://commons.wikimedia.org/wiki/File:Pocket_shark_noaa_1.jpg",
+      "color": "#5F5A66",
+      "region": "Deep Gulf of Mexico",
+      "mapX": 0.9,
+      "mapY": 0.2,
+      "map": "atlantic",
+      "unlockAt": 41,
+      "discover": {
+        "decodable": [
+          "It is not big. His fin has a pit. Is it a bag?"
+        ],
+        "earlyReader": [
+          "This is a pocket shark.",
+          "It is tiny.",
+          "It has a little pocket by each front fin."
+        ],
+        "story": [
+          "The American pocket shark is a tiny deep-sea shark with a small pocket on each side of its body.",
+          "It is one of the rarest sharks in the world."
+        ]
+      },
+      "topics": [
+        {
+          "id": "home",
+          "title": "Home",
+          "symbol": "🌊",
+          "narration": {
+            "decodable": [
+              "It is in the dim. It is not up top. Can men get to it?"
+            ],
+            "earlyReader": [
+              "One pocket shark came from the Gulf of Mexico.",
+              "It lived in deep water.",
+              "Only two pocket sharks have ever been found."
+            ],
+            "story": [
+              "The American pocket shark was found in deep water in the Gulf of Mexico in 2010, by a ship studying whales.",
+              "Only one other pocket shark has ever been found, in the Pacific Ocean in 1979."
+            ]
+          }
+        },
+        {
+          "id": "food",
+          "title": "Food",
+          "symbol": "🐟",
+          "narration": {
+            "decodable": [
+              "Did it get a bug? Did it get a cod? Not a fig!"
+            ],
+            "earlyReader": [
+              "A pocket shark has tiny sharp teeth.",
+              "No one has seen it eat.",
+              "Its food is still a mystery."
+            ],
+            "story": [
+              "A pocket shark has rows of tiny, sharp teeth.",
+              "No one has ever watched one eat, so what it eats is still a mystery."
+            ]
+          }
+        },
+        {
+          "id": "size",
+          "title": "Size",
+          "symbol": "📏",
+          "narration": {
+            "decodable": [
+              "It is a pup. It fits in a cup. It naps in a cap."
+            ],
+            "earlyReader": [
+              "The pocket shark was tiny.",
+              "It was shorter than a pencil.",
+              "It was a young pup."
+            ],
+            "story": [
+              "The pocket shark from the Gulf of Mexico was only five and a half inches long, small enough to fit in a pocket.",
+              "It was a young male that had been born not long before."
+            ]
+          }
+        },
+        {
+          "id": "senses",
+          "title": "Senses",
+          "symbol": "👁️",
+          "narration": {
+            "decodable": [
+              "It is dim. It has dots on it. Is a dot a sun?"
+            ],
+            "earlyReader": [
+              "It is dark in the deep sea.",
+              "Tiny lights cover much of its body.",
+              "It is a shark that glows."
+            ],
+            "story": [
+              "The American pocket shark has many tiny light-making spots that cover much of its body.",
+              "Scientists are still learning how it uses its lights in the dark."
+            ]
+          }
+        },
+        {
+          "id": "power",
+          "title": "Special Power",
+          "symbol": "✨",
+          "narration": {
+            "decodable": [
+              "His fin has a bag. Sun is in the bag. It can tip it."
+            ],
+            "earlyReader": [
+              "It has a pocket above each front fin.",
+              "The pockets make a glowing liquid.",
+              "Scientists think it may squirt a glowing cloud."
+            ],
+            "story": [
+              "A pocket shark has two small pockets, one on each side above its front fins, that make a glowing liquid.",
+              "Scientists think it might squirt the liquid out to find a mate or to confuse bigger animals, but that is still just an idea."
+            ]
+          }
+        }
+      ],
+      "traits": [
+        {
+          "id": "glow-pockets",
+          "title": "Glow Pockets",
+          "symbol": "✨",
+          "description": "A small pocket above each front fin makes a glowing liquid.",
+          "imageAsset": null,
+          "unlockTopicID": "power"
+        },
+        {
+          "id": "round-head",
+          "title": "Round Head",
+          "symbol": "🔎",
+          "description": "It has a big, rounded head and rows of tiny sharp teeth.",
+          "imageAsset": null,
+          "unlockTopicID": "body-clues"
+        }
+      ],
+      "mission": {
+        "kind": "glowLure",
+        "title": "Pocket Shark Glow Count",
+        "symbol": "gamecontroller.fill",
+        "instructions": {
+          "earlyReader": [
+            "It is dark in the deep sea.",
+            "Count the little glows you see.",
+            "Read the words to help the pocket shark."
+          ],
+          "story": [
+            "Deep in the Gulf of Mexico, a tiny pocket shark swims through the dark.",
+            "Count each group of glows and read the words to light its way."
+          ]
+        },
+        "targetCount": 5,
+        "completion": "You did it! The tiny pocket shark glows in the deep, dark sea."
+      },
+      "questions": [
+        {
+          "id": "pkt-q1",
+          "prompt": {
+            "earlyReader": [
+              "What does this shark have by each front fin?"
+            ],
+            "story": [
+              "What gives the pocket shark its name?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "pocket",
+              "label": "A little pocket",
+              "symbol": "👖"
+            },
+            {
+              "id": "hat",
+              "label": "A hat",
+              "symbol": "🎩"
+            },
+            {
+              "id": "shoe",
+              "label": "A shoe",
+              "symbol": "👟"
+            }
+          ],
+          "correctID": "pocket",
+          "success": "Yes! It has a little pocket above each front fin.",
+          "retry": "Think about its name."
+        },
+        {
+          "id": "pkt-q2",
+          "prompt": {
+            "earlyReader": [
+              "How big was the pocket shark?"
+            ],
+            "story": [
+              "How big was the pocket shark that scientists found?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "small",
+              "label": "Shorter than a pencil",
+              "symbol": "✏️"
+            },
+            {
+              "id": "whale",
+              "label": "As big as a whale shark",
+              "symbol": "🦈"
+            },
+            {
+              "id": "mountain",
+              "label": "As tall as a mountain",
+              "symbol": "⛰️"
+            }
+          ],
+          "correctID": "small",
+          "success": "Right! It was shorter than a pencil.",
+          "retry": "It could fit in a pocket."
+        },
+        {
+          "id": "pkt-q3",
+          "prompt": {
+            "earlyReader": [
+              "What do its pockets make?"
+            ],
+            "story": [
+              "What do the pocket shark's pockets make?"
+            ]
+          },
+          "choices": [
+            {
+              "id": "glow",
+              "label": "A glowing liquid",
+              "symbol": "💡"
+            },
+            {
+              "id": "apple",
+              "label": "Apples",
+              "symbol": "🍎"
+            },
+            {
+              "id": "leaves",
+              "label": "Tree leaves",
+              "symbol": "🍃"
+            }
+          ],
+          "correctID": "glow",
+          "success": "You got it! The pockets make a liquid that glows.",
+          "retry": "Think about light in the dark sea."
+        }
+      ],
+      "vocabularyIDs": [
+        "bioluminescence",
+        "deep-sea",
+        "pup"
+      ],
+      "bookFact": "This tiny shark has a pocket by each front fin that makes a glowing liquid, and only two have ever been found.",
+      "sourceURLs": [
+        "https://www.fisheries.noaa.gov/feature-story/tiny-shark-fits-your-pocket-and-glows-dark",
+        "https://www.fisheries.noaa.gov/feature-story/pocket-shark-digital-dissection",
+        "https://news.tulane.edu/pr/researchers-identify-new-species-pocket-shark",
+        "https://www.sciencedaily.com/releases/2015/04/150423182731.htm"
+      ]
     }
   ],
   "vocabulary": [
@@ -12419,6 +14573,18 @@
       "word": "mammal",
       "symbol": "🐋",
       "explanation": "An animal, like a whale, a dog or a person, whose babies drink milk from their mother."
+    },
+    {
+      "id": "spine",
+      "word": "spine",
+      "symbol": "📌",
+      "explanation": "A hard, sharp point on an animal's body."
+    },
+    {
+      "id": "denticles",
+      "word": "denticles",
+      "symbol": "🔬",
+      "explanation": "Tiny hard scales that cover a shark's skin."
     }
   ],
   "expansions": [
@@ -14304,6 +16470,346 @@
             "story": [
               "The first Basilosaurus fossil that scientists saw was a single bone from its back, and it was named king lizard.",
               "Later a scientist named Richard Owen looked at its teeth, which each had two roots, and worked out that it was a mammal, and today it is the state fossil of Alabama."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "horn",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/horn-shark/",
+        "https://www.montereybayaquarium.org/animals/animals-a-to-z/horn-shark",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/horn_shark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Horns and Spots",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A horn shark has a short, blunt head.",
+              "High ridges sit above its eyes.",
+              "It has small dark spots and two fin spines."
+            ],
+            "story": [
+              "A horn shark has a short, blunt head with a high ridge above each eye, and a sharp spine in front of each back fin.",
+              "Its skin is gray or brown with small dark spots, which helps it stay hidden."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Horn sharks are doing well.",
+              "Some get caught in crab traps by mistake.",
+              "Good divers look and do not touch."
+            ],
+            "story": [
+              "Horn sharks seem to be doing well, but some are caught by accident in crab traps and nets.",
+              "Where many divers have caught them for their spines, their numbers have gone down, so it is best to look and not touch."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "whitetip-reef",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/whitetip_reef_shark",
+        "https://oceana.org/marine-life/whitetip-reef-shark/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Slim With White Tips",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "This shark is long and slim.",
+              "Its head is wide and flat.",
+              "Its snout is short and blunt."
+            ],
+            "story": [
+              "A whitetip reef shark has a slender body, a broad flat head and a very short, blunt snout.",
+              "Its eyes are oval, and its back fin and the top of its tail are tipped with white."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "A mother has only a few pups.",
+              "So these sharks need time to grow in number.",
+              "Safe reefs help them."
+            ],
+            "story": [
+              "Whitetip reef sharks have small families and grow up slowly, so their numbers take a long time to recover.",
+              "Protected reefs, where fishing is limited, may help keep them safe."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "spiny-dogfish",
+      "sourceURLs": [
+        "https://www.fisheries.noaa.gov/species/atlantic-spiny-dogfish",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/spiny-dogfish/",
+        "https://oceana.org/marine-life/spiny-dogfish/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Spines and White Spots",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A spiny dogfish is gray on top.",
+              "It is white below.",
+              "Young ones have a row of white spots."
+            ],
+            "story": [
+              "A spiny dogfish is slim and gray above and pale below, with a row of small white spots along each side that fade as it grows older.",
+              "The sharp spine in front of each back fin helps it defend itself."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Dogfish grow up slowly.",
+              "They can live 35 years or more.",
+              "Rules on fishing help keep enough of them in the sea."
+            ],
+            "story": [
+              "Spiny dogfish grow slowly and can live for 35 to 40 years, and a mother carries her pups for up to two years before they are born.",
+              "Because of that, too much fishing can harm them, so there are limits on how many may be caught."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "sevengill",
+      "sourceURLs": [
+        "https://www.montereybayaquarium.org/animals/animals-a-to-z/broadnose-sevengill-shark",
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/notorynchus-cepedianus/",
+        "https://aquarium.org/animals/broadnose-sevengill/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "One Fin and Speckles",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "Most sharks have two back fins.",
+              "This shark has only one.",
+              "Its skin has many small dark spots."
+            ],
+            "story": [
+              "A sevengill shark has only one back fin, set far back on its body, while most sharks have two.",
+              "Its back and sides are gray or brown and speckled with many small black spots."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Sevengill pups grow up in bays.",
+              "Long ago, too many were caught in one bay.",
+              "Healthy bays help pups grow."
+            ],
+            "story": [
+              "Bays are important nurseries for sevengill pups.",
+              "Because these sharks stay close to shore they are easy to catch, and long ago too many were taken from San Francisco Bay."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "silky",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/carcharhinus-falciformis/"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Long Slim Fins",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A silky shark is long and slim.",
+              "It is dark gray on top.",
+              "Its belly is white."
+            ],
+            "story": [
+              "A silky shark is dark gray with a bronze tint on top and white underneath.",
+              "Its front fins are long and slender, usually with dusky tips, and its second back fin is small with a long trailing tip."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Silky sharks grow slowly.",
+              "They have only a few pups.",
+              "Some get caught when people fish for tuna."
+            ],
+            "story": [
+              "Silky sharks grow slowly and have only two to fourteen pups at a time, so too much fishing can harm them.",
+              "They are often caught by accident by boats fishing for tuna, so careful fishing helps keep them in the sea."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "shyshark",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/haploblepharus-edwardsii/",
+        "https://www.aquarium.co.za/animals/puffadder-shyshark",
+        "https://saveourseas.com/worldofsharks/species/puffadder-shyshark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Saddles and Spots",
+          "symbol": "🟠",
+          "narration": {
+            "earlyReader": [
+              "A shyshark is golden brown.",
+              "It has reddish-brown saddles.",
+              "It has small white spots."
+            ],
+            "story": [
+              "A puffadder shyshark is golden brown with reddish-brown saddles edged in a darker color and dotted with small white spots.",
+              "Its markings look like those of a snake called the puff adder, and that is how it got its name."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Shysharks do not hurt people.",
+              "They are endangered.",
+              "Careful fishing helps keep them safe."
+            ],
+            "story": [
+              "Puffadder shysharks are harmless to people, but they are endangered and live in only one small part of the world.",
+              "They get caught by accident in fishing gear, so careful fishing and healthy kelp forests help them."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "kitefin",
+      "sourceURLs": [
+        "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/dalatias-licha/",
+        "https://www.sharks.org/kitefin-shark-dalatias-licha"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Dark Brown Body",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A kitefin shark is dark brown.",
+              "Its snout is short and blunt.",
+              "Its fins have pale edges."
+            ],
+            "story": [
+              "A kitefin shark is dark brown or grayish black all over, with a short, blunt snout and thick lips.",
+              "The edges of its fins are white or see-through, and the tip of its tail is black."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "Kitefin sharks do not hurt people.",
+              "People fish for them for their oil.",
+              "Careful fishing helps them last."
+            ],
+            "story": [
+              "Kitefin sharks are no danger to people because they live so deep.",
+              "They are caught for the oil in their livers, and scientists think they have young slowly, so careful fishing matters."
+            ]
+          }
+        }
+      ],
+      "questions": []
+    },
+    {
+      "sharkID": "pocket",
+      "sourceURLs": [
+        "https://www.fisheries.noaa.gov/feature-story/pocket-shark-digital-dissection",
+        "https://www.fisheries.noaa.gov/feature-story/tiny-shark-fits-your-pocket-and-glows-dark"
+      ],
+      "topics": [
+        {
+          "id": "body-clues",
+          "title": "Round Head",
+          "symbol": "🔎",
+          "narration": {
+            "earlyReader": [
+              "A pocket shark has a big round head.",
+              "It has rows of tiny teeth.",
+              "New teeth grow in behind the old ones."
+            ],
+            "story": [
+              "A pocket shark has a rounded, bulb-shaped head and rows of tiny, sharp teeth.",
+              "Scans showed new teeth coming up to replace the ones that were missing."
+            ]
+          }
+        },
+        {
+          "id": "ocean-care",
+          "title": "Ocean Care",
+          "symbol": "♻️",
+          "narration": {
+            "earlyReader": [
+              "This shark is very rare.",
+              "Scientists kept it whole.",
+              "They used a scanner to look inside."
+            ],
+            "story": [
+              "Because the pocket shark is so rare, scientists looked inside it with a special scanner, so it could be kept whole.",
+              "They shared the pictures so that everyone can learn about this little shark."
             ]
           }
         }

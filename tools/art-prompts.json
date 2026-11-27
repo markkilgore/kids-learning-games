@@ -1177,6 +1177,42 @@
       "size": "256x256",
       "composition": "tileComposition",
       "prompt": "the head of Dunkleosteus, an ancient armored fish, in side view: a rounded helmet of large smooth olive-brown bony plates with a round eye in a bony ring and a beak-like jaw edge, no separate teeth."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-spine.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a shark's triangular grey back fin seen from the side, with one sharp pointed pale spike standing upright just in front of the fin, on a small curve of the shark's grey back."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-shark-school.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a big group of about ten small slim grey sharks all swimming the same way together in a tight school."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-seven-gills.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "Not generated: choice-six-gills.png with a seventh gill slit copied in beside the sixth, because generated pictures did not draw the right number of slits."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-silk.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a smooth shiny folded silk scarf in soft blue, with gentle glossy folds."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-curl-ring.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a small golden-brown shark with reddish saddle markings and tiny white spots curled up into a round ring like a donut, its tail covering its eyes, seen from above."
+    },
+    {
+      "file": "apps/shark-explorer/Resources/Art/choice-pocket.png",
+      "size": "256x256",
+      "composition": "tileComposition",
+      "prompt": "a simple blue cloth pocket with stitching around the edge, like a jeans pocket."
     }
   ],
   "catHappyPoses": [

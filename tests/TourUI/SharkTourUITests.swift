@@ -70,6 +70,10 @@ final class SharkTourUITests: XCTestCase {
 
         tap("open-shark-book")
         snap("13-passport")
+        // Whales, sea reptiles and other animals have their own headings below the sharks.
+        app.swipeUp()
+        XCTAssertTrue(app.staticTexts["Sea Reptiles"].exists)
+        snap("13b-passport-groups")
         app.buttons["Ocean Words"].tap()
         snap("14-ocean-words")
         tap("kid-back")
@@ -166,10 +170,10 @@ final class SharkTourUITests: XCTestCase {
         app.launch()
         if !app.buttons["my-books"].waitForExistence(timeout: 5) { tap("kid-back") }
         let oceans: [(tab: String, sharks: [String])] = [
-            ("Pacific", ["great-white", "wobbegong", "epaulette", "goblin", "cookiecutter", "angel", "leopard", "frilled", "megamouth", "swell", "sixgill"]),
-            ("Atlantic", ["hammerhead", "nurse", "thresher", "mako", "lemon", "bull", "blue", "sand-tiger", "dwarf-lantern", "spinner", "bonnethead"]),
-            ("Indian", ["whale", "tiger", "zebra", "blacktip-reef", "oceanic-whitetip", "pyjama", "bamboo"]),
-            ("Cold Seas", ["greenland", "basking", "sawshark", "port-jackson", "salmon", "porbeagle"]),
+            ("Pacific", ["great-white", "wobbegong", "epaulette", "goblin", "cookiecutter", "angel", "leopard", "frilled", "megamouth", "swell", "sixgill", "horn", "sevengill"]),
+            ("Atlantic", ["hammerhead", "nurse", "thresher", "mako", "lemon", "bull", "blue", "sand-tiger", "dwarf-lantern", "spinner", "bonnethead", "silky", "pocket"]),
+            ("Indian", ["whale", "tiger", "zebra", "blacktip-reef", "oceanic-whitetip", "pyjama", "bamboo", "whitetip-reef", "shyshark"]),
+            ("Cold Seas", ["greenland", "basking", "sawshark", "port-jackson", "salmon", "porbeagle", "spiny-dogfish", "kitefin"]),
             ("Ancient", ["megalodon", "mosasaurus", "dunkleosteus", "ichthyosaurus", "helicoprion", "elasmosaurus", "basilosaurus", "cretoxyrhina", "archelon", "cladoselache"])
         ]
         let target = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", "Mission target")).firstMatch
